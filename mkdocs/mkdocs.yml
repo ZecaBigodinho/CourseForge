@@ -216,4 +216,11 @@ nav:
     - Direitos autorais e direito de imagem: introducao_a_ia/modulo_04_etica_e_privacidade/03_direitos_autorais_e_imagem.md
     - Vieses, desinformação e impactos sociais: introducao_a_ia/modulo_04_etica_e_privacidade/04_vieses_e_impactos.md
     - 'Projeto do módulo: carta de uso responsável de IA': introducao_a_ia/modulo_04_etica_e_privacidade/05_projeto_carta_de_uso_responsavel.md
+  - 'Projeto: seu mini-assistente':
+    - Visão Geral: introducao_a_ia/modulo_05_projeto_mini_assistente/index.md
+    - Planejando o mini-assistente: introducao_a_ia/modulo_05_projeto_mini_assistente/01_planejando_o_mini_assistente.md
+    - O motor simulado e a conversa: introducao_a_ia/modulo_05_projeto_mini_assistente/02_motor_simulado_e_conversa.md
+    - Conectando a uma API de IA: introducao_a_ia/modulo_05_projeto_mini_assistente/03_conectando_a_uma_api.md
+    - Segurança e testes: introducao_a_ia/modulo_05_projeto_mini_assistente/04_seguranca_e_testes.md
+    - 'Projeto final: entregando o seu mini-assistente': introducao_a_ia/modulo_05_projeto_mini_assistente/05_projeto_final_entrega.md
 docs_dir: ../cursos

@@ -3,7 +3,7 @@ descricao: O que é Inteligência Artificial e como usá-la com responsabilidade
 autor: Pedro Paulo IF
 num_modulos: 5
 data_criacao: '2026-10-23'
-versao: 0.5.0
+versao: 0.6.0
 tags: []
 slug: introducao_a_ia
 # Ordem dos módulos no menu (nomes das pastas); os próximos entram aqui conforme forem publicados
@@ -12,6 +12,7 @@ ordem_modulos:
   - modulo_02_usando_assistentes
   - modulo_03_ia_no_estudo_e_no_trabalho
   - modulo_04_etica_e_privacidade
+  - modulo_05_projeto_mini_assistente
 
 # Ficha do curso — alimenta o Catálogo de cursos (gerado por src/generators/gerar_catalogo.py)
 ordem: 3

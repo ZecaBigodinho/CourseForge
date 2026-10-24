@@ -60,4 +60,4 @@ Antes de seguir, confira se você consegue:
 
 ## ➡️ Próximo passo
 
-**Módulo 05 — Projeto: seu mini-assistente** *(em preparação)* — um mini-assistente com Python e uma API de IA com plano gratuito.
+**[Módulo 05 — Projeto: seu mini-assistente](../modulo_05_projeto_mini_assistente/index.md)** — um mini-assistente com Python e uma API de IA com plano gratuito.

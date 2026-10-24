@@ -129,4 +129,4 @@ Você aprendeu a usar IA **sem prejudicar ninguém** — nem você mesmo:
 
 ## ➡️ Próximo passo
 
-**Módulo 05 — Projeto: seu mini-assistente** *(em preparação)*: um mini-assistente com Python e a API de um modelo de IA com plano gratuito — aplicando tudo o que você aprendeu, inclusive as regras desta carta.
+**[Módulo 05 — Projeto: seu mini-assistente](../modulo_05_projeto_mini_assistente/index.md)**: um mini-assistente com Python e a API de um modelo de IA com plano gratuito — aplicando tudo o que você aprendeu, inclusive as regras desta carta.
