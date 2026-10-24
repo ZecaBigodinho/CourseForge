@@ -21,10 +21,14 @@ Requisitos: as dependências do curso (`customtkinter==5.2.2`, `python-dotenv`, 
 | Casos | Verificação |
 |---|---|
 | `fundamentos_*` | O gabarito roda com a entrada de teste sem erro. Os resultados foram conferidos à mão quando o gabarito foi escrito. |
+| `vscode` | Confere a saída antes e depois da formatação, a detecção de venv (criando um venv no teste) e o conferidor de `requirements.txt`. O Básico da aula 02 é só comandos de terminal e não é executado. |
 | `poo`, `interfaces_*`, `banco_*` | Além de rodar, o teste confere o resultado: digita nos campos, clica nos botões, gera eventos e verifica telas, arquivos e o banco. |
 | `projetos_base` | Os projetos das aulas (Dashboard e Projeto de Dados) abrem sem erro. Os gabaritos que modificam esses projetos dependem deles. |
 
-Não testado: o empacotamento com PyInstaller (Banco 04, Avançado 1), porque exige instalar o pacote e testar em outro computador.
+Não testado:
+- o empacotamento com PyInstaller (Banco 04, Avançado 1), porque exige instalar o pacote e testar em outro computador;
+- a formatação exata do Black (VS Code 01, Intermediário), que não está instalado aqui. O teste só confere que o código formatado tem a mesma saída que o original;
+- o Projeto Finalizador e o Git, que têm formato próprio (Exercício com "Solução", Missão da Equipe e Desafio). As soluções foram conferidas só quanto à sintaxe.
 
 ## Arquivos
 

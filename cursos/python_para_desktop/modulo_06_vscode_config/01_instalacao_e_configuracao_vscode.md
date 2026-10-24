@@ -107,6 +107,11 @@ Abra o VS Code, clique no ícone de **Extensões** na barra lateral esquerda (ou
     **Id:** `KevinRose.vsc-python-indent`  
     Ajusta a indentação automática de blocos `if`, `for`, `def` exatamente como o Python exige.
 
+-   :material-auto-fix: **6. Black Formatter (Microsoft)**
+    ---
+    **Id:** `ms-python.black-formatter`  
+    Arruma espaços, aspas e quebras de linha do seu código ao salvar. A extensão Python não traz formatador próprio — sem esta, o "formatar ao salvar" não faz nada.
+
 </div>
 
 ---
@@ -125,9 +130,15 @@ Para que seu VS Code formate o código automaticamente ao salvar, pressione `Ctr
     "editor.tabSize": 4,
     "editor.insertSpaces": true,
     "python.analysis.typeCheckingMode": "basic",
-    "files.autoSave": "afterDelay"
+    "files.autoSave": "afterDelay",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    }
 }
 ```
+
+!!! tip "Formatar ao salvar só funciona com um formatador"
+    A linha `"[python]"` diz ao VS Code para usar o **Black Formatter** (extensão 6) nos arquivos `.py`. Se ao salvar aparecer "Não há formatador instalado", confira se a extensão está instalada.
 
 ---
 
@@ -161,3 +172,93 @@ print(f"Versão do Python: {sys.version}")
 
 4. Pressione `Ctrl + F5` (ou clique no botão de **Play** no canto superior direito).
 5. O resultado aparecerá no **Terminal Integrado** na parte inferior!
+
+---
+
+## Exercícios
+
+### Básico (fixação)
+
+1. Crie uma pasta chamada `curso_python` e abra-a no VS Code (**File ➔ Open Folder**).
+2. Crie o arquivo `ola.py` com uma linha que mostre `Olá, <seu nome>! Estou pronto para programar.`
+3. Execute de **duas formas**: com `Ctrl + F5` e digitando `python ola.py` no terminal integrado (`Ctrl + '`). As duas devem mostrar a mesma mensagem.
+
+<!-- gabarito -->
+??? success "Gabarito — Básico"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    # ola.py
+    print("Olá, Ana! Estou pronto para programar.")
+
+    # Para executar pelo terminal integrado (Ctrl + '), na pasta curso_python:
+    #     python ola.py
+    # Se aparecer "python não foi encontrado", volte à caixa vermelha do Passo 1.
+    ```
+
+
+### Intermediário (aplicação)
+
+Teste a formatação automática. Crie o arquivo `bagunca.py` com o código abaixo **exatamente assim**, bagunçado:
+
+```python
+x=10;y  =  20
+print( "soma:",x+y )
+nomes=['ana','bia'  ,'caio']
+print(len( nomes ))
+```
+
+Salve com `Ctrl + S`. O Black deve reorganizar o arquivo sozinho. Compare o antes e o depois: o que mudou nos espaços, nas aspas e no `;`? Rode o arquivo para confirmar que o resultado continua o mesmo.
+
+<!-- gabarito -->
+??? success "Gabarito — Intermediário"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    # bagunca.py — depois de salvar com o Black Formatter ativo
+    x = 10
+    y = 20
+    print("soma:", x + y)
+    nomes = ["ana", "bia", "caio"]
+    print(len(nomes))
+
+    # O que mudou:
+    # - o ";" virou duas linhas: cada instrução na sua linha;
+    # - um espaço de cada lado do "=" e do "+", e depois de cada vírgula;
+    # - nenhum espaço logo depois de "(" ou antes de ")";
+    # - aspas simples viraram duplas (padrão do Black).
+    # A saída continua igual: "soma: 30" e "3". Formatar muda a aparência, não o comportamento.
+    ```
+
+
+### Avançado (desafio)
+
+Transforme o script do **Teste Prático** em um `diagnostico.py` que mostre:
+
+- a versão do Python e se ela é **3.11 ou mais nova** (as versões que o curso usa);
+- o caminho do executável do Python em uso (`sys.executable`) — é assim que você descobre *qual* Python o VS Code está usando;
+- o sistema operacional (`platform.system()` e `platform.release()`).
+
+Dica: você ainda vai aprender `if` no Módulo 01 — se travar, abra o gabarito, copie, rode e observe o resultado.
+
+<!-- gabarito -->
+??? success "Gabarito — Avançado"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    # diagnostico.py
+    import platform
+    import sys
+
+    versao = sys.version_info
+    print(f"Python {versao.major}.{versao.minor}.{versao.micro}")
+
+    if versao >= (3, 11):
+        print("✅ Versão compatível com o curso (3.11 ou mais nova).")
+    else:
+        print("⚠️ Versão antiga: instale o Python 3.14 (Passo 1).")
+
+    print(f"Executável em uso: {sys.executable}")
+    print(f"Sistema: {platform.system()} {platform.release()}")
+    ```
+
