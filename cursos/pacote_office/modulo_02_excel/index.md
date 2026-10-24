@@ -61,4 +61,4 @@ Antes de seguir, confira se você consegue:
 
 ## ➡️ Próximo passo
 
-**Módulo 03 — PowerPoint** *(em preparação)* — apresentações claras para mostrar o que você descobriu nos dados.
+**[Módulo 03 — PowerPoint](../modulo_03_powerpoint/index.md)** — apresentações claras para mostrar o que você descobriu nos dados.

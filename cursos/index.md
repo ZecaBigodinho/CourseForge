@@ -48,7 +48,7 @@ hide:
 
     Word, Excel e PowerPoint para estudar e trabalhar, com alternativas gratuitas (LibreOffice e Google Workspace).
 
-    Word e Excel disponíveis · trabalhos ABNT e planilhas de verdade
+    Word, Excel e PowerPoint disponíveis · do trabalho ABNT à apresentação
 
     [:octicons-arrow-right-24: Começar pelo Word](pacote_office/modulo_01_word/index.md)
 

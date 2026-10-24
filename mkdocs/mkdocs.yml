@@ -165,6 +165,13 @@ nav:
     - Tabelas, gráficos e formatação condicional: pacote_office/modulo_02_excel/03_tabelas_graficos_e_formatacao.md
     - Tabela dinâmica, funções modernas e automação: pacote_office/modulo_02_excel/04_tabela_dinamica_e_automacao.md
     - 'Projeto do módulo: controle de notas da turma': pacote_office/modulo_02_excel/05_projeto_controle_de_notas.md
+  - PowerPoint:
+    - Visão Geral: pacote_office/modulo_03_powerpoint/index.md
+    - 'Primeiros passos: slides, layouts e texto': pacote_office/modulo_03_powerpoint/01_slides_layouts_e_texto.md
+    - 'Design de slides: menos texto, mais clareza': pacote_office/modulo_03_powerpoint/02_design_de_slides.md
+    - Modelos, Slide Mestre e elementos visuais: pacote_office/modulo_03_powerpoint/03_modelos_mestre_e_elementos_visuais.md
+    - Transições, animações e a hora de apresentar: pacote_office/modulo_03_powerpoint/04_transicoes_animacoes_e_apresentacao.md
+    - 'Projeto do módulo: apresentação do trabalho escolar': pacote_office/modulo_03_powerpoint/05_projeto_apresentacao_do_trabalho.md
 - Introdução à IA:
   - Apresentação do curso: introducao_a_ia/docs/index.md
 docs_dir: ../cursos

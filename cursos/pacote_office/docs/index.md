@@ -1,12 +1,12 @@
 # Pacote Office
 
 > **Autor:** Prof. Pedro Paulo IF · [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com)  
-> **Versão:** 0.3.0  
-> **Situação:** em andamento — Módulos 01 e 02 disponíveis  
+> **Versão:** 0.4.0  
+> **Situação:** em andamento — Módulos 01 a 03 disponíveis  
 > **Versão do Office nas aulas:** Microsoft 365 (com os caminhos equivalentes no LibreOffice e no Google)
 
-!!! success "Word e Excel já disponíveis"
-    O **[Módulo 01 — Word](../modulo_01_word/index.md)** traz formatação, estilos, sumário, citações e referências **ABNT**, mala direta e um trabalho escolar completo como projeto. O **[Módulo 02 — Excel](../modulo_02_excel/index.md)** vai de fórmulas e referências à tabela dinâmica, com `PROCX`, funções modernas, gráficos, macros e um controle de notas da turma como projeto. Os demais módulos serão publicados um a um.
+!!! success "Word, Excel e PowerPoint já disponíveis"
+    O **[Módulo 01 — Word](../modulo_01_word/index.md)** traz formatação, estilos, sumário, citações e referências **ABNT**, mala direta e um trabalho escolar completo como projeto. O **[Módulo 02 — Excel](../modulo_02_excel/index.md)** vai de fórmulas e referências à tabela dinâmica, com `PROCX`, funções modernas, gráficos, macros e um controle de notas da turma como projeto. O **[Módulo 03 — PowerPoint](../modulo_03_powerpoint/index.md)** vai do roteiro ao Slide Mestre, com gráficos do Excel, animações com moderação e o Modo do Apresentador, e termina com a apresentação do trabalho escolar. Os demais módulos serão publicados um a um.
 
 ---
 
@@ -24,9 +24,9 @@ Documentos com aparência profissional: formatação, **estilos**, sumário auto
 
 Fórmulas e funções (`SE`, `CONT.SE`, `SOMASE`, `PROCX`), **tabelas**, formatação condicional, gráficos, **tabela dinâmica**, funções modernas (`ÚNICO`, `FILTRO`) e uma introdução à automação com macros — com um controle de notas da turma como projeto. [Acessar o módulo](../modulo_02_excel/index.md)
 
-### Módulo 03 — PowerPoint
+### Módulo 03 — PowerPoint ✅ disponível
 
-Design de slides, modelos, transições com moderação e como **apresentar** com segurança.
+Roteiro e mensagem principal, **design de slides** claros e acessíveis, tema, **Slide Mestre** e modelos, SmartArt e gráficos do Excel, transições e animações com moderação e o **Modo do Apresentador** — com a apresentação do trabalho escolar como projeto. [Acessar o módulo](../modulo_03_powerpoint/index.md)
 
 ### Módulo 04 — Trabalho em equipe e alternativas gratuitas
 

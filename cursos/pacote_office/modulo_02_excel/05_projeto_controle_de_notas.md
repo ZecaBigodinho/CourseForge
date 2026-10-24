@@ -196,4 +196,4 @@ Você saiu da célula vazia para uma planilha que faz as contas, decide e se atu
 
 ## ➡️ Próximo passo
 
-**Módulo 03 — PowerPoint** *(em preparação)*: transformar os números do seu painel em uma apresentação clara.
+**[Módulo 03 — PowerPoint](../modulo_03_powerpoint/index.md)**: transformar os números do seu painel em uma apresentação clara.
