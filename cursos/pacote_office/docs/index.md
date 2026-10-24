@@ -1,12 +1,12 @@
 # Pacote Office
 
 > **Autor:** Prof. Pedro Paulo IF · [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com)  
-> **Versão:** 0.1.0 — ementa  
-> **Situação:** em preparação
+> **Versão:** 0.2.0  
+> **Situação:** em andamento — Módulo 01 disponível  
+> **Versão do Office nas aulas:** Microsoft 365 (com os caminhos equivalentes no LibreOffice e no Google)
 
-!!! info "Em breve"
-    Este curso está em preparação. Abaixo está a **ementa planejada** — os módulos serão publicados um a um.
-    Enquanto isso, que tal começar pelo [Python para Desktop](../../python_para_desktop/docs/index.md)?
+!!! success "Comece agora pelo Word"
+    O **[Módulo 01 — Word](../modulo_01_word/index.md)** já está disponível: formatação, estilos, numeração e sumário, citações e referências **ABNT**, mala direta e um trabalho escolar completo como projeto. Os demais módulos serão publicados um a um.
 
 ---
 
@@ -16,9 +16,9 @@
 
 ## Ementa planejada
 
-### Módulo 01 — Word
+### Módulo 01 — Word ✅ disponível
 
-Documentos com aparência profissional: formatação, **estilos**, sumário automático, referências e **mala direta**.
+Documentos com aparência profissional: formatação, **estilos**, sumário automático, citações e referências **ABNT** e **mala direta** — com um trabalho escolar completo como projeto. [Acessar o módulo](../modulo_01_word/index.md)
 
 ### Módulo 02 — Excel
 

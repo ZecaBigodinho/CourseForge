@@ -42,13 +42,15 @@ hide:
 
 -   :material-microsoft-office:{ .lg .middle } __Pacote Office__
 
-    <span class="cf-tag">Em breve</span>
+    <span class="cf-tag cf-tag--ok">Em andamento</span>
 
     ---
 
     Word, Excel e PowerPoint para estudar e trabalhar, com alternativas gratuitas (LibreOffice e Google Workspace).
 
-    [:octicons-arrow-right-24: Ver a ementa](pacote_office/docs/index.md)
+    Módulo 01 — Word disponível · trabalhos no padrão ABNT
+
+    [:octicons-arrow-right-24: Começar pelo Word](pacote_office/modulo_01_word/index.md)
 
 -   :material-robot-happy-outline:{ .lg .middle } __Introdução à IA__
 

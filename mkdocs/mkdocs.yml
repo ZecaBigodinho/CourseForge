@@ -52,7 +52,11 @@ extra_css:
 markdown_extensions:
 - admonition
 - pymdownx.details
-- pymdownx.superfences
+- pymdownx.superfences:
+    custom_fences:
+    - name: mermaid
+      class: mermaid
+      format: !!python/name:pymdownx.superfences.fence_code_format
 - pymdownx.tabbed:
     alternate_style: true
 - pymdownx.highlight:
@@ -147,6 +151,13 @@ nav:
     - Programação Orientada a Objetos (POO): python_para_desktop/modulo_00_revisao_e_fixacao/14_poo_revisao.md
 - Pacote Office:
   - Apresentação do curso: pacote_office/docs/index.md
+  - Word:
+    - Visão Geral: pacote_office/modulo_01_word/index.md
+    - Primeiros passos e formatação: pacote_office/modulo_01_word/01_primeiros_passos_e_formatacao.md
+    - Estilos, seções e numeração de páginas: pacote_office/modulo_01_word/02_estilos_secoes_e_paginas.md
+    - Sumário, citações e referências (ABNT): pacote_office/modulo_01_word/03_sumario_citacoes_e_referencias.md
+    - 'Mala direta: certificados e etiquetas em lote': pacote_office/modulo_01_word/04_mala_direta.md
+    - 'Projeto do módulo: trabalho escolar no padrão ABNT': pacote_office/modulo_01_word/05_projeto_trabalho_abnt.md
 - Introdução à IA:
   - Apresentação do curso: introducao_a_ia/docs/index.md
 docs_dir: ../cursos
