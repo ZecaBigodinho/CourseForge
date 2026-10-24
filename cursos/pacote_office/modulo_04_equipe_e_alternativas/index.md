@@ -60,4 +60,4 @@ Antes de seguir, confira se você consegue:
 
 ## ➡️ Próximo passo
 
-**Módulo 05 — Projeto final integrado** *(em preparação)* — Word, Excel e PowerPoint usados juntos em um projeto completo.
+**[Módulo 05 — Projeto final integrado](../modulo_05_projeto_final/index.md)** — Word, Excel e PowerPoint usados juntos em um projeto completo.

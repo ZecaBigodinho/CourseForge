@@ -48,7 +48,7 @@ hide:
 
     Word, Excel e PowerPoint para estudar e trabalhar, com alternativas gratuitas (LibreOffice e Google Workspace).
 
-    Word, Excel, PowerPoint e trabalho em equipe disponíveis · com alternativas gratuitas
+    Os 5 módulos disponíveis · do trabalho ABNT ao kit da primeira candidatura
 
     [:octicons-arrow-right-24: Começar pelo Word](pacote_office/modulo_01_word/index.md)
 

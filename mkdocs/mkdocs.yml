@@ -179,6 +179,13 @@ nav:
     - 'Teams: chat, canais e reuniões': pacote_office/modulo_04_equipe_e_alternativas/03_teams_chat_canais_e_reunioes.md
     - 'Alternativas gratuitas: LibreOffice e Google Workspace': pacote_office/modulo_04_equipe_e_alternativas/04_alternativas_gratuitas.md
     - 'Projeto do módulo: trabalho em grupo na nuvem': pacote_office/modulo_04_equipe_e_alternativas/05_projeto_trabalho_em_grupo.md
+  - Projeto final integrado:
+    - Visão Geral: pacote_office/modulo_05_projeto_final/index.md
+    - O projeto e o planejamento: pacote_office/modulo_05_projeto_final/01_planejamento_do_projeto.md
+    - Planilha de candidaturas: pacote_office/modulo_05_projeto_final/02_planilha_de_candidaturas.md
+    - Currículo e cartas de apresentação: pacote_office/modulo_05_projeto_final/03_curriculo_e_cartas.md
+    - Apresentação pessoal: pacote_office/modulo_05_projeto_final/04_apresentacao_pessoal.md
+    - Integração e entrega final: pacote_office/modulo_05_projeto_final/05_integracao_e_entrega.md
 - Introdução à IA:
   - Apresentação do curso: introducao_a_ia/docs/index.md
 docs_dir: ../cursos

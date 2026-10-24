@@ -170,4 +170,4 @@ Você aprendeu a trabalhar **com outras pessoas** usando as ferramentas do escri
 
 ## ➡️ Próximo passo
 
-**Módulo 05 — Projeto final integrado** *(em preparação)*: currículo no Word, planilha de controle no Excel e apresentação no PowerPoint, usados juntos.
+**[Módulo 05 — Projeto final integrado](../modulo_05_projeto_final/index.md)**: currículo no Word, planilha de controle no Excel e apresentação no PowerPoint, usados juntos.
