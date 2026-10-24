@@ -195,7 +195,10 @@
   counter-reset: chapter;
 }
 
-.md-nav__item--section > .md-nav > .md-nav__list > .md-nav__item:not(:first-child) > .md-nav__link::before {
+/* Numera só as aulas (itens sem subnível). A "Visão Geral" (index.md) não entra
+   na lista — com navigation.indexes ela vira o título clicável do módulo —,
+   então a primeira aula já é o primeiro item e recebe 01. */
+.md-nav__item--section > .md-nav > .md-nav__list > .md-nav__item:not(.md-nav__item--nested) > .md-nav__link::before {
   counter-increment: chapter;
   content: counter(chapter, decimal-leading-zero);
   font-size: 0.65rem;
