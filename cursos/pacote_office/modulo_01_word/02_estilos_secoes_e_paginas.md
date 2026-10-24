@@ -50,6 +50,11 @@ Clique com o botão direito no estilo ➔ **Modificar**:
 - Em **Formatar ➔ Parágrafo**, ajuste recuos e espaçamentos.
 - Em **Formatar ➔ Fonte**, marque **Todas em maiúsculas** se a norma pedir.
 
+<figure markdown="span">
+  ![Janela Modificar estilo do Título 1 com fonte Arial, tamanho 12, negrito, cor preta, e a descrição: Negrito, Todas em Maiúsculas, alinhado à esquerda](assets/02_modificar_estilo.webp){ loading=lazy }
+  <figcaption>A janela <strong>Modificar estilo</strong> do Título 1: fonte, tamanho, negrito e alinhamento; o botão <em>Formatar</em> (embaixo, à esquerda) leva a Parágrafo e Fonte.</figcaption>
+</figure>
+
 Um padrão comum para trabalhos (confira o manual da escola):
 
 | Estilo | Formatação |
@@ -71,6 +76,11 @@ Para os títulos ganharem **1**, **1.1**, **2** sozinhos:
 2. *Página Inicial ➔ Lista de Vários Níveis* (ícone com 1, a, i).
 3. Escolha o modelo que mostra **“1 Título 1 / 1.1 Título 2”**.
 
+<figure markdown="span">
+  ![Menu Lista de Vários Níveis aberto na Biblioteca de Listas, com o modelo 1 Título 1, 1.1 Título 2, 1.1.1 Título 3 em destaque](assets/02_lista_varios_niveis.webp){ loading=lazy }
+  <figcaption>O botão <strong>Lista de Vários Níveis</strong> e, na Biblioteca de Listas, o modelo ligado aos estilos de título.</figcaption>
+</figure>
+
 Agora, se você inserir uma seção nova no meio, toda a numeração se ajusta.
 
 ---
@@ -82,11 +92,21 @@ Agora, se você inserir uma seção nova no meio, toda a numeração se ajusta.
 - Clique em um título para pular até ele.
 - **Arraste** um título para cima ou para baixo: a seção inteira (título e texto) muda de lugar.
 
+<figure markdown="span">
+  ![Documento com os títulos numerados 1 Introdução, 2 Desenvolvimento, 2.1 Causas, 2.2 Consequências e 3 Conclusão; o estilo Título 1 marcado na galeria de estilos e o Painel de Navegação à esquerda listando os mesmos títulos](assets/02_titulos_e_navegacao.webp){ loading=lazy }
+  <figcaption>(1) Com o cursor em um título, a galeria mostra o estilo dele · (2) o Painel de Navegação lista os títulos, já numerados.</figcaption>
+</figure>
+
 ---
 
 ## Seções: partes do documento com configurações próprias
 
 Uma **seção** é um trecho do documento que pode ter cabeçalho, rodapé, numeração e até orientação de página próprios. Crie com *Layout ➔ Quebras ➔ **Próxima Página*** (em *Quebras de Seção*).
+
+<figure markdown="span">
+  ![Menu Quebras da guia Layout com as Quebras de Página no alto e, em Quebras de Seção, a opção Próxima Página em destaque](assets/02_quebra_proxima_pagina.webp){ loading=lazy }
+  <figcaption>Em <em>Layout ➔ Quebras</em>, a quebra de <strong>seção</strong> fica na segunda parte do menu.</figcaption>
+</figure>
 
 !!! warning "Quebra de página × quebra de seção"
     `Ctrl + Enter` (quebra de **página**) só começa uma página nova. A quebra de **seção** começa uma página nova **e** uma parte independente do documento. Para a numeração ABNT, você precisa da de seção.
@@ -113,6 +133,16 @@ Passo a passo no Word:
 3. *Número de Página ➔ Início da Página ➔ **Número Simples 3*** (alinhado à direita).
 4. *Número de Página ➔ **Formatar Números de Página*** ➔ *Iniciar em*: **3** (folha de rosto = 1, sumário = 2, introdução = 3).
 5. Vá ao cabeçalho da Seção 1 e confira que ele está **vazio**.
+
+<figure markdown="span">
+  ![Cabeçalho da Seção 2 aberto na página da Introdução, com o número 3 no canto superior direito e o botão Vincular ao Anterior desligado na guia Cabeçalho e Rodapé](assets/02_cabecalho_secao2.webp){ loading=lazy }
+  <figcaption>(1) <em>Vincular ao Anterior</em> desligado (sem fundo) · (2) o Word mostra em que seção está o cabeçalho · (3) o número 3 no canto superior direito.</figcaption>
+</figure>
+
+<figure markdown="span">
+  ![Janela Formatar número de página com formato 1, 2, 3 e a opção Iniciar em marcada com o valor 3](assets/02_formatar_numeros.webp){ loading=lazy }
+  <figcaption><em>Número de Página ➔ Formatar Números de Página</em>: <strong>Iniciar em 3</strong>.</figcaption>
+</figure>
 
 !!! tip "Quantas páginas tem o seu pré-textual?"
     O número de *Iniciar em* é: **páginas da folha de rosto até a introdução, contando a própria introdução**. Com agradecimentos ou resumo, o número aumenta.
