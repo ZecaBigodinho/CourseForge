@@ -126,6 +126,20 @@ class TestChamarOpencode:
 class TestGerarEPublicar:
     """Testa o fluxo completo (com todos os subcomponentes mockados)."""
 
+    @pytest.fixture(autouse=True)
+    def projeto_temp(self, tmp_path, project_root, monkeypatch):
+        """
+        Isola o fluxo em tmp_path: sem isso, gerar_e_publicar_capitulo grava
+        capítulos de teste dentro do repositório real.
+        """
+        import shutil
+        src = project_root / "src"
+        shutil.copytree(src / "templates", tmp_path / "templates")
+        shutil.copytree(src / "config", tmp_path / "config")
+        shutil.copytree(src / "prompts", tmp_path / "src" / "prompts")
+        monkeypatch.setattr("generators.gerar_conteudo_ia.PROJECT_ROOT", tmp_path)
+        return tmp_path
+
     @patch("generators.gerar_conteudo_ia._executar_deploy")
     @patch("generators.gerar_conteudo_ia._executar_build")
     @patch("generators.gerar_conteudo_ia._chamar_opencode")

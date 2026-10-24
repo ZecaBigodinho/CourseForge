@@ -10,6 +10,7 @@ import pytest
 
 from models.enums import TipoPrompt, NivelDificuldade
 from generators.gerar_prompt import PromptGenerator
+from utils.template_engine import TemplateEngine
 
 
 class TestPromptGenerator:
@@ -21,7 +22,10 @@ class TestPromptGenerator:
         PromptGenerator com engine de prompts apontando para prompts/ real.
         fm_temp garante que qualquer arquivo salvo vai para tmp_path.
         """
-        return PromptGenerator(fm_temp, te_real)
+        gen = PromptGenerator(fm_temp, te_real)
+        # fm_temp aponta para tmp_path, onde não há prompts: usa os reais de src/prompts/
+        gen._te_prompts = TemplateEngine(prompts_dir)
+        return gen
 
     def test_gerar_prompt_capitulo(self, gen):
         contexto = {
