@@ -1,7 +1,7 @@
 site_name: CourseForge Docs
 site_description: 'Cursos gratuitos para a sala de aula: Python para Desktop do zero
   ao sistema completo, com aulas práticas, revisão visual e projeto final.'
-site_author: Professor
+site_author: Pedro Paulo IF
 theme:
   name: material
   language: pt
@@ -34,6 +34,7 @@ theme:
   - search.highlight
   - content.tabs.link
   - content.code.copy
+copyright: Material gratuito para uso educacional · Prof. Pedro Paulo IF · <a href="mailto:pedropaulo4hire@gmail.com">pedropaulo4hire@gmail.com</a>
 extra_css:
 - stylesheets/custom.css
 markdown_extensions:

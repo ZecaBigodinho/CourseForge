@@ -1,6 +1,6 @@
 # Python para Desktop
 
-> **Autor:** Professor  
+> **Autor:** Prof. Pedro Paulo IF · [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com)  
 > **Versão:** 1.2.0  
 > **Atualização:** 2026-10-23  
 > **Módulos:** 6 na trilha principal (00 a 05) + Git & GitHub (bônus) + Central de Revisão Visual & Fixação  

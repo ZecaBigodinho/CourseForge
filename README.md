@@ -231,6 +231,14 @@ python -m mkdocs gh-deploy -f mkdocs/mkdocs.yml
 
 ---
 
+## 👤 Autor e Contato
+
+**Prof. Pedro Paulo IF** · [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com)
+
+Dúvidas sobre o conteúdo ou erros encontrados: abra uma [issue](https://github.com/ZecaBigodinho/curso-python/issues) ou envie um e-mail.
+
+---
+
 ## 📄 Licença
 
 Este projeto é destinado a fins **educacionais**. O código fonte e o material didático podem ser utilizados livremente por alunos e professores.

@@ -5,7 +5,7 @@
 plataforma:
   nome: CourseForge
   versao: "1.0.0"
-  autor_padrao: "Professor"
+  autor_padrao: "Pedro Paulo IF"
   idioma: "pt-BR"
 
 # Diretórios principais (relativos à raiz do projeto)
@@ -19,7 +19,9 @@ diretorios:
 mkdocs:
   site_name: "CourseForge Docs"
   site_description: "Cursos gratuitos para a sala de aula: Python para Desktop do zero ao sistema completo, com aulas práticas, revisão visual e projeto final."
-  site_author: "Professor"
+  site_author: "Pedro Paulo IF"
+  # Rodapé de todas as páginas (aceita HTML)
+  copyright: 'Material gratuito para uso educacional · Prof. Pedro Paulo IF · <a href="mailto:pedropaulo4hire@gmail.com">pedropaulo4hire@gmail.com</a>'
   theme:
     name: material
     language: pt
