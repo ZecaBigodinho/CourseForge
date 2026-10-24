@@ -109,3 +109,83 @@ class TestMkDocsUpdater:
         output = updater.atualizar(silencioso=True)
         parsed = yaml.safe_load(output.read_text(encoding="utf-8"))
         assert parsed["nav"] == [{"Home": "index.md"}]
+
+
+class TestTitulosDaNavegacao:
+    """Títulos do menu lidos do Markdown (P1), com acentos e sem numeração."""
+
+    @pytest.fixture
+    def updater(self, fm_temp, config_padrao) -> MkDocsUpdater:
+        return MkDocsUpdater(fm_temp, config_padrao)
+
+    @pytest.fixture
+    def modulo(self, fm_temp) -> Path:
+        """Cria cursos/curso_x/modulo_01_introducao_ao_projeto/ vazio."""
+        caminho = fm_temp.root / "cursos" / "curso_x" / "modulo_01_introducao_ao_projeto"
+        caminho.mkdir(parents=True)
+        return caminho
+
+    @staticmethod
+    def _nav_do_modulo(updater) -> tuple[str, list]:
+        """Retorna (nome do módulo, entradas) do primeiro módulo do primeiro curso."""
+        curso = updater._construir_nav()[1]
+        entradas_curso = list(curso.values())[0]
+        nome, entradas = next(iter(entradas_curso[0].items()))
+        return nome, entradas
+
+    def test_capitulo_usa_h1_sem_numeracao(self, updater, modulo):
+        (modulo / "01_variaveis.md").write_text("# 01. Variáveis e Tipos\n\nTexto", encoding="utf-8")
+        (modulo / "02_login.md").write_text("# 02 — Tela de Login\n", encoding="utf-8")
+        _, entradas = self._nav_do_modulo(updater)
+        assert [list(e)[0] for e in entradas] == ["Variáveis e Tipos", "Tela de Login"]
+
+    def test_front_matter_title_tem_prioridade(self, updater, modulo):
+        (modulo / "01_x.md").write_text(
+            '---\ntitle: "Título do Front-matter"\n---\n\n# H1 Diferente\n', encoding="utf-8"
+        )
+        _, entradas = self._nav_do_modulo(updater)
+        assert list(entradas[0]) == ["Título do Front-matter"]
+
+    def test_remove_emoji_e_crases(self, updater, modulo):
+        (modulo / "01_venv.md").write_text("# 🧠 Ambientes (`venv`) e **Terminal**\n", encoding="utf-8")
+        _, entradas = self._nav_do_modulo(updater)
+        assert list(entradas[0]) == ["Ambientes (venv) e Terminal"]
+
+    def test_ignora_h1_dentro_de_bloco_de_codigo(self, updater, modulo):
+        (modulo / "01_x.md").write_text(
+            "Intro\n\n```python\n# comentario\n```\n\n# Título Real\n", encoding="utf-8"
+        )
+        _, entradas = self._nav_do_modulo(updater)
+        assert list(entradas[0]) == ["Título Real"]
+
+    def test_fallback_acentua_nome_do_arquivo(self, updater, modulo):
+        (modulo / "03_introducao_as_funcoes.md").write_text("Sem título.\n", encoding="utf-8")
+        _, entradas = self._nav_do_modulo(updater)
+        assert list(entradas[0]) == ["Introdução as Funções"]
+
+    def test_remove_prefixo_repetido_no_modulo(self, updater, modulo):
+        (modulo / "01_a.md").write_text("# Revisão Visual: Funções\n", encoding="utf-8")
+        (modulo / "02_b.md").write_text("# Revisão Visual: Strings\n", encoding="utf-8")
+        _, entradas = self._nav_do_modulo(updater)
+        assert [list(e)[0] for e in entradas] == ["Funções", "Strings"]
+
+    def test_nao_remove_prefixo_de_um_capitulo_so(self, updater, modulo):
+        (modulo / "01_a.md").write_text("# Projeto Prático: Dashboard\n", encoding="utf-8")
+        _, entradas = self._nav_do_modulo(updater)
+        assert list(entradas[0]) == ["Projeto Prático: Dashboard"]
+
+    def test_modulo_usa_h1_do_index_com_icone(self, updater, modulo):
+        (modulo / "index.md").write_text("# 🏗️ Módulo 01 — Introdução ao Projeto\n", encoding="utf-8")
+        nome, entradas = self._nav_do_modulo(updater)
+        assert nome == "🏗️ Introdução ao Projeto"
+        assert entradas[0] == {"Visão Geral": "curso_x/modulo_01_introducao_ao_projeto/index.md"}
+
+    def test_modulo_sem_index_usa_slug_acentuado(self, updater, modulo):
+        (modulo / "01_a.md").write_text("# A\n", encoding="utf-8")
+        nome, _ = self._nav_do_modulo(updater)
+        assert nome == "🏗️ Introdução ao Projeto"
+
+    def test_numero_que_faz_parte_do_titulo_e_mantido(self, updater, modulo):
+        (modulo / "01_a.md").write_text("# 3 formas de usar listas\n", encoding="utf-8")
+        _, entradas = self._nav_do_modulo(updater)
+        assert list(entradas[0]) == ["3 formas de usar listas"]

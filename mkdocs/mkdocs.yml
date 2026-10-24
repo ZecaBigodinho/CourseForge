@@ -58,72 +58,72 @@ nav:
   - Índice: python_para_desktop/docs/index.md
   - 🐍 Fundamentos:
     - Visão Geral: python_para_desktop/modulo_01_fundamentos/index.md
-    - Variaveis: python_para_desktop/modulo_01_fundamentos/01_variaveis.md
+    - Variáveis: python_para_desktop/modulo_01_fundamentos/01_variaveis.md
     - Operadores: python_para_desktop/modulo_01_fundamentos/02_operadores.md
-    - If Else: python_para_desktop/modulo_01_fundamentos/03_if_else.md
-    - Repeticoes: python_para_desktop/modulo_01_fundamentos/04_repeticoes.md
-    - Funcoes: python_para_desktop/modulo_01_fundamentos/05_funcoes.md
-    - Modulos: python_para_desktop/modulo_01_fundamentos/06_modulos.md
-    - Colecoes: python_para_desktop/modulo_01_fundamentos/07_colecoes.md
-    - Strings: python_para_desktop/modulo_01_fundamentos/08_strings.md
-    - Arquivos: python_para_desktop/modulo_01_fundamentos/09_arquivos.md
-    - Excecoes: python_para_desktop/modulo_01_fundamentos/10_excecoes.md
-    - Projeto Final: python_para_desktop/modulo_01_fundamentos/11_projeto_final.md
-  - 🖥️ Interfaces Graficas:
+    - Condicionais (if/else): python_para_desktop/modulo_01_fundamentos/03_if_else.md
+    - Repetições (for/while): python_para_desktop/modulo_01_fundamentos/04_repeticoes.md
+    - Funções: python_para_desktop/modulo_01_fundamentos/05_funcoes.md
+    - Módulos e Bibliotecas: python_para_desktop/modulo_01_fundamentos/06_modulos.md
+    - Coleções (Listas, Tuplas e Dicionários): python_para_desktop/modulo_01_fundamentos/07_colecoes.md
+    - Manipulação de Strings: python_para_desktop/modulo_01_fundamentos/08_strings.md
+    - Manipulação de Arquivos e Pastas: python_para_desktop/modulo_01_fundamentos/09_arquivos.md
+    - Tratamento de Erros e Exceções: python_para_desktop/modulo_01_fundamentos/10_excecoes.md
+    - Projeto Integrador: python_para_desktop/modulo_01_fundamentos/11_projeto_final.md
+  - 🖥️ Interfaces Gráficas com Python:
     - Visão Geral: python_para_desktop/modulo_02_interfaces_graficas/index.md
-    - Tkinter Basico: python_para_desktop/modulo_02_interfaces_graficas/01_tkinter_basico.md
-    - Layout Managers: python_para_desktop/modulo_02_interfaces_graficas/02_layout_managers.md
-    - Eventos Interatividade: python_para_desktop/modulo_02_interfaces_graficas/03_eventos_interatividade.md
-    - Customtkinter: python_para_desktop/modulo_02_interfaces_graficas/04_customtkinter.md
-    - Projeto Pratico: python_para_desktop/modulo_02_interfaces_graficas/05_projeto_pratico.md
-  - 🗄️ Banco De Dados:
+    - Introdução a Interfaces Gráficas e Tkinter: python_para_desktop/modulo_02_interfaces_graficas/01_tkinter_basico.md
+    - Gerenciadores de Layout (Pack, Grid, Place e Frames): python_para_desktop/modulo_02_interfaces_graficas/02_layout_managers.md
+    - Eventos e Interatividade (Binds, Funções de Callback e Variáveis de Controle): python_para_desktop/modulo_02_interfaces_graficas/03_eventos_interatividade.md
+    - CustomTkinter e Interfaces Modernas: python_para_desktop/modulo_02_interfaces_graficas/04_customtkinter.md
+    - 'Projeto Prático: Dashboard Financeiro Desktop': python_para_desktop/modulo_02_interfaces_graficas/05_projeto_pratico.md
+  - 🗄️ Banco de Dados e Configurações:
     - Visão Geral: python_para_desktop/modulo_03_banco_de_dados/index.md
-    - Introducao Sqlite: python_para_desktop/modulo_03_banco_de_dados/01_introducao_sqlite.md
-    - Integracao Interface: python_para_desktop/modulo_03_banco_de_dados/02_integracao_interface.md
-    - Variaveis Ambiente: python_para_desktop/modulo_03_banco_de_dados/03_variaveis_ambiente.md
-    - Projeto Final: python_para_desktop/modulo_03_banco_de_dados/04_projeto_final.md
+    - Introdução a Banco de Dados com SQLite: python_para_desktop/modulo_03_banco_de_dados/01_introducao_sqlite.md
+    - Integração SQLite e Interface Gráfica: python_para_desktop/modulo_03_banco_de_dados/02_integracao_interface.md
+    - Variáveis de Ambiente com .env: python_para_desktop/modulo_03_banco_de_dados/03_variaveis_ambiente.md
+    - 'Projeto Final: Arquitetura Completa': python_para_desktop/modulo_03_banco_de_dados/04_projeto_final.md
   - 🏗️ Projeto Finalizador:
     - Visão Geral: python_para_desktop/modulo_04_projeto_finalizador/index.md
-    - Introducao Ao Projeto: python_para_desktop/modulo_04_projeto_finalizador/01_introducao_ao_projeto.md
-    - Arquitetura Do Sistema: python_para_desktop/modulo_04_projeto_finalizador/02_arquitetura_do_sistema.md
-    - Tela De Login: python_para_desktop/modulo_04_projeto_finalizador/03_tela_de_login.md
+    - Introdução ao Projeto: python_para_desktop/modulo_04_projeto_finalizador/01_introducao_ao_projeto.md
+    - Arquitetura do Sistema: python_para_desktop/modulo_04_projeto_finalizador/02_arquitetura_do_sistema.md
+    - Tela de Login: python_para_desktop/modulo_04_projeto_finalizador/03_tela_de_login.md
     - Menu Principal: python_para_desktop/modulo_04_projeto_finalizador/04_menu_principal.md
-    - Multiplas Janelas: python_para_desktop/modulo_04_projeto_finalizador/05_multiplas_janelas.md
-    - Cadastro De Alunos: python_para_desktop/modulo_04_projeto_finalizador/06_cadastro_de_alunos.md
-    - Sqlite Local: python_para_desktop/modulo_04_projeto_finalizador/07_sqlite_local.md
-    - Crud Completo: python_para_desktop/modulo_04_projeto_finalizador/08_crud_completo.md
-    - Banco Em Nuvem: python_para_desktop/modulo_04_projeto_finalizador/09_banco_em_nuvem.md
-    - Integracao E Testes: python_para_desktop/modulo_04_projeto_finalizador/10_integracao_e_testes.md
-    - Refatoracao E Entrega: python_para_desktop/modulo_04_projeto_finalizador/11_refatoracao_e_entrega.md
+    - Múltiplas Janelas: python_para_desktop/modulo_04_projeto_finalizador/05_multiplas_janelas.md
+    - Cadastro de Alunos: python_para_desktop/modulo_04_projeto_finalizador/06_cadastro_de_alunos.md
+    - SQLite: python_para_desktop/modulo_04_projeto_finalizador/07_sqlite_local.md
+    - CRUD Completo: python_para_desktop/modulo_04_projeto_finalizador/08_crud_completo.md
+    - Banco em Nuvem: python_para_desktop/modulo_04_projeto_finalizador/09_banco_em_nuvem.md
+    - Integração: python_para_desktop/modulo_04_projeto_finalizador/10_integracao_e_testes.md
+    - Refatoração: python_para_desktop/modulo_04_projeto_finalizador/11_refatoracao_e_entrega.md
     - Projeto Final: python_para_desktop/modulo_04_projeto_finalizador/12_projeto_final.md
-    - Exercicio Neon Streamlit: python_para_desktop/modulo_04_projeto_finalizador/13_exercicio_neon_streamlit.md
-  - 🔀 Git Github:
+    - 'Exercício Prático: Banco em Nuvem com Neon + Streamlit': python_para_desktop/modulo_04_projeto_finalizador/13_exercicio_neon_streamlit.md
+  - 🔀 Git & GitHub para Projetos Reais (Bônus):
     - Visão Geral: python_para_desktop/modulo_05_git_github/index.md
-    - Criando Projeto Profissional: python_para_desktop/modulo_05_git_github/01_criando_projeto_profissional.md
-    - Publicando Projeto Final: python_para_desktop/modulo_05_git_github/02_publicando_projeto_final.md
-  - 🛠️ Vscode Config:
+    - Criando um Projeto Profissional: python_para_desktop/modulo_05_git_github/01_criando_projeto_profissional.md
+    - Publicando o Projeto Final: python_para_desktop/modulo_05_git_github/02_publicando_projeto_final.md
+  - 🛠️ Configuração do VS Code & Ambiente Python (Bônus):
     - Visão Geral: python_para_desktop/modulo_06_vscode_config/index.md
-    - Instalacao E Configuracao Vscode: python_para_desktop/modulo_06_vscode_config/01_instalacao_e_configuracao_vscode.md
-    - Ambiente Virtual E Terminal: python_para_desktop/modulo_06_vscode_config/02_ambiente_virtual_e_terminal.md
-  - 🧊 Poo:
+    - Instalando e Configurando o VS Code do Zero: python_para_desktop/modulo_06_vscode_config/01_instalacao_e_configuracao_vscode.md
+    - Ambientes Virtuais (venv) e Terminal Integrado: python_para_desktop/modulo_06_vscode_config/02_ambiente_virtual_e_terminal.md
+  - 🧊 Programação Orientada a Objetos (POO):
     - Visão Geral: python_para_desktop/modulo_07_poo/index.md
-    - Paradigma Poo: python_para_desktop/modulo_07_poo/01_paradigma_poo.md
-    - Metodos E Propriedades: python_para_desktop/modulo_07_poo/02_metodos_e_propriedades.md
-    - Desenvolvimento Pratico Poo: python_para_desktop/modulo_07_poo/03_desenvolvimento_pratico_poo.md
-  - 🧠 Revisao E Fixacao:
+    - Estudo do Paradigma de Programação Orientada a Objetos (POO): python_para_desktop/modulo_07_poo/01_paradigma_poo.md
+    - Conceitos de Métodos e Propriedades: python_para_desktop/modulo_07_poo/02_metodos_e_propriedades.md
+    - Desenvolvimento Prático de Programas Aplicando POO: python_para_desktop/modulo_07_poo/03_desenvolvimento_pratico_poo.md
+  - 🧠 Central de Revisão Visual & Fixação Didática:
     - Visão Geral: python_para_desktop/modulo_00_revisao_e_fixacao/index.md
-    - If Else Revisao: python_para_desktop/modulo_00_revisao_e_fixacao/01_if_else_revisao.md
-    - Variaveis Revisao: python_para_desktop/modulo_00_revisao_e_fixacao/02_variaveis_revisao.md
-    - Operadores Revisao: python_para_desktop/modulo_00_revisao_e_fixacao/03_operadores_revisao.md
-    - Repeticoes Revisao: python_para_desktop/modulo_00_revisao_e_fixacao/04_repeticoes_revisao.md
-    - Funcoes Revisao: python_para_desktop/modulo_00_revisao_e_fixacao/05_funcoes_revisao.md
-    - Colecoes Revisao: python_para_desktop/modulo_00_revisao_e_fixacao/06_colecoes_revisao.md
-    - Excecoes Revisao: python_para_desktop/modulo_00_revisao_e_fixacao/07_excecoes_revisao.md
-    - Tkinter Ui Revisao: python_para_desktop/modulo_00_revisao_e_fixacao/08_tkinter_ui_revisao.md
-    - Sqlite Db Revisao: python_para_desktop/modulo_00_revisao_e_fixacao/09_sqlite_db_revisao.md
-    - Git Github Revisao: python_para_desktop/modulo_00_revisao_e_fixacao/10_git_github_revisao.md
-    - Strings Revisao: python_para_desktop/modulo_00_revisao_e_fixacao/11_strings_revisao.md
-    - Modulos Revisao: python_para_desktop/modulo_00_revisao_e_fixacao/12_modulos_revisao.md
-    - Arquivos Revisao: python_para_desktop/modulo_00_revisao_e_fixacao/13_arquivos_revisao.md
-    - Poo Revisao: python_para_desktop/modulo_00_revisao_e_fixacao/14_poo_revisao.md
+    - Tomada de Decisão com if, elif e else: python_para_desktop/modulo_00_revisao_e_fixacao/01_if_else_revisao.md
+    - Memória, Variáveis e Tipos de Dados: python_para_desktop/modulo_00_revisao_e_fixacao/02_variaveis_revisao.md
+    - Operadores Aritméticos e Lógicos: python_para_desktop/modulo_00_revisao_e_fixacao/03_operadores_revisao.md
+    - Laços de Repetição (for e while): python_para_desktop/modulo_00_revisao_e_fixacao/04_repeticoes_revisao.md
+    - Funções, Parâmetros e return: python_para_desktop/modulo_00_revisao_e_fixacao/05_funcoes_revisao.md
+    - Coleções (Listas, Dicionários e Tuplas): python_para_desktop/modulo_00_revisao_e_fixacao/06_colecoes_revisao.md
+    - Tratamento de Erros (try / except): python_para_desktop/modulo_00_revisao_e_fixacao/07_excecoes_revisao.md
+    - Interfaces Gráficas com Tkinter & CustomTkinter: python_para_desktop/modulo_00_revisao_e_fixacao/08_tkinter_ui_revisao.md
+    - Banco de Dados SQLite & SQL: python_para_desktop/modulo_00_revisao_e_fixacao/09_sqlite_db_revisao.md
+    - Versionamento Profissional com Git & GitHub: python_para_desktop/modulo_00_revisao_e_fixacao/10_git_github_revisao.md
+    - Manipulação de Strings e Textos: python_para_desktop/modulo_00_revisao_e_fixacao/11_strings_revisao.md
+    - Módulos, Importações e Organização de Código: python_para_desktop/modulo_00_revisao_e_fixacao/12_modulos_revisao.md
+    - Manipulação de Arquivos (TXT, JSON e CSV): python_para_desktop/modulo_00_revisao_e_fixacao/13_arquivos_revisao.md
+    - Programação Orientada a Objetos (POO): python_para_desktop/modulo_00_revisao_e_fixacao/14_poo_revisao.md
 docs_dir: ../cursos

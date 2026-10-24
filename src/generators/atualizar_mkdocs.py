@@ -7,11 +7,15 @@ Nunca edite o mkdocs.yml manualmente — use esta classe.
 Estratégia:
   - Percorre cursos/ → módulos/ → arquivos .md
   - Usa metadados .courseforge.yaml para nomes legíveis (em vez de converter slugs)
+  - Títulos de módulos e capítulos vêm do próprio Markdown:
+    `title:` do front-matter → primeiro `# H1` → nome do arquivo acentuado
   - Monta estrutura nav: hierárquica
   - Escreve mkdocs.yml via FileManager (não diretamente)
 """
 from __future__ import annotations
 
+import os
+import re
 from pathlib import Path
 
 from utils.file_manager import FileManager
@@ -62,6 +66,33 @@ class MkDocsUpdater:
         "poo": "🧊",
         "objeto": "🧊",
     }
+
+    # Fallback quando o .md não tem título: palavras de slug → forma acentuada.
+    ACENTOS: dict[str, str] = {
+        "introducao": "introdução", "configuracao": "configuração",
+        "instalacao": "instalação", "revisao": "revisão", "fixacao": "fixação",
+        "repeticoes": "repetições", "funcoes": "funções", "colecoes": "coleções",
+        "excecoes": "exceções", "variaveis": "variáveis", "graficas": "gráficas",
+        "grafica": "gráfica", "pratico": "prático", "pratica": "prática",
+        "integracao": "integração", "refatoracao": "refatoração",
+        "multiplas": "múltiplas", "programacao": "programação",
+        "orientacao": "orientação", "metodos": "métodos", "modulos": "módulos",
+        "modulo": "módulo", "exercicio": "exercício", "exercicios": "exercícios",
+        "logica": "lógica", "basico": "básico", "conteudo": "conteúdo",
+        "manipulacao": "manipulação", "conexao": "conexão", "aplicacao": "aplicação",
+    }
+
+    # Palavras que ficam minúsculas no meio do título (fallback).
+    MINUSCULAS: frozenset[str] = frozenset(
+        {"a", "o", "as", "os", "e", "de", "da", "do", "das", "dos", "em", "no",
+         "na", "nos", "nas", "com", "para", "por", "ao", "aos", "um", "uma"}
+    )
+
+    # "01. ", "02 — ", "1 - ", "Módulo 01 — ", "Capítulo 3: " no início do título.
+    _RE_NUMERACAO = re.compile(
+        r"^(?:(?:m[oó]dulo|cap[ií]tulo|aula)\s+)?\d+\s*[.:)\-–—]\s*",
+        re.IGNORECASE,
+    )
 
     def __init__(self, fm: FileManager, config_global: dict) -> None:
         """
@@ -164,28 +195,30 @@ class MkDocsUpdater:
 
     def _construir_entrada_modulo(self, modulo_dir: Path, cursos_dir: Path) -> dict | None:
         """Constrói a entrada de navegação de um módulo."""
-        # Nome legível: remove prefixo "modulo_01_" e humaniza
-        nome_sem_numero = "_".join(modulo_dir.name.split("_")[2:])
-        modulo_nome = nome_sem_numero.replace("_", " ").title() if nome_sem_numero else modulo_dir.name
+        # Slug sem o prefixo "modulo_01_" — usado para o ícone e como fallback do nome
+        nome_sem_numero = "_".join(modulo_dir.name.split("_")[2:]) or modulo_dir.name
 
-        # Prefixar com ícone baseado em palavras-chave
-        icone = self._resolver_icone_modulo(modulo_nome)
+        index_mod = modulo_dir / "index.md"
+        titulo_index = self._titulo_do_markdown(index_mod) if index_mod.exists() else None
+        modulo_nome = titulo_index or self._humanizar_slug(nome_sem_numero)
+
+        # Ícone resolvido pelo slug (sem acentos), não pelo título exibido
+        icone = self._resolver_icone_modulo(nome_sem_numero.replace("_", " "))
         if icone:
             modulo_nome = f"{icone} {modulo_nome}"
 
         modulo_entries: list = []
 
         # Índice do módulo
-        index_mod = modulo_dir / "index.md"
         if index_mod.exists():
             rel = index_mod.relative_to(cursos_dir).as_posix()
             modulo_entries.append({"Visão Geral": rel})
 
         # Capítulos
-        for cap in self.fm.listar_arquivos(modulo_dir, "md"):
-            if cap.name == "index.md":
-                continue
-            cap_nome = self._nome_capitulo_legivel(cap.stem)
+        capitulos = [c for c in self.fm.listar_arquivos(modulo_dir, "md") if c.name != "index.md"]
+        titulos = [self._titulo_do_markdown(c) or self._nome_capitulo_legivel(c.stem) for c in capitulos]
+        titulos = self._remover_prefixo_comum(titulos)
+        for cap, cap_nome in zip(capitulos, titulos):
             rel = cap.relative_to(cursos_dir).as_posix()
             modulo_entries.append({cap_nome: rel})
 
@@ -266,10 +299,85 @@ class MkDocsUpdater:
     # Helpers                                                              #
     # ------------------------------------------------------------------ #
 
-    @staticmethod
-    def _nome_capitulo_legivel(stem: str) -> str:
+    def _titulo_do_markdown(self, path: Path) -> str | None:
         """
-        Converte stem de capítulo para nome legível.
+        Lê o título de um .md: `title:` do front-matter ou, na falta, o primeiro `# H1`.
+        Retorna o título já limpo para o menu, ou None se não houver título.
+        """
+        try:
+            texto = self.fm.ler(path)
+        except (OSError, UnicodeDecodeError):
+            logger.warning("Não foi possível ler o título de %s", path)
+            return None
+
+        linhas = texto.splitlines()
+        inicio = 0
+        if linhas and linhas[0].strip() == "---":
+            for i, linha in enumerate(linhas[1:], start=1):
+                if linha.strip() == "---":
+                    inicio = i + 1
+                    break
+                m = re.match(r"^title:\s*(.+?)\s*$", linha)
+                if m:
+                    return self._limpar_titulo(m.group(1).strip("\"'")) or None
+
+        em_bloco_codigo = False
+        for linha in linhas[inicio:]:
+            if linha.lstrip().startswith(("```", "~~~")):
+                em_bloco_codigo = not em_bloco_codigo
+                continue
+            if not em_bloco_codigo and linha.startswith("# "):
+                return self._limpar_titulo(linha[2:]) or None
+        return None
+
+    @classmethod
+    def _limpar_titulo(cls, titulo: str) -> str:
+        """
+        Prepara um título para o menu lateral.
+        Ex: '🛠️ Módulo 06 — Configuração do VS Code' → 'Configuração do VS Code'
+            '02. Ambientes Virtuais (`venv`)'         → 'Ambientes Virtuais (venv)'
+        """
+        t = titulo.replace("`", "").replace("**", "").strip()
+        # Remove emojis/símbolos iniciais: o ícone do módulo é aplicado à parte
+        while t and not (t[0].isalnum() or t[0] in "(\"'¿¡"):
+            t = t[1:].lstrip()
+        # A numeração fica de fora: a ordem já vem do nome do arquivo
+        t = cls._RE_NUMERACAO.sub("", t, count=1)
+        t = re.sub(r"\s{2,}", " ", t).strip()
+        return t
+
+    @staticmethod
+    def _remover_prefixo_comum(titulos: list[str]) -> list[str]:
+        """
+        Remove um rótulo repetido em todos os capítulos do módulo.
+        Ex: ['Revisão Visual: Funções', 'Revisão Visual: Strings'] → ['Funções', 'Strings']
+        Só age com 2+ capítulos e quando o prefixo termina em ':'.
+        """
+        if len(titulos) < 2:
+            return titulos
+        prefixo = os.path.commonprefix(titulos)
+        corte = prefixo.rfind(":")
+        if corte <= 0:
+            return titulos
+        restantes = [t[corte + 1:].strip() for t in titulos]
+        return restantes if all(restantes) else titulos
+
+    @classmethod
+    def _humanizar_slug(cls, slug: str) -> str:
+        """
+        Fallback: 'introducao_ao_projeto' → 'Introdução ao Projeto'.
+        """
+        partes = [p for p in slug.split("_") if p]
+        palavras = []
+        for i, p in enumerate(partes):
+            p = cls.ACENTOS.get(p.lower(), p.lower())
+            palavras.append(p if i > 0 and p in cls.MINUSCULAS else p[:1].upper() + p[1:])
+        return " ".join(palavras) if palavras else slug
+
+    @classmethod
+    def _nome_capitulo_legivel(cls, stem: str) -> str:
+        """
+        Converte stem de capítulo para nome legível (fallback quando o .md não tem título).
         Ex: '01_variaveis_e_tipos' → 'Variáveis e Tipos'
         Remove o número inicial e humaniza o slug.
         """
@@ -277,7 +385,7 @@ class MkDocsUpdater:
         # Pular o número inicial (ex: "01")
         if partes and partes[0].isdigit():
             partes = partes[1:]
-        return " ".join(p.capitalize() for p in partes) if partes else stem
+        return cls._humanizar_slug("_".join(partes)) if partes else stem
 
     @classmethod
     def _resolver_icone_modulo(cls, nome_modulo: str) -> str | None:
