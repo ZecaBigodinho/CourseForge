@@ -54,13 +54,15 @@ hide:
 
 -   :material-robot-happy-outline:{ .lg .middle } __Introdução à IA__
 
-    <span class="cf-tag">Em breve</span>
+    <span class="cf-tag cf-tag--ok">Em andamento</span>
 
     ---
 
     O que é IA, como usar assistentes com responsabilidade, engenharia de prompt e um mini-projeto com Python.
 
-    [:octicons-arrow-right-24: Ver a ementa](introducao_a_ia/docs/index.md)
+    Módulo 01 disponível · IA sem mistério, com atividades à mão
+
+    [:octicons-arrow-right-24: Começar pelo Módulo 01](introducao_a_ia/modulo_01_o_que_e_ia/index.md)
 
 </div>
 

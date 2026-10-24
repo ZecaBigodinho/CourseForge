@@ -188,4 +188,11 @@ nav:
     - Integração e entrega final: pacote_office/modulo_05_projeto_final/05_integracao_e_entrega.md
 - Introdução à IA:
   - Apresentação do curso: introducao_a_ia/docs/index.md
+  - O que é IA (sem mistério):
+    - Visão Geral: introducao_a_ia/modulo_01_o_que_e_ia/index.md
+    - O que é Inteligência Artificial: introducao_a_ia/modulo_01_o_que_e_ia/01_o_que_e_inteligencia_artificial.md
+    - 'Aprendizado de máquina: aprender com exemplos': introducao_a_ia/modulo_01_o_que_e_ia/02_aprendizado_de_maquina.md
+    - Redes neurais e aprendizado profundo: introducao_a_ia/modulo_01_o_que_e_ia/03_redes_neurais.md
+    - IA generativa e modelos de linguagem: introducao_a_ia/modulo_01_o_que_e_ia/04_ia_generativa.md
+    - 'Projeto do módulo: raio-X de uma IA do dia a dia': introducao_a_ia/modulo_01_o_que_e_ia/05_projeto_raio_x_de_uma_ia.md
 docs_dir: ../cursos

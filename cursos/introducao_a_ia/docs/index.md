@@ -1,12 +1,12 @@
 # Introdução à IA
 
 > **Autor:** Prof. Pedro Paulo IF · [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com)  
-> **Versão:** 0.1.0 — ementa  
-> **Situação:** em preparação
+> **Versão:** 0.2.0  
+> **Situação:** em andamento — Módulo 01 disponível  
+> **Ferramentas:** neutro — vale para ChatGPT, Gemini, Copilot, Claude e outros assistentes
 
-!!! info "Em breve"
-    Este curso está em preparação. Abaixo está a **ementa planejada** — os módulos serão publicados um a um.
-    Enquanto isso, que tal começar pelo [Python para Desktop](../../python_para_desktop/docs/index.md)?
+!!! success "Comece agora pelo Módulo 01"
+    O **[Módulo 01 — O que é IA (sem mistério)](../modulo_01_o_que_e_ia/index.md)** já está disponível: o que é IA, aprendizado de máquina, redes neurais e IA generativa, com atividades à mão (sem programar) e o raio-X de uma IA do dia a dia como projeto. Os demais módulos serão publicados um a um.
 
 ---
 
@@ -14,35 +14,31 @@
 
 A Inteligência Artificial já está no celular, na busca e nas ferramentas de estudo. Este curso explica **o que ela é de verdade** — sem jargão e com analogias — e ensina a usá-la como **aliada**: com perguntas bem feitas, desconfiança saudável e responsabilidade.
 
-## Ementa planejada
+## Ementa
 
-### Módulo 01 — O que é IA (sem mistério)
+### Módulo 01 — O que é IA (sem mistério) ✅ disponível
 
-Inteligência Artificial, aprendizado de máquina e IA generativa explicados com exemplos do dia a dia.
+Inteligência Artificial, aprendizado de máquina, redes neurais e IA generativa explicados com exemplos do dia a dia e atividades à mão — com o raio-X de uma IA do dia a dia como projeto. [Acessar o módulo](../modulo_01_o_que_e_ia/index.md)
 
 ### Módulo 02 — Usando assistentes de IA bem
 
-**Engenharia de prompt** na prática, limites das ferramentas, **alucinações** e como verificar fontes.
+**Engenharia de prompt** na prática, limites das ferramentas, **alucinações** e como verificar fontes — com um panorama dos assistentes gratuitos, revisado no momento da publicação.
 
 ### Módulo 03 — IA no estudo e no trabalho
 
-Resumos, explicações, código, planilhas e imagens — e quando **não** vale a pena usar IA.
+Resumos, explicações, código, planilhas e imagens — com as ferramentas gratuitas de cada tarefa — e quando **não** vale a pena usar IA.
 
 ### Módulo 04 — Ética, privacidade e direitos autorais
 
-O que não colocar em uma IA, plágio, autoria e regras de uso responsável em sala de aula.
+O que não colocar em uma IA, plágio, autoria e regras de uso responsável em sala de aula e no trabalho.
 
-### Módulo 05 — Ferramentas gratuitas atuais
+### Módulo 05 — Projeto: seu mini-assistente
 
-Um panorama das ferramentas gratuitas disponíveis — revisado no momento da publicação, porque elas mudam rápido.
-
-### Módulo 06 — Projeto: seu mini-assistente
-
-Uma automação simples ou um mini-assistente com Python e uma API de IA.
+Um mini-assistente com Python e a API de um modelo de IA com **plano gratuito**, com a chave guardada com segurança no `.env`.
 
 ## O que você vai precisar
 
 - Computador ou celular com internet.
-- Para o Módulo 06, o **Módulo 01 do curso de Python** é recomendado.
+- Para o Módulo 05, o **Módulo 01 do curso de Python** é recomendado.
 
 A ficha completa (nível, público e pré-requisitos) está no [Catálogo de cursos](../../catalogo.md).
