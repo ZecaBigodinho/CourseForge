@@ -1,9 +1,9 @@
 # Python para Desktop
 
 > **Autor:** Professor  
-> **Versão:** 1.1.0  
-> **Atualização:** 2026-09-20  
-> **Módulos:** 7 Módulos Progressivos + Central de Revisão Visual & Fixação  
+> **Versão:** 1.2.0  
+> **Atualização:** 2026-10-23  
+> **Módulos:** 6 na trilha principal (00 a 05) + Git & GitHub (bônus) + Central de Revisão Visual & Fixação  
 > **Capítulos:** 45+ Aulas Práticas e Guiadas  
 
 ---

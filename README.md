@@ -24,9 +24,11 @@ O repositório também inclui a plataforma **CourseForge** (organizada no diret�
 
 ### ✨ Destaques
 
+- 🛠️ **Começa pelo ambiente (Módulo 00)** — instalação do Python 3, VS Code, extensões e ambientes virtuais (`venv`) passo a passo
+- 📚 **6 módulos na trilha principal (00 a 05) + Git & GitHub (bônus)**, com **45+ capítulos** de conteúdo prático
+- 🧊 **POO antes das interfaces** — a base para o MVC/CRUD do Projeto Finalizador
+- 🎓 **Certificado com regra única** — entrega e apresentação do Projeto Final do Curso
 - 🧠 **Central de Revisão Visual & Fixação** — 14 aulas didáticas com metáforas do mundo real, diagramas `Mermaid.js` e solução de erros comuns
-- 🛠️ **Módulo Bônus de Configuração (VS Code)** — Guia completo passo a passo de instalação do VS Code, Python 3, extensões e ambientes virtuais (`venv`)
-- 📚 **7 módulos progressivos** (incluindo POO) com **45+ capítulos** de conteúdo prático e aprofundado
 - 🏗️ **Project Based Learning** — construção incremental de um sistema desktop profissional (MVC + SQLite + Nuvem)
 - 🌐 **Site responsivo** acessível de qualquer dispositivo via GitHub Pages
 - 🌙 **Modo escuro/claro** com tema Material Design
@@ -44,7 +46,17 @@ O material está hospedado no **GitHub Pages** e pode ser acessado de qualquer c
 
 ## 📚 Conteúdo do Curso
 
-O curso está dividido em **7 Módulos Progressivos + Central de Revisão Visual**:
+O curso está dividido em **6 módulos na trilha principal (00 a 05)**, **1 módulo bônus (06)** e a **Central de Revisão Visual** como material de apoio. Siga a ordem abaixo — é a mesma do menu do site.
+
+### 🛠️ Módulo 00 — Configuração do VS Code & Ambiente
+> Comece por aqui · 2 capítulos
+
+| # | Capítulo | Descrição |
+|---|----------|-----------|
+| 01 | Instalando o VS Code do Zero | Instalação do Python 3 ("Add to PATH"), VS Code, extensões indispensáveis e atalhos |
+| 02 | Ambientes Virtuais (`venv`) | Criando e ativando `venv`, resolução do erro do PowerShell e `pip install` |
+
+---
 
 ### 🐍 Módulo 01 — Fundamentos de Python
 > Os alicerces da linguagem · 11 capítulos
@@ -61,11 +73,22 @@ O curso está dividido em **7 Módulos Progressivos + Central de Revisão Visual
 | 08 | Strings | Manipulação, formatação e métodos |
 | 09 | Arquivos | Leitura, escrita e manipulação de arquivos |
 | 10 | Exceções | Tratamento de erros com `try/except` |
-| 11 | Projeto Final | Consolidação de todos os conceitos |
+| 11 | Mini-projeto: Sistema no Terminal | Consolidação de todos os conceitos em um sistema CLI |
 
 ---
 
-### 🖥️ Módulo 02 — Interfaces Gráficas
+### 🧊 Módulo 02 — Programação Orientada a Objetos (POO)
+> Paradigma POO, métodos, propriedades e desenvolvimento de aplicações · 3 capítulos
+
+| # | Capítulo | Descrição |
+|---|----------|-----------|
+| 01 | Estudo do Paradigma POO | Classes, Objetos, Instanciação e estado da entidade |
+| 02 | Métodos e Propriedades | O construtor `__init__`, `self`, encapsulamento e `@property` |
+| 03 | Desenvolvimento Prático com POO | Modelagem de sistema real com composição e regras de negócio |
+
+---
+
+### 🖥️ Módulo 03 — Interfaces Gráficas
 > Criando janelas e aplicações visuais · 5 capítulos
 
 | # | Capítulo | Descrição |
@@ -78,7 +101,7 @@ O curso está dividido em **7 Módulos Progressivos + Central de Revisão Visual
 
 ---
 
-### 🗄️ Módulo 03 — Banco de Dados
+### 🗄️ Módulo 04 — Banco de Dados
 > Persistência e integração de dados · 4 capítulos
 
 | # | Capítulo | Descrição |
@@ -86,11 +109,11 @@ O curso está dividido em **7 Módulos Progressivos + Central de Revisão Visual
 | 01 | Introdução ao SQLite | Criação de tabelas e consultas SQL |
 | 02 | Integração com Interface | Conectando banco de dados à UI |
 | 03 | Variáveis de Ambiente | Proteção de credenciais com `.env` |
-| 04 | Projeto Final | Aplicação completa para certificação |
+| 04 | Projeto de Dados | Interface + SQLite + `.env` em MVC — ensaio geral para o Projeto Finalizador |
 
 ---
 
-### 🏗️ Módulo 04 — Projeto Finalizador
+### 🏗️ Módulo 05 — Projeto Finalizador
 > Construção incremental de um sistema completo · 13 capítulos
 
 | # | Capítulo | Descrição |
@@ -106,39 +129,18 @@ O curso está dividido em **7 Módulos Progressivos + Central de Revisão Visual
 | 09 | Banco em Nuvem | Conexão com banco relacional na nuvem |
 | 10 | Integração e Testes | Conectando UI + Banco + Validações |
 | 11 | Refatoração e Entrega | Limpeza de código e tratamento de erros |
-| 12 | Projeto Final | Apresentação da aplicação desktop completa |
+| 12 | Projeto Final do Curso | Entrega e apresentação do sistema — **libera o certificado** |
 | 13 | Exercício Bônus | Aplicação web com Streamlit + Neon Database |
 
 ---
 
-### 🔀 Módulo 05 — Git & GitHub (Bônus)
+### 🔀 Módulo 06 — Git & GitHub (Bônus)
 > Versionamento, colaboração e portfólio · 2 capítulos
 
 | # | Capítulo | Descrição |
 |---|----------|-----------|
 | 01 | Criando Projeto Profissional | Git init, commits, .gitignore e repositório no GitHub |
-| 02 | Publicando Projeto Final | README profissional, releases e portfólio |
-
----
-
-### 🛠️ Módulo 06 — Configuração do VS Code & Ambiente (Bônus)
-> Guia passo a passo para instalar e preparar a máquina de casa · 2 capítulos
-
-| # | Capítulo | Descrição |
-|---|----------|-----------|
-| 01 | Instalando o VS Code do Zero | Instalação do Python 3 ("Add to PATH"), VS Code, extensões indispensáveis e atalhos |
-| 02 | Ambientes Virtuais (`venv`) | Criando e ativando `venv`, resolução do erro do PowerShell e `pip install` |
-
----
-
-### 🧊 Módulo 07 — Programação Orientada a Objetos (POO)
-> Paradigma POO, métodos, propriedades e desenvolvimento de aplicações · 3 capítulos
-
-| # | Capítulo | Descrição |
-|---|----------|-----------|
-| 01 | Estudo do Paradigma POO | Classes, Objetos, Instanciação e estado da entidade |
-| 02 | Métodos e Propriedades | O construtor `__init__`, `self`, encapsulamento e `@property` |
-| 03 | Desenvolvimento Prático com POO | Modelagem de sistema real com composição e regras de negócio |
+| 02 | Publicando o Projeto Final | README profissional, releases e portfólio |
 
 ---
 
@@ -161,6 +163,12 @@ O curso está dividido em **7 Módulos Progressivos + Central de Revisão Visual
 | 12 | Banco de Dados SQLite & SQL | O *Arquivo Morto com Secretário SQL* (CRUD Completo) |
 | 13 | Versionamento com Git & GitHub | A *Máquina do Tempo do Código* (`add`, `commit`, `push`) |
 | 14 | Programação Orientada a Objetos (POO) | A *Planta Industrial de Automóveis* (`class`, `self`, `@property`) |
+
+---
+
+## 🎓 Certificado
+
+O certificado é liberado por **um único requisito**: entregar e apresentar o **Projeto Final do Curso** (capítulo 12 do Módulo 05 — Projeto Finalizador). O Mini-projeto (Módulo 01) e o Projeto de Dados (Módulo 04) são etapas de prática; o Módulo 06 é bônus.
 
 ---
 
@@ -212,8 +220,14 @@ O site estará disponível localmente em **`http://localhost:8000`**.
 Para publicar as atualizações no site oficial:
 
 ```bash
+# 1. Regenerar o menu (mkdocs.yml é gerado — não edite à mão) e validar links
+python main.py publicar
+
+# 2. Publicar no GitHub Pages
 python -m mkdocs gh-deploy -f mkdocs/mkdocs.yml
 ```
+
+> A ordem dos módulos no menu vem de `ordem_modulos` em `cursos/<curso>/.courseforge.yaml`; os títulos vêm do `# H1` de cada aula.
 
 ---
 

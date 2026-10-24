@@ -1,5 +1,6 @@
 site_name: CourseForge Docs
-site_description: Plataforma de Cursos
+site_description: 'Cursos gratuitos para a sala de aula: Python para Desktop do zero
+  ao sistema completo, com aulas práticas, revisão visual e projeto final.'
 site_author: Professor
 theme:
   name: material

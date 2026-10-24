@@ -1,9 +1,9 @@
 nome: Python para Desktop
-descricao: Curso de Python Desktop
+descricao: Python do zero ao sistema desktop completo — fundamentos, POO, interfaces gráficas, banco de dados e projeto final em equipe.
 autor: Professor
-num_modulos: 5
+num_modulos: 7
 data_criacao: '2026-07-17'
-versao: 1.0.0
+versao: 1.2.0
 tags: []
 slug: python_para_desktop
 # Ordem pedagógica do menu (nomes das pastas). As pastas não são renomeadas
