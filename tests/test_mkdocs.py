@@ -111,6 +111,22 @@ class TestMkDocsUpdater:
         assert parsed["nav"] == [{"Início": "index.md"}]
 
 
+class TestMermaid:
+    """Blocos ```mermaid precisam virar diagramas: superfences com custom_fence."""
+
+    def test_superfences_ganha_custom_fence_do_mermaid(self, fm_temp, config_padrao):
+        config_padrao["mkdocs"]["markdown_extensions"] = ["admonition", "pymdownx.superfences", "attr_list"]
+        fm_temp.criar_diretorio(fm_temp.path("cursos"))
+        updater = MkDocsUpdater(fm_temp, config_padrao)
+        saida = updater.atualizar(silencioso=True)
+        updater.atualizar(silencioso=True)  # gerar de novo não pode duplicar
+        texto = saida.read_text(encoding="utf-8")
+        assert texto.count("custom_fences:") == 1
+        assert "- name: mermaid" in texto and "class: mermaid" in texto
+        assert "format: !!python/name:pymdownx.superfences.fence_code_format" in texto
+        assert "- pymdownx.superfences\n" not in texto  # a linha simples foi substituída
+
+
 class TestOrdemDosModulos:
     """Ordem pedagógica dos módulos via ordem_modulos no .courseforge.yaml (P2)."""
 

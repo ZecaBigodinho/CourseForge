@@ -84,6 +84,13 @@ class TestCatalogGenerator:
         assert "- Criar janelas" in texto and "- **Para quem é:** Iniciantes" in texto
         assert texto.index("__Python__") < texto.index("__Pacote Office__") < texto.index("__IA__")
 
+    def test_curso_em_andamento_ja_pode_ser_acessado(self, plataforma):
+        _criar_curso(plataforma, "office2", {"nome": "Office 2", "ordem": 4, "status": "em_andamento"})
+        texto = CatalogGenerator(plataforma).gerar().read_text(encoding="utf-8")
+        bloco = texto[texto.index("__Office 2__"):]
+        assert '<span class="cf-tag cf-tag--ok">Em andamento</span>' in bloco
+        assert "Acessar o curso" in bloco.split("-   :")[0]
+
     def test_campo_vazio_nao_aparece(self, plataforma):
         texto = CatalogGenerator(plataforma).gerar().read_text(encoding="utf-8")
         assert "Carga horária" not in texto  # carga_horaria: None

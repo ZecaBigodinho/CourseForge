@@ -9,7 +9,7 @@ Assim como o mkdocs.yml, catalogo.md é arquivo gerado: edite as fichas, não a 
 Campos da ficha (todos opcionais, exceto `nome`):
   nome, descricao, autor                    ← já existentes
   ordem: 1                                  ← posição no menu e no catálogo
-  status: disponivel | em_breve
+  status: disponivel | em_andamento | em_breve
   ficha:
     icone: material-language-python         ← ícone do Material (sem os ':')
     nivel, carga_horaria, publico, certificado: texto
@@ -29,6 +29,7 @@ ARQUIVO_CATALOGO = "catalogo.md"
 
 STATUS_ROTULO: dict[str, tuple[str, str]] = {
     "disponivel": ("Disponível", "cf-tag cf-tag--ok"),
+    "em_andamento": ("Em andamento", "cf-tag cf-tag--ok"),  # parte dos módulos já publicada
     "em_breve": ("Em breve", "cf-tag"),
 }
 
@@ -115,7 +116,7 @@ class CatalogGenerator:
         ficha = meta.get("ficha") or {}
         rotulo, classe = self._status(meta)
         icone = ficha.get("icone", "material-school-outline")
-        disponivel = meta.get("status", "disponivel") == "disponivel"
+        disponivel = meta.get("status", "disponivel") in ("disponivel", "em_andamento")
 
         linhas = [
             f"-   :{icone}:{{ .lg .middle }} __{meta.get('nome', curso_dir.name)}__",

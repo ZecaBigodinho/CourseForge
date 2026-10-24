@@ -42,13 +42,15 @@ hide:
 
 -   :material-microsoft-office:{ .lg .middle } __Pacote Office__
 
-    <span class="cf-tag">Em breve</span>
+    <span class="cf-tag cf-tag--ok">Disponível</span>
 
     ---
 
     Word, Excel e PowerPoint para estudar e trabalhar, com alternativas gratuitas (LibreOffice e Google Workspace).
 
-    [:octicons-arrow-right-24: Ver a ementa](pacote_office/docs/index.md)
+    5 módulos · 48 h · do trabalho ABNT ao kit da primeira candidatura
+
+    [:octicons-arrow-right-24: Começar pelo Word](pacote_office/modulo_01_word/index.md)
 
 -   :material-robot-happy-outline:{ .lg .middle } __Introdução à IA__
 
@@ -159,10 +161,12 @@ Apresente o sistema em equipe no Módulo 05 e receba o certificado.
 
 ## Certificado
 
-!!! success "Um único requisito"
-    O certificado é liberado ao **entregar e apresentar o Projeto Final do Curso** — [capítulo 12 do Módulo 05 (Projeto Finalizador)](python_para_desktop/modulo_04_projeto_finalizador/12_projeto_final.md). Ele integra tudo: Python + POO + Interface Gráfica + Banco de Dados + Nuvem.
+!!! success "Um único requisito por curso"
+    **Python para Desktop:** o certificado é liberado ao **entregar e apresentar o Projeto Final do Curso** — [capítulo 12 do Módulo 05 (Projeto Finalizador)](python_para_desktop/modulo_04_projeto_finalizador/12_projeto_final.md). Ele integra tudo: Python + POO + Interface Gráfica + Banco de Dados + Nuvem.
 
     O **Mini-projeto** (Módulo 01) e o **Projeto de Dados** (Módulo 04) são etapas de prática — importantes para chegar preparado, mas não liberam o certificado sozinhos. O Módulo 06 (Git & GitHub) é bônus.
+
+    **Pacote Office:** o certificado é liberado ao **entregar e apresentar o [Projeto Final integrado](pacote_office/modulo_05_projeto_final/index.md)** (Módulo 05) — planilha, currículo, cartas e apresentação pessoal.
 
 ## Perguntas frequentes
 
