@@ -1,11 +1,11 @@
 # Pacote Office
 
 > **Autor:** Prof. Pedro Paulo IF · [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com)  
-> **Versão:** 0.6.0  
-> **Situação:** em andamento — os 5 módulos disponíveis  
+> **Versão:** 1.0.0  
+> **Situação:** disponível — 5 módulos · carga horária de 48 h  
 > **Versão do Office nas aulas:** Microsoft 365 (com os caminhos equivalentes no LibreOffice e no Google)
 
-!!! success "Os cinco módulos já estão disponíveis"
+!!! success "Curso completo: cinco módulos"
     O **[Módulo 01 — Word](../modulo_01_word/index.md)** traz formatação, estilos, sumário, citações e referências **ABNT**, mala direta e um trabalho escolar completo como projeto. O **[Módulo 02 — Excel](../modulo_02_excel/index.md)** vai de fórmulas e referências à tabela dinâmica, com `PROCX`, funções modernas, gráficos, macros e um controle de notas da turma como projeto. O **[Módulo 03 — PowerPoint](../modulo_03_powerpoint/index.md)** vai do roteiro ao Slide Mestre, com gráficos do Excel, animações com moderação e o Modo do Apresentador, e termina com a apresentação do trabalho escolar. O **[Módulo 04](../modulo_04_equipe_e_alternativas/index.md)** ensina a trabalhar em grupo com OneDrive, Outlook e Teams — e a fazer tudo de graça com o LibreOffice e o Google Workspace. O **[Módulo 05](../modulo_05_projeto_final/index.md)** junta tudo no kit da sua primeira candidatura: planilha, currículo, cartas e apresentação pessoal.
 
 ---
@@ -14,7 +14,7 @@
 
 **Word, Excel e PowerPoint para estudar e trabalhar** — do documento bem formatado à planilha que faz as contas sozinha e à apresentação que prende a atenção. Cada ferramenta tem uma **alternativa gratuita** (LibreOffice e Google Workspace), para que ninguém fique de fora por falta de licença.
 
-## Ementa planejada
+## Ementa
 
 ### Módulo 01 — Word ✅ disponível
 
@@ -38,6 +38,13 @@ O kit da primeira candidatura: **planilha de candidaturas** no Excel, que alimen
 
 !!! tip "Ponte com a programação (opcional)"
     Quem fizer o curso de Python poderá automatizar planilhas e documentos com `openpyxl` e `python-docx`. A última aula do Módulo 05 traz um primeiro exemplo: um programa que lê a planilha de candidaturas e escreve os e-mails de cobrança.
+
+## Certificado
+
+!!! warning "Um único requisito"
+    O certificado é liberado ao **entregar e apresentar o Projeto Final integrado** — o [Módulo 05](../modulo_05_projeto_final/index.md): planilha de candidaturas, currículo, cartas de apresentação e apresentação pessoal, entregues em PDF, com a apresentação pessoal feita para a turma.
+
+    Os projetos dos Módulos 01 a 04 (trabalho ABNT, controle de notas, apresentação do trabalho e trabalho em grupo) são etapas de prática — importantes para chegar preparado, e as provas que você vai usar no currículo —, mas não liberam o certificado sozinhos.
 
 ## O que você vai precisar
 

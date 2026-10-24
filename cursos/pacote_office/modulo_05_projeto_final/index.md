@@ -35,6 +35,9 @@ Ao final deste módulo, você será capaz de:
 - Entregar um trabalho completo pela **nuvem**, com e-mail formal e permissões corretas.
 - **Avaliar** o próprio trabalho com critérios claros.
 
+!!! success "Este projeto libera o certificado"
+    A entrega completa (planilha, currículo, cartas e apresentação pessoal em PDF) e a apresentação pessoal feita para a turma são o requisito do certificado do Pacote Office.
+
 !!! info "Dados pessoais"
     Este projeto usa os **seus** dados (nome, contato, experiências). As aulas mostram o que **não** colocar no currículo e como compartilhar só com quem precisa. Os exemplos usam pessoas e empresas inventadas, com endereços de e-mail terminados em `.example`.
 

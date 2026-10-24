@@ -29,14 +29,15 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 
 -   :material-microsoft-office:{ .lg .middle } __Pacote Office__
 
-    <span class="cf-tag cf-tag--ok">Em andamento</span>
+    <span class="cf-tag cf-tag--ok">Disponível</span>
 
     ---
 
     Word, Excel e PowerPoint para estudar e trabalhar, com alternativas gratuitas.
 
     **Nível:** Iniciante  
-    **Certificado:** Regra definida quando todos os módulos estiverem publicados.  
+    **Carga horária:** 48 h  
+    **Certificado:** Entrega e apresentação do Projeto Final integrado (Módulo 05).  
 
     [:octicons-arrow-right-24: Acessar o curso](pacote_office/docs/index.md)
 
@@ -80,11 +81,12 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 
 [Ir para o curso](python_para_desktop/docs/index.md)
 
-### Pacote Office <span class="cf-tag cf-tag--ok">Em andamento</span>
+### Pacote Office <span class="cf-tag cf-tag--ok">Disponível</span>
 
 - **Nível:** Iniciante
+- **Carga horária:** 48 h
 - **Para quem é:** Alunos que querem usar Word, Excel e PowerPoint com segurança no estudo e no trabalho.
-- **Certificado:** Regra definida quando todos os módulos estiverem publicados.
+- **Certificado:** Entrega e apresentação do Projeto Final integrado (Módulo 05).
 - **Autor:** Pedro Paulo IF
 
 **Pré-requisitos:**
