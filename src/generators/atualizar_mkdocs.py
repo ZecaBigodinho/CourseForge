@@ -270,10 +270,37 @@ class MkDocsUpdater:
         # Usa escrever_yaml do FileManager — única via de escrita YAML no projeto
         self.fm.escrever_yaml(output_path, cfg, sobrescrever=True)
 
-        # Injetar pymdownx.emoji com tags !!python/name (incompatíveis com yaml.dump)
+        # Injetar extensões com tags !!python/name (incompatíveis com yaml.dump)
         self._injetar_emoji_extension(output_path)
+        self._injetar_mermaid(output_path)
 
         return output_path
+
+    @staticmethod
+    def _injetar_mermaid(path: Path) -> None:
+        """
+        Faz os blocos ```mermaid virarem diagramas (e não código).
+
+        Troca a linha "- pymdownx.superfences" das markdown_extensions pela versão com
+        o custom_fence do Mermaid, que o Material desenha sozinho. Como precisa da tag
+        !!python/name:, é injetado como texto, igual ao emoji.
+        """
+        content = path.read_text(encoding="utf-8")
+        if "custom_fences" in content:
+            return
+        linhas = content.splitlines(keepends=True)
+        for i, linha in enumerate(linhas):
+            if linha.strip() == "- pymdownx.superfences":
+                indent = linha[: len(linha) - len(linha.lstrip())]
+                linhas[i] = (
+                    f"{indent}- pymdownx.superfences:\n"
+                    f"{indent}    custom_fences:\n"
+                    f"{indent}    - name: mermaid\n"
+                    f"{indent}      class: mermaid\n"
+                    f"{indent}      format: !!python/name:pymdownx.superfences.fence_code_format\n"
+                )
+                path.write_text("".join(linhas), encoding="utf-8")
+                return
 
     @staticmethod
     def _injetar_emoji_extension(path: Path) -> None:
