@@ -2,6 +2,7 @@
 
 ## Objetivos
 Neste capítulo, você aprenderá a:
+
 - Compreender a importância das funções para a modularização do código.
 - Definir funções em Python com a palavra reservada `def`.
 - Utilizar parâmetros para tornar as funções flexíveis e reutilizáveis.
@@ -13,6 +14,7 @@ Neste capítulo, você aprenderá a:
 
 ## Pré-requisitos
 Antes de prosseguir, você deve dominar:
+
 - Variáveis e tipos de dados (int, float, str, bool, listas).
 - Operadores aritméticos, de comparação e lógicos.
 - Estruturas condicionais (`if`, `elif`, `else`).
@@ -24,6 +26,7 @@ Se algum desses tópicos ainda não estiver consolidado, revise os capítulos an
 Conforme seus programas crescem, você perceberá que certas tarefas se repetem: validar um CPF, calcular um desconto, exibir um menu, ordenar uma lista. Copiar e colar o mesmo trecho de código várias vezes torna o programa difícil de manter — qualquer alteração exige que você modifique todas as cópias, aumentando o risco de erros.
 
 As funções são a solução. Elas permitem encapsular um bloco de código que realiza uma tarefa específica, dando-lhe um nome. Em vez de repetir a lógica, você simplesmente chama a função. Isso torna o código:
+
 - **Modular**: dividido em partes menores e independentes.
 - **Reutilizável**: uma função escrita uma vez pode ser usada em vários lugares.
 - **Legível**: o nome da função descreve o que ela faz.
@@ -133,6 +136,7 @@ print(f"Área: {a}, Perímetro: {p}")  # Área: 15, Perímetro: 16
 
 ### Escopo de variáveis
 O escopo define onde uma variável é acessível. Python tem dois escopos principais:
+
 - **Variável local**: definida dentro de uma função. Só pode ser acessada dentro dela.
 - **Variável global**: definida fora de todas as funções. Pode ser lida em qualquer lugar, mas para modificá-la dentro de uma função é necessário declarar `global`.
 
@@ -294,11 +298,67 @@ Funções não servem apenas para reuso, mas também para abstrair complexidade.
 - Crie uma função `exibir_nome_idade(nome, idade)` que imprima: "Nome: ..., Idade: ...". Chame-a com seus dados.
 - Defina uma função `e_par(numero)` que retorna `True` se o número for par e `False` caso contrário. Utilize-a em um programa que percorra números de 1 a 10 e imprima se cada um é par ou ímpar.
 
+<!-- gabarito -->
+??? success "Gabarito — Básico"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    def dobro(numero):
+        return numero * 2
+
+
+    def exibir_nome_idade(nome, idade):
+        print(f"Nome: {nome}, Idade: {idade}")
+
+
+    def e_par(numero):
+        return numero % 2 == 0
+
+
+    print(dobro(4))    # 8
+    print(dobro(-7))   # -14
+    exibir_nome_idade("Ana", 19)
+
+    for n in range(1, 11):
+        if e_par(n):
+            print(n, "é par")
+        else:
+            print(n, "é ímpar")
+    ```
+
+
 ### Intermediário (aplicação)
 Desenvolva uma função `calcular_media(notas)` que receba uma lista de notas (números) e retorne a média aritmética. Em seguida, crie outra função `situacao(media)` que retorne "Aprovado" (média >= 7), "Recuperação" (5 <= média < 7) ou "Reprovado" (média < 5). Escreva um programa que leia 3 notas, calcule a média usando essas funções e exiba a situação do aluno.
 
+<!-- gabarito -->
+??? success "Gabarito — Intermediário"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    def calcular_media(notas):
+        return sum(notas) / len(notas)
+
+
+    def situacao(media):
+        if media >= 7:
+            return "Aprovado"
+        if media >= 5:
+            return "Recuperação"
+        return "Reprovado"
+
+
+    notas = []
+    for i in range(1, 4):
+        notas.append(float(input(f"Nota {i}: ")))
+
+    media = calcular_media(notas)
+    print(f"Média: {media:.1f} — {situacao(media)}")
+    ```
+
+
 ### Avançado (desafio)
 Implemente um sistema de conversão de unidades com as seguintes funções:
+
 - `metros_para_km(metros)`: converte metros para quilômetros.
 - `km_para_milhas(km)`: converte quilômetros para milhas.
 - `milhas_para_pes(milhas)`: converte milhas para pés.
@@ -306,10 +366,62 @@ Implemente um sistema de conversão de unidades com as seguintes funções:
 
 Crie também uma função `converter(valor, unidade_origem, unidade_destino)` que, com base em strings ("m", "km", "mi", "ft"), escolhe automaticamente a combinação de funções adequada e retorna o valor convertido. Se a conversão não for suportada, retorne `None`. Documente cada função com docstrings. Exemplo de uso: `converter(1000, "m", "km")` deve retornar `1.0`.
 
+<!-- gabarito -->
+??? success "Gabarito — Avançado"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    def metros_para_km(metros):
+        """Converte metros em quilômetros."""
+        return metros / 1000
+
+
+    def km_para_milhas(km):
+        """Converte quilômetros em milhas (1 mi = 1,609344 km)."""
+        return km / 1.609344
+
+
+    def milhas_para_pes(milhas):
+        """Converte milhas em pés (1 mi = 5280 ft)."""
+        return milhas * 5280
+
+
+    def pes_para_metros(pes):
+        """Converte pés em metros (1 ft = 0,3048 m)."""
+        return pes * 0.3048
+
+
+    def converter(valor, unidade_origem, unidade_destino):
+        """
+        Converte `valor` entre "m", "km", "mi" e "ft" encadeando as funções acima.
+        Retorna None se alguma unidade não for suportada.
+        """
+        # A cadeia m → km → mi → ft → m forma um ciclo: basta andar por ela
+        ciclo = ["m", "km", "mi", "ft"]
+        passos = {"m": metros_para_km, "km": km_para_milhas, "mi": milhas_para_pes, "ft": pes_para_metros}
+
+        if unidade_origem not in ciclo or unidade_destino not in ciclo:
+            return None
+
+        atual = unidade_origem
+        while atual != unidade_destino:
+            valor = passos[atual](valor)
+            atual = ciclo[(ciclo.index(atual) + 1) % len(ciclo)]
+        return valor
+
+
+    print(converter(1000, "m", "km"))            # 1.0
+    print(round(converter(10, "km", "mi"), 3))   # 6.214
+    print(round(converter(1, "mi", "m"), 3))     # 1609.344
+    print(converter(5, "m", "jardas"))           # None
+    ```
+
+
 ## Projeto Prático: Calculadora Modular com Funções
 Desenvolva uma calculadora de console que ofereça operações matemáticas básicas e avançadas, toda estruturada em funções.
 
 **Requisitos:**
+
 1. Crie uma função para cada operação: `somar(a, b)`, `subtrair(a, b)`, `multiplicar(a, b)`, `dividir(a, b)`, `potencia(a, b)`.
 2. A função `dividir` deve tratar divisão por zero e retornar `None` nesse caso, exibindo uma mensagem de erro.
 3. Crie uma função `exibir_menu()` que mostre as opções disponíveis e retorne a escolha do usuário.
@@ -350,6 +462,7 @@ Complete o projeto, garantindo que a modularização facilite a leitura e futura
 
 ## Resumo
 Neste capítulo, você aprendeu que:
+
 - Funções são blocos nomeados de código reutilizável, definidos com `def`.
 - Parâmetros permitem que as funções recebam dados; argumentos são os valores passados na chamada.
 - Parâmetros com valor padrão tornam alguns argumentos opcionais.
@@ -359,3 +472,8 @@ Neste capítulo, você aprendeu que:
 - Boas práticas incluem funções pequenas, com um único propósito, e nomes descritivos.
 
 As funções são a espinha dorsal da programação procedural. Agora você pode decompor problemas em partes menores, reutilizar lógica e tornar seu código muito mais organizado.
+
+
+<!-- revisao-visual -->
+!!! tip "Revisão visual: Funções"
+    Ficou alguma dúvida? A [Central de Revisão](../modulo_00_revisao_e_fixacao/05_funcoes_revisao.md) explica **funções** com analogias do dia a dia, diagramas e os erros mais comuns — use antes dos exercícios ou para estudar para a prova.

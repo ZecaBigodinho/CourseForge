@@ -1,7 +1,7 @@
 # 🧠 Revisão Visual: Banco de Dados SQLite & SQL
 
 > **Curso:** Python para Desktop  
-> **Módulo:** 00 — Central de Revisão Visual  
+> **Módulo:** Central de Revisão Visual  
 > **Nível:** Fixação Didática & Visual  
 > **Tempo estimado de leitura:** 25 min  
 
@@ -10,6 +10,7 @@
 ## 🎯 Por que esta revisão é para você?
 
 Se você já se pegou em dúvida sobre:
+
 * *"Por que preciso de um Banco de Dados se posso salvar tudo em arquivos de texto?"*
 * *"O que são as operações CRUD (`CREATE`, `READ`, `UPDATE`, `DELETE`)?"*
 * *"Como conectar o Python ao SQLite sem deixar a conexão aberta vazar dados?"*

@@ -2,6 +2,7 @@
 
 ## Objetivos
 Neste capítulo, você vai aprender a:
+
 - Compreender o propósito das estruturas de repetição em programação.
 - Utilizar o laço `while` para executar blocos enquanto uma condição for verdadeira.
 - Utilizar o laço `for` para iterar sobre sequências como strings, listas e intervalos numéricos.
@@ -12,6 +13,7 @@ Neste capítulo, você vai aprender a:
 
 ## Pré-requisitos
 Antes de começar, certifique-se de que você domina:
+
 - Variáveis e tipos de dados básicos (int, float, str, bool).
 - Operadores de comparação e lógicos.
 - Estruturas condicionais `if`, `elif`, `else`.
@@ -28,6 +30,7 @@ As estruturas de repetição resolvem exatamente esse problema: elas permitem qu
 
 ### O que são laços de repetição?
 Um laço de repetição (ou loop) é uma estrutura que repete um conjunto de instruções. O número de repetições pode ser conhecido previamente ou determinado por uma condição. Python oferece dois laços principais:
+
 - `while`: repete enquanto uma condição booleana for verdadeira.
 - `for`: itera sobre cada item de uma sequência (string, lista, intervalo, etc.).
 
@@ -86,6 +89,7 @@ for letra in "Python":
 ```
 
 Agora, se quisermos repetir um bloco um número fixo de vezes, usamos a função `range()`. Ela gera uma sequência de números inteiros.
+
 - `range(n)` gera números de `0` a `n-1`.
 - `range(inicio, fim)` gera de `inicio` até `fim-1`.
 - `range(inicio, fim, passo)` gera com o intervalo especificado.
@@ -105,6 +109,7 @@ for i in range(2, 11, 2):
 
 ### Controlando o laço: break e continue
 Python oferece duas instruções especiais para alterar o fluxo normal de um laço:
+
 - `break`: interrompe imediatamente o laço, saindo dele. O programa continua após o bloco do laço.
 - `continue`: pula para a próxima iteração, ignorando o restante do bloco atual.
 
@@ -276,16 +281,66 @@ else:
 - Com o laço `for`, imprima os números pares de 0 a 20, inclusive.
 - Escreva um programa que peça ao usuário para digitar uma letra. Continue pedindo até que ele digite a letra "x". Use `while`.
 
+<!-- gabarito -->
+??? success "Gabarito — Básico"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    # 1) Contagem regressiva com while
+    contador = 10
+    while contador >= 1:
+        print(contador)
+        contador -= 1
+
+    # 2) Pares de 0 a 20 com for
+    for numero in range(0, 21, 2):
+        print(numero)
+
+    # 3) Pedir até digitar "x"
+    letra = ""
+    while letra != "x":
+        letra = input("Digite uma letra (x para sair): ").strip().lower()
+    print("Fim!")
+    ```
+
+
 ### Intermediário (aplicação)
 Uma livraria deseja um programa para calcular o total de uma venda. O usuário insere o preço de cada livro. O programa deve somar os valores até que o usuário digite 0 para encerrar. Ao final, exiba:
+
 - A quantidade de livros comprados.
 - O valor total da compra.
 - A média de preço por livro.
 
 Utilize um laço `while` para receber os preços. Valide que o preço seja um valor positivo (se for negativo, peça novamente).
 
+<!-- gabarito -->
+??? success "Gabarito — Intermediário"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    quantidade = 0
+    total = 0.0
+
+    while True:
+        preco = float(input("Preço do livro (0 para encerrar): R$ "))
+        if preco == 0:
+            break
+        if preco < 0:
+            print("Preço inválido. Digite um valor positivo.")
+            continue
+        quantidade += 1
+        total += preco
+
+    print(f"Livros comprados: {quantidade}")
+    print(f"Total da compra: R$ {total:.2f}")
+    if quantidade > 0:
+        print(f"Preço médio: R$ {total / quantidade:.2f}")
+    ```
+
+
 ### Avançado (desafio)
 Crie um programa que simule um caixa eletrônico simples. O programa inicia com um saldo de R$ 1000,00 e oferece um menu com as opções: [1] Depositar, [2] Sacar, [3] Saldo, [4] Sair. O menu deve reaparecer até o usuário escolher Sair. Regras:
+
 - Não permitir saque maior que o saldo.
 - Não permitir saque com valor negativo ou zero.
 - Depósito deve ser um valor positivo.
@@ -294,8 +349,49 @@ Crie um programa que simule um caixa eletrônico simples. O programa inicia com 
 - Utilize `continue` para voltar ao início do laço quando uma operação falhar (ex.: tentativa de saque inválido).
 - Mostre uma mensagem de despedida ao final.
 
+<!-- gabarito -->
+??? success "Gabarito — Avançado"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    saldo = 1000.00
+
+    while True:
+        print("\n[1] Depositar  [2] Sacar  [3] Saldo  [4] Sair")
+        opcao = input("Opção: ").strip()
+
+        if opcao == "1":
+            valor = float(input("Valor do depósito: R$ "))
+            if valor <= 0:
+                print("O depósito deve ser positivo.")
+                continue
+            saldo += valor
+        elif opcao == "2":
+            valor = float(input("Valor do saque: R$ "))
+            if valor <= 0:
+                print("O saque deve ser maior que zero.")
+                continue
+            if valor > saldo:
+                print("Saldo insuficiente.")
+                continue
+            saldo -= valor
+        elif opcao == "3":
+            pass  # o saldo é exibido logo abaixo
+        elif opcao == "4":
+            break
+        else:
+            print("Opção inválida.")
+            continue
+
+        print(f"Saldo atual: R$ {saldo:.2f}")
+
+    print("Obrigado por usar o caixa eletrônico. Até logo!")
+    ```
+
+
 ## Projeto Prático: Jogo de Adivinhação com Tentativas
 Desenvolva um jogo em que o computador escolhe um número aleatório entre 1 e 100, e o jogador tenta adivinhar. O programa deve:
+
 1. Gerar o número secreto usando `random.randint(1, 100)` (importe `random`).
 2. Dar as boas-vindas e informar que o número está entre 1 e 100.
 3. Usar um laço `while` para receber palpites até que o jogador acerte.
@@ -326,6 +422,7 @@ Implemente o jogo completo, aplicando os conceitos de `while`, `if/else` e contr
 
 ## Resumo
 Neste capítulo, você aprendeu que:
+
 - Laços de repetição permitem executar blocos de código múltiplas vezes.
 - O laço `while` repete enquanto uma condição for verdadeira, sendo ideal para situações com número incerto de iterações.
 - O laço `for` percorre cada item de uma sequência (listas, strings, intervalos) e é a melhor opção quando se sabe exatamente sobre quais elementos iterar.
@@ -334,3 +431,8 @@ Neste capítulo, você aprendeu que:
 - É fundamental evitar laços infinitos não intencionais e manter o código do laço organizado.
 
 Com esses recursos, seus programas ganham a capacidade de processar dados em massa, validar entradas e criar interações contínuas — uma habilidade essencial para qualquer desenvolvedor Python.
+
+
+<!-- revisao-visual -->
+!!! tip "Revisão visual: Laços de repetição"
+    Ficou alguma dúvida? A [Central de Revisão](../modulo_00_revisao_e_fixacao/04_repeticoes_revisao.md) explica **laços de repetição** com analogias do dia a dia, diagramas e os erros mais comuns — use antes dos exercícios ou para estudar para a prova.

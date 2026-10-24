@@ -1,7 +1,7 @@
 # 🧠 Revisão Visual: Manipulação de Arquivos (TXT, JSON e CSV)
 
 > **Curso:** Python para Desktop  
-> **Módulo:** 00 — Central de Revisão Visual  
+> **Módulo:** Central de Revisão Visual  
 > **Nível:** Fixação Didática & Visual  
 > **Tempo estimado de leitura:** 20 min  
 
@@ -10,6 +10,7 @@
 ## 🎯 Por que esta revisão é para você?
 
 Se você já se pegou em dúvida sobre:
+
 * *"Por que meu arquivo ficou vazio depois que abri no modo `'w'`?"*
 * *"Como salvar dados da aplicação em formato JSON para não perder ao fechar?"*
 * *"Para que serve o bloco `with open(...)` e por que não preciso chamar `.close()`?"*

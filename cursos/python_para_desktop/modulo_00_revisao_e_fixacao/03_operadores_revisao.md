@@ -1,7 +1,7 @@
 # 🧠 Revisão Visual: Operadores Aritméticos e Lógicos
 
 > **Curso:** Python para Desktop  
-> **Módulo:** 00 — Central de Revisão Visual  
+> **Módulo:** Central de Revisão Visual  
 > **Nível:** Fixação Didática & Visual  
 > **Tempo estimado de leitura:** 20 min  
 
@@ -10,6 +10,7 @@
 ## 🎯 Por que esta revisão é para você?
 
 Se você já travou com perguntas do tipo:
+
 * *"Para que serve o `%` (módulo) no Python? É porcentagem?"*
 * *"Qual a diferença entre o `/` simples e o `//` duplo?"*
 * *"Como funciona o `and` e o `or` quando misturamos várias condições?"*
@@ -26,6 +27,7 @@ Se você já travou com perguntas do tipo:
 ## 🏬 Metáfora do Mundo Real: A Catraca do Parque de Diversões
 
 Imagine a regra para entrar na montanha-russa:
+
 - *"Você precisa ter pelo menos 1.50m de altura **AND** ter mais de 12 anos."*
 
 === "🎨 Metáfora Visual (and / or)"

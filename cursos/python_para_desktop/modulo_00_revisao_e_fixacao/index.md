@@ -93,3 +93,25 @@ Esta central foi criada para ser seu **porto seguro** sempre que algum assunto p
 
 </div>
 
+
+<!-- revisao-visual -->
+## 🔗 Use junto com as aulas
+
+A Central **não substitui** as aulas: ela revisa o mesmo assunto por outro ângulo. Use cada revisão depois da aula correspondente:
+
+| Revisão | Use depois de |
+|---|---|
+| [Variáveis e tipos](02_variaveis_revisao.md) | [Módulo 01 · aula 01](../modulo_01_fundamentos/01_variaveis.md) |
+| [Operadores](03_operadores_revisao.md) | [Módulo 01 · aula 02](../modulo_01_fundamentos/02_operadores.md) |
+| [Condicionais](01_if_else_revisao.md) | [Módulo 01 · aula 03](../modulo_01_fundamentos/03_if_else.md) |
+| [Laços de repetição](04_repeticoes_revisao.md) | [Módulo 01 · aula 04](../modulo_01_fundamentos/04_repeticoes.md) |
+| [Funções](05_funcoes_revisao.md) | [Módulo 01 · aula 05](../modulo_01_fundamentos/05_funcoes.md) |
+| [Módulos](12_modulos_revisao.md) | [Módulo 01 · aula 06](../modulo_01_fundamentos/06_modulos.md) |
+| [Coleções](06_colecoes_revisao.md) | [Módulo 01 · aula 07](../modulo_01_fundamentos/07_colecoes.md) |
+| [Strings](11_strings_revisao.md) | [Módulo 01 · aula 08](../modulo_01_fundamentos/08_strings.md) |
+| [Arquivos](13_arquivos_revisao.md) | [Módulo 01 · aula 09](../modulo_01_fundamentos/09_arquivos.md) |
+| [Tratamento de erros](07_excecoes_revisao.md) | [Módulo 01 · aula 10](../modulo_01_fundamentos/10_excecoes.md) |
+| [POO](14_poo_revisao.md) | [Módulo 02 (POO)](../modulo_07_poo/03_desenvolvimento_pratico_poo.md) |
+| [Interfaces gráficas](08_tkinter_ui_revisao.md) | [Módulo 03 (Interfaces)](../modulo_02_interfaces_graficas/04_customtkinter.md) |
+| [Banco de dados](09_sqlite_db_revisao.md) | [Módulo 04 (Banco de Dados)](../modulo_03_banco_de_dados/02_integracao_interface.md) |
+| [Git & GitHub](10_git_github_revisao.md) | [Módulo 06 (Git & GitHub)](../modulo_05_git_github/02_publicando_projeto_final.md) |

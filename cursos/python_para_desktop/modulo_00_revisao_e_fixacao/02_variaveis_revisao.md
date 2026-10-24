@@ -1,7 +1,7 @@
 # 🧠 Revisão Visual: Memória, Variáveis e Tipos de Dados
 
 > **Curso:** Python para Desktop  
-> **Módulo:** 00 — Central de Revisão Visual  
+> **Módulo:** Central de Revisão Visual  
 > **Nível:** Fixação Didática & Visual  
 > **Tempo estimado de leitura:** 20 min  
 
@@ -10,6 +10,7 @@
 ## 🎯 Por que esta revisão é para você?
 
 Se você já se pegou perguntando:
+
 * *"Por que não posso somar `10` com `"10"`?"*
 * *"O que acontece na memória do computador quando crio um `nome = "Ana"`?"*
 * *"Como o Python sabe se algo é número ou texto sem eu dizer?"*

@@ -52,8 +52,11 @@ Apesar dessas melhorias visuais, o CustomTkinter mantém total compatibilidade c
 A biblioteca está disponível no PyPI e pode ser instalada com pip:
 
 ```bash
-pip install customtkinter
+pip install customtkinter==5.2.2
 ```
+
+!!! note "Por que fixar a versão 5.2.2?"
+    Os exemplos deste curso foram testados com a **5.2.2**. A versão 6 do CustomTkinter saiu em 2026 e ainda não foi validada com as aulas — fixando o número, todos na turma rodam o mesmo código sem surpresas.
 
 Para verificar a instalação:
 
@@ -427,6 +430,87 @@ Este exemplo demonstra como uma interface de login pode ser moderna e funcional 
 2. Modifique o conversor de temperatura do Exemplo 1 para incluir um campo de entrada que aceite Fahrenheit e converta para Celsius ao clicar em um segundo botão. Utilize `CTkEntry` e organize com `grid()`.
 3. Crie um slider (`CTkSlider`) que varia de 0 a 100 e exiba o valor atual em um `CTkLabel` ao lado, usando `IntVar` e `trace_add` (ou `command` do slider).
 
+<!-- gabarito -->
+??? success "Gabarito — Básico"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python title="exercicio1_tema.py"
+    import customtkinter as ctk
+
+    ctk.set_appearance_mode("dark")
+    ctk.set_default_color_theme("green")
+
+    app = ctk.CTk()
+    app.title("Primeiro app CustomTkinter")
+    ctk.CTkLabel(app, text="Aprendendo CustomTkinter", font=("Arial", 18)).pack(padx=30, pady=20)
+    ctk.CTkButton(app, text="Fechar", command=app.destroy).pack(pady=(0, 20))
+    app.mainloop()
+    ```
+
+    ```python title="exercicio2_conversor.py"
+    import customtkinter as ctk
+
+    app = ctk.CTk()
+    app.title("Conversor de temperatura")
+
+
+    def ler(entrada):
+        try:
+            return float(entrada.get().replace(",", "."))
+        except ValueError:
+            resultado.configure(text="Digite um número válido.")
+            return None
+
+
+    def para_fahrenheit():
+        c = ler(entrada_c)
+        if c is not None:
+            resultado.configure(text=f"{c:.1f} °C = {c * 9 / 5 + 32:.1f} °F")
+
+
+    def para_celsius():
+        f = ler(entrada_f)
+        if f is not None:
+            resultado.configure(text=f"{f:.1f} °F = {(f - 32) * 5 / 9:.1f} °C")
+
+
+    ctk.CTkLabel(app, text="Celsius:").grid(row=0, column=0, padx=10, pady=8, sticky="e")
+    entrada_c = ctk.CTkEntry(app, width=120)
+    entrada_c.grid(row=0, column=1, padx=10, pady=8)
+    ctk.CTkButton(app, text="→ Fahrenheit", command=para_fahrenheit).grid(row=0, column=2, padx=10)
+
+    ctk.CTkLabel(app, text="Fahrenheit:").grid(row=1, column=0, padx=10, pady=8, sticky="e")
+    entrada_f = ctk.CTkEntry(app, width=120)
+    entrada_f.grid(row=1, column=1, padx=10, pady=8)
+    ctk.CTkButton(app, text="→ Celsius", command=para_celsius).grid(row=1, column=2, padx=10)
+
+    resultado = ctk.CTkLabel(app, text="")
+    resultado.grid(row=2, column=0, columnspan=3, pady=10)
+    app.mainloop()
+    ```
+
+    ```python title="exercicio3_slider.py"
+    import customtkinter as ctk
+
+    app = ctk.CTk()
+    app.title("Slider")
+
+    valor = ctk.IntVar(value=50)
+    rotulo = ctk.CTkLabel(app, text="50", width=40)
+
+
+    def ao_mover(*args):
+        rotulo.configure(text=str(valor.get()))
+
+
+    valor.trace_add("write", ao_mover)
+    ctk.CTkSlider(app, from_=0, to=100, number_of_steps=100, variable=valor).grid(
+        row=0, column=0, padx=20, pady=20)
+    rotulo.grid(row=0, column=1, padx=(0, 20))
+    app.mainloop()
+    ```
+
+
 ### Intermediário (aplicação)
 
 Desenvolva um formulário de avaliação com os seguintes widgets CustomTkinter:
@@ -438,6 +522,49 @@ Desenvolva um formulário de avaliação com os seguintes widgets CustomTkinter:
 
 Ao clicar em Enviar, exiba uma `CTkToplevel` com um resumo dos dados preenchidos. Use `grid()` para organização e trate campos vazios com validação.
 
+<!-- gabarito -->
+??? success "Gabarito — Intermediário"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    import customtkinter as ctk
+    from tkinter import messagebox
+
+    app = ctk.CTk()
+    app.title("Avaliação")
+
+    ctk.CTkLabel(app, text="Nome:").grid(row=0, column=0, padx=10, pady=8, sticky="e")
+    entrada_nome = ctk.CTkEntry(app, width=220)
+    entrada_nome.grid(row=0, column=1, padx=10, pady=8)
+
+    ctk.CTkLabel(app, text="Nota:").grid(row=1, column=0, padx=10, pady=8, sticky="e")
+    nota = ctk.CTkOptionMenu(app, values=["1", "2", "3", "4", "5"])
+    nota.set("5")
+    nota.grid(row=1, column=1, padx=10, pady=8, sticky="w")
+
+    novidades = ctk.CTkCheckBox(app, text="Deseja receber novidades por e-mail?")
+    novidades.grid(row=2, column=0, columnspan=2, padx=10, pady=8)
+
+
+    def enviar():
+        nome = entrada_nome.get().strip()
+        if not nome:
+            messagebox.showwarning("Campo obrigatório", "Preencha o nome.")
+            return
+        resumo = ctk.CTkToplevel(app)
+        resumo.title("Resumo da avaliação")
+        texto = (f"Nome: {nome}\nNota: {nota.get()} de 5\n"
+                 f"Novidades por e-mail: {'Sim' if novidades.get() else 'Não'}")
+        ctk.CTkLabel(resumo, text=texto, justify="left").pack(padx=20, pady=15)
+        ctk.CTkButton(resumo, text="OK", command=resumo.destroy).pack(pady=(0, 15))
+        resumo.grab_set()  # mantém o foco na janela de resumo
+
+
+    ctk.CTkButton(app, text="Enviar Avaliação", command=enviar).grid(row=3, column=0, columnspan=2, pady=12)
+    app.mainloop()
+    ```
+
+
 ### Avançado (desafio)
 
 Crie um editor de notas simplificado usando CustomTkinter:
@@ -448,6 +575,99 @@ Crie um editor de notas simplificado usando CustomTkinter:
 - Barra de status inferior (`CTkFrame`) com `CTkLabel` mostrando número de caracteres e palavras, atualizada a cada tecla pressionada (use `bind("<KeyRelease>", ...)` como no Tkinter tradicional).
 - Implemente alternância de tema claro/escuro com um `CTkSwitch` no canto superior direito.
 - A aparência geral deve ser moderna e profissional, com espaçamentos e cantos arredondados.
+
+<!-- gabarito -->
+??? success "Gabarito — Avançado"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    import customtkinter as ctk
+    from tkinter import filedialog, messagebox
+
+    ctk.set_appearance_mode("dark")
+
+    app = ctk.CTk()
+    app.title("Editor de Notas")
+    app.geometry("700x480")
+    arquivo_atual = {"caminho": None}
+
+    # --- Barra superior
+    barra = ctk.CTkFrame(app, corner_radius=10)
+    barra.pack(fill="x", padx=10, pady=(10, 5))
+
+    # --- Área de texto
+    texto = ctk.CTkTextbox(app, corner_radius=10, wrap="word", font=("Consolas", 14))
+    texto.pack(fill="both", expand=True, padx=10, pady=5)
+
+    # --- Barra de status
+    status = ctk.CTkFrame(app, corner_radius=10, height=30)
+    status.pack(fill="x", padx=10, pady=(5, 10))
+    contador = ctk.CTkLabel(status, text="0 caracteres · 0 palavras")
+    contador.pack(side="left", padx=10)
+
+
+    def conteudo():
+        return texto.get("1.0", "end-1c")  # "end-1c" ignora a quebra de linha final automática
+
+
+    def atualizar_status(evento=None):
+        t = conteudo()
+        contador.configure(text=f"{len(t)} caracteres · {len(t.split())} palavras")
+
+
+    def novo():
+        texto.delete("1.0", "end")
+        arquivo_atual["caminho"] = None
+        app.title("Editor de Notas")
+        atualizar_status()
+
+
+    def abrir():
+        caminho = filedialog.askopenfilename(filetypes=[("Texto", "*.txt")])
+        if not caminho:
+            return
+        try:
+            with open(caminho, encoding="utf-8") as f:
+                novo()
+                texto.insert("1.0", f.read())
+        except OSError as erro:
+            messagebox.showerror("Erro ao abrir", str(erro))
+            return
+        arquivo_atual["caminho"] = caminho
+        app.title(f"Editor de Notas — {caminho}")
+        atualizar_status()
+
+
+    def salvar():
+        caminho = arquivo_atual["caminho"] or filedialog.asksaveasfilename(
+            defaultextension=".txt", filetypes=[("Texto", "*.txt")])
+        if not caminho:
+            return
+        try:
+            with open(caminho, "w", encoding="utf-8") as f:
+                f.write(conteudo())
+        except OSError as erro:
+            messagebox.showerror("Erro ao salvar", str(erro))
+            return
+        arquivo_atual["caminho"] = caminho
+        app.title(f"Editor de Notas — {caminho}")
+
+
+    def alternar_tema():
+        ctk.set_appearance_mode("dark" if tema.get() else "light")
+
+
+    for rotulo, acao in (("Novo", novo), ("Abrir", abrir), ("Salvar", salvar)):
+        ctk.CTkButton(barra, text=rotulo, width=80, command=acao).pack(side="left", padx=5, pady=8)
+
+    tema = ctk.CTkSwitch(barra, text="Modo escuro", command=alternar_tema)
+    tema.select()
+    tema.pack(side="right", padx=10)
+
+    texto.bind("<KeyRelease>", atualizar_status)
+    app.mainloop()
+    ```
+
 
 ## Projeto Prático
 
@@ -524,4 +744,9 @@ Com esse conhecimento, suas aplicações Python desktop ganharão um salto de qu
 
 ## Próximo Capítulo
 
-No próximo capítulo, desenvolveremos o **Projeto Final do Módulo 02**, onde juntaremos layout, eventos, persistência e o visual do CustomTkinter para construir uma aplicação desktop completa e robusta do início ao fim.
+No próximo capítulo, desenvolveremos o **Projeto Prático do Módulo 03**, onde juntaremos layout, eventos, persistência e o visual do CustomTkinter para construir uma aplicação desktop completa e robusta do início ao fim.
+
+
+<!-- revisao-visual -->
+!!! tip "Revisão visual: Interfaces gráficas"
+    Ficou alguma dúvida? A [Central de Revisão](../modulo_00_revisao_e_fixacao/08_tkinter_ui_revisao.md) explica **interfaces gráficas** com analogias do dia a dia, diagramas e os erros mais comuns — use antes dos exercícios ou para estudar para a prova.

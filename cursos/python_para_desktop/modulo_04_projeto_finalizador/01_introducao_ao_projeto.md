@@ -1,4 +1,4 @@
-# 1. Introdução ao Projeto
+# 01 — Introdução ao Projeto
 
 ## 🎯 Objetivo
 
@@ -14,18 +14,19 @@ Ao final, você terá:
 
 ## 📍 Contextualização
 
-Você acaba de concluir três módulos intensos: Fundamentos do Python, Interfaces Gráficas com Tkinter e CustomTkinter e Banco de Dados com SQLite. Sabe criar variáveis, funções, classes, conectar-se a um banco e construir janelas com botões e tabelas.
+Você acaba de concluir quatro módulos intensos: Fundamentos do Python, Programação Orientada a Objetos, Interfaces Gráficas com Tkinter e CustomTkinter e Banco de Dados com SQLite. Sabe criar variáveis, funções, classes, conectar-se a um banco e construir janelas com botões e tabelas.
 
 Agora chegou o momento de abandonar os exercícios isolados e pensar como um desenvolvedor de verdade.
 
-Durante o Módulo 04 — Projeto Finalizador, você não fará mais mini-programas nem exemplos didáticos. Cada linha de código contribuirá para um sistema completo. Ao final, você terá um software funcional pronto para usar, testar e mostrar em uma entrevista de emprego.
+Durante o Módulo 05 — Projeto Finalizador, você não fará mais mini-programas nem exemplos didáticos. Cada linha de código contribuirá para um sistema completo. Ao final, você terá um software funcional pronto para usar, testar e mostrar em uma entrevista de emprego.
 
 **Progresso do Sistema:**
 
 ```text
 ✅ Módulo 01 — Fundamentos do Python
-✅ Módulo 02 — Interfaces Gráficas (Tkinter/CustomTkinter)
-✅ Módulo 03 — Banco de Dados com SQLite
+✅ Módulo 02 — Programação Orientada a Objetos (POO)
+✅ Módulo 03 — Interfaces Gráficas (Tkinter/CustomTkinter)
+✅ Módulo 04 — Banco de Dados com SQLite
 🔨 Introdução ao Projeto ← VOCÊ ESTÁ AQUI
 ⬜ Arquitetura do Sistema
 ⬜ Tela de Login
@@ -225,7 +226,7 @@ Preencha a tabela abaixo no seu caderno ou arquivo de anotações:
 **Objetivo:** Reforçar que você já possui as ferramentas necessárias para construir este sistema. Basta organizá-las.
 
 ??? hint "Dica"
-    Reveja os conteúdos dos módulos 02 (Interfaces Gráficas) e 03 (Banco de Dados). Tudo o que está listado nos requisitos usa exatamente o que você já estudou: janelas, widgets, eventos, conexão SQLite, queries SQL.
+    Reveja os conteúdos dos módulos 03 (Interfaces Gráficas) e 04 (Banco de Dados). Tudo o que está listado nos requisitos usa exatamente o que você já estudou: janelas, widgets, eventos, conexão SQLite, queries SQL.
 
 ??? success "Solução (exemplo)"
     | Requisito | Conceito relacionado | Exemplo |

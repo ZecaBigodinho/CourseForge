@@ -1,7 +1,8 @@
-# 11. Projeto Integrador
+# 11. Mini-projeto: Sistema no Terminal (CLI)
 
 ## Objetivos
 Neste capítulo, você aplicará todos os conhecimentos adquiridos no Módulo 01 para construir um projeto completo. Os objetivos são:
+
 - Integrar variáveis, operadores, condicionais, repetições, funções, módulos, coleções, strings, arquivos e tratamento de exceções em uma única aplicação.
 - Planejar a arquitetura de um programa de linha de comando (CLI) antes de codificá-lo.
 - Organizar o código em módulos reutilizáveis, seguindo boas práticas.
@@ -11,6 +12,7 @@ Neste capítulo, você aplicará todos os conhecimentos adquiridos no Módulo 01
 
 ## Pré-requisitos
 Para aproveitar ao máximo este capítulo, você deve dominar os tópicos do Módulo 01:
+
 - Variáveis e tipos de dados: `int`, `float`, `str`, `bool`.
 - Operadores: aritméticos, de comparação, lógicos e de atribuição.
 - Estruturas de controle: `if`, `elif`, `else` e laços `for` e `while` (incluindo `break` e `continue`).
@@ -24,7 +26,7 @@ Para aproveitar ao máximo este capítulo, você deve dominar os tópicos do Mó
 Se algum desses assuntos ainda gerar dúvidas, revise os capítulos anteriores antes de prosseguir.
 
 ## Motivação
-Aprender conceitos isolados é fundamental, mas o verdadeiro poder da programação se revela quando combinamos esses conceitos para resolver problemas reais. Um projeto integrador é a ponte entre a teoria e a prática: ele simula o desenvolvimento de uma aplicação completa, desde o planejamento até a entrega.
+Aprender conceitos isolados é fundamental, mas o verdadeiro poder da programação se revela quando combinamos esses conceitos para resolver problemas reais. Um mini-projeto é a ponte entre a teoria e a prática: ele simula o desenvolvimento de uma aplicação completa, desde o planejamento até a entrega.
 
 Imagine que você precisa organizar suas tarefas diárias ou controlar seus gastos pessoais. Em vez de depender de aplicativos de terceiros, você pode criar o seu próprio, adaptado exatamente às suas necessidades — e ainda praticar Python de forma significativa. Neste capítulo, vamos construir juntos um Gerenciador de Tarefas por linha de comando. Ao final, você terá um software funcional e a confiança para projetar suas próprias soluções.
 
@@ -32,6 +34,7 @@ Imagine que você precisa organizar suas tarefas diárias ou controlar seus gast
 
 ### Planejamento do projeto
 Antes de escrever uma linha de código, é essencial definir o escopo e a arquitetura. Nosso Gerenciador de Tarefas terá as seguintes funcionalidades:
+
 - Adicionar uma nova tarefa com descrição, prioridade (alta, média, baixa) e status inicial "pendente".
 - Listar todas as tarefas, com opção de filtrar por status (pendente, em andamento, concluída).
 - Atualizar o status de uma tarefa (marcar como "em andamento" ou "concluída").
@@ -51,6 +54,7 @@ Cada módulo agrupa responsabilidades coesas, facilitando manutenção e testes.
 
 ### Modelo de dados
 Uma tarefa será representada por um dicionário com as chaves:
+
 - `id`: número inteiro único (gerado automaticamente).
 - `descricao`: string não vazia.
 - `prioridade`: string, um dos valores "alta", "média" ou "baixa".
@@ -329,16 +333,186 @@ Se o arquivo JSON estiver corrompido, `carregar_tarefas` captura `JSONDecodeErro
 2. Modifique a função `validar_descricao` para aceitar descrições com pelo menos 5 caracteres. Teste o sistema com descrições curtas e observe o comportamento.
 3. Adicione uma opção no menu para exibir a quantidade total de tarefas cadastradas (use `len`).
 
+<!-- gabarito -->
+??? success "Gabarito — Básico"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    # 1) Execute `python main.py` e siga o roteiro: adicione três tarefas, liste,
+    #    mude uma para "concluída" e liste filtrando por "pendente". Abra o
+    #    tarefas.json: cada tarefa é um dicionário dentro de uma lista.
+
+    # 2) validacao.py — mínimo de 5 caracteres
+    def validar_descricao(descricao):
+        """Retorna True se a descrição tiver pelo menos 5 caracteres (sem contar espaços nas pontas)."""
+        return bool(descricao) and len(descricao.strip()) >= 5
+
+    # 3) main.py — nova opção no menu
+    def exibir_menu():
+        print("\n=== Gerenciador de Tarefas ===")
+        print("1. Adicionar tarefa")
+        print("2. Listar tarefas")
+        print("3. Atualizar status")
+        print("4. Remover tarefa")
+        print("5. Quantidade de tarefas")
+        print("6. Sair")
+
+    #    ...e, dentro de main(), troque o "5" de sair por "6" e acrescente:
+    #        elif opcao == "5":
+    #            print(f"Total de tarefas: {len(lista)}")
+    ```
+
+
 ### Intermediário (aplicação)
 Implemente uma nova funcionalidade: pesquisar tarefas por palavra-chave. O usuário digita um termo e o sistema exibe todas as tarefas cuja descrição contenha esse termo (use o operador `in` e `lower()` para busca case-insensitive). Crie uma função `buscar_tarefas(tarefas, termo)` no módulo `tarefas.py` e integre ao menu.
 
+<!-- gabarito -->
+??? success "Gabarito — Intermediário"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    # tarefas.py — nova função
+    def buscar_tarefas(tarefas, termo):
+        """Retorna as tarefas cuja descrição contém o termo (sem diferenciar maiúsculas)."""
+        termo = termo.strip().lower()
+        return [t for t in tarefas if termo in t["descricao"].lower()]
+
+    # main.py — no menu, acrescente "5. Buscar tarefas" (e passe "Sair" para 6).
+    # Dentro de main():
+    #        elif opcao == "5":
+    #            termo = input("Palavra-chave: ")
+    #            encontradas = tm.buscar_tarefas(lista, termo)
+    #            if not encontradas:
+    #                print("Nenhuma tarefa encontrada.")
+    #            for t in encontradas:
+    #                print(f"[{t['id']}] {t['descricao']} - {t['status']}")
+    ```
+
+
 ### Avançado (desafio)
 Transforme o Gerenciador de Tarefas em um Controle Financeiro Pessoal simples, com as seguintes adaptações:
+
 - Cada registro será uma transação: `id`, `descricao`, `valor` (`float`, positivo para receita, negativo para despesa), `categoria` (ex.: alimentação, transporte, lazer) e `data`.
 - Persista em `financas.json`.
 - Funcionalidades: adicionar transação, listar todas, exibir saldo atual (soma de valores), listar por categoria e excluir transação.
 - Valide valor como número, categoria não vazia e data no formato DD/MM/AAAA (use `datetime.strptime` para validar e converter).
 - Trate exceções para entradas inválidas e problemas de arquivo.
+
+<!-- gabarito -->
+??? success "Gabarito — Avançado"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    # financas.py — Controle Financeiro Pessoal (um arquivo só; separe em módulos
+    # como o Gerenciador de Tarefas se quiser praticar a organização)
+    import json
+    from datetime import datetime
+    from pathlib import Path
+
+    ARQUIVO = Path("financas.json")
+
+
+    def carregar():
+        if not ARQUIVO.exists():
+            return []
+        try:
+            with ARQUIVO.open("r", encoding="utf-8") as f:
+                return json.load(f)
+        except (json.JSONDecodeError, OSError) as erro:
+            print(f"Não foi possível ler {ARQUIVO}: {erro}. Começando vazio.")
+            return []
+
+
+    def salvar(transacoes):
+        try:
+            with ARQUIVO.open("w", encoding="utf-8") as f:
+                json.dump(transacoes, f, indent=4, ensure_ascii=False)
+        except OSError as erro:
+            print(f"Erro ao salvar: {erro}")
+
+
+    def ler_valor():
+        texto = input("Valor (negativo = despesa): ").replace(",", ".")
+        try:
+            return float(texto)
+        except ValueError:
+            raise ValueError(f"'{texto}' não é um valor numérico") from None
+
+
+    def ler_data():
+        texto = input("Data (DD/MM/AAAA): ").strip()
+        try:
+            return datetime.strptime(texto, "%d/%m/%Y").strftime("%d/%m/%Y")
+        except ValueError:
+            raise ValueError(f"'{texto}' não é uma data válida no formato DD/MM/AAAA") from None
+
+
+    def adicionar(transacoes):
+        try:
+            descricao = input("Descrição: ").strip()
+            valor = ler_valor()
+            categoria = input("Categoria: ").strip().lower()
+            if not categoria:
+                raise ValueError("a categoria não pode ser vazia")
+            data = ler_data()
+        except ValueError as erro:
+            print(f"Transação não adicionada: {erro}")
+            return
+        novo_id = max((t["id"] for t in transacoes), default=0) + 1
+        transacoes.append({"id": novo_id, "descricao": descricao, "valor": valor,
+                           "categoria": categoria, "data": data})
+        salvar(transacoes)
+        print("Transação adicionada.")
+
+
+    def listar(transacoes):
+        if not transacoes:
+            print("Nenhuma transação.")
+        for t in transacoes:
+            print(f"[{t['id']}] {t['data']} {t['descricao']:<20} {t['categoria']:<12} R$ {t['valor']:>9.2f}")
+
+
+    def saldo(transacoes):
+        print(f"Saldo atual: R$ {sum(t['valor'] for t in transacoes):.2f}")
+
+
+    def por_categoria(transacoes):
+        categoria = input("Categoria: ").strip().lower()
+        listar([t for t in transacoes if t["categoria"] == categoria])
+
+
+    def excluir(transacoes):
+        try:
+            alvo = int(input("ID a excluir: "))
+        except ValueError:
+            print("ID inválido.")
+            return
+        restantes = [t for t in transacoes if t["id"] != alvo]
+        if len(restantes) == len(transacoes):
+            print("ID não encontrado.")
+            return
+        transacoes[:] = restantes
+        salvar(transacoes)
+        print("Transação excluída.")
+
+
+    def main():
+        transacoes = carregar()
+        acoes = {"1": adicionar, "2": listar, "3": saldo, "4": por_categoria, "5": excluir}
+        while True:
+            opcao = input("\n1-Adicionar 2-Listar 3-Saldo 4-Por categoria 5-Excluir 6-Sair: ").strip()
+            if opcao == "6":
+                break
+            if opcao in acoes:
+                acoes[opcao](transacoes)
+            else:
+                print("Opção inválida.")
+
+
+    if __name__ == "__main__":
+        main()
+    ```
+
 
 ## Projeto Prático: Guia passo a passo para o Gerenciador de Tarefas
 Agora, vamos construir o projeto do zero. Siga estas etapas:
@@ -349,6 +523,7 @@ Agora, vamos construir o projeto do zero. Siga estas etapas:
     cd gerenciador_tarefas
     touch main.py tarefas.py persistencia.py validacao.py
     ```
+
 2. **Implemente `validacao.py`** com as três funções de validação mostradas no conteúdo.
 3. **Implemente `persistencia.py`** com `carregar_tarefas` e `salvar_tarefas`, usando `pathlib.Path` e `json`.
 4. **Implemente `tarefas.py`** com `adicionar_tarefa`, `listar_tarefas`, `atualizar_status` e `remover_tarefa`, importando validações e `datetime`.
@@ -369,10 +544,11 @@ Esse projeto prático consolida todos os conceitos do módulo. Ao terminá-lo, v
 
 ## Resumo
 Neste capítulo, você:
+
 - Integrou variáveis, operadores, condicionais, laços, funções, módulos, coleções, strings, manipulação de arquivos e tratamento de exceções em um único sistema.
 - Planejou e implementou um Gerenciador de Tarefas com persistência em JSON.
 - Aprendeu a separar responsabilidades em módulos coesos.
 - Aplicou validações de entrada e tratamento de erros para garantir robustez.
 - Desenvolveu um projeto do início ao fim, vivenciando o ciclo real de desenvolvimento de software.
 
-O projeto integrador não apenas reforça o aprendizado técnico, mas também desenvolve habilidades de organização, depuração e pensamento sistêmico.
+O mini-projeto não apenas reforça o aprendizado técnico, mas também desenvolve habilidades de organização, depuração e pensamento sistêmico.

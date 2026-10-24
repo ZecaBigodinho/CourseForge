@@ -1,7 +1,7 @@
 # 🧠 Revisão Visual: Funções, Parâmetros e `return`
 
 > **Curso:** Python para Desktop  
-> **Módulo:** 00 — Central de Revisão Visual  
+> **Módulo:** Central de Revisão Visual  
 > **Nível:** Fixação Didática & Visual  
 > **Tempo estimado de leitura:** 20 min  
 
@@ -10,6 +10,7 @@
 ## 🎯 Por que esta revisão é para você?
 
 Se você já se fez perguntas como:
+
 * *"Para que serve criar funções se posso escrever o código direto?"*
 * *"Qual a diferença entre usar `print()` dentro da função e usar `return`?"*
 * *"O que são os argumentos que passamos dentro dos parênteses `()`?"*

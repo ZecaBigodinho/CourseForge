@@ -126,6 +126,26 @@ class TestChamarOpencode:
 class TestGerarEPublicar:
     """Testa o fluxo completo (com todos os subcomponentes mockados)."""
 
+    @pytest.fixture(autouse=True)
+    def projeto_temp(self, tmp_path, project_root, monkeypatch):
+        """
+        Isola o fluxo em tmp_path: sem isso, gerar_e_publicar_capitulo grava
+        capítulos de teste dentro do repositório real.
+        """
+        import shutil
+        src = project_root / "src"
+        for pasta in ("templates", "config", "prompts"):
+            shutil.copytree(src / pasta, tmp_path / "src" / pasta)
+        monkeypatch.setattr("generators.gerar_conteudo_ia.PROJECT_ROOT", tmp_path)
+        return tmp_path
+
+    def test_project_root_e_a_raiz_do_repositorio(self, project_root, monkeypatch):
+        """PROJECT_ROOT deve ser a raiz (onde fica main.py), não src/."""
+        monkeypatch.undo()
+        import generators.gerar_conteudo_ia as mod
+        assert mod.PROJECT_ROOT == project_root
+        assert (mod.PROJECT_ROOT / "main.py").exists()
+
     @patch("generators.gerar_conteudo_ia._executar_deploy")
     @patch("generators.gerar_conteudo_ia._executar_build")
     @patch("generators.gerar_conteudo_ia._chamar_opencode")

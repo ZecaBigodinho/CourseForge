@@ -1,9 +1,9 @@
 # Python para Desktop
 
-> **Autor:** Professor  
-> **Versão:** 1.1.0  
-> **Atualização:** 2026-09-20  
-> **Módulos:** 7 Módulos Progressivos + Central de Revisão Visual & Fixação  
+> **Autor:** Prof. Pedro Paulo IF · [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com)  
+> **Versão:** 1.2.0  
+> **Atualização:** 2026-10-23  
+> **Módulos:** 6 na trilha principal (00 a 05) + Git & GitHub (bônus) + Central de Revisão Visual & Fixação  
 > **Capítulos:** 45+ Aulas Práticas e Guiadas  
 
 ---
@@ -18,6 +18,17 @@ Ao final do curso, você será capaz de criar programas reais com janelas intera
 
 ## 🗂 Estrutura do Curso
 
+### 🛠️ Módulo 00 — Configuração do VS Code & Ambiente Python
+> 2 capítulos · **Comece por aqui** — instalar e configurar o ambiente no laboratório ou no seu computador pessoal
+
+- Instalando o Python 3.14 (Install Manager no Windows) e conferindo o comando `python`
+- Instalação e configuração do VS Code com extensões profissionais (Pylance, Error Lens, Material Icons)
+- Atalhos de teclado indispensáveis do dia a dia
+- Ambientes Virtuais (`venv`) e resolução de erros do PowerShell
+- Gerenciamento de pacotes com `pip` e `requirements.txt`
+
+---
+
 ### 🐍 Módulo 01 — Fundamentos de Python
 > 11 capítulos · Os alicerces da linguagem
 
@@ -27,11 +38,21 @@ Ao final do curso, você será capaz de criar programas reais com janelas intera
 - Coleções (listas, dicionários, tuplas, sets)
 - Manipulação de strings e arquivos
 - Tratamento de exceções
-- **Projeto Final** de consolidação
+- **Mini-projeto** de consolidação — um sistema completo no terminal
 
 ---
 
-### 🖥️ Módulo 02 — Interfaces Gráficas
+### 🧊 Módulo 02 — Programação Orientada a Objetos (POO)
+> 3 capítulos · Paradigma POO, métodos, propriedades e desenvolvimento de aplicações — pré-requisito do Projeto Finalizador
+
+- Estudo do Paradigma POO vs Programação Procedural (Classes e Objetos)
+- Conceito de Métodos, Construtor `__init__`, `self` e Encapsulamento (`_` e `__`)
+- Propriedades com `@property` e `@property.setter` com validações
+- **Desenvolvimento Prático de Programas em POO** (Modelagem de Sistema com Composição)
+
+---
+
+### 🖥️ Módulo 03 — Interfaces Gráficas
 > 5 capítulos · Criando janelas e aplicações visuais
 
 - Tkinter Básico — janelas, widgets, botões e inputs
@@ -42,17 +63,17 @@ Ao final do curso, você será capaz de criar programas reais com janelas intera
 
 ---
 
-### 🗄️ Módulo 03 — Banco de Dados
+### 🗄️ Módulo 04 — Banco de Dados
 > 4 capítulos · Persistência e integração de dados
 
 - Introdução ao **SQLite** — criação de tabelas e consultas SQL
 - Integração do banco de dados com a interface gráfica
 - **Variáveis de ambiente** (`.env`) para proteger credenciais
-- **Projeto Final do Curso** — a aplicação completa que garante seu certificado
+- **Projeto de Dados** — interface + SQLite + `.env` em arquitetura MVC, o ensaio geral para o Projeto Finalizador
 
 ---
 
-### 🏗️ Módulo 04 — Projeto Finalizador
+### 🏗️ Módulo 05 — Projeto Finalizador
 > 13+ capítulos · Construção incremental de um sistema completo
 
 - Arquitetura MVC e organização profissional
@@ -61,10 +82,11 @@ Ao final do curso, você será capaz de criar programas reais com janelas intera
 - SQLite local + sincronização com banco em nuvem
 - Refatoração, testes e entrega profissional
 - Exercício bônus com **Streamlit + Neon Database** (Python na web)
+- **Projeto Final do Curso** — entrega e apresentação do sistema, que **libera o certificado**
 
 ---
 
-### 🔀 Módulo 05 — Git & GitHub (Bônus)
+### 🔀 Módulo 06 — Git & GitHub (Bônus)
 > 2 capítulos · Versionamento, colaboração e portfólio
 
 - Git e GitHub do zero — conta, repositório, README, .gitignore
@@ -75,27 +97,6 @@ Ao final do curso, você será capaz de criar programas reais com janelas intera
 - **README pessoal** — perfil com gráficos de commits e projetos destacados
 - **Usando IA para gerar documentação** — prompts prontos
 - Preparação do **portfólio profissional** no GitHub
-
----
-
-### 🛠️ Módulo 06 — Configuração do VS Code & Ambiente Python (Bônus)
-> 2 capítulos · Guia passo a passo para instalar e configurar o ambiente no seu computador pessoal
-
-- Instalando o Python 3.10+ e marcando a opção "Add to PATH"
-- Instalação e configuração do VS Code com extensões profissionais (Pylance, Error Lens, Material Icons)
-- Atalhos de teclado indispensáveis do dia a dia
-- Ambientes Virtuais (`venv`) e resolução de erros do PowerShell
-- Gerenciamento de pacotes com `pip` e `requirements.txt`
-
----
-
-### 🧊 Módulo 07 — Programação Orientada a Objetos (POO)
-> 3 capítulos · Paradigma POO, métodos, propriedades e desenvolvimento de aplicações
-
-- Estudo do Paradigma POO vs Programação Procedural (Classes e Objetos)
-- Conceito de Métodos, Construtor `__init__`, `self` e Encapsulamento (`_` e `__`)
-- Propriedades com `@property` e `@property.setter` com validações
-- **Desenvolvimento Prático de Programas em POO** (Modelagem de Sistema com Composição)
 
 ---
 
@@ -122,7 +123,7 @@ Ao final do curso, você será capaz de criar programas reais com janelas intera
 
 ## 📌 Pré-requisitos
 
-- Computador com **Python 3.10+** instalado
+- Computador com **Python 3.14** instalado (qualquer versão da 3.11 à 3.15 funciona)
 - **VS Code** (ou editor de preferência)
 - Conexão com internet para GitHub e banco em nuvem
 - Interesse em aprender e disposição para praticar
@@ -131,8 +132,8 @@ Ao final do curso, você será capaz de criar programas reais com janelas intera
 
 ## 🚀 Como Usar este Material
 
-1. **Siga a ordem dos módulos** — cada um depende do anterior
-2. **Consulte o Módulo Bônus de Configuração (Módulo 06)** se quiser preparar seu computador de casa
+1. **Comece pelo Módulo 00** — prepare o Python e o VS Code (no laboratório ou em casa)
+2. **Siga a ordem dos módulos** — cada um depende do anterior
 3. **Consulte a Central de Revisão Visual** sempre que tiver dúvidas em algum conceito
 4. **Digite os exemplos** — não apenas copie, escreva o código você mesmo
 5. **Faça os exercícios** — a prática é o que fixa o conteúdo
@@ -145,4 +146,6 @@ Ao final do curso, você será capaz de criar programas reais com janelas intera
     Use o **menu lateral** para acessar cada módulo, aula e a central de revisão visual. Os capítulos estão numerados na ordem recomendada de estudo.
 
 !!! warning "Certificado"
-    O **Projeto Final** (Módulo 04) é **obrigatório** para emissão do certificado. Ele integra tudo: Python + Interface Gráfica + Banco de Dados + Nuvem + Git.
+    O certificado é liberado por **um único requisito**: entregar e apresentar o **Projeto Final do Curso** — capítulo 12 do **Módulo 05 (Projeto Finalizador)**. Ele integra tudo: Python + POO + Interface Gráfica + Banco de Dados + Nuvem.
+
+    O **Mini-projeto** (Módulo 01) e o **Projeto de Dados** (Módulo 04) são etapas de prática e não liberam o certificado sozinhos. O Módulo 06 (Git & GitHub) é bônus.

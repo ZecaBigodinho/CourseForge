@@ -2,6 +2,7 @@
 
 ## Objetivos
 Neste capítulo, você aprenderá a:
+
 - Empregar os operadores aritméticos para realizar cálculos matemáticos.
 - Utilizar os operadores de comparação para testar relações entre valores.
 - Aplicar os operadores lógicos para construir condições compostas.
@@ -11,6 +12,7 @@ Neste capítulo, você aprenderá a:
 
 ## Pré-requisitos
 Antes de prosseguir, você deve:
+
 - Compreender o conceito de variáveis e saber declarar variáveis em Python.
 - Conhecer os tipos de dados básicos: int, float, str e bool.
 - Ter familiaridade com a função `print()` para exibir resultados.
@@ -82,6 +84,7 @@ print(idade != 20)   # True
 
 ### Operadores lógicos
 Os operadores lógicos permitem combinar múltiplas condições. Python oferece três: `and`, `or` e `not`.
+
 - `and` (e): Retorna `True` se todas as condições forem verdadeiras.
 - `or` (ou): Retorna `True` se pelo menos uma condição for verdadeira.
 - `not` (não): Inverte o valor booleano.
@@ -138,6 +141,7 @@ print(f"Saldo final: R$ {saldo:.2f}")  # 1102.50
 
 ### Precedência de operadores
 Quando uma expressão combina vários operadores, Python segue uma ordem fixa de avaliação, chamada precedência. Da maior para a menor prioridade:
+
 1. Parênteses `()`
 2. Exponenciação `**`
 3. Multiplicação, divisão, divisão inteira e módulo `*`, `/`, `//`, `%`
@@ -160,6 +164,7 @@ print(resultado2)  # 60
 
 ### Operadores de identidade e pertencimento (bônus)
 Embora não façam parte do escopo principal deste capítulo, é útil conhecer dois grupos adicionais:
+
 - **Identidade:** `is` e `is not` verificam se duas variáveis apontam para o mesmo objeto na memória.
 - **Pertencimento:** `in` e `not in` verificam se um valor está contido em uma sequência (como uma string ou lista).
 
@@ -264,27 +269,91 @@ print(x is None)  # True
 ## Exercícios
 
 ### Básico (fixação)
-- Crie duas variáveis `a = 12` e `b = 5`. Calcule e exiba o resultado das seis operações aritméticas: adição, subtração, multiplicação, divisão, divisão inteira, resto e exponenciação (`a` elevado a `b`).
+- Crie duas variáveis `a = 12` e `b = 5`. Calcule e exiba o resultado das sete operações aritméticas: adição, subtração, multiplicação, divisão, divisão inteira, resto e exponenciação (`a` elevado a `b`).
 - Escreva um programa que pergunte o ano de nascimento e o ano atual, calcule a idade e exiba `True` se a pessoa for maior de idade (`idade >= 18`) ou `False` caso contrário.
 - Dada a string `texto = "Python"`, use o operador `in` para verificar se a letra `"y"` está presente e exiba o resultado.
 
+<!-- gabarito -->
+??? success "Gabarito — Básico"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    # 1) As sete operações aritméticas
+    a = 12
+    b = 5
+    print("Adição:", a + b)           # 17
+    print("Subtração:", a - b)        # 7
+    print("Multiplicação:", a * b)    # 60
+    print("Divisão:", a / b)          # 2.4
+    print("Divisão inteira:", a // b) # 2
+    print("Resto:", a % b)            # 2
+    print("Potência:", a ** b)        # 248832
+
+    # 2) Maior de idade?
+    ano_nascimento = int(input("Ano de nascimento: "))
+    ano_atual = int(input("Ano atual: "))
+    idade = ano_atual - ano_nascimento
+    print("Maior de idade:", idade >= 18)
+
+    # 3) Operador in
+    texto = "Python"
+    print("y" in texto)  # True
+    ```
+
+
 ### Intermediário (aplicação)
 Uma loja oferece frete grátis para compras acima de R$ 150,00 ou para clientes do programa de fidelidade. Escreva um programa que:
+
 - Pergunte o valor da compra e se o cliente é fidelizado (responda "sim" ou "não").
 - Armazene o valor em `compra` (float) e a fidelidade em `fidelidade` (booleano, `True`/`False` a partir da resposta).
 - Calcule se o frete será gratuito usando operadores lógicos e de comparação.
 - Exiba a mensagem: `"Frete grátis: True/False"`.
 
+<!-- gabarito -->
+??? success "Gabarito — Intermediário"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    compra = float(input("Valor da compra: R$ "))
+    resposta = input("Cliente fidelizado? (sim/não) ").strip().lower()
+    fidelidade = resposta == "sim"
+
+    frete_gratis = compra > 150 or fidelidade
+    print("Frete grátis:", frete_gratis)
+    ```
+
+
 ### Avançado (desafio)
 Crie um programa que leia três números inteiros e verifique as seguintes condições usando apenas operadores (sem usar `if`, apenas expressões booleanas armazenadas em variáveis):
+
 - `todos_positivos`: `True` se todos os números forem maiores que zero.
 - `pelo_menos_um_par`: `True` se pelo menos um dos números for par.
 - `exatamente_dois_maiores_que_10`: `True` se exatamente dois dos números forem maiores que 10.
 
 Exiba os três resultados. Dica: para verificar quantidade exata, você pode somar resultados de comparações (`True = 1`, `False = 0`): `(a > 10) + (b > 10) + (c > 10) == 2`.
 
+<!-- gabarito -->
+??? success "Gabarito — Avançado"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    a = int(input("1º número: "))
+    b = int(input("2º número: "))
+    c = int(input("3º número: "))
+
+    todos_positivos = a > 0 and b > 0 and c > 0
+    pelo_menos_um_par = a % 2 == 0 or b % 2 == 0 or c % 2 == 0
+    exatamente_dois_maiores_que_10 = (a > 10) + (b > 10) + (c > 10) == 2
+
+    print("Todos positivos:", todos_positivos)
+    print("Pelo menos um par:", pelo_menos_um_par)
+    print("Exatamente dois maiores que 10:", exatamente_dois_maiores_que_10)
+    ```
+
+
 ## Projeto Prático: Calculadora de Orçamento de Viagem
 Desenvolva um programa que ajude um usuário a planejar o orçamento de uma viagem de carro. O programa deve:
+
 1. Perguntar a distância total a percorrer (km).
 2. Perguntar o consumo médio do veículo (km por litro).
 3. Perguntar o preço do litro de combustível (R$).
@@ -295,6 +364,7 @@ Desenvolva um programa que ajude um usuário a planejar o orçamento de uma viag
 8. Se for suficiente, exibir quanto sobrará; se não, exibir quanto faltará. Use operadores aritméticos e de atribuição para calcular a diferença.
 
 **Diretrizes:**
+
 - Utilize variáveis com nomes descritivos.
 - Empregue operadores aritméticos para os cálculos.
 - Use operadores de comparação e lógicos para verificar a suficiência.
@@ -319,6 +389,7 @@ Este projeto integra todos os operadores estudados, reforça a entrada e saída 
 
 ## Resumo
 Neste capítulo, você adquiriu as ferramentas fundamentais para processar informações em Python:
+
 - Operadores aritméticos (`+`, `-`, `*`, `/`, `//`, `%`, `**`) realizam cálculos matemáticos.
 - Operadores de comparação (`==`, `!=`, `>`, `<`, `>=`, `<=`) produzem valores booleanos comparando operandos.
 - Operadores lógicos (`and`, `or`, `not`) combinam e invertem expressions booleanas.
@@ -327,3 +398,8 @@ Neste capítulo, você adquiriu as ferramentas fundamentais para processar infor
 - Expressões bem construídas são o alicerce de decisões e cálculos em qualquer aplicação.
 
 Com esse conhecimento, você já consegue escrever programas que calculam, comparam e avaliam condições — ainda que de forma linear. O próximo passo é aprender a controlar o fluxo de execução, tomando decisões e repetindo tarefas.
+
+
+<!-- revisao-visual -->
+!!! tip "Revisão visual: Operadores"
+    Ficou alguma dúvida? A [Central de Revisão](../modulo_00_revisao_e_fixacao/03_operadores_revisao.md) explica **operadores** com analogias do dia a dia, diagramas e os erros mais comuns — use antes dos exercícios ou para estudar para a prova.

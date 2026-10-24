@@ -360,6 +360,38 @@ Em aplicações desktop, o arquivo `.env` normalmente fica no mesmo diretório d
 2. Adicione ao `.env` uma variável `CAMINHO_BANCO` apontando para `meu_app.db`. No Python, use `os.getenv` para obter o caminho e imprimir "Banco de dados em: {caminho}". Se a variável não existir, o programa deve usar "padrao.db".
 3. Crie um arquivo `.env.example` listando as variáveis do exercício 2, mas com valores vazios. Explique em um comentário a finalidade desse arquivo.
 
+<!-- gabarito -->
+??? success "Gabarito — Básico"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```ini title=".env"
+    NOME_USUARIO=Pedro
+    CAMINHO_BANCO=meu_app.db
+    ```
+
+    ```ini title=".env.example"
+    # Modelo do .env: mostra QUAIS variáveis o projeto usa, sem os valores reais.
+    # Vai para o Git; o .env de verdade não. Quem clonar o projeto copia este arquivo
+    # para .env e preenche com os próprios valores.
+    NOME_USUARIO=
+    CAMINHO_BANCO=
+    ```
+
+    ```python title="saudacao.py"
+    import os
+    from dotenv import load_dotenv
+
+    load_dotenv()  # lê o .env da pasta atual
+
+    # 1) Saudação
+    print(f"Olá, {os.getenv('NOME_USUARIO')}!")
+
+    # 2) Caminho do banco com valor padrão
+    caminho = os.getenv("CAMINHO_BANCO", "padrao.db")
+    print(f"Banco de dados em: {caminho}")
+    ```
+
+
 ### Intermediário (aplicação)
 
 1. Você está desenvolvendo um aplicativo de notas que usa um arquivo de configuração `config.ini` e também uma chave de API para sincronização. Atualmente, o caminho do arquivo e a chave estão hardcoded no código. Refatore a aplicação:
@@ -368,6 +400,48 @@ Em aplicações desktop, o arquivo `.env` normalmente fica no mesmo diretório d
     - No módulo principal, importe essas constantes e utilize-as.
     - Adicione validação para que `API_KEY` seja obrigatória (lance erro se não definida).
     - Crie o `.env.example` e configure o `.gitignore`.
+
+<!-- gabarito -->
+??? success "Gabarito — Intermediário"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```ini title=".env"
+    CAMINHO_CONFIG=config.ini
+    API_KEY=chave-de-teste-123
+    ```
+
+    ```ini title=".env.example"
+    CAMINHO_CONFIG=config.ini
+    API_KEY=
+    ```
+
+    ```text title=".gitignore"
+    .env
+    *.db
+    __pycache__/
+    ```
+
+    ```python title="config.py"
+    """Configurações do app de notas, lidas do .env."""
+    import os
+    from dotenv import load_dotenv
+
+    load_dotenv()
+
+    CAMINHO_CONFIG = os.getenv("CAMINHO_CONFIG", "config.ini")
+    API_KEY = os.getenv("API_KEY")
+
+    if not API_KEY:
+        raise RuntimeError("API_KEY não definida. Copie .env.example para .env e preencha a chave.")
+    ```
+
+    ```python title="app_notas.py"
+    from config import API_KEY, CAMINHO_CONFIG
+
+    print(f"Lendo configurações de: {CAMINHO_CONFIG}")
+    print(f"Sincronizando com a chave {API_KEY[:4]}****")  # nunca mostre a chave inteira
+    ```
+
 
 ### Avançado (desafio)
 
@@ -378,11 +452,85 @@ Em aplicações desktop, o arquivo `.env` normalmente fica no mesmo diretório d
     - Utilize `python-dotenv` para carregar e `os` para manipulação de arquivos.
     - Documente o código com docstrings e inclua um `.env.example` de exemplo para testes.
 
+<!-- gabarito -->
+??? success "Gabarito — Avançado"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```ini title=".env.example"
+    DB_PATH=
+    TEMA=
+    API_KEY=
+    ```
+
+    ```python title="gerenciador_env.py"
+    """
+    gerenciador_env — cria e confere arquivos .env a partir do .env.example.
+
+    Uso:
+        python gerenciador_env.py --init    # pergunta cada valor e gera o .env
+        python gerenciador_env.py --check   # mostra o que falta no .env
+    """
+    import argparse
+    import os
+
+    from dotenv import dotenv_values
+
+    EXEMPLO = ".env.example"
+    ENV = ".env"
+
+
+    def variaveis_do_exemplo(caminho=EXEMPLO):
+        """Nomes das variáveis do .env.example, na ordem em que aparecem."""
+        if not os.path.exists(caminho):
+            raise FileNotFoundError(f"{caminho} não encontrado na pasta atual.")
+        return list(dotenv_values(caminho).keys())
+
+
+    def init():
+        """Pergunta o valor de cada variável e grava o .env (pede confirmação para sobrescrever)."""
+        if os.path.exists(ENV):
+            if input(f"{ENV} já existe. Sobrescrever? (s/n) ").strip().lower() != "s":
+                print("Nada foi alterado.")
+                return
+        linhas = [f"{nome}={input(f'{nome} = ').strip()}" for nome in variaveis_do_exemplo()]
+        with open(ENV, "w", encoding="utf-8") as f:
+            f.write("\n".join(linhas) + "\n")
+        print(f"{ENV} criado com {len(linhas)} variáveis.")
+
+
+    def check():
+        """Relatório das variáveis presentes e faltando no .env. Retorna a lista das que faltam."""
+        esperadas = variaveis_do_exemplo()
+        atuais = dotenv_values(ENV) if os.path.exists(ENV) else {}
+        faltando = [n for n in esperadas if not atuais.get(n)]
+        for nome in esperadas:
+            print(f"  [{'OK' if nome not in faltando else 'FALTA'}] {nome}")
+        print("Tudo certo!" if not faltando else f"Faltam {len(faltando)} variável(is).")
+        return faltando
+
+
+    def main(argumentos=None):
+        parser = argparse.ArgumentParser(description="Cria e confere arquivos .env.")
+        grupo = parser.add_mutually_exclusive_group(required=True)
+        grupo.add_argument("--init", action="store_true", help="gera o .env a partir do .env.example")
+        grupo.add_argument("--check", action="store_true", help="confere se o .env está completo")
+        args = parser.parse_args(argumentos)
+        try:
+            init() if args.init else check()
+        except FileNotFoundError as erro:
+            print("Erro:", erro)
+
+
+    if __name__ == "__main__":
+        main()
+    ```
+
+
 ## Projeto Prático
 
 ### Protegendo as Configurações do Dashboard Financeiro
 
-Retome o Dashboard Financeiro desenvolvido no Módulo 02 e aplique os conceitos de variáveis de ambiente para remover todas as configurações hardcoded.
+Retome o Dashboard Financeiro desenvolvido no Módulo 03 e aplique os conceitos de variáveis de ambiente para remover todas as configurações hardcoded.
 
 **Requisitos:**
 
@@ -418,6 +566,7 @@ Retome o Dashboard Financeiro desenvolvido no Módulo 02 e aplique os conceitos 
 - **Documentação:** Adicione um `README.md` (ou seção no próprio projeto) explicando como configurar o ambiente, copiando `.env.example` para `.env`.
 
 **Desafio extra (opcional):**
+
 - Implemente um modo de "primeira execução" que, se o `.env` não existir, copia automaticamente o `.env.example` para `.env` e orienta o usuário a preenchê-lo.
 - Utilize `keyring` para armazenar a `API_KEY` de forma ainda mais segura, carregando-a de lá se disponível, com fallback para o `.env`.
 

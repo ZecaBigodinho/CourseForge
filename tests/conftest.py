@@ -17,6 +17,9 @@ import pytest
 # Garantir que a raiz do projeto está no sys.path
 PROJECT_ROOT = Path(__file__).parent.parent.resolve()
 sys.path.insert(0, str(PROJECT_ROOT))
+# Os pacotes da engine (utils, models, generators...) ficam em src/
+SRC_DIR = PROJECT_ROOT / "src"
+sys.path.insert(0, str(SRC_DIR))
 
 from utils.file_manager import FileManager
 from utils.template_engine import TemplateEngine
@@ -31,13 +34,13 @@ def project_root() -> Path:
 @pytest.fixture
 def templates_dir(project_root: Path) -> Path:
     """Retorna o diretório real de templates (read-only nos testes)."""
-    return project_root / "templates"
+    return project_root / "src" / "templates"
 
 
 @pytest.fixture
 def prompts_dir(project_root: Path) -> Path:
     """Retorna o diretório real de prompts (read-only nos testes)."""
-    return project_root / "prompts"
+    return project_root / "src" / "prompts"
 
 
 @pytest.fixture

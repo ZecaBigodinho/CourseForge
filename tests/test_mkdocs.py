@@ -79,14 +79,14 @@ class TestMkDocsUpdater:
         output = updater.atualizar(silencioso=True)
         parsed = yaml.safe_load(output.read_text(encoding="utf-8"))
         nav = parsed["nav"]
-        # Primeiro item deve ser Home
-        assert nav[0] == {"Home": "index.md"}
+        # Primeiro item deve ser Início
+        assert nav[0] == {"Início": "index.md"}
 
     def test_nav_contem_curso(self, updater, estrutura_completa):
         output = updater.atualizar(silencioso=True)
         parsed = yaml.safe_load(output.read_text(encoding="utf-8"))
         nav = parsed["nav"]
-        # Deve ter pelo menos o Home + 1 curso
+        # Deve ter pelo menos o Início + 1 curso
         assert len(nav) >= 2
 
     def test_nav_usa_nome_legivel_do_curso(self, updater, estrutura_completa):
@@ -104,8 +104,152 @@ class TestMkDocsUpdater:
         assert output.exists()
 
     def test_sem_cursos_nav_apenas_home(self, updater, fm_temp):
-        """Sem cursos, nav deve ter apenas Home."""
+        """Sem cursos, nav deve ter apenas Início."""
         fm_temp.criar_diretorio(fm_temp.path("cursos"))
         output = updater.atualizar(silencioso=True)
         parsed = yaml.safe_load(output.read_text(encoding="utf-8"))
-        assert parsed["nav"] == [{"Home": "index.md"}]
+        assert parsed["nav"] == [{"Início": "index.md"}]
+
+
+class TestOrdemDosModulos:
+    """Ordem pedagógica dos módulos via ordem_modulos no .courseforge.yaml (P2)."""
+
+    @pytest.fixture
+    def curso(self, fm_temp) -> Path:
+        curso = fm_temp.root / "cursos" / "curso_x"
+        for nome in ("modulo_00_revisao", "modulo_01_fundamentos", "modulo_02_interfaces",
+                     "modulo_06_vscode", "modulo_07_poo"):
+            (curso / nome).mkdir(parents=True)
+            (curso / nome / "index.md").write_text(f"# {nome}\n", encoding="utf-8")
+        return curso
+
+    @staticmethod
+    def _ordem(fm_temp, config_padrao) -> list[str]:
+        nav = MkDocsUpdater(fm_temp, config_padrao)._construir_nav()
+        entradas = list(nav[1].values())[0]
+        return [list(e.values())[0][0]["Visão Geral"].split("/")[1] for e in entradas]
+
+    def test_sem_ordem_usa_regra_padrao(self, fm_temp, config_padrao, curso):
+        assert self._ordem(fm_temp, config_padrao) == [
+            "modulo_01_fundamentos", "modulo_02_interfaces", "modulo_06_vscode",
+            "modulo_07_poo", "modulo_00_revisao",
+        ]
+
+    def test_ordem_modulos_do_metadata(self, fm_temp, config_padrao, curso):
+        fm_temp.escrever_yaml(curso / ".courseforge.yaml", {
+            "nome": "Curso X",
+            "ordem_modulos": ["modulo_06_vscode", "modulo_01_fundamentos", "modulo_07_poo",
+                              "modulo_02_interfaces", "modulo_00_revisao"],
+        }, sobrescrever=True)
+        assert self._ordem(fm_temp, config_padrao) == [
+            "modulo_06_vscode", "modulo_01_fundamentos", "modulo_07_poo",
+            "modulo_02_interfaces", "modulo_00_revisao",
+        ]
+
+    def test_modulo_fora_da_lista_vai_para_o_fim(self, fm_temp, config_padrao, curso):
+        fm_temp.escrever_yaml(curso / ".courseforge.yaml", {
+            "nome": "Curso X",
+            "ordem_modulos": ["modulo_07_poo", "modulo_inexistente"],
+        }, sobrescrever=True)
+        assert self._ordem(fm_temp, config_padrao) == [
+            "modulo_07_poo", "modulo_01_fundamentos", "modulo_02_interfaces",
+            "modulo_06_vscode", "modulo_00_revisao",
+        ]
+
+
+class TestTitulosDaNavegacao:
+    """Títulos do menu lidos do Markdown (P1), com acentos e sem numeração."""
+
+    @pytest.fixture
+    def updater(self, fm_temp, config_padrao) -> MkDocsUpdater:
+        return MkDocsUpdater(fm_temp, config_padrao)
+
+    @pytest.fixture
+    def modulo(self, fm_temp) -> Path:
+        """Cria cursos/curso_x/modulo_01_introducao_ao_projeto/ vazio."""
+        caminho = fm_temp.root / "cursos" / "curso_x" / "modulo_01_introducao_ao_projeto"
+        caminho.mkdir(parents=True)
+        return caminho
+
+    @staticmethod
+    def _nav_do_modulo(updater) -> tuple[str, list]:
+        """Retorna (nome do módulo, entradas) do primeiro módulo do primeiro curso."""
+        curso = updater._construir_nav()[1]
+        entradas_curso = list(curso.values())[0]
+        nome, entradas = next(iter(entradas_curso[0].items()))
+        return nome, entradas
+
+    def test_capitulo_usa_h1_sem_numeracao(self, updater, modulo):
+        (modulo / "01_variaveis.md").write_text("# 01. Variáveis e Tipos\n\nTexto", encoding="utf-8")
+        (modulo / "02_login.md").write_text("# 02 — Tela de Login\n", encoding="utf-8")
+        _, entradas = self._nav_do_modulo(updater)
+        assert [list(e)[0] for e in entradas] == ["Variáveis e Tipos", "Tela de Login"]
+
+    def test_front_matter_title_tem_prioridade(self, updater, modulo):
+        (modulo / "01_x.md").write_text(
+            '---\ntitle: "Título do Front-matter"\n---\n\n# H1 Diferente\n', encoding="utf-8"
+        )
+        _, entradas = self._nav_do_modulo(updater)
+        assert list(entradas[0]) == ["Título do Front-matter"]
+
+    def test_remove_emoji_e_crases(self, updater, modulo):
+        (modulo / "01_venv.md").write_text("# 🧠 Ambientes (`venv`) e **Terminal**\n", encoding="utf-8")
+        _, entradas = self._nav_do_modulo(updater)
+        assert list(entradas[0]) == ["Ambientes (venv) e Terminal"]
+
+    def test_ignora_h1_dentro_de_bloco_de_codigo(self, updater, modulo):
+        (modulo / "01_x.md").write_text(
+            "Intro\n\n```python\n# comentario\n```\n\n# Título Real\n", encoding="utf-8"
+        )
+        _, entradas = self._nav_do_modulo(updater)
+        assert list(entradas[0]) == ["Título Real"]
+
+    def test_fallback_acentua_nome_do_arquivo(self, updater, modulo):
+        (modulo / "03_introducao_as_funcoes.md").write_text("Sem título.\n", encoding="utf-8")
+        _, entradas = self._nav_do_modulo(updater)
+        assert list(entradas[0]) == ["Introdução as Funções"]
+
+    def test_remove_prefixo_repetido_no_modulo(self, updater, modulo):
+        (modulo / "01_a.md").write_text("# Revisão Visual: Funções\n", encoding="utf-8")
+        (modulo / "02_b.md").write_text("# Revisão Visual: Strings\n", encoding="utf-8")
+        _, entradas = self._nav_do_modulo(updater)
+        assert [list(e)[0] for e in entradas] == ["Funções", "Strings"]
+
+    def test_nao_remove_prefixo_de_um_capitulo_so(self, updater, modulo):
+        (modulo / "01_a.md").write_text("# Projeto Prático: Dashboard\n", encoding="utf-8")
+        _, entradas = self._nav_do_modulo(updater)
+        assert list(entradas[0]) == ["Projeto Prático: Dashboard"]
+
+    def test_modulo_usa_h1_do_index_sem_emoji(self, updater, modulo):
+        (modulo / "index.md").write_text("# 🏗️ Módulo 01 — Introdução ao Projeto\n", encoding="utf-8")
+        nome, entradas = self._nav_do_modulo(updater)
+        assert nome == "Introdução ao Projeto"
+        assert entradas[0] == {"Visão Geral": "curso_x/modulo_01_introducao_ao_projeto/index.md"}
+
+    def test_modulo_sem_index_usa_slug_acentuado(self, updater, modulo):
+        (modulo / "01_a.md").write_text("# A\n", encoding="utf-8")
+        nome, _ = self._nav_do_modulo(updater)
+        assert nome == "Introdução ao Projeto"
+
+    def test_menu_nao_tem_emojis(self, updater, modulo):
+        """P8: emojis ficam nas páginas; o menu lateral é só texto."""
+        (modulo / "index.md").write_text("# 🧠 Central de Revisão\n", encoding="utf-8")
+        (modulo / "01_a.md").write_text("# 🐍 Funções\n", encoding="utf-8")
+        (modulo / "02_b.md").write_text("# 🗄️ Banco de Dados\n", encoding="utf-8")
+
+        def rotulos(itens):
+            for item in itens:
+                for chave, valor in item.items():
+                    yield chave
+                    if isinstance(valor, list):
+                        yield from rotulos(valor)
+
+        import unicodedata
+        for rotulo in rotulos(updater._construir_nav()):
+            # "So" = símbolo (emojis); U+FE0F = seletor de variação que acompanha emojis
+            assert not any(unicodedata.category(c) == "So" or c == "️" for c in rotulo), rotulo
+
+    def test_numero_que_faz_parte_do_titulo_e_mantido(self, updater, modulo):
+        (modulo / "01_a.md").write_text("# 3 formas de usar listas\n", encoding="utf-8")
+        _, entradas = self._nav_do_modulo(updater)
+        assert list(entradas[0]) == ["3 formas de usar listas"]

@@ -1,7 +1,7 @@
 # 02. Ambientes Virtuais (`venv`) e Terminal Integrado
 
 > **Curso:** Python para Desktop  
-> **Módulo:** 06 — Configuração do VS Code & Ambiente Python (Bônus)  
+> **Módulo:** 00 — Configuração do VS Code & Ambiente Python  
 > **Nível:** Intermediário Didático  
 > **Tempo estimado:** 20 min  
 
@@ -75,6 +75,7 @@ Ao tentar ativar o `venv` no PowerShell do Windows pela primeira vez, você pode
    ```powershell
    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
    ```
+
 3. Digite `S` (Sim) e feche o PowerShell.
 4. Volte ao VS Code e tente ativar o `venv` novamente!
 
@@ -100,7 +101,7 @@ Com o `(venv)` ativo no terminal, você pode instalar qualquer biblioteca com to
 python -m pip install --upgrade pip
 
 # Instalar bibliotecas do nosso curso
-pip install customtkinter requests python-dotenv
+pip install customtkinter==5.2.2 requests python-dotenv
 
 # Congelar as dependências instaladas no arquivo requirements.txt
 pip freeze > requirements.txt
@@ -117,3 +118,101 @@ pip freeze > requirements.txt
 2. **Para que serve o arquivo `requirements.txt`?**
 ??? check "Ver Resposta Comentada"
     Para listar o nome e a versão exata de todas as bibliotecas usadas no projeto, permitindo que outro desenvolvedor reinstale tudo com `pip install -r requirements.txt`.
+
+---
+
+## Exercícios
+
+### Básico (fixação)
+
+No terminal integrado do VS Code, dentro da pasta `curso_python`:
+
+1. Crie um ambiente virtual chamado `venv` e ative-o (o nome `(venv)` deve aparecer no início da linha).
+2. Instale o CustomTkinter na versão do curso: `pip install customtkinter==5.2.2`.
+3. Liste os pacotes instalados e gere o arquivo `requirements.txt`.
+4. Desative o ambiente e confira que o `(venv)` sumiu.
+
+<!-- gabarito -->
+??? success "Gabarito — Básico"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```powershell title="Terminal (PowerShell)"
+    # 1) Criar e ativar o ambiente virtual
+    python -m venv venv
+    .\venv\Scripts\Activate.ps1          # Linux/macOS: source venv/bin/activate
+
+    # 2) Instalar o CustomTkinter na versão do curso
+    pip install customtkinter==5.2.2
+
+    # 3) Listar e registrar as dependências
+    pip list
+    pip freeze > requirements.txt          # o arquivo lista pacote==versão de tudo que está no venv
+
+    # 4) Sair do ambiente
+    deactivate
+    ```
+
+
+### Intermediário (aplicação)
+
+Crie o arquivo `estou_no_venv.py` que mostre se o programa está rodando **dentro ou fora** de um ambiente virtual, e qual Python está sendo usado. Rode-o com o `venv` ativado e desativado e compare.
+
+Dica: dentro de um `venv`, `sys.prefix` (a pasta do ambiente) é diferente de `sys.base_prefix` (a pasta do Python instalado).
+
+<!-- gabarito -->
+??? success "Gabarito — Intermediário"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    # estou_no_venv.py
+    import sys
+
+    if sys.prefix != sys.base_prefix:
+        print("✅ Dentro de um ambiente virtual")
+        print(f"   Ambiente: {sys.prefix}")
+    else:
+        print("❌ Fora de um ambiente virtual (usando o Python do sistema)")
+
+    print(f"Python em uso: {sys.executable}")
+    ```
+
+
+### Avançado (desafio)
+
+Crie o `conferir_requirements.py`, que lê o `requirements.txt` e, para cada linha `pacote==versão`, informa se o pacote está **instalado na versão certa**, em **outra versão** ou **não instalado**. Use `importlib.metadata.version(nome)` para descobrir a versão instalada. Ele é útil quando um colega diz "na minha máquina funciona".
+
+<!-- gabarito -->
+??? success "Gabarito — Avançado"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    # conferir_requirements.py
+    from importlib.metadata import PackageNotFoundError, version
+    from pathlib import Path
+
+    ARQUIVO = Path("requirements.txt")
+
+    if not ARQUIVO.exists():
+        print("requirements.txt não encontrado nesta pasta.")
+    else:
+        problemas = 0
+        for linha in ARQUIVO.read_text(encoding="utf-8").splitlines():
+            linha = linha.strip()
+            if not linha or linha.startswith("#") or "==" not in linha:
+                continue  # ignora linhas vazias, comentários e pacotes sem versão fixa
+            nome, esperada = (parte.strip() for parte in linha.split("==", 1))
+            try:
+                instalada = version(nome)
+            except PackageNotFoundError:
+                print(f"❌ {nome}: não instalado (esperado {esperada})")
+                problemas += 1
+                continue
+            if instalada == esperada:
+                print(f"✅ {nome} {instalada}")
+            else:
+                print(f"⚠️ {nome}: instalado {instalada}, esperado {esperada}")
+                problemas += 1
+
+        print("Tudo certo!" if problemas == 0 else f"{problemas} problema(s) encontrado(s).")
+    ```
+

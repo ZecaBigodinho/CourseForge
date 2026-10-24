@@ -1,7 +1,7 @@
 # 🧠 Revisão Visual: Interfaces Gráficas com Tkinter & CustomTkinter
 
 > **Curso:** Python para Desktop  
-> **Módulo:** 00 — Central de Revisão Visual  
+> **Módulo:** Central de Revisão Visual  
 > **Nível:** Fixação Didática & Visual  
 > **Tempo estimado de leitura:** 25 min  
 
@@ -10,6 +10,7 @@
 ## 🎯 Por que esta revisão é para você?
 
 Se você já se pegou em dúvida sobre:
+
 * *"Por que criei um botão mas ele não aparece na tela?"*
 * *"Qual a diferença entre `pack()` e `grid()` para posicionar elementos?"*
 * *"Como conectar o clique de um botão a uma função Python?"*

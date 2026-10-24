@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Favicon: mesmo desenho do logo sobre fundo roxo da marca -->
+  <rect width="64" height="64" rx="14" fill="#4F35B5"/>
+  <path d="M10 25c7-3.5 14-3.5 20 1v24c-6-4.5-13-4.5-20-1z" fill="#fff"/>
+  <path d="M54 25c-7-3.5-14-3.5-20 1v24c6-4.5 13-4.5 20-1z" fill="#fff" opacity=".85"/>
+  <path d="M32 6l2.4 5.6L40 14l-5.6 2.4L32 22l-2.4-5.6L24 14l5.6-2.4z" fill="#64DFD3"/>
+</svg>

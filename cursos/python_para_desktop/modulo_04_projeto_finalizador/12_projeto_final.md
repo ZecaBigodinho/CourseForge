@@ -1,4 +1,4 @@
-# 15 — Projeto Final
+# 12 — Projeto Final do Curso
 
 ## 🎯 Objetivo
 
@@ -11,6 +11,9 @@ Ao final, você terá:
 - Demonstrado o sistema ao professor com todos os fluxos funcionando
 - Preenchido a autoavaliação da equipe e o registro de aprendizados
 - Entregue oficialmente o Projeto Final
+
+!!! warning "Certificado"
+    A entrega e a apresentação deste **Projeto Final do Curso** são o **único requisito para o certificado** do curso Python para Desktop.
 
 ## 📍 Contextualização
 
@@ -384,10 +387,11 @@ Antes de considerar o Projeto Final entregue, confirme:
 - [ ] Código commitado no repositório (se aplicável)
 - [ ] Projeto demonstrado ao professor
 - [ ] Feedback do professor recebido e anotado
+- [ ] Entrega registrada pelo professor (libera o certificado)
 
 ## 🎓 Parabéns!
 
-Você concluiu o **Módulo 04 — Projeto Finalizador** do curso Python para Desktop da CourseForge.
+Você concluiu o **Módulo 05 — Projeto Finalizador** do curso Python para Desktop da CourseForge.
 
 Vamos recapitular o que você construiu:
 
@@ -429,5 +433,5 @@ Você não é mais um aluno de Python. Você é um desenvolvedor Python. Comport
 🚀 **Obrigado por chegar até aqui. Agora vá construir o futuro!**
 
 ---
-*CourseForge — Python para Desktop — Módulo 04: Projeto Finalizador*
+*CourseForge — Python para Desktop — Módulo 05: Projeto Finalizador*
 *Entrega: 20 de agosto*

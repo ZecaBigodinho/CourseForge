@@ -2,6 +2,7 @@
 
 ## Objetivos
 Neste capítulo, você aprenderá a:
+
 - Compreender o que é o paradigma de Programação Orientada a Objetos (POO).
 - Diferenciar Programação Procedural de Programação Orientada a Objetos.
 - Entender os conceitos fundamentais de **Classe** (molde) e **Objeto** (instância).
@@ -11,6 +12,7 @@ Neste capítulo, você aprenderá a:
 
 ## Pré-requisitos
 Antes de iniciar este capítulo, certifique-se de dominar:
+
 - Variáveis, tipos de dados e operadores em Python.
 - Estruturas condicionais (`if/else`) e laços de repetição (`for/while`).
 - Funções, parâmetros e valores de retorno (`def`).
@@ -231,15 +233,135 @@ Ao encapsular o conceito de `Produto` dentro de uma classe, criamos um tipo de d
 
 ---
 
-## 📝 Exercícios de Fixação
+## Exercícios
 
-1. **Criação de Classe Simples:**
-   Crie uma classe chamada `Livro`. Instancie dois objetos dessa classe (`livro1` e `livro2`) e atribua dinamicamente os atributos `titulo`, `autor` e `paginas`. Exiba as informações no terminal usando f-strings.
+### Básico (fixação)
 
-2. **Modelagem de Entidade Desktop:**
-   Crie uma classe `UsuarioSistema`. Instancie um objeto representando um administrador e atribua os atributos `nome`, `email` e `nivel_acesso` ("admin").
+1. **Criação de classe simples:** crie uma classe chamada `Livro`. Instancie dois objetos dessa classe (`livro1` e `livro2`) e atribua dinamicamente os atributos `titulo`, `autor` e `paginas`. Exiba as informações no terminal usando f-strings.
+2. **Modelagem de entidade desktop:** crie uma classe `UsuarioSistema`. Instancie um objeto representando um administrador e atribua os atributos `nome`, `email` e `nivel_acesso` (`"admin"`).
+
+<!-- gabarito -->
+??? success "Gabarito — Básico"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    class Livro:
+        pass
+
+
+    class UsuarioSistema:
+        pass
+
+
+    # 1) Livros
+    livro1 = Livro()
+    livro1.titulo = "Dom Casmurro"
+    livro1.autor = "Machado de Assis"
+    livro1.paginas = 256
+
+    livro2 = Livro()
+    livro2.titulo = "Capitães da Areia"
+    livro2.autor = "Jorge Amado"
+    livro2.paginas = 280
+
+    for livro in (livro1, livro2):
+        print(f"{livro.titulo}, de {livro.autor} — {livro.paginas} páginas")
+
+    # 2) Administrador
+    admin = UsuarioSistema()
+    admin.nome = "Pedro"
+    admin.email = "pedro@escola.edu.br"
+    admin.nivel_acesso = "admin"
+    print(f"{admin.nome} <{admin.email}> — acesso: {admin.nivel_acesso}")
+    ```
+
+
+### Intermediário (aplicação)
+
+Crie a classe `Aluno` com o **atributo de classe** `instituicao = "IF"`. Crie três alunos e atribua a cada um `nome` e `curso`. Depois:
+
+- Exiba os três alunos com a instituição de cada um.
+- Altere `Aluno.instituicao` para `"Instituto Federal"` e exiba de novo — todos mudaram?
+- Agora faça `aluno1.instituicao = "Outra escola"` e exiba os três mais uma vez. Explique, em um comentário, por que só o `aluno1` mudou.
+
+<!-- gabarito -->
+??? success "Gabarito — Intermediário"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    class Aluno:
+        instituicao = "IF"  # atributo de classe: compartilhado por todos
+
+
+    aluno1, aluno2, aluno3 = Aluno(), Aluno(), Aluno()
+    aluno1.nome, aluno1.curso = "Ana", "Informática"
+    aluno2.nome, aluno2.curso = "Bruno", "Eletrotécnica"
+    aluno3.nome, aluno3.curso = "Carla", "Informática"
+    alunos = [aluno1, aluno2, aluno3]
+
+
+    def exibir():
+        for a in alunos:
+            print(f"{a.nome} ({a.curso}) — {a.instituicao}")
+        print()
+
+
+    exibir()
+
+    Aluno.instituicao = "Instituto Federal"   # muda na classe: todos enxergam
+    exibir()
+
+    aluno1.instituicao = "Outra escola"
+    exibir()
+    # Só o aluno1 mudou porque "aluno1.instituicao = ..." cria um atributo de
+    # INSTÂNCIA no aluno1, que passa a esconder o atributo da classe. Os outros
+    # objetos não têm esse atributo próprio e continuam lendo o da classe.
+    ```
+
+
+### Avançado (desafio)
+
+Uma loja guarda os produtos em dicionários: `[{"nome": "Caneta", "preco": 2.5, "qtd": 100}, {"nome": "Caderno", "preco": 18.9, "qtd": 30}]`. Reescreva esse cadastro com POO:
+
+- Crie a classe `Produto` com o atributo de classe `total_cadastrados = 0`.
+- Para cada dicionário, crie um objeto `Produto`, copie os dados como atributos e incremente `Produto.total_cadastrados`.
+- Escreva a função `valor_em_estoque(produtos)`, que recebe a lista de objetos e devolve a soma de `preco * qtd`.
+- Exiba o total de produtos cadastrados e o valor em estoque com duas casas decimais.
 
 ---
+
+<!-- gabarito -->
+??? success "Gabarito — Avançado"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    class Produto:
+        total_cadastrados = 0
+
+
+    dados = [
+        {"nome": "Caneta", "preco": 2.5, "qtd": 100},
+        {"nome": "Caderno", "preco": 18.9, "qtd": 30},
+    ]
+
+    produtos = []
+    for item in dados:
+        p = Produto()
+        p.nome = item["nome"]
+        p.preco = item["preco"]
+        p.qtd = item["qtd"]
+        Produto.total_cadastrados += 1
+        produtos.append(p)
+
+
+    def valor_em_estoque(produtos):
+        return sum(p.preco * p.qtd for p in produtos)
+
+
+    print("Produtos cadastrados:", Produto.total_cadastrados)       # 2
+    print(f"Valor em estoque: R$ {valor_em_estoque(produtos):.2f}")  # R$ 817.00
+    ```
+
 
 ## 💡 Resumo do Capítulo
 

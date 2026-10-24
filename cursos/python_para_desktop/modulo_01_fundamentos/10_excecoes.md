@@ -2,6 +2,7 @@
 
 ## Objetivos
 Neste capítulo, você aprenderá a:
+
 - Compreender a diferença entre erros de sintaxe e exceções.
 - Utilizar os blocos `try`, `except`, `else` e `finally` para capturar e tratar exceções.
 - Identificar e capturar exceções específicas, evitando o uso indiscriminado de `except` genérico.
@@ -11,6 +12,7 @@ Neste capítulo, você aprenderá a:
 
 ## Pré-requisitos
 Antes de prosseguir, certifique-se de que você domina:
+
 - Fundamentos da linguagem Python: variáveis, tipos de dados e operadores.
 - Estruturas de controle (`if`, `elif`, `else`, `for`, `while`).
 - Definição e uso de funções.
@@ -30,6 +32,7 @@ Neste capítulo, você dominará os mecanismos que Python oferece para detectar,
 
 ### Erros versus exceções
 Em Python, é importante distinguir dois tipos de problemas:
+
 - **Erros de sintaxe (`SyntaxError`)**: ocorrem quando o código não segue as regras gramaticais da linguagem. O programa nem chega a ser executado. Exemplo: esquecer dois-pontos após um `if`.
 - **Exceções**: ocorrem durante a execução, mesmo que a sintaxe esteja correta. Exemplos: tentar abrir um arquivo que não existe (`FileNotFoundError`), dividir por zero (`ZeroDivisionError`), acessar um índice inválido em uma lista (`IndexError`).
 
@@ -331,11 +334,77 @@ Assim, quem chama `sacar` pode capturar `SaldoInsuficienteError` especificamente
 2. Crie uma lista com 5 números e peça ao usuário um índice para acessar. Trate `IndexError` se o índice for inválido e `ValueError` se a entrada não for um número inteiro.
 3. Simule a abertura de um arquivo: use `try` para abrir um arquivo inexistente e capture `FileNotFoundError`, exibindo uma mensagem amigável. Inclua um bloco `finally` que imprima "Operação finalizada.".
 
+<!-- gabarito -->
+??? success "Gabarito — Básico"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    # 1) Divisão protegida
+    try:
+        a = float(input("Primeiro número: "))
+        b = float(input("Segundo número: "))
+        print("Resultado:", a / b)
+    except ZeroDivisionError:
+        print("Não é possível dividir por zero.")
+    except ValueError:
+        print("Digite apenas números.")
+
+    # 2) Acesso por índice
+    numeros = [10, 20, 30, 40, 50]
+    try:
+        indice = int(input("Índice (0 a 4): "))
+        print("Valor:", numeros[indice])
+    except IndexError:
+        print("Índice fora da lista.")
+    except ValueError:
+        print("O índice precisa ser um número inteiro.")
+
+    # 3) Arquivo inexistente com finally
+    try:
+        with open("nao_existe.txt", encoding="utf-8") as arquivo:
+            print(arquivo.read())
+    except FileNotFoundError:
+        print("O arquivo não foi encontrado. Verifique o nome e a pasta.")
+    finally:
+        print("Operação finalizada.")
+    ```
+
+
 ### Intermediário (aplicação)
 Desenvolva uma função `converter_para_numero(valor)` que recebe uma string e tenta convertê-la para `int` ou `float`, retornando o número convertido. Se a string não for um número válido, a função deve lançar um `ValueError` com uma mensagem específica. Em seguida, crie um programa que use essa função para somar números digitados pelo usuário em uma única linha separados por espaços (ex.: "10 20 30"). Trate exceções para que o programa não quebre com entradas inválidas.
 
+<!-- gabarito -->
+??? success "Gabarito — Intermediário"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    def converter_para_numero(valor):
+        """Converte a string em int ou float; lança ValueError se não for número."""
+        texto = valor.strip().replace(",", ".")
+        try:
+            return int(texto)
+        except ValueError:
+            pass
+        try:
+            return float(texto)
+        except ValueError:
+            raise ValueError(f"'{valor}' não é um número válido.") from None
+
+
+    linha = input("Digite números separados por espaço: ")
+    total = 0
+    for parte in linha.split():
+        try:
+            total += converter_para_numero(parte)
+        except ValueError as erro:
+            print("Ignorado:", erro)
+    print("Soma:", total)
+    ```
+
+
 ### Avançado (desafio)
 Crie um sistema de reserva de assentos para um teatro. A classe `Teatro` deve ter uma matriz (lista de listas) representando os assentos (ocupado `True`/livre `False`). Regras:
+
 1. O teatro tem 10 fileiras (A-J) e 15 assentos por fileira (1-15).
 2. A função `reservar(fileira, assento)` deve levantar exceções personalizadas:
     - `FileiraInvalidaError` se a fileira não for A-J.
@@ -344,10 +413,93 @@ Crie um sistema de reserva de assentos para um teatro. A classe `Teatro` deve te
 3. O programa deve oferecer um menu para reservar, cancelar (liberar assento) e visualizar o mapa de assentos (com `[X]` para ocupado e `[ ]` para livre).
 4. Utilize tratamento de exceções adequado para todas as operações.
 
+<!-- gabarito -->
+??? success "Gabarito — Avançado"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    # Este desafio usa uma classe — o assunto do Módulo 02 (POO).
+    # Leia como "um conjunto de dados + as funções que cuidam deles".
+
+    class FileiraInvalidaError(Exception):
+        pass
+
+
+    class AssentoInvalidoError(Exception):
+        pass
+
+
+    class AssentoOcupadoError(Exception):
+        pass
+
+
+    class Teatro:
+        FILEIRAS = "ABCDEFGHIJ"
+        ASSENTOS = 15
+
+        def __init__(self):
+            self.mapa = [[False] * self.ASSENTOS for _ in self.FILEIRAS]
+
+        def _posicao(self, fileira, assento):
+            fileira = fileira.strip().upper()
+            if len(fileira) != 1 or fileira not in self.FILEIRAS:
+                raise FileiraInvalidaError(f"Fileira '{fileira}' não existe (use A-J).")
+            if not 1 <= assento <= self.ASSENTOS:
+                raise AssentoInvalidoError(f"Assento {assento} não existe (use 1-15).")
+            return self.FILEIRAS.index(fileira), assento - 1
+
+        def reservar(self, fileira, assento):
+            f, a = self._posicao(fileira, assento)
+            if self.mapa[f][a]:
+                raise AssentoOcupadoError(f"O assento {fileira.upper()}{assento} já está ocupado.")
+            self.mapa[f][a] = True
+
+        def cancelar(self, fileira, assento):
+            f, a = self._posicao(fileira, assento)
+            self.mapa[f][a] = False
+
+        def exibir(self):
+            print("    " + " ".join(f"{n:>3}" for n in range(1, self.ASSENTOS + 1)))
+            for letra, linha in zip(self.FILEIRAS, self.mapa):
+                print(f"{letra}   " + " ".join("[X]" if ocupado else "[ ]" for ocupado in linha))
+
+
+    def main():
+        teatro = Teatro()
+        while True:
+            opcao = input("\n1-Reservar 2-Cancelar 3-Mapa 4-Sair: ").strip()
+            if opcao == "4":
+                break
+            if opcao == "3":
+                teatro.exibir()
+                continue
+            if opcao not in ("1", "2"):
+                print("Opção inválida.")
+                continue
+            try:
+                fileira = input("Fileira (A-J): ")
+                assento = int(input("Assento (1-15): "))
+                if opcao == "1":
+                    teatro.reservar(fileira, assento)
+                    print("Reserva feita!")
+                else:
+                    teatro.cancelar(fileira, assento)
+                    print("Assento liberado.")
+            except ValueError:
+                print("O assento precisa ser um número.")
+            except (FileiraInvalidaError, AssentoInvalidoError, AssentoOcupadoError) as erro:
+                print("Erro:", erro)
+
+
+    main()
+    ```
+
+
 ## Projeto Prático: Gerenciador de Contatos com Persistência Segura
 Desenvolva uma aplicação de console para gerenciar contatos, com persistência em arquivo JSON, tratamento robusto de exceções e validação de dados.
 
 **Requisitos:**
+
 1. **Modelo de dados:**
     - Cada contato é um dicionário com nome, telefone e email.
     - A lista de contatos é salva em `contatos.json` usando o módulo `json`.
@@ -386,6 +538,7 @@ Este projeto consolida o tratamento de exceções em um cenário realista, integ
 
 ## Resumo
 Neste capítulo, você aprendeu que:
+
 - Exceções são eventos que interrompem o fluxo normal do programa; erros de sintaxe impedem a execução.
 - O bloco `try/except` captura e trata exceções, permitindo resposta controlada a falhas.
 - Capturar exceções específicas (`ValueError`, `FileNotFoundError`, etc.) é melhor do que `except:` genérico.
@@ -395,3 +548,8 @@ Neste capítulo, você aprendeu que:
 - Boas práticas incluem não silenciar exceções, usar `with` para recursos, e validar dados cedo.
 
 O tratamento de exceções é um pilar da programação profissional. A partir de agora, seus programas não apenas funcionam no cenário ideal, mas resistem às adversidades do mundo real, mantendo a integridade dos dados e proporcionando uma experiência de usuário muito mais confiável.
+
+
+<!-- revisao-visual -->
+!!! tip "Revisão visual: Tratamento de erros"
+    Ficou alguma dúvida? A [Central de Revisão](../modulo_00_revisao_e_fixacao/07_excecoes_revisao.md) explica **tratamento de erros** com analogias do dia a dia, diagramas e os erros mais comuns — use antes dos exercícios ou para estudar para a prova.

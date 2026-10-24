@@ -1,7 +1,7 @@
 # 🧠 Revisão Visual: Módulos, Importações e Organização de Código
 
 > **Curso:** Python para Desktop  
-> **Módulo:** 00 — Central de Revisão Visual  
+> **Módulo:** Central de Revisão Visual  
 > **Nível:** Fixação Didática & Visual  
 > **Tempo estimado de leitura:** 20 min  
 
@@ -10,6 +10,7 @@
 ## 🎯 Por que esta revisão é para você?
 
 Se você já se pegou em dúvida sobre:
+
 * *"Por que não devo colocar todo o meu código em um único arquivo de 2.000 linhas?"*
 * *"Qual a diferença entre `import math` e `from math import sqrt`?"*
 * *"O que significa `if __name__ == '__main__':` no final do arquivo?"*

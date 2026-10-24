@@ -2,6 +2,7 @@
 
 ## Objetivos
 Ao final deste capítulo, você estará apto a:
+
 - Compreender o papel das estruturas condicionais no controle do fluxo de execução.
 - Utilizar a instrução `if` para executar blocos de código com base em uma condição.
 - Combinar `if` com `else` para criar caminhos alternativos.
@@ -13,6 +14,7 @@ Ao final deste capítulo, você estará apto a:
 
 ## Pré-requisitos
 Antes de mergulhar nas estruturas condicionais, é fundamental que você domine:
+
 - Criação e uso de variáveis (int, float, str, bool).
 - Operadores de comparação (`==`, `!=`, `>`, `<`, `>=`, `<=`) e lógicos (`and`, `or`, `not`).
 - Entrada de dados com `input()` e exibição com `print()`.
@@ -125,6 +127,7 @@ print(status)  # Menor de idade
 
 ### Verdade e falsidade em Python
 Em Python, qualquer objeto pode ser testado como booleano. São considerados falsos (`False`) os seguintes valores:
+
 - `False`
 - `None`
 - Zero numérico: `0`, `0.0`, `0j`
@@ -252,8 +255,39 @@ Aqui, `nome` será `True` se o usuário digitar algo, e `False` se ele pressiona
 - Solicite ao usuário sua idade e verifique se ele já pode votar (`idade >= 16`). Exiba "Pode votar" ou "Não pode votar".
 - Peça um número e diga se ele é positivo, negativo ou zero, utilizando `if/elif/else`.
 
+<!-- gabarito -->
+??? success "Gabarito — Básico"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    # 1) Par ou ímpar
+    numero = int(input("Digite um número inteiro: "))
+    if numero % 2 == 0:
+        print("Par")
+    else:
+        print("Ímpar")
+
+    # 2) Pode votar?
+    idade = int(input("Sua idade: "))
+    if idade >= 16:
+        print("Pode votar")
+    else:
+        print("Não pode votar")
+
+    # 3) Positivo, negativo ou zero
+    valor = float(input("Digite um número: "))
+    if valor > 0:
+        print("Positivo")
+    elif valor < 0:
+        print("Negativo")
+    else:
+        print("Zero")
+    ```
+
+
 ### Intermediário (aplicação)
 Uma empresa de energia elétrica cobra R$ 0,50 por kWh para os primeiros 200 kWh e R$ 0,75 para o consumo excedente. Escreva um programa que:
+
 - Pergunte o consumo em kWh.
 - Calcule o valor da conta.
 - Aplique um desconto de 10% se o consumo for inferior a 100 kWh.
@@ -261,8 +295,28 @@ Uma empresa de energia elétrica cobra R$ 0,50 por kWh para os primeiros 200 kWh
 
 Use apenas estruturas condicionais e operadores aprendidos.
 
+<!-- gabarito -->
+??? success "Gabarito — Intermediário"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    consumo = float(input("Consumo do mês (kWh): "))
+
+    if consumo <= 200:
+        valor = consumo * 0.50
+    else:
+        valor = 200 * 0.50 + (consumo - 200) * 0.75
+
+    if consumo < 100:
+        valor = valor * 0.90  # desconto de 10%
+
+    print(f"Valor da conta: R$ {valor:.2f}")
+    ```
+
+
 ### Avançado (desafio)
 Crie um sistema simples de notas escolares que:
+
 - Leia três notas (0 a 10).
 - Calcule a média aritmética.
 - Determine a situação do aluno conforme a tabela:
@@ -272,8 +326,38 @@ Crie um sistema simples de notas escolares que:
 - Adicionalmente, em caso de Recuperação, verifique se a nota mais baixa é menor que 4.0. Se for, a situação muda para "Recuperação com risco" e exiba essa informação.
 - Exiba a média, a situação e, se for o caso, a nota que puxou a média para baixo.
 
+<!-- gabarito -->
+??? success "Gabarito — Avançado"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    nota1 = float(input("Nota 1: "))
+    nota2 = float(input("Nota 2: "))
+    nota3 = float(input("Nota 3: "))
+
+    media = (nota1 + nota2 + nota3) / 3
+    menor = min(nota1, nota2, nota3)
+
+    if media >= 7.0:
+        situacao = "Aprovado"
+    elif media >= 5.0:
+        if menor < 4.0:
+            situacao = "Recuperação com risco"
+        else:
+            situacao = "Recuperação"
+    else:
+        situacao = "Reprovado"
+
+    print(f"Média: {media:.1f}")
+    print(f"Situação: {situacao}")
+    if situacao == "Recuperação com risco":
+        print(f"Nota que puxou a média para baixo: {menor}")
+    ```
+
+
 ## Projeto Prático: Mini Calculadora com Menu
 Desenvolva uma calculadora que opera com dois números e um operador escolhido pelo usuário. O programa deve:
+
 1. Exibir um menu com as opções: `+`, `-`, `*`, `/` e `S` (sair).
 2. Solicitar a operação desejada.
 3. Se a operação for válida (`+`, `-`, `*`, `/`), solicitar dois números (`float`).
@@ -296,6 +380,7 @@ Erro: divisão por zero.
 
 ## Resumo
 Neste capítulo, você aprendeu a controlar o fluxo de seus programas com estruturas condicionais:
+
 - O `if` executa um bloco quando uma condição é verdadeira.
 - O `else` oferece um caminho alternativo quando a condição é falsa.
 - O `elif` permite encadear múltiplas verificações, avaliando-as sequencialmente até que uma seja verdadeira.
@@ -305,3 +390,8 @@ Neste capítulo, você aprendeu a controlar o fluxo de seus programas com estrut
 - Seguir boas práticas mantém o código condicional legível e menos propenso a erros.
 
 Dominar `if/elif/else` é um divisor de águas: a partir de agora, seus programas podem reagir a dados, validar entradas e implementar regras de negócio. Você está no caminho para criar software que realmente interage com o usuário.
+
+
+<!-- revisao-visual -->
+!!! tip "Revisão visual: Condicionais"
+    Ficou alguma dúvida? A [Central de Revisão](../modulo_00_revisao_e_fixacao/01_if_else_revisao.md) explica **condicionais** com analogias do dia a dia, diagramas e os erros mais comuns — use antes dos exercícios ou para estudar para a prova.

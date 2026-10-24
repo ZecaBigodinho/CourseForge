@@ -1,4 +1,4 @@
-# 14 — Refatoração
+# 11 — Refatoração
 
 ## 🎯 Objetivo
 
@@ -254,7 +254,7 @@ projeto final do curso **Python para Desktop — CourseForge**.
 
 | Tecnologia | Finalidade |
 |---|---|
-| Python 3.10+ | Linguagem principal |
+| Python 3.11+ | Linguagem principal |
 | Tkinter | Interface gráfica |
 | SQLite | Banco de dados local |
 | Firebase Realtime Database | Banco em nuvem |
@@ -322,7 +322,7 @@ sistema_escolar/
 |---|---|
 | [Seu Nome] | Desenvolvedor(a) |
 
-*Projeto desenvolvido como parte do Módulo 04 — Projeto Finalizador do curso Python para Desktop (CourseForge).*
+*Projeto desenvolvido como parte do Módulo 05 — Projeto Finalizador do curso Python para Desktop (CourseForge).*
 ```
 
 ### Passo 6 — Criando o `requirements.txt`
@@ -404,6 +404,7 @@ Após todas as refatorações, execute o roteiro de testes do Capítulo 10 novam
 **Tarefa:** Pegue uma função longa do seu projeto (mais de 25 linhas) e a divida em funções menores, cada uma com uma responsabilidade única.
 
 Exemplo: Se `abrir_janela_cadastro` tem 80 linhas, extraia partes como:
+
 - `_criar_formulario(janela)` → cria o frame do formulário
 - `_criar_tabela(janela)` → cria o Treeview e scrollbar
 - `_criar_barra_status(janela)` → cria a barra de status

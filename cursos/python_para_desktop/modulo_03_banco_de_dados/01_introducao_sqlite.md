@@ -369,6 +369,52 @@ Essa separação é o primeiro passo para um módulo de persistência bem estrut
 2. Escreva uma função `buscar_por_autor(autor)` que retorne todos os livros de um determinado autor. Teste com um dos autores inseridos.
 3. Escreva uma função `atualizar_ano(titulo, novo_ano)` que atualiza o ano de um livro pelo título exato.
 
+<!-- gabarito -->
+??? success "Gabarito — Básico"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    import sqlite3
+
+    conn = sqlite3.connect("biblioteca.db")
+
+    # 1) Tabela e três livros
+    conn.execute("""
+        CREATE TABLE IF NOT EXISTS livros (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            titulo TEXT NOT NULL,
+            autor TEXT NOT NULL,
+            ano INTEGER
+        )""")
+    livros = [
+        ("Dom Casmurro", "Machado de Assis", 1899),
+        ("Memórias Póstumas de Brás Cubas", "Machado de Assis", 1881),
+        ("Vidas Secas", "Graciliano Ramos", 1938),
+    ]
+    conn.executemany("INSERT INTO livros (titulo, autor, ano) VALUES (?, ?, ?)", livros)
+    conn.commit()
+
+
+    # 2) Busca por autor
+    def buscar_por_autor(autor):
+        cursor = conn.execute("SELECT titulo, ano FROM livros WHERE autor = ?", (autor,))
+        return cursor.fetchall()
+
+
+    # 3) Atualizar o ano pelo título
+    def atualizar_ano(titulo, novo_ano):
+        cursor = conn.execute("UPDATE livros SET ano = ? WHERE titulo = ?", (novo_ano, titulo))
+        conn.commit()
+        return cursor.rowcount  # quantas linhas mudaram (0 = título não encontrado)
+
+
+    print(buscar_por_autor("Machado de Assis"))
+    print("Linhas atualizadas:", atualizar_ano("Vidas Secas", 1938))
+    print("Linhas atualizadas:", atualizar_ano("Livro que não existe", 2000))
+    conn.close()
+    ```
+
+
 ### Intermediário (aplicação)
 
 1. Desenvolva um módulo `estoque.py` que gerencia um banco de dados SQLite para uma loja. A tabela `produtos` deve ter: `codigo` (chave primária, texto, único), `descricao`, `preco` (real), `quantidade` (inteiro). Implemente funções:
@@ -378,6 +424,70 @@ Essa separação é o primeiro passo para um módulo de persistência bem estrut
    
    Utilize tratamento de exceções e placeholders.
 
+<!-- gabarito -->
+??? success "Gabarito — Intermediário"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python title="estoque.py"
+    import sqlite3
+
+    CAMINHO = "loja.db"
+
+
+    def conectar():
+        return sqlite3.connect(CAMINHO)
+
+
+    def criar_tabela():
+        with conectar() as conn:
+            conn.execute("""
+                CREATE TABLE IF NOT EXISTS produtos (
+                    codigo TEXT PRIMARY KEY,
+                    descricao TEXT NOT NULL,
+                    preco REAL NOT NULL,
+                    quantidade INTEGER NOT NULL DEFAULT 0
+                )""")
+
+
+    def adicionar_produto(codigo, descricao, preco, quantidade):
+        try:
+            with conectar() as conn:
+                conn.execute("INSERT INTO produtos VALUES (?, ?, ?, ?)",
+                             (codigo, descricao, preco, quantidade))
+            return True
+        except sqlite3.IntegrityError:  # código repetido viola a chave primária
+            return False
+
+
+    def vender(codigo, quantidade_vendida):
+        with conectar() as conn:
+            # A condição "quantidade >= ?" garante que o estoque nunca fica negativo
+            cursor = conn.execute(
+                "UPDATE produtos SET quantidade = quantidade - ? WHERE codigo = ? AND quantidade >= ?",
+                (quantidade_vendida, codigo, quantidade_vendida))
+            return cursor.rowcount == 1
+
+
+    def relatorio_estoque_baixo(limite):
+        with conectar() as conn:
+            return conn.execute(
+                "SELECT codigo, descricao, quantidade FROM produtos WHERE quantidade < ? ORDER BY quantidade",
+                (limite,)).fetchall()
+    ```
+
+    ```python title="usar_estoque.py"
+    import estoque
+
+    estoque.criar_tabela()
+    print(estoque.adicionar_produto("P01", "Caneta azul", 2.5, 100))   # True
+    print(estoque.adicionar_produto("P01", "Repetida", 1.0, 1))        # False (duplicado)
+    print(estoque.adicionar_produto("P02", "Caderno", 18.9, 4))        # True
+    print(estoque.vender("P02", 3))                                    # True  (sobra 1)
+    print(estoque.vender("P02", 5))                                    # False (só há 1)
+    print(estoque.relatorio_estoque_baixo(5))                          # [('P02', 'Caderno', 1)]
+    ```
+
+
 ### Avançado (desafio)
 
 1. Crie um sistema de pedidos com duas tabelas relacionadas: `clientes` (`id`, `nome`, `email`) e `pedidos` (`id`, `id_cliente`, `data`, `valor_total`). A tabela `pedidos` deve ter uma chave estrangeira (`FOREIGN KEY`) referenciando `clientes(id)`. Implemente:
@@ -386,6 +496,75 @@ Essa separação é o primeiro passo para um módulo de persistência bem estrut
     - Função `relatorio_pedidos_por_cliente(id_cliente)`: retorna todos os pedidos de um cliente.
    
    Teste as operações e demonstre o funcionamento da integridade referencial.
+
+<!-- gabarito -->
+??? success "Gabarito — Avançado"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    import sqlite3
+
+
+    class ClienteInexistenteError(Exception):
+        """O pedido aponta para um cliente que não está cadastrado."""
+
+
+    conn = sqlite3.connect("pedidos.db")
+    conn.execute("PRAGMA foreign_keys = ON")  # vale por conexão: ligue sempre ao conectar
+    conn.executescript("""
+        CREATE TABLE IF NOT EXISTS clientes (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            nome TEXT NOT NULL,
+            email TEXT
+        );
+        CREATE TABLE IF NOT EXISTS pedidos (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            id_cliente INTEGER NOT NULL,
+            data TEXT NOT NULL,
+            valor_total REAL NOT NULL,
+            FOREIGN KEY (id_cliente) REFERENCES clientes(id)
+        );
+    """)
+
+
+    def criar_pedido(id_cliente, data, valor):
+        try:
+            with conn:
+                cursor = conn.execute(
+                    "INSERT INTO pedidos (id_cliente, data, valor_total) VALUES (?, ?, ?)",
+                    (id_cliente, data, valor))
+            return cursor.lastrowid
+        except sqlite3.IntegrityError:
+            raise ClienteInexistenteError(f"Cliente {id_cliente} não existe.") from None
+
+
+    def relatorio_pedidos_por_cliente(id_cliente):
+        return conn.execute(
+            "SELECT id, data, valor_total FROM pedidos WHERE id_cliente = ? ORDER BY data",
+            (id_cliente,)).fetchall()
+
+
+    with conn:
+        id_ana = conn.execute("INSERT INTO clientes (nome, email) VALUES (?, ?)",
+                              ("Ana", "ana@if.edu.br")).lastrowid
+
+    criar_pedido(id_ana, "2026-10-01", 150.0)
+    criar_pedido(id_ana, "2026-10-15", 89.9)
+    print(relatorio_pedidos_por_cliente(id_ana))
+
+    try:
+        criar_pedido(999, "2026-10-20", 10.0)  # cliente que não existe
+    except ClienteInexistenteError as erro:
+        print("Recusado:", erro)
+
+    # Integridade referencial: não dá para apagar um cliente que tem pedidos
+    try:
+        with conn:
+            conn.execute("DELETE FROM clientes WHERE id = ?", (id_ana,))
+    except sqlite3.IntegrityError as erro:
+        print("O banco protegeu os pedidos:", erro)
+    ```
+
 
 ## Projeto Prático
 
@@ -418,10 +597,12 @@ Retome o Gerenciador de Tarefas desenvolvido nos módulos anteriores e substitua
     - Ao inicializar o banco, se o arquivo estiver corrompido, exiba um aviso e recrie a tabela (ou simplesmente encerre de forma graciosa).
 
 **Bônus (opcional):**
+
 - Adicione uma função `buscar_por_palavra_chave(palavra)` que use `LIKE` para pesquisar tarefas cuja descrição contenha o termo.
 - Implemente ordenação por prioridade ou data diretamente na consulta SQL.
 
 **Orientações de implementação:**
+
 - Mantenha o código da interface separado do código de acesso a dados.
 - Use `with sqlite3.connect(...)` em todas as funções.
 - Lembre-se de que, após migrar, o arquivo `tarefas.json` não será mais utilizado. Você pode excluí-lo ou mantê-lo como backup.

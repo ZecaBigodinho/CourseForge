@@ -36,13 +36,13 @@ from models.chapter import Chapter
 from models.enums import NivelDificuldade, TipoPrompt
 from utils.file_manager import FileManager
 from utils.template_engine import TemplateEngine
-from utils.constants import DIR_CURSOS, DIR_MKDOCS
+from utils.constants import DIR_CURSOS, DIR_MKDOCS, DIR_TEMPLATES
 from utils.logger import get_logger
 
 logger = get_logger(__name__)
 
-# Raiz do projeto (mesmo padrão do main.py)
-PROJECT_ROOT = Path(__file__).parent.parent.resolve()
+# Raiz do projeto: este arquivo fica em <raiz>/src/generators/
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 # Configuração padrão do modelo (pode ser sobrescrita via .env ou argumento)
 DEFAULT_MODEL = os.environ.get(
@@ -114,7 +114,7 @@ def gerar_e_publicar_capitulo(
     try:
         # ── 1. Inicializar componentes ────────────────────────────────
         fm = FileManager(PROJECT_ROOT)
-        te = TemplateEngine(PROJECT_ROOT / "templates")
+        te = TemplateEngine(PROJECT_ROOT / DIR_TEMPLATES)
 
         from generators.gerar_capitulo import ChapterGenerator
         from generators.gerar_prompt import PromptGenerator
@@ -124,7 +124,7 @@ def gerar_e_publicar_capitulo(
         chap_gen = ChapterGenerator(fm, te)
         prompt_gen = PromptGenerator(fm, te)
 
-        config_loader = ConfigLoader(PROJECT_ROOT / "config" / "config.yaml")
+        config_loader = ConfigLoader(PROJECT_ROOT / "src" / "config" / "config.yaml")
         mkdocs_upd = MkDocsUpdater(fm, config_loader.as_dict())
 
         # ── 2. Detectar próximo número de capítulo ────────────────────

@@ -325,9 +325,87 @@ janela.mainloop()
 2. Associe a tecla Escape à janela para fechá-la (use `janela.destroy` ou `janela.quit`).
 3. Utilize um StringVar vinculado a um Entry e a um Label. Faça com que o Label mostre o texto do Entry sempre em maiúsculas, usando `trace_add`.
 
+<!-- gabarito -->
+??? success "Gabarito — Básico"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    import tkinter as tk
+
+    janela = tk.Tk()
+    janela.title("Eventos")
+
+    # 1) Hover: muda a cor ao entrar e volta ao sair
+    rotulo = tk.Label(janela, text="Passe o mouse aqui", bg="lightgray", padx=20, pady=10)
+    rotulo.pack(padx=20, pady=10)
+    rotulo.bind("<Enter>", lambda evento: rotulo.config(bg="lightblue"))
+    rotulo.bind("<Leave>", lambda evento: rotulo.config(bg="lightgray"))
+
+    # 2) Esc fecha a janela
+    janela.bind("<Escape>", lambda evento: janela.destroy())
+
+    # 3) Entry e Label ligados por StringVar — o Label mostra em maiúsculas
+    texto = tk.StringVar()
+    tk.Entry(janela, textvariable=texto).pack(padx=20, pady=5)
+    espelho = tk.Label(janela, text="")
+    espelho.pack(pady=(0, 10))
+
+
+    def ao_mudar(*args):
+        espelho.config(text=texto.get().upper())
+
+
+    texto.trace_add("write", ao_mudar)
+
+    janela.mainloop()
+    ```
+
+
 ### Intermediário (aplicação)
 
 Desenvolva um formulário de cadastro que contenha os campos "Nome" e "E-mail", ambos com Entry vinculados a StringVar. Abaixo, adicione um Checkbutton "Aceito os termos" vinculado a um BooleanVar. O botão "Cadastrar" deve permanecer desabilitado (`state="disabled"`) até que os dois campos estejam preenchidos e o checkbox marcado. Use `trace_add` nas três variáveis para atualizar o estado do botão em tempo real.
+
+<!-- gabarito -->
+??? success "Gabarito — Intermediário"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    import tkinter as tk
+
+    janela = tk.Tk()
+    janela.title("Cadastro")
+
+    nome = tk.StringVar()
+    email = tk.StringVar()
+    aceito = tk.BooleanVar(value=False)
+
+    tk.Label(janela, text="Nome:").grid(row=0, column=0, sticky="e", padx=5, pady=5)
+    tk.Entry(janela, textvariable=nome, width=30).grid(row=0, column=1, padx=5, pady=5)
+    tk.Label(janela, text="E-mail:").grid(row=1, column=0, sticky="e", padx=5, pady=5)
+    tk.Entry(janela, textvariable=email, width=30).grid(row=1, column=1, padx=5, pady=5)
+    tk.Checkbutton(janela, text="Aceito os termos", variable=aceito).grid(
+        row=2, column=0, columnspan=2, pady=5)
+
+
+    def cadastrar():
+        print(f"Cadastrado: {nome.get()} <{email.get()}>")
+
+
+    botao = tk.Button(janela, text="Cadastrar", state="disabled", command=cadastrar)
+    botao.grid(row=3, column=0, columnspan=2, pady=10)
+
+
+    def validar(*args):
+        pronto = nome.get().strip() and email.get().strip() and aceito.get()
+        botao.config(state="normal" if pronto else "disabled")
+
+
+    for variavel in (nome, email, aceito):
+        variavel.trace_add("write", validar)
+
+    janela.mainloop()
+    ```
+
 
 ### Avançado (desafio)
 
@@ -338,6 +416,68 @@ Construa um pequeno jogo de "Clique no alvo":
 - Se errar (clicar fora do círculo), um contador de erros é incrementado.
 - Ao atingir 10 acertos ou 5 erros, o jogo termina e exibe uma mensagem final.
 - Utilize `bind("<Button-1>", ...)` no Canvas, calcule se o clique foi dentro do círculo (distância do centro menor que o raio) e gerencie a lógica com variáveis de controle (`IntVar`) para os contadores.
+
+<!-- gabarito -->
+??? success "Gabarito — Avançado"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    import random
+    import tkinter as tk
+    from tkinter import messagebox
+
+    LARGURA, ALTURA, RAIO = 400, 300, 20
+
+    janela = tk.Tk()
+    janela.title("Clique no alvo")
+
+    acertos = tk.IntVar(value=0)
+    erros = tk.IntVar(value=0)
+
+    placar = tk.Frame(janela)
+    placar.pack(fill="x", padx=10, pady=5)
+    tk.Label(placar, text="Acertos:").pack(side="left")
+    tk.Label(placar, textvariable=acertos).pack(side="left", padx=(0, 15))
+    tk.Label(placar, text="Erros:").pack(side="left")
+    tk.Label(placar, textvariable=erros).pack(side="left")
+
+    canvas = tk.Canvas(janela, width=LARGURA, height=ALTURA, bg="white")
+    canvas.pack(padx=10, pady=10)
+    alvo = {"x": 0, "y": 0}
+
+
+    def mover_alvo():
+        alvo["x"] = random.randint(RAIO, LARGURA - RAIO)
+        alvo["y"] = random.randint(RAIO, ALTURA - RAIO)
+        canvas.delete("alvo")
+        canvas.create_oval(alvo["x"] - RAIO, alvo["y"] - RAIO, alvo["x"] + RAIO, alvo["y"] + RAIO,
+                           fill="red", outline="", tags="alvo")
+
+
+    def fim_de_jogo(mensagem):
+        canvas.unbind("<Button-1>")
+        messagebox.showinfo("Fim de jogo", f"{mensagem}\nAcertos: {acertos.get()} | Erros: {erros.get()}")
+
+
+    def ao_clicar(evento):
+        distancia = ((evento.x - alvo["x"]) ** 2 + (evento.y - alvo["y"]) ** 2) ** 0.5
+        if distancia <= RAIO:
+            acertos.set(acertos.get() + 1)
+            if acertos.get() >= 10:
+                fim_de_jogo("Parabéns, você venceu!")
+                return
+            mover_alvo()
+        else:
+            erros.set(erros.get() + 1)
+            if erros.get() >= 5:
+                fim_de_jogo("Fim de jogo: 5 erros.")
+
+
+    canvas.bind("<Button-1>", ao_clicar)
+    mover_alvo()
+    janela.mainloop()
+    ```
+
 
 ## Projeto Prático
 

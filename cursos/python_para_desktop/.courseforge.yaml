@@ -1,8 +1,39 @@
 nome: Python para Desktop
-descricao: Curso de Python Desktop
-autor: Professor
-num_modulos: 5
+descricao: Python do zero ao sistema desktop completo — fundamentos, POO, interfaces gráficas, banco de dados e projeto final em equipe.
+autor: Pedro Paulo IF
+num_modulos: 7
 data_criacao: '2026-07-17'
-versao: 1.0.0
+versao: 1.2.0
 tags: []
 slug: python_para_desktop
+# Ordem pedagógica do menu (nomes das pastas). As pastas não são renomeadas
+# para não mudar as URLs; a numeração exibida nas páginas segue esta ordem.
+ordem_modulos:
+  - modulo_06_vscode_config        # Módulo 00 — Configuração do VS Code & Ambiente
+  - modulo_01_fundamentos          # Módulo 01 — Fundamentos
+  - modulo_07_poo                  # Módulo 02 — POO
+  - modulo_02_interfaces_graficas  # Módulo 03 — Interfaces Gráficas
+  - modulo_03_banco_de_dados       # Módulo 04 — Banco de Dados
+  - modulo_04_projeto_finalizador  # Módulo 05 — Projeto Finalizador
+  - modulo_05_git_github           # Módulo 06 — Git & GitHub (Bônus)
+  - modulo_00_revisao_e_fixacao    # Central de Revisão Visual (apoio)
+
+# Ficha do curso — alimenta o Catálogo de cursos (gerado por src/generators/gerar_catalogo.py)
+ordem: 1
+status: disponivel                 # disponivel | em_breve
+ficha:
+  icone: material-language-python
+  nivel: Iniciante — do zero ao intermediário
+  carga_horaria:                   # a definir pelo professor (ex.: "80 h")
+  publico: Alunos que nunca programaram ou que estão começando em Python.
+  certificado: Entrega e apresentação do Projeto Final do Curso (Módulo 05, cap. 12).
+  pre_requisitos:
+    - Usar o computador no dia a dia (arquivos, pastas e navegador).
+    - Nenhum conhecimento de programação — o curso começa do zero.
+  objetivos:
+    - Preparar um ambiente profissional com Python e VS Code.
+    - Escrever programas em Python com variáveis, decisões, laços, funções e coleções.
+    - Organizar o código com Programação Orientada a Objetos.
+    - Criar aplicações desktop com Tkinter e CustomTkinter.
+    - Guardar dados com SQLite e proteger configurações com .env.
+    - Construir e apresentar, em equipe, um sistema completo com login e CRUD.

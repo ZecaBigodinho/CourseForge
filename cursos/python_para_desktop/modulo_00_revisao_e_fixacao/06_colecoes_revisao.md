@@ -1,7 +1,7 @@
 # 🧠 Revisão Visual: Coleções (Listas, Dicionários e Tuplas)
 
 > **Curso:** Python para Desktop  
-> **Módulo:** 00 — Central de Revisão Visual  
+> **Módulo:** Central de Revisão Visual  
 > **Nível:** Fixação Didática & Visual  
 > **Tempo estimado de leitura:** 20 min  
 
@@ -10,6 +10,7 @@
 ## 🎯 Por que esta revisão é para você?
 
 Se você já se pegou em dúvida sobre:
+
 * *"Quando devo usar uma Lista `[]` e quando devo usar um Dicionário `{}`?"*
 * *"Por que o primeiro item de uma lista fica na posição `0` e não `1`?"*
 * *"Como encontrar uma informação dentro de um dicionário sem dar erro?"*

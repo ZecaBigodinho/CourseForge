@@ -1,95 +1,130 @@
 /* ============================================================
-   CourseForge — Custom Sidebar Styles
-   Melhoria visual da navegação lateral para facilitar 
-   a distinção entre módulos/seções do curso.
+   CourseForge · IF — Identidade visual do site
+   1. Paleta (claro/escuro)      5. Conteúdo das aulas
+   2. Cabeçalho e abas           6. Home (hero, cards, passos)
+   3. Menu lateral               7. Acessibilidade
+   4. Numeração das aulas        8. Responsivo
+   Contrastes conferidos (WCAG AA, texto normal ≥ 4.5:1):
+   links #4F35B5/branco 8.4 · teal #00796B/branco 5.3 ·
+   botão #64DFD3/#10202A 10.3 · link #B9A6FF/fundo escuro 7.5
    ============================================================ */
 
 /* ------------------------------------------------------------ */
-/* Variáveis de Design                                           */
+/* 1. Paleta                                                     */
 /* ------------------------------------------------------------ */
 :root {
-  --cf-sidebar-section-gap: 0.5rem;
-  --cf-section-border-radius: 8px;
-  --cf-transition-speed: 0.2s;
-  --cf-accent-fundamentos: #7c4dff;
-  --cf-accent-interfaces: #00bfa5;
-  --cf-accent-banco: #ff6d00;
-  --cf-accent-default: #6200ea;
-  --cf-nav-bg-hover: rgba(98, 0, 234, 0.06);
-  --cf-nav-bg-active: rgba(98, 0, 234, 0.1);
-  --cf-section-header-color: #424242;
-  --cf-section-bg: rgba(0, 0, 0, 0.02);
+  --cf-roxo: #4F35B5;
+  --cf-roxo-claro: #7C5CE0;
+  --cf-roxo-escuro: #2E1F7A;
+  --cf-teal: #00796B;
+  --cf-teal-vivo: #64DFD3;
+  --cf-tinta: #10202A;
+
+  --cf-raio: 12px;
+  --cf-raio-pequeno: 6px;
+  --cf-transicao: 0.2s;
+  --cf-sombra: 0 1px 3px rgba(16, 32, 42, 0.08), 0 4px 16px rgba(16, 32, 42, 0.06);
+  --cf-borda: rgba(16, 32, 42, 0.1);
+  --cf-fundo-suave: rgba(79, 53, 181, 0.04);
+  --cf-nav-hover: rgba(79, 53, 181, 0.06);
+  --cf-nav-ativo: rgba(79, 53, 181, 0.1);
+  --cf-secao-titulo: #3B3B4F;
 }
 
-/* Dark mode overrides */
+[data-md-color-primary="custom"] {
+  --md-primary-fg-color: var(--cf-roxo);
+  --md-primary-fg-color--light: var(--cf-roxo-claro);
+  --md-primary-fg-color--dark: var(--cf-roxo-escuro);
+  --md-primary-bg-color: #fff;
+  --md-primary-bg-color--light: rgba(255, 255, 255, 0.7);
+}
+
+[data-md-color-accent="custom"] {
+  --md-accent-fg-color: var(--cf-teal);
+  --md-accent-fg-color--transparent: rgba(0, 121, 107, 0.1);
+  --md-accent-bg-color: #fff;
+  --md-accent-bg-color--light: rgba(255, 255, 255, 0.7);
+}
+
+[data-md-color-scheme="default"] {
+  --md-typeset-a-color: var(--cf-roxo);
+}
+
 [data-md-color-scheme="slate"] {
-  --cf-nav-bg-hover: rgba(179, 136, 255, 0.08);
-  --cf-nav-bg-active: rgba(179, 136, 255, 0.14);
-  --cf-section-header-color: #e0e0e0;
-  --cf-section-bg: rgba(255, 255, 255, 0.03);
+  --md-primary-fg-color: #3A2A8C;
+  --md-primary-fg-color--dark: #241A5E;
+  --md-accent-fg-color: var(--cf-teal-vivo);
+  --md-accent-fg-color--transparent: rgba(100, 223, 211, 0.12);
+  --md-typeset-a-color: #B9A6FF;
+  --cf-borda: rgba(255, 255, 255, 0.1);
+  --cf-fundo-suave: rgba(185, 166, 255, 0.05);
+  --cf-nav-hover: rgba(185, 166, 255, 0.08);
+  --cf-nav-ativo: rgba(185, 166, 255, 0.14);
+  --cf-secao-titulo: #E3E1EE;
+  --cf-sombra: 0 1px 3px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(0, 0, 0, 0.25);
 }
 
 /* ------------------------------------------------------------ */
-/* Sidebar Global                                                */
+/* 2. Cabeçalho e abas                                           */
 /* ------------------------------------------------------------ */
-
-/* Scrollbar mais limpa no sidebar */
-.md-sidebar__scrollwrap::-webkit-scrollbar {
-  width: 4px;
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 1.6rem;
+  width: auto;
 }
 
-.md-sidebar__scrollwrap::-webkit-scrollbar-track {
-  background: transparent;
+.md-header__topic:first-child {
+  font-weight: 700;
+  letter-spacing: 0.01em;
 }
 
+.md-tabs__link {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: opacity var(--cf-transicao) ease;
+}
+
+.md-tabs__item--active .md-tabs__link {
+  border-bottom: 2px solid var(--cf-teal-vivo);
+  padding-bottom: 0.15rem;
+}
+
+/* ------------------------------------------------------------ */
+/* 3. Menu lateral                                               */
+/* ------------------------------------------------------------ */
+.md-sidebar__scrollwrap::-webkit-scrollbar { width: 4px; }
+.md-sidebar__scrollwrap::-webkit-scrollbar-track { background: transparent; }
 .md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.15);
+  background: var(--cf-borda);
   border-radius: 4px;
 }
 
-[data-md-color-scheme="slate"] .md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.12);
-}
-
-/* ------------------------------------------------------------ */
-/* Seções de Navegação (Módulos)                                 */
-/* ------------------------------------------------------------ */
-
-/* Container de cada seção/módulo — adiciona separação visual */
+/* Cada módulo é um bloco separado */
 .md-nav__item--nested {
-  margin-top: var(--cf-sidebar-section-gap);
-  margin-bottom: var(--cf-sidebar-section-gap);
-  border-radius: var(--cf-section-border-radius);
+  margin: 0.5rem 0;
+  border-radius: 8px;
   overflow: hidden;
 }
 
-/* Separador visual entre módulos no nível 2+ */
 .md-nav--primary > .md-nav__list > .md-nav__item--nested + .md-nav__item--nested {
-  border-top: 1px solid rgba(0, 0, 0, 0.07);
+  border-top: 1px solid var(--cf-borda);
   padding-top: 0.4rem;
 }
 
-[data-md-color-scheme="slate"] .md-nav--primary > .md-nav__list > .md-nav__item--nested + .md-nav__item--nested {
-  border-top-color: rgba(255, 255, 255, 0.07);
-}
-
-/* ------------------------------------------------------------ */
-/* Headers de Seção (títulos de módulo no sidebar)               */
-/* ------------------------------------------------------------ */
-
-/* Estiliza o label dos grupos/seções */
+/* Título do módulo */
 .md-nav__item--section > .md-nav__link {
+  position: relative;
   font-weight: 700 !important;
   font-size: 0.68rem !important;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--cf-section-header-color) !important;
+  color: var(--cf-secao-titulo) !important;
   padding: 0.6rem 0.6rem 0.3rem !important;
   opacity: 1 !important;
 }
 
-/* Borda lateral colorida nos headers de seção ativos */
-.md-nav__item--section > .md-nav__link::before {
+/* Barra lateral no módulo aberto (mesma cor para todos) */
+.md-nav__item--section > .md-nav__link::after {
   content: "";
   position: absolute;
   left: 0;
@@ -97,41 +132,31 @@
   bottom: 0.3rem;
   width: 3px;
   border-radius: 0 3px 3px 0;
-  background: var(--cf-accent-default);
+  background: var(--md-accent-fg-color);
   opacity: 0;
-  transition: opacity var(--cf-transition-speed) ease;
+  transition: opacity var(--cf-transicao) ease;
 }
 
-.md-nav__item--section > .md-nav__link {
-  position: relative;
-}
-
-.md-nav__item--section.md-nav__item--active > .md-nav__link::before {
+.md-nav__item--section.md-nav__item--active > .md-nav__link::after {
   opacity: 1;
 }
 
-/* ------------------------------------------------------------ */
-/* Links individuais (capítulos)                                 */
-/* ------------------------------------------------------------ */
-
-/* Hover suave nos itens do nav */
+/* Aulas */
 .md-nav__item > .md-nav__link {
-  border-radius: 6px;
+  border-radius: var(--cf-raio-pequeno);
   margin: 1px 4px;
   padding: 0.35rem 0.6rem !important;
-  transition: all var(--cf-transition-speed) ease;
+  transition: background var(--cf-transicao) ease, transform var(--cf-transicao) ease;
 }
 
 .md-nav__item > .md-nav__link:hover {
-  background: var(--cf-nav-bg-hover);
+  background: var(--cf-nav-hover);
   transform: translateX(2px);
 }
 
-/* Item ativo — destaque visual claro (pill) */
 .md-nav__item .md-nav__link--active {
-  background: var(--cf-nav-bg-active) !important;
+  background: var(--cf-nav-ativo) !important;
   font-weight: 600 !important;
-  border-radius: 6px;
   position: relative;
 }
 
@@ -143,64 +168,31 @@
   height: 50%;
   width: 3px;
   border-radius: 0 3px 3px 0;
-  background: var(--md-primary-fg-color);
+  background: var(--md-typeset-a-color);
 }
 
-/* ------------------------------------------------------------ */
-/* Seções colapsáveis — melhor feedback visual                   */
-/* ------------------------------------------------------------ */
-
-/* Ícone de toggle mais suave */
-.md-nav__item--nested .md-nav__toggle ~ .md-nav__link::after {
-  transition: transform var(--cf-transition-speed) ease;
-}
-
-/* Quando expandido, sutilmente destaca o fundo */
 .md-nav__item--nested .md-nav__toggle:checked ~ .md-nav {
-  background: var(--cf-section-bg);
-  border-radius: 0 0 var(--cf-section-border-radius) var(--cf-section-border-radius);
+  background: var(--cf-fundo-suave);
+  border-radius: 0 0 8px 8px;
   padding-bottom: 0.3rem;
 }
 
 /* ------------------------------------------------------------ */
-/* Cores por módulo (via data attribute ou nth-child)            */
-/* Aplica bordas laterais coloridas por posição                  */
+/* 4. Numeração das aulas no menu                                */
 /* ------------------------------------------------------------ */
-
-/* O tab de navegação do curso contém os módulos como filhos diretos */
-/* Primeiro módulo (Fundamentos) — roxo */
-.md-nav--primary > .md-nav__list > .md-nav__item--nested:nth-child(1) .md-nav__item--section > .md-nav__link::before,
-.md-nav--primary > .md-nav__list > .md-nav__item--nested:nth-child(1) .md-nav__item--section.md-nav__item--active > .md-nav__link::before {
-  background: var(--cf-accent-fundamentos);
-}
-
-/* Segundo módulo (Interfaces Gráficas) — teal */
-.md-nav--primary > .md-nav__list > .md-nav__item--nested:nth-child(2) .md-nav__item--section > .md-nav__link::before,
-.md-nav--primary > .md-nav__list > .md-nav__item--nested:nth-child(2) .md-nav__item--section.md-nav__item--active > .md-nav__link::before {
-  background: var(--cf-accent-interfaces);
-}
-
-/* Terceiro módulo (Banco de Dados) — laranja */
-.md-nav--primary > .md-nav__list > .md-nav__item--nested:nth-child(3) .md-nav__item--section > .md-nav__link::before,
-.md-nav--primary > .md-nav__list > .md-nav__item--nested:nth-child(3) .md-nav__item--section.md-nav__item--active > .md-nav__link::before {
-  background: var(--cf-accent-banco);
-}
-
-/* ------------------------------------------------------------ */
-/* Numeração visual dos capítulos via CSS counters               */
-/* ------------------------------------------------------------ */
-
-/* Contador nos itens dentro de cada seção de módulo */
 .md-nav__item--section > .md-nav > .md-nav__list {
   counter-reset: chapter;
 }
 
-.md-nav__item--section > .md-nav > .md-nav__list > .md-nav__item:not(:first-child) > .md-nav__link::before {
+/* Numera só as aulas (itens sem subnível). A "Visão Geral" (index.md) não entra
+   na lista — com navigation.indexes ela vira o título clicável do módulo —,
+   então a primeira aula já é o primeiro item e recebe 01. */
+.md-nav__item--section > .md-nav > .md-nav__list > .md-nav__item:not(.md-nav__item--nested) > .md-nav__link::before {
   counter-increment: chapter;
   content: counter(chapter, decimal-leading-zero);
   font-size: 0.65rem;
   font-weight: 700;
-  opacity: 0.4;
+  opacity: 0.45;
   margin-right: 0.55rem;
   font-variant-numeric: tabular-nums;
   display: inline-block;
@@ -209,82 +201,293 @@
 }
 
 /* ------------------------------------------------------------ */
-/* Breadcrumbs (navigation.path)                                 */
+/* 5. Conteúdo das aulas                                         */
 /* ------------------------------------------------------------ */
-
 .md-path {
   font-size: 0.75rem;
-  opacity: 0.7;
+  opacity: 0.75;
   margin-bottom: 0.5rem;
 }
 
-/* ------------------------------------------------------------ */
-/* Tabs de navegação (cursos no topo)                            */
-/* ------------------------------------------------------------ */
-
-.md-tabs__link {
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  transition: all var(--cf-transition-speed) ease;
-}
-
-.md-tabs__link:hover {
-  opacity: 1;
-  transform: translateY(-1px);
-}
-
-.md-tabs__link--active {
-  border-bottom: 2px solid var(--md-accent-fg-color);
-}
-
-/* ------------------------------------------------------------ */
-/* Responsividade — mobile sidebar                               */
-/* ------------------------------------------------------------ */
-
-@media screen and (max-width: 76.25em) {
-  /* No mobile, a sidebar vira drawer — manter estilos essenciais */
-  .md-nav__item--section > .md-nav__link {
-    font-size: 0.72rem !important;
-    padding: 0.8rem 1rem 0.4rem !important;
-  }
-
-  .md-nav__item > .md-nav__link {
-    padding: 0.5rem 1rem !important;
-  }
-}
-
-/* ------------------------------------------------------------ */
-/* Melhorias gerais de tipografia do conteúdo                    */
-/* ------------------------------------------------------------ */
-
-/* Headings do conteúdo mais impactantes */
 .md-content h1 {
+  color: var(--md-default-fg-color);
   font-weight: 800;
   letter-spacing: -0.02em;
-  border-bottom: 2px solid var(--md-primary-fg-color);
+  border-bottom: 2px solid var(--md-primary-fg-color--light);
   padding-bottom: 0.4rem;
 }
 
 .md-content h2 {
   font-weight: 700;
   margin-top: 2rem;
-  color: var(--md-primary-fg-color);
+  color: var(--md-typeset-a-color);
 }
 
-/* Code blocks com borda sutil */
 .md-content .highlight {
   border-radius: 8px;
   overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--cf-borda);
 }
 
-[data-md-color-scheme="slate"] .md-content .highlight {
-  border-color: rgba(255, 255, 255, 0.08);
-}
-
-/* Admonitions mais polidos */
 .md-typeset .admonition,
 .md-typeset details {
   border-radius: 8px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+/* Etiquetas ("Disponível", "Em breve", "Bônus") */
+.md-typeset .cf-tag {
+  display: inline-block;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 0.3em 0.6em;
+  border-radius: 999px;
+  vertical-align: middle;
+  background: rgba(16, 32, 42, 0.07);
+  color: #45475A;
+}
+
+.md-typeset .cf-tag--ok {
+  background: rgba(0, 121, 107, 0.12);
+  color: #00695C;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .cf-tag {
+  background: rgba(255, 255, 255, 0.1);
+  color: #D5D3E0;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .cf-tag--ok {
+  background: rgba(100, 223, 211, 0.14);
+  color: var(--cf-teal-vivo);
+}
+
+/* ------------------------------------------------------------ */
+/* 6. Home                                                       */
+/* ------------------------------------------------------------ */
+
+/* Hero */
+.md-typeset .cf-hero {
+  position: relative;
+  overflow: hidden;
+  margin: 0 0 2.5rem;
+  padding: 3rem 2.5rem 2.5rem;
+  border-radius: 18px;
+  color: #fff;
+  background:
+    radial-gradient(circle at 85% 15%, rgba(100, 223, 211, 0.28), transparent 45%),
+    linear-gradient(135deg, var(--cf-roxo) 0%, var(--cf-roxo-escuro) 100%);
+  box-shadow: var(--cf-sombra);
+}
+
+.md-typeset .cf-hero__eyebrow {
+  margin: 0 0 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cf-teal-vivo);
+}
+
+.md-typeset .cf-hero .cf-hero__title {
+  margin: 0 0 1rem;
+  max-width: 22ch;
+  border: 0;
+  padding: 0;
+  font-size: 2.2rem;
+  line-height: 1.15;
+  color: #fff;
+}
+
+.md-typeset .cf-hero .cf-hero__title .headerlink { display: none; }
+
+.md-typeset .cf-hero__lead {
+  max-width: 46ch;
+  margin: 0 0 1.6rem;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.md-typeset .cf-hero .md-button {
+  margin: 0 0.6rem 0.6rem 0;
+  border-radius: 999px;
+  padding: 0.65em 1.4em;
+  font-weight: 700;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.md-typeset .cf-hero .md-button:hover,
+.md-typeset .cf-hero .md-button:focus-visible {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #fff;
+  color: #fff;
+}
+
+.md-typeset .cf-hero .md-button--primary {
+  background: var(--cf-teal-vivo);
+  border-color: var(--cf-teal-vivo);
+  color: var(--cf-tinta);
+}
+
+.md-typeset .cf-hero .md-button--primary:hover,
+.md-typeset .cf-hero .md-button--primary:focus-visible {
+  background: #8BEAE1;
+  border-color: #8BEAE1;
+  color: var(--cf-tinta);
+}
+
+/* "ul." e "[dir]" igualam a especificidade das regras de lista do Material */
+.md-typeset ul.cf-hero__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+[dir] .md-typeset ul.cf-hero__badges li {
+  margin: 0;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+[dir] .md-typeset ul.cf-hero__badges li::before { content: "✓ "; color: var(--cf-teal-vivo); }
+
+/* Seções da home */
+.md-typeset h2:has(+ .grid),
+.md-typeset h2:has(+ .admonition),
+.md-typeset h2:has(+ details) {
+  margin-top: 2.5rem;
+}
+
+/* Cards (grid cards do Material) */
+.md-typeset .grid.cards > ul > li,
+.md-typeset .grid > .card {
+  border-radius: var(--cf-raio);
+  border: 1px solid var(--cf-borda);
+  transition: border-color var(--cf-transicao) ease, box-shadow var(--cf-transicao) ease, transform var(--cf-transicao) ease;
+}
+
+.md-typeset .grid.cards > ul > li:hover,
+.md-typeset .grid.cards > ul > li:focus-within {
+  border-color: var(--md-primary-fg-color--light);
+  box-shadow: var(--cf-sombra);
+  transform: translateY(-2px);
+}
+
+.md-typeset .grid.cards .lg { color: var(--md-typeset-a-color); }
+
+.md-typeset .grid.cards > ul > li > hr { margin: 0.6rem 0; }
+
+/* Cursos: o disponível ganha destaque */
+.md-typeset .cf-cursos > ul > li:first-child {
+  border-color: var(--md-primary-fg-color--light);
+  background: var(--cf-fundo-suave);
+}
+
+/* Trilha: cards mais compactos */
+.md-typeset .cf-trilha > ul {
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+}
+
+.md-typeset .cf-trilha > ul > li > p:first-child { margin-top: 0; }
+
+.md-typeset .cf-trilha .twemoji,
+.md-typeset .cf-trilha svg { color: var(--md-typeset-a-color); }
+
+/* Como funciona */
+.md-typeset .grid.cf-passos {
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+}
+
+.md-typeset .cf-passo {
+  position: relative;
+  padding: 1.1rem 1.1rem 0.6rem;
+  border-radius: var(--cf-raio);
+  background: var(--cf-fundo-suave);
+  border: 1px solid var(--cf-borda);
+}
+
+.md-typeset .cf-passo p { margin: 0.4rem 0; }
+
+.md-typeset .cf-passo__num {
+  display: inline-grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  font-weight: 800;
+  background: var(--cf-roxo);
+  color: #fff;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .cf-passo__num {
+  background: var(--cf-teal-vivo);
+  color: var(--cf-tinta);
+}
+
+/* ------------------------------------------------------------ */
+/* 7. Acessibilidade                                             */
+/* ------------------------------------------------------------ */
+.md-typeset a:focus-visible,
+.md-nav__link:focus-visible,
+.md-tabs__link:focus-visible,
+.md-button:focus-visible,
+.md-typeset summary:focus-visible {
+  outline: 3px solid var(--cf-teal-vivo);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* No hero o fundo é roxo e o botão principal é teal: contorno branco */
+.md-typeset .cf-hero a:focus-visible,
+.md-typeset .cf-hero .md-button:focus-visible {
+  outline-color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+  .md-nav__item > .md-nav__link:hover,
+  .md-typeset .grid.cards > ul > li:hover { transform: none; }
+}
+
+/* ------------------------------------------------------------ */
+/* 8. Responsivo                                                 */
+/* ------------------------------------------------------------ */
+@media screen and (max-width: 76.25em) {
+  /* No celular/tablet o menu vira gaveta */
+  .md-nav__item--section > .md-nav__link {
+    font-size: 0.72rem !important;
+    padding: 0.8rem 1rem 0.4rem !important;
+  }
+  .md-nav__item > .md-nav__link {
+    padding: 0.5rem 1rem !important;
+  }
+}
+
+@media screen and (max-width: 44.9375em) {
+  .md-typeset .cf-hero {
+    margin: 0 -0.8rem 2rem;
+    padding: 2rem 1.2rem 1.6rem;
+    border-radius: 0;
+  }
+  .md-typeset .cf-hero .cf-hero__title { font-size: 1.6rem; }
+  .md-typeset .cf-hero .md-button {
+    display: block;
+    margin: 0 0 0.6rem;
+    text-align: center;
+  }
 }

@@ -2,6 +2,7 @@
 
 ## Objetivos
 Neste capítulo, você aprenderá a:
+
 - Compreender a necessidade de estruturas de dados para armazenar múltiplos valores.
 - Criar e manipular listas: coleções ordenadas e mutáveis.
 - Criar e utilizar tuplas: coleções ordenadas e imutáveis.
@@ -12,6 +13,7 @@ Neste capítulo, você aprenderá a:
 
 ## Pré-requisitos
 Para acompanhar este capítulo, você deve estar familiarizado com:
+
 - Variáveis e tipos de dados básicos (int, float, str, bool).
 - Operadores aritméticos, de comparação e lógicos.
 - Estruturas de controle (`if`, `elif`, `else`).
@@ -24,6 +26,7 @@ Caso algum desses tópicos ainda não esteja claro, revise os capítulos anterio
 Até agora, armazenamos valores em variáveis independentes. Mas o que acontece quando você precisa guardar as notas de 30 alunos? Criar 30 variáveis `nota1`, `nota2`, ... `nota30` é impraticável. Pior ainda se o número de alunos for desconhecido.
 
 As coleções resolvem exatamente esse problema. Elas permitem agrupar múltiplos elementos em uma única estrutura, tratando-os como um conjunto. Python oferece três coleções fundamentais que cobrem a grande maioria das necessidades:
+
 - **Listas**: para armazenar sequências de itens que podem ser alterados (ex.: carrinho de compras).
 - **Tuplas**: para agrupar dados que não devem mudar (ex.: coordenadas geográficas).
 - **Dicionários**: para associar informações por meio de chaves únicas (ex.: cadastro de clientes por CPF).
@@ -340,11 +343,67 @@ for i, nome in enumerate(nomes):
 - Crie uma tupla com os meses do ano. Tente alterar o mês de "Janeiro" para "janeiro" e observe o erro. Use um laço `for` para imprimir cada mês.
 - Construa um dicionário com informações de um livro: título, autor, ano de publicação e número de páginas. Acesse e imprima o autor. Adicione uma chave "gênero" com valor "Ficção Científica" e remova a chave "número de páginas". Exiba o dicionário resultante.
 
+<!-- gabarito -->
+??? success "Gabarito — Básico"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    # 1) Lista de amigos
+    amigos = ["Ana", "Bruno", "Carla", "Diego", "Elisa"]
+    print("Primeiro:", amigos[0], "| Último:", amigos[-1])
+    amigos.append("Fábio")
+    amigos.pop(1)          # remove o segundo (índice 1)
+    print(amigos)
+
+    # 2) Tupla de meses (imutável)
+    meses = ("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+             "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro")
+    try:
+        meses[0] = "janeiro"
+    except TypeError as erro:
+        print("Erro esperado:", erro)  # 'tuple' object does not support item assignment
+    for mes in meses:
+        print(mes)
+
+    # 3) Dicionário de um livro
+    livro = {"título": "Duna", "autor": "Frank Herbert", "ano": 1965, "número de páginas": 680}
+    print("Autor:", livro["autor"])
+    livro["gênero"] = "Ficção Científica"
+    del livro["número de páginas"]
+    print(livro)
+    ```
+
+
 ### Intermediário (aplicação)
 Você é responsável por controlar as notas de uma turma. Crie uma lista de listas onde cada sublista contém o nome do aluno (string) e suas três notas (floats). Exemplo: `[["João", 7.0, 8.5, 9.0], ["Maria", 6.0, 7.0, 8.0]]`. Para cada aluno, calcule a média e exiba: "Nome: Média X.X - Aprovado" (média >= 7.0) ou "Reprovado". Armazene os resultados em um dicionário no formato `{nome: media}`.
 
+<!-- gabarito -->
+??? success "Gabarito — Intermediário"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    turma = [
+        ["João", 7.0, 8.5, 9.0],
+        ["Maria", 6.0, 7.0, 8.0],
+        ["Pedro", 5.0, 6.5, 6.0],
+    ]
+
+    medias = {}
+    for aluno in turma:
+        nome = aluno[0]
+        notas = aluno[1:]
+        media = sum(notas) / len(notas)
+        medias[nome] = media
+        situacao = "Aprovado" if media >= 7.0 else "Reprovado"
+        print(f"{nome}: Média {media:.1f} - {situacao}")
+
+    print(medias)
+    ```
+
+
 ### Avançado (desafio)
 Implemente um sistema simples de agenda telefônica usando um dicionário. O programa deve oferecer um menu:
+
 1. **Adicionar contato**: solicita nome e telefone; se o nome já existir, pergunta se deseja sobrescrever.
 2. **Buscar contato**: solicita nome e exibe o telefone, ou "Contato não encontrado".
 3. **Listar contatos**: exibe todos os contatos em ordem alfabética.
@@ -352,10 +411,74 @@ Implemente um sistema simples de agenda telefônica usando um dicionário. O pro
 
 Utilize funções para cada operação. Armazene os contatos em um dicionário aninhado onde o nome é a chave e o valor é outro dicionário contendo "telefone" e "data_criacao" (use `datetime`). A data de criação deve ser uma tupla com dia, mês e ano, para ser imutável. Trate entradas inválidas e mantenha o programa em execução até o usuário escolher sair.
 
+<!-- gabarito -->
+??? success "Gabarito — Avançado"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    from datetime import date
+
+    agenda = {}  # {nome: {"telefone": str, "data_criacao": (dia, mês, ano)}}
+
+
+    def adicionar_contato():
+        nome = input("Nome: ").strip().title()
+        if not nome:
+            print("Nome não pode ser vazio.")
+            return
+        if nome in agenda:
+            resposta = input("Contato já existe. Sobrescrever? (s/n) ").strip().lower()
+            if resposta != "s":
+                print("Mantido o contato anterior.")
+                return
+        telefone = input("Telefone: ").strip()
+        hoje = date.today()
+        agenda[nome] = {"telefone": telefone, "data_criacao": (hoje.day, hoje.month, hoje.year)}
+        print(f"Contato {nome} salvo.")
+
+
+    def buscar_contato():
+        nome = input("Buscar nome: ").strip().title()
+        contato = agenda.get(nome)
+        if contato:
+            dia, mes, ano = contato["data_criacao"]
+            print(f"{nome}: {contato['telefone']} (criado em {dia:02d}/{mes:02d}/{ano})")
+        else:
+            print("Contato não encontrado.")
+
+
+    def listar_contatos():
+        if not agenda:
+            print("Agenda vazia.")
+            return
+        for nome in sorted(agenda):
+            print(f"- {nome}: {agenda[nome]['telefone']}")
+
+
+    def main():
+        opcoes = {"1": adicionar_contato, "2": buscar_contato, "3": listar_contatos}
+        while True:
+            print("\n1. Adicionar  2. Buscar  3. Listar  4. Sair")
+            escolha = input("Opção: ").strip()
+            if escolha == "4":
+                print("Até logo!")
+                break
+            acao = opcoes.get(escolha)
+            if acao:
+                acao()
+            else:
+                print("Opção inválida.")
+
+
+    main()
+    ```
+
+
 ## Projeto Prático: Gerenciador de Alunos e Notas
 Desenvolva um programa que gerencie uma turma de alunos, suas notas e estatísticas, utilizando listas, tuplas e dicionários.
 
 **Requisitos:**
+
 1. O programa armazena os alunos em uma lista chamada `turma`. Cada elemento da lista é um dicionário representando um aluno, com as chaves:
     - `"nome"` (string)
     - `"matricula"` (int)
@@ -391,6 +514,7 @@ Este projeto solidifica a manipulação de listas (turma), dicionários (dados d
 
 ## Resumo
 Neste capítulo, você aprendeu que:
+
 - **Listas** são coleções ordenadas e mutáveis, ideais para sequências dinâmicas.
 - **Tuplas** são ordenadas e imutáveis, perfeitas para registros fixos e chaves de dicionários.
 - **Dicionários** mapeiam chaves a valores, permitindo acesso rápido por identificadores.
@@ -398,3 +522,8 @@ Neste capítulo, você aprendeu que:
 - A escolha entre elas depende da necessidade de mutabilidade, da forma de acesso (índice vs. chave) e do significado dos dados.
 
 Com essas ferramentas, você pode modelar uma vasta gama de problemas do mundo real. Seus programas agora são capazes de armazenar e processar dados de forma estruturada e eficiente.
+
+
+<!-- revisao-visual -->
+!!! tip "Revisão visual: Coleções"
+    Ficou alguma dúvida? A [Central de Revisão](../modulo_00_revisao_e_fixacao/06_colecoes_revisao.md) explica **coleções** com analogias do dia a dia, diagramas e os erros mais comuns — use antes dos exercícios ou para estudar para a prova.

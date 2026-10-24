@@ -2,6 +2,7 @@
 
 ## Objetivos
 Neste capítulo, você aprenderá a:
+
 - Modelar um sistema completo utilizando a Programação Orientada a Objetos.
 - Conectar múltiplas classes através de conceitos de **composição** e relacionamentos.
 - Estruturar o código separando **regras de negócio** (modelos) da **interação com o usuário**.
@@ -10,6 +11,7 @@ Neste capítulo, você aprenderá a:
 
 ## Pré-requisitos
 Antes de iniciar este capítulo, você deve dominar:
+
 - Classes e Instanciação ([01. Estudo do Paradigma POO](01_paradigma_poo.md)).
 - Métodos, Encapsulamento e Propriedades (`@property`) ([02. Conceitos de Métodos e Propriedades](02_metodos_e_propriedades.md)).
 - Tratamento de Exceções (`try/except`) e manipulação de listas.
@@ -144,7 +146,7 @@ class Pedido:
     def adicionar_item(self, produto: Produto, quantidade: int):
         """Adiciona um produto ao pedido validando o estoque."""
         if self.status != "Pendente":
-            raise InvalidOperationError("Não é possível alterar um pedido já finalizado.")
+            raise ValueError("Não é possível alterar um pedido já finalizado.")
         
         # Tenta abater o estoque antes de confirmar o item no pedido
         produto.abater_estoque(quantidade)
@@ -229,9 +231,78 @@ print(p3) # Estoque deve ter caído de 8 para 6
 
 ---
 
-## 📝 Desafio Prático: Sistema de Gestão de Frota
+## Exercícios
 
-Crie um programa POO para gerenciar uma frota de veículos de uma empresa:
+### Básico (fixação)
+
+Usando as classes `Produto`, `ItemPedido` e `Pedido` deste capítulo:
+
+- Cadastre um quarto produto e faça um pedido com dois itens diferentes.
+- Tente adicionar ao pedido uma quantidade maior que o estoque de um produto e capture o erro com `try/except`.
+- Mostre que o estoque desse produto **não** foi alterado pela tentativa que falhou.
+
+<!-- gabarito -->
+??? success "Gabarito — Básico"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    # Use junto com as classes Produto, ItemPedido e Pedido deste capítulo
+    p1 = Produto(1, "Notebook Gamer", 4500.0, 5)
+    p2 = Produto(2, "Mouse Sem Fio", 120.0, 15)
+    p3 = Produto(3, "Teclado Mecânico RGB", 280.0, 8)
+    p4 = Produto(4, "Monitor 24 polegadas", 900.0, 3)  # o quarto produto
+
+    pedido = Pedido("Carlos Lima")
+    pedido.adicionar_item(p2, 2)
+    pedido.adicionar_item(p4, 1)
+
+    try:
+        pedido.adicionar_item(p4, 10)  # só restam 2 monitores
+    except ValueError as erro:
+        print("❌", erro)
+
+    print("Estoque do monitor após a falha:", p4.estoque)  # continua 2
+    pedido.exibir_resumo()
+    ```
+
+
+### Intermediário (aplicação)
+
+Acrescente à classe `Pedido`:
+
+- O método `remover_item(codigo_produto)`, que tira o item do pedido e **devolve a quantidade ao estoque** do produto. Só deve funcionar com o pedido "Pendente" (levante `ValueError` caso contrário, ou se o produto não estiver no pedido).
+- A propriedade `quantidade_itens`, que devolve o total de unidades no pedido.
+
+<!-- gabarito -->
+??? success "Gabarito — Intermediário"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    # Acrescente estes dois métodos dentro da classe Pedido:
+
+        def remover_item(self, codigo_produto: int):
+            """Remove o item do pedido e devolve a quantidade ao estoque."""
+            if self.status != "Pendente":
+                raise ValueError("Não é possível alterar um pedido já finalizado.")
+            for item in self.itens:
+                if item.produto.codigo == codigo_produto:
+                    item.produto.estoque += item.quantidade
+                    self.itens.remove(item)
+                    print(f"↩️ '{item.produto.nome}' removido do Pedido #{self.numero}.")
+                    return
+            raise ValueError(f"O produto {codigo_produto} não está neste pedido.")
+
+        @property
+        def quantidade_itens(self) -> int:
+            """Total de unidades no pedido."""
+            return sum(item.quantidade for item in self.itens)
+    ```
+
+
+### Avançado (desafio)
+
+**Sistema de gestão de frota:** crie um programa POO para gerenciar uma frota de veículos de uma empresa.
+
 - Crie uma classe `Motorista` com `nome`, `cnh` e `status` ("Disponível" / "Em Viagem").
 - Crie uma classe `Veiculo` com `placa`, `modelo`, `quilometragem` e o motorista atribuído.
 - Crie um método `iniciar_viagem(distancia_km)` na classe `Veiculo` que atualiza a quilometragem do veículo e altera o status do motorista para "Em Viagem".
@@ -239,10 +310,77 @@ Crie um programa POO para gerenciar uma frota de veículos de uma empresa:
 
 ---
 
+<!-- gabarito -->
+??? success "Gabarito — Avançado"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    class Motorista:
+        def __init__(self, nome, cnh):
+            self.nome = nome
+            self.cnh = cnh
+            self.status = "Disponível"
+
+        def __str__(self):
+            return f"{self.nome} (CNH {self.cnh}) — {self.status}"
+
+
+    class Veiculo:
+        def __init__(self, placa, modelo, quilometragem=0.0, motorista=None):
+            self.placa = placa
+            self.modelo = modelo
+            self.quilometragem = quilometragem
+            self.motorista = motorista
+
+        def iniciar_viagem(self, distancia_km):
+            if self.motorista is None:
+                raise ValueError(f"O veículo {self.placa} está sem motorista.")
+            if self.motorista.status != "Disponível":
+                raise ValueError(f"{self.motorista.nome} já está em viagem.")
+            if distancia_km <= 0:
+                raise ValueError("A distância deve ser maior que zero.")
+            self.quilometragem += distancia_km
+            self.motorista.status = "Em Viagem"
+            print(f"🚚 {self.modelo} ({self.placa}) saiu com {self.motorista.nome}: +{distancia_km} km")
+
+        def encerrar_viagem(self):
+            if self.motorista:
+                self.motorista.status = "Disponível"
+
+        def __str__(self):
+            nome = self.motorista.nome if self.motorista else "sem motorista"
+            return f"{self.modelo} {self.placa} — {self.quilometragem:.0f} km — {nome}"
+
+
+    joana = Motorista("Joana", "12345678900")
+    van = Veiculo("ABC1D23", "Van Escolar", 15000, joana)
+    caminhao = Veiculo("XYZ9K88", "Caminhão", 80000)       # sem motorista
+    onibus = Veiculo("QWE4R56", "Ônibus", 50000, joana)    # mesma motorista
+
+    van.iniciar_viagem(120)
+    for tentativa in (lambda: caminhao.iniciar_viagem(50), lambda: onibus.iniciar_viagem(30)):
+        try:
+            tentativa()
+        except ValueError as erro:
+            print("❌", erro)
+
+    van.encerrar_viagem()
+    onibus.iniciar_viagem(30)   # agora Joana está disponível de novo
+    for v in (van, caminhao, onibus):
+        print(v)
+    ```
+
+
 ## 💡 Resumo do Módulo
 
 Neste módulo de Programação Orientada a Objetos:
+
 - Aprendemos o conceito de **Classes** (moldes) e **Objetos** (instâncias).
 - Dominamos o método construtor **`__init__`** e a referência **`self`**.
 - Vimos como **encapsular** atributos e expô-los com segurança usando **`@property`**.
 - Conectamos objetos por **composição** e desenvolvemos um software desktop modular, limpo e profissional!
+
+
+<!-- revisao-visual -->
+!!! tip "Revisão visual: POO"
+    Ficou alguma dúvida? A [Central de Revisão](../modulo_00_revisao_e_fixacao/14_poo_revisao.md) explica **poo** com analogias do dia a dia, diagramas e os erros mais comuns — use antes dos exercícios ou para estudar para a prova.

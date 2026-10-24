@@ -2,7 +2,7 @@
 
 ## Objetivos
 
-Neste capítulo, você aplicará de forma integrada todos os conhecimentos do Módulo 02 para construir um Dashboard Financeiro Desktop. Os objetivos são:
+Neste capítulo, você aplicará de forma integrada todos os conhecimentos do Módulo 03 para construir um Dashboard Financeiro Desktop. Os objetivos são:
 
 - Projetar e implementar uma aplicação desktop completa com múltiplas abas, combinando Tkinter, CustomTkinter e matplotlib.
 - Aplicar gerenciadores de layout (`pack`, `grid`) e contêineres (`Frame`, `CTkFrame`) para estruturar interfaces complexas.
@@ -364,15 +364,342 @@ Lembre-se de destruir o canvas anterior ao atualizar, ou limpar a figura.
 2. Altere as cores dos cartões na aba "Visão Geral" para tons de sua preferência.
 3. Adicione uma validação extra: o valor não pode ser zero.
 
+<!-- gabarito -->
+??? success "Gabarito — Básico"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    # 1) Rode o programa, adicione uma receita e duas despesas, feche e abra de novo:
+    #    o financas.json (na pasta do projeto) guarda a lista, e os cartões voltam com
+    #    os mesmos valores. Abra o arquivo: é uma lista de dicionários em JSON.
+
+    # 2) Em criar_aba_visao_geral, troque o fg_color dos três cartões, por exemplo:
+    #        cartao_saldo    -> fg_color="#00695C"   (verde-azulado)
+    #        cartao_receitas -> fg_color="#4F35B5"   (roxo)
+    #        cartao_despesas -> fg_color="#AD1457"   (vinho)
+
+    # 3) Valor zero: em adicionar_transacao, logo após converter o valor.
+        def adicionar_transacao(self):
+            desc = self.entry_desc.get().strip()
+            valor_str = self.entry_valor.get().strip()
+            categoria = self.opcao_categoria.get()
+            data_str = self.entry_data.get().strip()
+
+            if not desc:
+                messagebox.showwarning("Aviso", "Descrição é obrigatória.")
+                return
+            try:
+                valor = float(valor_str)
+            except ValueError:
+                messagebox.showwarning("Aviso", "Valor deve ser numérico (use ponto para decimais).")
+                return
+            if valor == 0:  # ← validação nova
+                messagebox.showwarning("Aviso", "O valor não pode ser zero.")
+                return
+            if categoria == "":
+                messagebox.showwarning("Aviso", "Selecione uma categoria.")
+                return
+            try:
+                datetime.strptime(data_str, "%Y-%m-%d")
+            except ValueError:
+                messagebox.showwarning("Aviso", "Data inválida. Use AAAA-MM-DD.")
+                return
+
+            novo_id = max((t['id'] for t in self.transacoes), default=0) + 1
+            self.transacoes.append({"id": novo_id, "descricao": desc, "valor": valor,
+                                    "categoria": categoria, "data": data_str})
+            salvar_dados(self.transacoes)
+            self.atualizar_interface()
+            self.entry_desc.delete(0, "end")
+            self.entry_valor.delete(0, "end")
+            self.entry_data.delete(0, "end")
+            messagebox.showinfo("Sucesso", "Transação adicionada.")
+    ```
+
+
 ### Intermediário (aplicação)
 
 1. Adicione uma nova aba "Orçamento Mensal" que permita definir um limite de gastos por categoria e exiba um alerta visual (ex.: label vermelho) se as despesas naquele mês ultrapassarem o limite. Utilize dicionários para armazenar os limites e persista essas configurações em um arquivo separado ou dentro do mesmo JSON.
 2. Na aba "Transações", implemente um filtro por categoria usando um `CTkOptionMenu`. Ao selecionar uma categoria, exiba apenas as transações correspondentes na lista rolável.
 
+<!-- gabarito -->
+??? success "Gabarito — Intermediário"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    # Fora da classe, junto das funções de persistência:
+    CATEGORIAS = ["Alimentação", "Transporte", "Lazer", "Salário", "Outros"]
+    CATEGORIAS_DE_DESPESA = [c for c in CATEGORIAS if c != "Salário"]
+
+
+    def carregar_limites(caminho="orcamento.json"):
+        if not Path(caminho).exists():
+            return {}
+        try:
+            with open(caminho, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except (json.JSONDecodeError, IOError):
+            return {}
+
+
+    def salvar_limites(limites, caminho="orcamento.json"):
+        with open(caminho, "w", encoding="utf-8") as f:
+            json.dump(limites, f, indent=4, ensure_ascii=False)
+
+
+    # Dentro de DashboardApp — __init__ ganha a aba nova:
+        def __init__(self):
+            ctk.set_appearance_mode("dark")
+            ctk.set_default_color_theme("dark-blue")
+            self.janela = ctk.CTk()
+            self.janela.title("Dashboard Financeiro")
+            self.janela.geometry("800x600")
+
+            self.transacoes = carregar_dados()
+            self.limites = carregar_limites()
+
+            self.tabview = ctk.CTkTabview(self.janela)
+            self.tabview.pack(fill="both", expand=True, padx=10, pady=10)
+            for nome in ("Visão Geral", "Transações", "Relatórios", "Orçamento Mensal"):
+                self.tabview.add(nome)
+            self.tabview.configure(command=self.ao_mudar_aba)
+
+            self.criar_aba_visao_geral()
+            self.criar_aba_transacoes()
+            self.criar_aba_relatorios()
+            self.criar_aba_orcamento()
+            self.atualizar_interface()
+
+        # ---------- 1) Aba Orçamento Mensal ----------
+        def criar_aba_orcamento(self):
+            aba = self.tabview.tab("Orçamento Mensal")
+            mes = datetime.now().strftime("%m/%Y")
+            ctk.CTkLabel(aba, text=f"Limite de gastos por categoria — {mes}",
+                         font=("Arial", 16, "bold")).grid(row=0, column=0, columnspan=3, pady=10)
+            self.entradas_limite, self.alertas = {}, {}
+            for linha, categoria in enumerate(CATEGORIAS_DE_DESPESA, start=1):
+                ctk.CTkLabel(aba, text=categoria).grid(row=linha, column=0, padx=10, pady=4, sticky="e")
+                entrada = ctk.CTkEntry(aba, width=100, placeholder_text="sem limite")
+                if categoria in self.limites:
+                    entrada.insert(0, str(self.limites[categoria]))
+                entrada.grid(row=linha, column=1, padx=10, pady=4)
+                alerta = ctk.CTkLabel(aba, text="")
+                alerta.grid(row=linha, column=2, padx=10, pady=4, sticky="w")
+                self.entradas_limite[categoria], self.alertas[categoria] = entrada, alerta
+            ctk.CTkButton(aba, text="Salvar limites", command=self.salvar_orcamento).grid(
+                row=len(CATEGORIAS_DE_DESPESA) + 1, column=0, columnspan=3, pady=12)
+
+        def salvar_orcamento(self):
+            limites = {}
+            for categoria, entrada in self.entradas_limite.items():
+                texto = entrada.get().strip().replace(",", ".")
+                if not texto:
+                    continue
+                try:
+                    limites[categoria] = float(texto)
+                except ValueError:
+                    messagebox.showwarning("Aviso", f"Limite inválido em {categoria}.")
+                    return
+            self.limites = limites
+            salvar_limites(limites)
+            self.atualizar_orcamento()
+
+        def gastos_do_mes(self):
+            mes = datetime.now().strftime("%Y-%m")
+            gastos = {}
+            for t in self.transacoes:
+                if t["valor"] < 0 and t["data"].startswith(mes):
+                    gastos[t["categoria"]] = gastos.get(t["categoria"], 0) + abs(t["valor"])
+            return gastos
+
+        def atualizar_orcamento(self):
+            gastos = self.gastos_do_mes()
+            for categoria, alerta in self.alertas.items():
+                gasto, limite = gastos.get(categoria, 0), self.limites.get(categoria)
+                if limite is not None and gasto > limite:
+                    alerta.configure(text=f"⚠ R$ {gasto:,.2f} de R$ {limite:,.2f}", text_color="red")
+                elif limite is not None:
+                    alerta.configure(text=f"R$ {gasto:,.2f} de R$ {limite:,.2f}", text_color="gray")
+                else:
+                    alerta.configure(text=f"R$ {gasto:,.2f}", text_color="gray")
+
+        # ---------- 2) Filtro por categoria na aba Transações ----------
+        def criar_aba_transacoes(self):
+            aba = self.tabview.tab("Transações")
+            form = ctk.CTkFrame(aba)
+            form.pack(fill="x", padx=20, pady=10)
+
+            ctk.CTkLabel(form, text="Descrição:").grid(row=0, column=0, padx=5, pady=5, sticky="e")
+            self.entry_desc = ctk.CTkEntry(form, width=200)
+            self.entry_desc.grid(row=0, column=1, padx=5, pady=5)
+            ctk.CTkLabel(form, text="Valor (+/-):").grid(row=0, column=2, padx=5, pady=5, sticky="e")
+            self.entry_valor = ctk.CTkEntry(form, width=100)
+            self.entry_valor.grid(row=0, column=3, padx=5, pady=5)
+            ctk.CTkLabel(form, text="Categoria:").grid(row=1, column=0, padx=5, pady=5, sticky="e")
+            self.opcao_categoria = ctk.CTkOptionMenu(form, values=CATEGORIAS)
+            self.opcao_categoria.grid(row=1, column=1, padx=5, pady=5)
+            ctk.CTkLabel(form, text="Data (AAAA-MM-DD):").grid(row=1, column=2, padx=5, pady=5, sticky="e")
+            self.entry_data = ctk.CTkEntry(form, width=100)
+            self.entry_data.grid(row=1, column=3, padx=5, pady=5)
+            ctk.CTkButton(form, text="Adicionar", command=self.adicionar_transacao).grid(
+                row=2, column=0, columnspan=4, pady=10)
+
+            # Filtro: ao escolher uma categoria, a lista é redesenhada
+            self.filtro_categoria = ctk.CTkOptionMenu(
+                aba, values=["Todas"] + CATEGORIAS, command=lambda _: self.atualizar_lista_transacoes())
+            self.filtro_categoria.pack(anchor="e", padx=20)
+
+            self.frame_lista = ctk.CTkScrollableFrame(aba)
+            self.frame_lista.pack(fill="both", expand=True, padx=20, pady=10)
+
+        def transacoes_filtradas(self):
+            filtro = self.filtro_categoria.get()
+            return [t for t in self.transacoes if filtro == "Todas" or t["categoria"] == filtro]
+
+        def atualizar_lista_transacoes(self):
+            for widget in self.frame_lista.winfo_children():
+                widget.destroy()
+            for t in self.transacoes_filtradas():
+                frame_item = ctk.CTkFrame(self.frame_lista)
+                frame_item.pack(fill="x", padx=5, pady=2)
+                ctk.CTkLabel(frame_item, text=f"{t['data']} - {t['descricao']}").pack(side="left", padx=5)
+                cor = "green" if t['valor'] >= 0 else "red"
+                ctk.CTkLabel(frame_item, text=f"R$ {t['valor']:,.2f}", text_color=cor).pack(side="left", padx=10)
+                ctk.CTkLabel(frame_item, text=t['categoria']).pack(side="left", padx=10)
+                ctk.CTkButton(frame_item, text="Remover", width=60,
+                              command=lambda id=t['id']: self.remover_transacao(id)).pack(side="right", padx=5)
+
+        def atualizar_interface(self):
+            self.atualizar_visao_geral()
+            self.atualizar_lista_transacoes()
+            self.atualizar_relatorios()
+            self.atualizar_orcamento()
+    ```
+
+
 ### Avançado (desafio)
 
 1. Substitua a entrada manual de data por um widget de calendário (use `tkcalendar` ou `CTkDatePicker` se disponível, ou adapte com Entry). Garanta que o formato seja mantido.
 2. Adicione um gráfico de linha na aba "Relatórios" que mostre a evolução do saldo acumulado dia a dia, baseado na ordem cronológica das transações. Para isso, ordene as transações por data, calcule o saldo acumulado e plote com matplotlib. Atualize o gráfico sempre que houver mudanças.
+
+<!-- gabarito -->
+??? success "Gabarito — Avançado"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    # 1) Seletor de data sem digitação: três menus (dia, mês e ano) no lugar do campo de texto.
+    #    Não precisa instalar nada. Se preferir um calendário de verdade, instale o tkcalendar
+    #    (`pip install tkcalendar`) e use `DateEntry(form, date_pattern="yyyy-mm-dd")`.
+        def criar_aba_transacoes(self):
+            aba = self.tabview.tab("Transações")
+            form = ctk.CTkFrame(aba)
+            form.pack(fill="x", padx=20, pady=10)
+
+            ctk.CTkLabel(form, text="Descrição:").grid(row=0, column=0, padx=5, pady=5, sticky="e")
+            self.entry_desc = ctk.CTkEntry(form, width=200)
+            self.entry_desc.grid(row=0, column=1, padx=5, pady=5)
+            ctk.CTkLabel(form, text="Valor (+/-):").grid(row=0, column=2, padx=5, pady=5, sticky="e")
+            self.entry_valor = ctk.CTkEntry(form, width=100)
+            self.entry_valor.grid(row=0, column=3, padx=5, pady=5)
+            ctk.CTkLabel(form, text="Categoria:").grid(row=1, column=0, padx=5, pady=5, sticky="e")
+            self.opcao_categoria = ctk.CTkOptionMenu(form, values=["Alimentação", "Transporte", "Lazer", "Salário", "Outros"])
+            self.opcao_categoria.grid(row=1, column=1, padx=5, pady=5)
+
+            ctk.CTkLabel(form, text="Data:").grid(row=1, column=2, padx=5, pady=5, sticky="e")
+            seletor = ctk.CTkFrame(form, fg_color="transparent")
+            seletor.grid(row=1, column=3, padx=5, pady=5)
+            hoje = datetime.now()
+            self.data_dia = ctk.CTkOptionMenu(seletor, width=60, values=[f"{d:02d}" for d in range(1, 32)])
+            self.data_mes = ctk.CTkOptionMenu(seletor, width=60, values=[f"{m:02d}" for m in range(1, 13)])
+            self.data_ano = ctk.CTkOptionMenu(seletor, width=75,
+                                              values=[str(a) for a in range(hoje.year - 5, hoje.year + 2)])
+            for menu, valor in ((self.data_dia, f"{hoje.day:02d}"), (self.data_mes, f"{hoje.month:02d}"),
+                                (self.data_ano, str(hoje.year))):
+                menu.set(valor)
+                menu.pack(side="left", padx=1)
+
+            ctk.CTkButton(form, text="Adicionar", command=self.adicionar_transacao).grid(
+                row=2, column=0, columnspan=4, pady=10)
+            self.frame_lista = ctk.CTkScrollableFrame(aba)
+            self.frame_lista.pack(fill="both", expand=True, padx=20, pady=10)
+
+        def data_selecionada(self):
+            """Data no mesmo formato de antes (AAAA-MM-DD), para o JSON continuar compatível."""
+            return f"{self.data_ano.get()}-{self.data_mes.get()}-{self.data_dia.get()}"
+
+        def adicionar_transacao(self):
+            desc = self.entry_desc.get().strip()
+            categoria = self.opcao_categoria.get()
+            data_str = self.data_selecionada()
+            if not desc:
+                messagebox.showwarning("Aviso", "Descrição é obrigatória.")
+                return
+            try:
+                valor = float(self.entry_valor.get().strip())
+            except ValueError:
+                messagebox.showwarning("Aviso", "Valor deve ser numérico (use ponto para decimais).")
+                return
+            try:
+                datetime.strptime(data_str, "%Y-%m-%d")  # barra datas como 31/02
+            except ValueError:
+                messagebox.showwarning("Aviso", f"A data {data_str} não existe.")
+                return
+            novo_id = max((t['id'] for t in self.transacoes), default=0) + 1
+            self.transacoes.append({"id": novo_id, "descricao": desc, "valor": valor,
+                                    "categoria": categoria, "data": data_str})
+            salvar_dados(self.transacoes)
+            self.atualizar_interface()
+            self.entry_desc.delete(0, "end")
+            self.entry_valor.delete(0, "end")
+            messagebox.showinfo("Sucesso", "Transação adicionada.")
+
+        # 2) Gráfico de linha com o saldo acumulado, ao lado da pizza
+        def saldo_acumulado(self):
+            """Lista de (data, saldo) em ordem cronológica — um ponto por dia."""
+            por_dia = {}
+            for t in sorted(self.transacoes, key=lambda t: t["data"]):
+                por_dia[t["data"]] = por_dia.get(t["data"], 0) + t["valor"]
+            pontos, saldo = [], 0.0
+            for data, total_do_dia in por_dia.items():
+                saldo += total_do_dia
+                pontos.append((data, saldo))
+            return pontos
+
+        def atualizar_relatorios(self):
+            for widget in self.frame_grafico.winfo_children():
+                widget.destroy()
+            plt.close('all')
+            if not self.transacoes:
+                ctk.CTkLabel(self.frame_grafico, text="Nenhuma transação registrada.").pack()
+                return
+
+            fig, (ax_pizza, ax_linha) = plt.subplots(1, 2, figsize=(8, 3), dpi=100)
+
+            despesas = {}
+            for t in self.transacoes:
+                if t['valor'] < 0:
+                    despesas[t['categoria']] = despesas.get(t['categoria'], 0) + abs(t['valor'])
+            if despesas:
+                ax_pizza.pie(despesas.values(), labels=despesas.keys(), autopct='%1.1f%%', startangle=90)
+                ax_pizza.axis('equal')
+            else:
+                ax_pizza.text(0.5, 0.5, "Sem despesas", ha="center", va="center")
+                ax_pizza.axis('off')
+            ax_pizza.set_title("Despesas por categoria")
+
+            pontos = self.saldo_acumulado()
+            datas = [datetime.strptime(d, "%Y-%m-%d") for d, _ in pontos]
+            ax_linha.plot(datas, [s for _, s in pontos], marker="o")
+            ax_linha.axhline(0, color="gray", linewidth=0.8)
+            ax_linha.set_title("Saldo acumulado")
+            fig.autofmt_xdate()
+            fig.tight_layout()
+
+            self.canvas_pizza = FigureCanvasTkAgg(fig, master=self.frame_grafico)
+            self.canvas_pizza.draw()
+            self.canvas_pizza.get_tk_widget().pack(fill="both", expand=True)
+    ```
+
 
 ## Projeto Prático
 
@@ -385,7 +712,7 @@ Vamos construir o Dashboard Financeiro do zero. Siga cada etapa.
 Instale customtkinter e matplotlib:
 
 ```bash
-pip install customtkinter matplotlib
+pip install customtkinter==5.2.2 matplotlib
 ```
 
 Crie um diretório `dashboard_financeiro` e dentro dele um arquivo `main.py`.
@@ -633,9 +960,10 @@ class DashboardApp:
         self.canvas_pizza = None
 
     def atualizar_relatorios(self):
-        # Destruir canvas anterior
+        # Limpar o gráfico (ou o aviso) anterior — sem isso, os avisos se acumulam na aba
+        for widget in self.frame_grafico.winfo_children():
+            widget.destroy()
         if self.canvas_pizza:
-            self.canvas_pizza.get_tk_widget().destroy()
             self.canvas_pizza = None
             plt.close('all')
 
@@ -676,7 +1004,7 @@ if __name__ == "__main__":
     app.iniciar()
 ```
 
-Complete os métodos `adicionar_transacao` e `remover_transacao` conforme os exemplos anteriores. Certifique-se de chamar `salvar_dados` e `atualizar_interface` após modificações.
+Repare no padrão que se repete em `adicionar_transacao` e `remover_transacao`: toda alteração nos dados termina com `salvar_dados` (persistência) e `atualizar_interface` (cartões, lista e gráfico). Siga o mesmo padrão nas funcionalidades novas.
 
 ## Resumo
 
