@@ -49,6 +49,13 @@ extra:
     name: Falar com o professor
 extra_css:
 - stylesheets/custom.css
+plugins:
+- search
+- glightbox:
+    touchNavigation: true
+    loop: false
+    skip_classes:
+    - sem-zoom
 markdown_extensions:
 - admonition
 - pymdownx.details
