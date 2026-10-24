@@ -6,10 +6,10 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Plataforma de Cursos">
+        <meta name="description" content="Cursos gratuitos para a sala de aula: Python para Desktop do zero ao sistema completo, com aulas práticas, revisão visual e projeto final.">
       
       
-        <meta name="author" content="Professor">
+        <meta name="author" content="Pedro Paulo IF">
       
       
       
@@ -22,12 +22,12 @@
         
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/favicon.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>Excecoes - CourseForge Docs</title>
+        <title>Tratamento de Erros e Exceções - CourseForge · IF</title>
       
     
     
@@ -71,7 +71,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="teal">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -94,10 +94,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
-    <a href="../../.." title="CourseForge Docs" class="md-header__button md-logo" aria-label="CourseForge Docs" data-md-component="logo">
+    <a href="../../.." title="CourseForge · IF" class="md-header__button md-logo" aria-label="CourseForge · IF" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+  <img src="../../../assets/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -108,13 +107,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            CourseForge Docs
+            CourseForge · IF
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Excecoes
+              Tratamento de Erros e Exceções
             
           </span>
         </div>
@@ -127,20 +126,20 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="teal"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Mudar para o modo escuro"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      <label class="md-header__button md-icon" title="Mudar para o modo escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="teal"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Mudar para o modo claro"  type="radio" name="__palette" id="__palette_1">
     
-      <label class="md-header__button md-icon" title="Modo claro" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      <label class="md-header__button md-icon" title="Mudar para o modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
       </label>
     
   
@@ -221,10 +220,32 @@
   
     
   
-  Home
+  Início
 
       </a>
     </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../catalogo/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Comece aqui
+
+        </a>
+      </li>
+    
   
 
       
@@ -245,6 +266,50 @@
     
   
   Python para Desktop
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../pacote_office/docs/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Pacote Office
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../introducao_a_ia/docs/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Introdução à IA
 
         </a>
       </li>
@@ -276,13 +341,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegação" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="CourseForge Docs" class="md-nav__button md-logo" aria-label="CourseForge Docs" data-md-component="logo">
+    <a href="../../.." title="CourseForge · IF" class="md-nav__button md-logo" aria-label="CourseForge · IF" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+  <img src="../../../assets/logo.svg" alt="logo">
 
     </a>
-    CourseForge Docs
+    CourseForge · IF
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -301,7 +365,7 @@
   <span class="md-ellipsis">
     
   
-    Home
+    Início
   
 
     
@@ -310,6 +374,127 @@
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comece aqui
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Comece aqui
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../catalogo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Catálogo de cursos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../como_estudar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Como estudar
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -361,7 +546,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <div class="md-nav__link md-nav__container">
@@ -383,14 +568,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -400,6 +585,144 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../modulo_06_vscode_config/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuração do VS Code & Ambiente Python
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Configuração do VS Code & Ambiente Python
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo_06_vscode_config/01_instalacao_e_configuracao_vscode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instalando e Configurando o VS Code do Zero
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo_06_vscode_config/02_ambiente_virtual_e_terminal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ambientes Virtuais (venv) e Terminal Integrado
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
               
             
               
@@ -455,7 +778,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
         
           
           <div class="md-nav__link md-nav__container">
@@ -466,7 +789,7 @@
   <span class="md-ellipsis">
     
   
-    🐍 Fundamentos
+    Fundamentos
   
 
     
@@ -477,18 +800,18 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             
   
-    🐍 Fundamentos
+    Fundamentos
   
 
           </label>
@@ -510,7 +833,7 @@
   <span class="md-ellipsis">
     
   
-    Variaveis
+    Variáveis
   
 
     
@@ -566,7 +889,7 @@
   <span class="md-ellipsis">
     
   
-    If Else
+    Condicionais (if/else)
   
 
     
@@ -594,7 +917,7 @@
   <span class="md-ellipsis">
     
   
-    Repeticoes
+    Repetições (for/while)
   
 
     
@@ -622,7 +945,7 @@
   <span class="md-ellipsis">
     
   
-    Funcoes
+    Funções
   
 
     
@@ -650,7 +973,7 @@
   <span class="md-ellipsis">
     
   
-    Modulos
+    Módulos e Bibliotecas
   
 
     
@@ -678,7 +1001,7 @@
   <span class="md-ellipsis">
     
   
-    Colecoes
+    Coleções (Listas, Tuplas e Dicionários)
   
 
     
@@ -706,7 +1029,7 @@
   <span class="md-ellipsis">
     
   
-    Strings
+    Manipulação de Strings
   
 
     
@@ -734,7 +1057,7 @@
   <span class="md-ellipsis">
     
   
-    Arquivos
+    Manipulação de Arquivos e Pastas
   
 
     
@@ -771,7 +1094,7 @@
   <span class="md-ellipsis">
     
   
-    Excecoes
+    Tratamento de Erros e Exceções
   
 
     
@@ -789,7 +1112,7 @@
   <span class="md-ellipsis">
     
   
-    Excecoes
+    Tratamento de Erros e Exceções
   
 
     
@@ -1080,7 +1403,175 @@
   <span class="md-ellipsis">
     
   
-    Projeto Final
+    Mini-projeto: Sistema no Terminal (CLI)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../modulo_07_poo/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Programação Orientada a Objetos (POO)
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4" id="__nav_3_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Programação Orientada a Objetos (POO)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo_07_poo/01_paradigma_poo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estudo do Paradigma de Programação Orientada a Objetos (POO)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo_07_poo/02_metodos_e_propriedades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conceitos de Métodos e Propriedades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modulo_07_poo/03_desenvolvimento_pratico_poo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desenvolvimento Prático de Programas Aplicando POO
   
 
     
@@ -1141,7 +1632,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -1152,7 +1643,7 @@
   <span class="md-ellipsis">
     
   
-    🖥️ Interfaces Graficas
+    Interfaces Gráficas com Python
   
 
     
@@ -1163,18 +1654,18 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3_5" id="__nav_3_5_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
             <span class="md-nav__icon md-icon"></span>
             
   
-    🖥️ Interfaces Graficas
+    Interfaces Gráficas com Python
   
 
           </label>
@@ -1196,7 +1687,7 @@
   <span class="md-ellipsis">
     
   
-    Tkinter Basico
+    Introdução a Interfaces Gráficas e Tkinter
   
 
     
@@ -1224,7 +1715,7 @@
   <span class="md-ellipsis">
     
   
-    Layout Managers
+    Gerenciadores de Layout (Pack, Grid, Place e Frames)
   
 
     
@@ -1252,7 +1743,7 @@
   <span class="md-ellipsis">
     
   
-    Eventos Interatividade
+    Eventos e Interatividade (Binds, Funções de Callback e Variáveis de Controle)
   
 
     
@@ -1280,7 +1771,7 @@
   <span class="md-ellipsis">
     
   
-    Customtkinter
+    CustomTkinter e Interfaces Modernas
   
 
     
@@ -1308,7 +1799,7 @@
   <span class="md-ellipsis">
     
   
-    Projeto Pratico
+    Projeto Prático: Dashboard Financeiro Desktop
   
 
     
@@ -1367,7 +1858,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -1378,7 +1869,7 @@
   <span class="md-ellipsis">
     
   
-    🗄️ Banco De Dados
+    Banco de Dados e Configurações
   
 
     
@@ -1389,18 +1880,18 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3_6" id="__nav_3_6_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
             <span class="md-nav__icon md-icon"></span>
             
   
-    🗄️ Banco De Dados
+    Banco de Dados e Configurações
   
 
           </label>
@@ -1422,7 +1913,7 @@
   <span class="md-ellipsis">
     
   
-    Introducao Sqlite
+    Introdução a Banco de Dados com SQLite
   
 
     
@@ -1450,7 +1941,7 @@
   <span class="md-ellipsis">
     
   
-    Integracao Interface
+    Integração SQLite e Interface Gráfica
   
 
     
@@ -1478,7 +1969,7 @@
   <span class="md-ellipsis">
     
   
-    Variaveis Ambiente
+    Variáveis de Ambiente com .env
   
 
     
@@ -1506,7 +1997,7 @@
   <span class="md-ellipsis">
     
   
-    Projeto Final
+    Projeto de Dados: Arquitetura Completa
   
 
     
@@ -1583,7 +2074,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -1594,7 +2085,7 @@
   <span class="md-ellipsis">
     
   
-    🏗️ Projeto Finalizador
+    Projeto Finalizador
   
 
     
@@ -1605,18 +2096,18 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3_7" id="__nav_3_7_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
             <span class="md-nav__icon md-icon"></span>
             
   
-    🏗️ Projeto Finalizador
+    Projeto Finalizador
   
 
           </label>
@@ -1638,7 +2129,7 @@
   <span class="md-ellipsis">
     
   
-    Introducao Ao Projeto
+    Introdução ao Projeto
   
 
     
@@ -1666,7 +2157,7 @@
   <span class="md-ellipsis">
     
   
-    Arquitetura Do Sistema
+    Arquitetura do Sistema
   
 
     
@@ -1694,7 +2185,7 @@
   <span class="md-ellipsis">
     
   
-    Tela De Login
+    Tela de Login
   
 
     
@@ -1750,7 +2241,7 @@
   <span class="md-ellipsis">
     
   
-    Multiplas Janelas
+    Múltiplas Janelas
   
 
     
@@ -1778,7 +2269,7 @@
   <span class="md-ellipsis">
     
   
-    Cadastro De Alunos
+    Cadastro de Alunos
   
 
     
@@ -1806,7 +2297,7 @@
   <span class="md-ellipsis">
     
   
-    Sqlite Local
+    SQLite
   
 
     
@@ -1834,7 +2325,7 @@
   <span class="md-ellipsis">
     
   
-    Crud Completo
+    CRUD Completo
   
 
     
@@ -1862,7 +2353,7 @@
   <span class="md-ellipsis">
     
   
-    Banco Em Nuvem
+    Banco em Nuvem
   
 
     
@@ -1890,7 +2381,7 @@
   <span class="md-ellipsis">
     
   
-    Integracao E Testes
+    Integração
   
 
     
@@ -1918,7 +2409,7 @@
   <span class="md-ellipsis">
     
   
-    Refatoracao E Entrega
+    Refatoração
   
 
     
@@ -1946,7 +2437,7 @@
   <span class="md-ellipsis">
     
   
-    Projeto Final
+    Projeto Final do Curso
   
 
     
@@ -1974,7 +2465,7 @@
   <span class="md-ellipsis">
     
   
-    Exercicio Neon Streamlit
+    Exercício Prático: Banco em Nuvem com Neon + Streamlit
   
 
     
@@ -2029,7 +2520,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -2040,7 +2531,7 @@
   <span class="md-ellipsis">
     
   
-    🔀 Git Github
+    Git & GitHub para Projetos Reais (Bônus)
   
 
     
@@ -2051,18 +2542,18 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3_8" id="__nav_3_8_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_6">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
             <span class="md-nav__icon md-icon"></span>
             
   
-    🔀 Git Github
+    Git & GitHub para Projetos Reais (Bônus)
   
 
           </label>
@@ -2084,7 +2575,7 @@
   <span class="md-ellipsis">
     
   
-    Criando Projeto Profissional
+    Criando um Projeto Profissional
   
 
     
@@ -2112,313 +2603,7 @@
   <span class="md-ellipsis">
     
   
-    Publicando Projeto Final
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-          
-          
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../modulo_06_vscode_config/" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    🛠️ Vscode Config
-  
-
-    
-  </span>
-  
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_2_7" id="__nav_2_7_label" tabindex="">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_7">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    🛠️ Vscode Config
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../modulo_06_vscode_config/01_instalacao_e_configuracao_vscode/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Instalacao E Configuracao Vscode
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../modulo_06_vscode_config/02_ambiente_virtual_e_terminal/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Ambiente Virtual E Terminal
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-          
-          
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../modulo_07_poo/" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    🧊 Poo
-  
-
-    
-  </span>
-  
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_2_8" id="__nav_2_8_label" tabindex="">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_8">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    🧊 Poo
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../modulo_07_poo/01_paradigma_poo/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Paradigma Poo
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../modulo_07_poo/02_metodos_e_propriedades/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Metodos E Propriedades
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../modulo_07_poo/03_desenvolvimento_pratico_poo/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Desenvolvimento Pratico Poo
+    Publicando o Projeto Final
   
 
     
@@ -2497,7 +2682,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -2508,7 +2693,7 @@
   <span class="md-ellipsis">
     
   
-    🧠 Revisao E Fixacao
+    Central de Revisão Visual & Fixação Didática
   
 
     
@@ -2519,18 +2704,18 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_9" id="__nav_2_9_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3_9" id="__nav_3_9_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_9">
             <span class="md-nav__icon md-icon"></span>
             
   
-    🧠 Revisao E Fixacao
+    Central de Revisão Visual & Fixação Didática
   
 
           </label>
@@ -2552,7 +2737,7 @@
   <span class="md-ellipsis">
     
   
-    If Else Revisao
+    Tomada de Decisão com if, elif e else
   
 
     
@@ -2580,7 +2765,7 @@
   <span class="md-ellipsis">
     
   
-    Variaveis Revisao
+    Memória, Variáveis e Tipos de Dados
   
 
     
@@ -2608,7 +2793,7 @@
   <span class="md-ellipsis">
     
   
-    Operadores Revisao
+    Operadores Aritméticos e Lógicos
   
 
     
@@ -2636,7 +2821,7 @@
   <span class="md-ellipsis">
     
   
-    Repeticoes Revisao
+    Laços de Repetição (for e while)
   
 
     
@@ -2664,7 +2849,7 @@
   <span class="md-ellipsis">
     
   
-    Funcoes Revisao
+    Funções, Parâmetros e return
   
 
     
@@ -2692,7 +2877,7 @@
   <span class="md-ellipsis">
     
   
-    Colecoes Revisao
+    Coleções (Listas, Dicionários e Tuplas)
   
 
     
@@ -2720,7 +2905,7 @@
   <span class="md-ellipsis">
     
   
-    Excecoes Revisao
+    Tratamento de Erros (try / except)
   
 
     
@@ -2748,7 +2933,7 @@
   <span class="md-ellipsis">
     
   
-    Tkinter Ui Revisao
+    Interfaces Gráficas com Tkinter & CustomTkinter
   
 
     
@@ -2776,7 +2961,7 @@
   <span class="md-ellipsis">
     
   
-    Sqlite Db Revisao
+    Banco de Dados SQLite & SQL
   
 
     
@@ -2804,7 +2989,7 @@
   <span class="md-ellipsis">
     
   
-    Git Github Revisao
+    Versionamento Profissional com Git & GitHub
   
 
     
@@ -2832,7 +3017,7 @@
   <span class="md-ellipsis">
     
   
-    Strings Revisao
+    Manipulação de Strings e Textos
   
 
     
@@ -2860,7 +3045,7 @@
   <span class="md-ellipsis">
     
   
-    Modulos Revisao
+    Módulos, Importações e Organização de Código
   
 
     
@@ -2888,7 +3073,7 @@
   <span class="md-ellipsis">
     
   
-    Arquivos Revisao
+    Manipulação de Arquivos (TXT, JSON e CSV)
   
 
     
@@ -2916,7 +3101,7 @@
   <span class="md-ellipsis">
     
   
-    Poo Revisao
+    Programação Orientada a Objetos (POO)
   
 
     
@@ -2936,6 +3121,144 @@
     </li>
   
 
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../pacote_office/docs/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pacote Office
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Pacote Office
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../introducao_a_ia/docs/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução à IA
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Introdução à IA
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
               
             
           </ul>
@@ -2973,7 +3296,7 @@
       <a href="../../.." class="md-path__link">
         
   <span class="md-ellipsis">
-    Home
+    Início
   </span>
 
       </a>
@@ -3009,7 +3332,7 @@
         <a href="../" class="md-path__link">
           
   <span class="md-ellipsis">
-    🐍 Fundamentos
+    Fundamentos
   </span>
 
         </a>
@@ -3030,20 +3353,24 @@
 
 <h1 id="10-tratamento-de-erros-e-excecoes">10. Tratamento de Erros e Exceções<a class="headerlink" href="#10-tratamento-de-erros-e-excecoes" title="Permanent link">&para;</a></h1>
 <h2 id="objetivos">Objetivos<a class="headerlink" href="#objetivos" title="Permanent link">&para;</a></h2>
-<p>Neste capítulo, você aprenderá a:
-- Compreender a diferença entre erros de sintaxe e exceções.
-- Utilizar os blocos <code>try</code>, <code>except</code>, <code>else</code> e <code>finally</code> para capturar e tratar exceções.
-- Identificar e capturar exceções específicas, evitando o uso indiscriminado de <code>except</code> genérico.
-- Criar suas próprias classes de exceção para representar situações de erro específicas da sua aplicação.
-- Compreender a importância de não silenciar erros e de registrar informações úteis para depuração.
-- Desenvolver programas mais robustos e previsíveis, capazes de lidar com entradas inválidas e falhas inesperadas.</p>
+<p>Neste capítulo, você aprenderá a:</p>
+<ul>
+<li>Compreender a diferença entre erros de sintaxe e exceções.</li>
+<li>Utilizar os blocos <code>try</code>, <code>except</code>, <code>else</code> e <code>finally</code> para capturar e tratar exceções.</li>
+<li>Identificar e capturar exceções específicas, evitando o uso indiscriminado de <code>except</code> genérico.</li>
+<li>Criar suas próprias classes de exceção para representar situações de erro específicas da sua aplicação.</li>
+<li>Compreender a importância de não silenciar erros e de registrar informações úteis para depuração.</li>
+<li>Desenvolver programas mais robustos e previsíveis, capazes de lidar com entradas inválidas e falhas inesperadas.</li>
+</ul>
 <h2 id="pre-requisitos">Pré-requisitos<a class="headerlink" href="#pre-requisitos" title="Permanent link">&para;</a></h2>
-<p>Antes de prosseguir, certifique-se de que você domina:
-- Fundamentos da linguagem Python: variáveis, tipos de dados e operadores.
-- Estruturas de controle (<code>if</code>, <code>elif</code>, <code>else</code>, <code>for</code>, <code>while</code>).
-- Definição e uso de funções.
-- Manipulação de arquivos e conceitos de entrada e saída.
-- Noções básicas de orientação a objetos (para a seção de exceções personalizadas).</p>
+<p>Antes de prosseguir, certifique-se de que você domina:</p>
+<ul>
+<li>Fundamentos da linguagem Python: variáveis, tipos de dados e operadores.</li>
+<li>Estruturas de controle (<code>if</code>, <code>elif</code>, <code>else</code>, <code>for</code>, <code>while</code>).</li>
+<li>Definição e uso de funções.</li>
+<li>Manipulação de arquivos e conceitos de entrada e saída.</li>
+<li>Noções básicas de orientação a objetos (para a seção de exceções personalizadas).</li>
+</ul>
 <p>Se algum desses tópicos ainda não estiver consolidado, reserve um momento para revisá-los.</p>
 <h2 id="motivacao">Motivação<a class="headerlink" href="#motivacao" title="Permanent link">&para;</a></h2>
 <p>Até agora, escrevemos programas que funcionam bem quando tudo ocorre conforme o esperado: o usuário digita um número quando pedimos um número, o arquivo que tentamos abrir existe, a divisão que realizamos não é por zero. Mas a realidade das aplicações é diferente. Usuários cometem erros, arquivos são movidos ou deletados, conexões de rede falham, dados externos vêm corrompidos. Se o programa não estiver preparado para essas situações, ele simplesmente trava, exibindo uma mensagem de erro críptica e encerrando de forma abrupta. Em um software profissional, isso é inaceitável.</p>
@@ -3051,9 +3378,11 @@
 <p>Neste capítulo, você dominará os mecanismos que Python oferece para detectar, capturar e reagir a erros em tempo de execução, além de aprender a criar suas próprias exceções para tornar o código ainda mais expressivo e seguro.</p>
 <h2 id="conteudo">Conteúdo<a class="headerlink" href="#conteudo" title="Permanent link">&para;</a></h2>
 <h3 id="erros-versus-excecoes">Erros versus exceções<a class="headerlink" href="#erros-versus-excecoes" title="Permanent link">&para;</a></h3>
-<p>Em Python, é importante distinguir dois tipos de problemas:
-- <strong>Erros de sintaxe (<code>SyntaxError</code>)</strong>: ocorrem quando o código não segue as regras gramaticais da linguagem. O programa nem chega a ser executado. Exemplo: esquecer dois-pontos após um <code>if</code>.
-- <strong>Exceções</strong>: ocorrem durante a execução, mesmo que a sintaxe esteja correta. Exemplos: tentar abrir um arquivo que não existe (<code>FileNotFoundError</code>), dividir por zero (<code>ZeroDivisionError</code>), acessar um índice inválido em uma lista (<code>IndexError</code>).</p>
+<p>Em Python, é importante distinguir dois tipos de problemas:</p>
+<ul>
+<li><strong>Erros de sintaxe (<code>SyntaxError</code>)</strong>: ocorrem quando o código não segue as regras gramaticais da linguagem. O programa nem chega a ser executado. Exemplo: esquecer dois-pontos após um <code>if</code>.</li>
+<li><strong>Exceções</strong>: ocorrem durante a execução, mesmo que a sintaxe esteja correta. Exemplos: tentar abrir um arquivo que não existe (<code>FileNotFoundError</code>), dividir por zero (<code>ZeroDivisionError</code>), acessar um índice inválido em uma lista (<code>IndexError</code>).</li>
+</ul>
 <p>São as exceções que podemos — e devemos — tratar.</p>
 <h3 id="a-estrutura-tryexcept">A estrutura try/except<a class="headerlink" href="#a-estrutura-tryexcept" title="Permanent link">&para;</a></h3>
 <p>A forma básica de capturar uma exceção é com o bloco <code>try/except</code>:</p>
@@ -3374,62 +3703,228 @@
 <li>Crie uma lista com 5 números e peça ao usuário um índice para acessar. Trate <code>IndexError</code> se o índice for inválido e <code>ValueError</code> se a entrada não for um número inteiro.</li>
 <li>Simule a abertura de um arquivo: use <code>try</code> para abrir um arquivo inexistente e capture <code>FileNotFoundError</code>, exibindo uma mensagem amigável. Inclua um bloco <code>finally</code> que imprima "Operação finalizada.".</li>
 </ol>
+<!-- gabarito -->
+<details class="success">
+<summary>Gabarito — Básico</summary>
+<p>Uma solução possível — compare com a sua. Outras formas também podem estar certas.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1"># 1) Divisão protegida</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="k">try</span><span class="p">:</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>    <span class="n">a</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Primeiro número: &quot;</span><span class="p">))</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>    <span class="n">b</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Segundo número: &quot;</span><span class="p">))</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Resultado:&quot;</span><span class="p">,</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="p">)</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Não é possível dividir por zero.&quot;</span><span class="p">)</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Digite apenas números.&quot;</span><span class="p">)</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="c1"># 2) Acesso por índice</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="n">numeros</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="k">try</span><span class="p">:</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>    <span class="n">indice</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Índice (0 a 4): &quot;</span><span class="p">))</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Valor:&quot;</span><span class="p">,</span> <span class="n">numeros</span><span class="p">[</span><span class="n">indice</span><span class="p">])</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a><span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Índice fora da lista.&quot;</span><span class="p">)</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a><span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+<a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;O índice precisa ser um número inteiro.&quot;</span><span class="p">)</span>
+<a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a>
+<a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a><span class="c1"># 3) Arquivo inexistente com finally</span>
+<a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a><span class="k">try</span><span class="p">:</span>
+<a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a>    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;nao_existe.txt&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">arquivo</span><span class="p">:</span>
+<a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">arquivo</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+<a id="__codelineno-13-25" name="__codelineno-13-25" href="#__codelineno-13-25"></a><span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
+<a id="__codelineno-13-26" name="__codelineno-13-26" href="#__codelineno-13-26"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;O arquivo não foi encontrado. Verifique o nome e a pasta.&quot;</span><span class="p">)</span>
+<a id="__codelineno-13-27" name="__codelineno-13-27" href="#__codelineno-13-27"></a><span class="k">finally</span><span class="p">:</span>
+<a id="__codelineno-13-28" name="__codelineno-13-28" href="#__codelineno-13-28"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Operação finalizada.&quot;</span><span class="p">)</span>
+</code></pre></div>
+</details>
 <h3 id="intermediario-aplicacao">Intermediário (aplicação)<a class="headerlink" href="#intermediario-aplicacao" title="Permanent link">&para;</a></h3>
 <p>Desenvolva uma função <code>converter_para_numero(valor)</code> que recebe uma string e tenta convertê-la para <code>int</code> ou <code>float</code>, retornando o número convertido. Se a string não for um número válido, a função deve lançar um <code>ValueError</code> com uma mensagem específica. Em seguida, crie um programa que use essa função para somar números digitados pelo usuário em uma única linha separados por espaços (ex.: "10 20 30"). Trate exceções para que o programa não quebre com entradas inválidas.</p>
+<!-- gabarito -->
+<details class="success">
+<summary>Gabarito — Intermediário</summary>
+<p>Uma solução possível — compare com a sua. Outras formas também podem estar certas.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">converter_para_numero</span><span class="p">(</span><span class="n">valor</span><span class="p">):</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Converte a string em int ou float; lança ValueError se não for número.&quot;&quot;&quot;</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>    <span class="n">texto</span> <span class="o">=</span> <span class="n">valor</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="s2">&quot;.&quot;</span><span class="p">)</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>    <span class="k">try</span><span class="p">:</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">texto</span><span class="p">)</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>        <span class="k">pass</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>    <span class="k">try</span><span class="p">:</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>        <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">texto</span><span class="p">)</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&#39;</span><span class="si">{</span><span class="n">valor</span><span class="si">}</span><span class="s2">&#39; não é um número válido.&quot;</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="kc">None</span>
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="n">linha</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Digite números separados por espaço: &quot;</span><span class="p">)</span>
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="k">for</span> <span class="n">parte</span> <span class="ow">in</span> <span class="n">linha</span><span class="o">.</span><span class="n">split</span><span class="p">():</span>
+<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a>    <span class="k">try</span><span class="p">:</span>
+<a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a>        <span class="n">total</span> <span class="o">+=</span> <span class="n">converter_para_numero</span><span class="p">(</span><span class="n">parte</span><span class="p">)</span>
+<a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a>    <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">erro</span><span class="p">:</span>
+<a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ignorado:&quot;</span><span class="p">,</span> <span class="n">erro</span><span class="p">)</span>
+<a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Soma:&quot;</span><span class="p">,</span> <span class="n">total</span><span class="p">)</span>
+</code></pre></div>
+</details>
 <h3 id="avancado-desafio">Avançado (desafio)<a class="headerlink" href="#avancado-desafio" title="Permanent link">&para;</a></h3>
-<p>Crie um sistema de reserva de assentos para um teatro. A classe <code>Teatro</code> deve ter uma matriz (lista de listas) representando os assentos (ocupado <code>True</code>/livre <code>False</code>). Regras:
-1. O teatro tem 10 fileiras (A-J) e 15 assentos por fileira (1-15).
-2. A função <code>reservar(fileira, assento)</code> deve levantar exceções personalizadas:
-    - <code>FileiraInvalidaError</code> se a fileira não for A-J.
-    - <code>AssentoInvalidoError</code> se o assento não for 1-15.
-    - <code>AssentoOcupadoError</code> se o assento já estiver reservado.
-3. O programa deve oferecer um menu para reservar, cancelar (liberar assento) e visualizar o mapa de assentos (com <code>[X]</code> para ocupado e <code>[ ]</code> para livre).
-4. Utilize tratamento de exceções adequado para todas as operações.</p>
+<p>Crie um sistema de reserva de assentos para um teatro. A classe <code>Teatro</code> deve ter uma matriz (lista de listas) representando os assentos (ocupado <code>True</code>/livre <code>False</code>). Regras:</p>
+<ol>
+<li>O teatro tem 10 fileiras (A-J) e 15 assentos por fileira (1-15).</li>
+<li>A função <code>reservar(fileira, assento)</code> deve levantar exceções personalizadas:<ul>
+<li><code>FileiraInvalidaError</code> se a fileira não for A-J.</li>
+<li><code>AssentoInvalidoError</code> se o assento não for 1-15.</li>
+<li><code>AssentoOcupadoError</code> se o assento já estiver reservado.</li>
+</ul>
+</li>
+<li>O programa deve oferecer um menu para reservar, cancelar (liberar assento) e visualizar o mapa de assentos (com <code>[X]</code> para ocupado e <code>[ ]</code> para livre).</li>
+<li>Utilize tratamento de exceções adequado para todas as operações.</li>
+</ol>
+<!-- gabarito -->
+<details class="success">
+<summary>Gabarito — Avançado</summary>
+<p>Uma solução possível — compare com a sua. Outras formas também podem estar certas.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1"># Este desafio usa uma classe — o assunto do Módulo 02 (POO).</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="c1"># Leia como &quot;um conjunto de dados + as funções que cuidam deles&quot;.</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="k">class</span><span class="w"> </span><span class="nc">FileiraInvalidaError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>    <span class="k">pass</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="k">class</span><span class="w"> </span><span class="nc">AssentoInvalidoError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>    <span class="k">pass</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="k">class</span><span class="w"> </span><span class="nc">AssentoOcupadoError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>    <span class="k">pass</span>
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>
+<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a>
+<a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a><span class="k">class</span><span class="w"> </span><span class="nc">Teatro</span><span class="p">:</span>
+<a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a>    <span class="n">FILEIRAS</span> <span class="o">=</span> <span class="s2">&quot;ABCDEFGHIJ&quot;</span>
+<a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a>    <span class="n">ASSENTOS</span> <span class="o">=</span> <span class="mi">15</span>
+<a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a>
+<a id="__codelineno-15-20" name="__codelineno-15-20" href="#__codelineno-15-20"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-15-21" name="__codelineno-15-21" href="#__codelineno-15-21"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">mapa</span> <span class="o">=</span> <span class="p">[[</span><span class="kc">False</span><span class="p">]</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">ASSENTOS</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">FILEIRAS</span><span class="p">]</span>
+<a id="__codelineno-15-22" name="__codelineno-15-22" href="#__codelineno-15-22"></a>
+<a id="__codelineno-15-23" name="__codelineno-15-23" href="#__codelineno-15-23"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_posicao</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fileira</span><span class="p">,</span> <span class="n">assento</span><span class="p">):</span>
+<a id="__codelineno-15-24" name="__codelineno-15-24" href="#__codelineno-15-24"></a>        <span class="n">fileira</span> <span class="o">=</span> <span class="n">fileira</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+<a id="__codelineno-15-25" name="__codelineno-15-25" href="#__codelineno-15-25"></a>        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">fileira</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">fileira</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">FILEIRAS</span><span class="p">:</span>
+<a id="__codelineno-15-26" name="__codelineno-15-26" href="#__codelineno-15-26"></a>            <span class="k">raise</span> <span class="n">FileiraInvalidaError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Fileira &#39;</span><span class="si">{</span><span class="n">fileira</span><span class="si">}</span><span class="s2">&#39; não existe (use A-J).&quot;</span><span class="p">)</span>
+<a id="__codelineno-15-27" name="__codelineno-15-27" href="#__codelineno-15-27"></a>        <span class="k">if</span> <span class="ow">not</span> <span class="mi">1</span> <span class="o">&lt;=</span> <span class="n">assento</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ASSENTOS</span><span class="p">:</span>
+<a id="__codelineno-15-28" name="__codelineno-15-28" href="#__codelineno-15-28"></a>            <span class="k">raise</span> <span class="n">AssentoInvalidoError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Assento </span><span class="si">{</span><span class="n">assento</span><span class="si">}</span><span class="s2"> não existe (use 1-15).&quot;</span><span class="p">)</span>
+<a id="__codelineno-15-29" name="__codelineno-15-29" href="#__codelineno-15-29"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">FILEIRAS</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">fileira</span><span class="p">),</span> <span class="n">assento</span> <span class="o">-</span> <span class="mi">1</span>
+<a id="__codelineno-15-30" name="__codelineno-15-30" href="#__codelineno-15-30"></a>
+<a id="__codelineno-15-31" name="__codelineno-15-31" href="#__codelineno-15-31"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">reservar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fileira</span><span class="p">,</span> <span class="n">assento</span><span class="p">):</span>
+<a id="__codelineno-15-32" name="__codelineno-15-32" href="#__codelineno-15-32"></a>        <span class="n">f</span><span class="p">,</span> <span class="n">a</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_posicao</span><span class="p">(</span><span class="n">fileira</span><span class="p">,</span> <span class="n">assento</span><span class="p">)</span>
+<a id="__codelineno-15-33" name="__codelineno-15-33" href="#__codelineno-15-33"></a>        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">mapa</span><span class="p">[</span><span class="n">f</span><span class="p">][</span><span class="n">a</span><span class="p">]:</span>
+<a id="__codelineno-15-34" name="__codelineno-15-34" href="#__codelineno-15-34"></a>            <span class="k">raise</span> <span class="n">AssentoOcupadoError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;O assento </span><span class="si">{</span><span class="n">fileira</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="si">}{</span><span class="n">assento</span><span class="si">}</span><span class="s2"> já está ocupado.&quot;</span><span class="p">)</span>
+<a id="__codelineno-15-35" name="__codelineno-15-35" href="#__codelineno-15-35"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">mapa</span><span class="p">[</span><span class="n">f</span><span class="p">][</span><span class="n">a</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+<a id="__codelineno-15-36" name="__codelineno-15-36" href="#__codelineno-15-36"></a>
+<a id="__codelineno-15-37" name="__codelineno-15-37" href="#__codelineno-15-37"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">cancelar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fileira</span><span class="p">,</span> <span class="n">assento</span><span class="p">):</span>
+<a id="__codelineno-15-38" name="__codelineno-15-38" href="#__codelineno-15-38"></a>        <span class="n">f</span><span class="p">,</span> <span class="n">a</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_posicao</span><span class="p">(</span><span class="n">fileira</span><span class="p">,</span> <span class="n">assento</span><span class="p">)</span>
+<a id="__codelineno-15-39" name="__codelineno-15-39" href="#__codelineno-15-39"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">mapa</span><span class="p">[</span><span class="n">f</span><span class="p">][</span><span class="n">a</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+<a id="__codelineno-15-40" name="__codelineno-15-40" href="#__codelineno-15-40"></a>
+<a id="__codelineno-15-41" name="__codelineno-15-41" href="#__codelineno-15-41"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">exibir</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-15-42" name="__codelineno-15-42" href="#__codelineno-15-42"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;    &quot;</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">n</span><span class="si">:</span><span class="s2">&gt;3</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ASSENTOS</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)))</span>
+<a id="__codelineno-15-43" name="__codelineno-15-43" href="#__codelineno-15-43"></a>        <span class="k">for</span> <span class="n">letra</span><span class="p">,</span> <span class="n">linha</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">FILEIRAS</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">mapa</span><span class="p">):</span>
+<a id="__codelineno-15-44" name="__codelineno-15-44" href="#__codelineno-15-44"></a>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">letra</span><span class="si">}</span><span class="s2">   &quot;</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;[X]&quot;</span> <span class="k">if</span> <span class="n">ocupado</span> <span class="k">else</span> <span class="s2">&quot;[ ]&quot;</span> <span class="k">for</span> <span class="n">ocupado</span> <span class="ow">in</span> <span class="n">linha</span><span class="p">))</span>
+<a id="__codelineno-15-45" name="__codelineno-15-45" href="#__codelineno-15-45"></a>
+<a id="__codelineno-15-46" name="__codelineno-15-46" href="#__codelineno-15-46"></a>
+<a id="__codelineno-15-47" name="__codelineno-15-47" href="#__codelineno-15-47"></a><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+<a id="__codelineno-15-48" name="__codelineno-15-48" href="#__codelineno-15-48"></a>    <span class="n">teatro</span> <span class="o">=</span> <span class="n">Teatro</span><span class="p">()</span>
+<a id="__codelineno-15-49" name="__codelineno-15-49" href="#__codelineno-15-49"></a>    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<a id="__codelineno-15-50" name="__codelineno-15-50" href="#__codelineno-15-50"></a>        <span class="n">opcao</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">1-Reservar 2-Cancelar 3-Mapa 4-Sair: &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+<a id="__codelineno-15-51" name="__codelineno-15-51" href="#__codelineno-15-51"></a>        <span class="k">if</span> <span class="n">opcao</span> <span class="o">==</span> <span class="s2">&quot;4&quot;</span><span class="p">:</span>
+<a id="__codelineno-15-52" name="__codelineno-15-52" href="#__codelineno-15-52"></a>            <span class="k">break</span>
+<a id="__codelineno-15-53" name="__codelineno-15-53" href="#__codelineno-15-53"></a>        <span class="k">if</span> <span class="n">opcao</span> <span class="o">==</span> <span class="s2">&quot;3&quot;</span><span class="p">:</span>
+<a id="__codelineno-15-54" name="__codelineno-15-54" href="#__codelineno-15-54"></a>            <span class="n">teatro</span><span class="o">.</span><span class="n">exibir</span><span class="p">()</span>
+<a id="__codelineno-15-55" name="__codelineno-15-55" href="#__codelineno-15-55"></a>            <span class="k">continue</span>
+<a id="__codelineno-15-56" name="__codelineno-15-56" href="#__codelineno-15-56"></a>        <span class="k">if</span> <span class="n">opcao</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">):</span>
+<a id="__codelineno-15-57" name="__codelineno-15-57" href="#__codelineno-15-57"></a>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Opção inválida.&quot;</span><span class="p">)</span>
+<a id="__codelineno-15-58" name="__codelineno-15-58" href="#__codelineno-15-58"></a>            <span class="k">continue</span>
+<a id="__codelineno-15-59" name="__codelineno-15-59" href="#__codelineno-15-59"></a>        <span class="k">try</span><span class="p">:</span>
+<a id="__codelineno-15-60" name="__codelineno-15-60" href="#__codelineno-15-60"></a>            <span class="n">fileira</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Fileira (A-J): &quot;</span><span class="p">)</span>
+<a id="__codelineno-15-61" name="__codelineno-15-61" href="#__codelineno-15-61"></a>            <span class="n">assento</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Assento (1-15): &quot;</span><span class="p">))</span>
+<a id="__codelineno-15-62" name="__codelineno-15-62" href="#__codelineno-15-62"></a>            <span class="k">if</span> <span class="n">opcao</span> <span class="o">==</span> <span class="s2">&quot;1&quot;</span><span class="p">:</span>
+<a id="__codelineno-15-63" name="__codelineno-15-63" href="#__codelineno-15-63"></a>                <span class="n">teatro</span><span class="o">.</span><span class="n">reservar</span><span class="p">(</span><span class="n">fileira</span><span class="p">,</span> <span class="n">assento</span><span class="p">)</span>
+<a id="__codelineno-15-64" name="__codelineno-15-64" href="#__codelineno-15-64"></a>                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Reserva feita!&quot;</span><span class="p">)</span>
+<a id="__codelineno-15-65" name="__codelineno-15-65" href="#__codelineno-15-65"></a>            <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-15-66" name="__codelineno-15-66" href="#__codelineno-15-66"></a>                <span class="n">teatro</span><span class="o">.</span><span class="n">cancelar</span><span class="p">(</span><span class="n">fileira</span><span class="p">,</span> <span class="n">assento</span><span class="p">)</span>
+<a id="__codelineno-15-67" name="__codelineno-15-67" href="#__codelineno-15-67"></a>                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Assento liberado.&quot;</span><span class="p">)</span>
+<a id="__codelineno-15-68" name="__codelineno-15-68" href="#__codelineno-15-68"></a>        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+<a id="__codelineno-15-69" name="__codelineno-15-69" href="#__codelineno-15-69"></a>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;O assento precisa ser um número.&quot;</span><span class="p">)</span>
+<a id="__codelineno-15-70" name="__codelineno-15-70" href="#__codelineno-15-70"></a>        <span class="k">except</span> <span class="p">(</span><span class="n">FileiraInvalidaError</span><span class="p">,</span> <span class="n">AssentoInvalidoError</span><span class="p">,</span> <span class="n">AssentoOcupadoError</span><span class="p">)</span> <span class="k">as</span> <span class="n">erro</span><span class="p">:</span>
+<a id="__codelineno-15-71" name="__codelineno-15-71" href="#__codelineno-15-71"></a>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Erro:&quot;</span><span class="p">,</span> <span class="n">erro</span><span class="p">)</span>
+<a id="__codelineno-15-72" name="__codelineno-15-72" href="#__codelineno-15-72"></a>
+<a id="__codelineno-15-73" name="__codelineno-15-73" href="#__codelineno-15-73"></a>
+<a id="__codelineno-15-74" name="__codelineno-15-74" href="#__codelineno-15-74"></a><span class="n">main</span><span class="p">()</span>
+</code></pre></div>
+</details>
 <h2 id="projeto-pratico-gerenciador-de-contatos-com-persistencia-segura">Projeto Prático: Gerenciador de Contatos com Persistência Segura<a class="headerlink" href="#projeto-pratico-gerenciador-de-contatos-com-persistencia-segura" title="Permanent link">&para;</a></h2>
 <p>Desenvolva uma aplicação de console para gerenciar contatos, com persistência em arquivo JSON, tratamento robusto de exceções e validação de dados.</p>
-<p><strong>Requisitos:</strong>
-1. <strong>Modelo de dados:</strong>
-    - Cada contato é um dicionário com nome, telefone e email.
-    - A lista de contatos é salva em <code>contatos.json</code> usando o módulo <code>json</code>.
-2. <strong>Funcionalidades:</strong>
-    - Menu: [1] Adicionar, [2] Listar, [3] Buscar, [4] Remover, [5] Sair.
-3. <strong>Tratamento de exceções:</strong>
-    - Ao carregar <code>contatos.json</code>, trate <code>FileNotFoundError</code> (inicia com lista vazia) e <code>json.JSONDecodeError</code> (arquivo corrompido, inicia vazio e alerta).
-    - Ao salvar, trate <code>PermissionError</code> e <code>OSError</code>.
-    - Valide os dados de entrada com exceções personalizadas:
-        - <code>NomeInvalidoError</code>: nome vazio ou com menos de 3 caracteres.
-        - <code>TelefoneInvalidoError</code>: telefone que não contenha apenas dígitos (após limpeza) e que não tenha 10 ou 11 dígitos.
-        - <code>EmailInvalidoError</code>: e-mail sem <code>@</code> ou sem <code>.</code> após o <code>@</code>.
-4. <strong>Implementação:</strong>
-    - Crie as classes de exceção em um módulo <code>excecoes.py</code>.
-    - Crie funções para validar cada campo, levantando as exceções apropriadas.
-    - O programa principal (<code>main.py</code>) deve usar blocos <code>try/except</code> para capturar essas exceções e exibir mensagens amigáveis, sem travar.
-    - Use <code>with</code> ao manipular o arquivo JSON.
-    - Inclua blocos <code>finally</code> onde achar necessário (ex.: ao carregar, garantir que a variável de contatos seja inicializada).
-5. <strong>Extras:</strong>
-    - Adicione uma opção [6] Exportar vCard que gera um arquivo <code>.vcf</code> simples. Trate exceções de escrita.
-    - Use <code>logging</code> para registrar erros inesperados em um arquivo <code>erros.log</code>.</p>
+<p><strong>Requisitos:</strong></p>
+<ol>
+<li><strong>Modelo de dados:</strong><ul>
+<li>Cada contato é um dicionário com nome, telefone e email.</li>
+<li>A lista de contatos é salva em <code>contatos.json</code> usando o módulo <code>json</code>.</li>
+</ul>
+</li>
+<li><strong>Funcionalidades:</strong><ul>
+<li>Menu: [1] Adicionar, [2] Listar, [3] Buscar, [4] Remover, [5] Sair.</li>
+</ul>
+</li>
+<li><strong>Tratamento de exceções:</strong><ul>
+<li>Ao carregar <code>contatos.json</code>, trate <code>FileNotFoundError</code> (inicia com lista vazia) e <code>json.JSONDecodeError</code> (arquivo corrompido, inicia vazio e alerta).</li>
+<li>Ao salvar, trate <code>PermissionError</code> e <code>OSError</code>.</li>
+<li>Valide os dados de entrada com exceções personalizadas:<ul>
+<li><code>NomeInvalidoError</code>: nome vazio ou com menos de 3 caracteres.</li>
+<li><code>TelefoneInvalidoError</code>: telefone que não contenha apenas dígitos (após limpeza) e que não tenha 10 ou 11 dígitos.</li>
+<li><code>EmailInvalidoError</code>: e-mail sem <code>@</code> ou sem <code>.</code> após o <code>@</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Implementação:</strong><ul>
+<li>Crie as classes de exceção em um módulo <code>excecoes.py</code>.</li>
+<li>Crie funções para validar cada campo, levantando as exceções apropriadas.</li>
+<li>O programa principal (<code>main.py</code>) deve usar blocos <code>try/except</code> para capturar essas exceções e exibir mensagens amigáveis, sem travar.</li>
+<li>Use <code>with</code> ao manipular o arquivo JSON.</li>
+<li>Inclua blocos <code>finally</code> onde achar necessário (ex.: ao carregar, garantir que a variável de contatos seja inicializada).</li>
+</ul>
+</li>
+<li><strong>Extras:</strong><ul>
+<li>Adicione uma opção [6] Exportar vCard que gera um arquivo <code>.vcf</code> simples. Trate exceções de escrita.</li>
+<li>Use <code>logging</code> para registrar erros inesperados em um arquivo <code>erros.log</code>.</li>
+</ul>
+</li>
+</ol>
 <p><strong>Esqueleto das exceções (<code>excecoes.py</code>):</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">NomeInvalidoError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>    <span class="k">pass</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="k">class</span><span class="w"> </span><span class="nc">TelefoneInvalidoError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
-<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>    <span class="k">pass</span>
-<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>
-<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="k">class</span><span class="w"> </span><span class="nc">EmailInvalidoError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
-<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>    <span class="k">pass</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">NomeInvalidoError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>    <span class="k">pass</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="k">class</span><span class="w"> </span><span class="nc">TelefoneInvalidoError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>    <span class="k">pass</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="k">class</span><span class="w"> </span><span class="nc">EmailInvalidoError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>    <span class="k">pass</span>
 </code></pre></div></p>
 <p>Este projeto consolida o tratamento de exceções em um cenário realista, integrando manipulação de arquivos, validação de dados e modularização.</p>
 <h2 id="resumo">Resumo<a class="headerlink" href="#resumo" title="Permanent link">&para;</a></h2>
-<p>Neste capítulo, você aprendeu que:
-- Exceções são eventos que interrompem o fluxo normal do programa; erros de sintaxe impedem a execução.
-- O bloco <code>try/except</code> captura e trata exceções, permitindo resposta controlada a falhas.
-- Capturar exceções específicas (<code>ValueError</code>, <code>FileNotFoundError</code>, etc.) é melhor do que <code>except:</code> genérico.
-- O objeto exceção, acessado com <code>as</code>, fornece detalhes sobre o erro.
-- Os blocos <code>else</code> (sem erro) e <code>finally</code> (sempre executa) complementam o tratamento.
-- A instrução <code>raise</code> lança exceções, inclusive de classes personalizadas, para sinalizar violações de regras de negócio.
-- Boas práticas incluem não silenciar exceções, usar <code>with</code> para recursos, e validar dados cedo.</p>
+<p>Neste capítulo, você aprendeu que:</p>
+<ul>
+<li>Exceções são eventos que interrompem o fluxo normal do programa; erros de sintaxe impedem a execução.</li>
+<li>O bloco <code>try/except</code> captura e trata exceções, permitindo resposta controlada a falhas.</li>
+<li>Capturar exceções específicas (<code>ValueError</code>, <code>FileNotFoundError</code>, etc.) é melhor do que <code>except:</code> genérico.</li>
+<li>O objeto exceção, acessado com <code>as</code>, fornece detalhes sobre o erro.</li>
+<li>Os blocos <code>else</code> (sem erro) e <code>finally</code> (sempre executa) complementam o tratamento.</li>
+<li>A instrução <code>raise</code> lança exceções, inclusive de classes personalizadas, para sinalizar violações de regras de negócio.</li>
+<li>Boas práticas incluem não silenciar exceções, usar <code>with</code> para recursos, e validar dados cedo.</li>
+</ul>
 <p>O tratamento de exceções é um pilar da programação profissional. A partir de agora, seus programas não apenas funcionam no cenário ideal, mas resistem às adversidades do mundo real, mantendo a integridade dos dados e proporcionando uma experiência de usuário muito mais confiável.</p>
+<!-- revisao-visual -->
+<div class="admonition tip">
+<p class="admonition-title">Revisão visual: Tratamento de erros</p>
+<p>Ficou alguma dúvida? A <a href="../../modulo_00_revisao_e_fixacao/07_excecoes_revisao/">Central de Revisão</a> explica <strong>tratamento de erros</strong> com analogias do dia a dia, diagramas e os erros mais comuns — use antes dos exercícios ou para estudar para a prova.</p>
+</div>
 
 
 
@@ -3462,14 +3957,74 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
+        
+          
+          <a href="../09_arquivos/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Manipulação de Arquivos e Pastas">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Manipulação de Arquivos e Pastas
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../11_projeto_final/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Mini-projeto: Sistema no Terminal (CLI)">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Próximo
+              </span>
+              <div class="md-ellipsis">
+                Mini-projeto: Sistema no Terminal (CLI)
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
+    <div class="md-copyright__highlight">
+      Material gratuito para uso educacional · Prof. Pedro Paulo IF · <a href="mailto:pedropaulo4hire@gmail.com">pedropaulo4hire@gmail.com</a>
+    </div>
   
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/ZecaBigodinho/curso-python" target="_blank" rel="noopener" title="Repositório no GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:pedropaulo4hire@gmail.com" target="_blank" rel="noopener" title="Falar com o professor" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l208 156a48 48 0 0 0 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 196v188c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V196L313.6 344.8c-34.1 25.6-81.1 25.6-115.2 0z"/></svg>
     </a>
   
 </div>
@@ -3487,7 +4042,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.path", "navigation.top", "toc.integrate", "search.suggest", "search.highlight", "content.tabs.link", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.path", "navigation.top", "navigation.footer", "toc.integrate", "search.suggest", "search.highlight", "content.tabs.link", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
     
     
       <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>

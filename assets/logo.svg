@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="CourseForge · IF">
+  <!-- Livro aberto (branco, para o cabeçalho colorido) + faísca de "forja" (teal) -->
+  <path d="M8 22c8-4 16-4 22 1v27c-6-5-14-5-22-1z" fill="#fff"/>
+  <path d="M56 22c-8-4-16-4-22 1v27c6-5 14-5 22-1z" fill="#fff" opacity=".85"/>
+  <path d="M32 3l2.6 6.4L41 12l-6.4 2.6L32 21l-2.6-6.4L23 12l6.4-2.6z" fill="#64DFD3"/>
+</svg>
