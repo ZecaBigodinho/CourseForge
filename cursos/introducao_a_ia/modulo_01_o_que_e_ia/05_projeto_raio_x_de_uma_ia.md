@@ -159,4 +159,4 @@ Você saiu da “mágica” para o funcionamento:
 
 ## ➡️ Próximo passo
 
-**Módulo 02 — Usando assistentes de IA bem** *(em preparação)*: como escrever bons pedidos (*prompts*), reconhecer os limites e verificar as respostas.
+**[Módulo 02 — Usando assistentes de IA bem](../modulo_02_usando_assistentes/index.md)**: como escrever bons pedidos (*prompts*), reconhecer os limites e verificar as respostas.

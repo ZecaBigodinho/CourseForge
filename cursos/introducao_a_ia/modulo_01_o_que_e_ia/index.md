@@ -58,4 +58,4 @@ Antes de seguir, confira se você consegue:
 
 ## ➡️ Próximo passo
 
-**Módulo 02 — Usando assistentes de IA bem** *(em preparação)* — bons pedidos (*prompts*), limites e verificação das respostas.
+**[Módulo 02 — Usando assistentes de IA bem](../modulo_02_usando_assistentes/index.md)** — bons pedidos (*prompts*), limites e verificação das respostas.

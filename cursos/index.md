@@ -60,7 +60,7 @@ hide:
 
     O que é IA, como usar assistentes com responsabilidade, engenharia de prompt e um mini-projeto com Python.
 
-    Módulo 01 disponível · IA sem mistério, com atividades à mão
+    Módulos 01 e 02 disponíveis · IA sem mistério e prompts bem feitos
 
     [:octicons-arrow-right-24: Começar pelo Módulo 01](introducao_a_ia/modulo_01_o_que_e_ia/index.md)
 

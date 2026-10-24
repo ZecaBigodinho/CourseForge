@@ -195,4 +195,11 @@ nav:
     - Redes neurais e aprendizado profundo: introducao_a_ia/modulo_01_o_que_e_ia/03_redes_neurais.md
     - IA generativa e modelos de linguagem: introducao_a_ia/modulo_01_o_que_e_ia/04_ia_generativa.md
     - 'Projeto do módulo: raio-X de uma IA do dia a dia': introducao_a_ia/modulo_01_o_que_e_ia/05_projeto_raio_x_de_uma_ia.md
+  - Usando assistentes de IA bem:
+    - Visão Geral: introducao_a_ia/modulo_02_usando_assistentes/index.md
+    - Conhecendo os assistentes de IA: introducao_a_ia/modulo_02_usando_assistentes/01_conhecendo_os_assistentes.md
+    - Escrevendo bons pedidos (prompts): introducao_a_ia/modulo_02_usando_assistentes/02_escrevendo_bons_prompts.md
+    - Técnicas que fazem diferença: introducao_a_ia/modulo_02_usando_assistentes/03_tecnicas_que_fazem_diferenca.md
+    - Conferindo as respostas: introducao_a_ia/modulo_02_usando_assistentes/04_conferindo_as_respostas.md
+    - 'Projeto do módulo: meu caderno de prompts': introducao_a_ia/modulo_02_usando_assistentes/05_projeto_caderno_de_prompts.md
 docs_dir: ../cursos

@@ -1,12 +1,12 @@
 # Introdução à IA
 
 > **Autor:** Prof. Pedro Paulo IF · [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com)  
-> **Versão:** 0.2.0  
-> **Situação:** em andamento — Módulo 01 disponível  
+> **Versão:** 0.3.0  
+> **Situação:** em andamento — Módulos 01 e 02 disponíveis  
 > **Ferramentas:** neutro — vale para ChatGPT, Gemini, Copilot, Claude e outros assistentes
 
-!!! success "Comece agora pelo Módulo 01"
-    O **[Módulo 01 — O que é IA (sem mistério)](../modulo_01_o_que_e_ia/index.md)** já está disponível: o que é IA, aprendizado de máquina, redes neurais e IA generativa, com atividades à mão (sem programar) e o raio-X de uma IA do dia a dia como projeto. Os demais módulos serão publicados um a um.
+!!! success "Módulos 01 e 02 disponíveis"
+    O **[Módulo 01 — O que é IA (sem mistério)](../modulo_01_o_que_e_ia/index.md)** já está disponível: o que é IA, aprendizado de máquina, redes neurais e IA generativa, com atividades à mão (sem programar) e o raio-X de uma IA do dia a dia como projeto. O **[Módulo 02 — Usando assistentes de IA bem](../modulo_02_usando_assistentes/index.md)** ensina a escolher o assistente e a conta, escrever prompts claros, usar o assistente como tutor e conferir as respostas. Os demais módulos serão publicados um a um.
 
 ---
 
@@ -20,9 +20,9 @@ A Inteligência Artificial já está no celular, na busca e nas ferramentas de e
 
 Inteligência Artificial, aprendizado de máquina, redes neurais e IA generativa explicados com exemplos do dia a dia e atividades à mão — com o raio-X de uma IA do dia a dia como projeto. [Acessar o módulo](../modulo_01_o_que_e_ia/index.md)
 
-### Módulo 02 — Usando assistentes de IA bem
+### Módulo 02 — Usando assistentes de IA bem ✅ disponível
 
-**Engenharia de prompt** na prática, limites das ferramentas, **alucinações** e como verificar fontes — com um panorama dos assistentes gratuitos, revisado no momento da publicação.
+Os assistentes gratuitos, idades mínimas e privacidade; **prompts** com a receita C-T-F-R; exemplos, passo a passo, modo tutor e respostas só com base em um texto; e como **conferir** as respostas — com um caderno de prompts como projeto. [Acessar o módulo](../modulo_02_usando_assistentes/index.md)
 
 ### Módulo 03 — IA no estudo e no trabalho
 
