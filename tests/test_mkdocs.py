@@ -220,16 +220,34 @@ class TestTitulosDaNavegacao:
         _, entradas = self._nav_do_modulo(updater)
         assert list(entradas[0]) == ["Projeto Prático: Dashboard"]
 
-    def test_modulo_usa_h1_do_index_com_icone(self, updater, modulo):
+    def test_modulo_usa_h1_do_index_sem_emoji(self, updater, modulo):
         (modulo / "index.md").write_text("# 🏗️ Módulo 01 — Introdução ao Projeto\n", encoding="utf-8")
         nome, entradas = self._nav_do_modulo(updater)
-        assert nome == "🏗️ Introdução ao Projeto"
+        assert nome == "Introdução ao Projeto"
         assert entradas[0] == {"Visão Geral": "curso_x/modulo_01_introducao_ao_projeto/index.md"}
 
     def test_modulo_sem_index_usa_slug_acentuado(self, updater, modulo):
         (modulo / "01_a.md").write_text("# A\n", encoding="utf-8")
         nome, _ = self._nav_do_modulo(updater)
-        assert nome == "🏗️ Introdução ao Projeto"
+        assert nome == "Introdução ao Projeto"
+
+    def test_menu_nao_tem_emojis(self, updater, modulo):
+        """P8: emojis ficam nas páginas; o menu lateral é só texto."""
+        (modulo / "index.md").write_text("# 🧠 Central de Revisão\n", encoding="utf-8")
+        (modulo / "01_a.md").write_text("# 🐍 Funções\n", encoding="utf-8")
+        (modulo / "02_b.md").write_text("# 🗄️ Banco de Dados\n", encoding="utf-8")
+
+        def rotulos(itens):
+            for item in itens:
+                for chave, valor in item.items():
+                    yield chave
+                    if isinstance(valor, list):
+                        yield from rotulos(valor)
+
+        import unicodedata
+        for rotulo in rotulos(updater._construir_nav()):
+            # "So" = símbolo (emojis); U+FE0F = seletor de variação que acompanha emojis
+            assert not any(unicodedata.category(c) == "So" or c == "️" for c in rotulo), rotulo
 
     def test_numero_que_faz_parte_do_titulo_e_mantido(self, updater, modulo):
         (modulo / "01_a.md").write_text("# 3 formas de usar listas\n", encoding="utf-8")

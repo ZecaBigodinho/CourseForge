@@ -40,32 +40,7 @@ class MkDocsUpdater:
     - Gerar mkdocs.yml completo via FileManager
     """
 
-    # Mapeamento de palavras-chave → ícone para módulos do sidebar.
-    # Quando o nome do módulo contém uma dessas palavras, o ícone é prefixado.
-    ICONES_MODULO: dict[str, str] = {
-        "vscode": "🛠️",
-        "revisao": "🧠",
-        "fixacao": "🎯",
-        "fundament": "🐍",
-        "interface": "🖥️",
-        "grafica": "🖥️",
-        "banco": "🗄️",
-        "dados": "🗄️",
-        "web": "🌐",
-        "api": "🔌",
-        "teste": "🧪",
-        "deploy": "🚀",
-        "seguranca": "🔒",
-        "avancad": "⚡",
-        "projeto": "🏗️",
-        "automacao": "🤖",
-        "machine": "🧠",
-        "ia": "🧠",
-        "rede": "🌐",
-        "git": "🔀",
-        "poo": "🧊",
-        "objeto": "🧊",
-    }
+    # O menu lateral é só texto: emojis ficam nos títulos das páginas e nos cards da home.
 
     # Fallback quando o .md não tem título: palavras de slug → forma acentuada.
     ACENTOS: dict[str, str] = {
@@ -151,7 +126,7 @@ class MkDocsUpdater:
           - Home: index.md
           - Python para Iniciantes:
             - Índice: cursos/python_para_iniciantes/docs/index.md
-            - 🐍 Introdução ao Python:
+            - Introdução ao Python:
               - Visão Geral: .../index.md
               - Variáveis e Tipos: .../01_variaveis.md
         """
@@ -219,17 +194,12 @@ class MkDocsUpdater:
 
     def _construir_entrada_modulo(self, modulo_dir: Path, cursos_dir: Path) -> dict | None:
         """Constrói a entrada de navegação de um módulo."""
-        # Slug sem o prefixo "modulo_01_" — usado para o ícone e como fallback do nome
+        # Slug sem o prefixo "modulo_01_" — fallback do nome quando não há index.md com título
         nome_sem_numero = "_".join(modulo_dir.name.split("_")[2:]) or modulo_dir.name
 
         index_mod = modulo_dir / "index.md"
         titulo_index = self._titulo_do_markdown(index_mod) if index_mod.exists() else None
         modulo_nome = titulo_index or self._humanizar_slug(nome_sem_numero)
-
-        # Ícone resolvido pelo slug (sem acentos), não pelo título exibido
-        icone = self._resolver_icone_modulo(nome_sem_numero.replace("_", " "))
-        if icone:
-            modulo_nome = f"{icone} {modulo_nome}"
 
         modulo_entries: list = []
 
@@ -362,7 +332,7 @@ class MkDocsUpdater:
             '02. Ambientes Virtuais (`venv`)'         → 'Ambientes Virtuais (venv)'
         """
         t = titulo.replace("`", "").replace("**", "").strip()
-        # Remove emojis/símbolos iniciais: o ícone do módulo é aplicado à parte
+        # Remove emojis/símbolos iniciais: o menu lateral é só texto
         while t and not (t[0].isalnum() or t[0] in "(\"'¿¡"):
             t = t[1:].lstrip()
         # A numeração fica de fora: a ordem já vem do nome do arquivo
@@ -410,23 +380,3 @@ class MkDocsUpdater:
         if partes and partes[0].isdigit():
             partes = partes[1:]
         return cls._humanizar_slug("_".join(partes)) if partes else stem
-
-    @classmethod
-    def _resolver_icone_modulo(cls, nome_modulo: str) -> str | None:
-        """
-        Resolve o ícone (emoji) para um módulo com base em palavras-chave.
-
-        Busca match parcial (case-insensitive) no dicionário ICONES_MODULO.
-        Retorna o primeiro ícone encontrado, ou None se nenhuma palavra-chave bater.
-
-        Args:
-            nome_modulo: Nome legível do módulo (ex: "Fundamentos").
-
-        Returns:
-            Emoji string ou None.
-        """
-        nome_lower = nome_modulo.lower()
-        for palavra, icone in cls.ICONES_MODULO.items():
-            if palavra in nome_lower:
-                return icone
-        return None
