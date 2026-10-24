@@ -3,7 +3,7 @@ descricao: Word, Excel e PowerPoint para estudar e trabalhar, com alternativas g
 autor: Pedro Paulo IF
 num_modulos: 5
 data_criacao: '2026-10-23'
-versao: 0.4.0
+versao: 0.5.0
 tags: []
 slug: pacote_office
 # Ordem dos módulos no menu (nomes das pastas); os próximos entram aqui conforme forem publicados
@@ -11,6 +11,7 @@ ordem_modulos:
   - modulo_01_word
   - modulo_02_excel
   - modulo_03_powerpoint
+  - modulo_04_equipe_e_alternativas
 
 # Ficha do curso — alimenta o Catálogo de cursos (gerado por src/generators/gerar_catalogo.py)
 ordem: 2

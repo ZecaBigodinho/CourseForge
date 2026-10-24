@@ -59,4 +59,4 @@ Antes de seguir, confira se você consegue:
 
 ## ➡️ Próximo passo
 
-**Módulo 04 — Trabalho em equipe e alternativas gratuitas** *(em preparação)* — OneDrive, Teams e Outlook, e os equivalentes no LibreOffice e no Google Workspace.
+**[Módulo 04 — Trabalho em equipe e alternativas gratuitas](../modulo_04_equipe_e_alternativas/index.md)** — OneDrive, Teams e Outlook, e os equivalentes no LibreOffice e no Google Workspace.

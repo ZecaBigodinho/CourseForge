@@ -173,4 +173,4 @@ Você saiu da apresentação em branco para uma apresentação que comunica — 
 
 ## ➡️ Próximo passo
 
-**Módulo 04 — Trabalho em equipe e alternativas gratuitas** *(em preparação)*: OneDrive, Teams e Outlook no dia a dia — e como fazer tudo isso no LibreOffice e no Google Workspace.
+**[Módulo 04 — Trabalho em equipe e alternativas gratuitas](../modulo_04_equipe_e_alternativas/index.md)**: OneDrive, Teams e Outlook no dia a dia — e como fazer tudo isso no LibreOffice e no Google Workspace.

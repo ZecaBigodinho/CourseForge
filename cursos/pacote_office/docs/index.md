@@ -1,12 +1,12 @@
 # Pacote Office
 
 > **Autor:** Prof. Pedro Paulo IF · [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com)  
-> **Versão:** 0.4.0  
-> **Situação:** em andamento — Módulos 01 a 03 disponíveis  
+> **Versão:** 0.5.0  
+> **Situação:** em andamento — Módulos 01 a 04 disponíveis  
 > **Versão do Office nas aulas:** Microsoft 365 (com os caminhos equivalentes no LibreOffice e no Google)
 
-!!! success "Word, Excel e PowerPoint já disponíveis"
-    O **[Módulo 01 — Word](../modulo_01_word/index.md)** traz formatação, estilos, sumário, citações e referências **ABNT**, mala direta e um trabalho escolar completo como projeto. O **[Módulo 02 — Excel](../modulo_02_excel/index.md)** vai de fórmulas e referências à tabela dinâmica, com `PROCX`, funções modernas, gráficos, macros e um controle de notas da turma como projeto. O **[Módulo 03 — PowerPoint](../modulo_03_powerpoint/index.md)** vai do roteiro ao Slide Mestre, com gráficos do Excel, animações com moderação e o Modo do Apresentador, e termina com a apresentação do trabalho escolar. Os demais módulos serão publicados um a um.
+!!! success "Word, Excel, PowerPoint e trabalho em equipe já disponíveis"
+    O **[Módulo 01 — Word](../modulo_01_word/index.md)** traz formatação, estilos, sumário, citações e referências **ABNT**, mala direta e um trabalho escolar completo como projeto. O **[Módulo 02 — Excel](../modulo_02_excel/index.md)** vai de fórmulas e referências à tabela dinâmica, com `PROCX`, funções modernas, gráficos, macros e um controle de notas da turma como projeto. O **[Módulo 03 — PowerPoint](../modulo_03_powerpoint/index.md)** vai do roteiro ao Slide Mestre, com gráficos do Excel, animações com moderação e o Modo do Apresentador, e termina com a apresentação do trabalho escolar. O **[Módulo 04](../modulo_04_equipe_e_alternativas/index.md)** ensina a trabalhar em grupo com OneDrive, Outlook e Teams — e a fazer tudo de graça com o LibreOffice e o Google Workspace. O projeto final integrado será publicado em seguida.
 
 ---
 
@@ -28,9 +28,9 @@ Fórmulas e funções (`SE`, `CONT.SE`, `SOMASE`, `PROCX`), **tabelas**, formata
 
 Roteiro e mensagem principal, **design de slides** claros e acessíveis, tema, **Slide Mestre** e modelos, SmartArt e gráficos do Excel, transições e animações com moderação e o **Modo do Apresentador** — com a apresentação do trabalho escolar como projeto. [Acessar o módulo](../modulo_03_powerpoint/index.md)
 
-### Módulo 04 — Trabalho em equipe e alternativas gratuitas
+### Módulo 04 — Trabalho em equipe e alternativas gratuitas ✅ disponível
 
-Outlook, Teams e OneDrive no dia a dia — e os equivalentes gratuitos no **LibreOffice** e no **Google Workspace**.
+**OneDrive** (nuvem, compartilhamento, coautoria e versões), **Outlook** (e-mail formal, golpes e agenda) e **Teams** (canais, reuniões e tarefas) — e os equivalentes gratuitos no **LibreOffice** e no **Google Workspace**, com um trabalho em grupo na nuvem como projeto. [Acessar o módulo](../modulo_04_equipe_e_alternativas/index.md)
 
 ### Módulo 05 — Projeto final integrado
 

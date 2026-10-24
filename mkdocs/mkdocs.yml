@@ -172,6 +172,13 @@ nav:
     - Modelos, Slide Mestre e elementos visuais: pacote_office/modulo_03_powerpoint/03_modelos_mestre_e_elementos_visuais.md
     - Transições, animações e a hora de apresentar: pacote_office/modulo_03_powerpoint/04_transicoes_animacoes_e_apresentacao.md
     - 'Projeto do módulo: apresentação do trabalho escolar': pacote_office/modulo_03_powerpoint/05_projeto_apresentacao_do_trabalho.md
+  - Trabalho em equipe e alternativas gratuitas:
+    - Visão Geral: pacote_office/modulo_04_equipe_e_alternativas/index.md
+    - 'OneDrive: arquivos na nuvem e compartilhamento': pacote_office/modulo_04_equipe_e_alternativas/01_onedrive_nuvem_e_compartilhamento.md
+    - 'Outlook: e-mail e agenda': pacote_office/modulo_04_equipe_e_alternativas/02_outlook_email_e_agenda.md
+    - 'Teams: chat, canais e reuniões': pacote_office/modulo_04_equipe_e_alternativas/03_teams_chat_canais_e_reunioes.md
+    - 'Alternativas gratuitas: LibreOffice e Google Workspace': pacote_office/modulo_04_equipe_e_alternativas/04_alternativas_gratuitas.md
+    - 'Projeto do módulo: trabalho em grupo na nuvem': pacote_office/modulo_04_equipe_e_alternativas/05_projeto_trabalho_em_grupo.md
 - Introdução à IA:
   - Apresentação do curso: introducao_a_ia/docs/index.md
 docs_dir: ../cursos
