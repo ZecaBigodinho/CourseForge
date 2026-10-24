@@ -2,6 +2,7 @@
 
 ## Objetivos
 Neste capítulo, você aprenderá a:
+
 - Compreender que strings são sequências imutáveis de caracteres.
 - Acessar caracteres individuais e fatiar strings para extrair trechos.
 - Concatenar, repetir e interpolar strings de forma eficiente.
@@ -12,6 +13,7 @@ Neste capítulo, você aprenderá a:
 
 ## Pré-requisitos
 Antes de prosseguir, certifique-se de que você domina:
+
 - Tipos de dados básicos (int, float, str, bool).
 - Operadores aritméticos, de comparação e lógicos.
 - Estruturas condicionais e laços de repetição.
@@ -134,6 +136,7 @@ print(texto.endswith("xi"))   # True
 
 #### Validação de conteúdo
 Estes métodos retornam `True` ou `False`, sendo úteis para validar dados de entrada:
+
 - `isalpha()`: todos os caracteres são letras.
 - `isdigit()`: todos os caracteres são dígitos.
 - `isalnum()`: todos são letras ou dígitos.
@@ -333,6 +336,7 @@ Crie uma função `formatar_nome(nome)` que receba um nome completo e retorne no
 
 ### Avançado (desafio)
 Desenvolva uma função `validar_cpf(cpf)` que verifique se o CPF (string) possui formato válido e dígitos verificadores corretos. O formato pode conter pontos e traço (ex.: "123.456.789-09"). A validação deve:
+
 1. Remover caracteres não numéricos.
 2. Verificar se possui 11 dígitos.
 3. Calcular os dois dígitos verificadores conforme algoritmo oficial.
@@ -353,6 +357,7 @@ Maria Oliveira;maria@email.com;(21)99876-5432;Rio de Janeiro
 ```
 
 **Requisitos do programa:**
+
 1. Leia todas as linhas (use `splitlines()`).
 2. Para cada linha:
     - Separe os campos usando `;`.
@@ -372,6 +377,7 @@ Este projeto integra fatiamento, métodos de string, formatação, validação e
 
 ## Resumo
 Neste capítulo, você aprendeu que:
+
 - Strings são sequências imutáveis que podem ser indexadas e fatiadas.
 - Métodos como `upper`, `lower`, `strip`, `replace`, `split` e `join` permitem transformar e limpar textos.
 - **f-strings** são a forma moderna e expressiva de formatar strings com variáveis, incluindo controle de alinhamento e casas decimais.

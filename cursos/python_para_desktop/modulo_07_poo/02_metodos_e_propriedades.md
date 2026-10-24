@@ -2,6 +2,7 @@
 
 ## Objetivos
 Neste capítulo, você aprenderá a:
+
 - Utilizar o método construtor `__init__` para inicializar objetos com atributos padronizados.
 - Compreender o papel fundamental do parâmetro `self` em métodos de instância.
 - Criar **métodos de instância** para definir comportamentos e ações do objeto.
@@ -10,6 +11,7 @@ Neste capítulo, você aprenderá a:
 
 ## Pré-requisitos
 Antes de iniciar este capítulo, certifique-se de dominar:
+
 - O conceito de Classe e Objeto ([01. Estudo do Paradigma POO](01_paradigma_poo.md)).
 - Definição de funções, parâmetros e escopo em Python.
 

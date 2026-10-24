@@ -10,6 +10,7 @@
 ## 🎯 Por que esta revisão é para você?
 
 Se você já se pegou em dúvida sobre:
+
 * *"Por que meu arquivo ficou vazio depois que abri no modo `'w'`?"*
 * *"Como salvar dados da aplicação em formato JSON para não perder ao fechar?"*
 * *"Para que serve o bloco `with open(...)` e por que não preciso chamar `.close()`?"*

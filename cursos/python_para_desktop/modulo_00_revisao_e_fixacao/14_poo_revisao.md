@@ -10,6 +10,7 @@
 ## 🎯 Por que esta revisão é para você?
 
 Se você já se pegou em dúvida sobre:
+
 * *"Para que serve o tal do `self` nas funções dentro da classe?"*
 * *"Qual a diferença prática entre uma Classe e um Objeto?"*
 * *"Por que usar `@property` em vez de simplesmente criar variáveis públicas?"*

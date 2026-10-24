@@ -2,6 +2,7 @@
 
 ## Objetivos
 Neste capítulo, você aprenderá a:
+
 - Compreender o que é o paradigma de Programação Orientada a Objetos (POO).
 - Diferenciar Programação Procedural de Programação Orientada a Objetos.
 - Entender os conceitos fundamentais de **Classe** (molde) e **Objeto** (instância).
@@ -11,6 +12,7 @@ Neste capítulo, você aprenderá a:
 
 ## Pré-requisitos
 Antes de iniciar este capítulo, certifique-se de dominar:
+
 - Variáveis, tipos de dados e operadores em Python.
 - Estruturas condicionais (`if/else`) e laços de repetição (`for/while`).
 - Funções, parâmetros e valores de retorno (`def`).

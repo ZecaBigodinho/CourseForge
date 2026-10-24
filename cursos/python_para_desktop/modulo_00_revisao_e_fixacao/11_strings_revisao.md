@@ -10,6 +10,7 @@
 ## 🎯 Por que esta revisão é para você?
 
 Se você já se fez perguntas como:
+
 * *"Por que minha string não muda quando uso `texto.upper()`?"*
 * *"Como fatiar (slicing) uma palavra para pegar só os primeiros 5 caracteres?"*
 * *"Qual a diferença entre f-strings e concatenação com `+`?"*

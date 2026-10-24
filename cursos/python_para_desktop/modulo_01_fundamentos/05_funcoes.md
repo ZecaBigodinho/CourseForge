@@ -2,6 +2,7 @@
 
 ## Objetivos
 Neste capítulo, você aprenderá a:
+
 - Compreender a importância das funções para a modularização do código.
 - Definir funções em Python com a palavra reservada `def`.
 - Utilizar parâmetros para tornar as funções flexíveis e reutilizáveis.
@@ -13,6 +14,7 @@ Neste capítulo, você aprenderá a:
 
 ## Pré-requisitos
 Antes de prosseguir, você deve dominar:
+
 - Variáveis e tipos de dados (int, float, str, bool, listas).
 - Operadores aritméticos, de comparação e lógicos.
 - Estruturas condicionais (`if`, `elif`, `else`).
@@ -24,6 +26,7 @@ Se algum desses tópicos ainda não estiver consolidado, revise os capítulos an
 Conforme seus programas crescem, você perceberá que certas tarefas se repetem: validar um CPF, calcular um desconto, exibir um menu, ordenar uma lista. Copiar e colar o mesmo trecho de código várias vezes torna o programa difícil de manter — qualquer alteração exige que você modifique todas as cópias, aumentando o risco de erros.
 
 As funções são a solução. Elas permitem encapsular um bloco de código que realiza uma tarefa específica, dando-lhe um nome. Em vez de repetir a lógica, você simplesmente chama a função. Isso torna o código:
+
 - **Modular**: dividido em partes menores e independentes.
 - **Reutilizável**: uma função escrita uma vez pode ser usada em vários lugares.
 - **Legível**: o nome da função descreve o que ela faz.
@@ -133,6 +136,7 @@ print(f"Área: {a}, Perímetro: {p}")  # Área: 15, Perímetro: 16
 
 ### Escopo de variáveis
 O escopo define onde uma variável é acessível. Python tem dois escopos principais:
+
 - **Variável local**: definida dentro de uma função. Só pode ser acessada dentro dela.
 - **Variável global**: definida fora de todas as funções. Pode ser lida em qualquer lugar, mas para modificá-la dentro de uma função é necessário declarar `global`.
 
@@ -299,6 +303,7 @@ Desenvolva uma função `calcular_media(notas)` que receba uma lista de notas (n
 
 ### Avançado (desafio)
 Implemente um sistema de conversão de unidades com as seguintes funções:
+
 - `metros_para_km(metros)`: converte metros para quilômetros.
 - `km_para_milhas(km)`: converte quilômetros para milhas.
 - `milhas_para_pes(milhas)`: converte milhas para pés.
@@ -310,6 +315,7 @@ Crie também uma função `converter(valor, unidade_origem, unidade_destino)` qu
 Desenvolva uma calculadora de console que ofereça operações matemáticas básicas e avançadas, toda estruturada em funções.
 
 **Requisitos:**
+
 1. Crie uma função para cada operação: `somar(a, b)`, `subtrair(a, b)`, `multiplicar(a, b)`, `dividir(a, b)`, `potencia(a, b)`.
 2. A função `dividir` deve tratar divisão por zero e retornar `None` nesse caso, exibindo uma mensagem de erro.
 3. Crie uma função `exibir_menu()` que mostre as opções disponíveis e retorne a escolha do usuário.
@@ -350,6 +356,7 @@ Complete o projeto, garantindo que a modularização facilite a leitura e futura
 
 ## Resumo
 Neste capítulo, você aprendeu que:
+
 - Funções são blocos nomeados de código reutilizável, definidos com `def`.
 - Parâmetros permitem que as funções recebam dados; argumentos são os valores passados na chamada.
 - Parâmetros com valor padrão tornam alguns argumentos opcionais.

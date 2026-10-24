@@ -2,6 +2,7 @@
 
 ## Objetivos
 Neste capítulo, você aprenderá a:
+
 - Compreender a diferença entre erros de sintaxe e exceções.
 - Utilizar os blocos `try`, `except`, `else` e `finally` para capturar e tratar exceções.
 - Identificar e capturar exceções específicas, evitando o uso indiscriminado de `except` genérico.
@@ -11,6 +12,7 @@ Neste capítulo, você aprenderá a:
 
 ## Pré-requisitos
 Antes de prosseguir, certifique-se de que você domina:
+
 - Fundamentos da linguagem Python: variáveis, tipos de dados e operadores.
 - Estruturas de controle (`if`, `elif`, `else`, `for`, `while`).
 - Definição e uso de funções.
@@ -30,6 +32,7 @@ Neste capítulo, você dominará os mecanismos que Python oferece para detectar,
 
 ### Erros versus exceções
 Em Python, é importante distinguir dois tipos de problemas:
+
 - **Erros de sintaxe (`SyntaxError`)**: ocorrem quando o código não segue as regras gramaticais da linguagem. O programa nem chega a ser executado. Exemplo: esquecer dois-pontos após um `if`.
 - **Exceções**: ocorrem durante a execução, mesmo que a sintaxe esteja correta. Exemplos: tentar abrir um arquivo que não existe (`FileNotFoundError`), dividir por zero (`ZeroDivisionError`), acessar um índice inválido em uma lista (`IndexError`).
 
@@ -336,6 +339,7 @@ Desenvolva uma função `converter_para_numero(valor)` que recebe uma string e t
 
 ### Avançado (desafio)
 Crie um sistema de reserva de assentos para um teatro. A classe `Teatro` deve ter uma matriz (lista de listas) representando os assentos (ocupado `True`/livre `False`). Regras:
+
 1. O teatro tem 10 fileiras (A-J) e 15 assentos por fileira (1-15).
 2. A função `reservar(fileira, assento)` deve levantar exceções personalizadas:
     - `FileiraInvalidaError` se a fileira não for A-J.
@@ -348,6 +352,7 @@ Crie um sistema de reserva de assentos para um teatro. A classe `Teatro` deve te
 Desenvolva uma aplicação de console para gerenciar contatos, com persistência em arquivo JSON, tratamento robusto de exceções e validação de dados.
 
 **Requisitos:**
+
 1. **Modelo de dados:**
     - Cada contato é um dicionário com nome, telefone e email.
     - A lista de contatos é salva em `contatos.json` usando o módulo `json`.
@@ -386,6 +391,7 @@ Este projeto consolida o tratamento de exceções em um cenário realista, integ
 
 ## Resumo
 Neste capítulo, você aprendeu que:
+
 - Exceções são eventos que interrompem o fluxo normal do programa; erros de sintaxe impedem a execução.
 - O bloco `try/except` captura e trata exceções, permitindo resposta controlada a falhas.
 - Capturar exceções específicas (`ValueError`, `FileNotFoundError`, etc.) é melhor do que `except:` genérico.

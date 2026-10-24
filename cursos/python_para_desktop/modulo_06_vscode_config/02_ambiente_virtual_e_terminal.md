@@ -75,6 +75,7 @@ Ao tentar ativar o `venv` no PowerShell do Windows pela primeira vez, você pode
    ```powershell
    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
    ```
+
 3. Digite `S` (Sim) e feche o PowerShell.
 4. Volte ao VS Code e tente ativar o `venv` novamente!
 

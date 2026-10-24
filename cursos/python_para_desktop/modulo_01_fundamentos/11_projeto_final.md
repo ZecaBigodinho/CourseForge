@@ -2,6 +2,7 @@
 
 ## Objetivos
 Neste capítulo, você aplicará todos os conhecimentos adquiridos no Módulo 01 para construir um projeto completo. Os objetivos são:
+
 - Integrar variáveis, operadores, condicionais, repetições, funções, módulos, coleções, strings, arquivos e tratamento de exceções em uma única aplicação.
 - Planejar a arquitetura de um programa de linha de comando (CLI) antes de codificá-lo.
 - Organizar o código em módulos reutilizáveis, seguindo boas práticas.
@@ -11,6 +12,7 @@ Neste capítulo, você aplicará todos os conhecimentos adquiridos no Módulo 01
 
 ## Pré-requisitos
 Para aproveitar ao máximo este capítulo, você deve dominar os tópicos do Módulo 01:
+
 - Variáveis e tipos de dados: `int`, `float`, `str`, `bool`.
 - Operadores: aritméticos, de comparação, lógicos e de atribuição.
 - Estruturas de controle: `if`, `elif`, `else` e laços `for` e `while` (incluindo `break` e `continue`).
@@ -32,6 +34,7 @@ Imagine que você precisa organizar suas tarefas diárias ou controlar seus gast
 
 ### Planejamento do projeto
 Antes de escrever uma linha de código, é essencial definir o escopo e a arquitetura. Nosso Gerenciador de Tarefas terá as seguintes funcionalidades:
+
 - Adicionar uma nova tarefa com descrição, prioridade (alta, média, baixa) e status inicial "pendente".
 - Listar todas as tarefas, com opção de filtrar por status (pendente, em andamento, concluída).
 - Atualizar o status de uma tarefa (marcar como "em andamento" ou "concluída").
@@ -51,6 +54,7 @@ Cada módulo agrupa responsabilidades coesas, facilitando manutenção e testes.
 
 ### Modelo de dados
 Uma tarefa será representada por um dicionário com as chaves:
+
 - `id`: número inteiro único (gerado automaticamente).
 - `descricao`: string não vazia.
 - `prioridade`: string, um dos valores "alta", "média" ou "baixa".
@@ -334,6 +338,7 @@ Implemente uma nova funcionalidade: pesquisar tarefas por palavra-chave. O usuá
 
 ### Avançado (desafio)
 Transforme o Gerenciador de Tarefas em um Controle Financeiro Pessoal simples, com as seguintes adaptações:
+
 - Cada registro será uma transação: `id`, `descricao`, `valor` (`float`, positivo para receita, negativo para despesa), `categoria` (ex.: alimentação, transporte, lazer) e `data`.
 - Persista em `financas.json`.
 - Funcionalidades: adicionar transação, listar todas, exibir saldo atual (soma de valores), listar por categoria e excluir transação.
@@ -349,6 +354,7 @@ Agora, vamos construir o projeto do zero. Siga estas etapas:
     cd gerenciador_tarefas
     touch main.py tarefas.py persistencia.py validacao.py
     ```
+
 2. **Implemente `validacao.py`** com as três funções de validação mostradas no conteúdo.
 3. **Implemente `persistencia.py`** com `carregar_tarefas` e `salvar_tarefas`, usando `pathlib.Path` e `json`.
 4. **Implemente `tarefas.py`** com `adicionar_tarefa`, `listar_tarefas`, `atualizar_status` e `remover_tarefa`, importando validações e `datetime`.
@@ -369,6 +375,7 @@ Esse projeto prático consolida todos os conceitos do módulo. Ao terminá-lo, v
 
 ## Resumo
 Neste capítulo, você:
+
 - Integrou variáveis, operadores, condicionais, laços, funções, módulos, coleções, strings, manipulação de arquivos e tratamento de exceções em um único sistema.
 - Planejou e implementou um Gerenciador de Tarefas com persistência em JSON.
 - Aprendeu a separar responsabilidades em módulos coesos.

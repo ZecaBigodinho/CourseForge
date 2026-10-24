@@ -404,6 +404,7 @@ Após todas as refatorações, execute o roteiro de testes do Capítulo 10 novam
 **Tarefa:** Pegue uma função longa do seu projeto (mais de 25 linhas) e a divida em funções menores, cada uma com uma responsabilidade única.
 
 Exemplo: Se `abrir_janela_cadastro` tem 80 linhas, extraia partes como:
+
 - `_criar_formulario(janela)` → cria o frame do formulário
 - `_criar_tabela(janela)` → cria o Treeview e scrollbar
 - `_criar_barra_status(janela)` → cria a barra de status

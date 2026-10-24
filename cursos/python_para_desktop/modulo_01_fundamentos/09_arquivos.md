@@ -2,6 +2,7 @@
 
 ## Objetivos
 Neste capítulo, você aprenderá a:
+
 - Compreender os fundamentos da persistência de dados em arquivos de texto.
 - Utilizar o gerenciador de contexto `with` para abrir e fechar arquivos automaticamente.
 - Ler, escrever e anexar conteúdo em arquivos de texto com os modos de abertura apropriados.
@@ -12,6 +13,7 @@ Neste capítulo, você aprenderá a:
 
 ## Pré-requisitos
 Antes de prosseguir, verifique se você domina:
+
 - Tipos de dados básicos, variáveis e operadores.
 - Estruturas de controle (`if`, `for`, `while`).
 - Funções: definição, parâmetros, retorno de valores.
@@ -68,6 +70,7 @@ with open('dados.txt', 'r', encoding='utf-8') as arquivo:
 
 ### Lendo arquivos de texto
 Existem três métodos principais para leitura:
+
 - `read()`: lê todo o conteúdo de uma só vez (retorna uma string).
 - `readline()`: lê uma única linha, incluindo o caractere de nova linha `\n`.
 - `readlines()`: retorna uma lista de strings, cada uma representando uma linha.
@@ -114,6 +117,7 @@ Sempre especifique o argumento `encoding='utf-8'`. Isso garante que caracteres a
 
 ### Tratamento de exceções comuns
 Ao manipular arquivos, diversas situações podem gerar exceções:
+
 - `FileNotFoundError`: o arquivo não existe.
 - `PermissionError`: falta de permissão para ler/gravar.
 - `IsADirectoryError`: tentativa de abrir um diretório como arquivo.
@@ -355,6 +359,7 @@ if arquivo.exists():
 
 ### Intermediário (aplicação)
 Crie um programa que gerencie um arquivo de tarefas (`tarefas.txt`). Cada linha terá uma tarefa e seu status no formato `tarefa|status`, onde status é `pendente` ou `concluida`. O programa deve:
+
 - Adicionar uma nova tarefa (sempre como pendente).
 - Listar todas as tarefas com seus status.
 - Marcar uma tarefa como concluída (pelo número da linha, começando em 1).
@@ -364,6 +369,7 @@ Utilize `pathlib` para o caminho do arquivo e manipulação de leitura/escrita c
 
 ### Avançado (desafio)
 Desenvolva um utilitário de backup que copie todos os arquivos `.txt` de uma pasta de origem para uma pasta de destino, mas apenas se o arquivo de origem for mais recente que o de destino (ou se o destino não existir). Requisitos:
+
 - Use `pathlib` para caminhos e obtenção de datas de modificação (`stat().st_mtime`).
 - A origem e destino devem ser informados pelo usuário (ou usar diretório atual e `backup_txt` como padrão).
 - Crie a estrutura de destino se não existir.
@@ -385,12 +391,14 @@ diario/
 ```
 
 **Requisitos:**
+
 1. Ao iniciar, o programa exibe um menu:
     ```text
     1. Nova entrada
     2. Visualizar entrada
     3. Sair
     ```
+
 2. **Nova entrada**: pergunta pela data (padrão: hoje) e pelo texto da entrada. Salva no arquivo correspondente ao dia, dentro da pasta `diario/ano/mes/`. Cada linha do arquivo deve começar com o horário da entrada (ex.: `14:35 - ...`). Use append para permitir múltiplas entradas no mesmo dia.
 3. **Visualizar entrada**: solicita uma data e exibe todas as entradas daquele dia, se existirem. Se o arquivo não existir, informa que não há entradas.
 4. Utilize `pathlib` para construir os caminhos, criar os diretórios necessários (`parents=True`, `exist_ok=True`) e ler/escrever os arquivos.
@@ -418,6 +426,7 @@ Este projeto solidifica o uso de `pathlib`, gerenciador de contexto, modos de ab
 
 ## Resumo
 Neste capítulo, você aprendeu:
+
 - A função `open()` e os modos de leitura (`'r'`), escrita (`'w'`) e anexação (`'a'`).
 - O gerenciador de contexto `with` garante o fechamento automático dos arquivos.
 - Métodos de leitura como `read()`, `readline()`, `readlines()` e iteração direta.

@@ -2,6 +2,7 @@
 
 ## Objetivos
 Ao final deste capítulo, você estará apto a:
+
 - Compreender o papel das estruturas condicionais no controle do fluxo de execução.
 - Utilizar a instrução `if` para executar blocos de código com base em uma condição.
 - Combinar `if` com `else` para criar caminhos alternativos.
@@ -13,6 +14,7 @@ Ao final deste capítulo, você estará apto a:
 
 ## Pré-requisitos
 Antes de mergulhar nas estruturas condicionais, é fundamental que você domine:
+
 - Criação e uso de variáveis (int, float, str, bool).
 - Operadores de comparação (`==`, `!=`, `>`, `<`, `>=`, `<=`) e lógicos (`and`, `or`, `not`).
 - Entrada de dados com `input()` e exibição com `print()`.
@@ -125,6 +127,7 @@ print(status)  # Menor de idade
 
 ### Verdade e falsidade em Python
 Em Python, qualquer objeto pode ser testado como booleano. São considerados falsos (`False`) os seguintes valores:
+
 - `False`
 - `None`
 - Zero numérico: `0`, `0.0`, `0j`
@@ -254,6 +257,7 @@ Aqui, `nome` será `True` se o usuário digitar algo, e `False` se ele pressiona
 
 ### Intermediário (aplicação)
 Uma empresa de energia elétrica cobra R$ 0,50 por kWh para os primeiros 200 kWh e R$ 0,75 para o consumo excedente. Escreva um programa que:
+
 - Pergunte o consumo em kWh.
 - Calcule o valor da conta.
 - Aplique um desconto de 10% se o consumo for inferior a 100 kWh.
@@ -263,6 +267,7 @@ Use apenas estruturas condicionais e operadores aprendidos.
 
 ### Avançado (desafio)
 Crie um sistema simples de notas escolares que:
+
 - Leia três notas (0 a 10).
 - Calcule a média aritmética.
 - Determine a situação do aluno conforme a tabela:
@@ -274,6 +279,7 @@ Crie um sistema simples de notas escolares que:
 
 ## Projeto Prático: Mini Calculadora com Menu
 Desenvolva uma calculadora que opera com dois números e um operador escolhido pelo usuário. O programa deve:
+
 1. Exibir um menu com as opções: `+`, `-`, `*`, `/` e `S` (sair).
 2. Solicitar a operação desejada.
 3. Se a operação for válida (`+`, `-`, `*`, `/`), solicitar dois números (`float`).
@@ -296,6 +302,7 @@ Erro: divisão por zero.
 
 ## Resumo
 Neste capítulo, você aprendeu a controlar o fluxo de seus programas com estruturas condicionais:
+
 - O `if` executa um bloco quando uma condição é verdadeira.
 - O `else` oferece um caminho alternativo quando a condição é falsa.
 - O `elif` permite encadear múltiplas verificações, avaliando-as sequencialmente até que uma seja verdadeira.

@@ -10,6 +10,7 @@
 ## 🎯 Por que esta revisão é para você?
 
 Se você já se pegou perguntando:
+
 * *"Por que não posso somar `10` com `"10"`?"*
 * *"O que acontece na memória do computador quando crio um `nome = "Ana"`?"*
 * *"Como o Python sabe se algo é número ou texto sem eu dizer?"*

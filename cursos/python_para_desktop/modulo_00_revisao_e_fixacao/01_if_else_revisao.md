@@ -10,6 +10,7 @@
 ## 🎯 Por que esta revisão é para você?
 
 Se em algum momento você olhou para um bloco de `if`, `elif` e `else` e ficou se perguntando:
+
 * *"Por que o Python pulou essa linha?"*
 * *"Onde eu coloco os dois pontos `:` e a indentação?"*
 * *"Quando devo usar `elif` em vez de outro `if`?"*

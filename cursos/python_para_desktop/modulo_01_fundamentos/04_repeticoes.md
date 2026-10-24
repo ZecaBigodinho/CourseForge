@@ -2,6 +2,7 @@
 
 ## Objetivos
 Neste capítulo, você vai aprender a:
+
 - Compreender o propósito das estruturas de repetição em programação.
 - Utilizar o laço `while` para executar blocos enquanto uma condição for verdadeira.
 - Utilizar o laço `for` para iterar sobre sequências como strings, listas e intervalos numéricos.
@@ -12,6 +13,7 @@ Neste capítulo, você vai aprender a:
 
 ## Pré-requisitos
 Antes de começar, certifique-se de que você domina:
+
 - Variáveis e tipos de dados básicos (int, float, str, bool).
 - Operadores de comparação e lógicos.
 - Estruturas condicionais `if`, `elif`, `else`.
@@ -28,6 +30,7 @@ As estruturas de repetição resolvem exatamente esse problema: elas permitem qu
 
 ### O que são laços de repetição?
 Um laço de repetição (ou loop) é uma estrutura que repete um conjunto de instruções. O número de repetições pode ser conhecido previamente ou determinado por uma condição. Python oferece dois laços principais:
+
 - `while`: repete enquanto uma condição booleana for verdadeira.
 - `for`: itera sobre cada item de uma sequência (string, lista, intervalo, etc.).
 
@@ -86,6 +89,7 @@ for letra in "Python":
 ```
 
 Agora, se quisermos repetir um bloco um número fixo de vezes, usamos a função `range()`. Ela gera uma sequência de números inteiros.
+
 - `range(n)` gera números de `0` a `n-1`.
 - `range(inicio, fim)` gera de `inicio` até `fim-1`.
 - `range(inicio, fim, passo)` gera com o intervalo especificado.
@@ -105,6 +109,7 @@ for i in range(2, 11, 2):
 
 ### Controlando o laço: break e continue
 Python oferece duas instruções especiais para alterar o fluxo normal de um laço:
+
 - `break`: interrompe imediatamente o laço, saindo dele. O programa continua após o bloco do laço.
 - `continue`: pula para a próxima iteração, ignorando o restante do bloco atual.
 
@@ -278,6 +283,7 @@ else:
 
 ### Intermediário (aplicação)
 Uma livraria deseja um programa para calcular o total de uma venda. O usuário insere o preço de cada livro. O programa deve somar os valores até que o usuário digite 0 para encerrar. Ao final, exiba:
+
 - A quantidade de livros comprados.
 - O valor total da compra.
 - A média de preço por livro.
@@ -286,6 +292,7 @@ Utilize um laço `while` para receber os preços. Valide que o preço seja um va
 
 ### Avançado (desafio)
 Crie um programa que simule um caixa eletrônico simples. O programa inicia com um saldo de R$ 1000,00 e oferece um menu com as opções: [1] Depositar, [2] Sacar, [3] Saldo, [4] Sair. O menu deve reaparecer até o usuário escolher Sair. Regras:
+
 - Não permitir saque maior que o saldo.
 - Não permitir saque com valor negativo ou zero.
 - Depósito deve ser um valor positivo.
@@ -296,6 +303,7 @@ Crie um programa que simule um caixa eletrônico simples. O programa inicia com 
 
 ## Projeto Prático: Jogo de Adivinhação com Tentativas
 Desenvolva um jogo em que o computador escolhe um número aleatório entre 1 e 100, e o jogador tenta adivinhar. O programa deve:
+
 1. Gerar o número secreto usando `random.randint(1, 100)` (importe `random`).
 2. Dar as boas-vindas e informar que o número está entre 1 e 100.
 3. Usar um laço `while` para receber palpites até que o jogador acerte.
@@ -326,6 +334,7 @@ Implemente o jogo completo, aplicando os conceitos de `while`, `if/else` e contr
 
 ## Resumo
 Neste capítulo, você aprendeu que:
+
 - Laços de repetição permitem executar blocos de código múltiplas vezes.
 - O laço `while` repete enquanto uma condição for verdadeira, sendo ideal para situações com número incerto de iterações.
 - O laço `for` percorre cada item de uma sequência (listas, strings, intervalos) e é a melhor opção quando se sabe exatamente sobre quais elementos iterar.

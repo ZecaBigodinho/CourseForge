@@ -2,6 +2,7 @@
 
 ## Objetivos
 Neste capítulo, você aprenderá a:
+
 - Compreender o conceito de módulo e biblioteca em Python.
 - Importar módulos embutidos da biblioteca padrão (`math`, `random`, `datetime`, entre outros).
 - Utilizar diferentes formas de importação: `import`, `from ... import` e `import ... as`.
@@ -11,6 +12,7 @@ Neste capítulo, você aprenderá a:
 
 ## Pré-requisitos
 Para acompanhar este capítulo, é necessário que você tenha domínio sobre:
+
 - Definição e chamada de funções (`def`, `return`).
 - Tipos de dados básicos e coleções (listas, dicionários).
 - Estruturas de controle (`if`, `for`, `while`).
@@ -189,6 +191,7 @@ Se rodarmos `python meu_modulo.py`, veremos "Executando como script principal". 
 
 ### Explorando a biblioteca padrão
 A biblioteca padrão do Python é riquíssima. Alguns módulos que você pode explorar:
+
 - `os` e `sys`: interação com sistema operacional.
 - `json`, `csv`: leitura e escrita de dados estruturados.
 - `re`: expressões regulares.
@@ -205,6 +208,7 @@ pip install nome_da_biblioteca
 ```
 
 Exemplos de bibliotecas populares:
+
 - `requests`: realizar requisições HTTP.
 - `pandas`: análise de dados.
 - `flask`: desenvolvimento web.
@@ -326,6 +330,7 @@ Para usar uma biblioteca externa, instale-a com pip e importe-a como faria com q
 
 ### Intermediário (aplicação)
 Crie um módulo chamado `conversores.py` contendo as funções:
+
 - `kg_para_libras(kg)` que retorna `kg * 2.20462`.
 - `libras_para_kg(lb)` que retorna `lb / 2.20462`.
 
@@ -333,6 +338,7 @@ Em um programa separado, importe esse módulo e crie um conversor de peso que pe
 
 ### Avançado (desafio)
 Desenvolva um módulo `estatisticas.py` que contenha as funções:
+
 - `media(lista)`: retorna a média aritmética.
 - `mediana(lista)`: retorna a mediana (valor central após ordenação).
 - `moda(lista)`: retorna o(s) valor(es) mais frequente(s) (dica: use `collections.Counter` do módulo embutido `collections`).
@@ -343,11 +349,13 @@ Em seguida, crie um script que gera 1000 números aleatórios entre 1 e 100, e u
 Crie uma aplicação de diário de bordo que salva entradas em um arquivo de texto, com registro de data/hora, utilizando módulos personalizados.
 
 **Estrutura do projeto:**
+
 - `diario.py` – módulo principal com a lógica de entrada e exibição.
 - `registro.py` – módulo que contém funções para salvar e ler entradas do diário.
 - `utils.py` – módulo com funções utilitárias, como obter timestamp formatado.
 
 **Requisitos:**
+
 1. **Módulo `utils.py`:**
     - Função `obter_timestamp()` que retorna string com data e hora atual no formato `[AAAA-MM-DD HH:MM:SS]`.
 2. **Módulo `registro.py`:**
@@ -366,6 +374,7 @@ Esse projeto consolida a criação e uso de módulos próprios, importação, or
 
 ## Resumo
 Neste capítulo, você aprendeu que:
+
 - Módulos são arquivos `.py` que contêm código reutilizável; bibliotecas são conjuntos de módulos.
 - A biblioteca padrão do Python fornece muitos módulos embutidos (ex.: `math`, `random`, `datetime`).
 - A importação pode ser feita de várias formas: `import modulo`, `from modulo import item`, e com apelidos (`as`).

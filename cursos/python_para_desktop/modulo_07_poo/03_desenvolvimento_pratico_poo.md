@@ -2,6 +2,7 @@
 
 ## Objetivos
 Neste capítulo, você aprenderá a:
+
 - Modelar um sistema completo utilizando a Programação Orientada a Objetos.
 - Conectar múltiplas classes através de conceitos de **composição** e relacionamentos.
 - Estruturar o código separando **regras de negócio** (modelos) da **interação com o usuário**.
@@ -10,6 +11,7 @@ Neste capítulo, você aprenderá a:
 
 ## Pré-requisitos
 Antes de iniciar este capítulo, você deve dominar:
+
 - Classes e Instanciação ([01. Estudo do Paradigma POO](01_paradigma_poo.md)).
 - Métodos, Encapsulamento e Propriedades (`@property`) ([02. Conceitos de Métodos e Propriedades](02_metodos_e_propriedades.md)).
 - Tratamento de Exceções (`try/except`) e manipulação de listas.
@@ -232,6 +234,7 @@ print(p3) # Estoque deve ter caído de 8 para 6
 ## 📝 Desafio Prático: Sistema de Gestão de Frota
 
 Crie um programa POO para gerenciar uma frota de veículos de uma empresa:
+
 - Crie uma classe `Motorista` com `nome`, `cnh` e `status` ("Disponível" / "Em Viagem").
 - Crie uma classe `Veiculo` com `placa`, `modelo`, `quilometragem` e o motorista atribuído.
 - Crie um método `iniciar_viagem(distancia_km)` na classe `Veiculo` que atualiza a quilometragem do veículo e altera o status do motorista para "Em Viagem".
@@ -242,6 +245,7 @@ Crie um programa POO para gerenciar uma frota de veículos de uma empresa:
 ## 💡 Resumo do Módulo
 
 Neste módulo de Programação Orientada a Objetos:
+
 - Aprendemos o conceito de **Classes** (moldes) e **Objetos** (instâncias).
 - Dominamos o método construtor **`__init__`** e a referência **`self`**.
 - Vimos como **encapsular** atributos e expô-los com segurança usando **`@property`**.

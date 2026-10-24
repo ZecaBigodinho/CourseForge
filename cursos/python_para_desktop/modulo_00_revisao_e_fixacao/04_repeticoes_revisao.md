@@ -10,6 +10,7 @@
 ## 🎯 Por que esta revisão é para você?
 
 Se você já sentiu confusão com:
+
 * *"Quando devo usar `for` e quando devo usar `while`?"*
 * *"Como funciona o `range(0, 5)`? Por que ele não inclui o 5?"*
 * *"O que acontece quando meu programa entra em Loop Infinito e trava tudo?"*

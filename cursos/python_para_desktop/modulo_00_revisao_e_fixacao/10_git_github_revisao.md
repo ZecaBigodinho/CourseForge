@@ -10,6 +10,7 @@
 ## 🎯 Por que esta revisão é para você?
 
 Se você já passou por desespero ao se perguntar:
+
 * *"Por que não posso apenas copiar e colar a pasta como `projeto_v2_final_FINAL`?"*
 * *"Qual a diferença real entre o Git instalado no meu PC e o GitHub na nuvem?"*
 * *"O que fazem os 3 comandos mágicos: `add`, `commit` e `push`?"*

@@ -10,6 +10,7 @@
 ## 🎯 Por que esta revisão é para você?
 
 Se você já se pegou em dúvida sobre:
+
 * *"Por que preciso de um Banco de Dados se posso salvar tudo em arquivos de texto?"*
 * *"O que são as operações CRUD (`CREATE`, `READ`, `UPDATE`, `DELETE`)?"*
 * *"Como conectar o Python ao SQLite sem deixar a conexão aberta vazar dados?"*

@@ -2,6 +2,7 @@
 
 ## Objetivos
 Ao concluir este capítulo, você será capaz de:
+
 - Compreender o conceito de variável como um espaço de armazenamento nomeado na memória.
 - Declarar e atribuir valores a variáveis em Python.
 - Reconhecer e utilizar os tipos de dados básicos: inteiro (int), ponto flutuante (float), texto (str) e booleano (bool).
@@ -267,6 +268,7 @@ Por enquanto, suas variáveis existirão dentro do programa principal. Ao final 
 
 ### Intermediário (aplicação)
 Você está desenvolvendo um conversor de moedas simples. Sabendo que 1 dólar equivale a R$ 5,47 (cotação fictícia), escreva um programa que:
+
 - Pergunte ao usuário quantos dólares ele deseja comprar.
 - Armazene o valor em uma variável `dolares` (convertendo para `float`).
 - Calcule o valor em reais e armazene em `reais`.
@@ -275,6 +277,7 @@ Você está desenvolvendo um conversor de moedas simples. Sabendo que 1 dólar e
 
 ### Avançado (desafio)
 Crie um programa que simule o cadastro de um currículo básico. Ele deve solicitar ao usuário: nome, idade, altura (em metros) e se possui experiência profissional (`True`/`False`). Em seguida, exiba uma ficha resumo onde:
+
 - A idade deve ser exibida como inteiro, mas convertida para string para concatenar com “anos”.
 - A altura deve ser exibida com uma casa decimal.
 - A experiência deve ser exibida como “Sim” ou “Não”.
@@ -284,6 +287,7 @@ Utilize variáveis com nomes significativos, conversões de tipo e f-strings par
 
 ## Projeto Prático: Calculadora de IMC (Índice de Massa Corporal)
 Desenvolva um programa de console que calcula o IMC de uma pessoa, seguindo estas etapas:
+
 - Solicitar o nome do usuário.
 - Solicitar o peso (em quilogramas) e a altura (em metros).
 - Calcular o IMC pela fórmula: `imc = peso / (altura ** 2)`.
@@ -295,6 +299,7 @@ Desenvolva um programa de console que calcula o IMC de uma pessoa, seguindo esta
     - Acima de 30.0: "Obesidade"
 
 **Diretrizes:**
+
 - Utilize variáveis para armazenar nome, peso, altura e IMC.
 - Converta as entradas para `float` (peso e altura).
 - Use uma estrutura condicional (`if`/`elif`/`else`) para determinar a classificação.
@@ -313,6 +318,7 @@ Esse projeto integra declaração de variáveis, tipos de dados, conversão, ent
 
 ## Resumo
 Neste capítulo, você construiu a base de toda a programação em Python:
+
 - Variáveis são nomes que fazem referência a valores armazenados na memória.
 - A atribuição é feita com `=`, e Python infere o tipo dinamicamente.
 - Os quatro tipos de dados básicos são `int`, `float`, `str` e `bool`, cada um com operações características.

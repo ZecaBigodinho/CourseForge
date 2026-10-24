@@ -550,6 +550,7 @@ cadastro_clientes/
     - Na busca, se o campo estiver vazio, recarregar todos; senão, chamar `banco.buscar(termo)`.
 
 **Desafio extra (opcional):**
+
 - Adicione um `CTkLabel` de status na parte inferior que mostre a quantidade de clientes cadastrados.
 - Implemente a exportação da lista para CSV usando `filedialog.asksaveasfilename`.
 - Substitua a Treeview por uma lista de cards (`CTkFrame` para cada cliente) usando `CTkScrollableFrame`, para um visual mais moderno.

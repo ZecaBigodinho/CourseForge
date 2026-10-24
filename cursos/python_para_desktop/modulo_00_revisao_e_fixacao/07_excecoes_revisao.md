@@ -10,6 +10,7 @@
 ## 🎯 Por que esta revisão é para você?
 
 Se você já passou por situações como:
+
 * *"O usuário digitou letras onde deveria ser um número e o programa fechou sozinho!"*
 * *"O aplicativo tentou abrir um arquivo inexistente e deu uma tela vermelha no terminal!"*
 * *"Como faço para meu programa não travar na frente do cliente?"*

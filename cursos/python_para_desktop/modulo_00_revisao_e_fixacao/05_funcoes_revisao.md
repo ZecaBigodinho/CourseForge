@@ -10,6 +10,7 @@
 ## 🎯 Por que esta revisão é para você?
 
 Se você já se fez perguntas como:
+
 * *"Para que serve criar funções se posso escrever o código direto?"*
 * *"Qual a diferença entre usar `print()` dentro da função e usar `return`?"*
 * *"O que são os argumentos que passamos dentro dos parênteses `()`?"*

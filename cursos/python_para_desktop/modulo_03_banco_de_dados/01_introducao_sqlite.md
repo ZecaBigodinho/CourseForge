@@ -418,10 +418,12 @@ Retome o Gerenciador de Tarefas desenvolvido nos módulos anteriores e substitua
     - Ao inicializar o banco, se o arquivo estiver corrompido, exiba um aviso e recrie a tabela (ou simplesmente encerre de forma graciosa).
 
 **Bônus (opcional):**
+
 - Adicione uma função `buscar_por_palavra_chave(palavra)` que use `LIKE` para pesquisar tarefas cuja descrição contenha o termo.
 - Implemente ordenação por prioridade ou data diretamente na consulta SQL.
 
 **Orientações de implementação:**
+
 - Mantenha o código da interface separado do código de acesso a dados.
 - Use `with sqlite3.connect(...)` em todas as funções.
 - Lembre-se de que, após migrar, o arquivo `tarefas.json` não será mais utilizado. Você pode excluí-lo ou mantê-lo como backup.

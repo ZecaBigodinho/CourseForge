@@ -2,6 +2,7 @@
 
 ## Objetivos
 Neste capítulo, você aprenderá a:
+
 - Compreender a necessidade de estruturas de dados para armazenar múltiplos valores.
 - Criar e manipular listas: coleções ordenadas e mutáveis.
 - Criar e utilizar tuplas: coleções ordenadas e imutáveis.
@@ -12,6 +13,7 @@ Neste capítulo, você aprenderá a:
 
 ## Pré-requisitos
 Para acompanhar este capítulo, você deve estar familiarizado com:
+
 - Variáveis e tipos de dados básicos (int, float, str, bool).
 - Operadores aritméticos, de comparação e lógicos.
 - Estruturas de controle (`if`, `elif`, `else`).
@@ -24,6 +26,7 @@ Caso algum desses tópicos ainda não esteja claro, revise os capítulos anterio
 Até agora, armazenamos valores em variáveis independentes. Mas o que acontece quando você precisa guardar as notas de 30 alunos? Criar 30 variáveis `nota1`, `nota2`, ... `nota30` é impraticável. Pior ainda se o número de alunos for desconhecido.
 
 As coleções resolvem exatamente esse problema. Elas permitem agrupar múltiplos elementos em uma única estrutura, tratando-os como um conjunto. Python oferece três coleções fundamentais que cobrem a grande maioria das necessidades:
+
 - **Listas**: para armazenar sequências de itens que podem ser alterados (ex.: carrinho de compras).
 - **Tuplas**: para agrupar dados que não devem mudar (ex.: coordenadas geográficas).
 - **Dicionários**: para associar informações por meio de chaves únicas (ex.: cadastro de clientes por CPF).
@@ -345,6 +348,7 @@ Você é responsável por controlar as notas de uma turma. Crie uma lista de lis
 
 ### Avançado (desafio)
 Implemente um sistema simples de agenda telefônica usando um dicionário. O programa deve oferecer um menu:
+
 1. **Adicionar contato**: solicita nome e telefone; se o nome já existir, pergunta se deseja sobrescrever.
 2. **Buscar contato**: solicita nome e exibe o telefone, ou "Contato não encontrado".
 3. **Listar contatos**: exibe todos os contatos em ordem alfabética.
@@ -356,6 +360,7 @@ Utilize funções para cada operação. Armazene os contatos em um dicionário a
 Desenvolva um programa que gerencie uma turma de alunos, suas notas e estatísticas, utilizando listas, tuplas e dicionários.
 
 **Requisitos:**
+
 1. O programa armazena os alunos em uma lista chamada `turma`. Cada elemento da lista é um dicionário representando um aluno, com as chaves:
     - `"nome"` (string)
     - `"matricula"` (int)
@@ -391,6 +396,7 @@ Este projeto solidifica a manipulação de listas (turma), dicionários (dados d
 
 ## Resumo
 Neste capítulo, você aprendeu que:
+
 - **Listas** são coleções ordenadas e mutáveis, ideais para sequências dinâmicas.
 - **Tuplas** são ordenadas e imutáveis, perfeitas para registros fixos e chaves de dicionários.
 - **Dicionários** mapeiam chaves a valores, permitindo acesso rápido por identificadores.

@@ -418,6 +418,7 @@ Retome o Dashboard Financeiro desenvolvido no Módulo 03 e aplique os conceitos 
 - **Documentação:** Adicione um `README.md` (ou seção no próprio projeto) explicando como configurar o ambiente, copiando `.env.example` para `.env`.
 
 **Desafio extra (opcional):**
+
 - Implemente um modo de "primeira execução" que, se o `.env` não existir, copia automaticamente o `.env.example` para `.env` e orienta o usuário a preenchê-lo.
 - Utilize `keyring` para armazenar a `API_KEY` de forma ainda mais segura, carregando-a de lá se disponível, com fallback para o `.env`.
 

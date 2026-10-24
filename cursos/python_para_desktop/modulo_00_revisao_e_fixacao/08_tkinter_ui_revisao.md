@@ -10,6 +10,7 @@
 ## 🎯 Por que esta revisão é para você?
 
 Se você já se pegou em dúvida sobre:
+
 * *"Por que criei um botão mas ele não aparece na tela?"*
 * *"Qual a diferença entre `pack()` e `grid()` para posicionar elementos?"*
 * *"Como conectar o clique de um botão a uma função Python?"*
