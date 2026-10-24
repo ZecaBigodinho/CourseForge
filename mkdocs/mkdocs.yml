@@ -202,4 +202,11 @@ nav:
     - Técnicas que fazem diferença: introducao_a_ia/modulo_02_usando_assistentes/03_tecnicas_que_fazem_diferenca.md
     - Conferindo as respostas: introducao_a_ia/modulo_02_usando_assistentes/04_conferindo_as_respostas.md
     - 'Projeto do módulo: meu caderno de prompts': introducao_a_ia/modulo_02_usando_assistentes/05_projeto_caderno_de_prompts.md
+  - IA no estudo e no trabalho:
+    - Visão Geral: introducao_a_ia/modulo_03_ia_no_estudo_e_no_trabalho/index.md
+    - Estudar com IA: introducao_a_ia/modulo_03_ia_no_estudo_e_no_trabalho/01_estudar_com_ia.md
+    - Escrever e comunicar no trabalho: introducao_a_ia/modulo_03_ia_no_estudo_e_no_trabalho/02_escrever_e_comunicar.md
+    - Planilhas e dados com IA: introducao_a_ia/modulo_03_ia_no_estudo_e_no_trabalho/03_planilhas_e_dados.md
+    - Código e imagens com IA: introducao_a_ia/modulo_03_ia_no_estudo_e_no_trabalho/04_codigo_e_imagens.md
+    - 'Projeto do módulo: uma tarefa real com IA': introducao_a_ia/modulo_03_ia_no_estudo_e_no_trabalho/05_projeto_tarefa_real_com_ia.md
 docs_dir: ../cursos

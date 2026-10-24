@@ -145,4 +145,4 @@ Você saiu do “pergunta e aceita” para o uso consciente:
 
 ## ➡️ Próximo passo
 
-**Módulo 03 — IA no estudo e no trabalho** *(em preparação)*: resumos, explicações, código, planilhas e imagens — com as ferramentas gratuitas de cada tarefa — e quando **não** vale a pena usar IA.
+**[Módulo 03 — IA no estudo e no trabalho](../modulo_03_ia_no_estudo_e_no_trabalho/index.md)**: resumos, explicações, código, planilhas e imagens — com as ferramentas gratuitas de cada tarefa — e quando **não** vale a pena usar IA.

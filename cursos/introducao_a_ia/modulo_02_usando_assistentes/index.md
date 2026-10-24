@@ -58,4 +58,4 @@ Antes de seguir, confira se você consegue:
 
 ## ➡️ Próximo passo
 
-**Módulo 03 — IA no estudo e no trabalho** *(em preparação)* — resumos, explicações, código, planilhas e imagens, e quando não usar IA.
+**[Módulo 03 — IA no estudo e no trabalho](../modulo_03_ia_no_estudo_e_no_trabalho/index.md)** — resumos, explicações, código, planilhas e imagens, e quando não usar IA.
