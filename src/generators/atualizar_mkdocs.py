@@ -101,7 +101,7 @@ class MkDocsUpdater:
         output_path = self._salvar(mkdocs_cfg)
 
         if not silencioso:
-            cursos_count = len(nav) - 1  # descontar o Home
+            cursos_count = len(nav) - 1  # descontar o Início
             UI.sucesso(f"mkdocs.yml atualizado: {output_path.relative_to(self.fm.root)}")
             UI.muted(f"  {cursos_count} curso(s) na navegação.")
 
@@ -123,14 +123,14 @@ class MkDocsUpdater:
 
         Usa metadados .courseforge.yaml para nomes legíveis.
         Formato resultante:
-          - Home: index.md
+          - Início: index.md
           - Python para Iniciantes:
             - Índice: cursos/python_para_iniciantes/docs/index.md
             - Introdução ao Python:
               - Visão Geral: .../index.md
               - Variáveis e Tipos: .../01_variaveis.md
         """
-        nav: list = [{"Home": "index.md"}]
+        nav: list = [{"Início": "index.md"}]
 
         cursos_dir = self.fm.path(DIR_CURSOS)
         for curso_dir in self.fm.listar_subdiretorios(cursos_dir):

@@ -17,7 +17,7 @@ diretorios:
 
 # Configurações do MkDocs gerado
 mkdocs:
-  site_name: "CourseForge Docs"
+  site_name: "CourseForge · IF"
   site_description: "Cursos gratuitos para a sala de aula: Python para Desktop do zero ao sistema completo, com aulas práticas, revisão visual e projeto final."
   site_author: "Pedro Paulo IF"
   # Rodapé de todas as páginas (aceita HTML)
@@ -25,21 +25,24 @@ mkdocs:
   theme:
     name: material
     language: pt
-    icon:
-      logo: material/school
+    # Identidade visual: arquivos em cursos/assets/, cores definidas em stylesheets/custom.css
+    logo: assets/logo.svg
+    favicon: assets/favicon.svg
     palette:
-      - scheme: default
-        primary: deep purple
-        accent: teal
+      - media: "(prefers-color-scheme: light)"
+        scheme: default
+        primary: custom
+        accent: custom
         toggle:
-          icon: material/brightness-7
-          name: Modo escuro
-      - scheme: slate
-        primary: deep purple
-        accent: teal
+          icon: material/weather-night
+          name: Mudar para o modo escuro
+      - media: "(prefers-color-scheme: dark)"
+        scheme: slate
+        primary: custom
+        accent: custom
         toggle:
-          icon: material/brightness-4
-          name: Modo claro
+          icon: material/weather-sunny
+          name: Mudar para o modo claro
     font:
       text: Inter
       code: JetBrains Mono
@@ -49,11 +52,21 @@ mkdocs:
       - navigation.indexes
       - navigation.path
       - navigation.top
+      - navigation.footer
       - toc.integrate
       - search.suggest
       - search.highlight
       - content.tabs.link
       - content.code.copy
+  extra:
+    generator: false
+    social:
+      - icon: fontawesome/brands/github
+        link: https://github.com/ZecaBigodinho/curso-python
+        name: Repositório no GitHub
+      - icon: fontawesome/solid/envelope
+        link: mailto:pedropaulo4hire@gmail.com
+        name: Falar com o professor
   extra_css:
     - stylesheets/custom.css
   markdown_extensions:

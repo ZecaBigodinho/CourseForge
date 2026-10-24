@@ -1,25 +1,27 @@
-site_name: CourseForge Docs
+site_name: CourseForge · IF
 site_description: 'Cursos gratuitos para a sala de aula: Python para Desktop do zero
   ao sistema completo, com aulas práticas, revisão visual e projeto final.'
 site_author: Pedro Paulo IF
 theme:
   name: material
   language: pt
-  icon:
-    logo: material/school
+  logo: assets/logo.svg
+  favicon: assets/favicon.svg
   palette:
-  - scheme: default
-    primary: deep purple
-    accent: teal
+  - media: '(prefers-color-scheme: light)'
+    scheme: default
+    primary: custom
+    accent: custom
     toggle:
-      icon: material/brightness-7
-      name: Modo escuro
-  - scheme: slate
-    primary: deep purple
-    accent: teal
+      icon: material/weather-night
+      name: Mudar para o modo escuro
+  - media: '(prefers-color-scheme: dark)'
+    scheme: slate
+    primary: custom
+    accent: custom
     toggle:
-      icon: material/brightness-4
-      name: Modo claro
+      icon: material/weather-sunny
+      name: Mudar para o modo claro
   font:
     text: Inter
     code: JetBrains Mono
@@ -29,12 +31,22 @@ theme:
   - navigation.indexes
   - navigation.path
   - navigation.top
+  - navigation.footer
   - toc.integrate
   - search.suggest
   - search.highlight
   - content.tabs.link
   - content.code.copy
 copyright: Material gratuito para uso educacional · Prof. Pedro Paulo IF · <a href="mailto:pedropaulo4hire@gmail.com">pedropaulo4hire@gmail.com</a>
+extra:
+  generator: false
+  social:
+  - icon: fontawesome/brands/github
+    link: https://github.com/ZecaBigodinho/curso-python
+    name: Repositório no GitHub
+  - icon: fontawesome/solid/envelope
+    link: mailto:pedropaulo4hire@gmail.com
+    name: Falar com o professor
 extra_css:
 - stylesheets/custom.css
 markdown_extensions:
@@ -55,7 +67,7 @@ markdown_extensions:
 - toc:
     permalink: true
 nav:
-- Home: index.md
+- Início: index.md
 - Python para Desktop:
   - Índice: python_para_desktop/docs/index.md
   - Configuração do VS Code & Ambiente Python:

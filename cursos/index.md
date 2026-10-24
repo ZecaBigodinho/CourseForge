@@ -1,129 +1,172 @@
-# :mortar_board: CourseForge — Python para Desktop
-
-> Sua plataforma de estudos para dominar **Python aplicado a interfaces gráficas, banco de dados, orientação a objetos e desenvolvimento profissional com Git & GitHub**.
-
+---
+title: Início
+hide:
+  - navigation
+  - toc
 ---
 
-## :dart: O que é este curso?
+<div class="cf-hero" markdown>
 
-Este é um curso **prático e intensivo** de Python voltado para o desenvolvimento de **aplicações desktop completas** — da lógica de programação até a entrega de um software funcional com interface gráfica, banco de dados e versionamento profissional com Git & GitHub.
+<p class="cf-hero__eyebrow">Plataforma de cursos gratuita · Prof. Pedro Paulo IF</p>
 
-Ao final do curso, você será capaz de criar programas reais com janelas interativas, armazenamento de dados persistente, modelagem orientada a objetos, boas práticas de configuração com variáveis de ambiente, e um **portfólio profissional no GitHub** com repositórios organizados e README pessoal.
+# Aprenda fazendo, do primeiro código ao projeto final { .cf-hero__title }
 
----
+<p class="cf-hero__lead">Cursos práticos em português para a sala de aula: aulas curtas, exemplos que você digita, revisão visual e projetos que viram portfólio.</p>
 
-## :books: Estrutura do Curso
+[Começar pelo Módulo 00](python_para_desktop/modulo_06_vscode_config/index.md){ .md-button .md-button--primary }
+[Ver o curso de Python](python_para_desktop/docs/index.md){ .md-button }
 
-O material está dividido em **7 módulos progressivos + Central de Revisão Visual**, cada um com aulas teóricas, exemplos de código, diagramas interativos e projetos práticos:
+<ul class="cf-hero__badges" aria-label="Características">
+  <li>100% gratuito</li>
+  <li>Em português</li>
+  <li>Feito para a sala de aula</li>
+</ul>
 
----
+</div>
 
-### :hammer_and_wrench: Módulo 00 — Configuração do VS Code & Ambiente
+## Cursos
 
-**Comece por aqui.** Passo a passo completo para instalar o Python 3, o VS Code, extensões profissionais e ambientes virtuais (`venv`) — no laboratório ou no seu computador pessoal.
+<div class="grid cards cf-cursos" markdown>
 
----
+-   :material-language-python:{ .lg .middle } __Python para Desktop__
 
-### :snake: Módulo 01 — Fundamentos de Python
+    <span class="cf-tag cf-tag--ok">Disponível</span>
 
-Os alicerces da linguagem. Aqui você aprende tudo que precisa para escrever código Python com confiança:
+    ---
 
-- Variáveis, tipos de dados e operadores
-- Estruturas condicionais (`if/else`) e laços de repetição
-- Funções, módulos e organização de código
-- Coleções (listas, dicionários, tuplas, sets)
-- Manipulação de strings e arquivos
-- Tratamento de exceções
-- **Mini-projeto** de consolidação — um sistema completo no terminal
+    Do zero ao sistema desktop completo: fundamentos, POO, interfaces gráficas, banco de dados e um projeto final em equipe.
 
----
+    7 módulos · 40 aulas · 14 aulas de revisão
 
-### :ice_cube: Módulo 02 — Programação Orientada a Objetos (POO)
+    [:octicons-arrow-right-24: Acessar o curso](python_para_desktop/docs/index.md)
 
-A base para organizar programas maiores — e pré-requisito do Projeto Finalizador (MVC/CRUD):
+-   :material-microsoft-office:{ .lg .middle } __Pacote Office__
 
-- Paradigma POO vs Programação Procedural
-- Conceito de Classes (molde) e Objetos (instâncias)
-- O construtor `__init__`, o parâmetro `self` e métodos de instância
-- Encapsulamento de dados (`_` e `__`)
-- Propriedades com `@property` e `@property.setter`
-- **Desenvolvimento Prático** de um sistema real orientado a objetos
+    <span class="cf-tag">Em breve</span>
 
----
+    ---
 
-### :desktop_computer: Módulo 03 — Interfaces Gráficas
+    Word, Excel e PowerPoint para estudar e trabalhar, com alternativas gratuitas (LibreOffice e Google Workspace).
 
-Hora de sair do terminal! Aqui você aprende a criar **janelas e aplicações visuais** usando Tkinter e CustomTkinter:
+-   :material-robot-happy-outline:{ .lg .middle } __Introdução à Inteligência Artificial__
 
-- Criação de janelas, botões, labels e inputs com **Tkinter**
-- Gerenciadores de layout (`pack`, `grid`, `place`)
-- Eventos, interatividade e bindings
-- **CustomTkinter** para interfaces modernas e estilizadas
-- **Projeto Prático** — uma aplicação completa com UI profissional
+    <span class="cf-tag">Em breve</span>
 
----
+    ---
 
-### :file_cabinet: Módulo 04 — Banco de Dados
+    O que é IA, como usar assistentes com responsabilidade, engenharia de prompt e um mini-projeto com Python.
 
-Seus programas precisam guardar informações! Aqui você conecta sua interface a um banco de dados real:
+</div>
 
-- Introdução ao **SQLite** — criação de tabelas, consultas SQL
-- Integração do banco de dados com a interface gráfica
-- **Variáveis de ambiente** (`.env`) para proteger credenciais
-- **Projeto de Dados** — interface + SQLite + `.env` em arquitetura MVC, o ensaio geral para o Projeto Finalizador
+## Como funciona
 
----
+<div class="grid cf-passos" markdown>
 
-### :building_construction: Módulo 05 — Projeto Finalizador
+<div class="cf-passo" markdown>
+<span class="cf-passo__num">1</span>
 
-Construção incremental de um **sistema desktop completo** — do login ao deploy:
+__Prepare o ambiente__
 
-- Arquitetura MVC e organização profissional
-- Tela de Login, Menu Principal e navegação entre janelas
-- CRUD completo com SQLite e sincronização com nuvem
-- Exercício bônus com **Streamlit + Neon Database** (Python na web)
-- **Projeto Final do Curso** — entrega e apresentação do sistema, que **libera o certificado**
+Instale o Python e o VS Code com o passo a passo do Módulo 00.
+</div>
 
----
+<div class="cf-passo" markdown>
+<span class="cf-passo__num">2</span>
 
-### :twisted_rightwards_arrows: Módulo 06 — Git & GitHub (Bônus)
+__Siga a trilha__
 
-Aprenda a **versionar, colaborar e publicar** seu projeto como um profissional:
+Estude os módulos na ordem do menu: cada um usa o anterior.
+</div>
 
-- Git e GitHub do zero — conta, repositório, README, .gitignore
-- GitHub Desktop e Git no terminal (5 comandos essenciais)
-- Trabalho em equipe — clone, commit, push, pull, conflitos
-- README profissional com badges, screenshots e instruções
-- Releases e versionamento (`v1.0.0`)
-- **Usando IA para gerar documentação** — prompts prontos
-- **README pessoal de perfil** — gráfico de commits, projetos destacados e stats
-- Preparação do **portfólio profissional** no GitHub
+<div class="cf-passo" markdown>
+<span class="cf-passo__num">3</span>
 
----
+__Pratique de verdade__
 
-### :brain: Central de Revisão Visual & Fixação Didática
+Digite os exemplos, faça os exercícios e os projetos de cada módulo.
+</div>
 
-Aulas especiais no final do curso com analogias físicas do cotidiano, fluxogramas em Mermaid.js e guia humanizado de erros para quem busca fixar conceitos com facilidade.
+<div class="cf-passo" markdown>
+<span class="cf-passo__num">4</span>
 
----
+__Entregue o Projeto Final__
 
-## :trophy: Certificado
+Apresente o sistema em equipe no Módulo 05 e receba o certificado.
+</div>
 
-!!! warning "Importante"
-    O certificado é liberado por **um único requisito**: entregar e apresentar o **Projeto Final do Curso** — capítulo 12 do **Módulo 05 (Projeto Finalizador)**. Ele integra tudo que foi aprendido: Python + POO + Interface Gráfica + Banco de Dados + Nuvem.
+</div>
+
+## Trilha do curso de Python
+
+<div class="grid cards cf-trilha" markdown>
+
+-   :material-tools:{ .middle } __00 · Ambiente__
+
+    Python, VS Code, extensões e `venv`. **Comece por aqui.**
+
+    [:octicons-arrow-right-24: 2 aulas](python_para_desktop/modulo_06_vscode_config/index.md)
+
+-   :material-code-braces:{ .middle } __01 · Fundamentos__
+
+    Variáveis, decisões, laços, funções, coleções, arquivos e exceções.
+
+    [:octicons-arrow-right-24: 11 aulas](python_para_desktop/modulo_01_fundamentos/index.md)
+
+-   :material-cube-outline:{ .middle } __02 · POO__
+
+    Classes, objetos, `self`, encapsulamento e `@property`.
+
+    [:octicons-arrow-right-24: 3 aulas](python_para_desktop/modulo_07_poo/index.md)
+
+-   :material-application-outline:{ .middle } __03 · Interfaces Gráficas__
+
+    Tkinter, layouts, eventos e CustomTkinter.
+
+    [:octicons-arrow-right-24: 5 aulas](python_para_desktop/modulo_02_interfaces_graficas/index.md)
+
+-   :material-database-outline:{ .middle } __04 · Banco de Dados__
+
+    SQLite, integração com a interface e `.env`.
+
+    [:octicons-arrow-right-24: 4 aulas](python_para_desktop/modulo_03_banco_de_dados/index.md)
+
+-   :material-hammer-wrench:{ .middle } __05 · Projeto Finalizador__
+
+    Sistema Escolar em equipe: login, CRUD, SQLite e nuvem. **Libera o certificado.**
+
+    [:octicons-arrow-right-24: 13 aulas](python_para_desktop/modulo_04_projeto_finalizador/index.md)
+
+-   :material-source-branch:{ .middle } __06 · Git & GitHub__ <span class="cf-tag">Bônus</span>
+
+    Versionar, colaborar e publicar o projeto como portfólio.
+
+    [:octicons-arrow-right-24: 2 aulas](python_para_desktop/modulo_05_git_github/index.md)
+
+-   :material-lightbulb-on-outline:{ .middle } __Central de Revisão Visual__ <span class="cf-tag">Apoio</span>
+
+    Analogias do dia a dia, fluxogramas e erros comuns para revisar a qualquer momento.
+
+    [:octicons-arrow-right-24: 14 aulas](python_para_desktop/modulo_00_revisao_e_fixacao/index.md)
+
+</div>
+
+## Certificado
+
+!!! success "Um único requisito"
+    O certificado é liberado ao **entregar e apresentar o Projeto Final do Curso** — [capítulo 12 do Módulo 05 (Projeto Finalizador)](python_para_desktop/modulo_04_projeto_finalizador/12_projeto_final.md). Ele integra tudo: Python + POO + Interface Gráfica + Banco de Dados + Nuvem.
 
     O **Mini-projeto** (Módulo 01) e o **Projeto de Dados** (Módulo 04) são etapas de prática — importantes para chegar preparado, mas não liberam o certificado sozinhos. O Módulo 06 (Git & GitHub) é bônus.
 
----
+## Perguntas frequentes
 
-## :rocket: Como usar este material
+??? question "Preciso saber programar para começar?"
+    Não. O curso começa do zero: o Módulo 00 ensina a instalar tudo e o Módulo 01 parte da primeira variável.
 
-1. **Comece pelo Módulo 00** — prepare o Python e o VS Code
-2. **Siga a ordem dos módulos** — cada um depende do anterior
-3. **Consulte a Central de Revisão Visual** sempre que tiver dúvidas sobre algum conceito
-4. **Digite os exemplos** — não apenas copie, escreva o código você mesmo
-5. **Faça os exercícios** — a prática é o que fixa o conteúdo
-6. **Complete os projetos** — eles simulam situações reais de desenvolvimento
+??? question "Posso estudar em casa?"
+    Sim. O site funciona no computador, no tablet e no celular. Para programar, siga o Módulo 00 no seu computador pessoal.
 
-!!! tip "Navegação"
-    Use o **menu lateral** para acessar cada módulo e aula. Os capítulos estão numerados na ordem recomendada de estudo.
+??? question "Tenho dúvida em um conceito. Onde reviso?"
+    Na [Central de Revisão Visual](python_para_desktop/modulo_00_revisao_e_fixacao/index.md): cada tema tem analogias, diagramas e os erros mais comuns.
+
+??? question "Encontrei um erro no material. Como aviso?"
+    Abra uma [issue no GitHub](https://github.com/ZecaBigodinho/curso-python/issues) ou envie um e-mail para [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com).

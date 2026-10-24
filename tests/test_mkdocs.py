@@ -79,14 +79,14 @@ class TestMkDocsUpdater:
         output = updater.atualizar(silencioso=True)
         parsed = yaml.safe_load(output.read_text(encoding="utf-8"))
         nav = parsed["nav"]
-        # Primeiro item deve ser Home
-        assert nav[0] == {"Home": "index.md"}
+        # Primeiro item deve ser Início
+        assert nav[0] == {"Início": "index.md"}
 
     def test_nav_contem_curso(self, updater, estrutura_completa):
         output = updater.atualizar(silencioso=True)
         parsed = yaml.safe_load(output.read_text(encoding="utf-8"))
         nav = parsed["nav"]
-        # Deve ter pelo menos o Home + 1 curso
+        # Deve ter pelo menos o Início + 1 curso
         assert len(nav) >= 2
 
     def test_nav_usa_nome_legivel_do_curso(self, updater, estrutura_completa):
@@ -104,11 +104,11 @@ class TestMkDocsUpdater:
         assert output.exists()
 
     def test_sem_cursos_nav_apenas_home(self, updater, fm_temp):
-        """Sem cursos, nav deve ter apenas Home."""
+        """Sem cursos, nav deve ter apenas Início."""
         fm_temp.criar_diretorio(fm_temp.path("cursos"))
         output = updater.atualizar(silencioso=True)
         parsed = yaml.safe_load(output.read_text(encoding="utf-8"))
-        assert parsed["nav"] == [{"Home": "index.md"}]
+        assert parsed["nav"] == [{"Início": "index.md"}]
 
 
 class TestOrdemDosModulos:
