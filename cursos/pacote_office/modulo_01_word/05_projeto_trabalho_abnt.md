@@ -161,4 +161,4 @@ Você saiu do “documento em branco” para um trabalho que segue a norma, usan
 
 ## ➡️ Próximo passo
 
-**Módulo 02 — Excel** *(em preparação)*: fórmulas, tabelas e gráficos — e a planilha que alimentou a sua mala direta.
+**[Módulo 02 — Excel](../modulo_02_excel/index.md)**: fórmulas, tabelas e gráficos — e a planilha que alimentou a sua mala direta.

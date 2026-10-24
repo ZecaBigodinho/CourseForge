@@ -18,7 +18,7 @@ Ao final desta aula, você será capaz de:
 ## Pré-requisitos
 
 - [Aula 01](01_primeiros_passos_e_formatacao.md): formatação básica.
-- Saber digitar dados numa planilha do Excel (o Módulo 02 aprofunda).
+- Saber digitar dados numa planilha do Excel (o [Módulo 02 — Excel](../modulo_02_excel/index.md) aprofunda).
 
 !!! warning "Precisa do Word instalado"
     A mala direta fica na aba **Correspondências**, que existe no Word **instalado** no computador. O Word na web (navegador) não tem essa aba. Se estiver no navegador, clique em **Editando ➔ Abrir no Aplicativo da Área de Trabalho**.

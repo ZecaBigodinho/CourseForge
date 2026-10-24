@@ -60,4 +60,4 @@ Antes de seguir, confira se você consegue:
 
 ## ➡️ Próximo passo
 
-**Módulo 02 — Excel** *(em preparação)* — fórmulas, tabelas e gráficos para organizar dados.
+**[Módulo 02 — Excel](../modulo_02_excel/index.md)** — fórmulas, tabelas e gráficos para organizar dados.

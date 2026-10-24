@@ -1,12 +1,12 @@
 # Pacote Office
 
 > **Autor:** Prof. Pedro Paulo IF · [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com)  
-> **Versão:** 0.2.0  
-> **Situação:** em andamento — Módulo 01 disponível  
+> **Versão:** 0.3.0  
+> **Situação:** em andamento — Módulos 01 e 02 disponíveis  
 > **Versão do Office nas aulas:** Microsoft 365 (com os caminhos equivalentes no LibreOffice e no Google)
 
-!!! success "Comece agora pelo Word"
-    O **[Módulo 01 — Word](../modulo_01_word/index.md)** já está disponível: formatação, estilos, numeração e sumário, citações e referências **ABNT**, mala direta e um trabalho escolar completo como projeto. Os demais módulos serão publicados um a um.
+!!! success "Word e Excel já disponíveis"
+    O **[Módulo 01 — Word](../modulo_01_word/index.md)** traz formatação, estilos, sumário, citações e referências **ABNT**, mala direta e um trabalho escolar completo como projeto. O **[Módulo 02 — Excel](../modulo_02_excel/index.md)** vai de fórmulas e referências à tabela dinâmica, com `PROCX`, funções modernas, gráficos, macros e um controle de notas da turma como projeto. Os demais módulos serão publicados um a um.
 
 ---
 
@@ -20,9 +20,9 @@
 
 Documentos com aparência profissional: formatação, **estilos**, sumário automático, citações e referências **ABNT** e **mala direta** — com um trabalho escolar completo como projeto. [Acessar o módulo](../modulo_01_word/index.md)
 
-### Módulo 02 — Excel
+### Módulo 02 — Excel ✅ disponível
 
-Fórmulas e funções, **tabelas**, gráficos, **tabela dinâmica**, funções modernas e uma introdução à automação.
+Fórmulas e funções (`SE`, `CONT.SE`, `SOMASE`, `PROCX`), **tabelas**, formatação condicional, gráficos, **tabela dinâmica**, funções modernas (`ÚNICO`, `FILTRO`) e uma introdução à automação com macros — com um controle de notas da turma como projeto. [Acessar o módulo](../modulo_02_excel/index.md)
 
 ### Módulo 03 — PowerPoint
 

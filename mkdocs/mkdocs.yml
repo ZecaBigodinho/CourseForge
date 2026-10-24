@@ -158,6 +158,13 @@ nav:
     - Sumário, citações e referências (ABNT): pacote_office/modulo_01_word/03_sumario_citacoes_e_referencias.md
     - 'Mala direta: certificados e etiquetas em lote': pacote_office/modulo_01_word/04_mala_direta.md
     - 'Projeto do módulo: trabalho escolar no padrão ABNT': pacote_office/modulo_01_word/05_projeto_trabalho_abnt.md
+  - Excel:
+    - Visão Geral: pacote_office/modulo_02_excel/index.md
+    - 'Primeiros passos: células, fórmulas e referências': pacote_office/modulo_02_excel/01_celulas_formulas_e_referencias.md
+    - 'Funções essenciais: SE, CONT.SE, SOMASE e PROCX': pacote_office/modulo_02_excel/02_funcoes_essenciais.md
+    - Tabelas, gráficos e formatação condicional: pacote_office/modulo_02_excel/03_tabelas_graficos_e_formatacao.md
+    - Tabela dinâmica, funções modernas e automação: pacote_office/modulo_02_excel/04_tabela_dinamica_e_automacao.md
+    - 'Projeto do módulo: controle de notas da turma': pacote_office/modulo_02_excel/05_projeto_controle_de_notas.md
 - Introdução à IA:
   - Apresentação do curso: introducao_a_ia/docs/index.md
 docs_dir: ../cursos
