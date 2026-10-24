@@ -319,6 +319,54 @@ Uma prática comum é usar `pack` para organizar frames que representam grandes 
 2. Utilizando `grid()`, monte uma janela com dois Labels e dois Entries, como se fosse um login (usuário e senha). Use `sticky` e `padx`/`pady` para espaçamento.
 3. Posicione um botão "Ajuda" no canto superior direito da janela usando `place()`. Dica: use `relx=1.0`, `rely=0.0` e `anchor="ne"`.
 
+<!-- gabarito -->
+??? success "Gabarito — Básico"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python title="exercicio1_pack.py"
+    import tkinter as tk
+
+    janela = tk.Tk()
+    janela.title("pack: topo, centro e rodapé")
+    janela.geometry("300x200")
+
+    tk.Label(janela, text="Topo", bg="#4F35B5", fg="white").pack(side="top", fill="x")
+    tk.Label(janela, text="Rodapé", bg="#333", fg="white").pack(side="bottom", fill="x")
+    # Por último: o centro ocupa todo o espaço que sobrou
+    tk.Label(janela, text="Centro", bg="#E8E4F8").pack(fill="both", expand=True)
+
+    janela.mainloop()
+    ```
+
+    ```python title="exercicio2_grid.py"
+    import tkinter as tk
+
+    janela = tk.Tk()
+    janela.title("Login com grid")
+
+    tk.Label(janela, text="Usuário:").grid(row=0, column=0, sticky="e", padx=10, pady=5)
+    tk.Entry(janela).grid(row=0, column=1, sticky="we", padx=10, pady=5)
+    tk.Label(janela, text="Senha:").grid(row=1, column=0, sticky="e", padx=10, pady=5)
+    tk.Entry(janela, show="*").grid(row=1, column=1, sticky="we", padx=10, pady=5)
+    janela.columnconfigure(1, weight=1)  # a coluna dos campos acompanha a largura da janela
+
+    janela.mainloop()
+    ```
+
+    ```python title="exercicio3_place.py"
+    import tkinter as tk
+
+    janela = tk.Tk()
+    janela.title("place")
+    janela.geometry("300x150")
+
+    # relx=1.0/rely=0.0 = canto superior direito; anchor="ne" prende o botão por esse canto
+    tk.Button(janela, text="Ajuda").place(relx=1.0, rely=0.0, anchor="ne", x=-5, y=5)
+
+    janela.mainloop()
+    ```
+
+
 ### Intermediário (aplicação)
 
 Construa uma interface para um conversor de moedas, contendo:
@@ -327,6 +375,71 @@ Construa uma interface para um conversor de moedas, contendo:
 - Um Frame central onde aparece o resultado.
 - Um Frame inferior com os botões "Converter" e "Limpar".
 - Utilize pack para organizar os frames e grid dentro do frame superior. Garanta que o layout se ajuste ao redimensionar.
+
+<!-- gabarito -->
+??? success "Gabarito — Intermediário"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    import tkinter as tk
+    from tkinter import ttk
+
+    # Cotações fictícias em reais
+    COTACOES = {"BRL": 1.0, "USD": 5.47, "EUR": 5.92}
+
+    janela = tk.Tk()
+    janela.title("Conversor de Moedas")
+    janela.minsize(380, 220)
+
+    # --- Frame superior: valor e moedas (grid por dentro)
+    topo = tk.Frame(janela, padx=10, pady=10)
+    topo.pack(fill="x")
+    tk.Label(topo, text="Valor:").grid(row=0, column=0, sticky="e", padx=5, pady=3)
+    entrada_valor = tk.Entry(topo)
+    entrada_valor.grid(row=0, column=1, sticky="we", padx=5, pady=3)
+    tk.Label(topo, text="De:").grid(row=1, column=0, sticky="e", padx=5, pady=3)
+    origem = ttk.Combobox(topo, values=list(COTACOES), state="readonly")
+    origem.set("BRL")
+    origem.grid(row=1, column=1, sticky="we", padx=5, pady=3)
+    tk.Label(topo, text="Para:").grid(row=2, column=0, sticky="e", padx=5, pady=3)
+    destino = ttk.Combobox(topo, values=list(COTACOES), state="readonly")
+    destino.set("USD")
+    destino.grid(row=2, column=1, sticky="we", padx=5, pady=3)
+    topo.columnconfigure(1, weight=1)  # campos esticam ao redimensionar
+
+    # --- Frame central: resultado (expande)
+    centro = tk.Frame(janela, padx=10)
+    centro.pack(fill="both", expand=True)
+    resultado = tk.Label(centro, text="", font=("Arial", 13, "bold"))
+    resultado.pack(expand=True)
+
+    # --- Frame inferior: botões
+    rodape = tk.Frame(janela, pady=10)
+    rodape.pack(fill="x")
+
+
+    def converter():
+        try:
+            valor = float(entrada_valor.get().replace(",", "."))
+        except ValueError:
+            resultado.config(text="Valor inválido.")
+            return
+        em_reais = valor * COTACOES[origem.get()]
+        convertido = em_reais / COTACOES[destino.get()]
+        resultado.config(text=f"{valor:.2f} {origem.get()} = {convertido:.2f} {destino.get()}")
+
+
+    def limpar():
+        entrada_valor.delete(0, tk.END)
+        resultado.config(text="")
+
+
+    tk.Button(rodape, text="Converter", command=converter).pack(side="left", expand=True)
+    tk.Button(rodape, text="Limpar", command=limpar).pack(side="left", expand=True)
+
+    janela.mainloop()
+    ```
+
 
 ### Avançado (desafio)
 
@@ -338,6 +451,81 @@ Desenvolva uma interface de calculadora de IMC com a seguinte estrutura:
 - O frame de resultado deve conter um Text ou Label que mostre o IMC e a classificação, e deve se expandir verticalmente.
 - Implemente a responsividade: ao redimensionar a janela, a área de resultado deve crescer, enquanto os campos de entrada mantêm seu tamanho.
 - Adicione um menu superior (com Menu) que não afete o layout (é um widget à parte). Opcional: use classes para encapsular cada seção.
+
+<!-- gabarito -->
+??? success "Gabarito — Avançado"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    import tkinter as tk
+
+
+    class CalculadoraIMC:
+        def __init__(self, janela):
+            self.janela = janela
+            janela.title("IMC")
+            janela.geometry("360x320")
+            self._criar_menu()
+
+            # 1) Entrada de dados (grid por dentro, tamanho fixo)
+            entrada = tk.Frame(janela, padx=10, pady=10)
+            entrada.pack(fill="x")
+            tk.Label(entrada, text="Peso (kg):").grid(row=0, column=0, sticky="e", pady=3)
+            self.peso = tk.Entry(entrada, width=10)
+            self.peso.grid(row=0, column=1, sticky="w", padx=5)
+            tk.Label(entrada, text="Altura (m):").grid(row=1, column=0, sticky="e", pady=3)
+            self.altura = tk.Entry(entrada, width=10)
+            self.altura.grid(row=1, column=1, sticky="w", padx=5)
+
+            # 3) Botões — empacotados ANTES do resultado, colados no fundo,
+            #    para nunca serem empurrados para fora quando a janela encolher
+            botoes = tk.Frame(janela, pady=8)
+            botoes.pack(side="bottom", fill="x")
+            tk.Button(botoes, text="Calcular", command=self.calcular).pack(side="left", expand=True)
+            tk.Button(botoes, text="Limpar", command=self.limpar).pack(side="left", expand=True)
+
+            # 2) Resultado: ocupa e acompanha o espaço que sobrar
+            resultado = tk.Frame(janela, padx=10)
+            resultado.pack(fill="both", expand=True)
+            self.texto = tk.Text(resultado, height=5, wrap="word")
+            self.texto.pack(fill="both", expand=True)
+
+        def _criar_menu(self):
+            barra = tk.Menu(self.janela)
+            arquivo = tk.Menu(barra, tearoff=False)
+            arquivo.add_command(label="Limpar", command=self.limpar)
+            arquivo.add_separator()
+            arquivo.add_command(label="Sair", command=self.janela.destroy)
+            barra.add_cascade(label="Arquivo", menu=arquivo)
+            self.janela.config(menu=barra)  # o menu não ocupa espaço no layout
+
+        def mostrar(self, mensagem):
+            self.texto.delete("1.0", tk.END)
+            self.texto.insert("1.0", mensagem)
+
+        def calcular(self):
+            try:
+                peso = float(self.peso.get().replace(",", "."))
+                altura = float(self.altura.get().replace(",", "."))
+                imc = peso / altura ** 2
+            except (ValueError, ZeroDivisionError):
+                self.mostrar("Preencha peso e altura com números (ex.: 70 e 1.75).")
+                return
+            faixas = [(18.5, "Abaixo do peso"), (25, "Normal"), (30, "Sobrepeso")]
+            classe = next((nome for limite, nome in faixas if imc < limite), "Obesidade")
+            self.mostrar(f"IMC: {imc:.2f}\nClassificação: {classe}")
+
+        def limpar(self):
+            self.peso.delete(0, tk.END)
+            self.altura.delete(0, tk.END)
+            self.mostrar("")
+
+
+    janela = tk.Tk()
+    app = CalculadoraIMC(janela)
+    janela.mainloop()
+    ```
+
 
 ## Projeto Prático
 

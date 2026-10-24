@@ -310,6 +310,34 @@ O método `destroy()` fecha a janela secundária.
 2. Adicione um botão com texto "Fechar" que encerra a aplicação (use `janela.destroy`).
 3. Posicione um Label e um Entry lado a lado usando `grid()`. O Label deve ter o texto "Nome:".
 
+<!-- gabarito -->
+??? success "Gabarito — Básico"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    import tkinter as tk
+
+    janela = tk.Tk()
+    janela.title("Meu Primeiro App")
+    janela.geometry("400x300")
+
+    # 1) Label centralizado com pack()
+    tk.Label(janela, text="Bem-vindo ao Tkinter!", font=("Arial", 14)).pack(expand=True)
+
+    # 3) Label e Entry lado a lado com grid() — dentro de um Frame,
+    #    porque pack() e grid() não podem dividir o MESMO container
+    linha = tk.Frame(janela)
+    linha.pack(pady=10)
+    tk.Label(linha, text="Nome:").grid(row=0, column=0, padx=5)
+    tk.Entry(linha).grid(row=0, column=1, padx=5)
+
+    # 2) Botão que fecha o programa
+    tk.Button(janela, text="Fechar", command=janela.destroy).pack(pady=10)
+
+    janela.mainloop()
+    ```
+
+
 ### Intermediário (aplicação)
 
 Construa um conversor de temperatura (Celsius ↔ Fahrenheit). A interface deve ter:
@@ -320,6 +348,53 @@ Construa um conversor de temperatura (Celsius ↔ Fahrenheit). A interface deve 
 - Trate entradas inválidas com `try/except`.
 - Utilize `grid()` para organizar os widgets e `command` para associar funções distintas a cada botão.
 
+<!-- gabarito -->
+??? success "Gabarito — Intermediário"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    import tkinter as tk
+
+    janela = tk.Tk()
+    janela.title("Conversor de Temperatura")
+
+
+    def ler_valor():
+        try:
+            return float(entrada.get().replace(",", "."))
+        except ValueError:
+            resultado.config(text="Digite um número válido.", fg="red")
+            return None
+
+
+    def celsius_para_fahrenheit():
+        c = ler_valor()
+        if c is not None:
+            resultado.config(text=f"{c:.1f} °C = {c * 9 / 5 + 32:.1f} °F", fg="black")
+
+
+    def fahrenheit_para_celsius():
+        f = ler_valor()
+        if f is not None:
+            resultado.config(text=f"{f:.1f} °F = {(f - 32) * 5 / 9:.1f} °C", fg="black")
+
+
+    tk.Label(janela, text="Valor:").grid(row=0, column=0, padx=5, pady=5, sticky="e")
+    entrada = tk.Entry(janela, width=15)
+    entrada.grid(row=0, column=1, padx=5, pady=5)
+
+    tk.Button(janela, text="Celsius para Fahrenheit", command=celsius_para_fahrenheit).grid(
+        row=1, column=0, padx=5, pady=5)
+    tk.Button(janela, text="Fahrenheit para Celsius", command=fahrenheit_para_celsius).grid(
+        row=1, column=1, padx=5, pady=5)
+
+    resultado = tk.Label(janela, text="")
+    resultado.grid(row=2, column=0, columnspan=2, pady=10)
+
+    janela.mainloop()
+    ```
+
+
 ### Avançado (desafio)
 
 Desenvolva uma mini calculadora de IMC (Índice de Massa Corporal). Requisitos:
@@ -329,6 +404,65 @@ Desenvolva uma mini calculadora de IMC (Índice de Massa Corporal). Requisitos:
 - Um botão "Limpar" que apaga os campos e o resultado.
 - A interface deve usar `grid()` com alinhamento e espaçamento adequados.
 - Valide os campos para aceitar apenas números positivos e trate erros de conversão.
+
+<!-- gabarito -->
+??? success "Gabarito — Avançado"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    import tkinter as tk
+
+    janela = tk.Tk()
+    janela.title("Calculadora de IMC")
+
+
+    def classificar(imc):
+        if imc < 18.5:
+            return "Abaixo do peso"
+        if imc < 25:
+            return "Normal"
+        if imc < 30:
+            return "Sobrepeso"
+        return "Obesidade"
+
+
+    def calcular():
+        try:
+            peso = float(entrada_peso.get().replace(",", "."))
+            altura = float(entrada_altura.get().replace(",", "."))
+            if peso <= 0 or altura <= 0:
+                raise ValueError
+        except ValueError:
+            resultado.config(text="Informe peso e altura positivos (ex.: 70 e 1.75).", fg="red")
+            return
+        imc = peso / altura ** 2
+        resultado.config(text=f"IMC: {imc:.2f} — {classificar(imc)}", fg="black")
+
+
+    def limpar():
+        entrada_peso.delete(0, tk.END)
+        entrada_altura.delete(0, tk.END)
+        resultado.config(text="")
+        entrada_peso.focus()
+
+
+    tk.Label(janela, text="Peso (kg):").grid(row=0, column=0, padx=10, pady=5, sticky="e")
+    entrada_peso = tk.Entry(janela, width=12)
+    entrada_peso.grid(row=0, column=1, padx=10, pady=5, sticky="w")
+
+    tk.Label(janela, text="Altura (m):").grid(row=1, column=0, padx=10, pady=5, sticky="e")
+    entrada_altura = tk.Entry(janela, width=12)
+    entrada_altura.grid(row=1, column=1, padx=10, pady=5, sticky="w")
+
+    tk.Button(janela, text="Calcular", width=10, command=calcular).grid(row=2, column=0, padx=10, pady=10)
+    tk.Button(janela, text="Limpar", width=10, command=limpar).grid(row=2, column=1, padx=10, pady=10)
+
+    resultado = tk.Label(janela, text="", font=("Arial", 12, "bold"))
+    resultado.grid(row=3, column=0, columnspan=2, pady=(0, 10))
+
+    janela.mainloop()
+    ```
+
 
 ## Projeto Prático
 

@@ -247,20 +247,150 @@ except ValueError as e:
 
 ---
 
-## 📝 Exercícios de Fixação
+## Exercícios
 
-1. **Classe Produto com Propriedades:**
-   Crie uma classe `Produto` que receba `nome` e `preco` no construtor.
-   - O preço deve ser um atributo privado (`__preco`).
-   - Crie uma propriedade `@property` para ler o preço.
-   - Crie um setter `@preco.setter` que impeça que o preço seja menor ou igual a zero.
+### Básico (fixação)
 
-2. **Simulador de Cofre com Encapsulamento:**
-   Crie uma classe `Cofre` com a senha salva de forma privada.
-   - Crie um método `abrir(senha_digitada)` que retorna `True` se a senha for correta e `False` caso contrário.
-   - Crie um método `alterar_senha(senha_atual, nova_senha)` que só permite a troca se a senha atual for validada.
+**Classe `Produto` com propriedades:** crie uma classe `Produto` que receba `nome` e `preco` no construtor.
+
+- O preço deve ser um atributo privado (`__preco`).
+- Crie uma propriedade `@property` para ler o preço.
+- Crie um setter `@preco.setter` que impeça que o preço seja menor ou igual a zero.
+
+<!-- gabarito -->
+??? success "Gabarito — Básico"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    class Produto:
+        def __init__(self, nome, preco):
+            self.nome = nome
+            self.preco = preco  # já passa pelo setter, que valida
+
+        @property
+        def preco(self):
+            return self.__preco
+
+        @preco.setter
+        def preco(self, valor):
+            if valor <= 0:
+                raise ValueError("O preço deve ser maior que zero.")
+            self.__preco = valor
+
+
+    caneta = Produto("Caneta", 2.5)
+    print(caneta.nome, caneta.preco)
+
+    try:
+        caneta.preco = 0
+    except ValueError as erro:
+        print("Erro:", erro)
+    print("Preço continua:", caneta.preco)
+    ```
+
+
+### Intermediário (aplicação)
+
+**Simulador de cofre com encapsulamento:** crie uma classe `Cofre` com a senha salva de forma privada.
+
+- Crie um método `abrir(senha_digitada)` que retorna `True` se a senha for correta e `False` caso contrário.
+- Crie um método `alterar_senha(senha_atual, nova_senha)` que só permite a troca se a senha atual for validada.
+
+<!-- gabarito -->
+??? success "Gabarito — Intermediário"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    class Cofre:
+        def __init__(self, senha):
+            self.__senha = senha
+
+        def abrir(self, senha_digitada):
+            return senha_digitada == self.__senha
+
+        def alterar_senha(self, senha_atual, nova_senha):
+            if not self.abrir(senha_atual):
+                print("Senha atual incorreta. Nada foi alterado.")
+                return False
+            self.__senha = nova_senha
+            print("Senha alterada.")
+            return True
+
+
+    cofre = Cofre("1234")
+    print(cofre.abrir("0000"))            # False
+    print(cofre.abrir("1234"))            # True
+    cofre.alterar_senha("9999", "abcd")   # recusado
+    cofre.alterar_senha("1234", "abcd")   # aceito
+    print(cofre.abrir("abcd"))            # True
+    ```
+
+
+### Avançado (desafio)
+
+**Conta bancária:** crie a classe `ContaBancaria` com `titular` e saldo inicial.
+
+- O saldo é privado e só pode ser **lido** por uma propriedade `saldo` (sem setter: ninguém altera o saldo "na mão").
+- `depositar(valor)` e `sacar(valor)` levantam `ValueError` para valores menores ou iguais a zero; `sacar` também levanta `ValueError` se não houver saldo.
+- Cada operação bem-sucedida é registrada em uma lista de histórico.
+- `extrato()` exibe o histórico e o saldo final.
+- Teste tudo, inclusive a tentativa de fazer `conta.saldo = 1000000`.
 
 ---
+
+<!-- gabarito -->
+??? success "Gabarito — Avançado"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    class ContaBancaria:
+        def __init__(self, titular, saldo_inicial=0.0):
+            self.titular = titular
+            self.__saldo = saldo_inicial
+            self.__historico = [f"Abertura: R$ {saldo_inicial:.2f}"]
+
+        @property
+        def saldo(self):
+            return self.__saldo  # sem setter: o saldo só muda por depósito ou saque
+
+        def depositar(self, valor):
+            if valor <= 0:
+                raise ValueError("O depósito deve ser maior que zero.")
+            self.__saldo += valor
+            self.__historico.append(f"Depósito: +R$ {valor:.2f}")
+
+        def sacar(self, valor):
+            if valor <= 0:
+                raise ValueError("O saque deve ser maior que zero.")
+            if valor > self.__saldo:
+                raise ValueError("Saldo insuficiente.")
+            self.__saldo -= valor
+            self.__historico.append(f"Saque: -R$ {valor:.2f}")
+
+        def extrato(self):
+            print(f"Extrato de {self.titular}")
+            for linha in self.__historico:
+                print(" ", linha)
+            print(f"  Saldo final: R$ {self.saldo:.2f}")
+
+
+    conta = ContaBancaria("Ana", 100)
+    conta.depositar(50)
+    conta.sacar(30)
+    for operacao in (lambda: conta.sacar(500), lambda: conta.depositar(-10)):
+        try:
+            operacao()
+        except ValueError as erro:
+            print("Recusado:", erro)
+
+    try:
+        conta.saldo = 1000000
+    except AttributeError:
+        print("Recusado: o saldo é somente leitura.")
+
+    conta.extrato()  # saldo final: R$ 120.00
+    ```
+
 
 ## 💡 Resumo do Capítulo
 
