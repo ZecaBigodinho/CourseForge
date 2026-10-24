@@ -17,3 +17,23 @@ ordem_modulos:
   - modulo_04_projeto_finalizador  # Módulo 05 — Projeto Finalizador
   - modulo_05_git_github           # Módulo 06 — Git & GitHub (Bônus)
   - modulo_00_revisao_e_fixacao    # Central de Revisão Visual (apoio)
+
+# Ficha do curso — alimenta o Catálogo de cursos (gerado por src/generators/gerar_catalogo.py)
+ordem: 1
+status: disponivel                 # disponivel | em_breve
+ficha:
+  icone: material-language-python
+  nivel: Iniciante — do zero ao intermediário
+  carga_horaria:                   # a definir pelo professor (ex.: "80 h")
+  publico: Alunos que nunca programaram ou que estão começando em Python.
+  certificado: Entrega e apresentação do Projeto Final do Curso (Módulo 05, cap. 12).
+  pre_requisitos:
+    - Usar o computador no dia a dia (arquivos, pastas e navegador).
+    - Nenhum conhecimento de programação — o curso começa do zero.
+  objetivos:
+    - Preparar um ambiente profissional com Python e VS Code.
+    - Escrever programas em Python com variáveis, decisões, laços, funções e coleções.
+    - Organizar o código com Programação Orientada a Objetos.
+    - Criar aplicações desktop com Tkinter e CustomTkinter.
+    - Guardar dados com SQLite e proteger configurações com .env.
+    - Construir e apresentar, em equipe, um sistema completo com login e CRUD.

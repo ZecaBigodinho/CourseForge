@@ -48,7 +48,9 @@ hide:
 
     Word, Excel e PowerPoint para estudar e trabalhar, com alternativas gratuitas (LibreOffice e Google Workspace).
 
--   :material-robot-happy-outline:{ .lg .middle } __Introdução à Inteligência Artificial__
+    [:octicons-arrow-right-24: Ver a ementa](pacote_office/docs/index.md)
+
+-   :material-robot-happy-outline:{ .lg .middle } __Introdução à IA__
 
     <span class="cf-tag">Em breve</span>
 
@@ -56,7 +58,12 @@ hide:
 
     O que é IA, como usar assistentes com responsabilidade, engenharia de prompt e um mini-projeto com Python.
 
+    [:octicons-arrow-right-24: Ver a ementa](introducao_a_ia/docs/index.md)
+
 </div>
+
+[Ver o catálogo completo, com as fichas dos cursos](catalogo.md){ .md-button }
+[Como estudar na plataforma](como_estudar.md){ .md-button }
 
 ## Como funciona
 

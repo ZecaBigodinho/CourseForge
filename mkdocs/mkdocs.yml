@@ -68,8 +68,11 @@ markdown_extensions:
     permalink: true
 nav:
 - Início: index.md
+- Comece aqui:
+  - Catálogo de cursos: catalogo.md
+  - Como estudar: como_estudar.md
 - Python para Desktop:
-  - Índice: python_para_desktop/docs/index.md
+  - Apresentação do curso: python_para_desktop/docs/index.md
   - Configuração do VS Code & Ambiente Python:
     - Visão Geral: python_para_desktop/modulo_06_vscode_config/index.md
     - Instalando e Configurando o VS Code do Zero: python_para_desktop/modulo_06_vscode_config/01_instalacao_e_configuracao_vscode.md
@@ -140,4 +143,8 @@ nav:
     - Módulos, Importações e Organização de Código: python_para_desktop/modulo_00_revisao_e_fixacao/12_modulos_revisao.md
     - Manipulação de Arquivos (TXT, JSON e CSV): python_para_desktop/modulo_00_revisao_e_fixacao/13_arquivos_revisao.md
     - Programação Orientada a Objetos (POO): python_para_desktop/modulo_00_revisao_e_fixacao/14_poo_revisao.md
+- Pacote Office:
+  - Apresentação do curso: pacote_office/docs/index.md
+- Introdução à IA:
+  - Apresentação do curso: introducao_a_ia/docs/index.md
 docs_dir: ../cursos

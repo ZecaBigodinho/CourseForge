@@ -44,7 +44,19 @@ O material está hospedado no **GitHub Pages** e pode ser acessado de qualquer c
 
 ---
 
-## 📚 Conteúdo do Curso
+## 🗂️ Cursos da Plataforma
+
+| Curso | Situação |
+|-------|----------|
+| [Python para Desktop](https://zecabigodinho.github.io/curso-python/python_para_desktop/docs/) | ✅ Disponível |
+| [Pacote Office](https://zecabigodinho.github.io/curso-python/pacote_office/docs/) | 🕒 Em breve (ementa publicada) |
+| [Introdução à IA](https://zecabigodinho.github.io/curso-python/introducao_a_ia/docs/) | 🕒 Em breve (ementa publicada) |
+
+Cada curso tem uma **ficha** em `cursos/<curso>/.courseforge.yaml` (ordem, situação, nível, público, pré-requisitos, objetivos e certificado). O **Catálogo de cursos** (`cursos/catalogo.md`) é gerado a partir dessas fichas por `python main.py publicar` — não edite a página à mão.
+
+---
+
+## 📚 Conteúdo do Curso de Python
 
 O curso está dividido em **6 módulos na trilha principal (00 a 05)**, **1 módulo bônus (06)** e a **Central de Revisão Visual** como material de apoio. Siga a ordem abaixo — é a mesma do menu do site.
 

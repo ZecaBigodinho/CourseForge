@@ -18,6 +18,7 @@ import os
 import re
 from pathlib import Path
 
+from generators.gerar_catalogo import CatalogGenerator, ARQUIVO_CATALOGO
 from utils.file_manager import FileManager
 from utils.cli_ui import UI
 from utils.constants import (
@@ -41,6 +42,13 @@ class MkDocsUpdater:
     """
 
     # O menu lateral é só texto: emojis ficam nos títulos das páginas e nos cards da home.
+
+    # Páginas gerais da plataforma (em cursos/), agrupadas na aba "Comece aqui"
+    # quando existem. O catálogo é gerado; as demais são escritas à mão.
+    PAGINAS_GERAIS: tuple[tuple[str, str], ...] = (
+        ("Catálogo de cursos", ARQUIVO_CATALOGO),
+        ("Como estudar", "como_estudar.md"),
+    )
 
     # Fallback quando o .md não tem título: palavras de slug → forma acentuada.
     ACENTOS: dict[str, str] = {
@@ -96,16 +104,22 @@ class MkDocsUpdater:
         if not silencioso:
             UI.secao("ATUALIZAR MKDOCS.YML")
 
+        # O catálogo vem antes da nav: ele é uma das páginas que a nav referencia
+        CatalogGenerator(self.fm).gerar()
+
         nav = self._construir_nav()
         mkdocs_cfg = self._construir_config(nav)
         output_path = self._salvar(mkdocs_cfg)
 
+        cursos_count = sum(
+            1 for item in nav
+            if not ({"Início", "Comece aqui"} & item.keys())
+        )
         if not silencioso:
-            cursos_count = len(nav) - 1  # descontar o Início
             UI.sucesso(f"mkdocs.yml atualizado: {output_path.relative_to(self.fm.root)}")
             UI.muted(f"  {cursos_count} curso(s) na navegação.")
 
-        logger.info("mkdocs.yml gerado em: %s (%d cursos)", output_path, len(nav) - 1)
+        logger.info("mkdocs.yml gerado em: %s (%d cursos)", output_path, cursos_count)
         return output_path
 
     # Mantido por compatibilidade retroativa — use atualizar(silencioso=True)
@@ -124,16 +138,23 @@ class MkDocsUpdater:
         Usa metadados .courseforge.yaml para nomes legíveis.
         Formato resultante:
           - Início: index.md
-          - Python para Iniciantes:
-            - Índice: cursos/python_para_iniciantes/docs/index.md
+          - Comece aqui:
+            - Catálogo de cursos: catalogo.md
+            - Como estudar: como_estudar.md
+          - Python para Iniciantes:          ← cursos na ordem de `ordem` da ficha
+            - Apresentação do curso: python_para_iniciantes/docs/index.md
             - Introdução ao Python:
               - Visão Geral: .../index.md
               - Variáveis e Tipos: .../01_variaveis.md
         """
         nav: list = [{"Início": "index.md"}]
-
         cursos_dir = self.fm.path(DIR_CURSOS)
-        for curso_dir in self.fm.listar_subdiretorios(cursos_dir):
+
+        gerais = [{titulo: arq} for titulo, arq in self.PAGINAS_GERAIS if (cursos_dir / arq).exists()]
+        if gerais:
+            nav.append({"Comece aqui": gerais})
+
+        for curso_dir, _meta in CatalogGenerator(self.fm).listar_cursos():
             entrada_curso = self._construir_entrada_curso(curso_dir, cursos_dir)
             if entrada_curso:
                 nav.append(entrada_curso)
@@ -148,11 +169,11 @@ class MkDocsUpdater:
 
         curso_entries: list = []
 
-        # Índice do curso
+        # Página de apresentação do curso
         index_curso = curso_dir / CURSO_DOCS_SUBDIR / "index.md"
         if index_curso.exists():
             rel = index_curso.relative_to(cursos_dir).as_posix()
-            curso_entries.append({"Índice": rel})
+            curso_entries.append({"Apresentação do curso": rel})
 
         modulos = [d for d in self.fm.listar_subdiretorios(curso_dir) if d.name.startswith(MODULE_DIR_PREFIX)]
         modulos = self._ordenar_modulos(modulos, (meta or {}).get("ordem_modulos"), curso_dir.name)
