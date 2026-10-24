@@ -1,4 +1,4 @@
-# 12 — Projeto Final
+# 12 — Projeto Final do Curso
 
 ## 🎯 Objetivo
 
@@ -11,6 +11,9 @@ Ao final, você terá:
 - Demonstrado o sistema ao professor com todos os fluxos funcionando
 - Preenchido a autoavaliação da equipe e o registro de aprendizados
 - Entregue oficialmente o Projeto Final
+
+!!! warning "Certificado"
+    A entrega e a apresentação deste **Projeto Final do Curso** são o **único requisito para o certificado** do curso Python para Desktop.
 
 ## 📍 Contextualização
 
@@ -384,6 +387,7 @@ Antes de considerar o Projeto Final entregue, confirme:
 - [ ] Código commitado no repositório (se aplicável)
 - [ ] Projeto demonstrado ao professor
 - [ ] Feedback do professor recebido e anotado
+- [ ] Entrega registrada pelo professor (libera o certificado)
 
 ## 🎓 Parabéns!
 

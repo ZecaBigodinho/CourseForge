@@ -788,11 +788,13 @@ Vamos recapitular o que você conquistou ao longo de todo o curso:
 
 | Módulo | O que você aprendeu |
 |--------|-------------------|
+| 00 — VS Code & Ambiente | Preparar o ambiente de desenvolvimento profissional |
 | 01 — Fundamentos | Programar em Python com confiança |
-| 02 — Interfaces | Criar aplicações desktop com Tkinter |
-| 03 — Banco de Dados | Persistir dados com SQLite e .env |
-| 04 — Projeto Final | Construir um sistema completo do zero |
-| 05 — Git & GitHub | Versionar, colaborar e apresentar seu trabalho |
+| 02 — POO | Organizar programas com classes e objetos |
+| 03 — Interfaces | Criar aplicações desktop com Tkinter |
+| 04 — Banco de Dados | Persistir dados com SQLite e .env |
+| 05 — Projeto Finalizador | Construir um sistema completo do zero (Projeto Final do Curso) |
+| 06 — Git & GitHub | Versionar, colaborar e apresentar seu trabalho |
 
 Você entrou no curso sem saber o que era uma variável. Agora tem um **sistema desktop funcional**, hospedado num **repositório profissional**, com **release publicada** e pronto para o seu **portfólio**.
 

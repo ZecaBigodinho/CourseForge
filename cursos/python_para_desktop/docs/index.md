@@ -38,7 +38,7 @@ Ao final do curso, você será capaz de criar programas reais com janelas intera
 - Coleções (listas, dicionários, tuplas, sets)
 - Manipulação de strings e arquivos
 - Tratamento de exceções
-- **Projeto Final** de consolidação
+- **Mini-projeto** de consolidação — um sistema completo no terminal
 
 ---
 
@@ -69,7 +69,7 @@ Ao final do curso, você será capaz de criar programas reais com janelas intera
 - Introdução ao **SQLite** — criação de tabelas e consultas SQL
 - Integração do banco de dados com a interface gráfica
 - **Variáveis de ambiente** (`.env`) para proteger credenciais
-- **Projeto Final do Curso** — a aplicação completa que garante seu certificado
+- **Projeto de Dados** — interface + SQLite + `.env` em arquitetura MVC, o ensaio geral para o Projeto Finalizador
 
 ---
 
@@ -82,6 +82,7 @@ Ao final do curso, você será capaz de criar programas reais com janelas intera
 - SQLite local + sincronização com banco em nuvem
 - Refatoração, testes e entrega profissional
 - Exercício bônus com **Streamlit + Neon Database** (Python na web)
+- **Projeto Final do Curso** — entrega e apresentação do sistema, que **libera o certificado**
 
 ---
 
@@ -145,4 +146,6 @@ Ao final do curso, você será capaz de criar programas reais com janelas intera
     Use o **menu lateral** para acessar cada módulo, aula e a central de revisão visual. Os capítulos estão numerados na ordem recomendada de estudo.
 
 !!! warning "Certificado"
-    O **Projeto Final** (Módulo 05) é **obrigatório** para emissão do certificado. Ele integra tudo: Python + Interface Gráfica + Banco de Dados + Nuvem + Git.
+    O certificado é liberado por **um único requisito**: entregar e apresentar o **Projeto Final do Curso** — capítulo 12 do **Módulo 05 (Projeto Finalizador)**. Ele integra tudo: Python + POO + Interface Gráfica + Banco de Dados + Nuvem.
+
+    O **Mini-projeto** (Módulo 01) e o **Projeto de Dados** (Módulo 04) são etapas de prática e não liberam o certificado sozinhos. O Módulo 06 (Git & GitHub) é bônus.

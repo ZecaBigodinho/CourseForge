@@ -1,7 +1,7 @@
 # Módulo 02 — Programação Orientada a Objetos (POO)
 
 > **Curso:** python_para_desktop  
-> **Módulo:** 7 de 7  
+> **Módulo:** 02 · trilha principal (00 a 05)  
 > **Descrição:** Estudo aprofundado do Paradigma de Programação Orientada a Objetos (POO) em Python, abrangendo classes, objetos, atributos, métodos de instância, encapsulamento, propriedades (`@property`) e desenvolvimento prático de aplicações desktop.
 
 ---

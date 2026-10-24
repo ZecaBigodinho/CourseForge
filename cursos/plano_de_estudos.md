@@ -12,11 +12,11 @@
 | Módulo | Conteúdo | Status |
 |--------|----------|--------|
 | 01 — Fundamentos | Variáveis, operadores, if/else, laços, funções, módulos, coleções, strings, arquivos, exceções | ✅ Concluído (presumido) |
-| 02 — Interfaces Gráficas | Tkinter, Layout Managers, Eventos, CustomTkinter, Projeto Prático | ❌ Pendente |
-| 03 — Banco de Dados | SQLite, Integração com Interface, Variáveis de Ambiente (.env), Projeto Final | ❌ Pendente |
+| 03 — Interfaces Gráficas | Tkinter, Layout Managers, Eventos, CustomTkinter, Projeto Prático | ❌ Pendente |
+| 04 — Banco de Dados | SQLite, Integração com Interface, Variáveis de Ambiente (.env), Projeto de Dados | ❌ Pendente |
 
 > [!CAUTION]
-> O **Projeto Final** (Módulo 04, Aula 04) é **obrigatório para o certificado**. Sem ele, não há certificação — mesmo que todo o conteúdo teórico esteja concluído.
+> O **Projeto Final do Curso** (Módulo 05 — Projeto Finalizador, Capítulo 12) é o **único requisito para o certificado**. Sem ele, não há certificação — mesmo que todo o conteúdo teórico esteja concluído.
 
 ---
 

@@ -1,7 +1,7 @@
 # Módulo 06 — Git & GitHub para Projetos Reais (Bônus)
 
 > **Curso:** Python para Desktop  
-> **Módulo:** Bônus  
+> **Módulo:** 06 · bônus (fora da trilha principal)  
 > **Descrição:** Aprenda a versionar seu código, trabalhar em equipe e publicar seu Projeto Final como um profissional usando Git e GitHub.
 
 ---

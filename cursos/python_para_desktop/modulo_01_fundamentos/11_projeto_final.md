@@ -1,4 +1,4 @@
-# 11. Projeto Integrador
+# 11. Mini-projeto: Sistema no Terminal (CLI)
 
 ## Objetivos
 Neste capítulo, você aplicará todos os conhecimentos adquiridos no Módulo 01 para construir um projeto completo. Os objetivos são:
@@ -24,7 +24,7 @@ Para aproveitar ao máximo este capítulo, você deve dominar os tópicos do Mó
 Se algum desses assuntos ainda gerar dúvidas, revise os capítulos anteriores antes de prosseguir.
 
 ## Motivação
-Aprender conceitos isolados é fundamental, mas o verdadeiro poder da programação se revela quando combinamos esses conceitos para resolver problemas reais. Um projeto integrador é a ponte entre a teoria e a prática: ele simula o desenvolvimento de uma aplicação completa, desde o planejamento até a entrega.
+Aprender conceitos isolados é fundamental, mas o verdadeiro poder da programação se revela quando combinamos esses conceitos para resolver problemas reais. Um mini-projeto é a ponte entre a teoria e a prática: ele simula o desenvolvimento de uma aplicação completa, desde o planejamento até a entrega.
 
 Imagine que você precisa organizar suas tarefas diárias ou controlar seus gastos pessoais. Em vez de depender de aplicativos de terceiros, você pode criar o seu próprio, adaptado exatamente às suas necessidades — e ainda praticar Python de forma significativa. Neste capítulo, vamos construir juntos um Gerenciador de Tarefas por linha de comando. Ao final, você terá um software funcional e a confiança para projetar suas próprias soluções.
 
@@ -375,4 +375,4 @@ Neste capítulo, você:
 - Aplicou validações de entrada e tratamento de erros para garantir robustez.
 - Desenvolveu um projeto do início ao fim, vivenciando o ciclo real de desenvolvimento de software.
 
-O projeto integrador não apenas reforça o aprendizado técnico, mas também desenvolve habilidades de organização, depuração e pensamento sistêmico.
+O mini-projeto não apenas reforça o aprendizado técnico, mas também desenvolve habilidades de organização, depuração e pensamento sistêmico.

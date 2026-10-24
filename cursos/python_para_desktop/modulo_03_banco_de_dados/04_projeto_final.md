@@ -1,8 +1,8 @@
-# Projeto Final: Arquitetura Completa
+# Projeto de Dados: Arquitetura Completa
 
 ## Objetivos
 
-Ao final deste capítulo, você terá integrado todos os conhecimentos do curso em um projeto de arquitetura profissional. Especificamente, você aprenderá a:
+Ao final deste capítulo, você terá integrado Interfaces Gráficas, SQLite e `.env` em um projeto de arquitetura profissional — o ensaio geral para o Projeto Finalizador. Especificamente, você aprenderá a:
 
 - Estruturar um projeto Python desktop em diretórios com separação de responsabilidades (Model, View, Controller).
 - Aplicar o padrão MVC (Model-View-Controller) adaptado para aplicações com Tkinter/CustomTkinter.

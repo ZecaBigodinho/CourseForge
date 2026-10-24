@@ -524,4 +524,4 @@ Com esse conhecimento, suas aplicações Python desktop ganharão um salto de qu
 
 ## Próximo Capítulo
 
-No próximo capítulo, desenvolveremos o **Projeto Final do Módulo 03**, onde juntaremos layout, eventos, persistência e o visual do CustomTkinter para construir uma aplicação desktop completa e robusta do início ao fim.
+No próximo capítulo, desenvolveremos o **Projeto Prático do Módulo 03**, onde juntaremos layout, eventos, persistência e o visual do CustomTkinter para construir uma aplicação desktop completa e robusta do início ao fim.

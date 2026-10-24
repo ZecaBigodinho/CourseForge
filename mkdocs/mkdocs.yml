@@ -72,7 +72,7 @@ nav:
     - Manipulação de Strings: python_para_desktop/modulo_01_fundamentos/08_strings.md
     - Manipulação de Arquivos e Pastas: python_para_desktop/modulo_01_fundamentos/09_arquivos.md
     - Tratamento de Erros e Exceções: python_para_desktop/modulo_01_fundamentos/10_excecoes.md
-    - Projeto Integrador: python_para_desktop/modulo_01_fundamentos/11_projeto_final.md
+    - 'Mini-projeto: Sistema no Terminal (CLI)': python_para_desktop/modulo_01_fundamentos/11_projeto_final.md
   - 🧊 Programação Orientada a Objetos (POO):
     - Visão Geral: python_para_desktop/modulo_07_poo/index.md
     - Estudo do Paradigma de Programação Orientada a Objetos (POO): python_para_desktop/modulo_07_poo/01_paradigma_poo.md
@@ -90,7 +90,7 @@ nav:
     - Introdução a Banco de Dados com SQLite: python_para_desktop/modulo_03_banco_de_dados/01_introducao_sqlite.md
     - Integração SQLite e Interface Gráfica: python_para_desktop/modulo_03_banco_de_dados/02_integracao_interface.md
     - Variáveis de Ambiente com .env: python_para_desktop/modulo_03_banco_de_dados/03_variaveis_ambiente.md
-    - 'Projeto Final: Arquitetura Completa': python_para_desktop/modulo_03_banco_de_dados/04_projeto_final.md
+    - 'Projeto de Dados: Arquitetura Completa': python_para_desktop/modulo_03_banco_de_dados/04_projeto_final.md
   - 🏗️ Projeto Finalizador:
     - Visão Geral: python_para_desktop/modulo_04_projeto_finalizador/index.md
     - Introdução ao Projeto: python_para_desktop/modulo_04_projeto_finalizador/01_introducao_ao_projeto.md
@@ -104,7 +104,7 @@ nav:
     - Banco em Nuvem: python_para_desktop/modulo_04_projeto_finalizador/09_banco_em_nuvem.md
     - Integração: python_para_desktop/modulo_04_projeto_finalizador/10_integracao_e_testes.md
     - Refatoração: python_para_desktop/modulo_04_projeto_finalizador/11_refatoracao_e_entrega.md
-    - Projeto Final: python_para_desktop/modulo_04_projeto_finalizador/12_projeto_final.md
+    - Projeto Final do Curso: python_para_desktop/modulo_04_projeto_finalizador/12_projeto_final.md
     - 'Exercício Prático: Banco em Nuvem com Neon + Streamlit': python_para_desktop/modulo_04_projeto_finalizador/13_exercicio_neon_streamlit.md
   - 🔀 Git & GitHub para Projetos Reais (Bônus):
     - Visão Geral: python_para_desktop/modulo_05_git_github/index.md

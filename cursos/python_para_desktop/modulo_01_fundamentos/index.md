@@ -1,7 +1,7 @@
 # Módulo 01 — Fundamentos
 
 > **Curso:** python_para_desktop  
-> **Módulo:** 1 de 3  
+> **Módulo:** 01 · trilha principal (00 a 05)  
 > **Descrição:** Fundamentos essenciais da linguagem Python, cobrindo desde a sintaxe básica até o tratamento de exceções, preparando o aluno para o desenvolvimento de aplicações.
 
 ---
@@ -24,7 +24,7 @@ Este módulo apresenta os conceitos fundamentais para o desenvolvimento em Pytho
 - [x] [08. Manipulação de Strings](08_strings.md)
 - [x] [09. Manipulação de Arquivos e Pastas](09_arquivos.md)
 - [x] [10. Tratamento de Erros e Exceções](10_excecoes.md)
-- [x] [11. Projeto Integrador](11_projeto_final.md)
+- [x] [11. Mini-projeto: Sistema no Terminal (CLI)](11_projeto_final.md)
 
 ---
 
@@ -35,7 +35,7 @@ Ao final deste módulo, você será capaz de:
 - [x] Dominar a sintaxe e as estruturas de controle do Python.
 - [x] Criar e utilizar funções, módulos e estruturas de dados (coleções).
 - [x] Manipular arquivos, processar textos (strings) e tratar erros de execução robustamente.
-- [x] Desenvolver um sistema CLI (Command Line Interface) funcional como Projeto Integrador.
+- [x] Desenvolver um sistema CLI (Command Line Interface) funcional como Mini-projeto do módulo.
 
 ---
 

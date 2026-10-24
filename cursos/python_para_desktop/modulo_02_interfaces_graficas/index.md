@@ -1,7 +1,7 @@
 # Módulo 03 — Interfaces Gráficas com Python
 
 > **Curso:** python_para_desktop  
-> **Módulo:** 2 de 3  
+> **Módulo:** 03 · trilha principal (00 a 05)  
 > **Descrição:** Neste módulo, você aprenderá a sair da linha de comando (CLI) e construir aplicações com janelas, botões e interatividade visual usando as bibliotecas Tkinter e CustomTkinter.
 
 ---

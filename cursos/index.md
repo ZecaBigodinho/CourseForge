@@ -34,7 +34,7 @@ Os alicerces da linguagem. Aqui você aprende tudo que precisa para escrever có
 - Coleções (listas, dicionários, tuplas, sets)
 - Manipulação de strings e arquivos
 - Tratamento de exceções
-- **Projeto Final** de consolidação
+- **Mini-projeto** de consolidação — um sistema completo no terminal
 
 ---
 
@@ -70,7 +70,7 @@ Seus programas precisam guardar informações! Aqui você conecta sua interface 
 - Introdução ao **SQLite** — criação de tabelas, consultas SQL
 - Integração do banco de dados com a interface gráfica
 - **Variáveis de ambiente** (`.env`) para proteger credenciais
-- **Projeto Final do Curso** — a aplicação completa que garante seu certificado
+- **Projeto de Dados** — interface + SQLite + `.env` em arquitetura MVC, o ensaio geral para o Projeto Finalizador
 
 ---
 
@@ -82,6 +82,7 @@ Construção incremental de um **sistema desktop completo** — do login ao depl
 - Tela de Login, Menu Principal e navegação entre janelas
 - CRUD completo com SQLite e sincronização com nuvem
 - Exercício bônus com **Streamlit + Neon Database** (Python na web)
+- **Projeto Final do Curso** — entrega e apresentação do sistema, que **libera o certificado**
 
 ---
 
@@ -109,7 +110,9 @@ Aulas especiais no final do curso com analogias físicas do cotidiano, fluxogram
 ## :trophy: Certificado
 
 !!! warning "Importante"
-    O **Projeto Final** (Módulo 05) é **obrigatório** para a emissão do certificado. Ele integra tudo que foi aprendido: Python + Interface Gráfica + Banco de Dados + Nuvem + Git.
+    O certificado é liberado por **um único requisito**: entregar e apresentar o **Projeto Final do Curso** — capítulo 12 do **Módulo 05 (Projeto Finalizador)**. Ele integra tudo que foi aprendido: Python + POO + Interface Gráfica + Banco de Dados + Nuvem.
+
+    O **Mini-projeto** (Módulo 01) e o **Projeto de Dados** (Módulo 04) são etapas de prática — importantes para chegar preparado, mas não liberam o certificado sozinhos. O Módulo 06 (Git & GitHub) é bônus.
 
 ---
 

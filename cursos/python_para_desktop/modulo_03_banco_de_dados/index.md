@@ -1,14 +1,14 @@
 # Módulo 04 — Banco de Dados e Configurações
 
 > **Curso:** python_para_desktop  
-> **Módulo:** 3 de 3  
+> **Módulo:** 04 · trilha principal (00 a 05)  
 > **Descrição:** Neste módulo final, você aprenderá a conectar suas interfaces a um banco de dados relacional (SQLite), gerenciar senhas com `.env`, organizar o código na arquitetura MVC e empacotar tudo num executável.
 
 ---
 
 ## 📋 Visão Geral do Módulo
 
-Para que uma aplicação desktop seja profissional, não basta ser bonita. Ela precisa salvar dados permanentemente (persistência) e proteger chaves e configurações. Você irá consolidar todo o aprendizado em um projeto final empacotável.
+Para que uma aplicação desktop seja profissional, não basta ser bonita. Ela precisa salvar dados permanentemente (persistência) e proteger chaves e configurações. Você irá consolidar o aprendizado no Projeto de Dados, uma aplicação empacotável que prepara o terreno para o Projeto Finalizador.
 
 ---
 
@@ -17,7 +17,7 @@ Para que uma aplicação desktop seja profissional, não basta ser bonita. Ela p
 - [x] [01. Introdução a Banco de Dados com SQLite](01_introducao_sqlite.md)
 - [x] [02. Integração SQLite e Interface Gráfica](02_integracao_interface.md)
 - [x] [03. Variáveis de Ambiente com .env](03_variaveis_ambiente.md)
-- [x] [04. Projeto Final: Arquitetura Completa](04_projeto_final.md)
+- [x] [04. Projeto de Dados: Arquitetura Completa](04_projeto_final.md)
 
 ---
 
@@ -35,4 +35,4 @@ Ao final deste módulo, você será capaz de:
 
 !!! note "Organização"
     Os capítulos deste módulo formam o alicerce final para a construção de sistemas profissionais.
-    Acompanhe-os e feche o curso com chave de ouro no Projeto Final!
+    Acompanhe-os e feche o módulo com o Projeto de Dados — o próximo passo é o Projeto Finalizador (Módulo 05), que libera o certificado.
