@@ -209,4 +209,11 @@ nav:
     - Planilhas e dados com IA: introducao_a_ia/modulo_03_ia_no_estudo_e_no_trabalho/03_planilhas_e_dados.md
     - Código e imagens com IA: introducao_a_ia/modulo_03_ia_no_estudo_e_no_trabalho/04_codigo_e_imagens.md
     - 'Projeto do módulo: uma tarefa real com IA': introducao_a_ia/modulo_03_ia_no_estudo_e_no_trabalho/05_projeto_tarefa_real_com_ia.md
+  - Ética, privacidade e direitos autorais:
+    - Visão Geral: introducao_a_ia/modulo_04_etica_e_privacidade/index.md
+    - Privacidade e dados pessoais: introducao_a_ia/modulo_04_etica_e_privacidade/01_privacidade_e_dados_pessoais.md
+    - Autoria, plágio e honestidade: introducao_a_ia/modulo_04_etica_e_privacidade/02_autoria_plagio_e_honestidade.md
+    - Direitos autorais e direito de imagem: introducao_a_ia/modulo_04_etica_e_privacidade/03_direitos_autorais_e_imagem.md
+    - Vieses, desinformação e impactos sociais: introducao_a_ia/modulo_04_etica_e_privacidade/04_vieses_e_impactos.md
+    - 'Projeto do módulo: carta de uso responsável de IA': introducao_a_ia/modulo_04_etica_e_privacidade/05_projeto_carta_de_uso_responsavel.md
 docs_dir: ../cursos

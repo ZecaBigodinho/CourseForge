@@ -60,4 +60,4 @@ Antes de seguir, confira se você consegue:
 
 ## ➡️ Próximo passo
 
-**Módulo 04 — Ética, privacidade e direitos autorais** *(em preparação)* — o que não colocar em uma IA, plágio, autoria e uso responsável.
+**[Módulo 04 — Ética, privacidade e direitos autorais](../modulo_04_etica_e_privacidade/index.md)** — o que não colocar em uma IA, plágio, autoria e uso responsável.

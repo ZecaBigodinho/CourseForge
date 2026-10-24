@@ -1,12 +1,12 @@
 # Introdução à IA
 
 > **Autor:** Prof. Pedro Paulo IF · [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com)  
-> **Versão:** 0.4.0  
-> **Situação:** em andamento — Módulos 01 a 03 disponíveis  
+> **Versão:** 0.5.0  
+> **Situação:** em andamento — Módulos 01 a 04 disponíveis  
 > **Ferramentas:** neutro — vale para ChatGPT, Gemini, Copilot, Claude e outros assistentes
 
-!!! success "Módulos 01 a 03 disponíveis"
-    O **[Módulo 01 — O que é IA (sem mistério)](../modulo_01_o_que_e_ia/index.md)** já está disponível: o que é IA, aprendizado de máquina, redes neurais e IA generativa, com atividades à mão (sem programar) e o raio-X de uma IA do dia a dia como projeto. O **[Módulo 02 — Usando assistentes de IA bem](../modulo_02_usando_assistentes/index.md)** ensina a escolher o assistente e a conta, escrever prompts claros, usar o assistente como tutor e conferir as respostas. O **[Módulo 03 — IA no estudo e no trabalho](../modulo_03_ia_no_estudo_e_no_trabalho/index.md)** leva tudo para tarefas reais: estudar, escrever, planilhas, código e imagens. Os demais módulos serão publicados um a um.
+!!! success "Módulos 01 a 04 disponíveis"
+    O **[Módulo 01 — O que é IA (sem mistério)](../modulo_01_o_que_e_ia/index.md)** já está disponível: o que é IA, aprendizado de máquina, redes neurais e IA generativa, com atividades à mão (sem programar) e o raio-X de uma IA do dia a dia como projeto. O **[Módulo 02 — Usando assistentes de IA bem](../modulo_02_usando_assistentes/index.md)** ensina a escolher o assistente e a conta, escrever prompts claros, usar o assistente como tutor e conferir as respostas. O **[Módulo 03 — IA no estudo e no trabalho](../modulo_03_ia_no_estudo_e_no_trabalho/index.md)** leva tudo para tarefas reais: estudar, escrever, planilhas, código e imagens. O **[Módulo 04 — Ética, privacidade e direitos autorais](../modulo_04_etica_e_privacidade/index.md)** trata de LGPD, honestidade, direitos autorais e de imagem, vieses e desinformação. O projeto final (Módulo 05) será publicado em seguida.
 
 ---
 
@@ -28,9 +28,9 @@ Os assistentes gratuitos, idades mínimas e privacidade; **prompts** com a recei
 
 Estudar (explicação, quiz, cartões, NotebookLM), escrever e comunicar (rascunhos, atas, tradução, anonimização), planilhas e dados, código e imagens — e quando **não** vale a pena usar IA, com uma tarefa real como projeto. [Acessar o módulo](../modulo_03_ia_no_estudo_e_no_trabalho/index.md)
 
-### Módulo 04 — Ética, privacidade e direitos autorais
+### Módulo 04 — Ética, privacidade e direitos autorais ✅ disponível
 
-O que não colocar em uma IA, plágio, autoria e regras de uso responsável em sala de aula e no trabalho.
+Dados pessoais e **LGPD** (com o ECA Digital), honestidade no uso de IA (semáforo e declaração de uso), **direitos autorais** e **de imagem** (*deepfakes*), vieses, desinformação, impactos sociais e regulação — com uma carta de uso responsável votada pelo grupo como projeto. [Acessar o módulo](../modulo_04_etica_e_privacidade/index.md)
 
 ### Módulo 05 — Projeto: seu mini-assistente
 

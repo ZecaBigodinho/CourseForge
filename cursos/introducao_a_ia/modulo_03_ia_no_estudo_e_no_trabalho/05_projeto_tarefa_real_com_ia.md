@@ -153,4 +153,4 @@ Você usou IA em tarefas de verdade, com critério:
 
 ## ➡️ Próximo passo
 
-**Módulo 04 — Ética, privacidade e direitos autorais** *(em preparação)*: o que não colocar em uma IA, plágio, autoria e regras de uso responsável na escola e no trabalho.
+**[Módulo 04 — Ética, privacidade e direitos autorais](../modulo_04_etica_e_privacidade/index.md)**: o que não colocar em uma IA, plágio, autoria e regras de uso responsável na escola e no trabalho.
