@@ -15,6 +15,9 @@ O programa tem dois **motores** com o mesmo jeito de usar:
 - **Motor simulado** — respostas por palavras-chave, **sem internet, sem conta, sem chave**. Para **todos**.
 - **Motor com API** — um modelo de IA do Google pela API, com **plano gratuito**. Para **maiores de 18 anos**, com chave própria, como exigem os termos da API (conferidos em outubro de 2026).
 
+!!! success "Este projeto libera o certificado"
+    A entrega e a demonstração do mini-assistente, com o README e o relatório de responsabilidade, são o requisito do certificado do curso — por qualquer um dos dois caminhos.
+
 !!! warning "Idade e dados"
     Menores de 18 fazem o projeto **inteiro** com o motor simulado — a aprendizagem de programação, segurança e testes é a mesma. E ninguém, em nenhum caminho, envia dados pessoais: no plano gratuito, as mensagens podem ser usadas pela empresa e lidas por revisores.
 
