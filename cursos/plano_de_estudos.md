@@ -3,7 +3,7 @@
 > **Prazo final:** 20 de Agosto de 2026  
 > **Data atual:** 27 de Julho de 2026  
 > **Dias restantes:** ~24 dias  
-> **Status:** ⚠️ Atrasado — Módulos 02 e 03 ainda pendentes + Projeto Final
+> **Status:** ⚠️ Atrasado — Módulos 03 e 04 ainda pendentes + Projeto Final
 
 ---
 
@@ -16,7 +16,7 @@
 | 03 — Banco de Dados | SQLite, Integração com Interface, Variáveis de Ambiente (.env), Projeto Final | ❌ Pendente |
 
 > [!CAUTION]
-> O **Projeto Final** (Módulo 03, Aula 04) é **obrigatório para o certificado**. Sem ele, não há certificação — mesmo que todo o conteúdo teórico esteja concluído.
+> O **Projeto Final** (Módulo 04, Aula 04) é **obrigatório para o certificado**. Sem ele, não há certificação — mesmo que todo o conteúdo teórico esteja concluído.
 
 ---
 
@@ -41,7 +41,7 @@ O foco é **dominar Tkinter e CustomTkinter**, que são pré-requisito para o Pr
 | Dom | 03/Ago | — | 🔄 Revisão + recuperação de atrasos | — |
 
 > [!TIP]
-> O Projeto Prático do Módulo 02 já serve como base para o Projeto Final. Capriche nele!
+> O Projeto Prático do Módulo 03 já serve como base para o Projeto Final. Capriche nele!
 
 ---
 
@@ -56,7 +56,7 @@ Foco em **SQL, integração com interface e proteção de credenciais**.
 | Qua | 06/Ago | 03.02 | **Integração com Interface (parte 1)** — conectar DB à UI | ~3h |
 | Qui | 07/Ago | 03.02 | **Integração com Interface (parte 2)** — CRUD completo na tela | ~2.5h |
 | Sex | 08/Ago | 03.03 | **Variáveis de Ambiente** — `python-dotenv`, `.env`, segurança | ~2h |
-| Sáb | 09/Ago | — | 🔄 Revisão geral dos Módulos 02 e 03 | ~2h |
+| Sáb | 09/Ago | — | 🔄 Revisão geral dos Módulos 03 e 04 | ~2h |
 | Dom | 10/Ago | — | 🔄 Buffer / recuperação de atrasos | — |
 
 > [!IMPORTANT]
@@ -104,8 +104,8 @@ Aqui é onde tudo se junta. Dedicação **total** ao Projeto Final do curso.
 
 | Bloco | Horas |
 |-------|-------|
-| Módulo 02 — Interfaces Gráficas | ~13.5h |
-| Módulo 03 — Banco de Dados | ~12h |
+| Módulo 03 — Interfaces Gráficas | ~13.5h |
+| Módulo 04 — Banco de Dados | ~12h |
 | Projeto Final | ~18h |
 | Revisão e Buffer | ~6h |
 | **Total estimado** | **~49.5h** |

@@ -1,7 +1,7 @@
 # 02. Ambientes Virtuais (`venv`) e Terminal Integrado
 
 > **Curso:** Python para Desktop  
-> **Módulo:** 06 — Configuração do VS Code & Ambiente Python (Bônus)  
+> **Módulo:** 00 — Configuração do VS Code & Ambiente Python  
 > **Nível:** Intermediário Didático  
 > **Tempo estimado:** 20 min  
 

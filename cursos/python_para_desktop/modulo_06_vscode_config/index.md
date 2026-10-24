@@ -1,4 +1,4 @@
-# 🛠️ Módulo 06 — Configuração do VS Code & Ambiente Python (Bônus)
+# 🛠️ Módulo 00 — Configuração do VS Code & Ambiente Python
 
 > **Curso:** Python para Desktop  
 > **Objetivo:** Guia completo e prático para instalar, configurar e preparar o VS Code do zero no seu computador pessoal (Windows, Linux ou macOS).
@@ -7,7 +7,7 @@
 
 ## 📋 Visão Geral do Módulo
 
-Aprender a programar fica muito mais fácil quando o seu ambiente de desenvolvimento está configurado da forma correta. Neste módulo bônus, você aprenderá a transformar o **Visual Studio Code (VS Code)** em uma verdadeira **central de desenvolvimento Python profissional**.
+Aprender a programar fica muito mais fácil quando o seu ambiente de desenvolvimento está configurado da forma correta. Neste módulo — o primeiro do curso —, você aprenderá a transformar o **Visual Studio Code (VS Code)** em uma verdadeira **central de desenvolvimento Python profissional**.
 
 ---
 

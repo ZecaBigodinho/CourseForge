@@ -1,4 +1,4 @@
-# 14 — Refatoração
+# 11 — Refatoração
 
 ## 🎯 Objetivo
 
@@ -322,7 +322,7 @@ sistema_escolar/
 |---|---|
 | [Seu Nome] | Desenvolvedor(a) |
 
-*Projeto desenvolvido como parte do Módulo 04 — Projeto Finalizador do curso Python para Desktop (CourseForge).*
+*Projeto desenvolvido como parte do Módulo 05 — Projeto Finalizador do curso Python para Desktop (CourseForge).*
 ```
 
 ### Passo 6 — Criando o `requirements.txt`

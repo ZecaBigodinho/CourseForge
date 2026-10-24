@@ -1,4 +1,4 @@
-# Módulo 05 — Git & GitHub para Projetos Reais (Bônus)
+# Módulo 06 — Git & GitHub para Projetos Reais (Bônus)
 
 > **Curso:** Python para Desktop  
 > **Módulo:** Bônus  
@@ -40,4 +40,4 @@ Ao final deste módulo, você será capaz de:
 ---
 
 !!! note "Organização"
-    Este é um módulo bônus que complementa o curso principal. Ele pode ser feito a qualquer momento após o Módulo 02, mas é mais proveitoso durante ou após o Projeto Finalizador (Módulo 04).
+    Este é um módulo bônus que complementa o curso principal. Ele pode ser feito a qualquer momento após o Módulo 03, mas é mais proveitoso durante ou após o Projeto Finalizador (Módulo 05).

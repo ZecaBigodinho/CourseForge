@@ -1,4 +1,4 @@
-# Módulo 04 — Projeto Finalizador
+# Módulo 05 — Projeto Finalizador
 
 > **Curso:** Python para Desktop  
 > **Módulo:** 4 de 4  

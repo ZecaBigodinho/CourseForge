@@ -1,7 +1,7 @@
 # 🧠 Revisão Visual: Operadores Aritméticos e Lógicos
 
 > **Curso:** Python para Desktop  
-> **Módulo:** 00 — Central de Revisão Visual  
+> **Módulo:** Central de Revisão Visual  
 > **Nível:** Fixação Didática & Visual  
 > **Tempo estimado de leitura:** 20 min  
 

@@ -6,3 +6,14 @@ data_criacao: '2026-07-17'
 versao: 1.0.0
 tags: []
 slug: python_para_desktop
+# Ordem pedagógica do menu (nomes das pastas). As pastas não são renomeadas
+# para não mudar as URLs; a numeração exibida nas páginas segue esta ordem.
+ordem_modulos:
+  - modulo_06_vscode_config        # Módulo 00 — Configuração do VS Code & Ambiente
+  - modulo_01_fundamentos          # Módulo 01 — Fundamentos
+  - modulo_07_poo                  # Módulo 02 — POO
+  - modulo_02_interfaces_graficas  # Módulo 03 — Interfaces Gráficas
+  - modulo_03_banco_de_dados       # Módulo 04 — Banco de Dados
+  - modulo_04_projeto_finalizador  # Módulo 05 — Projeto Finalizador
+  - modulo_05_git_github           # Módulo 06 — Git & GitHub (Bônus)
+  - modulo_00_revisao_e_fixacao    # Central de Revisão Visual (apoio)

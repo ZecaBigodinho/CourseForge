@@ -1,7 +1,7 @@
 # 01. Instalando e Configurando o VS Code do Zero
 
 > **Curso:** Python para Desktop  
-> **Módulo:** 06 — Configuração do VS Code & Ambiente Python (Bônus)  
+> **Módulo:** 00 — Configuração do VS Code & Ambiente Python  
 > **Nível:** Iniciante / Passo a Passo  
 > **Tempo estimado:** 25 min  
 

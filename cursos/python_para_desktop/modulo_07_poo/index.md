@@ -1,4 +1,4 @@
-# Módulo 07 — Programação Orientada a Objetos (POO)
+# Módulo 02 — Programação Orientada a Objetos (POO)
 
 > **Curso:** python_para_desktop  
 > **Módulo:** 7 de 7  

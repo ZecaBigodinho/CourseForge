@@ -111,6 +111,52 @@ class TestMkDocsUpdater:
         assert parsed["nav"] == [{"Home": "index.md"}]
 
 
+class TestOrdemDosModulos:
+    """Ordem pedagógica dos módulos via ordem_modulos no .courseforge.yaml (P2)."""
+
+    @pytest.fixture
+    def curso(self, fm_temp) -> Path:
+        curso = fm_temp.root / "cursos" / "curso_x"
+        for nome in ("modulo_00_revisao", "modulo_01_fundamentos", "modulo_02_interfaces",
+                     "modulo_06_vscode", "modulo_07_poo"):
+            (curso / nome).mkdir(parents=True)
+            (curso / nome / "index.md").write_text(f"# {nome}\n", encoding="utf-8")
+        return curso
+
+    @staticmethod
+    def _ordem(fm_temp, config_padrao) -> list[str]:
+        nav = MkDocsUpdater(fm_temp, config_padrao)._construir_nav()
+        entradas = list(nav[1].values())[0]
+        return [list(e.values())[0][0]["Visão Geral"].split("/")[1] for e in entradas]
+
+    def test_sem_ordem_usa_regra_padrao(self, fm_temp, config_padrao, curso):
+        assert self._ordem(fm_temp, config_padrao) == [
+            "modulo_01_fundamentos", "modulo_02_interfaces", "modulo_06_vscode",
+            "modulo_07_poo", "modulo_00_revisao",
+        ]
+
+    def test_ordem_modulos_do_metadata(self, fm_temp, config_padrao, curso):
+        fm_temp.escrever_yaml(curso / ".courseforge.yaml", {
+            "nome": "Curso X",
+            "ordem_modulos": ["modulo_06_vscode", "modulo_01_fundamentos", "modulo_07_poo",
+                              "modulo_02_interfaces", "modulo_00_revisao"],
+        }, sobrescrever=True)
+        assert self._ordem(fm_temp, config_padrao) == [
+            "modulo_06_vscode", "modulo_01_fundamentos", "modulo_07_poo",
+            "modulo_02_interfaces", "modulo_00_revisao",
+        ]
+
+    def test_modulo_fora_da_lista_vai_para_o_fim(self, fm_temp, config_padrao, curso):
+        fm_temp.escrever_yaml(curso / ".courseforge.yaml", {
+            "nome": "Curso X",
+            "ordem_modulos": ["modulo_07_poo", "modulo_inexistente"],
+        }, sobrescrever=True)
+        assert self._ordem(fm_temp, config_padrao) == [
+            "modulo_07_poo", "modulo_01_fundamentos", "modulo_02_interfaces",
+            "modulo_06_vscode", "modulo_00_revisao",
+        ]
+
+
 class TestTitulosDaNavegacao:
     """Títulos do menu lidos do Markdown (P1), com acentos e sem numeração."""
 

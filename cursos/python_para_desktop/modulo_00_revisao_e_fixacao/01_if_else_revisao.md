@@ -1,7 +1,7 @@
 # 🧠 Revisão Visual: Tomada de Decisão com `if`, `elif` e `else`
 
 > **Curso:** Python para Desktop  
-> **Módulo:** 01 — Fundamentos de Python  
+> **Módulo:** Central de Revisão Visual  
 > **Nível:** Fixação Didática & Visual  
 > **Tempo estimado de leitura:** 20 min  
 

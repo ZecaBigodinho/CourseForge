@@ -382,7 +382,7 @@ Em aplicações desktop, o arquivo `.env` normalmente fica no mesmo diretório d
 
 ### Protegendo as Configurações do Dashboard Financeiro
 
-Retome o Dashboard Financeiro desenvolvido no Módulo 02 e aplique os conceitos de variáveis de ambiente para remover todas as configurações hardcoded.
+Retome o Dashboard Financeiro desenvolvido no Módulo 03 e aplique os conceitos de variáveis de ambiente para remover todas as configurações hardcoded.
 
 **Requisitos:**
 

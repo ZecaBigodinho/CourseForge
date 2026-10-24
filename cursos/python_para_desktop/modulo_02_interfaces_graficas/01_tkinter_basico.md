@@ -21,7 +21,7 @@ Antes de iniciar, você deve ter consolidado:
 - Manipulação de strings e conversões de tipo.
 - Noções de tratamento de eventos (não obrigatório, mas útil).
 
-Este capítulo é a porta de entrada para o Módulo 02 do curso; portanto, se você concluiu o Módulo 01, está perfeitamente preparado.
+Este capítulo é a porta de entrada para o Módulo 03 do curso; portanto, se você concluiu os Módulos 01 (Fundamentos) e 02 (POO), está perfeitamente preparado.
 
 ## Motivação
 

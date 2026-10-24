@@ -2,7 +2,7 @@
 
 ## Objetivos
 
-Neste capítulo, você aplicará de forma integrada todos os conhecimentos do Módulo 02 para construir um Dashboard Financeiro Desktop. Os objetivos são:
+Neste capítulo, você aplicará de forma integrada todos os conhecimentos do Módulo 03 para construir um Dashboard Financeiro Desktop. Os objetivos são:
 
 - Projetar e implementar uma aplicação desktop completa com múltiplas abas, combinando Tkinter, CustomTkinter e matplotlib.
 - Aplicar gerenciadores de layout (`pack`, `grid`) e contêineres (`Frame`, `CTkFrame`) para estruturar interfaces complexas.

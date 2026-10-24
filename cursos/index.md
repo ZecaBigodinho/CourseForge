@@ -18,6 +18,12 @@ O material está dividido em **7 módulos progressivos + Central de Revisão Vis
 
 ---
 
+### :hammer_and_wrench: Módulo 00 — Configuração do VS Code & Ambiente
+
+**Comece por aqui.** Passo a passo completo para instalar o Python 3, o VS Code, extensões profissionais e ambientes virtuais (`venv`) — no laboratório ou no seu computador pessoal.
+
+---
+
 ### :snake: Módulo 01 — Fundamentos de Python
 
 Os alicerces da linguagem. Aqui você aprende tudo que precisa para escrever código Python com confiança:
@@ -32,7 +38,20 @@ Os alicerces da linguagem. Aqui você aprende tudo que precisa para escrever có
 
 ---
 
-### :desktop_computer: Módulo 02 — Interfaces Gráficas
+### :ice_cube: Módulo 02 — Programação Orientada a Objetos (POO)
+
+A base para organizar programas maiores — e pré-requisito do Projeto Finalizador (MVC/CRUD):
+
+- Paradigma POO vs Programação Procedural
+- Conceito de Classes (molde) e Objetos (instâncias)
+- O construtor `__init__`, o parâmetro `self` e métodos de instância
+- Encapsulamento de dados (`_` e `__`)
+- Propriedades com `@property` e `@property.setter`
+- **Desenvolvimento Prático** de um sistema real orientado a objetos
+
+---
+
+### :desktop_computer: Módulo 03 — Interfaces Gráficas
 
 Hora de sair do terminal! Aqui você aprende a criar **janelas e aplicações visuais** usando Tkinter e CustomTkinter:
 
@@ -44,7 +63,7 @@ Hora de sair do terminal! Aqui você aprende a criar **janelas e aplicações vi
 
 ---
 
-### :file_cabinet: Módulo 03 — Banco de Dados
+### :file_cabinet: Módulo 04 — Banco de Dados
 
 Seus programas precisam guardar informações! Aqui você conecta sua interface a um banco de dados real:
 
@@ -55,7 +74,7 @@ Seus programas precisam guardar informações! Aqui você conecta sua interface 
 
 ---
 
-### :building_construction: Módulo 04 — Projeto Finalizador
+### :building_construction: Módulo 05 — Projeto Finalizador
 
 Construção incremental de um **sistema desktop completo** — do login ao deploy:
 
@@ -66,7 +85,7 @@ Construção incremental de um **sistema desktop completo** — do login ao depl
 
 ---
 
-### :twisted_rightwards_arrows: Módulo 05 — Git & GitHub (Bônus)
+### :twisted_rightwards_arrows: Módulo 06 — Git & GitHub (Bônus)
 
 Aprenda a **versionar, colaborar e publicar** seu projeto como um profissional:
 
@@ -81,25 +100,6 @@ Aprenda a **versionar, colaborar e publicar** seu projeto como um profissional:
 
 ---
 
-### :hammer_and_wrench: Módulo 06 — Configuração do VS Code & Ambiente (Bônus)
-
-Passo a passo completo para instalar o Python 3, o VS Code, extensões profissionais e ambientes virtuais (`venv`) no seu computador pessoal.
-
----
-
-### :ice_cube: Módulo 07 — Programação Orientada a Objetos (POO)
-
-Aprofundamento no paradigma de POO em Python:
-
-- Paradigma POO vs Programação Procedural
-- Conceito de Classes (molde) e Objetos (instâncias)
-- O construtor `__init__`, o parâmetro `self` e métodos de instância
-- Encapsulamento de dados (`_` e `__`)
-- Propriedades com `@property` e `@property.setter`
-- **Desenvolvimento Prático** de um sistema real orientado a objetos
-
----
-
 ### :brain: Central de Revisão Visual & Fixação Didática
 
 Aulas especiais no final do curso com analogias físicas do cotidiano, fluxogramas em Mermaid.js e guia humanizado de erros para quem busca fixar conceitos com facilidade.
@@ -109,17 +109,18 @@ Aulas especiais no final do curso com analogias físicas do cotidiano, fluxogram
 ## :trophy: Certificado
 
 !!! warning "Importante"
-    O **Projeto Final** (Módulo 04) é **obrigatório** para a emissão do certificado. Ele integra tudo que foi aprendido: Python + Interface Gráfica + Banco de Dados + Nuvem + Git.
+    O **Projeto Final** (Módulo 05) é **obrigatório** para a emissão do certificado. Ele integra tudo que foi aprendido: Python + Interface Gráfica + Banco de Dados + Nuvem + Git.
 
 ---
 
 ## :rocket: Como usar este material
 
-1. **Siga a ordem dos módulos** — cada um depende do anterior
-2. **Consulte a Central de Revisão Visual** sempre que tiver dúvidas sobre algum conceito
-3. **Digite os exemplos** — não apenas copie, escreva o código você mesmo
-4. **Faça os exercícios** — a prática é o que fixa o conteúdo
-5. **Complete os projetos** — eles simulam situações reais de desenvolvimento
+1. **Comece pelo Módulo 00** — prepare o Python e o VS Code
+2. **Siga a ordem dos módulos** — cada um depende do anterior
+3. **Consulte a Central de Revisão Visual** sempre que tiver dúvidas sobre algum conceito
+4. **Digite os exemplos** — não apenas copie, escreva o código você mesmo
+5. **Faça os exercícios** — a prática é o que fixa o conteúdo
+6. **Complete os projetos** — eles simulam situações reais de desenvolvimento
 
 !!! tip "Navegação"
     Use o **menu lateral** para acessar cada módulo e aula. Os capítulos estão numerados na ordem recomendada de estudo.

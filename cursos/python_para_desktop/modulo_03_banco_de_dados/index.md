@@ -1,4 +1,4 @@
-# Módulo 03 — Banco de Dados e Configurações
+# Módulo 04 — Banco de Dados e Configurações
 
 > **Curso:** python_para_desktop  
 > **Módulo:** 3 de 3  

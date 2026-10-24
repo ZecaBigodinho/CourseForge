@@ -179,9 +179,8 @@ class MkDocsUpdater:
             rel = index_curso.relative_to(cursos_dir).as_posix()
             curso_entries.append({"Índice": rel})
 
-        # Módulos (ordenados de 01 em diante, deixando modulo_00_revisao no final)
         modulos = [d for d in self.fm.listar_subdiretorios(curso_dir) if d.name.startswith(MODULE_DIR_PREFIX)]
-        modulos.sort(key=lambda d: (1 if d.name.startswith("modulo_00") else 0, d.name))
+        modulos = self._ordenar_modulos(modulos, (meta or {}).get("ordem_modulos"), curso_dir.name)
 
         for modulo_dir in modulos:
             entrada_modulo = self._construir_entrada_modulo(modulo_dir, cursos_dir)
@@ -192,6 +191,31 @@ class MkDocsUpdater:
             return None
 
         return {curso_nome: curso_entries}
+
+    @staticmethod
+    def _ordenar_modulos(modulos: list[Path], ordem: list | None, curso_slug: str) -> list[Path]:
+        """
+        Ordena os módulos de um curso.
+
+        Com `ordem_modulos` no .courseforge.yaml (lista de nomes de pasta), segue essa
+        lista — a ordem pedagógica fica desacoplada do nome da pasta, e as URLs não mudam.
+        Módulos fora da lista vêm depois, pela regra padrão: 01 em diante e modulo_00 no fim.
+        """
+        def padrao(d: Path) -> tuple:
+            return (1 if d.name.startswith("modulo_00") else 0, d.name)
+
+        if not ordem:
+            return sorted(modulos, key=padrao)
+
+        posicao = {nome: i for i, nome in enumerate(ordem)}
+        existentes = {d.name for d in modulos}
+        for nome in ordem:
+            if nome not in existentes:
+                logger.warning("ordem_modulos de '%s' cita módulo inexistente: %s", curso_slug, nome)
+
+        listados = sorted((d for d in modulos if d.name in posicao), key=lambda d: posicao[d.name])
+        restantes = sorted((d for d in modulos if d.name not in posicao), key=padrao)
+        return listados + restantes
 
     def _construir_entrada_modulo(self, modulo_dir: Path, cursos_dir: Path) -> dict | None:
         """Constrói a entrada de navegação de um módulo."""

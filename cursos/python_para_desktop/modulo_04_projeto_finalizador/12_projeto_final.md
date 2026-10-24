@@ -1,4 +1,4 @@
-# 15 — Projeto Final
+# 12 — Projeto Final
 
 ## 🎯 Objetivo
 
@@ -387,7 +387,7 @@ Antes de considerar o Projeto Final entregue, confirme:
 
 ## 🎓 Parabéns!
 
-Você concluiu o **Módulo 04 — Projeto Finalizador** do curso Python para Desktop da CourseForge.
+Você concluiu o **Módulo 05 — Projeto Finalizador** do curso Python para Desktop da CourseForge.
 
 Vamos recapitular o que você construiu:
 
@@ -429,5 +429,5 @@ Você não é mais um aluno de Python. Você é um desenvolvedor Python. Comport
 🚀 **Obrigado por chegar até aqui. Agora vá construir o futuro!**
 
 ---
-*CourseForge — Python para Desktop — Módulo 04: Projeto Finalizador*
+*CourseForge — Python para Desktop — Módulo 05: Projeto Finalizador*
 *Entrega: 20 de agosto*

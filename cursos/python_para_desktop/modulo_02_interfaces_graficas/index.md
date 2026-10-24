@@ -1,4 +1,4 @@
-# Módulo 02 — Interfaces Gráficas com Python
+# Módulo 03 — Interfaces Gráficas com Python
 
 > **Curso:** python_para_desktop  
 > **Módulo:** 2 de 3  
