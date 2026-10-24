@@ -331,8 +331,49 @@ Essas validações são ingênuas, mas funcionam como ponto de partida. Para pro
 - Solicite uma frase e conte quantas vezes a letra "a" (minúscula ou maiúscula) aparece nela. Exiba o resultado.
 - Dada a string `" Python é demais "`, remova os espaços extras, substitua "demais" por "incrível" e exiba a nova string toda em maiúsculas.
 
+<!-- gabarito -->
+??? success "Gabarito — Básico"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    # 1) Nome completo
+    nome = input("Nome completo: ").strip()
+    print(nome.upper())
+    print(nome.lower())
+    print("Caracteres (sem espaços):", len(nome.replace(" ", "")))
+    print("Primeiro nome:", nome.split()[0])
+
+    # 2) Quantas letras "a"
+    frase = input("Digite uma frase: ")
+    print("Letras 'a':", frase.lower().count("a"))
+
+    # 3) Limpar, trocar e maiúsculas
+    texto = " Python é demais "
+    print(texto.strip().replace("demais", "incrível").upper())  # PYTHON É INCRÍVEL
+    ```
+
+
 ### Intermediário (aplicação)
 Crie uma função `formatar_nome(nome)` que receba um nome completo e retorne no formato "SOBRENOME, Nome". Exemplo: "Maria da Silva Santos" → "SANTOS, Maria". Considere que o sobrenome é a última palavra. Trate entradas com espaços extras. Utilize métodos de string como `strip`, `split`, `upper`, etc.
+
+<!-- gabarito -->
+??? success "Gabarito — Intermediário"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    def formatar_nome(nome):
+        partes = nome.strip().split()  # split() sem argumento já ignora espaços repetidos
+        if not partes:
+            return ""
+        if len(partes) == 1:
+            return partes[0].capitalize()
+        return f"{partes[-1].upper()}, {partes[0].capitalize()}"
+
+
+    print(formatar_nome("Maria da Silva Santos"))   # SANTOS, Maria
+    print(formatar_nome("   joão    pereira  "))   # PEREIRA, João
+    ```
+
 
 ### Avançado (desafio)
 Desenvolva uma função `validar_cpf(cpf)` que verifique se o CPF (string) possui formato válido e dígitos verificadores corretos. O formato pode conter pontos e traço (ex.: "123.456.789-09"). A validação deve:
@@ -343,6 +384,41 @@ Desenvolva uma função `validar_cpf(cpf)` que verifique se o CPF (string) possu
 4. Retornar `True` se válido, `False` caso contrário.
 
 Use apenas métodos de string e operações aritméticas (sem regex). Documente a função com docstring.
+
+<!-- gabarito -->
+??? success "Gabarito — Avançado"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    def validar_cpf(cpf):
+        """
+        Valida um CPF (com ou sem pontos e traço).
+
+        1. Mantém só os dígitos.
+        2. Exige 11 dígitos e rejeita sequências repetidas (ex.: 111.111.111-11).
+        3. Calcula os dois dígitos verificadores pelo algoritmo oficial.
+        Retorna True se o CPF for válido.
+        """
+        numeros = "".join(c for c in cpf if c.isdigit())
+        if len(numeros) != 11 or numeros == numeros[0] * 11:
+            return False
+
+        for posicao in (9, 10):  # 1º dígito usa 9 números; o 2º usa 10
+            soma = sum(int(numeros[i]) * (posicao + 1 - i) for i in range(posicao))
+            digito = (soma * 10) % 11
+            if digito == 10:
+                digito = 0
+            if digito != int(numeros[posicao]):
+                return False
+        return True
+
+
+    print(validar_cpf("529.982.247-25"))  # True
+    print(validar_cpf("529.982.247-26"))  # False (dígito errado)
+    print(validar_cpf("111.111.111-11"))  # False (sequência repetida)
+    print(validar_cpf("123"))             # False (tamanho)
+    ```
+
 
 ## Projeto Prático: Processador de Cadastros
 Você receberá um arquivo de texto `cadastros.txt` (simulado como string longa no código) com linhas no formato:

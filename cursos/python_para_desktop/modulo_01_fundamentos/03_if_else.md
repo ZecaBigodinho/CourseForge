@@ -255,6 +255,36 @@ Aqui, `nome` será `True` se o usuário digitar algo, e `False` se ele pressiona
 - Solicite ao usuário sua idade e verifique se ele já pode votar (`idade >= 16`). Exiba "Pode votar" ou "Não pode votar".
 - Peça um número e diga se ele é positivo, negativo ou zero, utilizando `if/elif/else`.
 
+<!-- gabarito -->
+??? success "Gabarito — Básico"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    # 1) Par ou ímpar
+    numero = int(input("Digite um número inteiro: "))
+    if numero % 2 == 0:
+        print("Par")
+    else:
+        print("Ímpar")
+
+    # 2) Pode votar?
+    idade = int(input("Sua idade: "))
+    if idade >= 16:
+        print("Pode votar")
+    else:
+        print("Não pode votar")
+
+    # 3) Positivo, negativo ou zero
+    valor = float(input("Digite um número: "))
+    if valor > 0:
+        print("Positivo")
+    elif valor < 0:
+        print("Negativo")
+    else:
+        print("Zero")
+    ```
+
+
 ### Intermediário (aplicação)
 Uma empresa de energia elétrica cobra R$ 0,50 por kWh para os primeiros 200 kWh e R$ 0,75 para o consumo excedente. Escreva um programa que:
 
@@ -264,6 +294,25 @@ Uma empresa de energia elétrica cobra R$ 0,50 por kWh para os primeiros 200 kWh
 - Exiba o valor final com duas casas decimais.
 
 Use apenas estruturas condicionais e operadores aprendidos.
+
+<!-- gabarito -->
+??? success "Gabarito — Intermediário"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    consumo = float(input("Consumo do mês (kWh): "))
+
+    if consumo <= 200:
+        valor = consumo * 0.50
+    else:
+        valor = 200 * 0.50 + (consumo - 200) * 0.75
+
+    if consumo < 100:
+        valor = valor * 0.90  # desconto de 10%
+
+    print(f"Valor da conta: R$ {valor:.2f}")
+    ```
+
 
 ### Avançado (desafio)
 Crie um sistema simples de notas escolares que:
@@ -276,6 +325,35 @@ Crie um sistema simples de notas escolares que:
     - Média < 5.0: Reprovado
 - Adicionalmente, em caso de Recuperação, verifique se a nota mais baixa é menor que 4.0. Se for, a situação muda para "Recuperação com risco" e exiba essa informação.
 - Exiba a média, a situação e, se for o caso, a nota que puxou a média para baixo.
+
+<!-- gabarito -->
+??? success "Gabarito — Avançado"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    nota1 = float(input("Nota 1: "))
+    nota2 = float(input("Nota 2: "))
+    nota3 = float(input("Nota 3: "))
+
+    media = (nota1 + nota2 + nota3) / 3
+    menor = min(nota1, nota2, nota3)
+
+    if media >= 7.0:
+        situacao = "Aprovado"
+    elif media >= 5.0:
+        if menor < 4.0:
+            situacao = "Recuperação com risco"
+        else:
+            situacao = "Recuperação"
+    else:
+        situacao = "Reprovado"
+
+    print(f"Média: {media:.1f}")
+    print(f"Situação: {situacao}")
+    if situacao == "Recuperação com risco":
+        print(f"Nota que puxou a média para baixo: {menor}")
+    ```
+
 
 ## Projeto Prático: Mini Calculadora com Menu
 Desenvolva uma calculadora que opera com dois números e um operador escolhido pelo usuário. O programa deve:

@@ -266,6 +266,32 @@ Por enquanto, suas variáveis existirão dentro do programa principal. Ao final 
 - Armazene os valores `10`, `20` e `30` em três variáveis distintas, `a`, `b` e `c`. Calcule a média aritmética e armazene em `media`. Exiba o resultado.
 - Verifique e anote o tipo de cada uma das seguintes expressões usando `type()`: `5`, `5.0`, `"5"`, `5 > 3`, `"python"[0]`.
 
+<!-- gabarito -->
+??? success "Gabarito — Básico"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    # 1) Frase com variáveis
+    cidade = "Recife"
+    ano_atual = 2026
+    print(f"Eu nasci em {cidade} e estamos em {ano_atual}.")
+
+    # 2) Média de três valores
+    a = 10
+    b = 20
+    c = 30
+    media = (a + b + c) / 3
+    print("Média:", media)  # 20.0
+
+    # 3) Tipos de cada expressão
+    print(type(5))           # <class 'int'>
+    print(type(5.0))         # <class 'float'>
+    print(type("5"))         # <class 'str'>
+    print(type(5 > 3))       # <class 'bool'>
+    print(type("python"[0])) # <class 'str'>  — um caractere também é uma string
+    ```
+
+
 ### Intermediário (aplicação)
 Você está desenvolvendo um conversor de moedas simples. Sabendo que 1 dólar equivale a R$ 5,47 (cotação fictícia), escreva um programa que:
 
@@ -274,6 +300,24 @@ Você está desenvolvendo um conversor de moedas simples. Sabendo que 1 dólar e
 - Calcule o valor em reais e armazene em `reais`.
 - Exiba o resultado com duas casas decimais.
 - Adicionalmente, aplique um desconto de 2% se a compra for acima de 100 dólares, e exiba o novo valor.
+
+<!-- gabarito -->
+??? success "Gabarito — Intermediário"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    COTACAO = 5.47  # R$ por dólar (fictícia)
+
+    dolares = float(input("Quantos dólares deseja comprar? "))
+    reais = dolares * COTACAO
+    print(f"Valor em reais: R$ {reais:.2f}")
+
+    # O "if" é o assunto da aula 03 — aqui ele só decide se o desconto vale.
+    if dolares > 100:
+        reais_com_desconto = reais * 0.98  # 2% de desconto
+        print(f"Com desconto de 2%: R$ {reais_com_desconto:.2f}")
+    ```
+
 
 ### Avançado (desafio)
 Crie um programa que simule o cadastro de um currículo básico. Ele deve solicitar ao usuário: nome, idade, altura (em metros) e se possui experiência profissional (`True`/`False`). Em seguida, exiba uma ficha resumo onde:
@@ -284,6 +328,30 @@ Crie um programa que simule o cadastro de um currículo básico. Ele deve solici
 - Calcule também o ano de nascimento aproximado (subtraia a idade do ano atual) e inclua essa informação.
 
 Utilize variáveis com nomes significativos, conversões de tipo e f-strings para formatar a saída.
+
+<!-- gabarito -->
+??? success "Gabarito — Avançado"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    ANO_ATUAL = 2026
+
+    nome = input("Nome: ")
+    idade = int(input("Idade: "))
+    altura = float(input("Altura (m): "))
+    tem_experiencia = input("Tem experiência profissional? (s/n) ").strip().lower() == "s"
+
+    ano_nascimento = ANO_ATUAL - idade
+    experiencia_texto = "Sim" if tem_experiencia else "Não"
+
+    print("----- CURRÍCULO -----")
+    print(f"Nome: {nome}")
+    print("Idade: " + str(idade) + " anos")  # int convertido para str para concatenar
+    print(f"Altura: {altura:.1f} m")
+    print(f"Experiência: {experiencia_texto}")
+    print(f"Nascimento (aprox.): {ano_nascimento}")
+    ```
+
 
 ## Projeto Prático: Calculadora de IMC (Índice de Massa Corporal)
 Desenvolva um programa de console que calcula o IMC de uma pessoa, seguindo estas etapas:

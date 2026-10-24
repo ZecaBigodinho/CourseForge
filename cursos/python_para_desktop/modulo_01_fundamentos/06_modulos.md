@@ -328,6 +328,29 @@ Para usar uma biblioteca externa, instale-a com pip e importe-a como faria com q
 - Use `random.randint` para simular o lançamento de um dado de 6 faces por 5 vezes, exibindo os resultados.
 - Com o módulo `datetime`, exiba a data e hora atuais no formato "DD/MM/AAAA HH:MM".
 
+<!-- gabarito -->
+??? success "Gabarito — Básico"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    import math
+    import random
+    from datetime import datetime
+
+    # 1) Raiz quadrada e seno
+    print("Raiz de 144:", math.sqrt(144))                          # 12.0
+    print("Seno de 30°:", round(math.sin(math.radians(30)), 2))    # 0.5
+
+    # 2) Cinco lançamentos de um dado
+    for lancamento in range(1, 6):
+        print(f"Lançamento {lancamento}: {random.randint(1, 6)}")
+
+    # 3) Data e hora atuais
+    agora = datetime.now()
+    print(agora.strftime("%d/%m/%Y %H:%M"))
+    ```
+
+
 ### Intermediário (aplicação)
 Crie um módulo chamado `conversores.py` contendo as funções:
 
@@ -335,6 +358,40 @@ Crie um módulo chamado `conversores.py` contendo as funções:
 - `libras_para_kg(lb)` que retorna `lb / 2.20462`.
 
 Em um programa separado, importe esse módulo e crie um conversor de peso que pergunta ao usuário o valor e a unidade de origem, exibindo o resultado convertido. Utilize `if __name__ == "__main__"` no programa principal para testes.
+
+<!-- gabarito -->
+??? success "Gabarito — Intermediário"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python title="conversores.py"
+    def kg_para_libras(kg):
+        return kg * 2.20462
+
+
+    def libras_para_kg(lb):
+        return lb / 2.20462
+    ```
+
+    ```python title="conversor_peso.py"
+    import conversores
+
+
+    def main():
+        valor = float(input("Valor: "))
+        unidade = input("Unidade de origem (kg/lb): ").strip().lower()
+
+        if unidade == "kg":
+            print(f"{valor} kg = {conversores.kg_para_libras(valor):.2f} lb")
+        elif unidade == "lb":
+            print(f"{valor} lb = {conversores.libras_para_kg(valor):.2f} kg")
+        else:
+            print("Unidade inválida. Use kg ou lb.")
+
+
+    if __name__ == "__main__":
+        main()
+    ```
+
 
 ### Avançado (desafio)
 Desenvolva um módulo `estatisticas.py` que contenha as funções:
@@ -344,6 +401,55 @@ Desenvolva um módulo `estatisticas.py` que contenha as funções:
 - `moda(lista)`: retorna o(s) valor(es) mais frequente(s) (dica: use `collections.Counter` do módulo embutido `collections`).
 
 Em seguida, crie um script que gera 1000 números aleatórios entre 1 e 100, e utilize seu módulo para calcular e exibir a média, mediana e moda desses números. Proteja o script com `if __name__ == "__main__"`.
+
+<!-- gabarito -->
+??? success "Gabarito — Avançado"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python title="estatisticas.py"
+    from collections import Counter
+
+
+    def media(lista):
+        return sum(lista) / len(lista)
+
+
+    def mediana(lista):
+        ordenada = sorted(lista)
+        meio = len(ordenada) // 2
+        if len(ordenada) % 2 == 1:
+            return ordenada[meio]
+        return (ordenada[meio - 1] + ordenada[meio]) / 2
+
+
+    def moda(lista):
+        """Retorna a lista de valores mais frequentes (pode haver empate)."""
+        contagem = Counter(lista)
+        maior = max(contagem.values())
+        return sorted(valor for valor, vezes in contagem.items() if vezes == maior)
+    ```
+
+    ```python title="analise.py"
+    import random
+    import estatisticas
+
+
+    def main():
+        numeros = [random.randint(1, 100) for _ in range(1000)]
+        print(f"Média: {estatisticas.media(numeros):.2f}")
+        print(f"Mediana: {estatisticas.mediana(numeros)}")
+        print(f"Moda: {estatisticas.moda(numeros)}")
+
+        # Conferência com valores conhecidos
+        assert estatisticas.mediana([3, 1, 2]) == 2
+        assert estatisticas.mediana([4, 1, 3, 2]) == 2.5
+        assert estatisticas.moda([1, 2, 2, 3, 3]) == [2, 3]
+
+
+    if __name__ == "__main__":
+        main()
+    ```
+
 
 ## Projeto Prático: Diário de Bordo com Módulos
 Crie uma aplicação de diário de bordo que salva entradas em um arquivo de texto, com registro de data/hora, utilizando módulos personalizados.

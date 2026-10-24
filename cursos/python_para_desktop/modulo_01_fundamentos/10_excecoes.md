@@ -334,8 +334,73 @@ Assim, quem chama `sacar` pode capturar `SaldoInsuficienteError` especificamente
 2. Crie uma lista com 5 números e peça ao usuário um índice para acessar. Trate `IndexError` se o índice for inválido e `ValueError` se a entrada não for um número inteiro.
 3. Simule a abertura de um arquivo: use `try` para abrir um arquivo inexistente e capture `FileNotFoundError`, exibindo uma mensagem amigável. Inclua um bloco `finally` que imprima "Operação finalizada.".
 
+<!-- gabarito -->
+??? success "Gabarito — Básico"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    # 1) Divisão protegida
+    try:
+        a = float(input("Primeiro número: "))
+        b = float(input("Segundo número: "))
+        print("Resultado:", a / b)
+    except ZeroDivisionError:
+        print("Não é possível dividir por zero.")
+    except ValueError:
+        print("Digite apenas números.")
+
+    # 2) Acesso por índice
+    numeros = [10, 20, 30, 40, 50]
+    try:
+        indice = int(input("Índice (0 a 4): "))
+        print("Valor:", numeros[indice])
+    except IndexError:
+        print("Índice fora da lista.")
+    except ValueError:
+        print("O índice precisa ser um número inteiro.")
+
+    # 3) Arquivo inexistente com finally
+    try:
+        with open("nao_existe.txt", encoding="utf-8") as arquivo:
+            print(arquivo.read())
+    except FileNotFoundError:
+        print("O arquivo não foi encontrado. Verifique o nome e a pasta.")
+    finally:
+        print("Operação finalizada.")
+    ```
+
+
 ### Intermediário (aplicação)
 Desenvolva uma função `converter_para_numero(valor)` que recebe uma string e tenta convertê-la para `int` ou `float`, retornando o número convertido. Se a string não for um número válido, a função deve lançar um `ValueError` com uma mensagem específica. Em seguida, crie um programa que use essa função para somar números digitados pelo usuário em uma única linha separados por espaços (ex.: "10 20 30"). Trate exceções para que o programa não quebre com entradas inválidas.
+
+<!-- gabarito -->
+??? success "Gabarito — Intermediário"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    def converter_para_numero(valor):
+        """Converte a string em int ou float; lança ValueError se não for número."""
+        texto = valor.strip().replace(",", ".")
+        try:
+            return int(texto)
+        except ValueError:
+            pass
+        try:
+            return float(texto)
+        except ValueError:
+            raise ValueError(f"'{valor}' não é um número válido.") from None
+
+
+    linha = input("Digite números separados por espaço: ")
+    total = 0
+    for parte in linha.split():
+        try:
+            total += converter_para_numero(parte)
+        except ValueError as erro:
+            print("Ignorado:", erro)
+    print("Soma:", total)
+    ```
+
 
 ### Avançado (desafio)
 Crie um sistema de reserva de assentos para um teatro. A classe `Teatro` deve ter uma matriz (lista de listas) representando os assentos (ocupado `True`/livre `False`). Regras:
@@ -347,6 +412,88 @@ Crie um sistema de reserva de assentos para um teatro. A classe `Teatro` deve te
     - `AssentoOcupadoError` se o assento já estiver reservado.
 3. O programa deve oferecer um menu para reservar, cancelar (liberar assento) e visualizar o mapa de assentos (com `[X]` para ocupado e `[ ]` para livre).
 4. Utilize tratamento de exceções adequado para todas as operações.
+
+<!-- gabarito -->
+??? success "Gabarito — Avançado"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    # Este desafio usa uma classe — o assunto do Módulo 02 (POO).
+    # Leia como "um conjunto de dados + as funções que cuidam deles".
+
+    class FileiraInvalidaError(Exception):
+        pass
+
+
+    class AssentoInvalidoError(Exception):
+        pass
+
+
+    class AssentoOcupadoError(Exception):
+        pass
+
+
+    class Teatro:
+        FILEIRAS = "ABCDEFGHIJ"
+        ASSENTOS = 15
+
+        def __init__(self):
+            self.mapa = [[False] * self.ASSENTOS for _ in self.FILEIRAS]
+
+        def _posicao(self, fileira, assento):
+            fileira = fileira.strip().upper()
+            if len(fileira) != 1 or fileira not in self.FILEIRAS:
+                raise FileiraInvalidaError(f"Fileira '{fileira}' não existe (use A-J).")
+            if not 1 <= assento <= self.ASSENTOS:
+                raise AssentoInvalidoError(f"Assento {assento} não existe (use 1-15).")
+            return self.FILEIRAS.index(fileira), assento - 1
+
+        def reservar(self, fileira, assento):
+            f, a = self._posicao(fileira, assento)
+            if self.mapa[f][a]:
+                raise AssentoOcupadoError(f"O assento {fileira.upper()}{assento} já está ocupado.")
+            self.mapa[f][a] = True
+
+        def cancelar(self, fileira, assento):
+            f, a = self._posicao(fileira, assento)
+            self.mapa[f][a] = False
+
+        def exibir(self):
+            print("    " + " ".join(f"{n:>3}" for n in range(1, self.ASSENTOS + 1)))
+            for letra, linha in zip(self.FILEIRAS, self.mapa):
+                print(f"{letra}   " + " ".join("[X]" if ocupado else "[ ]" for ocupado in linha))
+
+
+    def main():
+        teatro = Teatro()
+        while True:
+            opcao = input("\n1-Reservar 2-Cancelar 3-Mapa 4-Sair: ").strip()
+            if opcao == "4":
+                break
+            if opcao == "3":
+                teatro.exibir()
+                continue
+            if opcao not in ("1", "2"):
+                print("Opção inválida.")
+                continue
+            try:
+                fileira = input("Fileira (A-J): ")
+                assento = int(input("Assento (1-15): "))
+                if opcao == "1":
+                    teatro.reservar(fileira, assento)
+                    print("Reserva feita!")
+                else:
+                    teatro.cancelar(fileira, assento)
+                    print("Assento liberado.")
+            except ValueError:
+                print("O assento precisa ser um número.")
+            except (FileiraInvalidaError, AssentoInvalidoError, AssentoOcupadoError) as erro:
+                print("Erro:", erro)
+
+
+    main()
+    ```
+
 
 ## Projeto Prático: Gerenciador de Contatos com Persistência Segura
 Desenvolva uma aplicação de console para gerenciar contatos, com persistência em arquivo JSON, tratamento robusto de exceções e validação de dados.

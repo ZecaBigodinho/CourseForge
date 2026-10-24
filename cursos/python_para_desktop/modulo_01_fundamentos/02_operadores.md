@@ -269,9 +269,37 @@ print(x is None)  # True
 ## Exercícios
 
 ### Básico (fixação)
-- Crie duas variáveis `a = 12` e `b = 5`. Calcule e exiba o resultado das seis operações aritméticas: adição, subtração, multiplicação, divisão, divisão inteira, resto e exponenciação (`a` elevado a `b`).
+- Crie duas variáveis `a = 12` e `b = 5`. Calcule e exiba o resultado das sete operações aritméticas: adição, subtração, multiplicação, divisão, divisão inteira, resto e exponenciação (`a` elevado a `b`).
 - Escreva um programa que pergunte o ano de nascimento e o ano atual, calcule a idade e exiba `True` se a pessoa for maior de idade (`idade >= 18`) ou `False` caso contrário.
 - Dada a string `texto = "Python"`, use o operador `in` para verificar se a letra `"y"` está presente e exiba o resultado.
+
+<!-- gabarito -->
+??? success "Gabarito — Básico"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    # 1) As sete operações aritméticas
+    a = 12
+    b = 5
+    print("Adição:", a + b)           # 17
+    print("Subtração:", a - b)        # 7
+    print("Multiplicação:", a * b)    # 60
+    print("Divisão:", a / b)          # 2.4
+    print("Divisão inteira:", a // b) # 2
+    print("Resto:", a % b)            # 2
+    print("Potência:", a ** b)        # 248832
+
+    # 2) Maior de idade?
+    ano_nascimento = int(input("Ano de nascimento: "))
+    ano_atual = int(input("Ano atual: "))
+    idade = ano_atual - ano_nascimento
+    print("Maior de idade:", idade >= 18)
+
+    # 3) Operador in
+    texto = "Python"
+    print("y" in texto)  # True
+    ```
+
 
 ### Intermediário (aplicação)
 Uma loja oferece frete grátis para compras acima de R$ 150,00 ou para clientes do programa de fidelidade. Escreva um programa que:
@@ -281,6 +309,20 @@ Uma loja oferece frete grátis para compras acima de R$ 150,00 ou para clientes 
 - Calcule se o frete será gratuito usando operadores lógicos e de comparação.
 - Exiba a mensagem: `"Frete grátis: True/False"`.
 
+<!-- gabarito -->
+??? success "Gabarito — Intermediário"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    compra = float(input("Valor da compra: R$ "))
+    resposta = input("Cliente fidelizado? (sim/não) ").strip().lower()
+    fidelidade = resposta == "sim"
+
+    frete_gratis = compra > 150 or fidelidade
+    print("Frete grátis:", frete_gratis)
+    ```
+
+
 ### Avançado (desafio)
 Crie um programa que leia três números inteiros e verifique as seguintes condições usando apenas operadores (sem usar `if`, apenas expressões booleanas armazenadas em variáveis):
 
@@ -289,6 +331,25 @@ Crie um programa que leia três números inteiros e verifique as seguintes condi
 - `exatamente_dois_maiores_que_10`: `True` se exatamente dois dos números forem maiores que 10.
 
 Exiba os três resultados. Dica: para verificar quantidade exata, você pode somar resultados de comparações (`True = 1`, `False = 0`): `(a > 10) + (b > 10) + (c > 10) == 2`.
+
+<!-- gabarito -->
+??? success "Gabarito — Avançado"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    a = int(input("1º número: "))
+    b = int(input("2º número: "))
+    c = int(input("3º número: "))
+
+    todos_positivos = a > 0 and b > 0 and c > 0
+    pelo_menos_um_par = a % 2 == 0 or b % 2 == 0 or c % 2 == 0
+    exatamente_dois_maiores_que_10 = (a > 10) + (b > 10) + (c > 10) == 2
+
+    print("Todos positivos:", todos_positivos)
+    print("Pelo menos um par:", pelo_menos_um_par)
+    print("Exatamente dois maiores que 10:", exatamente_dois_maiores_que_10)
+    ```
+
 
 ## Projeto Prático: Calculadora de Orçamento de Viagem
 Desenvolva um programa que ajude um usuário a planejar o orçamento de uma viagem de carro. O programa deve:

@@ -281,6 +281,29 @@ else:
 - Com o laço `for`, imprima os números pares de 0 a 20, inclusive.
 - Escreva um programa que peça ao usuário para digitar uma letra. Continue pedindo até que ele digite a letra "x". Use `while`.
 
+<!-- gabarito -->
+??? success "Gabarito — Básico"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    # 1) Contagem regressiva com while
+    contador = 10
+    while contador >= 1:
+        print(contador)
+        contador -= 1
+
+    # 2) Pares de 0 a 20 com for
+    for numero in range(0, 21, 2):
+        print(numero)
+
+    # 3) Pedir até digitar "x"
+    letra = ""
+    while letra != "x":
+        letra = input("Digite uma letra (x para sair): ").strip().lower()
+    print("Fim!")
+    ```
+
+
 ### Intermediário (aplicação)
 Uma livraria deseja um programa para calcular o total de uma venda. O usuário insere o preço de cada livro. O programa deve somar os valores até que o usuário digite 0 para encerrar. Ao final, exiba:
 
@@ -289,6 +312,31 @@ Uma livraria deseja um programa para calcular o total de uma venda. O usuário i
 - A média de preço por livro.
 
 Utilize um laço `while` para receber os preços. Valide que o preço seja um valor positivo (se for negativo, peça novamente).
+
+<!-- gabarito -->
+??? success "Gabarito — Intermediário"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    quantidade = 0
+    total = 0.0
+
+    while True:
+        preco = float(input("Preço do livro (0 para encerrar): R$ "))
+        if preco == 0:
+            break
+        if preco < 0:
+            print("Preço inválido. Digite um valor positivo.")
+            continue
+        quantidade += 1
+        total += preco
+
+    print(f"Livros comprados: {quantidade}")
+    print(f"Total da compra: R$ {total:.2f}")
+    if quantidade > 0:
+        print(f"Preço médio: R$ {total / quantidade:.2f}")
+    ```
+
 
 ### Avançado (desafio)
 Crie um programa que simule um caixa eletrônico simples. O programa inicia com um saldo de R$ 1000,00 e oferece um menu com as opções: [1] Depositar, [2] Sacar, [3] Saldo, [4] Sair. O menu deve reaparecer até o usuário escolher Sair. Regras:
@@ -300,6 +348,46 @@ Crie um programa que simule um caixa eletrônico simples. O programa inicia com 
 - Use `while True` e `break` para controlar o menu.
 - Utilize `continue` para voltar ao início do laço quando uma operação falhar (ex.: tentativa de saque inválido).
 - Mostre uma mensagem de despedida ao final.
+
+<!-- gabarito -->
+??? success "Gabarito — Avançado"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    saldo = 1000.00
+
+    while True:
+        print("\n[1] Depositar  [2] Sacar  [3] Saldo  [4] Sair")
+        opcao = input("Opção: ").strip()
+
+        if opcao == "1":
+            valor = float(input("Valor do depósito: R$ "))
+            if valor <= 0:
+                print("O depósito deve ser positivo.")
+                continue
+            saldo += valor
+        elif opcao == "2":
+            valor = float(input("Valor do saque: R$ "))
+            if valor <= 0:
+                print("O saque deve ser maior que zero.")
+                continue
+            if valor > saldo:
+                print("Saldo insuficiente.")
+                continue
+            saldo -= valor
+        elif opcao == "3":
+            pass  # o saldo é exibido logo abaixo
+        elif opcao == "4":
+            break
+        else:
+            print("Opção inválida.")
+            continue
+
+        print(f"Saldo atual: R$ {saldo:.2f}")
+
+    print("Obrigado por usar o caixa eletrônico. Até logo!")
+    ```
+
 
 ## Projeto Prático: Jogo de Adivinhação com Tentativas
 Desenvolva um jogo em que o computador escolhe um número aleatório entre 1 e 100, e o jogador tenta adivinhar. O programa deve:

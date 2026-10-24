@@ -357,6 +357,34 @@ if arquivo.exists():
 2. Leia o arquivo `frases.txt` gerado e exiba seu conteúdo numerando as linhas (ex.: "1: primeira frase"). Use `readlines()` ou iteração direta.
 3. Usando `pathlib`, crie uma pasta chamada `backup` no diretório atual. Verifique se ela existe antes de criar (use `exists()` e `mkdir()`).
 
+<!-- gabarito -->
+??? success "Gabarito — Básico"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    from pathlib import Path
+
+    # 1) Gravar três frases
+    with open("frases.txt", "w", encoding="utf-8") as arquivo:
+        for i in range(1, 4):
+            frase = input(f"Frase {i}: ")
+            arquivo.write(frase + "\n")
+
+    # 2) Ler numerando as linhas
+    with open("frases.txt", "r", encoding="utf-8") as arquivo:
+        for numero, linha in enumerate(arquivo, start=1):
+            print(f"{numero}: {linha.rstrip()}")
+
+    # 3) Criar a pasta backup se ainda não existir
+    backup = Path("backup")
+    if not backup.exists():
+        backup.mkdir()
+        print("Pasta 'backup' criada.")
+    else:
+        print("Pasta 'backup' já existe.")
+    ```
+
+
 ### Intermediário (aplicação)
 Crie um programa que gerencie um arquivo de tarefas (`tarefas.txt`). Cada linha terá uma tarefa e seu status no formato `tarefa|status`, onde status é `pendente` ou `concluida`. O programa deve:
 
@@ -367,6 +395,67 @@ Crie um programa que gerencie um arquivo de tarefas (`tarefas.txt`). Cada linha 
 
 Utilize `pathlib` para o caminho do arquivo e manipulação de leitura/escrita com `with`. Implemente funções separadas para cada operação.
 
+<!-- gabarito -->
+??? success "Gabarito — Intermediário"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    from pathlib import Path
+
+    ARQUIVO = Path("tarefas.txt")
+
+
+    def carregar():
+        if not ARQUIVO.exists():
+            return []
+        with ARQUIVO.open("r", encoding="utf-8") as f:
+            return [linha.rstrip("\n").split("|") for linha in f if linha.strip()]
+
+
+    def salvar(tarefas):
+        with ARQUIVO.open("w", encoding="utf-8") as f:
+            for descricao, status in tarefas:
+                f.write(f"{descricao}|{status}\n")
+
+
+    def adicionar(descricao):
+        tarefas = carregar()
+        tarefas.append([descricao, "pendente"])
+        salvar(tarefas)
+
+
+    def listar():
+        tarefas = carregar()
+        if not tarefas:
+            print("Nenhuma tarefa.")
+        for numero, (descricao, status) in enumerate(tarefas, start=1):
+            print(f"{numero}. {descricao} [{status}]")
+
+
+    def concluir(numero):
+        tarefas = carregar()
+        if 1 <= numero <= len(tarefas):
+            tarefas[numero - 1][1] = "concluida"
+            salvar(tarefas)
+            return True
+        return False
+
+
+    while True:
+        opcao = input("\n1-Adicionar 2-Listar 3-Concluir 4-Sair: ").strip()
+        if opcao == "1":
+            adicionar(input("Descrição: ").strip())
+        elif opcao == "2":
+            listar()
+        elif opcao == "3":
+            numero = int(input("Número da tarefa: "))
+            if not concluir(numero):
+                print("Número inválido.")
+        elif opcao == "4":
+            break
+    ```
+
+
 ### Avançado (desafio)
 Desenvolva um utilitário de backup que copie todos os arquivos `.txt` de uma pasta de origem para uma pasta de destino, mas apenas se o arquivo de origem for mais recente que o de destino (ou se o destino não existir). Requisitos:
 
@@ -375,6 +464,51 @@ Desenvolva um utilitário de backup que copie todos os arquivos `.txt` de uma pa
 - Crie a estrutura de destino se não existir.
 - Exiba um resumo de arquivos copiados, ignorados (por serem mais novos no destino) e erros.
 - Trate exceções (permissão, arquivo inexistente, etc.).
+
+<!-- gabarito -->
+??? success "Gabarito — Avançado"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    import shutil
+    from pathlib import Path
+
+
+    def fazer_backup(origem, destino):
+        copiados, ignorados, erros = [], [], []
+        destino.mkdir(parents=True, exist_ok=True)
+
+        for arquivo in origem.glob("*.txt"):
+            alvo = destino / arquivo.name
+            try:
+                if alvo.exists() and alvo.stat().st_mtime >= arquivo.stat().st_mtime:
+                    ignorados.append(arquivo.name)
+                    continue
+                shutil.copy2(arquivo, alvo)  # copy2 preserva a data de modificação
+                copiados.append(arquivo.name)
+            except (PermissionError, FileNotFoundError, OSError) as erro:
+                erros.append(f"{arquivo.name}: {erro}")
+        return copiados, ignorados, erros
+
+
+    def main():
+        origem = Path(input("Pasta de origem [.]: ").strip() or ".")
+        destino = Path(input("Pasta de destino [backup_txt]: ").strip() or "backup_txt")
+
+        if not origem.is_dir():
+            print(f"A pasta de origem '{origem}' não existe.")
+            return
+
+        copiados, ignorados, erros = fazer_backup(origem, destino)
+        print(f"Copiados: {len(copiados)} {copiados}")
+        print(f"Ignorados (já atualizados): {len(ignorados)} {ignorados}")
+        print(f"Erros: {len(erros)} {erros}")
+
+
+    if __name__ == "__main__":
+        main()
+    ```
+
 
 ## Projeto Prático: Diário Pessoal com Arquivos de Texto
 Desenvolva um programa de diário pessoal que armazena cada entrada em um arquivo de texto dentro de uma pasta organizada por ano e mês. O usuário poderá escrever uma nova entrada e visualizar entradas de uma data específica.

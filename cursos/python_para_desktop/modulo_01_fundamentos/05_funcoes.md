@@ -298,8 +298,63 @@ Funções não servem apenas para reuso, mas também para abstrair complexidade.
 - Crie uma função `exibir_nome_idade(nome, idade)` que imprima: "Nome: ..., Idade: ...". Chame-a com seus dados.
 - Defina uma função `e_par(numero)` que retorna `True` se o número for par e `False` caso contrário. Utilize-a em um programa que percorra números de 1 a 10 e imprima se cada um é par ou ímpar.
 
+<!-- gabarito -->
+??? success "Gabarito — Básico"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    def dobro(numero):
+        return numero * 2
+
+
+    def exibir_nome_idade(nome, idade):
+        print(f"Nome: {nome}, Idade: {idade}")
+
+
+    def e_par(numero):
+        return numero % 2 == 0
+
+
+    print(dobro(4))    # 8
+    print(dobro(-7))   # -14
+    exibir_nome_idade("Ana", 19)
+
+    for n in range(1, 11):
+        if e_par(n):
+            print(n, "é par")
+        else:
+            print(n, "é ímpar")
+    ```
+
+
 ### Intermediário (aplicação)
 Desenvolva uma função `calcular_media(notas)` que receba uma lista de notas (números) e retorne a média aritmética. Em seguida, crie outra função `situacao(media)` que retorne "Aprovado" (média >= 7), "Recuperação" (5 <= média < 7) ou "Reprovado" (média < 5). Escreva um programa que leia 3 notas, calcule a média usando essas funções e exiba a situação do aluno.
+
+<!-- gabarito -->
+??? success "Gabarito — Intermediário"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    def calcular_media(notas):
+        return sum(notas) / len(notas)
+
+
+    def situacao(media):
+        if media >= 7:
+            return "Aprovado"
+        if media >= 5:
+            return "Recuperação"
+        return "Reprovado"
+
+
+    notas = []
+    for i in range(1, 4):
+        notas.append(float(input(f"Nota {i}: ")))
+
+    media = calcular_media(notas)
+    print(f"Média: {media:.1f} — {situacao(media)}")
+    ```
+
 
 ### Avançado (desafio)
 Implemente um sistema de conversão de unidades com as seguintes funções:
@@ -310,6 +365,57 @@ Implemente um sistema de conversão de unidades com as seguintes funções:
 - `pes_para_metros(pes)`: converte pés para metros.
 
 Crie também uma função `converter(valor, unidade_origem, unidade_destino)` que, com base em strings ("m", "km", "mi", "ft"), escolhe automaticamente a combinação de funções adequada e retorna o valor convertido. Se a conversão não for suportada, retorne `None`. Documente cada função com docstrings. Exemplo de uso: `converter(1000, "m", "km")` deve retornar `1.0`.
+
+<!-- gabarito -->
+??? success "Gabarito — Avançado"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    def metros_para_km(metros):
+        """Converte metros em quilômetros."""
+        return metros / 1000
+
+
+    def km_para_milhas(km):
+        """Converte quilômetros em milhas (1 mi = 1,609344 km)."""
+        return km / 1.609344
+
+
+    def milhas_para_pes(milhas):
+        """Converte milhas em pés (1 mi = 5280 ft)."""
+        return milhas * 5280
+
+
+    def pes_para_metros(pes):
+        """Converte pés em metros (1 ft = 0,3048 m)."""
+        return pes * 0.3048
+
+
+    def converter(valor, unidade_origem, unidade_destino):
+        """
+        Converte `valor` entre "m", "km", "mi" e "ft" encadeando as funções acima.
+        Retorna None se alguma unidade não for suportada.
+        """
+        # A cadeia m → km → mi → ft → m forma um ciclo: basta andar por ela
+        ciclo = ["m", "km", "mi", "ft"]
+        passos = {"m": metros_para_km, "km": km_para_milhas, "mi": milhas_para_pes, "ft": pes_para_metros}
+
+        if unidade_origem not in ciclo or unidade_destino not in ciclo:
+            return None
+
+        atual = unidade_origem
+        while atual != unidade_destino:
+            valor = passos[atual](valor)
+            atual = ciclo[(ciclo.index(atual) + 1) % len(ciclo)]
+        return valor
+
+
+    print(converter(1000, "m", "km"))            # 1.0
+    print(round(converter(10, "km", "mi"), 3))   # 6.214
+    print(round(converter(1, "mi", "m"), 3))     # 1609.344
+    print(converter(5, "m", "jardas"))           # None
+    ```
+
 
 ## Projeto Prático: Calculadora Modular com Funções
 Desenvolva uma calculadora de console que ofereça operações matemáticas básicas e avançadas, toda estruturada em funções.
