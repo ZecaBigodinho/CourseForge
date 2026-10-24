@@ -43,16 +43,17 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 
 -   :material-robot-happy-outline:{ .lg .middle } __Introdução à IA__
 
-    <span class="cf-tag">Em breve</span>
+    <span class="cf-tag cf-tag--ok">Disponível</span>
 
     ---
 
     O que é Inteligência Artificial e como usá-la com responsabilidade no estudo e no trabalho.
 
     **Nível:** Iniciante  
-    **Certificado:** Regra definida no lançamento do curso.  
+    **Carga horária:** 40 h  
+    **Certificado:** Entrega e demonstração do mini-assistente do Projeto final (Módulo 05).  
 
-    [:octicons-arrow-right-24: Ver a ementa](introducao_a_ia/docs/index.md)
+    [:octicons-arrow-right-24: Acessar o curso](introducao_a_ia/docs/index.md)
 
 </div>
 
@@ -104,11 +105,12 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 
 [Ir para o curso](pacote_office/docs/index.md)
 
-### Introdução à IA <span class="cf-tag">Em breve</span>
+### Introdução à IA <span class="cf-tag cf-tag--ok">Disponível</span>
 
 - **Nível:** Iniciante
+- **Carga horária:** 40 h
 - **Para quem é:** Qualquer aluno que queira entender e usar ferramentas de IA de forma crítica e responsável.
-- **Certificado:** Regra definida no lançamento do curso.
+- **Certificado:** Entrega e demonstração do mini-assistente do Projeto final (Módulo 05).
 - **Autor:** Pedro Paulo IF
 
 **Pré-requisitos:**

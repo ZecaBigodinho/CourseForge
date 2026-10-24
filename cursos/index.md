@@ -54,13 +54,15 @@ hide:
 
 -   :material-robot-happy-outline:{ .lg .middle } __Introdução à IA__
 
-    <span class="cf-tag">Em breve</span>
+    <span class="cf-tag cf-tag--ok">Disponível</span>
 
     ---
 
     O que é IA, como usar assistentes com responsabilidade, engenharia de prompt e um mini-projeto com Python.
 
-    [:octicons-arrow-right-24: Ver a ementa](introducao_a_ia/docs/index.md)
+    5 módulos · 40 h · do funcionamento ao seu mini-assistente
+
+    [:octicons-arrow-right-24: Começar pelo Módulo 01](introducao_a_ia/modulo_01_o_que_e_ia/index.md)
 
 </div>
 
@@ -167,6 +169,8 @@ Apresente o sistema em equipe no Módulo 05 e receba o certificado.
     O **Mini-projeto** (Módulo 01) e o **Projeto de Dados** (Módulo 04) são etapas de prática — importantes para chegar preparado, mas não liberam o certificado sozinhos. O Módulo 06 (Git & GitHub) é bônus.
 
     **Pacote Office:** o certificado é liberado ao **entregar e apresentar o [Projeto Final integrado](pacote_office/modulo_05_projeto_final/index.md)** (Módulo 05) — planilha, currículo, cartas e apresentação pessoal.
+
+    **Introdução à IA:** o certificado é liberado ao **entregar e demonstrar o [mini-assistente](introducao_a_ia/modulo_05_projeto_mini_assistente/index.md)** (Módulo 05), com o README e o relatório de responsabilidade.
 
 ## Perguntas frequentes
 

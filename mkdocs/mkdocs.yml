@@ -188,4 +188,39 @@ nav:
     - Integração e entrega final: pacote_office/modulo_05_projeto_final/05_integracao_e_entrega.md
 - Introdução à IA:
   - Apresentação do curso: introducao_a_ia/docs/index.md
+  - O que é IA (sem mistério):
+    - Visão Geral: introducao_a_ia/modulo_01_o_que_e_ia/index.md
+    - O que é Inteligência Artificial: introducao_a_ia/modulo_01_o_que_e_ia/01_o_que_e_inteligencia_artificial.md
+    - 'Aprendizado de máquina: aprender com exemplos': introducao_a_ia/modulo_01_o_que_e_ia/02_aprendizado_de_maquina.md
+    - Redes neurais e aprendizado profundo: introducao_a_ia/modulo_01_o_que_e_ia/03_redes_neurais.md
+    - IA generativa e modelos de linguagem: introducao_a_ia/modulo_01_o_que_e_ia/04_ia_generativa.md
+    - 'Projeto do módulo: raio-X de uma IA do dia a dia': introducao_a_ia/modulo_01_o_que_e_ia/05_projeto_raio_x_de_uma_ia.md
+  - Usando assistentes de IA bem:
+    - Visão Geral: introducao_a_ia/modulo_02_usando_assistentes/index.md
+    - Conhecendo os assistentes de IA: introducao_a_ia/modulo_02_usando_assistentes/01_conhecendo_os_assistentes.md
+    - Escrevendo bons pedidos (prompts): introducao_a_ia/modulo_02_usando_assistentes/02_escrevendo_bons_prompts.md
+    - Técnicas que fazem diferença: introducao_a_ia/modulo_02_usando_assistentes/03_tecnicas_que_fazem_diferenca.md
+    - Conferindo as respostas: introducao_a_ia/modulo_02_usando_assistentes/04_conferindo_as_respostas.md
+    - 'Projeto do módulo: meu caderno de prompts': introducao_a_ia/modulo_02_usando_assistentes/05_projeto_caderno_de_prompts.md
+  - IA no estudo e no trabalho:
+    - Visão Geral: introducao_a_ia/modulo_03_ia_no_estudo_e_no_trabalho/index.md
+    - Estudar com IA: introducao_a_ia/modulo_03_ia_no_estudo_e_no_trabalho/01_estudar_com_ia.md
+    - Escrever e comunicar no trabalho: introducao_a_ia/modulo_03_ia_no_estudo_e_no_trabalho/02_escrever_e_comunicar.md
+    - Planilhas e dados com IA: introducao_a_ia/modulo_03_ia_no_estudo_e_no_trabalho/03_planilhas_e_dados.md
+    - Código e imagens com IA: introducao_a_ia/modulo_03_ia_no_estudo_e_no_trabalho/04_codigo_e_imagens.md
+    - 'Projeto do módulo: uma tarefa real com IA': introducao_a_ia/modulo_03_ia_no_estudo_e_no_trabalho/05_projeto_tarefa_real_com_ia.md
+  - Ética, privacidade e direitos autorais:
+    - Visão Geral: introducao_a_ia/modulo_04_etica_e_privacidade/index.md
+    - Privacidade e dados pessoais: introducao_a_ia/modulo_04_etica_e_privacidade/01_privacidade_e_dados_pessoais.md
+    - Autoria, plágio e honestidade: introducao_a_ia/modulo_04_etica_e_privacidade/02_autoria_plagio_e_honestidade.md
+    - Direitos autorais e direito de imagem: introducao_a_ia/modulo_04_etica_e_privacidade/03_direitos_autorais_e_imagem.md
+    - Vieses, desinformação e impactos sociais: introducao_a_ia/modulo_04_etica_e_privacidade/04_vieses_e_impactos.md
+    - 'Projeto do módulo: carta de uso responsável de IA': introducao_a_ia/modulo_04_etica_e_privacidade/05_projeto_carta_de_uso_responsavel.md
+  - 'Projeto: seu mini-assistente':
+    - Visão Geral: introducao_a_ia/modulo_05_projeto_mini_assistente/index.md
+    - Planejando o mini-assistente: introducao_a_ia/modulo_05_projeto_mini_assistente/01_planejando_o_mini_assistente.md
+    - O motor simulado e a conversa: introducao_a_ia/modulo_05_projeto_mini_assistente/02_motor_simulado_e_conversa.md
+    - Conectando a uma API de IA: introducao_a_ia/modulo_05_projeto_mini_assistente/03_conectando_a_uma_api.md
+    - Segurança e testes: introducao_a_ia/modulo_05_projeto_mini_assistente/04_seguranca_e_testes.md
+    - 'Projeto final: entregando o seu mini-assistente': introducao_a_ia/modulo_05_projeto_mini_assistente/05_projeto_final_entrega.md
 docs_dir: ../cursos
