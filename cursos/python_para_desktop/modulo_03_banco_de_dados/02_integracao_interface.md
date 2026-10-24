@@ -487,13 +487,337 @@ Isso já dá um visual mais próximo do tema escuro.
 2. Adicione um formulário para inserir novos produtos. Ao clicar em "Salvar", insira no banco e atualize a Treeview. Trate `sqlite3.IntegrityError` caso a descrição seja duplicada (adicione `UNIQUE`).
 3. Implemente a exclusão de um produto selecionado com confirmação.
 
+<!-- gabarito -->
+??? success "Gabarito — Básico"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    import sqlite3
+    import tkinter as tk
+    from tkinter import ttk, messagebox
+
+    conn = sqlite3.connect("produtos.db")
+    conn.execute("""
+        CREATE TABLE IF NOT EXISTS produtos (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            descricao TEXT NOT NULL UNIQUE,
+            preco REAL NOT NULL
+        )""")
+
+    janela = tk.Tk()
+    janela.title("Produtos")
+
+    # 2) Formulário
+    form = tk.Frame(janela, padx=10, pady=10)
+    form.pack(fill="x")
+    tk.Label(form, text="Descrição:").grid(row=0, column=0, sticky="e")
+    entrada_desc = tk.Entry(form, width=30)
+    entrada_desc.grid(row=0, column=1, padx=5)
+    tk.Label(form, text="Preço:").grid(row=0, column=2, sticky="e")
+    entrada_preco = tk.Entry(form, width=10)
+    entrada_preco.grid(row=0, column=3, padx=5)
+
+    # 1) Treeview com a lista
+    tree = ttk.Treeview(janela, columns=("id", "descricao", "preco"), show="headings", height=8)
+    for coluna, titulo in (("id", "ID"), ("descricao", "Descrição"), ("preco", "Preço (R$)")):
+        tree.heading(coluna, text=titulo)
+    tree.column("id", width=40)
+    tree.pack(fill="both", expand=True, padx=10)
+
+
+    def atualizar_lista():
+        tree.delete(*tree.get_children())
+        for linha in conn.execute("SELECT id, descricao, preco FROM produtos ORDER BY descricao"):
+            tree.insert("", "end", values=(linha[0], linha[1], f"{linha[2]:.2f}"))
+
+
+    def salvar():
+        descricao = entrada_desc.get().strip()
+        try:
+            preco = float(entrada_preco.get().replace(",", "."))
+        except ValueError:
+            messagebox.showwarning("Preço inválido", "Digite um número no preço.")
+            return
+        if not descricao:
+            messagebox.showwarning("Descrição", "Preencha a descrição.")
+            return
+        try:
+            with conn:
+                conn.execute("INSERT INTO produtos (descricao, preco) VALUES (?, ?)", (descricao, preco))
+        except sqlite3.IntegrityError:
+            messagebox.showerror("Duplicado", f"Já existe um produto '{descricao}'.")
+            return
+        entrada_desc.delete(0, tk.END)
+        entrada_preco.delete(0, tk.END)
+        atualizar_lista()
+
+
+    # 3) Excluir com confirmação
+    def excluir():
+        selecao = tree.selection()
+        if not selecao:
+            messagebox.showinfo("Excluir", "Selecione um produto na lista.")
+            return
+        id_produto, descricao, _ = tree.item(selecao[0], "values")
+        if messagebox.askyesno("Confirmar", f"Excluir '{descricao}'?"):
+            with conn:
+                conn.execute("DELETE FROM produtos WHERE id = ?", (id_produto,))
+            atualizar_lista()
+
+
+    botoes = tk.Frame(janela, pady=10)
+    botoes.pack()
+    tk.Button(botoes, text="Salvar", command=salvar).pack(side="left", padx=5)
+    tk.Button(botoes, text="Excluir", command=excluir).pack(side="left", padx=5)
+    tk.Button(botoes, text="Atualizar Lista", command=atualizar_lista).pack(side="left", padx=5)
+
+    atualizar_lista()
+    janela.mainloop()
+    ```
+
+
 ### Intermediário (aplicação)
 
 1. Desenvolva um CRUD de clientes (nome, e-mail, telefone) usando CustomTkinter para os formulários e botões, e Treeview para a listagem. Permita edição inline: ao selecionar um cliente, os dados vão para os campos e o botão "Salvar" se torna "Atualizar". Inclua validação de e-mail (presença de `@`) e telefone (apenas dígitos, no mínimo 10). Use um módulo separado para as funções de banco de dados.
 
+<!-- gabarito -->
+??? success "Gabarito — Intermediário"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python title="clientes_db.py"
+    import sqlite3
+
+    CAMINHO = "clientes.db"
+
+
+    def conectar():
+        conn = sqlite3.connect(CAMINHO)
+        conn.row_factory = sqlite3.Row
+        return conn
+
+
+    def criar_tabela():
+        with conectar() as conn:
+            conn.execute("""
+                CREATE TABLE IF NOT EXISTS clientes (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    nome TEXT NOT NULL,
+                    email TEXT NOT NULL UNIQUE,
+                    telefone TEXT NOT NULL
+                )""")
+
+
+    def listar():
+        with conectar() as conn:
+            return [dict(l) for l in conn.execute("SELECT * FROM clientes ORDER BY nome")]
+
+
+    def inserir(nome, email, telefone):
+        with conectar() as conn:
+            conn.execute("INSERT INTO clientes (nome, email, telefone) VALUES (?, ?, ?)",
+                         (nome, email, telefone))
+
+
+    def atualizar(id_cliente, nome, email, telefone):
+        with conectar() as conn:
+            conn.execute("UPDATE clientes SET nome = ?, email = ?, telefone = ? WHERE id = ?",
+                         (nome, email, telefone, id_cliente))
+
+
+    def excluir(id_cliente):
+        with conectar() as conn:
+            conn.execute("DELETE FROM clientes WHERE id = ?", (id_cliente,))
+    ```
+
+    ```python title="app_clientes.py"
+    import sqlite3
+    import customtkinter as ctk
+    from tkinter import ttk, messagebox
+
+    import clientes_db as db
+
+
+    class AppClientes:
+        def __init__(self):
+            db.criar_tabela()
+            self.id_edicao = None
+            self.janela = ctk.CTk()
+            self.janela.title("Clientes")
+            self.janela.geometry("640x420")
+
+            form = ctk.CTkFrame(self.janela)
+            form.pack(fill="x", padx=10, pady=10)
+            self.campos = {}
+            for coluna, rotulo in enumerate(("Nome", "E-mail", "Telefone")):
+                ctk.CTkLabel(form, text=f"{rotulo}:").grid(row=0, column=coluna * 2, padx=5, pady=5)
+                entrada = ctk.CTkEntry(form, width=140)
+                entrada.grid(row=0, column=coluna * 2 + 1, padx=5, pady=5)
+                self.campos[rotulo] = entrada
+
+            botoes = ctk.CTkFrame(self.janela, fg_color="transparent")
+            botoes.pack(fill="x", padx=10)
+            self.btn_salvar = ctk.CTkButton(botoes, text="Salvar", command=self.salvar)
+            self.btn_salvar.pack(side="left", padx=5)
+            ctk.CTkButton(botoes, text="Excluir", command=self.excluir).pack(side="left", padx=5)
+            ctk.CTkButton(botoes, text="Limpar", command=self.limpar).pack(side="left", padx=5)
+
+            colunas = ("id", "nome", "email", "telefone")
+            self.tree = ttk.Treeview(self.janela, columns=colunas, show="headings")
+            for coluna, titulo in zip(colunas, ("ID", "Nome", "E-mail", "Telefone")):
+                self.tree.heading(coluna, text=titulo)
+            self.tree.column("id", width=40)
+            self.tree.pack(fill="both", expand=True, padx=10, pady=10)
+            self.tree.bind("<<TreeviewSelect>>", self.ao_selecionar)
+            self.carregar()
+
+        def valores(self):
+            nome = self.campos["Nome"].get().strip()
+            email = self.campos["E-mail"].get().strip()
+            telefone = self.campos["Telefone"].get().strip()
+            if not nome:
+                raise ValueError("Informe o nome.")
+            if "@" not in email:
+                raise ValueError("E-mail inválido (falta o @).")
+            if not telefone.isdigit() or len(telefone) < 10:
+                raise ValueError("Telefone: apenas dígitos, com DDD (mínimo 10).")
+            return nome, email, telefone
+
+        def carregar(self, registros=None):
+            self.tree.delete(*self.tree.get_children())
+            for c in (registros if registros is not None else db.listar()):
+                self.tree.insert("", "end", values=(c["id"], c["nome"], c["email"], c["telefone"]))
+
+        def salvar(self):
+            try:
+                nome, email, telefone = self.valores()
+                if self.id_edicao is None:
+                    db.inserir(nome, email, telefone)
+                else:
+                    db.atualizar(self.id_edicao, nome, email, telefone)
+            except ValueError as erro:
+                messagebox.showwarning("Dados inválidos", str(erro))
+                return
+            except sqlite3.IntegrityError:
+                messagebox.showerror("Duplicado", "Já existe um cliente com esse e-mail.")
+                return
+            self.limpar()
+            self.carregar()
+
+        def ao_selecionar(self, evento=None):
+            selecao = self.tree.selection()
+            if not selecao:
+                return
+            id_cliente, nome, email, telefone = self.tree.item(selecao[0], "values")
+            self.limpar(manter_selecao=True)
+            for rotulo, valor in zip(("Nome", "E-mail", "Telefone"), (nome, email, telefone)):
+                self.campos[rotulo].insert(0, valor)
+            self.id_edicao = int(id_cliente)
+            self.btn_salvar.configure(text="Atualizar")  # edição inline
+
+        def excluir(self):
+            if self.id_edicao is None:
+                messagebox.showinfo("Excluir", "Selecione um cliente na lista.")
+                return
+            if messagebox.askyesno("Confirmar", "Excluir o cliente selecionado?"):
+                db.excluir(self.id_edicao)
+                self.limpar()
+                self.carregar()
+
+        def limpar(self, manter_selecao=False):
+            for entrada in self.campos.values():
+                entrada.delete(0, "end")
+            self.id_edicao = None
+            self.btn_salvar.configure(text="Salvar")
+            if not manter_selecao:
+                self.tree.selection_remove(self.tree.selection())
+
+
+    if __name__ == "__main__":
+        app = AppClientes()
+        app.janela.mainloop()
+    ```
+
+
 ### Avançado (desafio)
 
 1. Estenda o CRUD de clientes com um campo de pesquisa (`CTkEntry`) e um botão "Buscar". Ao digitar parte do nome, a Treeview deve exibir apenas os registros cujo nome contenha o termo (use `LIKE` na consulta SQL). Adicione também uma opção de ordenação: ao clicar no cabeçalho de uma coluna, a tabela deve ser ordenada (crescente/decrescente). Implemente a ordenação sem recarregar do banco (ou seja, ordenando a lista de dicionários localmente). Trate corretamente a alternância entre ordenações.
+
+<!-- gabarito -->
+??? success "Gabarito — Avançado"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    # Em clientes_db.py — busca com LIKE (o % fica no parâmetro, nunca na string SQL):
+    def buscar_por_nome(termo):
+        with conectar() as conn:
+            return [dict(l) for l in conn.execute(
+                "SELECT * FROM clientes WHERE nome LIKE ? ORDER BY nome", (f"%{termo}%",))]
+
+
+    # Em AppClientes — __init__ ganha a barra de busca e cabeçalhos clicáveis:
+        def __init__(self):
+            db.criar_tabela()
+            self.id_edicao = None
+            self.registros = []                       # o que está na tabela agora
+            self.ordem = {"coluna": None, "desc": False}
+            self.janela = ctk.CTk()
+            self.janela.title("Clientes")
+            self.janela.geometry("640x460")
+
+            busca = ctk.CTkFrame(self.janela, fg_color="transparent")
+            busca.pack(fill="x", padx=10, pady=(10, 0))
+            self.entrada_busca = ctk.CTkEntry(busca, placeholder_text="Buscar por nome...")
+            self.entrada_busca.pack(side="left", fill="x", expand=True, padx=(0, 5))
+            ctk.CTkButton(busca, text="Buscar", width=80, command=self.buscar).pack(side="left")
+
+            form = ctk.CTkFrame(self.janela)
+            form.pack(fill="x", padx=10, pady=10)
+            self.campos = {}
+            for coluna, rotulo in enumerate(("Nome", "E-mail", "Telefone")):
+                ctk.CTkLabel(form, text=f"{rotulo}:").grid(row=0, column=coluna * 2, padx=5, pady=5)
+                entrada = ctk.CTkEntry(form, width=140)
+                entrada.grid(row=0, column=coluna * 2 + 1, padx=5, pady=5)
+                self.campos[rotulo] = entrada
+
+            botoes = ctk.CTkFrame(self.janela, fg_color="transparent")
+            botoes.pack(fill="x", padx=10)
+            self.btn_salvar = ctk.CTkButton(botoes, text="Salvar", command=self.salvar)
+            self.btn_salvar.pack(side="left", padx=5)
+            ctk.CTkButton(botoes, text="Excluir", command=self.excluir).pack(side="left", padx=5)
+            ctk.CTkButton(botoes, text="Limpar", command=self.limpar).pack(side="left", padx=5)
+
+            colunas = ("id", "nome", "email", "telefone")
+            self.titulos = dict(zip(colunas, ("ID", "Nome", "E-mail", "Telefone")))
+            self.tree = ttk.Treeview(self.janela, columns=colunas, show="headings")
+            for coluna in colunas:
+                self.tree.heading(coluna, text=self.titulos[coluna],
+                                  command=lambda c=coluna: self.ordenar(c))
+            self.tree.column("id", width=40)
+            self.tree.pack(fill="both", expand=True, padx=10, pady=10)
+            self.tree.bind("<<TreeviewSelect>>", self.ao_selecionar)
+            self.carregar()
+
+        def carregar(self, registros=None):
+            self.registros = registros if registros is not None else db.listar()
+            self.tree.delete(*self.tree.get_children())
+            for c in self.registros:
+                self.tree.insert("", "end", values=(c["id"], c["nome"], c["email"], c["telefone"]))
+
+        def buscar(self):
+            termo = self.entrada_busca.get().strip()
+            self.carregar(db.buscar_por_nome(termo) if termo else None)  # vazio = lista completa
+
+        def ordenar(self, coluna):
+            """Ordena a lista que já está na tela, sem consultar o banco de novo."""
+            desc = not self.ordem["desc"] if self.ordem["coluna"] == coluna else False
+            self.ordem = {"coluna": coluna, "desc": desc}
+            chave = (lambda c: c[coluna]) if coluna == "id" else (lambda c: str(c[coluna]).lower())
+            self.carregar(sorted(self.registros, key=chave, reverse=desc))
+            for c, titulo in self.titulos.items():   # seta no cabeçalho ativo
+                seta = (" ▼" if desc else " ▲") if c == coluna else ""
+                self.tree.heading(c, text=titulo + seta)
+    ```
+
 
 ## Projeto Prático
 

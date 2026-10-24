@@ -196,11 +196,15 @@ class Produto:
 # views/main_view.py
 import customtkinter as ctk
 from tkinter import ttk, messagebox
+from config import TEMA, COR_TEMA, TITULO_APP
 
 class MainView(ctk.CTk):
     def __init__(self):
+        # Aparência vem do .env (via config.py) e precisa ser definida antes de criar a janela
+        ctk.set_appearance_mode(TEMA)
+        ctk.set_default_color_theme(COR_TEMA)
         super().__init__()
-        self.title("Gerenciador de Produtos")
+        self.title(TITULO_APP)
         self.geometry("800x500")
         self._criar_widgets()
 
@@ -506,15 +510,547 @@ Simples e claro: a criação da aplicação é delegada ao Controller, que por s
 2. Altere o esquema de cores no `.env` para `green` e o tema para `light`. Verifique se a interface reflete as mudanças após reiniciar.
 3. Adicione uma coluna `descricao` na Treeview e no formulário, permitindo visualizar e editar a descrição do produto.
 
+<!-- gabarito -->
+??? success "Gabarito — Básico"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    # 1) Monte as pastas como na aula, rode `python app.py` e teste: adicionar, selecionar
+    #    na tabela (os campos são preenchidos), atualizar, excluir (com confirmação) e limpar.
+
+    # 2) .env — tema claro e cor verde. Feche e abra o programa: a View lê esses valores
+    #    ao iniciar (ctk.set_appearance_mode e ctk.set_default_color_theme).
+    #        TEMA=light
+    #        COR_TEMA=green
+
+    # 3) Coluna e campo "Descrição"
+    ```
+
+    ```python title="views/main_view.py — MainView"
+        def _criar_widgets(self):
+            form = ctk.CTkFrame(self)
+            form.pack(fill="x", padx=10, pady=10)
+
+            ctk.CTkLabel(form, text="Nome:").grid(row=0, column=0, padx=5, pady=5, sticky="e")
+            self.entry_nome = ctk.CTkEntry(form, width=200)
+            self.entry_nome.grid(row=0, column=1, padx=5, pady=5)
+            ctk.CTkLabel(form, text="Preço:").grid(row=0, column=2, padx=5, pady=5, sticky="e")
+            self.entry_preco = ctk.CTkEntry(form, width=100)
+            self.entry_preco.grid(row=0, column=3, padx=5, pady=5)
+            ctk.CTkLabel(form, text="Qtd:").grid(row=0, column=4, padx=5, pady=5, sticky="e")
+            self.entry_quantidade = ctk.CTkEntry(form, width=60)
+            self.entry_quantidade.grid(row=0, column=5, padx=5, pady=5)
+
+            # Linha nova: descrição ocupando a largura do formulário
+            ctk.CTkLabel(form, text="Descrição:").grid(row=1, column=0, padx=5, pady=5, sticky="e")
+            self.entry_descricao = ctk.CTkEntry(form)
+            self.entry_descricao.grid(row=1, column=1, columnspan=5, padx=5, pady=5, sticky="we")
+
+            self.btn_adicionar = ctk.CTkButton(form, text="Adicionar")
+            self.btn_adicionar.grid(row=0, column=6, padx=10, pady=5)
+            self.btn_atualizar = ctk.CTkButton(form, text="Atualizar", state="disabled")
+            self.btn_atualizar.grid(row=0, column=7, padx=5, pady=5)
+            self.btn_excluir = ctk.CTkButton(form, text="Excluir", state="disabled")
+            self.btn_excluir.grid(row=1, column=6, padx=10, pady=5)
+            self.btn_limpar = ctk.CTkButton(form, text="Limpar")
+            self.btn_limpar.grid(row=1, column=7, padx=5, pady=5)
+
+            colunas = ("id", "nome", "descricao", "preco", "quantidade")
+            self.tree = ttk.Treeview(self, columns=colunas, show="headings")
+            for coluna, titulo in zip(colunas, ("ID", "Nome", "Descrição", "Preço (R$)", "Qtd")):
+                self.tree.heading(coluna, text=titulo)
+            self.tree.column("id", width=50)
+            self.tree.column("preco", width=100)
+            self.tree.column("quantidade", width=80)
+            self.tree.pack(fill="both", expand=True, padx=10, pady=10)
+
+            scrollbar = ttk.Scrollbar(self, orient="vertical", command=self.tree.yview)
+            self.tree.configure(yscrollcommand=scrollbar.set)
+            scrollbar.pack(side="right", fill="y")
+    ```
+
+    ```python title="controllers/produto_controller.py — ProdutoController (métodos alterados)"
+        def _ao_selecionar(self, event):
+            selecionado = self.view.tree.selection()
+            if not selecionado:
+                self.limpar()
+                return
+            id_, nome, descricao, preco, qtd = self.view.tree.item(selecionado)["values"]
+            self.id_edicao = id_
+            for campo, valor in ((self.view.entry_nome, nome), (self.view.entry_descricao, descricao),
+                                 (self.view.entry_preco, preco), (self.view.entry_quantidade, qtd)):
+                campo.delete(0, "end")
+                campo.insert(0, valor)
+            self.view.btn_atualizar.configure(state="normal")
+            self.view.btn_excluir.configure(state="normal")
+            self.view.btn_adicionar.configure(state="disabled")
+
+        def adicionar(self):
+            try:
+                nome, preco, qtd = self._validar_campos()
+                descricao = self.view.entry_descricao.get().strip()
+                Produto(nome=nome, descricao=descricao, preco=preco, quantidade=qtd).salvar()
+                self._atualizar_lista()
+                self.limpar()
+                messagebox.showinfo("Sucesso", "Produto adicionado com sucesso.")
+            except ValueError as e:
+                messagebox.showerror("Erro de validação", str(e))
+            except sqlite3.Error as e:
+                messagebox.showerror("Erro no banco de dados", f"Não foi possível salvar.\n{e}")
+
+        def atualizar(self):
+            if not self.id_edicao:
+                return
+            try:
+                nome, preco, qtd = self._validar_campos()
+                descricao = self.view.entry_descricao.get().strip()
+                Produto(id=self.id_edicao, nome=nome, descricao=descricao, preco=preco, quantidade=qtd).salvar()
+                self._atualizar_lista()
+                self.limpar()
+                messagebox.showinfo("Sucesso", "Produto atualizado.")
+            except ValueError as e:
+                messagebox.showerror("Erro de validação", str(e))
+            except sqlite3.Error as e:
+                messagebox.showerror("Erro no banco de dados", str(e))
+
+        def limpar(self):
+            for campo in (self.view.entry_nome, self.view.entry_descricao,
+                          self.view.entry_preco, self.view.entry_quantidade):
+                campo.delete(0, "end")
+            self.id_edicao = None
+            self.view.btn_adicionar.configure(state="normal")
+            self.view.btn_atualizar.configure(state="disabled")
+            self.view.btn_excluir.configure(state="disabled")
+            self.view.tree.selection_remove(self.view.tree.selection())
+
+        def _atualizar_lista(self):
+            self.view.tree.delete(*self.view.tree.get_children())
+            for p in Produto.listar_todos():
+                self.view.tree.insert("", "end", values=(p.id, p.nome, p.descricao or "",
+                                                         f"{p.preco:.2f}", p.quantidade))
+    ```
+
+
 ### Intermediário (aplicação)
 
 1. Crie uma nova entidade `Categoria` com tabela `categorias` (id, nome). Relacione `produto` com `categoria` (chave estrangeira). Atualize a interface para selecionar a categoria em um `CTkOptionMenu`. Implemente as classes Model, View e Controller para Categoria.
 2. Adicione uma funcionalidade de busca por nome na listagem de produtos: um campo de entrada e botão que filtram a Treeview usando `SELECT ... WHERE nome LIKE ?`. Lembre-se de recarregar a lista completa ao limpar a busca.
 
+<!-- gabarito -->
+??? success "Gabarito — Intermediário"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python title="models/database.py"
+    import sqlite3
+    from config import DB_PATH
+
+
+    def obter_conexao():
+        conn = sqlite3.connect(DB_PATH)
+        conn.row_factory = sqlite3.Row
+        conn.execute("PRAGMA foreign_keys = ON")
+        return conn
+
+
+    def inicializar_banco():
+        with obter_conexao() as conn:
+            conn.executescript("""
+                CREATE TABLE IF NOT EXISTS categorias (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    nome TEXT NOT NULL UNIQUE
+                );
+                CREATE TABLE IF NOT EXISTS produtos (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    nome TEXT NOT NULL,
+                    descricao TEXT,
+                    preco REAL NOT NULL CHECK(preco >= 0),
+                    quantidade INTEGER NOT NULL DEFAULT 0,
+                    categoria_id INTEGER REFERENCES categorias(id)
+                );
+            """)
+            # Banco criado antes desta versão? Acrescenta a coluna sem perder os produtos.
+            colunas = [linha["name"] for linha in conn.execute("PRAGMA table_info(produtos)")]
+            if "categoria_id" not in colunas:
+                conn.execute("ALTER TABLE produtos ADD COLUMN categoria_id INTEGER REFERENCES categorias(id)")
+    ```
+
+    ```python title="models/categoria.py"
+    from models.database import obter_conexao
+
+
+    class Categoria:
+        def __init__(self, id=None, nome=""):
+            self.id = id
+            self.nome = nome
+
+        @classmethod
+        def listar_todas(cls):
+            with obter_conexao() as conn:
+                return [cls(**dict(l)) for l in conn.execute("SELECT * FROM categorias ORDER BY nome")]
+
+        @classmethod
+        def buscar_por_nome(cls, nome):
+            with obter_conexao() as conn:
+                linha = conn.execute("SELECT * FROM categorias WHERE nome = ?", (nome,)).fetchone()
+                return cls(**dict(linha)) if linha else None
+
+        def salvar(self):
+            with obter_conexao() as conn:
+                self.id = conn.execute("INSERT INTO categorias (nome) VALUES (?)", (self.nome,)).lastrowid
+    ```
+
+    ```python title="models/produto.py"
+    from models.database import obter_conexao
+
+
+    class Produto:
+        def __init__(self, id=None, nome="", descricao="", preco=0.0, quantidade=0,
+                     categoria_id=None, categoria=None):
+            self.id = id
+            self.nome = nome
+            self.descricao = descricao
+            self.preco = preco
+            self.quantidade = quantidade
+            self.categoria_id = categoria_id
+            self.categoria = categoria  # nome da categoria, vindo do JOIN
+
+        _SELECT = """
+            SELECT p.*, c.nome AS categoria
+            FROM produtos p LEFT JOIN categorias c ON c.id = p.categoria_id
+        """
+
+        @classmethod
+        def listar_todos(cls):
+            with obter_conexao() as conn:
+                return [cls(**dict(l)) for l in conn.execute(cls._SELECT + " ORDER BY p.nome")]
+
+        @classmethod
+        def buscar_por_nome(cls, termo):
+            """(Exercício 2) Produtos cujo nome contém o termo."""
+            with obter_conexao() as conn:
+                return [cls(**dict(l)) for l in conn.execute(
+                    cls._SELECT + " WHERE p.nome LIKE ? ORDER BY p.nome", (f"%{termo}%",))]
+
+        def salvar(self):
+            with obter_conexao() as conn:
+                dados = (self.nome, self.descricao, self.preco, self.quantidade, self.categoria_id)
+                if self.id:
+                    conn.execute("UPDATE produtos SET nome=?, descricao=?, preco=?, quantidade=?, "
+                                 "categoria_id=? WHERE id=?", dados + (self.id,))
+                else:
+                    self.id = conn.execute("INSERT INTO produtos (nome, descricao, preco, quantidade, "
+                                           "categoria_id) VALUES (?, ?, ?, ?, ?)", dados).lastrowid
+
+        def excluir(self):
+            if self.id:
+                with obter_conexao() as conn:
+                    conn.execute("DELETE FROM produtos WHERE id = ?", (self.id,))
+    ```
+
+    ```python title="views/categoria_view.py"
+    import customtkinter as ctk
+
+
+    class CategoriaView(ctk.CTkToplevel):
+        """Janela pequena para cadastrar categorias."""
+
+        def __init__(self, master):
+            super().__init__(master)
+            self.title("Categorias")
+            self.entry_nome = ctk.CTkEntry(self, placeholder_text="Nova categoria", width=200)
+            self.entry_nome.grid(row=0, column=0, padx=10, pady=10)
+            self.btn_salvar = ctk.CTkButton(self, text="Salvar categoria", width=120)
+            self.btn_salvar.grid(row=0, column=1, padx=(0, 10), pady=10)
+            self.lista = ctk.CTkLabel(self, text="", justify="left")
+            self.lista.grid(row=1, column=0, columnspan=2, padx=10, pady=(0, 10), sticky="w")
+    ```
+
+    ```python title="controllers/categoria_controller.py"
+    import sqlite3
+    from tkinter import messagebox
+
+    from models.categoria import Categoria
+    from views.categoria_view import CategoriaView
+
+
+    class CategoriaController:
+        def __init__(self, master, ao_alterar):
+            self.ao_alterar = ao_alterar  # avisa o ProdutoController para recarregar o menu
+            self.view = CategoriaView(master)
+            self.view.btn_salvar.configure(command=self.salvar)
+            self._mostrar()
+
+        def _mostrar(self):
+            nomes = [c.nome for c in Categoria.listar_todas()]
+            self.view.lista.configure(text="\n".join(f"• {n}" for n in nomes) or "Nenhuma categoria.")
+
+        def salvar(self):
+            nome = self.view.entry_nome.get().strip()
+            if not nome:
+                messagebox.showwarning("Categoria", "Digite o nome da categoria.")
+                return
+            try:
+                Categoria(nome=nome).salvar()
+            except sqlite3.IntegrityError:
+                messagebox.showerror("Categoria", f"A categoria '{nome}' já existe.")
+                return
+            self.view.entry_nome.delete(0, "end")
+            self._mostrar()
+            self.ao_alterar()
+    ```
+
+    ```python title="views/main_view.py — MainView: categoria no formulário, busca e coluna nova"
+        def _criar_widgets(self):
+            busca = ctk.CTkFrame(self, fg_color="transparent")
+            busca.pack(fill="x", padx=10, pady=(10, 0))
+            self.entry_busca = ctk.CTkEntry(busca, placeholder_text="Buscar por nome...")
+            self.entry_busca.pack(side="left", fill="x", expand=True, padx=(0, 5))
+            self.btn_buscar = ctk.CTkButton(busca, text="Buscar", width=80)
+            self.btn_buscar.pack(side="left")
+
+            form = ctk.CTkFrame(self)
+            form.pack(fill="x", padx=10, pady=10)
+            ctk.CTkLabel(form, text="Nome:").grid(row=0, column=0, padx=5, pady=5, sticky="e")
+            self.entry_nome = ctk.CTkEntry(form, width=200)
+            self.entry_nome.grid(row=0, column=1, padx=5, pady=5)
+            ctk.CTkLabel(form, text="Preço:").grid(row=0, column=2, padx=5, pady=5, sticky="e")
+            self.entry_preco = ctk.CTkEntry(form, width=100)
+            self.entry_preco.grid(row=0, column=3, padx=5, pady=5)
+            ctk.CTkLabel(form, text="Qtd:").grid(row=0, column=4, padx=5, pady=5, sticky="e")
+            self.entry_quantidade = ctk.CTkEntry(form, width=60)
+            self.entry_quantidade.grid(row=0, column=5, padx=5, pady=5)
+            ctk.CTkLabel(form, text="Categoria:").grid(row=1, column=0, padx=5, pady=5, sticky="e")
+            self.menu_categoria = ctk.CTkOptionMenu(form, values=["(sem categoria)"])
+            self.menu_categoria.grid(row=1, column=1, padx=5, pady=5, sticky="w")
+            self.btn_categorias = ctk.CTkButton(form, text="Categorias...", width=110)
+            self.btn_categorias.grid(row=1, column=2, columnspan=2, padx=5, pady=5, sticky="w")
+
+            self.btn_adicionar = ctk.CTkButton(form, text="Adicionar")
+            self.btn_adicionar.grid(row=0, column=6, padx=10, pady=5)
+            self.btn_atualizar = ctk.CTkButton(form, text="Atualizar", state="disabled")
+            self.btn_atualizar.grid(row=0, column=7, padx=5, pady=5)
+            self.btn_excluir = ctk.CTkButton(form, text="Excluir", state="disabled")
+            self.btn_excluir.grid(row=1, column=6, padx=10, pady=5)
+            self.btn_limpar = ctk.CTkButton(form, text="Limpar")
+            self.btn_limpar.grid(row=1, column=7, padx=5, pady=5)
+
+            colunas = ("id", "nome", "categoria", "preco", "quantidade")
+            self.tree = ttk.Treeview(self, columns=colunas, show="headings")
+            for coluna, titulo in zip(colunas, ("ID", "Nome", "Categoria", "Preço (R$)", "Qtd")):
+                self.tree.heading(coluna, text=titulo)
+            self.tree.column("id", width=50)
+            self.tree.pack(fill="both", expand=True, padx=10, pady=10)
+    ```
+
+    ```python title="controllers/produto_controller.py — ProdutoController (métodos novos e alterados)"
+        def __init__(self):
+            self.view = MainView()
+            self.id_edicao = None
+            self._conectar_eventos()
+            self._recarregar_categorias()
+            self._atualizar_lista()
+
+        def _conectar_eventos(self):
+            self.view.btn_adicionar.configure(command=self.adicionar)
+            self.view.btn_atualizar.configure(command=self.atualizar)
+            self.view.btn_excluir.configure(command=self.excluir)
+            self.view.btn_limpar.configure(command=self.limpar)
+            self.view.btn_buscar.configure(command=self.buscar)
+            self.view.btn_categorias.configure(command=self.abrir_categorias)
+            self.view.tree.bind("<<TreeviewSelect>>", self._ao_selecionar)
+
+        def _recarregar_categorias(self):
+            nomes = ["(sem categoria)"] + [c.nome for c in Categoria.listar_todas()]
+            self.view.menu_categoria.configure(values=nomes)
+
+        def abrir_categorias(self):
+            CategoriaController(self.view, ao_alterar=self._recarregar_categorias)
+
+        def _categoria_escolhida(self):
+            categoria = Categoria.buscar_por_nome(self.view.menu_categoria.get())
+            return categoria.id if categoria else None
+
+        def _ao_selecionar(self, event):
+            selecionado = self.view.tree.selection()
+            if not selecionado:
+                self.limpar()
+                return
+            id_, nome, categoria, preco, qtd = self.view.tree.item(selecionado)["values"]
+            self.id_edicao = id_
+            for campo, valor in ((self.view.entry_nome, nome), (self.view.entry_preco, preco),
+                                 (self.view.entry_quantidade, qtd)):
+                campo.delete(0, "end")
+                campo.insert(0, valor)
+            self.view.menu_categoria.set(categoria or "(sem categoria)")
+            self.view.btn_atualizar.configure(state="normal")
+            self.view.btn_excluir.configure(state="normal")
+            self.view.btn_adicionar.configure(state="disabled")
+
+        def adicionar(self):
+            try:
+                nome, preco, qtd = self._validar_campos()
+                Produto(nome=nome, preco=preco, quantidade=qtd,
+                        categoria_id=self._categoria_escolhida()).salvar()
+                self._atualizar_lista()
+                self.limpar()
+                messagebox.showinfo("Sucesso", "Produto adicionado com sucesso.")
+            except ValueError as e:
+                messagebox.showerror("Erro de validação", str(e))
+            except sqlite3.Error as e:
+                messagebox.showerror("Erro no banco de dados", f"Não foi possível salvar.\n{e}")
+
+        def atualizar(self):
+            if not self.id_edicao:
+                return
+            try:
+                nome, preco, qtd = self._validar_campos()
+                Produto(id=self.id_edicao, nome=nome, preco=preco, quantidade=qtd,
+                        categoria_id=self._categoria_escolhida()).salvar()
+                self._atualizar_lista()
+                self.limpar()
+                messagebox.showinfo("Sucesso", "Produto atualizado.")
+            except ValueError as e:
+                messagebox.showerror("Erro de validação", str(e))
+            except sqlite3.Error as e:
+                messagebox.showerror("Erro no banco de dados", str(e))
+
+        def buscar(self):
+            termo = self.view.entry_busca.get().strip()
+            self._atualizar_lista(Produto.buscar_por_nome(termo) if termo else None)  # vazio = todos
+
+        def _atualizar_lista(self, produtos=None):
+            self.view.tree.delete(*self.view.tree.get_children())
+            for p in (produtos if produtos is not None else Produto.listar_todos()):
+                self.view.tree.insert("", "end", values=(p.id, p.nome, p.categoria or "",
+                                                         f"{p.preco:.2f}", p.quantidade))
+
+    # No topo de controllers/produto_controller.py, acrescente os imports:
+    #     from models.categoria import Categoria
+    #     from controllers.categoria_controller import CategoriaController
+    ```
+
+
 ### Avançado (desafio)
 
 1. Empacote o projeto com PyInstaller. Teste o executável em outro computador (ou máquina virtual) sem Python instalado. Resolva eventuais problemas de dependências. Inclua a biblioteca `customtkinter` explicitamente se necessário.
 2. Implemente um sistema de logs usando o módulo `logging` do Python. Configure-o via `.env` (nível de log, arquivo de saída). Substitua os `print` e adicione logs em pontos estratégicos (erros de banco, ações do usuário). Exiba as mensagens de log também em uma barra de status na interface.
+
+<!-- gabarito -->
+??? success "Gabarito — Avançado"
+    Uma solução possível — compare com a sua. Outras formas também podem estar certas.
+
+    ```python
+    # ───────────── 1) Executável com PyInstaller (roteiro — não testado aqui) ─────────────
+    # Este passo depende da sua máquina: siga e anote o que aconteceu em cada etapa.
+    #
+    #   pip install pyinstaller
+    #   pyinstaller --onefile --windowed --name GerenciadorProdutos ^
+    #               --collect-data customtkinter app.py
+    #
+    # --collect-data customtkinter  → leva junto os temas (.json) do CustomTkinter;
+    #                                 sem ele o executável abre e fecha com "theme not found".
+    # Depois:
+    #   1. Copie dist/GerenciadorProdutos.exe para outro computador (ou VM) sem Python.
+    #   2. Ao lado do .exe, coloque um .env (sem senhas reais) — o config.py da aula procura
+    #      o .env na pasta do executável. Sem .env, valem os padrões do config.py.
+    #   3. Abra, cadastre um produto, feche e abra de novo: o produtos.db fica na mesma pasta.
+    #   4. Antivírus reclamou? É comum com --onefile; teste também sem essa opção (gera uma pasta).
+
+    # ───────────── 2) Logs configuráveis pelo .env ─────────────
+    # .env:
+    #     LOG_NIVEL=INFO
+    #     LOG_ARQUIVO=app.log
+    ```
+
+    ```python title="utils/log.py"
+    import logging
+    import os
+
+    from dotenv import load_dotenv
+
+    load_dotenv()
+
+
+    class StatusBarHandler(logging.Handler):
+        """Mostra a última mensagem de log em um rótulo da interface."""
+
+        def __init__(self, rotulo):
+            super().__init__()
+            self.rotulo = rotulo
+
+        def emit(self, registro):
+            cores = {"ERROR": "#E57373", "WARNING": "#FFB74D"}
+            self.rotulo.configure(text=self.format(registro), text_color=cores.get(registro.levelname, "gray"))
+
+
+    def configurar_log():
+        logger = logging.getLogger("gerenciador")
+        logger.setLevel(os.getenv("LOG_NIVEL", "INFO").upper())
+        if not logger.handlers:  # evita duplicar handlers se for chamado duas vezes
+            arquivo = logging.FileHandler(os.getenv("LOG_ARQUIVO", "app.log"), encoding="utf-8")
+            arquivo.setFormatter(logging.Formatter("%(asctime)s [%(levelname)s] %(message)s"))
+            logger.addHandler(arquivo)
+        return logger
+
+
+    def ligar_barra_de_status(logger, rotulo):
+        handler = StatusBarHandler(rotulo)
+        handler.setFormatter(logging.Formatter("%(message)s"))
+        logger.addHandler(handler)
+    ```
+
+    ```python title="views/main_view.py — MainView: barra de status no rodapé"
+        def __init__(self):
+            ctk.set_appearance_mode(TEMA)
+            ctk.set_default_color_theme(COR_TEMA)
+            super().__init__()
+            self.title(TITULO_APP)
+            self.geometry("800x500")
+            self.status = ctk.CTkLabel(self, text="Pronto.", anchor="w")
+            self.status.pack(side="bottom", fill="x", padx=10, pady=(0, 5))
+            self._criar_widgets()
+    ```
+
+    ```python title="controllers/produto_controller.py — ProdutoController: logs no lugar de prints"
+    #     No topo:  from utils.log import configurar_log, ligar_barra_de_status
+        def __init__(self):
+            self.log = configurar_log()
+            self.view = MainView()
+            ligar_barra_de_status(self.log, self.view.status)
+            self.id_edicao = None
+            self._conectar_eventos()
+            self._atualizar_lista()
+            self.log.info("Aplicação iniciada.")
+
+        def adicionar(self):
+            try:
+                nome, preco, qtd = self._validar_campos()
+                produto = Produto(nome=nome, preco=preco, quantidade=qtd)
+                produto.salvar()
+                self.log.info("Produto adicionado: %s (id %s)", nome, produto.id)
+                self._atualizar_lista()
+                self.limpar()
+            except ValueError as e:
+                self.log.warning("Validação: %s", e)
+                messagebox.showerror("Erro de validação", str(e))
+            except sqlite3.Error as e:
+                self.log.error("Erro de banco ao adicionar: %s", e)
+                messagebox.showerror("Erro no banco de dados", f"Não foi possível salvar.\n{e}")
+
+        def excluir(self):
+            if not self.id_edicao:
+                return
+            if messagebox.askyesno("Confirmar", "Excluir o produto selecionado?"):
+                try:
+                    Produto(id=self.id_edicao).excluir()
+                    self.log.info("Produto excluído: id %s", self.id_edicao)
+                    self._atualizar_lista()
+                    self.limpar()
+                except sqlite3.Error as e:
+                    self.log.error("Erro de banco ao excluir: %s", e)
+                    messagebox.showerror("Erro", str(e))
+    ```
+
 
 ## Projeto Prático
 
