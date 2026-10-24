@@ -78,6 +78,8 @@ mkdocs:
     - pymdownx.highlight:
         anchor_linenums: true
     - pymdownx.inlinehilite
+    - pymdownx.tasklist:
+        custom_checkbox: true
     - pymdownx.snippets
     - attr_list
     - md_in_html

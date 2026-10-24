@@ -366,3 +366,8 @@ Neste capítulo, você aprendeu que:
 - Boas práticas incluem funções pequenas, com um único propósito, e nomes descritivos.
 
 As funções são a espinha dorsal da programação procedural. Agora você pode decompor problemas em partes menores, reutilizar lógica e tornar seu código muito mais organizado.
+
+
+<!-- revisao-visual -->
+!!! tip "Revisão visual: Funções"
+    Ficou alguma dúvida? A [Central de Revisão](../modulo_00_revisao_e_fixacao/05_funcoes_revisao.md) explica **funções** com analogias do dia a dia, diagramas e os erros mais comuns — use antes dos exercícios ou para estudar para a prova.

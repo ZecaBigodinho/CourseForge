@@ -11,8 +11,8 @@
 
 Ao final deste capítulo, você será capaz de:
 
-- Baixar e instalar o **Python 3.10+** e o **VS Code** no seu computador.
-- Marcar a opção essencial `Add python.exe to PATH` na instalação.
+- Baixar e instalar o **Python 3.14** (ou qualquer versão da 3.11 à 3.15) e o **VS Code** no seu computador.
+- Garantir que o comando `python` funcione no terminal.
 - Instalar as **extensões profissionais** recomendadas para Python no VS Code.
 - Dominar os **atalhos de teclado indispensáveis** do dia a dia.
 - Configurar o VS Code para formatar e salvar seu código automaticamente.
@@ -23,13 +23,28 @@ Ao final deste capítulo, você será capaz de:
 
 Antes do VS Code, seu computador precisa aprender a entender a linguagem Python.
 
+!!! info "Qual versão instalar?"
+    Use o **Python 3.14** — é estável e todas as bibliotecas do curso já funcionam nele. Qualquer versão da **3.11 à 3.15** serve; evite a 3.10 ou anteriores, que já não recebem atualizações de segurança.
+
 === "🪟 Windows"
-    1. Acesse o site oficial: [python.org/downloads](https://www.python.org/downloads/)
-    2. Clique no botão **Download Python 3.x.x**.
-    3. Execute o instalador baixado.
-    4. ⚠️ **MUITO IMPORTANTE:** Na primeira tela do instalador, marque a caixa:
-       - `[X] Add python.exe to PATH` (no rodapé da janela).
-    5. Clique em **Install Now** e aguarde a conclusão.
+    Desde o Python 3.14, o jeito recomendado no Windows é o **Python Install Manager** — um pequeno programa que instala e atualiza o Python pelo terminal.
+
+    1. Acesse [python.org/downloads](https://www.python.org/downloads/) e baixe o **Python install manager** (ou instale **Python Install Manager** pela Microsoft Store).
+    2. Execute o instalador e conclua a instalação.
+    3. Abra o **PowerShell** e instale o Python 3.14:
+       ```powershell
+       py install 3.14
+       ```
+       Na primeira vez, o programa faz algumas perguntas de configuração — pode aceitar as opções sugeridas.
+    4. Confira se deu certo:
+       ```powershell
+       py list
+       python --version
+       ```
+       O segundo comando deve mostrar `Python 3.14.x`.
+
+    ??? note "Computador do laboratório com o instalador antigo?"
+        O instalador tradicional (`python-3.14.x-amd64.exe`) ainda existe para as versões 3.14 e 3.15. Se usá-lo, marque `[X] Add python.exe to PATH` na **primeira tela** antes de clicar em **Install Now**.
 
 === "🐧 Linux (Ubuntu/Debian)"
     Abra o terminal e execute:
@@ -44,8 +59,10 @@ Antes do VS Code, seu computador precisa aprender a entender a linguagem Python.
     brew install python
     ```
 
-!!! danger "Atenção: Esqueceu de marcar 'Add to PATH'?"
-    Se você não marcar a caixa `Add python.exe to PATH` no Windows, o VS Code e o terminal não conseguirão encontrar o comando `python`! Caso tenha esquecido, execute o instalador novamente, escolha `Modify` e marque a opção.
+!!! danger "O terminal diz que `python` não foi encontrado?"
+    - **Com o Install Manager:** abra *Configurações → Aplicativos → Configurações avançadas de aplicativos → Aliases de execução de aplicativo* e deixe ligado o **Python (default)**. Depois rode `py install --refresh` e abra um terminal novo.
+    - **Com o instalador antigo:** você não marcou `Add python.exe to PATH`. Execute o instalador de novo, escolha `Modify` e marque a opção.
+    - Em qualquer caso, **feche e abra o VS Code** depois de instalar — ele só enxerga o Python novo ao reiniciar.
 
 ---
 

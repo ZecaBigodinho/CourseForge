@@ -21,7 +21,7 @@ Ao final do curso, você será capaz de criar programas reais com janelas intera
 ### 🛠️ Módulo 00 — Configuração do VS Code & Ambiente Python
 > 2 capítulos · **Comece por aqui** — instalar e configurar o ambiente no laboratório ou no seu computador pessoal
 
-- Instalando o Python 3.10+ e marcando a opção "Add to PATH"
+- Instalando o Python 3.14 (Install Manager no Windows) e conferindo o comando `python`
 - Instalação e configuração do VS Code com extensões profissionais (Pylance, Error Lens, Material Icons)
 - Atalhos de teclado indispensáveis do dia a dia
 - Ambientes Virtuais (`venv`) e resolução de erros do PowerShell
@@ -123,7 +123,7 @@ Ao final do curso, você será capaz de criar programas reais com janelas intera
 
 ## 📌 Pré-requisitos
 
-- Computador com **Python 3.10+** instalado
+- Computador com **Python 3.14** instalado (qualquer versão da 3.11 à 3.15 funciona)
 - **VS Code** (ou editor de preferência)
 - Conexão com internet para GitHub e banco em nuvem
 - Interesse em aprender e disposição para praticar

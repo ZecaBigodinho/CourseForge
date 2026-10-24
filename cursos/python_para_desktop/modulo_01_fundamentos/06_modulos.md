@@ -384,3 +384,8 @@ Neste capítulo, você aprendeu que:
 - Boas práticas incluem organização, documentação e uso do bloco `if __name__ == "__main__"`.
 
 Com módulos, você transcende scripts monolíticos e constrói sistemas modulares, escaláveis e fáceis de manter. A reutilização de código dá um salto de produtividade.
+
+
+<!-- revisao-visual -->
+!!! tip "Revisão visual: Módulos"
+    Ficou alguma dúvida? A [Central de Revisão](../modulo_00_revisao_e_fixacao/12_modulos_revisao.md) explica **módulos** com analogias do dia a dia, diagramas e os erros mais comuns — use antes dos exercícios ou para estudar para a prova.

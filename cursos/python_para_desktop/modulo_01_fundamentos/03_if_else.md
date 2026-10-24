@@ -312,3 +312,8 @@ Neste capítulo, você aprendeu a controlar o fluxo de seus programas com estrut
 - Seguir boas práticas mantém o código condicional legível e menos propenso a erros.
 
 Dominar `if/elif/else` é um divisor de águas: a partir de agora, seus programas podem reagir a dados, validar entradas e implementar regras de negócio. Você está no caminho para criar software que realmente interage com o usuário.
+
+
+<!-- revisao-visual -->
+!!! tip "Revisão visual: Condicionais"
+    Ficou alguma dúvida? A [Central de Revisão](../modulo_00_revisao_e_fixacao/01_if_else_revisao.md) explica **condicionais** com analogias do dia a dia, diagramas e os erros mais comuns — use antes dos exercícios ou para estudar para a prova.

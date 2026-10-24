@@ -404,3 +404,8 @@ Neste capítulo, você aprendeu que:
 - A escolha entre elas depende da necessidade de mutabilidade, da forma de acesso (índice vs. chave) e do significado dos dados.
 
 Com essas ferramentas, você pode modelar uma vasta gama de problemas do mundo real. Seus programas agora são capazes de armazenar e processar dados de forma estruturada e eficiente.
+
+
+<!-- revisao-visual -->
+!!! tip "Revisão visual: Coleções"
+    Ficou alguma dúvida? A [Central de Revisão](../modulo_00_revisao_e_fixacao/06_colecoes_revisao.md) explica **coleções** com analogias do dia a dia, diagramas e os erros mais comuns — use antes dos exercícios ou para estudar para a prova.

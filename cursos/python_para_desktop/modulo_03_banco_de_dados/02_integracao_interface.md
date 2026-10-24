@@ -569,3 +569,8 @@ Neste capítulo, você aprendeu que:
 - A separação em camadas (banco de dados, lógica, interface) facilita a manutenção e evolução do sistema.
 
 Com essas habilidades, você está apto a desenvolver sistemas completos de cadastro e controle, que vão muito além de simples scripts, oferecendo uma experiência profissional ao usuário final.
+
+
+<!-- revisao-visual -->
+!!! tip "Revisão visual: Banco de dados"
+    Ficou alguma dúvida? A [Central de Revisão](../modulo_00_revisao_e_fixacao/09_sqlite_db_revisao.md) explica **banco de dados** com analogias do dia a dia, diagramas e os erros mais comuns — use antes dos exercícios ou para estudar para a prova.

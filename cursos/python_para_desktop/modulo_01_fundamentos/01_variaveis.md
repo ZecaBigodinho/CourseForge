@@ -328,3 +328,8 @@ Neste capítulo, você construiu a base de toda a programação em Python:
 - Variáveis podem ser atualizadas e usadas em expressões aritméticas e lógicas.
 
 Dominar variáveis é o primeiro passo para construir aplicações reais. Você agora é capaz de armazenar, transformar e exibir informações — e está pronto para combiná-las com operadores e estruturas de controle.
+
+
+<!-- revisao-visual -->
+!!! tip "Revisão visual: Variáveis e tipos"
+    Ficou alguma dúvida? A [Central de Revisão](../modulo_00_revisao_e_fixacao/02_variaveis_revisao.md) explica **variáveis e tipos** com analogias do dia a dia, diagramas e os erros mais comuns — use antes dos exercícios ou para estudar para a prova.

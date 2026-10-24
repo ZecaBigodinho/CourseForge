@@ -52,8 +52,11 @@ Apesar dessas melhorias visuais, o CustomTkinter mantém total compatibilidade c
 A biblioteca está disponível no PyPI e pode ser instalada com pip:
 
 ```bash
-pip install customtkinter
+pip install customtkinter==5.2.2
 ```
+
+!!! note "Por que fixar a versão 5.2.2?"
+    Os exemplos deste curso foram testados com a **5.2.2**. A versão 6 do CustomTkinter saiu em 2026 e ainda não foi validada com as aulas — fixando o número, todos na turma rodam o mesmo código sem surpresas.
 
 Para verificar a instalação:
 
@@ -525,3 +528,8 @@ Com esse conhecimento, suas aplicações Python desktop ganharão um salto de qu
 ## Próximo Capítulo
 
 No próximo capítulo, desenvolveremos o **Projeto Prático do Módulo 03**, onde juntaremos layout, eventos, persistência e o visual do CustomTkinter para construir uma aplicação desktop completa e robusta do início ao fim.
+
+
+<!-- revisao-visual -->
+!!! tip "Revisão visual: Interfaces gráficas"
+    Ficou alguma dúvida? A [Central de Revisão](../modulo_00_revisao_e_fixacao/08_tkinter_ui_revisao.md) explica **interfaces gráficas** com analogias do dia a dia, diagramas e os erros mais comuns — use antes dos exercícios ou para estudar para a prova.

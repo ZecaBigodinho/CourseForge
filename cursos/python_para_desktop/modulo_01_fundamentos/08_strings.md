@@ -385,3 +385,8 @@ Neste capítulo, você aprendeu que:
 - A combinação dessas técnicas viabiliza o processamento robusto de dados textuais em aplicações desktop.
 
 Dominar strings é um passo fundamental para qualquer desenvolvedor. Você agora está equipado para lidar com entradas do usuário, gerar relatórios elegantes e validar informações com confiança.
+
+
+<!-- revisao-visual -->
+!!! tip "Revisão visual: Strings"
+    Ficou alguma dúvida? A [Central de Revisão](../modulo_00_revisao_e_fixacao/11_strings_revisao.md) explica **strings** com analogias do dia a dia, diagramas e os erros mais comuns — use antes dos exercícios ou para estudar para a prova.

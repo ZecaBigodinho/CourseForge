@@ -254,7 +254,7 @@ projeto final do curso **Python para Desktop — CourseForge**.
 
 | Tecnologia | Finalidade |
 |---|---|
-| Python 3.10+ | Linguagem principal |
+| Python 3.11+ | Linguagem principal |
 | Tkinter | Interface gráfica |
 | SQLite | Banco de dados local |
 | Firebase Realtime Database | Banco em nuvem |

@@ -26,3 +26,24 @@ Aprender a programar fica muito mais fácil quando o seu ambiente de desenvolvim
     👉 [Acessar Capítulo 02](02_ambiente_virtual_e_terminal.md)
 
 </div>
+
+---
+
+## 🧭 Antes de começar
+
+- **Pré-requisitos:** Nenhum — este é o ponto de partida do curso.
+- **Tempo estimado:** ~1 h (leitura, exemplos e exercícios — estimativa; ajuste ao ritmo da turma)
+- **Ao final você terá:** Python 3.14 e VS Code funcionando, com um ambiente virtual (`venv`) ativado.
+
+## ✅ Checklist do módulo
+
+Antes de seguir, confira se você consegue:
+
+- [ ] `python --version` mostra 3.11 ou mais novo (recomendado: 3.14).
+- [ ] O VS Code abre a pasta do projeto e tem a extensão **Python** (com Pylance) instalada.
+- [ ] Consigo criar e ativar um `venv` e o VS Code usa esse interpretador.
+- [ ] Rodei o arquivo de teste do capítulo 01 sem erros.
+
+## ➡️ Próximo passo
+
+**[Módulo 01 — Fundamentos](../modulo_01_fundamentos/index.md)** — comece a programar: variáveis, decisões e laços.

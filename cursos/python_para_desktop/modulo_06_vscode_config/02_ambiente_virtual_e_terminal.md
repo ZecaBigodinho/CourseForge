@@ -101,7 +101,7 @@ Com o `(venv)` ativo no terminal, você pode instalar qualquer biblioteca com to
 python -m pip install --upgrade pip
 
 # Instalar bibliotecas do nosso curso
-pip install customtkinter requests python-dotenv
+pip install customtkinter==5.2.2 requests python-dotenv
 
 # Congelar as dependências instaladas no arquivo requirements.txt
 pip freeze > requirements.txt

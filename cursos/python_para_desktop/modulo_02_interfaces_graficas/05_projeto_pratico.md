@@ -385,7 +385,7 @@ Vamos construir o Dashboard Financeiro do zero. Siga cada etapa.
 Instale customtkinter e matplotlib:
 
 ```bash
-pip install customtkinter matplotlib
+pip install customtkinter==5.2.2 matplotlib
 ```
 
 Crie um diretório `dashboard_financeiro` e dentro dele um arquivo `main.py`.

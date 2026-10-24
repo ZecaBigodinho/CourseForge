@@ -337,3 +337,8 @@ Neste capítulo, você adquiriu as ferramentas fundamentais para processar infor
 - Expressões bem construídas são o alicerce de decisões e cálculos em qualquer aplicação.
 
 Com esse conhecimento, você já consegue escrever programas que calculam, comparam e avaliam condições — ainda que de forma linear. O próximo passo é aprender a controlar o fluxo de execução, tomando decisões e repetindo tarefas.
+
+
+<!-- revisao-visual -->
+!!! tip "Revisão visual: Operadores"
+    Ficou alguma dúvida? A [Central de Revisão](../modulo_00_revisao_e_fixacao/03_operadores_revisao.md) explica **operadores** com analogias do dia a dia, diagramas e os erros mais comuns — use antes dos exercícios ou para estudar para a prova.

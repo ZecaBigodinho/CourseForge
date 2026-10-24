@@ -250,3 +250,8 @@ Neste módulo de Programação Orientada a Objetos:
 - Dominamos o método construtor **`__init__`** e a referência **`self`**.
 - Vimos como **encapsular** atributos e expô-los com segurança usando **`@property`**.
 - Conectamos objetos por **composição** e desenvolvemos um software desktop modular, limpo e profissional!
+
+
+<!-- revisao-visual -->
+!!! tip "Revisão visual: POO"
+    Ficou alguma dúvida? A [Central de Revisão](../modulo_00_revisao_e_fixacao/14_poo_revisao.md) explica **poo** com analogias do dia a dia, diagramas e os erros mais comuns — use antes dos exercícios ou para estudar para a prova.

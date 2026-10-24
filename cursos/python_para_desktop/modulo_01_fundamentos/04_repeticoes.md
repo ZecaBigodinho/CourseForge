@@ -343,3 +343,8 @@ Neste capítulo, você aprendeu que:
 - É fundamental evitar laços infinitos não intencionais e manter o código do laço organizado.
 
 Com esses recursos, seus programas ganham a capacidade de processar dados em massa, validar entradas e criar interações contínuas — uma habilidade essencial para qualquer desenvolvedor Python.
+
+
+<!-- revisao-visual -->
+!!! tip "Revisão visual: Laços de repetição"
+    Ficou alguma dúvida? A [Central de Revisão](../modulo_00_revisao_e_fixacao/04_repeticoes_revisao.md) explica **laços de repetição** com analogias do dia a dia, diagramas e os erros mais comuns — use antes dos exercícios ou para estudar para a prova.

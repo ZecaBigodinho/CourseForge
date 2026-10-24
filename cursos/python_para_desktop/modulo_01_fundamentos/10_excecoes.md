@@ -401,3 +401,8 @@ Neste capítulo, você aprendeu que:
 - Boas práticas incluem não silenciar exceções, usar `with` para recursos, e validar dados cedo.
 
 O tratamento de exceções é um pilar da programação profissional. A partir de agora, seus programas não apenas funcionam no cenário ideal, mas resistem às adversidades do mundo real, mantendo a integridade dos dados e proporcionando uma experiência de usuário muito mais confiável.
+
+
+<!-- revisao-visual -->
+!!! tip "Revisão visual: Tratamento de erros"
+    Ficou alguma dúvida? A [Central de Revisão](../modulo_00_revisao_e_fixacao/07_excecoes_revisao.md) explica **tratamento de erros** com analogias do dia a dia, diagramas e os erros mais comuns — use antes dos exercícios ou para estudar para a prova.

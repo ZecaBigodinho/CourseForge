@@ -15,8 +15,8 @@
 | 03 — Interfaces Gráficas | Tkinter, Layout Managers, Eventos, CustomTkinter, Projeto Prático | ❌ Pendente |
 | 04 — Banco de Dados | SQLite, Integração com Interface, Variáveis de Ambiente (.env), Projeto de Dados | ❌ Pendente |
 
-> [!CAUTION]
-> O **Projeto Final do Curso** (Módulo 05 — Projeto Finalizador, Capítulo 12) é o **único requisito para o certificado**. Sem ele, não há certificação — mesmo que todo o conteúdo teórico esteja concluído.
+!!! danger "Cuidado"
+    O **Projeto Final do Curso** (Módulo 05 — Projeto Finalizador, Capítulo 12) é o **único requisito para o certificado**. Sem ele, não há certificação — mesmo que todo o conteúdo teórico esteja concluído.
 
 ---
 
@@ -40,8 +40,8 @@ O foco é **dominar Tkinter e CustomTkinter**, que são pré-requisito para o Pr
 | Sáb | 02/Ago | 02.05 | **Projeto Prático (parte 2)** — finalizar e testar | ~2h |
 | Dom | 03/Ago | — | 🔄 Revisão + recuperação de atrasos | — |
 
-> [!TIP]
-> O Projeto Prático do Módulo 03 já serve como base para o Projeto Final. Capriche nele!
+!!! tip "Dica"
+    O Projeto Prático do Módulo 03 já serve como base para o Projeto Final. Capriche nele!
 
 ---
 
@@ -59,8 +59,8 @@ Foco em **SQL, integração com interface e proteção de credenciais**.
 | Sáb | 09/Ago | — | 🔄 Revisão geral dos Módulos 03 e 04 | ~2h |
 | Dom | 10/Ago | — | 🔄 Buffer / recuperação de atrasos | — |
 
-> [!IMPORTANT]
-> A aula de **Variáveis de Ambiente** é crítica — o Projeto Final exige `.env` para configuração do banco. Não pule!
+!!! warning "Importante"
+    A aula de **Variáveis de Ambiente** é crítica — o Projeto Final exige `.env` para configuração do banco. Não pule!
 
 ---
 
@@ -115,5 +115,5 @@ Aqui é onde tudo se junta. Dedicação **total** ao Projeto Final do curso.
 
 ---
 
-> [!WARNING]
-> Esse cronograma **não tem folga grande**. Qualquer semana perdida compromete a entrega. Comece **amanhã** (28/Jul) sem falta!
+!!! warning "Atenção"
+    Esse cronograma **não tem folga grande**. Qualquer semana perdida compromete a entrega. Comece **amanhã** (28/Jul) sem falta!

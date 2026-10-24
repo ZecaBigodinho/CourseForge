@@ -437,3 +437,8 @@ Neste capítulo, você aprendeu:
 - Operações como criar pastas (`mkdir`), listar conteúdo (`iterdir`, `glob`), ler/escrever com `read_text`/`write_text` e obter informações de arquivos.
 
 Agora você é capaz de dar persistência aos seus programas, salvar configurações, registrar logs e organizar dados em disco, habilidades imprescindíveis para qualquer desenvolvedor Python desktop.
+
+
+<!-- revisao-visual -->
+!!! tip "Revisão visual: Arquivos"
+    Ficou alguma dúvida? A [Central de Revisão](../modulo_00_revisao_e_fixacao/13_arquivos_revisao.md) explica **arquivos** com analogias do dia a dia, diagramas e os erros mais comuns — use antes dos exercícios ou para estudar para a prova.

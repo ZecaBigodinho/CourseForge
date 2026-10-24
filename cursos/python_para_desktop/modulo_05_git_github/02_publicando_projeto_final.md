@@ -30,7 +30,7 @@ Ao final deste capítulo, seu README.md será assim:
 │                                                          │
 │  # 🎓 Sistema Escolar                                    │
 │                                                          │
-│  [badge: Python 3.10+] [badge: Status: Concluído]       │
+│  [badge: Python 3.11+] [badge: Status: Concluído]       │
 │  [badge: License: MIT] [badge: Version: v1.0.0]         │
 │                                                          │
 │  > Sistema desktop para gerenciamento de alunos com      │
@@ -157,7 +157,7 @@ sistema-escolar/
 Verifique que o `requirements.txt` lista todas as dependências:
 
 ```text
-customtkinter>=5.0.0
+customtkinter==5.2.2
 python-dotenv>=1.0.0
 firebase-admin>=6.0.0
 ```
@@ -177,7 +177,7 @@ Substitua o conteúdo do `README.md` pelo template abaixo, adaptando para o proj
 ```markdown
 # 🎓 Sistema Escolar
 
-![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat-square&logo=python&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat-square&logo=python&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Concluído-00bfa5?style=flat-square)
 ![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)
 
@@ -204,7 +204,7 @@ Substitua o conteúdo do `README.md` pelo template abaixo, adaptando para o proj
 ## 🚀 Como executar
 
 ### Pré-requisitos
-- Python 3.10 ou superior
+- Python 3.11 ou superior (recomendado: 3.14)
 - pip atualizado
 
 ### Instalação
@@ -235,7 +235,7 @@ Substitua o conteúdo do `README.md` pelo template abaixo, adaptando para o proj
 
 | Tecnologia | Uso |
 |------------|-----|
-| Python 3.10+ | Linguagem principal |
+| Python 3.11+ | Linguagem principal |
 | CustomTkinter | Interface gráfica |
 | SQLite | Banco de dados local |
 | Firebase | Banco de dados em nuvem |
@@ -273,7 +273,7 @@ Veja [LICENSE](LICENSE) para mais detalhes.
 Badges são aqueles selos coloridos no topo do README. Eles comunicam informações rapidamente:
 
 ```text
-![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat-square&logo=python&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat-square&logo=python&logoColor=white)
 ```
 
 O site **shields.io** gera badges personalizados. A estrutura da URL é:
@@ -284,7 +284,7 @@ https://img.shields.io/badge/TEXTO-VALOR-COR?style=ESTILO&logo=LOGO
 Exemplos prontos para copiar:
 
 # Linguagem
-![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat-square&logo=python&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat-square&logo=python&logoColor=white)
 
 # Status do projeto
 ![Status](https://img.shields.io/badge/Status-Concluído-00bfa5?style=flat-square)
@@ -348,7 +348,7 @@ No GitHub:
 - ☁️ Sincronização com Firebase
 
 ### 🛠️ Tecnologias
-- Python 3.10+
+- Python 3.11+
 - CustomTkinter
 - SQLite / Firebase
 
@@ -806,3 +806,8 @@ O mercado de trabalho está esperando por você. O primeiro passo já foi dado �
     - Explore **branches** e **Pull Requests** para fluxos de trabalho avançados
     - Considere aprender **Docker** para empacotar suas aplicações
     - Construa mais projetos e adicione ao seu portfólio
+
+
+<!-- revisao-visual -->
+!!! tip "Revisão visual: Git & GitHub"
+    Ficou alguma dúvida? A [Central de Revisão](../modulo_00_revisao_e_fixacao/10_git_github_revisao.md) explica **git & github** com analogias do dia a dia, diagramas e os erros mais comuns — use antes dos exercícios ou para estudar para a prova.
