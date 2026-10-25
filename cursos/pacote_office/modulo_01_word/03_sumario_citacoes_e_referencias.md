@@ -27,12 +27,35 @@ Ao final desta aula, você será capaz de:
 Com os títulos em *Título 1* e *Título 2*, o Word monta o sumário — com números de página — sozinho:
 
 1. Na página do sumário, escreva **SUMÁRIO** (centralizado, negrito) e dê `Enter`.
-2. *Referências ➔ Sumário ➔ **Sumário Personalizado***. Deixe *Mostrar níveis*: **2** e *OK*.
+2. *Referências ➔ Sumário ➔ **Personalizar Sumário...*** (o último bloco do menu). Em algumas versões do Word, o nome é *Sumário Personalizado*.
+3. Na janela **Sumário**, deixe *Mostrar níveis*: **2** e clique em *OK*.
 
-O sumário **não se atualiza sozinho**. Sempre que mudar o texto: clique nele ➔ *Atualizar Sumário* ➔ **Atualizar o índice inteiro**. Faça isso por último, antes de exportar o PDF.
+<figure markdown="span">
+  ![Menu Sumário da guia Referências aberto, com os modelos automáticos no alto e a opção Personalizar Sumário em destaque no fim](assets/03_menu_sumario.webp){ loading=lazy }
+  <figcaption><em>Referências ➔ Sumário</em>: a opção <strong>Personalizar Sumário...</strong> fica no fim do menu.</figcaption>
+</figure>
 
-!!! tip "Por que “Personalizado” e não “Automático 1”?"
-    O *Sumário Automático* insere um título “Sumário” formatado como *Título 1* — e aí o próprio sumário aparece dentro do sumário. Escrevendo o título à mão (em *Normal*) e usando o *Personalizado*, isso não acontece.
+<figure markdown="span">
+  ![Janela Sumário na guia Sumário, com Mostrar números de página e Alinhar números de página à direita marcados, preenchimento de pontos e Mostrar níveis igual a 2](assets/03_janela_sumario.webp){ loading=lazy }
+  <figcaption>Na janela <strong>Sumário</strong>, <em>Mostrar níveis</em>: <strong>2</strong> — a prévia passa a mostrar só Título 1 e Título 2.</figcaption>
+</figure>
+
+O sumário **não se atualiza sozinho**. Sempre que mudar o texto: *Referências ➔ **Atualizar Sumário*** (ou botão direito no sumário ➔ *Atualizar Campo*) ➔ **Atualizar o índice inteiro**. Faça isso por último, antes de exportar o PDF.
+
+<figure markdown="span">
+  ![Sumário pronto com os títulos numerados, pontilhado e número de página alinhado à direita, e o botão Atualizar Sumário em destaque na guia Referências](assets/03_sumario_atualizar.webp){ loading=lazy }
+  <figcaption>(1) O botão <strong>Atualizar Sumário</strong> · (2) o sumário gerado a partir dos títulos, com pontilhado e páginas à direita.</figcaption>
+</figure>
+
+!!! tip "Por que “Personalizar” e não “Automático 1”?"
+    O *Sumário Automático* insere um título “Sumário” formatado como *Título 1* — e aí o próprio sumário aparece dentro do sumário. Escrevendo o título à mão (em *Normal*) e usando o *Personalizar Sumário*, isso não acontece.
+
+!!! warning "Sumário desalinhado, com o número da página na linha de baixo?"
+    Se o estilo *Normal* tem texto **justificado** e **recuo de 1,25 cm** (como pede a aula 01), o sumário pode herdar isso e ficar assim:
+
+    ![Sumário com defeito: os títulos foram empurrados para a direita, depois do pontilhado, e os números das páginas caíram para a linha de baixo](assets/03_sumario_desalinhado.webp){ loading=lazy }
+
+    **Correção:** em *Página Inicial ➔ Estilos*, abra a lista completa (setinha no canto do grupo), clique com o botão direito em **Sumário 1** ➔ *Modificar* ➔ alinhamento **à esquerda** e, em *Formatar ➔ Parágrafo*, recuo especial **(nenhum)**. Faça o mesmo com **Sumário 2** e atualize o sumário.
 
 ---
 
@@ -51,6 +74,16 @@ No Word:
 3. Depois do número, digite “ — ” e o título.
 4. Abaixo da ilustração, escreva a linha **Fonte:** (fonte menor, ex.: 10).
 
+<figure markdown="span">
+  ![Janela Legenda com o texto Figura 1 — Litros de ág..., rótulo Figura e posição Acima do item selecionado em destaque](assets/03_inserir_legenda.webp){ loading=lazy }
+  <figcaption>Na janela <strong>Legenda</strong>: rótulo <strong>Figura</strong> e posição <strong>Acima do item selecionado</strong>. Dá para digitar o “ — título” ali mesmo.</figcaption>
+</figure>
+
+<figure markdown="span">
+  ![Figura no documento com a legenda Figura 1 — Litros de água por pessoa por dia acima do gráfico e a linha Fonte: dados fictícios, elaborados para este exemplo (2026), abaixo](assets/03_figura_legenda_fonte.webp){ loading=lazy }
+  <figcaption>O resultado no padrão ABNT: identificação <strong>acima</strong>, fonte <strong>abaixo</strong> (os dados do gráfico são inventados).</figcaption>
+</figure>
+
 Com as legendas inseridas assim, *Referências ➔ **Inserir Índice de Ilustrações*** gera a lista de figuras automaticamente — igual ao sumário.
 
 ---
@@ -58,6 +91,11 @@ Com as legendas inseridas assim, *Referências ➔ **Inserir Índice de Ilustra�
 ## Notas de rodapé
 
 Clique onde a nota deve ser chamada ➔ *Referências ➔ **Inserir Nota de Rodapé*** (`Alt + Ctrl + F`). O Word numera e posiciona sozinho; se você apagar uma, as outras se renumeram. Use para explicações curtas que atrapalhariam o texto.
+
+<figure markdown="span">
+  ![Fim de uma página do trabalho com um traço curto e, abaixo dele, a nota de rodapé número 1 em letra menor](assets/03_nota_de_rodape.webp){ loading=lazy }
+  <figcaption>No texto aparece o número pequeno (¹); no fim da mesma página, o traço e a nota.</figcaption>
+</figure>
 
 ---
 
@@ -138,7 +176,7 @@ Exemplos (obras fictícias):
 
 <!-- gabarito -->
 ??? success "Gabarito — Básico"
-    1. Na página do sumário, escreva **SUMÁRIO** em estilo *Normal* (centralizado, negrito) e dê `Enter`. *Referências ➔ Sumário ➔ Sumário Personalizado* ➔ *Mostrar níveis*: **2** ➔ *OK*.
+    1. Na página do sumário, escreva **SUMÁRIO** em estilo *Normal* (centralizado, negrito) e dê `Enter`. *Referências ➔ Sumário ➔ Personalizar Sumário* ➔ *Mostrar níveis*: **2** ➔ *OK*. (Se os números das páginas caírem para a linha de baixo, ajuste os estilos *Sumário 1* e *Sumário 2* como no aviso da aula.)
     2. Crie o título “Exemplos” em *Título 2* depois de “Consequências”: a numeração vira **2.3**, mas o sumário continua igual.
     3. Clique no sumário ➔ *Atualizar Sumário* ➔ **Atualizar o índice inteiro**. A linha “2.3 EXEMPLOS” aparece com a página certa.
 

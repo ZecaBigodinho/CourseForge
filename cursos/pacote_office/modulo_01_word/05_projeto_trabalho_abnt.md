@@ -55,7 +55,7 @@ Ao final deste projeto, você terá:
 
 ### 3. Sumário e seções (aulas 02 e 03)
 
-- Título **SUMÁRIO** (centralizado, negrito, estilo *Normal*) e *Sumário Personalizado* com 2 níveis.
+- Título **SUMÁRIO** (centralizado, negrito, estilo *Normal*) e *Personalizar Sumário* com 2 níveis.
 - **Quebra de seção (Próxima Página)** no fim do sumário.
 
 ### 4. O texto
@@ -115,7 +115,7 @@ Monte o **esqueleto** do trabalho: capa, folha de rosto, sumário e as seções 
     1. *Layout*: A4, margens 3/3/2/2. Estilo *Normal* ajustado (aula 01, exercício intermediário).
     2. Capa: centralizada, sem recuo, com instituição no topo e cidade/ano embaixo. `Ctrl + Enter`.
     3. Folha de rosto: nome e título centralizados; natureza do trabalho com **recuo à esquerda de 8 cm**, espaço simples; cidade/ano embaixo. `Ctrl + Enter`.
-    4. Página “SUMÁRIO” (estilo *Normal*, centralizado, negrito) + *Sumário Personalizado*. No fim: *Quebras ➔ Próxima Página*.
+    4. Página “SUMÁRIO” (estilo *Normal*, centralizado, negrito) + *Personalizar Sumário*. No fim: *Quebras ➔ Próxima Página*.
     5. “Introdução”, “Desenvolvimento” (com duas subseções), “Conclusão” em *Título 1/2* + *Lista de Vários Níveis*; “Referências” em *Título 1* sem numeração.
 
     **Teste rápido:** abra o *Painel de Navegação* — devem aparecer 1, 2 (2.1, 2.2), 3 e REFERÊNCIAS.
