@@ -19,11 +19,11 @@ Ao final, você terá:
 
 ## 📍 Contextualização
 
-Você já domina Python, já construiu interfaces gráficas com Tkinter, já conectou ao SQLite, já fez CRUD completo e já sincronizou com banco em nuvem (Firebase). Agora, vamos expandir seu repertório com duas ferramentas poderosas do ecossistema Python:
+Você já domina Python, já construiu interfaces gráficas com Tkinter, já conectou ao SQLite, já fez CRUD completo e, no Capítulo 09, levou o Sistema Escolar para o banco em nuvem do Neon. Agora, vamos expandir seu repertório com duas ferramentas poderosas do ecossistema Python:
 
 **Streamlit** — uma biblioteca que transforma scripts Python em aplicações web interativas. Sem precisar de HTML, CSS ou JavaScript. Você escreve Python puro e o Streamlit gera a interface web automaticamente.
 
-**Neon Database** — um serviço de banco de dados PostgreSQL 100% em nuvem, com plano gratuito generoso. Diferente do Firebase (que usa JSON), o Neon usa SQL real — o mesmo SQL que você aprendeu com o SQLite, mas agora rodando em um servidor remoto acessível de qualquer lugar.
+**Neon Database** — o mesmo banco PostgreSQL em nuvem do Capítulo 09, com plano gratuito generoso. A diferença é quem conversa com ele: em vez de uma janela Tkinter, uma **página web**. O SQL, o `.env` e o driver `psycopg` são os mesmos que você já usou.
 
 **Progresso do Sistema:**
 
@@ -112,26 +112,22 @@ exercicio_tarefas/
 
 ### Passo 1 — Criando o projeto no Neon Database
 
-O Neon é um serviço de banco de dados PostgreSQL serverless. Vamos criar uma conta e um projeto.
+Este exercício usa um banco **separado** do Sistema Escolar. Siga o mesmo caminho do [Capítulo 09](09_banco_em_nuvem.md#passo-2-criando-o-banco-no-neon):
 
-1. Acesse **neon.tech** no navegador
-2. Clique em **Sign Up** — pode usar conta do Google ou GitHub
-3. Após o login, clique em **Create Project**
-4. Dê o nome **exercicio-tarefas** ao projeto
-5. Escolha a região mais próxima (ex: **São Paulo** se disponível, ou **US East**)
-6. Clique em **Create Project**
+- **18 anos ou mais:** na sua conta do Neon, clique em **New project** ➔ **Project name:** `exercicio-tarefas` ➔ **Region:** **AWS South America East 1 (São Paulo)** ➔ **Create project**. Depois, **Connect** ➔ **Copy snippet**.
+- **Menos de 18 anos:** o Neon não é direcionado a menores de 18. Peça ao professor a connection string do banco do exercício.
 
-Após criar, o Neon mostrará a **connection string** — uma URL que contém todas as informações para conectar ao banco. Ela se parece com isto:
+A **connection string** se parece com isto:
 
 ```text
-postgresql://usuario:senha@ep-xxxx-yyyy.us-east-2.aws.neon.tech/neondb?sslmode=require
+postgresql://usuario:SENHA@ep-nome-123456.sa-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require
 ```
 
 !!! danger "Erro Crítico"
     Copie essa connection string e guarde em um lugar seguro. Ela contém sua senha! Nunca cole no código-fonte diretamente — vamos usar o `.env` para protegê-la.
 
 !!! note "Conceito Importante"
-    O PostgreSQL é o banco de dados relacional mais avançado do mundo open-source. Diferente do SQLite (que é um arquivo local), o PostgreSQL roda em um servidor e aceita conexões remotas. O Neon oferece isso gratuitamente na nuvem com 0.5 GB de armazenamento — mais do que suficiente para nosso exercício.
+    O PostgreSQL é o banco de dados relacional mais avançado do mundo open-source. Diferente do SQLite (que é um arquivo local), o PostgreSQL roda em um servidor e aceita conexões remotas. O plano gratuito do Neon oferece 1 GB de armazenamento por projeto — mais do que suficiente para nosso exercício.
 
 ### Passo 2 — Preparando o ambiente do projeto
 
@@ -145,18 +141,18 @@ cd exercicio_tarefas
 Instale as dependências necessárias:
 
 ```bash
-pip install streamlit psycopg2-binary python-dotenv
+pip install streamlit "psycopg[binary]" python-dotenv
 ```
 
 - `streamlit` — framework web para Python
-- `psycopg2-binary` — driver PostgreSQL para Python
+- `psycopg` (versão 3) — driver PostgreSQL para Python, o mesmo do Capítulo 09
 - `python-dotenv` — carrega variáveis de ambiente do `.env`
 
 Crie o arquivo `requirements.txt`:
 
 ```text
 streamlit
-psycopg2-binary
+psycopg[binary]
 python-dotenv
 ```
 
@@ -165,7 +161,7 @@ Crie o arquivo `.env` na raiz do projeto:
 ```text
 # ===== CREDENCIAIS DO NEON DATABASE =====
 # ATENÇÃO: Este arquivo NÃO deve ser versionado!
-DATABASE_URL=postgresql://usuario:senha@ep-xxxx.us-east-2.aws.neon.tech/neondb?sslmode=require
+DATABASE_URL=postgresql://usuario:SENHA@ep-nome-123456.sa-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require
 ```
 
 Substitua o valor de `DATABASE_URL` pela connection string que você copiou no Passo 1.
@@ -174,7 +170,7 @@ Crie o arquivo `.env.example` (este será versionado):
 
 ```text
 # Copie este arquivo para .env e preencha com seus dados
-DATABASE_URL=postgresql://usuario:senha@host/banco?sslmode=require
+DATABASE_URL=postgresql://usuario:senha@servidor/neondb?sslmode=require&channel_binding=require
 ```
 
 Crie o arquivo `.gitignore`:
@@ -199,15 +195,15 @@ Comece com a conexão e a criação das tabelas:
 # database.py — Conexão e operações com Neon Database
 # ======================================================================
 # Eu sou responsável por toda a comunicação com o banco PostgreSQL
-# na nuvem. Uso o psycopg2 para conectar e executar SQL.
+# na nuvem. Uso o psycopg (versão 3) para conectar e executar SQL.
 # ======================================================================
 
 import os
 import hashlib
 from datetime import date, datetime
 from dotenv import load_dotenv
-import psycopg2
-from psycopg2.extras import RealDictCursor
+import psycopg
+from psycopg.rows import dict_row
 
 # Eu carrego as variáveis de ambiente do arquivo .env.
 load_dotenv()
@@ -225,13 +221,13 @@ def conectar():
             "Verifique o arquivo .env"
         )
     # Eu conecto usando a URL completa do Neon.
-    # O RealDictCursor retorna resultados como dicionários.
-    conn = psycopg2.connect(database_url)
+    # row_factory=dict_row faz cada linha vir como dicionário.
+    conn = psycopg.connect(database_url, row_factory=dict_row)
     return conn
 ```
 
 !!! note "Conceito Importante"
-    O `psycopg2` é o driver mais usado para conectar Python ao PostgreSQL. A connection string (`DATABASE_URL`) contém tudo: usuário, senha, host, porta e nome do banco. O `sslmode=require` garante que a conexão é criptografada — essencial para bancos em nuvem.
+    O `psycopg` é o driver mais usado para conectar Python ao PostgreSQL (a versão 3, que usamos aqui e no Capítulo 09, é a recomendada pelo Neon; você ainda vai ver a versão antiga, `psycopg2`, em muitos tutoriais). A connection string (`DATABASE_URL`) contém tudo: usuário, senha, host, porta e nome do banco. O `sslmode=require` garante que a conexão é criptografada — essencial para bancos em nuvem.
 
 Agora, adicione a função que cria as tabelas:
 
@@ -306,7 +302,7 @@ def cadastrar_usuario(nome, email, senha):
         """, (nome, email, senha_hash))
         conn.commit()
         return True
-    except psycopg2.errors.UniqueViolation:
+    except psycopg.errors.UniqueViolation:
         # O email já está cadastrado no banco.
         conn.rollback()
         return False
@@ -328,7 +324,7 @@ def autenticar_usuario(email, senha):
     Retorno os dados do usuário se autenticado, None se não.
     """
     conn = conectar()
-    cursor = conn.cursor(cursor_factory=RealDictCursor)
+    cursor = conn.cursor()
     senha_hash = hash_senha(senha)
 
     cursor.execute("""
@@ -372,7 +368,7 @@ def listar_tarefas(usuario_id):
     Retorno como lista de dicionários, ordenadas por data.
     """
     conn = conectar()
-    cursor = conn.cursor(cursor_factory=RealDictCursor)
+    cursor = conn.cursor()
     cursor.execute("""
         SELECT * FROM tarefas
         WHERE usuario_id = %s
@@ -731,7 +727,7 @@ O Streamlit abrirá automaticamente o navegador em `http://localhost:8501`.
 8. Clique em "Sair" e faça login novamente — suas tarefas devem estar lá (estão no banco na nuvem!)
 
 !!! tip "Dica Profissional"
-    Para verificar os dados diretamente no banco, acesse o painel do Neon (**console.neon.tech**) → seu projeto → **SQL Editor**. Lá você pode executar consultas como `SELECT * FROM tarefas;` e ver os dados que foram inseridos pelo app.
+    Para verificar os dados diretamente no banco, acesse o painel do Neon (**console.neon.tech**) → seu projeto → **SQL Editor** (como no Capítulo 09). Lá você pode executar consultas como `SELECT * FROM tarefas;` e ver os dados que foram inseridos pelo app.
 
 ```text
 ┌────────────────────────────────────────────────────┐
@@ -885,25 +881,25 @@ if total > 0:
 ## ⚠️ Erros Comuns
 
 !!! danger "Connection string inválida ou ausente"
-    **Sintoma:** `ValueError: DATABASE_URL não encontrada` ou `psycopg2.OperationalError: could not connect to server`.
+    **Sintoma:** `ValueError: DATABASE_URL não encontrada` ou `psycopg.OperationalError: connection failed`.
     
     **Causa:** O arquivo `.env` não existe, está vazio, ou a connection string está incorreta. Outra causa comum: copiar a URL com espaços extras.
     
     **Solução:** Verifique se o arquivo `.env` está na mesma pasta do `app.py`. Abra o `.env` e confirme que a `DATABASE_URL` está preenchida corretamente. Copie a URL novamente do painel do Neon. Não use aspas ao redor da URL no `.env`.
 
 !!! warning "Erro de SSL ao conectar ao Neon"
-    **Sintoma:** `psycopg2.OperationalError: SSL SYSCALL error`.
+    **Sintoma:** `psycopg.OperationalError: SSL SYSCALL error`.
     
     **Causa:** A connection string não inclui `?sslmode=require` ou a rede está bloqueando conexões SSL (comum em redes corporativas/escolares).
     
-    **Solução:** Confirme que a URL termina com `?sslmode=require`. Se estiver em uma rede restritiva, tente usar uma rede diferente (hotspot do celular, por exemplo). O Neon exige SSL obrigatoriamente.
+    **Solução:** Confirme que a URL tem `sslmode=require` (copie de novo com **Copy snippet**). Se estiver em uma rede restritiva, tente usar uma rede diferente (hotspot do celular, por exemplo). O Neon exige SSL obrigatoriamente.
 
 !!! warning "E-mail duplicado no cadastro"
-    **Sintoma:** `psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint`.
+    **Sintoma:** `psycopg.errors.UniqueViolation: duplicate key value violates unique constraint`.
     
     **Causa:** Tentou cadastrar com um e-mail que já existe. Nossa função já trata isso, mas se você não usou o `try/except`, o erro aparece.
     
-    **Solução:** Verifique se a função `cadastrar_usuario` tem o bloco `except psycopg2.errors.UniqueViolation` que retorna `False`. No app, exiba uma mensagem amigável ao usuário.
+    **Solução:** Verifique se a função `cadastrar_usuario` tem o bloco `except psycopg.errors.UniqueViolation` que retorna `False`. No app, exiba uma mensagem amigável ao usuário.
 
 !!! danger "Session state perdido ao atualizar a página"
     **Sintoma:** O usuário faz login, mas ao pressionar F5 (atualizar a página) é deslogado.
@@ -973,7 +969,7 @@ Compare o que você fez neste exercício com o Sistema Escolar:
 | Interface | Tkinter (desktop) | Streamlit (web) |
 | Banco de dados | SQLite (local) | PostgreSQL/Neon (nuvem) |
 | Acesso | Apenas na máquina | Qualquer navegador |
-| Driver Python | `sqlite3` (nativo) | `psycopg2` (instalado) |
+| Driver Python | `sqlite3` (nativo) | `psycopg` (instalado) |
 | Placeholder SQL | `?` | `%s` |
 | Multi-usuário | Não | Sim (cada um com login) |
 

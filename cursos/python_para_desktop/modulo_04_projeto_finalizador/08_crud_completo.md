@@ -757,13 +757,14 @@ Antes de prosseguir para o próximo capítulo, confirme:
 
 ## ➡️ Próximo Capítulo
 
-No **Capítulo 09 — Banco em Nuvem**, você levará o Sistema Escolar para o próximo nível: sincronização com um banco de dados remoto. Os dados não ficarão mais presos no computador local — estarão acessíveis de qualquer lugar.
+No **Capítulo 09 — Banco em Nuvem**, você levará o Sistema Escolar para o próximo nível: os dados saem do `escola.db` e vão para um banco **PostgreSQL na nuvem**, o **Neon**. Eles não ficarão mais presos no computador local — estarão acessíveis de qualquer lugar.
 
 Você aprenderá a:
 
-- Configurar um banco em nuvem (Firebase ou similar)
-- Criar uma camada de sincronização
-- Enviar dados locais para a nuvem
-- Baixar dados da nuvem para o SQLite local
+- Criar um banco no Neon e guardar a senha num arquivo `.env`
+- Conectar o Python ao PostgreSQL com o `psycopg`
+- Ajustar o SQL às diferenças entre SQLite e PostgreSQL
+- Levar os alunos do `escola.db` para a nuvem
+- Tratar a falta de internet com mensagens claras
 
-O CRUD que você construiu hoje é a base — a nuvem será uma extensão, não uma substituição. ☁️
+E o melhor: como o SQL ficou todo no `database/operacoes.py`, as telas e o controller que você fez hoje **não vão mudar**. ☁️

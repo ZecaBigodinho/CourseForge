@@ -94,8 +94,8 @@ O sistema final terá este fluxo:
 │  ┌──────────────────────────────────────────┐   │
 │  │          BANCO DE DADOS                  │   │
 │  │  ┌─────────────┐   ┌──────────────┐      │   │
-│  │  │   SQLite    │   │  API Nuvem   │      │   │
-│  │  │  (escola.db)│   │ (Firebase)   │      │   │
+│  │  │   SQLite    │──▶│  PostgreSQL  │      │   │
+│  │  │  (escola.db)│   │ nuvem (Neon) │      │   │
 │  │  └─────────────┘   └──────────────┘      │   │
 │  └──────────────────────────────────────────┘   │
 │                                                 │
@@ -117,7 +117,7 @@ Um sistema de gestão escolar é um software que automatiza as tarefas administr
 - Consulte a lista de alunos cadastrados
 - Edite dados de um aluno existente
 - Exclua um registro do sistema
-- Tenha os dados salvos localmente (SQLite) e sincronizados com uma base em nuvem
+- Tenha os dados guardados primeiro num arquivo local (SQLite) e, depois, num banco em nuvem (PostgreSQL no Neon), acessível de qualquer computador
 
 É um sistema aparentemente simples, mas que exercita todos os conceitos que você aprendeu: variáveis, funções, classes, interfaces gráficas, banco de dados e arquitetura de software.
 
@@ -150,7 +150,7 @@ Vamos levantar os nossos requisitos:
 | RF14 | O botão Excluir deve remover um registro selecionado com confirmação | CRUD |
 | RF15 | O botão Limpar deve limpar todos os campos do formulário | CRUD |
 | RF16 | Os dados devem ser persistidos em banco SQLite local (escola.db) | Persistência |
-| RF17 | O sistema deve ter uma funcionalidade de sincronização com banco em nuvem | Persistência |
+| RF17 | Os dados devem passar para um banco em nuvem (PostgreSQL no Neon), com aviso amigável quando não houver conexão | Persistência |
 | RF18 | O sistema deve ser organizado em módulos separados por responsabilidade | Arquitetura |
 
 !!! tip "Dica Profissional"
@@ -169,7 +169,7 @@ Aula 05             → Múltiplas janelas com transição controlada
 Aula 06             → Tela de Cadastro com formulário e Treeview
 Aula 07             → Integração com SQLite (conexão e primeiras queries)
 Aula 08             → CRUD Completo (Create, Read, Update, Delete)
-Aula 09             → Sincronização com banco em nuvem (Firebase)
+Aula 09             → Banco em nuvem: troca do SQLite pelo PostgreSQL do Neon
 Aula 10             → Integração final e testes
 Aula 11             → Refatoração, polimento e preparação para entrega
 Aula 12 (20/08)     → Apresentação dos Projetos Finais

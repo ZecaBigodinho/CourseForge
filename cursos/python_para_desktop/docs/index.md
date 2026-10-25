@@ -79,7 +79,7 @@ Ao final do curso, você será capaz de criar programas reais com janelas intera
 - Arquitetura MVC e organização profissional
 - Tela de Login, Menu Principal e navegação entre janelas
 - Cadastro de alunos com CRUD completo
-- SQLite local + sincronização com banco em nuvem
+- SQLite local e, depois, banco PostgreSQL em nuvem (**Neon**)
 - Refatoração, testes e entrega profissional
 - Exercício bônus com **Streamlit + Neon Database** (Python na web)
 - **Projeto Final do Curso** — entrega e apresentação do sistema, que **libera o certificado**
