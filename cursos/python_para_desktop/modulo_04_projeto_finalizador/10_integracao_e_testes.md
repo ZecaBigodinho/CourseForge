@@ -6,7 +6,7 @@ Neste capítulo você vai polir e integrar todas as peças do Sistema Escolar, g
 
 Ao final, você terá:
 
-- Todos os fluxos testados (Login → Menu → Cadastro → CRUD → Sincronização)
+- Todos os fluxos testados (Login → Menu → Cadastro → CRUD → dados no Neon)
 - Atalhos de teclado: Enter para login, Esc para sair de janelas
 - Uma barra de status informativa no rodapé da janela principal
 - Mensagens de feedback padronizadas (✅ sucesso, ❌ erro, ⚠️ confirmação)
@@ -15,7 +15,7 @@ Ao final, você terá:
 
 ## 📍 Contextualização
 
-No Capítulo 09, você conectou o sistema ao Firebase, implementou sincronização e protegeu credenciais com `.env`. O sistema agora tem todas as funcionalidades previstas: Login, Menu, Cadastro, CRUD, SQLite e Nuvem.
+No Capítulo 09, você levou o sistema para o banco PostgreSQL do Neon, protegeu a connection string com `.env` e tratou a falta de internet. O sistema agora tem todas as funcionalidades previstas: Login, Menu, Cadastro, CRUD e banco em nuvem.
 
 Mas um sistema funcional não é necessariamente um sistema robusto. Pequenas arestas podem comprometer a experiência: um botão que não responde ao Enter, uma mensagem de erro genérica, uma janela que não fecha com Esc, a ausência de um indicador do que está acontecendo.
 
@@ -45,7 +45,7 @@ Após este capítulo, o sistema se comportará como um software comercial:
 - Ao pressionar Esc em qualquer janela secundária, ela se fecha
 - No rodapé da tela de cadastro, uma barra de status mostra a quantidade de registros e o status da conexão
 - Todas as mensagens seguem um padrão visual consistente
-- Erros inesperados (banco corrompido, falha de rede) são capturados e exibem mensagens amigáveis
+- Erros inesperados (falha de rede, erro no banco) são capturados e exibem mensagens amigáveis
 - O fluxo completo foi testado e nenhum caminho quebra o sistema
 
 Arquivos modificados:
@@ -99,15 +99,16 @@ ROTEIRO DE TESTES — SISTEMA ESCOLAR
 [  ] Limpar formulário → volta ao modo inserção
 [  ] Busca por nome → filtra tabela
 [  ] Busca vazia → mostra todos
-[  ] Indicador de status mostra Online/Offline
-[  ] Botão Sincronizar funciona quando online
-[  ] Botão Sincronizar mostra erro amigável quando offline
+[  ] Indicador de status mostra 🟢 Online / 🔴 Offline
+[  ] Botão Recarregar busca a lista de novo no Neon
+[  ] Sem internet: Salvar, Editar, Excluir e Buscar mostram "Sem conexão"
 [  ] Pressionar Esc fecha a janela
 
-🔄 PERSISTÊNCIA
+☁️ BANCO EM NUVEM (NEON)
 [  ] Cadastrar alunos, fechar sistema, reabrir → dados mantidos
-[  ] Sincronizar com nuvem → dados aparecem no Firebase Console
-[  ] Baixar da nuvem → dados aparecem no sistema local
+[  ] Aluno cadastrado no sistema → aparece no SQL Editor do Neon
+[  ] Aluno inserido no SQL Editor → aparece no sistema depois de Recarregar
+[  ] Abrir o sistema sem internet → mensagem clara e o sistema fecha sem traceback
 ```
 
 Execute este roteiro antes de continuar. Os problemas que você encontrar guiarão as correções deste capítulo.
@@ -176,7 +177,7 @@ lbl_contagem.pack(side=tk.LEFT, padx=10)
 # Label de status da nuvem
 lbl_status_nuvem = tk.Label(
     frame_status,
-    text="🔴 Offline",
+    text="☁️ Neon: ⏳ verificando...",
     font=("Arial", 9, "bold"),
     bg="#ecf0f1",
     fg="#e74c3c",
@@ -184,10 +185,10 @@ lbl_status_nuvem = tk.Label(
 )
 lbl_status_nuvem.pack(side=tk.RIGHT, padx=10)
 
-# Botão de sincronizar na barra de status (opcional)
-btn_sincronizar = tk.Button(
+# Botão de recarregar na barra de status
+btn_recarregar = tk.Button(
     frame_status,
-    text="☁️ Sincronizar",
+    text="🔄 Recarregar",
     font=("Arial", 8),
     bg="#bdc3c7",
     fg="#2c3e50",
@@ -197,9 +198,9 @@ btn_sincronizar = tk.Button(
     height=1,
     bd=0,
     cursor="hand2",
-    command=lambda: ao_clicar_sincronizar()
+    command=lambda: ao_clicar_recarregar()
 )
-btn_sincronizar.pack(side=tk.RIGHT, padx=5)
+btn_recarregar.pack(side=tk.RIGHT, padx=5)
 ```
 
 Agora, atualize a função `atualizar_tabela` para também atualizar o contador na barra de status:
@@ -215,17 +216,15 @@ E atualize a função `verificar_status` para usar o novo label:
 
 ```python
 def verificar_status():
-    try:
-        online = verificar_conexao()
-        if online:
-            lbl_status_nuvem.config(text="🟢 Online", fg="#27ae60")
-        else:
-            lbl_status_nuvem.config(text="🔴 Offline", fg="#e74c3c")
-    except Exception:
-        lbl_status_nuvem.config(text="🔴 Offline", fg="#e74c3c")
+    """Eu testo a conexão e pinto o indicador do rodapé."""
+    if verificar_conexao():
+        lbl_status_nuvem.config(text="☁️ Neon: 🟢 Online", fg="#27ae60")
+        return True
+    lbl_status_nuvem.config(text="☁️ Neon: 🔴 Offline", fg="#e74c3c")
+    return False
 ```
 
-Remova o `frame_status` antigo (com `pack(side=tk.LEFT)` etc.) e o `lbl_status` que estava nele, para evitar duplicação.
+Remova a faixa de status do Capítulo 09 (o `frame_status` com o `lbl_status` e o `btn_recarregar` antigos), para não ficar duplicada. As funções `avisar_sem_conexao` e `ao_clicar_recarregar` continuam iguais: elas chamam `verificar_status()`, que agora pinta o rodapé.
 
 ### Passo 4 — Padronização de mensagens
 
@@ -263,8 +262,8 @@ messagebox.showwarning("⚠️ Atenção", "Por favor, preencha todos os campos 
 # Em validar_campos (idade inválida):
 messagebox.showerror("❌ Erro", "O campo 'Idade' deve ser um número inteiro.\nExemplo: 15")
 
-# Em ao_clicar_sincronizar (erro):
-messagebox.showerror("❌ Erro de Sincronização", f"Não foi possível sincronizar.\n\n{erro}")
+# Em avisar_sem_conexao (falta de rede):
+messagebox.showerror("❌ Sem conexão", "Não consegui falar com o banco na nuvem.\nConfira a internet e tente de novo.")
 ```
 
 !!! tip "Dica Profissional"
@@ -272,67 +271,48 @@ messagebox.showerror("❌ Erro de Sincronização", f"Não foi possível sincron
 
 ### Passo 5 — Tratamento de exceções em pontos críticos
 
-O sistema lida com banco de dados, rede e entrada do usuário — três fontes comuns de falhas. Adicione try/except nos seguintes locais:
+O sistema lida com banco de dados, rede e entrada do usuário — três fontes comuns de falhas. No Capítulo 09 você já tratou a **falta de rede** (`psycopg.OperationalError`). Falta o resto: um erro **no banco** (uma coluna renomeada no Neon, por exemplo) também não pode virar traceback.
 
-#### 5.1 — No controller aluno.py
+#### 5.1 — O controller continua fino
 
-```python
-# ===== MODIFIQUE AS FUNÇÕES DO CONTROLLER =====
+O `controllers/aluno.py` **não muda**: ele não captura erros, só repassa as chamadas. Se ele transformasse os erros do banco numa `Exception` genérica, a tela perderia a informação que usa para decidir entre “sem conexão” e “erro no banco”.
 
-from database.conexao import conectar
-import sqlite3
-
-def salvar_aluno(nome, idade, turma):
-    try:
-        id_gerado = inserir_aluno(nome, idade, turma)
-        return {"id": id_gerado, "nome": nome, "idade": idade, "turma": turma}
-    except sqlite3.Error as e:
-        raise Exception(f"Erro ao salvar aluno no banco de dados: {e}")
-
-def listar_alunos(filtro_nome=None):
-    try:
-        return listar_alunos_db(filtro_nome)
-    except sqlite3.Error as e:
-        raise Exception(f"Erro ao consultar alunos: {e}")
-
-def editar_aluno(id_aluno, nome, idade, turma):
-    try:
-        atualizar_aluno_db(id_aluno, nome, idade, turma)
-    except sqlite3.Error as e:
-        raise Exception(f"Erro ao atualizar aluno: {e}")
-
-def remover_aluno(id_aluno):
-    try:
-        excluir_aluno_db(id_aluno)
-    except sqlite3.Error as e:
-        raise Exception(f"Erro ao excluir aluno: {e}")
-```
+!!! note "Por que não `sqlite3.Error`"
+    Desde o Capítulo 09, quem fala com o banco é o `psycopg`. Os erros dele são `psycopg.Error` — e o mais comum, a falta de rede, é `psycopg.OperationalError`, que é um tipo de `psycopg.Error`. Um `except sqlite3.Error` não pegaria nada.
 
 #### 5.2 — Na view cadastro.py
 
-Envolva as chamadas ao controller em try/except:
+Em cada operação, trate os dois casos — primeiro o mais específico (rede), depois o geral (banco):
 
 ```python
 # Em ao_clicar_salvar:
 try:
     salvar_aluno(nome, idade, turma)
-    messagebox.showinfo("✅ Sucesso", f"Aluno '{nome}' cadastrado com sucesso!")
-    limpar_campos()
-    atualizar_tabela()
-except Exception as erro:
-    messagebox.showerror("❌ Erro", f"Falha ao salvar:\n{erro}")
+except psycopg.OperationalError:
+    avisar_sem_conexao()
+    return
+except psycopg.Error as erro:
+    messagebox.showerror("❌ Erro", f"O banco recusou a operação:\n{erro}")
+    return
+messagebox.showinfo("✅ Sucesso", f"Aluno '{nome}' cadastrado com sucesso!")
+limpar_campos()
+atualizar_tabela()
 ```
 
-Repita o padrão para `ao_clicar_editar`, `ao_clicar_excluir` e `ao_clicar_sincronizar`.
+Repita o padrão para `ao_clicar_editar`, `ao_clicar_excluir` e `ao_clicar_buscar`.
+
+!!! warning "A ordem dos `except` importa"
+    O Python usa o **primeiro** `except` que servir. Como `OperationalError` também é um `psycopg.Error`, ele precisa vir **antes**; ao contrário, a falta de internet cairia na mensagem de “erro no banco”.
 
 #### 5.3 — No carregamento inicial da tabela
 
 ```python
-# Substitua a chamada final atualizar_tabela() por:
-try:
-    atualizar_tabela()
-except Exception as erro:
-    messagebox.showerror("❌ Erro", f"Falha ao carregar dados:\n{erro}")
+# ===== CARREGAMENTO INICIAL =====
+if verificar_status():
+    try:
+        atualizar_tabela()
+    except psycopg.Error as erro:
+        messagebox.showerror("❌ Erro", f"Falha ao carregar dados:\n{erro}")
 ```
 
 ### Passo 6 — Verificação do .gitignore
@@ -341,11 +321,12 @@ Abra o arquivo `.gitignore` na raiz do projeto e confirme que contém:
 
 ```text
 .env
-database/credenciais-firebase.json
 escola.db
 __pycache__/
 *.pyc
 ```
+
+E confirme que o `.env.exemplo` (sem a senha) existe e **está** no Git.
 
 Se algum item estiver faltando, adicione-o agora. Execute `git status` (se estiver usando Git) para verificar se arquivos sensíveis não estão sendo rastreados.
 
@@ -401,11 +382,11 @@ Exemplo de entrada no `CORRECOES.md`:
 - [ ] Barra de status mostra contagem de registros e status da nuvem
 - [ ] Mensagens de sucesso/erro/aviso seguem padrão consistente
 - [ ] Erros de banco e rede são capturados com mensagens amigáveis
-- [ ] `.gitignore` inclui `.env`, credenciais e `.db`
+- [ ] `.gitignore` inclui `.env` e `.db`; `.env.exemplo` está no Git
 - [ ] O professor validou o fluxo completo sem erros
 
 !!! important "Nota para o Professor"
-    Verifique: Peça que cada equipe demonstre o sistema do início ao fim: login, cadastro de um item, edição do item, exclusão com confirmação, sincronização com nuvem (se configurada) e fechamento. Observe se os atalhos de teclado funcionam e se as mensagens de erro são amigáveis. Teste também o comportamento offline (desconecte a internet e veja se o sistema continua operando).
+    Verifique: Peça que cada equipe demonstre o sistema do início ao fim: login, cadastro de um item, edição do item, exclusão com confirmação, o registro aparecendo no **SQL Editor** do Neon e fechamento. Observe se os atalhos de teclado funcionam e se as mensagens de erro são amigáveis. Teste também sem internet: o sistema deve **avisar** (“Sem conexão”, indicador 🔴) e não travar nem mostrar traceback.
 
 ## ⚡ Desafio
 
@@ -439,7 +420,7 @@ def log_erro(operacao, erro):
     logger.error(f"{operacao} — {erro}")
 ```
 
-Integre o logger nas operações do controller e nas sincronizações:
+Integre o logger nas operações que falam com o banco:
 
 ```python
 from utils.logger import log_operacao, log_erro
@@ -463,7 +444,7 @@ Adicione `sistema.log` ao `.gitignore`. Isso criará um arquivo de auditoria que
     
     **Causa:** Falta de testes de integração. Testes unitários (uma função por vez) não detectam problemas de estado (ex: id_selecionado não resetado).
     
-    **Solução:** Execute o roteiro de testes completo na ordem apresentada. Simule o uso real: faça login, cadastre 3 alunos, edite o segundo, exclua o primeiro, busque pelo terceiro, sincronize, saia e reabra.
+    **Solução:** Execute o roteiro de testes completo na ordem apresentada. Simule o uso real: faça login, cadastre 3 alunos, edite o segundo, exclua o primeiro, busque pelo terceiro, confira no SQL Editor do Neon, saia e reabra.
 
 !!! warning "Mensagens de erro genéricas"
     **Sintoma:** Ao ocorrer um erro, aparece uma janela com o traceback do Python ou uma mensagem vaga como "Erro".
@@ -512,9 +493,9 @@ Antes de prosseguir para o próximo capítulo, confirme:
 - [ ] Barra de status exibe contagem de registros e status online/offline
 - [ ] Mensagens padronizadas com ✅, ❌, ⚠️ e ❓
 - [ ] Todas as operações de banco estão envoltas em try/except
-- [ ] Sincronização com nuvem tem tratamento de erro de rede
+- [ ] Erros de rede (`OperationalError`) e de banco (`psycopg.Error`) têm mensagens diferentes
 - [ ] `.gitignore` verificado e completo
-- [ ] O sistema funciona offline (sem internet) sem travar
+- [ ] Sem internet, o sistema avisa com clareza e não trava
 - [ ] Minha equipe concluiu a Missão da Equipe
 
 ## ➡️ Próximo Capítulo

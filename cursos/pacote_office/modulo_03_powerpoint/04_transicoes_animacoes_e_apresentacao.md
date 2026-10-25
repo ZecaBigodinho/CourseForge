@@ -38,7 +38,7 @@ A transição **Transformar** anima os objetos que aparecem **nos dois slides**:
 1. Monte o slide 1.
 2. Botão direito na miniatura ➔ **Duplicar Slide**.
 3. No slide 2, **mude** os mesmos objetos: posição, tamanho, cor (pode também apagar ou acrescentar).
-4. Selecione o slide 2 ➔ *Transições ➔ **Transformar***.
+4. Selecione o slide 2 ➔ *Transições* ➔ **Transformar**.
 
 Fica ótimo para aproximar uma parte de uma imagem (um mapa, um diagrama) ou para destacar um item de uma lista.
 
@@ -100,10 +100,10 @@ Para ativar: *Apresentação de Slides ➔* marque **Usar o Modo de Exibição d
 
 ## Ensaiar, legendas e vídeo
 
-- **Testar Intervalos:** *Apresentação de Slides ➔ **Testar Intervalos***. A apresentação começa com um cronômetro; ao final, o PowerPoint mostra o tempo total e pergunta se quer **salvar os intervalos**. Responda **Não** se você vai apresentar ao vivo — senão os slides passam sozinhos. Para ver o tempo de cada slide: *Exibir ➔ Classificação de Slides*.
-- **Legendas ao vivo:** *Apresentação de Slides ➔ **Configurações de Legenda*** ➔ escolha o idioma falado (*Português (Brasil)*) e o das legendas ➔ marque **Sempre Usar Legendas**. Durante a apresentação, o PowerPoint escreve na tela o que você fala — ajuda quem tem deficiência auditiva e quem está no fundo da sala. Precisa de internet e de um microfone.
-- **Gravar:** *Apresentação de Slides ➔ **Gravar***: grava a sua voz (e, se quiser, a câmera) junto com os slides — bom para aulas a distância.
-- **Vídeo:** *Arquivo ➔ Exportar ➔ **Criar um Vídeo***: escolha a qualidade e se usa os intervalos e as narrações gravados.
+- **Testar Intervalos:** *Apresentação de Slides* ➔ **Testar Intervalos**. A apresentação começa com um cronômetro; ao final, o PowerPoint mostra o tempo total e pergunta se quer **salvar os intervalos**. Responda **Não** se você vai apresentar ao vivo — senão os slides passam sozinhos. Para ver o tempo de cada slide: *Exibir ➔ Classificação de Slides*.
+- **Legendas ao vivo:** *Apresentação de Slides* ➔ **Configurações de Legenda** ➔ escolha o idioma falado (*Português (Brasil)*) e o das legendas ➔ marque **Sempre Usar Legendas**. Durante a apresentação, o PowerPoint escreve na tela o que você fala — ajuda quem tem deficiência auditiva e quem está no fundo da sala. Precisa de internet e de um microfone.
+- **Gravar:** *Apresentação de Slides* ➔ **Gravar**: grava a sua voz (e, se quiser, a câmera) junto com os slides — bom para aulas a distância.
+- **Vídeo:** *Arquivo ➔ Exportar* ➔ **Criar um Vídeo**: escolha a qualidade e se usa os intervalos e as narrações gravados.
 
 !!! info "Ensaio com treinador"
     O PowerPoint do Microsoft 365 também tem um ensaio com treinador automático, que comenta o ritmo da fala e as palavras repetidas. Por enquanto ele só funciona com o Office em **inglês**; em português, peça a um colega para fazer o papel de treinador.
@@ -155,7 +155,7 @@ Na sua apresentação (do exercício intermediário da aula 01):
 <!-- gabarito -->
 ??? success "Gabarito — Básico"
     1. Qualquer slide ➔ *Transições ➔ Esmaecer* ➔ *Duração:* `00,70` ➔ **Aplicar a Todos**. As miniaturas ganham um pequeno ícone de estrela, indicando que têm transição.
-    2. Clique na **borda** da caixa dos tópicos (não dentro do texto) ➔ *Animações ➔ Surgir* ➔ *Opções de Efeito ➔ **Por Parágrafo*** ➔ *Iniciar:* **Ao Clicar**.
+    2. Clique na **borda** da caixa dos tópicos (não dentro do texto) ➔ *Animações ➔ Surgir* ➔ *Opções de Efeito* ➔ **Por Parágrafo** ➔ *Iniciar:* **Ao Clicar**.
 
     **Confira:** `Shift + F5` nesse slide ➔ cada clique mostra um tópico. No *Painel de Animação*, aparecem os itens numerados 1, 2, 3...
 
@@ -166,7 +166,7 @@ Na sua apresentação (do exercício intermediário da aula 01):
 
 <!-- gabarito -->
 ??? success "Gabarito — Intermediário"
-    1. *Inserir ➔ Formas ➔ Elipse* (segure `Shift` ao desenhar para sair um círculo) ➔ escreva a palavra ➔ com `Ctrl` + arrastar, faça mais duas cópias e troque as palavras. Botão direito na miniatura ➔ *Duplicar Slide*. No slide novo: aumente o círculo *Pesquisa* e leve-o ao centro; diminua e mova os outros dois. Com o slide novo selecionado: *Transições ➔ **Transformar***. Teste com `Shift + F5` a partir do primeiro.
+    1. *Inserir ➔ Formas ➔ Elipse* (segure `Shift` ao desenhar para sair um círculo) ➔ escreva a palavra ➔ com `Ctrl` + arrastar, faça mais duas cópias e troque as palavras. Botão direito na miniatura ➔ *Duplicar Slide*. No slide novo: aumente o círculo *Pesquisa* e leve-o ao centro; diminua e mova os outros dois. Com o slide novo selecionado: *Transições* ➔ **Transformar**. Teste com `Shift + F5` a partir do primeiro.
         - Os objetos precisam ser **os mesmos** (vindos da duplicação). Um círculo desenhado de novo não “desliza”: ele só aparece com esmaecimento.
     2. Selecione o gráfico ➔ *Animações ➔ Esmaecer* ➔ *Opções de Efeito* ➔ **Por Categoria** (ou *Por Série*). Insira a caixa de texto da conclusão ➔ *Animações ➔ Esmaecer* ➔ *Iniciar:* **Com o Anterior**. No *Painel de Animação*, arraste a conclusão para logo **depois** da última parte do gráfico.
 
@@ -181,7 +181,7 @@ Prepare o ensaio final da sua apresentação:
 
 <!-- gabarito -->
 ??? success "Gabarito — Avançado"
-    1. *Apresentação de Slides ➔ Testar Intervalos* ➔ apresente normalmente ➔ no fim, anote o tempo que o PowerPoint mostra ➔ responda **Não** à pergunta sobre salvar. (Se respondeu Sim: desmarque *Apresentação de Slides ➔ **Usar Intervalos***.) Para saber o slide mais demorado, ensaie com o cronômetro do Modo do Apresentador e anote por slide.
+    1. *Apresentação de Slides ➔ Testar Intervalos* ➔ apresente normalmente ➔ no fim, anote o tempo que o PowerPoint mostra ➔ responda **Não** à pergunta sobre salvar. (Se respondeu Sim: desmarque *Apresentação de Slides* ➔ **Usar Intervalos**.) Para saber o slide mais demorado, ensaie com o cronômetro do Modo do Apresentador e anote por slide.
     2. `F5` ➔ menu **…** ➔ *Mostrar Modo de Exibição do Apresentador*. Lupa: ícone de **lupa** embaixo do slide ➔ clique na área ➔ `Esc` sai do zoom. Todos os slides: ícone de **grade** ➔ clique no último. Tela preta: tecla **`.`** (ponto) ou o ícone correspondente; aperte de novo para voltar.
     3. *Apresentação de Slides ➔ Configurações de Legenda* ➔ *Idioma Falado:* **Português (Brasil)** ➔ *Idioma da Legenda:* **Português (Brasil)** ➔ **Sempre Usar Legendas** ➔ `F5` e fale. Se não aparecer: confira o microfone e a internet.
     4. *Arquivo ➔ Exportar ➔ Criar um Vídeo* ➔ qualidade **Full HD** ➔ *Não Usar Intervalos e Narrações Gravados* (cada slide fica alguns segundos) ➔ *Criar Vídeo*. E *Arquivo ➔ Exportar ➔ Criar Documento PDF/XPS*.

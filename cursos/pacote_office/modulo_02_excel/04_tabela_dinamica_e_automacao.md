@@ -58,7 +58,7 @@ São só 20 linhas para você conferir as contas — mas tudo o que você vai fa
 
 A tabela dinâmica responde perguntas como “quanto vendeu cada categoria em cada mês?” **arrastando campos**.
 
-1. Clique em qualquer célula dos dados ➔ *Inserir ➔ **Tabela Dinâmica*** ➔ *Da Tabela/Intervalo* ➔ **Nova Planilha** ➔ *OK*.
+1. Clique em qualquer célula dos dados ➔ *Inserir* ➔ **Tabela Dinâmica** ➔ *Da Tabela/Intervalo* ➔ **Nova Planilha** ➔ *OK*.
 2. À direita abre o painel **Campos da Tabela Dinâmica**: em cima, as colunas dos seus dados; embaixo, quatro áreas.
 
 | Área | O que faz | Exemplo |
@@ -70,13 +70,33 @@ A tabela dinâmica responde perguntas como “quanto vendeu cada categoria em ca
 
 Arraste os campos entre as áreas e o relatório se remonta na hora. Errou? Arraste o campo para fora do painel.
 
+<figure markdown="span">
+  ![Tabela dinâmica com as categorias Bebida, Doce e Salgado nas linhas, Fevereiro e Março nas colunas e os totais em reais; à direita, o painel Campos da Tabela Dinâmica com Mês, Categoria e Total (R$) marcados e as áreas Filtros, Colunas (Mês), Linhas (Categoria) e Valores (Soma de Total (R$))](assets/04_campos_da_tabela_dinamica.webp){ loading=lazy }
+  <figcaption>(1) Com a tabela dinâmica selecionada, aparece a guia <strong>Análise de Tabela Dinâmica</strong> · (2) o relatório · (3) os campos (as colunas dos dados) · (4) as quatro áreas.</figcaption>
+</figure>
+
 ### Ajustes que você vai usar sempre
 
 - **Soma, Contagem ou Média:** clique no campo em *Valores* ➔ *Configurações do Campo de Valor*. Texto em *Valores* vira **Contagem** automaticamente.
 - **Formato de número:** na mesma janela, botão **Formato do Número** ➔ *Moeda*. (Formatar as células direto se perde quando a tabela é remontada.)
-- **Porcentagem:** clique com o botão direito em um valor ➔ *Mostrar Valores Como* ➔ **% do Total Geral**.
-- **Segmentação de Dados:** com a tabela dinâmica selecionada, *Análise da Tabela Dinâmica ➔ **Inserir Segmentação de Dados*** ➔ marque *Turno*. Aparecem botões que filtram o relatório com um clique.
-- **Gráfico Dinâmico:** *Análise da Tabela Dinâmica ➔ Gráfico Dinâmico*. O gráfico acompanha os filtros da tabela.
+
+<figure markdown="span">
+  ![Janela Configurações do Campo de Valor com o botão Formato do Número em destaque e, ao lado, a janela Formatar Células com a categoria Moeda e 2 casas decimais](assets/04_formato_do_numero.webp){ loading=lazy }
+  <figcaption>(1) <em>Formato do Número</em>, no canto da janela · (2) <strong>Moeda</strong>, com 2 casas decimais.</figcaption>
+</figure>
+- **Porcentagem:** clique com o botão direito em um valor ➔ *Mostrar Valores como* ➔ **% do Total Geral**.
+
+<figure markdown="span">
+  ![Menu do botão direito sobre um valor da tabela dinâmica, com Mostrar Valores como aberto e a opção % do Total Geral em destaque; a primeira opção, marcada, é Sem Cálculo](assets/04_mostrar_valores_como.webp){ loading=lazy }
+  <figcaption>(1) <em>Mostrar Valores como</em> · (2) <strong>% do Total Geral</strong>. Para voltar aos reais, escolha <em>Sem Cálculo</em>, a primeira da lista.</figcaption>
+</figure>
+- **Segmentação de Dados:** com a tabela dinâmica selecionada, *Análise de Tabela Dinâmica* ➔ **Inserir Segmentação de Dados** ➔ marque *Turno*. Aparecem botões que filtram o relatório com um clique.
+
+<figure markdown="span">
+  ![À esquerda, a tabela dinâmica em porcentagem (Bebida 33,39%, Doce 13,64%, Salgado 52,97%) com a segmentação Turno ao lado, Manhã e Tarde marcados; à direita, a mesma tabela em reais com só Manhã selecionado e o total de R$ 1.157,00](assets/04_segmentacao_de_dados.webp){ loading=lazy }
+  <figcaption>(1) As categorias como % do total geral · (2) um clique em <em>Manhã</em> filtra o relatório: R$ 1.157,00. O botão com o funil e o X, no canto da segmentação, limpa o filtro.</figcaption>
+</figure>
+- **Gráfico Dinâmico:** *Análise de Tabela Dinâmica ➔ Gráfico Dinâmico*. O gráfico acompanha os filtros da tabela.
 
 !!! warning "A tabela dinâmica não se atualiza sozinha"
     Se você mudar os dados de origem, clique com o botão direito na tabela dinâmica ➔ **Atualizar** (ou `Alt + F5`). Se os dados forem uma **Tabela** do Excel (aula 03), as linhas novas entram na atualização; se forem um intervalo comum, não.
@@ -97,6 +117,12 @@ No Microsoft 365, uma fórmula pode devolver **vários resultados**, que **se es
 - **O `#` (referência de despejo):** `H2#` quer dizer “tudo o que se espalhou a partir de H2”. Se a lista crescer, as fórmulas que usam `H2#` crescem junto.
 - **Duas condições no `FILTRO`:** multiplique os testes para **E** — `(A2:A21="Março")*(E2:E21>=30)` — e some para **OU** — `(D2:D21="Doce")+(D2:D21="Bebida")`.
 - **`#DESPEJAR!`:** o resultado não tem onde se espalhar porque alguma célula do caminho não está vazia. Clique na fórmula: a borda tracejada mostra a área; apague o que estiver lá.
+- **Fórmula em cinza:** clique em uma célula do meio do resultado (I3, por exemplo) e a Barra de Fórmulas mostra a fórmula **em cinza** — ela mora só na primeira célula (I2); as outras apenas recebem o que se espalhou. Para mudar, edite a primeira.
+
+<figure markdown="span">
+  ![Planilha de vendas com os resultados das funções: em H2:I6, os produtos em ordem alfabética e o total vendido de cada um; em K2:K6, os produtos do maior para o menor total; em H10:M15, as seis vendas de março com 30 unidades ou mais; a Barra de Fórmulas mostra =SOMASE(C2:C21;H2#;F2:F21) em cinza](assets/04_matriz_dinamica.webp){ loading=lazy }
+  <figcaption>(1) Em I3, a fórmula aparece em cinza: ela está em I2 · (2) <code>CLASSIFICAR(ÚNICO(...))</code> e o <code>SOMASE</code> com <code>H2#</code> · (3) <code>CLASSIFICARPOR</code>: Coxinha em primeiro · (4) <code>FILTRO</code> com duas condições: 6 linhas.</figcaption>
+</figure>
 
 !!! info "E nas versões antigas?"
     Essas funções existem no Microsoft 365 e no Excel 2021 ou mais novo. Em versões anteriores, a célula mostra `#NOME?`. Se a sua escola usa um Excel antigo, a tabela dinâmica resolve a maior parte dessas perguntas.
@@ -107,11 +133,21 @@ No Microsoft 365, uma fórmula pode devolver **vários resultados**, que **se es
 
 Uma **macro** grava o que você faz — cliques, formatações, digitação — e repete tudo com um comando. É ótima para tarefas que você faz toda semana do mesmo jeito.
 
-1. *Exibir ➔ Macros ➔ **Gravar Macro***.
+1. *Exibir ➔ Macros* ➔ **Gravar Macro**.
 2. Dê um nome **sem espaços** (`FormatarRelatorio`), escolha *Armazenar macro em:* **Esta pasta de trabalho** ➔ *OK*. A partir daqui, tudo é gravado.
 3. Faça a tarefa com calma (os erros também são gravados).
-4. *Exibir ➔ Macros ➔ **Parar Gravação***.
-5. Para executar: *Exibir ➔ Macros ➔ **Exibir Macros*** (`Alt + F8`) ➔ escolha a macro ➔ **Executar**.
+4. *Exibir ➔ Macros* ➔ **Parar gravação**.
+5. Para executar: *Exibir ➔ Macros* ➔ **Exibir Macros** (`Alt + F8`) ➔ escolha a macro ➔ **Executar**.
+
+<figure markdown="span">
+  ![Botão Macros da guia Exibir aberto com Exibir Macros, Gravar Macro e Usar Referências Relativas; ao lado, a janela Gravar macro com o nome FormatarRelatorio e Armazenar macro em: Esta pasta de trabalho](assets/04_gravar_macro.webp){ loading=lazy }
+  <figcaption>(1) <em>Exibir ➔ Macros ➔ Gravar Macro...</em> · (2) nome sem espaços e <em>Esta pasta de trabalho</em>.</figcaption>
+</figure>
+
+<figure markdown="span">
+  ![Durante a gravação, o botão Macros mostra Parar gravação e a barra de status tem um quadradinho de parar ao lado de Pronto; ao lado, a janela Macro com FormatarRelatorio na lista e o botão Executar](assets/04_parar_e_exibir_macros.webp){ loading=lazy }
+  <figcaption>(1) Enquanto grava, o menu troca para <strong>Parar gravação</strong> — e o quadradinho na barra de status, ao lado de <em>Pronto</em>, também para · (2) <code>Alt + F8</code>: escolha a macro e <strong>Executar</strong>.</figcaption>
+</figure>
 
 !!! warning "Salve como `.xlsm`"
     Um arquivo `.xlsx` **não guarda macros**. Use *Arquivo ➔ Salvar como* ➔ **Pasta de Trabalho Habilitada para Macro do Excel (`.xlsm`)**. Se você salvar como `.xlsx`, o Excel avisa que a macro será perdida.
@@ -212,8 +248,8 @@ Na planilha dos dados, a partir da coluna **H** (deixe a G vazia):
 
 <!-- gabarito -->
 ??? success "Gabarito — Avançado"
-    1. Arraste **Mês** para fora do painel. Botão direito em um valor ➔ *Mostrar Valores Como ➔ % do Total Geral*: **Bebida 33,39%** · **Doce 13,64%** · **Salgado 52,97%** (total 100%). *Análise da Tabela Dinâmica ➔ Inserir Segmentação de Dados ➔ Turno*. Volte para *Mostrar Valores Como ➔ Sem Cálculo* para ver em reais: **Manhã R$ 1.157,00** e **Tarde R$ 1.056,50** (soma: R$ 2.213,50). Para tirar o filtro, use o botão de **limpar** no canto da segmentação.
-    2. Na planilha dos dados: *Exibir ➔ Macros ➔ Gravar Macro* ➔ nome `FormatarRelatorio` ➔ *Esta pasta de trabalho* ➔ *OK*. Selecione a linha 1 (clique no **1**) ➔ `Ctrl + N` ➔ uma cor de preenchimento. Clique no **F** da coluna ➔ *Moeda*. Clique no canto entre o **A** e o **1** (seleciona tudo) ➔ dois cliques em qualquer divisa entre colunas. *Exibir ➔ Macros ➔ Parar Gravação*.
+    1. Arraste **Mês** para fora do painel. Botão direito em um valor ➔ *Mostrar Valores como ➔ % do Total Geral*: **Bebida 33,39%** · **Doce 13,64%** · **Salgado 52,97%** (total 100%). *Análise de Tabela Dinâmica ➔ Inserir Segmentação de Dados ➔ Turno*. Volte para *Mostrar Valores como ➔ Sem Cálculo* para ver em reais: **Manhã R$ 1.157,00** e **Tarde R$ 1.056,50** (soma: R$ 2.213,50). Para tirar o filtro, use o botão de **limpar** no canto da segmentação.
+    2. Na planilha dos dados: *Exibir ➔ Macros ➔ Gravar Macro* ➔ nome `FormatarRelatorio` ➔ *Esta pasta de trabalho* ➔ *OK*. Selecione a linha 1 (clique no **1**) ➔ `Ctrl + N` ➔ uma cor de preenchimento. Clique no **F** da coluna ➔ *Moeda*. Clique no canto entre o **A** e o **1** (seleciona tudo) ➔ dois cliques em qualquer divisa entre colunas. *Exibir ➔ Macros ➔ Parar gravação*.
         - **Teste:** planilha nova ➔ cole os dados com *Colar Valores* ➔ `Alt + F8` ➔ `FormatarRelatorio` ➔ *Executar*.
         - **Salvar:** *Arquivo ➔ Salvar como ➔ Pasta de Trabalho Habilitada para Macro do Excel (`.xlsm`)*.
 

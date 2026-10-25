@@ -23,3 +23,9 @@ python-dotenv>=1.0.0
 pytest>=7.4.0
 pytest-cov>=4.1.0
 
+# Site (MkDocs Material) e ampliação das imagens das aulas
+mkdocs-material>=9.7,<10
+mkdocs-glightbox>=0.5,<1
+
+# Ferramentas de mídia (ferramentas/midia/preparar_imagem.py)
+Pillow>=10

@@ -77,7 +77,7 @@ As aulas seguem o **Outlook na web** e o **novo Outlook**. No clássico, os coma
 - **Sinalizar:** a bandeira marca um e-mail como **tarefa a fazer**. Depois, marque como concluído.
 - **Caixa de Entrada Destaques/Outros:** separa os e-mails importantes das newsletters e avisos automáticos.
 - **Pesquisar:** a caixa de pesquisa no topo encontra por remetente, assunto ou palavra. Ela aceita filtros como *Tem anexos*.
-- **Regras:** *Configurações ➔ Email ➔ **Regras*** ➔ *Adicionar nova regra*. Exemplo: “e-mails **de** professora.ana@escola.edu.br ➔ **mover para** a pasta Escola”.
+- **Regras:** *Configurações ➔ Email* ➔ **Regras** ➔ *Adicionar nova regra*. Exemplo: “e-mails **de** professora.ana@escola.edu.br ➔ **mover para** a pasta Escola”.
 
 ---
 
@@ -171,7 +171,7 @@ Escreva (e envie para você mesmo ou para o colega da dupla) um e-mail formal pa
 
 <!-- gabarito -->
 ??? success "Gabarito — Intermediário"
-    1. *Configurações* (engrenagem) ➔ *Contas ➔ **Assinaturas*** ➔ *Nova assinatura* ➔ escreva ➔ em *Selecionar assinaturas padrão*, escolha-a para **mensagens novas** (e, se quiser, para respostas) ➔ *Salvar*.
+    1. *Configurações* (engrenagem) ➔ *Contas* ➔ **Assinaturas** ➔ *Nova assinatura* ➔ escreva ➔ em *Selecionar assinaturas padrão*, escolha-a para **mensagens novas** (e, se quiser, para respostas) ➔ *Salvar*.
     2. Botão direito em *Pastas* (ou na caixa de entrada) ➔ *Criar nova pasta* ➔ `Escola`. *Configurações ➔ Email ➔ **Regras** ➔ Adicionar nova regra* ➔ nome “Escola” ➔ condição **De** ➔ o endereço ➔ ação **Mover para** ➔ `Escola` ➔ *Salvar*.
     3. O e-mail de teste deve cair direto na pasta `Escola`, não na caixa de entrada.
 

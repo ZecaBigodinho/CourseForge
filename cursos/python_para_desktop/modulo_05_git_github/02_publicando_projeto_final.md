@@ -34,15 +34,15 @@ Ao final deste capítulo, seu README.md será assim:
 │  [badge: License: MIT] [badge: Version: v1.0.0]         │
 │                                                          │
 │  > Sistema desktop para gerenciamento de alunos com      │
-│  > interface gráfica, banco de dados e sincronização     │
-│  > em nuvem.                                             │
+│  > interface gráfica e banco de dados PostgreSQL         │
+│  > em nuvem (Neon).                                      │
 │                                                          │
 │  [📸 Screenshot do sistema]                              │
 │                                                          │
 │  ## ✨ Funcionalidades                                    │
 │  - ✅ Login com autenticação                              │
 │  - ✅ CRUD completo de alunos                            │
-│  - ✅ Banco SQLite + sincronização Firebase              │
+│  - ✅ Banco PostgreSQL em nuvem (Neon)                   │
 │  ...                                                     │
 │                                                          │
 │  ## 🚀 Como executar                                     │
@@ -52,7 +52,7 @@ Ao final deste capítulo, seu README.md será assim:
 │  4. Execute: python main.py                              │
 │                                                          │
 │  ## 🛠️ Tecnologias                                      │
-│  Python | Tkinter | SQLite | Firebase                    │
+│  Python | Tkinter | PostgreSQL (Neon)                    │
 │                                                          │
 │  ## 👥 Autores                                           │
 │  João Silva — Maria Santos — Pedro Oliveira              │
@@ -69,8 +69,7 @@ Publicada em: Agosto 2026
 📋 O que está incluído:
 - Tela de login com validação
 - CRUD completo de alunos
-- Banco de dados SQLite
-- Sincronização com Firebase
+- Banco de dados PostgreSQL em nuvem (Neon)
 - Interface CustomTkinter
 ```
 
@@ -115,7 +114,7 @@ Para ver todos os commits do projeto:
 git log --oneline
 
 # Resultado:
-# a1b2c3d feat: adiciona sincronização com Firebase
+# a1b2c3d feat: leva os dados para o banco em nuvem (Neon)
 # e4f5g6h feat: implementa CRUD completo
 # i7j8k9l feat: conecta SQLite ao cadastro
 # m0n1o2p feat: cria tela de cadastro de alunos
@@ -159,15 +158,14 @@ Verifique que o `requirements.txt` lista todas as dependências:
 ```text
 customtkinter==5.2.2
 python-dotenv>=1.0.0
-firebase-admin>=6.0.0
+psycopg[binary]>=3.2
 ```
 
 E que o `.env.example` existe como template:
 
 ```text
-# Copie este arquivo para .env e preencha
-FIREBASE_DATABASE_URL=
-FIREBASE_CREDENTIALS=
+# Copie este arquivo para .env e cole a connection string do Neon
+DATABASE_URL=
 ```
 
 ### Passo 3 — README profissional (template completo)
@@ -182,8 +180,8 @@ Substitua o conteúdo do `README.md` pelo template abaixo, adaptando para o proj
 ![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)
 
 > Sistema desktop para gerenciamento de alunos
-> com interface gráfica moderna, banco de dados
-> local e sincronização em nuvem.
+> com interface gráfica moderna e banco de dados
+> PostgreSQL em nuvem (Neon).
 
 ## 📸 Screenshots
 
@@ -197,8 +195,7 @@ Substitua o conteúdo do `README.md` pelo template abaixo, adaptando para o proj
 - 📋 Menu principal com navegação
 - 📝 Cadastro completo de alunos (CRUD)
 - 🔍 Busca com filtro por nome
-- 💾 Persistência local com SQLite
-- ☁️ Sincronização com Firebase
+- ☁️ Dados num banco PostgreSQL em nuvem (Neon)
 - 🎨 Interface moderna com CustomTkinter
 
 ## 🚀 Como executar
@@ -237,8 +234,8 @@ Substitua o conteúdo do `README.md` pelo template abaixo, adaptando para o proj
 |------------|-----|
 | Python 3.11+ | Linguagem principal |
 | CustomTkinter | Interface gráfica |
-| SQLite | Banco de dados local |
-| Firebase | Banco de dados em nuvem |
+| PostgreSQL (Neon) | Banco de dados em nuvem |
+| psycopg | Conexão com o PostgreSQL |
 | python-dotenv | Variáveis de ambiente |
 
 ## 📂 Estrutura do Projeto
@@ -344,13 +341,12 @@ No GitHub:
 - 📋 Menu principal com navegação entre telas
 - 📝 Cadastro completo de alunos (CRUD)
 - 🔍 Busca com filtro por nome
-- 💾 Persistência local com SQLite
-- ☁️ Sincronização com Firebase
+- ☁️ Dados num banco PostgreSQL em nuvem (Neon)
 
 ### 🛠️ Tecnologias
 - Python 3.11+
 - CustomTkinter
-- SQLite / Firebase
+- PostgreSQL (Neon)
 
 ### 👥 Equipe
 - João Silva

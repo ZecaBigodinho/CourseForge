@@ -26,8 +26,8 @@ Foram 11 capítulos. Você começou com uma janela vazia e um arquivo `main.py` 
 - 📊 Tabela Treeview com scrollbar e seleção
 - ✏️ Edição e exclusão com confirmação
 - 🔍 Busca com filtro por nome
-- 💾 Persistência local com SQLite
-- ☁️ Sincronização com banco em nuvem (Firebase)
+- 💾 Persistência com SQLite (Cap. 07–08) e depois com PostgreSQL em nuvem (Neon)
+- ☁️ Dados acessíveis de qualquer computador, com aviso claro sem conexão
 - ⌨️ Atalhos de teclado e barra de status
 - 📚 Código documentado com docstrings
 - 📄 README.md e requirements.txt profissionais
@@ -104,19 +104,19 @@ CHECKLIST FINAL — SISTEMA ESCOLAR
 
 💾 PERSISTÊNCIA
 [  ] Dados sobrevivem ao fechar e reabrir o sistema
-[  ] Banco SQLite (escola.db) é criado automaticamente
+[  ] A tabela é criada automaticamente no Neon (inicializar_banco)
 
-☁️ SINCRONIZAÇÃO
-[  ] Indicador de status mostra Online/Offline
-[  ] Botão Sincronizar envia dados para a nuvem
-[  ] Dados sincronizados aparecem no Firebase Console
-[  ] Sistema funciona offline sem travar
+☁️ BANCO EM NUVEM (NEON)
+[  ] Indicador de status mostra 🟢 Online / 🔴 Offline
+[  ] Registro cadastrado no sistema aparece no SQL Editor do Neon
+[  ] Botão Recarregar mostra o que foi cadastrado em outro lugar
+[  ] Sem internet: mensagem clara, sem traceback
 
 📚 DOCUMENTAÇÃO
 [  ] README.md completo e personalizado
 [  ] requirements.txt com dependências
 [  ] Docstrings em todas as funções
-[  ] .gitignore inclui .env e credenciais
+[  ] .gitignore inclui .env; .env.exemplo (sem senha) está no Git
 [  ] Código sem prints de debug ou código comentado
 ```
 
@@ -134,7 +134,7 @@ ROTEIRO DE APRESENTAÇÃO — SISTEMA ESCOLAR
 - "Bom dia/boa tarde. Meu nome é [seu nome] e este é o Sistema Escolar,
   um sistema desktop para gestão de alunos desenvolvido em Python."
 - Contexto rápido: "O sistema permite cadastrar, consultar, editar e
-  excluir alunos, com persistência local e sincronização em nuvem."
+  excluir alunos, com os dados guardados num banco em nuvem."
 
 ⏱️ 1-4 min — DEMONSTRAÇÃO AO VIVO
 - Execute o sistema e faça login (admin/admin)
@@ -143,9 +143,9 @@ ROTEIRO DE APRESENTAÇÃO — SISTEMA ESCOLAR
 - Selecione um aluno e edite-o
 - Exclua outro aluno (mostre a confirmação)
 - Use a busca para filtrar por nome
-- Mostre a sincronização com a nuvem (se configurada)
+- Mostre o indicador ☁️ Neon: 🟢 Online
 - Feche e reabra o sistema para mostrar a persistência
-- Mostre o arquivo escola.db e, se possível, o Firebase Console
+- Abra o SQL Editor do Neon e mostre os alunos que você acabou de cadastrar
 
 ⏱️ 4-6 min — ARQUITETURA
 - Mostre a estrutura de pastas (MVC)
@@ -185,7 +185,7 @@ O professor avaliará os seguintes aspectos. Conheça os critérios:
 | **Código** | Está organizado (MVC)? Tem docstrings? Segue PEP 8? Está no GitHub? | 25% |
 | **Documentação** | README.md está completo? requirements.txt existe? | 15% |
 | **Apresentação** | A demonstração é clara? A equipe sabe explicar o que fez? | 15% |
-| **Diferencial** | Bônus: sincronização com nuvem, atalhos de teclado, logging | 5% |
+| **Diferencial** | Bônus: atalhos de teclado, logging, coluna `cadastrado_em` (desafio do Cap. 09) | 5% |
 
 !!! note "Transparência"
     Estes critérios não são segredo. Você sabe exatamente o que será avaliado. Se todos os itens do checklist estiverem `[x]`, sua nota será excelente.
@@ -237,12 +237,12 @@ Este registro é seu. Ele não será avaliado — ficará com você como parte d
 - Criar interfaces gráficas com Tkinter
 - Organizar código no padrão MVC
 - Persistir dados com SQLite
-- Sincronizar dados com banco em nuvem
+- Conectar um sistema a um banco PostgreSQL em nuvem (Neon)
 - Refatorar código seguindo boas práticas
 - Apresentar um projeto de software
 
 ## O que eu mais gostei de construir?
-(A tela de login, o CRUD, a sincronização...)
+(A tela de login, o CRUD, o banco em nuvem...)
 
 ## O que eu quero aprender a seguir?
 (Web com Flask/Django, mobile com Kivy, ciência de dados...)
@@ -291,7 +291,7 @@ Ao final, responda:
     - Demonstração fluiu sem erros na 2ª e 3ª tentativa ✅
     - Explicação da arquitetura: "A View é o que o usuário vê (telas),
       o Controller é a lógica (validação, regras de negócio),
-      o Database é onde os dados moram (SQLite e Firebase)." ✅
+      o Database é onde os dados moram (hoje, no Neon)." ✅
 
 ## 🏆 Missão da Equipe (Última Missão!)
 
@@ -406,7 +406,7 @@ Vamos recapitular o que você construiu:
 │   ✅ 06 — Cadastro com Treeview                 │
 │   ✅ 07 — SQLite (persistência local)           │
 │   ✅ 08 — CRUD Completo                         │
-│   ✅ 09 — Banco em Nuvem (Firebase)             │
+│   ✅ 09 — Banco em Nuvem (Neon)                 │
 │   ✅ 10 — Integração e polimento                │
 │   ✅ 11 — Refatoração e documentação            │
 │   ✅ 12 — Projeto Final (entrega)               │
@@ -419,7 +419,7 @@ Vamos recapitular o que você construiu:
 O que você leva deste módulo:
 
 - 🖥️ **Habilidade técnica:** Construir sistemas desktop com Python e Tkinter
-- 🗄️ **Persistência:** Integrar SQLite e banco em nuvem
+- 🗄️ **Persistência:** SQLite local e PostgreSQL em nuvem (Neon)
 - 🏗️ **Arquitetura:** Organizar código no padrão MVC
 - 📝 **Profissionalismo:** Documentar, refatorar e versionar código
 - 🎤 **Comunicação:** Apresentar projetos técnicos com clareza

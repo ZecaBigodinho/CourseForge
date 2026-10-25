@@ -48,11 +48,11 @@ Ao final desta aula, você terá:
 - **Modelos prontos:** *Arquivo ➔ Novo* e pesquise “currículo”. Escolha um **simples**, sem colunas e caixas complicadas: muitos sistemas de seleção leem o currículo automaticamente e se perdem em layouts cheios de enfeites.
 
 !!! warning "Nada de dados sensíveis"
-    Sem CPF, RG, endereço completo, data de nascimento completa, estado civil, religião ou foto (a não ser que a vaga peça). E, antes de enviar, *Arquivo ➔ Informações ➔ **Verificar Problemas ➔ Inspecionar Documento*** encontra comentários, alterações controladas e propriedades escondidas no arquivo.
+    Sem CPF, RG, endereço completo, data de nascimento completa, estado civil, religião ou foto (a não ser que a vaga peça). E, antes de enviar, *Arquivo ➔ Informações* ➔ **Verificar Problemas ➔ Inspecionar Documento** encontra comentários, alterações controladas e propriedades escondidas no arquivo.
 
 ### Revisão e PDF
 
-- *Revisão ➔ Ortografia e Gramática* (`F7`) e *Revisão ➔ **Verificar Acessibilidade***.
+- *Revisão ➔ Ortografia e Gramática* (`F7`) e *Revisão* ➔ **Verificar Acessibilidade**.
 - Peça para alguém ler com *Controlar Alterações* ligado (projeto do Módulo 01).
 - *Arquivo ➔ Exportar ➔ Criar PDF/XPS* com um nome claro: `curriculo_ana_souza.pdf`.
 
@@ -80,12 +80,12 @@ Os trechos entre «» são **campos de mala direta**: vêm da planilha de candid
 ### A mala direta (Módulo 01, aula 04)
 
 1. Salve e **feche** a `candidaturas.xlsx`.
-2. Abra a carta-modelo ➔ *Correspondências ➔ Iniciar Mala Direta ➔ **Cartas***.
-3. *Selecionar Destinatários ➔ **Usar uma Lista Existente*** ➔ `candidaturas.xlsx` ➔ escolha a **Tabela `Candidaturas`** (ou a aba *Candidaturas$*) ➔ cabeçalhos marcados.
+2. Abra a carta-modelo ➔ *Correspondências ➔ Iniciar Mala Direta* ➔ **Cartas**.
+3. *Selecionar Destinatários* ➔ **Usar uma Lista Existente** ➔ `candidaturas.xlsx` ➔ escolha a **Tabela `Candidaturas`** (ou a aba *Candidaturas$*) ➔ cabeçalhos marcados.
 4. *Editar Lista de Destinatários* ➔ seta da coluna **Status** ➔ **A enviar**: só quem ainda não recebeu.
 5. *Inserir Campo de Mesclagem* ➔ «Contato», «Vaga», «Empresa» nos lugares certos.
 6. *Visualizar Resultados* ➔ passe pelas cartas com as setas.
-7. *Concluir e Mesclar ➔ **Editar Documentos Individuais*** ➔ *Todos*: um documento novo, com uma carta por página. Revise e exporte em PDF.
+7. *Concluir e Mesclar* ➔ **Editar Documentos Individuais** ➔ *Todos*: um documento novo, com uma carta por página. Revise e exporte em PDF.
 
 !!! info "Mala direta direto por e-mail"
     O Word também tem *Concluir e Mesclar ➔ Enviar Mensagens de Email*, que manda uma mensagem para cada linha da planilha. Ele depende do **Outlook clássico** instalado e configurado no computador — no novo Outlook ou no Outlook na web, pode não funcionar. Para poucas candidaturas, mande os e-mails um a um (aula 05).
@@ -139,7 +139,7 @@ Escreva o seu **currículo de uma página** com as seções da aula, usando os e
 
 <!-- gabarito -->
 ??? success "Gabarito — Intermediário"
-    1. Documento novo com o texto da aula. Para a data, *Inserir ➔ **Data e Hora*** ➔ formato `24 de novembro de 2026` ➔ marque **Atualizar automaticamente** se quiser a data do dia da impressão.
+    1. Documento novo com o texto da aula. Para a data, *Inserir* ➔ **Data e Hora** ➔ formato `24 de novembro de 2026` ➔ marque **Atualizar automaticamente** se quiser a data do dia da impressão.
     2. Com `candidaturas.xlsx` **fechada**: *Correspondências ➔ Iniciar Mala Direta ➔ Cartas* ➔ *Selecionar Destinatários ➔ Usar uma Lista Existente* ➔ o arquivo ➔ a tabela **Candidaturas** ➔ *Editar Lista de Destinatários* ➔ seta de **Status** ➔ **A enviar** ➔ *OK*. Insira os campos ➔ *Visualizar Resultados*.
 
     **Confira:** são **2 cartas** — **Biblioteca Municipal** (Prezado(a) **Sônia Prado**, vaga de **Estágio administrativo**) e **Farmácia Saúde** (Prezado(a) **Carlos Alves**, vaga de **Atendente**). *Concluir e Mesclar ➔ Editar Documentos Individuais ➔ Todos* ➔ revise ➔ *Exportar ➔ Criar PDF/XPS*. Para separar uma carta por arquivo: no PDF, *Opções ➔ Página(s) De/Até*.
@@ -152,7 +152,7 @@ Escreva o seu **currículo de uma página** com as seções da aula, usando os e
 
 <!-- gabarito -->
 ??? success "Gabarito — Avançado"
-    1. Na carta, no começo do segundo parágrafo: *Correspondências ➔ **Regras ➔ Se...Então...Senão*** ➔ *Nome do campo:* **Vaga** ➔ *Comparação:* **Igual a** ➔ *Comparar com:* `Atendente` ➔ *Inserir este texto:* “Ajudo no atendimento da loja da minha família aos sábados, onde aprendi a ouvir o cliente com paciência.” ➔ *Caso contrário:* “Organizei meus projetos do curso Pacote Office com planilhas de controle e prazos, e gosto de deixar tudo em ordem.” ➔ *OK*. Em *Visualizar Resultados*, a Farmácia Saúde recebe a primeira frase e a Biblioteca Municipal, a segunda.
+    1. Na carta, no começo do segundo parágrafo: *Correspondências* ➔ **Regras ➔ Se...Então...Senão** ➔ *Nome do campo:* **Vaga** ➔ *Comparação:* **Igual a** ➔ *Comparar com:* `Atendente` ➔ *Inserir este texto:* “Ajudo no atendimento da loja da minha família aos sábados, onde aprendi a ouvir o cliente com paciência.” ➔ *Caso contrário:* “Organizei meus projetos do curso Pacote Office com planilhas de controle e prazos, e gosto de deixar tudo em ordem.” ➔ *OK*. Em *Visualizar Resultados*, a Farmácia Saúde recebe a primeira frase e a Biblioteca Municipal, a segunda.
     2. Salve uma cópia (`curriculo_estagio_administrativo.docx`): objetivo com o nome da vaga; em *Habilidades*, as palavras-chave do anúncio **primeiro**; nas experiências, a prova mais ligada à vaga no topo. O resto do currículo continua igual — por isso os estilos ajudam.
     3. *Revisão ➔ Verificar Acessibilidade* (sem erros) e *Arquivo ➔ Informações ➔ Verificar Problemas ➔ Inspecionar Documento* ➔ *Inspecionar* ➔ **Remover Tudo** em *Comentários, Revisões e Versões* e em *Propriedades do Documento e Informações Pessoais*. Só então gere os PDFs.
 

@@ -49,6 +49,13 @@ extra:
     name: Falar com o professor
 extra_css:
 - stylesheets/custom.css
+plugins:
+- search
+- glightbox:
+    touchNavigation: true
+    loop: false
+    skip_classes:
+    - sem-zoom
 markdown_extensions:
 - admonition
 - pymdownx.details
@@ -124,7 +131,7 @@ nav:
     - Cadastro de Alunos: python_para_desktop/modulo_04_projeto_finalizador/06_cadastro_de_alunos.md
     - SQLite: python_para_desktop/modulo_04_projeto_finalizador/07_sqlite_local.md
     - CRUD Completo: python_para_desktop/modulo_04_projeto_finalizador/08_crud_completo.md
-    - Banco em Nuvem: python_para_desktop/modulo_04_projeto_finalizador/09_banco_em_nuvem.md
+    - Banco em Nuvem com Neon: python_para_desktop/modulo_04_projeto_finalizador/09_banco_em_nuvem.md
     - Integração: python_para_desktop/modulo_04_projeto_finalizador/10_integracao_e_testes.md
     - Refatoração: python_para_desktop/modulo_04_projeto_finalizador/11_refatoracao_e_entrega.md
     - Projeto Final do Curso: python_para_desktop/modulo_04_projeto_finalizador/12_projeto_final.md

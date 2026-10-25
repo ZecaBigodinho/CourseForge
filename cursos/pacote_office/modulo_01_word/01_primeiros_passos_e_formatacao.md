@@ -34,8 +34,18 @@ Ao abrir um **Documento em branco**, você vê:
 | **Régua** | Mostra margens e recuos. Se não aparecer: *Exibir ➔ Régua*. |
 | **Barra de status** | Embaixo: número de páginas, de palavras e o zoom. |
 
+<figure markdown="span">
+  ![Tela do Word com um documento aberto: a faixa de opções no alto, a caixa de pesquisa na barra de título, o botão Mostrar Tudo no grupo Parágrafo e a barra de status embaixo](assets/01_tela_do_word.webp){ loading=lazy }
+  <figcaption>(1) Faixa de opções, com as abas e os grupos de comandos · (2) caixa de pesquisa · (3) botão ¶ (Mostrar Tudo) · (4) barra de status.</figcaption>
+</figure>
+
 !!! tip "Mostrar a formatação escondida"
     Na aba *Página Inicial*, o botão **¶** (Mostrar Tudo) exibe espaços, quebras de linha e de página como símbolos. Ele não aparece na impressão e é a melhor forma de descobrir por que algo "pulou" de lugar.
+
+<figure markdown="span">
+  ![Documento com o botão Mostrar Tudo ligado: um ponto aparece em cada espaço e o símbolo ¶ no fim de cada parágrafo](assets/01_mostrar_tudo.webp){ loading=lazy }
+  <figcaption>Com o ¶ ligado, cada ponto é um espaço e cada ¶ é um <em>Enter</em>.</figcaption>
+</figure>
 
 ---
 
@@ -44,6 +54,11 @@ Ao abrir um **Documento em branco**, você vê:
 - **Salvar:** *Arquivo ➔ Salvar como*. Escolha a pasta e dê um nome claro, como `trabalho_historia_ana.docx`.
 - **Salvamento Automático:** se o arquivo estiver no **OneDrive** (conta da escola), a chave *Salvamento Automático* no canto superior esquerdo salva sozinha a cada alteração.
 - **PDF:** *Arquivo ➔ Exportar ➔ Criar Documento PDF/XPS*. Envie sempre o PDF quando o professor pedir “a versão final”: ele abre igual em qualquer computador ou celular, sem desconfigurar.
+
+<figure markdown="span">
+  ![Menu Arquivo do Word na opção Exportar, com Criar Documento PDF/XPS selecionado e o botão Criar PDF/XPS em destaque](assets/01_exportar_pdf.webp){ loading=lazy }
+  <figcaption><em>Arquivo ➔ Exportar ➔ Criar Documento PDF/XPS</em> e, à direita, o botão <strong>Criar PDF/XPS</strong>.</figcaption>
+</figure>
 
 !!! warning "Entregue o PDF, guarde o .docx"
     O `.docx` é o arquivo de trabalho — é nele que você corrige. O PDF é a “foto” do documento pronto. Mantenha os dois.
@@ -71,6 +86,11 @@ No Word, **parágrafo** é tudo o que vem antes de um *Enter*. Clique no parágr
 | Espaçamento antes e depois | *Parágrafo ➔ Antes / Depois* | **0 pt** |
 | Recuo da primeira linha | *Parágrafo ➔ Especial: Primeira linha* | **1,25 cm** |
 
+<figure markdown="span">
+  ![Janela Parágrafo do Word com alinhamento Justificada, recuo especial Primeira linha de 1,25 cm, espaçamento antes e depois de 0 pt e espaçamento entre linhas de 1,5 linhas](assets/01_janela_paragrafo.webp){ loading=lazy }
+  <figcaption>A janela <strong>Parágrafo</strong> com os valores comuns em trabalhos — tudo no mesmo lugar.</figcaption>
+</figure>
+
 !!! warning "Não use Tab nem espaços para recuar"
     O recuo de primeira linha faz o trabalho sozinho em todos os parágrafos. Apertar *Tab* ou a barra de espaço para “empurrar” o texto deixa o documento torto e difícil de corrigir.
 
@@ -83,6 +103,11 @@ Aba **Layout**:
 - **Tamanho ➔ A4** (é o papel padrão no Brasil).
 - **Margens ➔ Margens Personalizadas**. No padrão ABNT: **Superior 3 cm**, **Esquerda 3 cm**, **Inferior 2 cm**, **Direita 2 cm**.
 - **Orientação:** *Retrato* (em pé) é o normal; use *Paisagem* (deitada) só em páginas com tabelas largas.
+
+<figure markdown="span">
+  ![Janela Configurar página, guia Margens, com margem superior de 3 cm, esquerda de 3 cm, inferior de 2 cm e direita de 2 cm, orientação Retrato](assets/01_margens_personalizadas.webp){ loading=lazy }
+  <figcaption>Em <em>Margens Personalizadas</em>, a janela <strong>Configurar página</strong> com as margens do padrão ABNT.</figcaption>
+</figure>
 
 ---
 

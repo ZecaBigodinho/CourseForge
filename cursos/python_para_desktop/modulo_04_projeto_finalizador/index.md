@@ -8,7 +8,7 @@
 
 ## 📋 Visão Geral do Módulo
 
-Módulo orientado a projeto: construção incremental de um sistema completo com Login, CRUD, SQLite e Banco em Nuvem. Inclui um exercício prático bônus explorando Python na web com Streamlit e banco PostgreSQL em nuvem.
+Módulo orientado a projeto: construção incremental de um sistema completo com Login, CRUD, SQLite e Banco em Nuvem. O banco em nuvem é o PostgreSQL do Neon. Inclui um exercício prático bônus explorando Python na web com Streamlit, usando o mesmo Neon.
 
 ---
 
@@ -36,7 +36,7 @@ Ao final deste módulo, você será capaz de:
 
 - Construir um sistema desktop completo com Login, Menu, CRUD e Banco de Dados
 - Organizar código com arquitetura MVC e modularização
-- Sincronizar dados com banco em nuvem
+- Conectar o sistema a um banco PostgreSQL em nuvem (Neon)
 - Criar aplicações web com Python usando Streamlit e PostgreSQL
 
 ---
@@ -63,7 +63,7 @@ Antes de seguir, confira se você consegue:
 - [ ] A equipe tem escopo, requisitos e cronograma definidos.
 - [ ] O sistema tem login, menu e navegação entre janelas.
 - [ ] O cadastro de alunos faz CRUD completo no SQLite.
-- [ ] Os dados sincronizam com o banco em nuvem.
+- [ ] Os dados ficam no banco em nuvem (Neon), com aviso claro quando não há conexão.
 - [ ] O código foi refatorado e testado em todos os fluxos.
 - [ ] O projeto foi apresentado e a entrega foi registrada pelo professor.
 

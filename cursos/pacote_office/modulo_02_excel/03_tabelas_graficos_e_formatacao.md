@@ -48,15 +48,20 @@ Copie e cole na célula **A1** de uma planilha nova. São os gastos de um estuda
 
 ## Tabela do Excel
 
-Clique em qualquer célula dos dados e use *Inserir ➔ **Tabela*** (ou `Ctrl + Alt + T`). Confirme que **Minha tabela tem cabeçalhos** está marcado.
+Clique em qualquer célula dos dados e use *Inserir* ➔ **Tabela** (ou `Ctrl + Alt + T`). Confirme que **Minha tabela tem cabeçalhos** está marcado.
+
+<figure markdown="span">
+  ![Janela Criar Tabela com o intervalo $A$1:$D$13 e a caixa Minha tabela tem cabeçalhos marcada](assets/03_criar_tabela.webp){ loading=lazy }
+  <figcaption>O Excel já sugere o intervalo inteiro dos dados (<code>$A$1:$D$13</code>).</figcaption>
+</figure>
 
 O que você ganha:
 
 - **Filtros** nos cabeçalhos e **linhas listradas**, que facilitam a leitura.
-- A tabela **cresce sozinha**: digite na primeira linha abaixo dela e a linha nova já entra na tabela — com a formatação e as fórmulas.
+- A tabela **cresce sozinha**: digite na primeira linha abaixo dela e a linha nova já entra na tabela — com a formatação e as fórmulas. Com a **Linha de Totais** ligada, isso não funciona (a linha de baixo é o Total): clique na última célula de dados e aperte `Tab`, e o Excel cria a linha nova acima do Total.
 - **Colunas calculadas:** escreva uma fórmula na primeira célula de uma coluna nova e ela é copiada para a coluna inteira.
 - **Nome da tabela:** na guia *Design da Tabela*, troque `Tabela1` por um nome claro, como `Gastos`. As fórmulas passam a usar **referências estruturadas**: `=SOMA(Gastos[Valor])` em vez de `=SOMA(D2:D13)` — e continuam certas quando a tabela cresce.
-- **Linha de Totais:** *Design da Tabela ➔ **Linha de Totais***. Na última linha, cada célula tem uma setinha para escolher *Soma*, *Média*, *Contagem*...
+- **Linha de Totais:** *Design da Tabela* ➔ **Linha de Totais**. Na última linha, cada célula tem uma setinha para escolher *Soma*, *Média*, *Contagem*...
 
 !!! info "Dentro da tabela, `[@Valor]` quer dizer “o valor desta linha”"
     Ao clicar em células da mesma linha enquanto escreve uma fórmula na tabela, o Excel escreve `[@Valor]` em vez de `D2`. É o mesmo que a referência relativa da aula 01, só que com nome.
@@ -69,6 +74,11 @@ O que você ganha:
 - **Filtrar:** setinha do cabeçalho ➔ desmarque o que não quer ver. As linhas não somem: ficam **ocultas**, e os números das linhas ficam azuis para avisar.
 - **Limpar:** setinha ➔ *Limpar Filtro*, ou *Dados ➔ Limpar*.
 
+<figure markdown="span">
+  ![Tabela Gastos filtrada pela categoria Alimentação: guia Design da Tabela com o nome Gastos e Linha de Totais marcada, a fórmula =SUBTOTAL(109;[Valor]) na Barra de Fórmulas, o funil no cabeçalho Categoria, os números das linhas 3, 6, 8 e 11 em azul, o total R$ 172,00 e a barra de status com 4 de 12 registros localizados](assets/03_tabela_filtrada.webp){ loading=lazy }
+  <figcaption>(1) Nome da tabela · (2) Linha de Totais · (3) o total usa <code>SUBTOTAL</code> · (4) o funil mostra qual coluna está filtrada · (5) números das linhas em azul: há linhas ocultas · (6) o total soma só as visíveis — e a barra de status avisa: <em>4 de 12 registros localizados</em>.</figcaption>
+</figure>
+
 !!! tip "A Linha de Totais respeita o filtro"
     Com a tabela filtrada, a Linha de Totais soma **só as linhas visíveis** (ela usa a função `SUBTOTAL`). Um `=SOMA(...)` comum, fora da tabela, continua somando tudo.
 
@@ -79,17 +89,22 @@ O que você ganha:
 
 ## Formatação condicional
 
-*Página Inicial ➔ **Formatação Condicional***: a cor da célula muda conforme o valor — e se atualiza sozinha.
+*Página Inicial* ➔ **Formatação Condicional**: a cor da célula muda conforme o valor — e se atualiza sozinha.
 
 | Opção | Para quê | Exemplo |
 |---|---|---|
-| **Realçar Regras das Células** | destacar o que passa de um limite | gastos *É Maior do que* 50 em vermelho |
+| **Regras de Realce das Células** | destacar o que passa de um limite | gastos *É Maior do que* 50 em vermelho |
 | **Regras de Primeiros/Últimos** | os maiores ou menores | os 3 maiores gastos |
 | **Barras de Dados** | comparar tamanhos dentro da célula | uma barrinha proporcional ao valor |
 | **Escalas de Cor** | do menor ao maior em degradê | notas do vermelho ao verde |
 | **Nova Regra ➔ Usar uma fórmula...** | regras que dependem de outra célula | destacar a linha inteira |
 
-Para ver, editar ou apagar regras: *Formatação Condicional ➔ **Gerenciar Regras***.
+Para ver, editar ou apagar regras: *Formatação Condicional* ➔ **Gerenciar Regras**.
+
+<figure markdown="span">
+  ![Menu Formatação Condicional aberto em Regras de Realce das Células, com o submenu É Maior do que, É Menor do que, Está Entre e outros; ao lado, a tabela com R$ 85,40 e R$ 64,30 em vermelho claro e barras de dados em toda a coluna Valor](assets/03_formatacao_condicional.webp){ loading=lazy }
+  <figcaption>(1) <em>Regras de Realce das Células</em> · (2) <em>É Maior do que...</em> · (3) o resultado: acima de R$ 50,00 em vermelho claro, e as barras de dados na mesma coluna.</figcaption>
+</figure>
 
 !!! tip "Regra por fórmula"
     Selecione o intervalo **a partir da primeira linha** e escreva a fórmula pensando nessa linha, com `$` na coluna: `=$D2>50` aplicada em `A2:D13` pinta a **linha inteira** de cada gasto acima de 50. Fórmula verdadeira = célula formatada.
@@ -101,17 +116,32 @@ Para ver, editar ou apagar regras: *Formatação Condicional ➔ **Gerenciar Reg
 Para ninguém digitar “Alimentaçao” ou “alimentação” e bagunçar as somas:
 
 1. Selecione as células da coluna *Categoria*.
-2. *Dados ➔ **Validação de Dados*** ➔ *Permitir:* **Lista**.
+2. *Dados* ➔ **Validação de Dados** ➔ *Permitir:* **Lista**.
 3. Em *Fonte*, escreva as opções separadas por ponto e vírgula: `Alimentação;Transporte;Lazer;Material escolar` — ou aponte para um intervalo que tenha a lista.
 4. Na guia *Alerta de Erro*, escreva uma mensagem clara (“Escolha uma categoria da lista”).
 
+<figure markdown="span">
+  ![Janela Validação de dados duas vezes: na guia Configurações, Permitir Lista e Fonte Alimentação;Transporte;Lazer;Material escolar; na guia Alerta de erro, título Categoria inválida e a mensagem Escolha uma categoria da lista](assets/03_validacao_de_dados.webp){ loading=lazy }
+  <figcaption>(1) Guia <em>Configurações</em>: <strong>Lista</strong> e as opções em <em>Fonte</em> · (2) guia <em>Alerta de erro</em>: título e mensagem.</figcaption>
+</figure>
+
 Agora a célula mostra uma setinha com as opções, e o Excel recusa o que não estiver na lista.
+
+<figure markdown="span">
+  ![Linha nova da tabela com a setinha aberta na coluna Categoria mostrando Alimentação, Transporte, Lazer e Material escolar; ao lado, o alerta Categoria inválida com a mensagem Escolha uma categoria da lista e os botões Repetir e Cancelar](assets/03_lista_suspensa.webp){ loading=lazy }
+  <figcaption>(1) A setinha com as quatro categorias · (2) ao digitar <code>Lazr</code>, o alerta com a sua mensagem.</figcaption>
+</figure>
 
 ---
 
 ## Gráficos
 
-Selecione os dados (com os cabeçalhos) e use *Inserir ➔ **Gráficos Recomendados***. Antes de escolher, pergunte: **o que o gráfico precisa responder?**
+Selecione os dados (com os cabeçalhos) e use *Inserir* ➔ **Gráficos Recomendados**. Antes de escolher, pergunte: **o que o gráfico precisa responder?**
+
+<figure markdown="span">
+  ![Janela Inserir Gráfico na guia Gráficos Recomendados, com a miniatura Coluna Agrupada selecionada e a prévia comparando Gasto e Orçamento por categoria](assets/03_graficos_recomendados.webp){ loading=lazy }
+  <figcaption>A janela sugere vários tipos — o primeiro nem sempre é o melhor. Aqui foi escolhida a <strong>Coluna Agrupada</strong>.</figcaption>
+</figure>
 
 | Pergunta | Gráfico |
 |---|---|
@@ -173,11 +203,13 @@ Use a planilha de gastos desta aula.
 
 <!-- gabarito -->
 ??? success "Gabarito — Intermediário"
-    1. Selecione os valores (**D2:D13**) ➔ *Formatação Condicional ➔ Realçar Regras das Células ➔ É Maior do que...* ➔ `50` ➔ *Preenchimento Vermelho Claro*. Ficam vermelhos **2** valores: R$ 85,40 e R$ 64,30 (R$ 50,00 não é *maior* que 50).
+    1. Selecione os valores (**D2:D13**) ➔ *Formatação Condicional ➔ Regras de Realce das Células ➔ É Maior do que...* ➔ `50` ➔ na lista ao lado, *Preenchimento Vermelho Claro* (o padrão é *Preenchimento Vermelho Claro e Texto Vermelho Escuro*; os dois servem). Ficam vermelhos **2** valores: R$ 85,40 e R$ 64,30 (R$ 50,00 não é *maior* que 50).
     2. Com D2:D13 selecionado: *Formatação Condicional ➔ Barras de Dados* ➔ escolha uma cor. A mesma célula pode ter as duas regras.
     3. Selecione **B2:B13** ➔ *Dados ➔ Validação de Dados* ➔ *Permitir:* **Lista** ➔ *Fonte:* `Alimentação;Transporte;Lazer;Material escolar` ➔ *Alerta de Erro*: “Escolha uma categoria da lista” ➔ *OK*.
 
-    **Teste:** na linha 14 (logo abaixo da tabela), digite uma data e, na categoria, `Lazr`. O Excel recusa e mostra a sua mensagem. Escolha **Lazer** pela setinha. Como a tabela cresceu, a validação e as formatações valem para a linha nova.
+    ![Janela É Maior do que com 50 e Preenchimento Vermelho Claro](assets/03_maior_do_que.webp){ loading=lazy }
+
+    **Teste:** clique na última célula de valor (**D13**) e aperte `Tab` — como a Linha de Totais está ligada, é assim que a tabela ganha uma linha nova, acima do Total. Digite uma data, `Tab`, e na categoria `Lazr`. O Excel recusa e mostra a sua mensagem. Escolha **Lazer** pela setinha. Como a linha nova faz parte da tabela, a validação e as formatações já valem para ela.
 
 ### Avançado (desafio)
 
@@ -188,8 +220,13 @@ Use a planilha de gastos desta aula.
 <!-- gabarito -->
 ??? success "Gabarito — Avançado"
     1. **G2:** `=SOMASE(Gastos[Categoria];F2;Gastos[Valor])` ➔ copie até G5. Resultados: Alimentação **R$ 172,00** · Transporte **R$ 118,70** · Lazer **R$ 84,90** · Material escolar **R$ 37,50** (soma: R$ 413,10, igual à Linha de Totais).
-    2. Selecione **F2:H5** ➔ *Formatação Condicional ➔ Nova Regra ➔ Usar uma fórmula para determinar quais células devem ser formatadas* ➔ `=$G2>$H2` ➔ *Formatar* ➔ preenchimento laranja. Ficam pintadas **Alimentação** (R$ 22,00 acima) e **Lazer** (R$ 4,90 acima).
-    3. Selecione **F1:H5** ➔ *Inserir ➔ Gráficos Recomendados* ➔ **Colunas Agrupadas**. Título: “Alimentação e Lazer passaram do orçamento”. Pelo **+**, ligue os *Rótulos de Dados*.
+    2. Selecione **F2:H5** ➔ *Formatação Condicional ➔ Nova Regra ➔ Usar uma fórmula para determinar quais células devem ser formatadas* ➔ `=$G2>$H2` ➔ *Formatar* ➔ guia *Preenchimento* ➔ um laranja claro. Ficam pintadas **Alimentação** (R$ 22,00 acima) e **Lazer** (R$ 4,90 acima).
+
+        ![Janela Nova Regra de Formatação com Usar uma fórmula selecionado, a fórmula =$G2>$H2 e a prévia em laranja; ao lado, o resumo com as linhas de Alimentação e Lazer pintadas](assets/03_regra_por_formula.webp){ loading=lazy }
+
+    3. Selecione **F1:H5** ➔ *Inserir ➔ Gráficos Recomendados* ➔ **Coluna Agrupada** (a primeira sugestão costuma ser *Barras Agrupadas*; desça a lista). Título: “Alimentação e Lazer passaram do orçamento”. Pelo **+**, ligue os *Rótulos de Dados*.
+
+        ![Gráfico de colunas agrupadas com o título Alimentação e Lazer passaram do orçamento, rótulos de dados em reais e o botão + de Elementos do Gráfico ao lado](assets/03_grafico_colunas.webp){ loading=lazy }
 
     **Por que `$G2` e não `G2`:** a regra é aplicada também às colunas F e H. O `$` trava a coluna, então todas as células da linha olham para o mesmo G e H — e a linha inteira é pintada junto.
 

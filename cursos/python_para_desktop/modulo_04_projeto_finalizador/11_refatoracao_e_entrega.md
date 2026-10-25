@@ -16,7 +16,7 @@ Ao final, você terá:
 
 ## 📍 Contextualização
 
-No Capítulo 10, você concluiu a integração de todas as funcionalidades. O sistema está completo: Login, Menu, CRUD, SQLite, Nuvem, atalhos de teclado, barra de status, tratamento de erros. Tudo funciona.
+No Capítulo 10, você concluiu a integração de todas as funcionalidades. O sistema está completo: Login, Menu, CRUD, banco em nuvem (Neon), atalhos de teclado, barra de status, tratamento de erros. Tudo funciona.
 
 Mas pare por um momento e olhe seu código. Provavelmente você encontrará:
 
@@ -245,8 +245,8 @@ projeto final do curso **Python para Desktop — CourseForge**.
 - 🔐 Login com autenticação
 - 📋 Cadastro completo de alunos (CRUD)
 - 🔍 Busca por nome
-- 💾 Persistência local com SQLite
-- ☁️ Sincronização com banco em nuvem (Firebase)
+- ☁️ Dados num banco PostgreSQL em nuvem (Neon), acessíveis de qualquer computador
+- 🔌 Aviso claro quando não há conexão
 - 🖥️ Interface gráfica com Tkinter
 - ⌨️ Atalhos de teclado (Enter, Escape)
 
@@ -256,9 +256,9 @@ projeto final do curso **Python para Desktop — CourseForge**.
 |---|---|
 | Python 3.11+ | Linguagem principal |
 | Tkinter | Interface gráfica |
-| SQLite | Banco de dados local |
-| Firebase Realtime Database | Banco em nuvem |
-| python-dotenv | Variáveis de ambiente |
+| PostgreSQL (Neon) | Banco de dados em nuvem |
+| psycopg | Conexão do Python com o PostgreSQL |
+| python-dotenv | Variáveis de ambiente (`.env`) |
 
 ## 📦 Como Instalar e Executar
 
@@ -280,10 +280,10 @@ venv\Scripts\activate     # Windows
 pip install -r requirements.txt
 \`\`\`
 
-### 4. Configure as credenciais do Firebase
-- Crie um projeto no Firebase Console
-- Baixe o arquivo JSON de credenciais e coloque em `database/`
-- Copie o arquivo `.env.exemplo` para `.env` e preencha com suas credenciais
+### 4. Configure o banco em nuvem
+- Crie um projeto no [Neon](https://neon.com) (ou peça a connection string ao professor)
+- Copie o arquivo `.env.exemplo` para `.env` e cole a connection string em `DATABASE_URL`
+- (Opcional) Leve dados de um `escola.db` antigo com `python migrar_para_nuvem.py`
 
 ### 5. Execute
 \`\`\`bash
@@ -300,11 +300,12 @@ sistema_escolar/
 ├── main.py                 # Ponto de entrada
 ├── README.md               # Este arquivo
 ├── requirements.txt        # Dependências
-├── .env                    # Credenciais (não versionado)
+├── .env                    # Connection string do Neon (não versionado)
+├── .env.exemplo            # Modelo do .env, sem a senha
+├── migrar_para_nuvem.py    # Copia os alunos do escola.db para o Neon (uma vez)
 ├── database/
-│   ├── conexao.py          # Conexão com SQLite
-│   ├── operacoes.py        # Operações CRUD
-│   └── nuvem.py            # Sincronização com Firebase
+│   ├── conexao.py          # Conexão com o Neon (PostgreSQL)
+│   └── operacoes.py        # Operações CRUD
 ├── views/
 │   ├── login.py            # Tela de login
 │   ├── menu.py             # Menu principal
@@ -338,7 +339,7 @@ pip freeze > requirements.txt
 Depois, edite o arquivo e remova bibliotecas que não são usadas diretamente pelo projeto (ex: pip, setuptools e outras dependências automáticas do ambiente). O arquivo final deve conter apenas:
 
 ```text
-firebase-admin==6.x.x
+psycopg[binary]==3.x.x
 python-dotenv==1.x.x
 ```
 
@@ -349,7 +350,7 @@ python-dotenv==1.x.x
 Crie o arquivo e adicione linha por linha:
 
 ```text
-firebase-admin
+psycopg[binary]
 python-dotenv
 ```
 
