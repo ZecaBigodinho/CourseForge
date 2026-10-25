@@ -172,7 +172,7 @@ Monte a planilha **Consulta** — lista suspensa com os nomes em **B1** e a turm
 
 <!-- gabarito -->
 ??? success "Gabarito — Avançado"
-    1. Clique na Tabela `Notas` ➔ *Inserir ➔ Tabela Dinâmica* ➔ **Planilha Existente** ➔ uma célula do Painel. **Turma** em *Linhas*, **Situação** em *Colunas*, **Aluno** em *Valores* (vira *Contagem de Aluno*). Resultado: turma **A** = 3 aprovados, 1 recuperação, 1 reprovado; turma **B** = o mesmo (3, 1, 1). Gráfico: *Análise da Tabela Dinâmica ➔ Gráfico Dinâmico ➔ Colunas*. Título, por exemplo: “As duas turmas tiveram 3 aprovados em 5”.
+    1. Clique na Tabela `Notas` ➔ *Inserir ➔ Tabela Dinâmica* ➔ **Planilha Existente** ➔ uma célula do Painel. **Turma** em *Linhas*, **Situação** em *Colunas*, **Aluno** em *Valores* (vira *Contagem de Aluno*). Resultado: turma **A** = 3 aprovados, 1 recuperação, 1 reprovado; turma **B** = o mesmo (3, 1, 1). Gráfico: *Análise de Tabela Dinâmica ➔ Gráfico Dinâmico ➔ Colunas*. Título, por exemplo: “As duas turmas tiveram 3 aprovados em 5”.
     2. Em **Certificados**, A1 `Nome` e em **A2**: `=FILTRO(Notas[Aluno];Notas[Situação]="Aprovado";"Nenhum aprovado")` ➔ Ana Souza, Carla Mendes, Diego Rocha, Felipe Costa, Isabela Torres e João Pereira.
         - Selecione os nomes ➔ `Ctrl + C` ➔ em um arquivo novo, A2 ➔ *Colar* ➔ **Colar Valores** (a mala direta precisa dos nomes, não da fórmula).
         - Cabeçalhos em A1:D1: `Nome`, `Curso`, `Carga`, `Data`; preencha *Pacote Office*, a carga horária e a data em todas as linhas. Salve como `participantes.xlsx` e **feche**.
