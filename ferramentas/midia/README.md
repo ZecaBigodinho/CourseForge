@@ -48,3 +48,15 @@ python ferramentas/midia/preparar_imagem.py captura.png cursos/pacote_office/mod
 ```
 
 O script converte para WebP, reduz a largura para no máximo 1400 px, remove os metadados e avisa se passar de 300 KB. Para recortar uma parte da tela, use `--recorte esquerda,topo,direita,baixo` (em pixels da imagem original).
+
+## Capturas do Word por automação (só com autorização do professor)
+
+Usado nas aulas do Word (Fase 7). **Sempre peça autorização antes** e avise para não mexer no mouse e no teclado durante a captura.
+
+1. `ferramentas/midia/word/captura_word.ps1` (PowerShell 5.1, ponto antes): abre o Word por automação (`NovoWord`), clica por coordenadas da janela (`Clicar`, `CliqueDireito`) e captura só a janela do Word ou o diálogo em primeiro plano (`Capturar`). As capturas vão para `%TEMP%\courseforge_capturas`, fora do repositório.
+2. Monte um **documento de exemplo** com dados inventados (pessoas, empresas e números fictícios). No fim, feche **sem salvar**: `$w.ActiveDocument.Close(0); $w.Quit(0)`.
+3. Leia cada PNG antes de usar (o Word pode mostrar avisos, como “Entrar no Office”: feche sem entrar em conta).
+4. Trate com Pillow (modelo em `ferramentas/midia/word/tratar_exemplo.py`): **cubra a foto de perfil** da barra de título, recorte, destaque e numere no roxo da marca (`#4F35B5`).
+5. Converta com `preparar_imagem.py` e coloque na aula com `<figure>` e legenda.
+
+Dicas aprendidas: diálogos abertos bloqueiam a automação (feche com Esc no próprio diálogo ou clique em Cancelar); depois de instalar um plugin, reinicie o `mkdocs serve`; no painel escondido do navegador, as imagens `loading=lazy` só carregam quando aparecem na tela.
