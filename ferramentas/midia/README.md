@@ -59,4 +59,6 @@ Usado nas aulas do Word (Fase 7). **Sempre peça autorização antes** e avise p
 4. Trate com Pillow (modelo em `ferramentas/midia/word/tratar_exemplo.py`): **cubra a foto de perfil** da barra de título, recorte, destaque e numere no roxo da marca (`#4F35B5`).
 5. Converta com `preparar_imagem.py` e coloque na aula com `<figure>` e legenda.
 
+**Excel:** `ferramentas/midia/excel/captura_excel.ps1` tem as mesmas funções (`NovoExcel`, `Clicar`, `Capturar`...). Preencha números com `FormulaLocal` (`"8,5"`), como o aluno digitaria. Com uma célula em edição o Excel recusa chamadas COM, e ele mantém uma janela `XLMAIN` invisível: o script acha a janela visível pela classe. Listas suspensas que passam da janela (lista de funções, menus) saem melhor capturando a área fixa da tela. Feche **sem salvar**: `$x.DisplayAlerts = $false; $x.ActiveWorkbook.Close($false); $x.Quit()`. Janelas de outros programas “sempre por cima” (vídeo em miniatura do navegador) cobrem a captura: peça ao professor para fechá-las.
+
 Dicas aprendidas: diálogos abertos bloqueiam a automação (feche com Esc no próprio diálogo ou clique em Cancelar); depois de instalar um plugin, reinicie o `mkdocs serve`; no painel escondido do navegador, as imagens `loading=lazy` só carregam quando aparecem na tela.
