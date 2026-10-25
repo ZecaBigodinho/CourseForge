@@ -38,6 +38,9 @@ Copie a tabela e cole no Excel na célula **A1**. Ela é usada nos exemplos e no
 
 Em **F1** escreva `Média` e em **F2** `=MÉDIA(C2:D2)`; copie até F9.
 
+!!! info "Triângulo verde no canto das médias"
+    O Excel marca a coluna F com um triângulo verde e o aviso **“A fórmula omite células adjacentes”**: ele estranha que a coluna E (Faltas), logo ao lado, ficou fora da média. Aqui é de propósito — faltas não entram na nota. Pode ignorar.
+
 ---
 
 ## SE: a fórmula que decide
@@ -86,6 +89,10 @@ O último par, `VERDADEIRO;"Reprovado"`, é o “senão”: vale para tudo o que
 !!! warning "SOMASES começa pelo intervalo da soma"
     Em `SOMASE`, o intervalo da soma é o **último** argumento; em `SOMASES` (e `MÉDIASES`), é o **primeiro**. É a confusão mais comum com essas funções — a dica que aparece embaixo da célula mostra a ordem certa.
 
+    ![Célula J9 com =SOMASES( sendo digitado e, embaixo, a dica SOMASES(intervalo_soma; intervalo_critérios1; critérios1; ...) em destaque](assets/02_somases_argumentos.webp){ loading=lazy }
+
+    Completa, a fórmula da tabela acima — `=SOMASES(E2:E9;B2:B9;"A";F2:F9;"<6")` — soma as faltas de quem é da turma A **e** tem média abaixo de 6: **16** (Elisa e Gabriela).
+
 ---
 
 ## Buscar dados: PROCX
@@ -99,6 +106,11 @@ O último par, `VERDADEIRO;"Reprovado"`, é o “senão”: vale para tudo o que
 - `=PROCX("Diego";A2:A9;F2:F9)` ➔ **6,5** (a média do Diego).
 - `=PROCX(J2;A2:A9;B2:B9;"Não encontrado")` ➔ a turma do aluno digitado em J2, ou a mensagem, se o nome não existir.
 - Se o “o que devolver” tiver **várias colunas** (`F2:G9`), o resultado **se espalha** pelas células ao lado: média e situação de uma vez.
+
+<figure markdown="span">
+  ![Em cima, a fórmula =PROCX(L2;A2:A9;F2:G9;"Não encontrado") em M2 devolvendo 6,5 e Aprovado em M2:N2, com o aviso Fórmula despejada do Excel; embaixo, a mesma fórmula mostrando #DESPEJAR! porque a N2 tem o texto ok](assets/02_procx_e_despejar.webp){ loading=lazy }
+  <figcaption>(1) O resultado de duas colunas se espalha em M2:N2 — na primeira vez, o próprio Excel explica com o aviso <em>Fórmula despejada</em> · (2) com algo escrito em N2, aparece <code>#DESPEJAR!</code>; o contorno tracejado mostra onde o resultado queria ficar.</figcaption>
+</figure>
 
 ### E o PROCV?
 
@@ -140,7 +152,9 @@ Ele procura na **primeira coluna** do intervalo e devolve a **6ª coluna**; o `F
 | `DATADIF` | idade em anos completos | `=DATADIF(A2;HOJE();"A")` |
 
 !!! tip "Preenchimento Relâmpago"
-    Para separar ou juntar textos sem fórmula, digite o primeiro resultado à mão na coluna ao lado (por exemplo, só o primeiro nome) e use *Dados* ➔ **Preenchimento Relâmpago**. O Excel descobre o padrão e completa a coluna.
+    Para separar ou juntar textos sem fórmula, digite o primeiro resultado à mão na coluna ao lado (por exemplo, só o primeiro nome), deixe a célula de baixo selecionada e use *Dados* ➔ **Preenchimento Relâmpago** (ou `Ctrl + E`). O Excel descobre o padrão e completa a coluna.
+
+    ![Em cima, a guia Dados com o botão Preenchimento Relâmpago em destaque e a dica Preenchimento Relâmpago (Ctrl+E), com Ana digitado em B2 ao lado de Ana Souza; embaixo, a coluna B completa com os primeiros nomes e a barra de status dizendo Células Alteradas de Preenchimento Relâmpago: 7](assets/02_preenchimento_relampago.webp){ loading=lazy }
 
 ---
 
@@ -205,6 +219,8 @@ A escola mudou a regra. Agora:
         - `=CONT.SES(B2:B9;"A";G2:G9;"Aprovado")` ➔ **2** (Ana e Carla)
 
     **Repare na Elisa:** média 5, que daria Recuperação, mas 12 faltas — por isso fica *Reprovado*. Bruno, Gabriela e Henrique ficam em *Recuperação*.
+
+    ![Planilha com a fórmula SES da regra nova na Barra de Fórmulas, a situação Reprovado da Elisa em destaque na coluna G e o resumo nas colunas I e J: 4, 3, 1, 6,81, 5,81, 19 e 2](assets/02_ses_e_resumo.webp){ loading=lazy }
 
 ### Avançado (desafio)
 
