@@ -39,7 +39,7 @@ Ao final deste projeto, você terá:
     Dado ou frase de um autor no slide leva a fonte curta: (Sobrenome, ano). A referência completa vai no slide de **Referências**, como no trabalho escrito (aula 03 do Módulo 01).
 
 !!! tip "Zoom de Resumo"
-    *Inserir ➔ Zoom ➔ **Zoom de Resumo*** cria um slide com miniaturas das seções. Na apresentação, clicar em uma miniatura leva até a seção e volta ao resumo no final — ótimo para o slide de roteiro.
+    *Inserir ➔ Zoom* ➔ **Zoom de Resumo** cria um slide com miniaturas das seções. Na apresentação, clicar em uma miniatura leva até a seção e volta ao resumo no final — ótimo para o slide de roteiro.
 
 ---
 
@@ -131,7 +131,7 @@ Complete o **conteúdo visual**: o gráfico ou a tabela do Excel, o SmartArt, as
 
 <!-- gabarito -->
 ??? success "Gabarito — Intermediário"
-    1. **Gráfico:** monte os dados no Excel ➔ gráfico ➔ `Ctrl + C` ➔ no PowerPoint, *Colar ➔ **Usar Tema de Destino e Inserir Pasta de Trabalho*** (para entregar, é mais seguro que vincular). Título do slide = a conclusão do gráfico; letras do gráfico com 18 pt ou mais.
+    1. **Gráfico:** monte os dados no Excel ➔ gráfico ➔ `Ctrl + C` ➔ no PowerPoint, *Colar* ➔ **Usar Tema de Destino e Inserir Pasta de Trabalho** (para entregar, é mais seguro que vincular). Título do slide = a conclusão do gráfico; letras do gráfico com 18 pt ou mais.
     2. **SmartArt:** nos tópicos de um slide de processo ou comparação ➔ *Página Inicial ➔ Converter em SmartArt*.
     3. **Imagens:** *Imagens de Banco de Imagens* ou *Imagens Online* com **Somente Creative Commons**; crédito no canto; *Exibir Texto Alt* em cada uma.
     4. **Movimento:** *Transições ➔ Esmaecer ➔ Aplicar a Todos*; nos slides de tópicos, *Animações ➔ Surgir ➔ Por Parágrafo*.

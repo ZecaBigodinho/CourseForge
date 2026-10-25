@@ -140,7 +140,7 @@ Ele procura na **primeira coluna** do intervalo e devolve a **6ª coluna**; o `F
 | `DATADIF` | idade em anos completos | `=DATADIF(A2;HOJE();"A")` |
 
 !!! tip "Preenchimento Relâmpago"
-    Para separar ou juntar textos sem fórmula, digite o primeiro resultado à mão na coluna ao lado (por exemplo, só o primeiro nome) e use *Dados ➔ **Preenchimento Relâmpago***. O Excel descobre o padrão e completa a coluna.
+    Para separar ou juntar textos sem fórmula, digite o primeiro resultado à mão na coluna ao lado (por exemplo, só o primeiro nome) e use *Dados* ➔ **Preenchimento Relâmpago**. O Excel descobre o padrão e completa a coluna.
 
 ---
 

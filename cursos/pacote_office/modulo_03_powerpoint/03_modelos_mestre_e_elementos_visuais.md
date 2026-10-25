@@ -27,7 +27,7 @@ Ao final desta aula, você será capaz de:
 
 - **Tema** (*Design ➔ Temas*): cores, fontes e fundo. Muda a aparência, não o conteúdo.
 - **Modelo** (`.potx`): um arquivo “de partida” com tema, layouts, logotipo e até slides de exemplo. Ao abrir um modelo, o PowerPoint cria uma **apresentação nova** a partir dele — o modelo continua intacto.
-- Modelos prontos: *Arquivo ➔ **Novo*** e pesquise (“escola”, “relatório”, “projeto”).
+- Modelos prontos: *Arquivo* ➔ **Novo** e pesquise (“escola”, “relatório”, “projeto”).
 - **Salvar o seu:** *Arquivo ➔ Salvar como* ➔ tipo **Modelo do PowerPoint (`.potx`)**. Bom para a turma inteira usar o mesmo padrão em um trabalho em grupo.
 
 ---
@@ -36,20 +36,20 @@ Ao final desta aula, você será capaz de:
 
 O **Slide Mestre** é o “molde” de todos os slides. Mudou ali, mudou na apresentação inteira.
 
-1. *Exibir ➔ **Slide Mestre***.
+1. *Exibir* ➔ **Slide Mestre**.
 2. No painel da esquerda, o **slide grande do topo** é o mestre: o que você muda nele vale para **todos** os layouts. Os slides menores, embaixo, são os **layouts** (Slide de Título, Título e Conteúdo...): mudanças em um deles valem só para os slides com aquele layout.
 3. Na guia *Slide Mestre*: **Fontes** e **Cores** do tema, **Estilos de Plano de Fundo**, e você pode inserir um logotipo ou uma faixa de cor no mestre.
 4. *Fechar Modo de Exibição Mestre* para voltar aos slides.
 
 ### Rodapé e número do slide
 
-*Inserir ➔ **Cabeçalho e Rodapé*** ➔ marque **Número do slide** e **Rodapé** (escreva, por exemplo, “Escola · Turma 2B · 2026”) ➔ marque **Não mostrar no slide de título** ➔ *Aplicar a Todos*. A posição e a fonte desses itens são definidas no Slide Mestre.
+*Inserir* ➔ **Cabeçalho e Rodapé** ➔ marque **Número do slide** e **Rodapé** (escreva, por exemplo, “Escola · Turma 2B · 2026”) ➔ marque **Não mostrar no slide de título** ➔ *Aplicar a Todos*. A posição e a fonte desses itens são definidas no Slide Mestre.
 
 !!! warning "Formatou slide por slide? Use o mestre"
     Se você precisa repetir a mesma mudança em todos os slides (trocar a fonte do título, mover o logotipo), ela pertence ao **Slide Mestre**. Fazer à mão em cada slide dá trabalho e sempre sobra um diferente.
 
 !!! tip "Slide fora do padrão? Redefinir"
-    Se um slide ficou diferente do layout (caixas fora do lugar, fonte errada), *Página Inicial ➔ **Redefinir*** devolve as posições e a formatação do layout, sem apagar o texto.
+    Se um slide ficou diferente do layout (caixas fora do lugar, fonte errada), *Página Inicial* ➔ **Redefinir** devolve as posições e a formatação do layout, sem apagar o texto.
 
 ---
 
@@ -57,8 +57,8 @@ O **Slide Mestre** é o “molde” de todos os slides. Mudou ali, mudou na apre
 
 O **SmartArt** transforma uma lista em diagrama: processo, ciclo, hierarquia, comparação.
 
-- **De um texto pronto:** clique no espaço com os tópicos ➔ *Página Inicial ➔ **Converter em SmartArt*** ➔ escolha o tipo.
-- **Do zero:** *Inserir ➔ **SmartArt***. O painel de texto ao lado funciona como a lista de tópicos: `Enter` cria um item, `Tab` cria um subitem.
+- **De um texto pronto:** clique no espaço com os tópicos ➔ *Página Inicial* ➔ **Converter em SmartArt** ➔ escolha o tipo.
+- **Do zero:** *Inserir* ➔ **SmartArt**. O painel de texto ao lado funciona como a lista de tópicos: `Enter` cria um item, `Tab` cria um subitem.
 - Na guia *Design do SmartArt*: **Alterar Cores** e **Estilos**; *Converter* volta para texto ou forma.
 
 | Tipo | Quando usar | Exemplo |
@@ -76,7 +76,7 @@ O **SmartArt** transforma uma lista em diagrama: processo, ciclo, hierarquia, co
 
 ## Tabelas
 
-*Inserir ➔ **Tabela*** e escolha linhas e colunas (ou cole uma tabela do Excel ou do Word).
+*Inserir* ➔ **Tabela** e escolha linhas e colunas (ou cole uma tabela do Excel ou do Word).
 
 - Poucas linhas e colunas: um slide não é planilha. Mostre só o que sustenta a mensagem.
 - **Destaque** a linha ou o número que importa (negrito ou cor) — a plateia precisa saber para onde olhar.
@@ -89,13 +89,13 @@ O **SmartArt** transforma uma lista em diagrama: processo, ciclo, hierarquia, co
 
 Duas formas:
 
-1. **Criar no PowerPoint:** *Inserir ➔ **Gráfico*** ➔ escolha o tipo. Abre uma pequena planilha para você digitar os dados.
-2. **Copiar do Excel:** selecione o gráfico no Excel ➔ `Ctrl + C` ➔ no PowerPoint, *Página Inicial ➔ setinha de **Colar*** ➔ escolha uma opção:
+1. **Criar no PowerPoint:** *Inserir* ➔ **Gráfico** ➔ escolha o tipo. Abre uma pequena planilha para você digitar os dados.
+2. **Copiar do Excel:** selecione o gráfico no Excel ➔ `Ctrl + C` ➔ no PowerPoint, *Página Inicial ➔ setinha de* **Colar** ➔ escolha uma opção:
 
 | Opção de colagem | O que acontece |
 |---|---|
 | **Usar Tema de Destino e Inserir Pasta de Trabalho** | Copia o gráfico **e os dados** para dentro do PowerPoint, com as cores da apresentação. Não depende mais da planilha. |
-| **Usar Tema de Destino e Vincular Dados** | O gráfico fica **ligado** à planilha: se os números mudarem no Excel, basta *Design do Gráfico ➔ **Atualizar Dados***. |
+| **Usar Tema de Destino e Vincular Dados** | O gráfico fica **ligado** à planilha: se os números mudarem no Excel, basta *Design do Gráfico* ➔ **Atualizar Dados**. |
 | **Imagem** | Vira uma figura: não dá mais para editar os dados. |
 
 !!! warning "Vínculo depende do arquivo"
@@ -168,8 +168,8 @@ Na sua apresentação do exercício intermediário da aula 01:
 
 <!-- gabarito -->
 ??? success "Gabarito — Avançado"
-    1. No Excel: cole a tabela em A1, selecione **A1:C4** ➔ *Inserir ➔ Gráfico de Colunas ➔ Colunas Agrupadas*. **Salve** a planilha (`vendas_cantina.xlsx`). Clique na borda do gráfico ➔ `Ctrl + C` ➔ no PowerPoint, slide *Somente Título* ➔ *Colar ➔ **Usar Tema de Destino e Vincular Dados***. Título do slide, por exemplo: “Salgados vendem mais que bebidas e doces juntos” (R$ 1.172,50 contra R$ 1.041,00). Aumente as letras do gráfico para 18 pt ou mais.
-    2. No Excel, **C3** = `300` ➔ salve. No PowerPoint, clique no gráfico ➔ *Design do Gráfico ➔ **Atualizar Dados*** ➔ a coluna de Doce em março sobe. Repare: o título continua verdadeiro? (Salgado R$ 1.172,50 contra R$ 1.189,00 de bebidas e doces — **não** é mais verdade.) Gráfico vinculado atualiza os números, mas **o título é você que revisa**.
+    1. No Excel: cole a tabela em A1, selecione **A1:C4** ➔ *Inserir ➔ Gráfico de Colunas ➔ Colunas Agrupadas*. **Salve** a planilha (`vendas_cantina.xlsx`). Clique na borda do gráfico ➔ `Ctrl + C` ➔ no PowerPoint, slide *Somente Título* ➔ *Colar* ➔ **Usar Tema de Destino e Vincular Dados**. Título do slide, por exemplo: “Salgados vendem mais que bebidas e doces juntos” (R$ 1.172,50 contra R$ 1.041,00). Aumente as letras do gráfico para 18 pt ou mais.
+    2. No Excel, **C3** = `300` ➔ salve. No PowerPoint, clique no gráfico ➔ *Design do Gráfico* ➔ **Atualizar Dados** ➔ a coluna de Doce em março sobe. Repare: o título continua verdadeiro? (Salgado R$ 1.172,50 contra R$ 1.189,00 de bebidas e doces — **não** é mais verdade.) Gráfico vinculado atualiza os números, mas **o título é você que revisa**.
     3. Faça uma cópia da apresentação, apague os slides de conteúdo (deixe capa e um slide de exemplo) ➔ *Arquivo ➔ Salvar como* ➔ tipo **Modelo do PowerPoint (`.potx`)**. Para testar: abra o `.potx` — o PowerPoint cria uma apresentação nova “Apresentação1” a partir dele.
 
 ---

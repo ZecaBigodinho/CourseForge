@@ -71,7 +71,7 @@ Clique em **Compartilhar** (no canto superior direito do Word, do Excel e do Pow
 2. **O que podem fazer:** **Pode editar** ou **Pode exibir** (só ler). Em alguns casos aparecem opções extras, como **Bloquear o download** e **Definir data de expiração**.
 3. Escreva os nomes ou e-mails e uma mensagem ➔ **Enviar** — ou **Copiar link** para colar no chat do grupo.
 
-Para ver e cortar acessos depois: *Compartilhar ➔ **Gerenciar acesso*** ➔ remova pessoas ou links.
+Para ver e cortar acessos depois: *Compartilhar* ➔ **Gerenciar acesso** ➔ remova pessoas ou links.
 
 !!! danger "“Qualquer pessoa com o link” é qualquer pessoa mesmo"
     O link pode ser repassado e aberto por quem você nem conhece. **Nunca** use essa opção para arquivos com dados pessoais (notas, endereços, documentos). Para trabalho em grupo, prefira **Pessoas específicas**.
@@ -94,7 +94,7 @@ Com o arquivo no OneDrive e compartilhado com **Pode editar**, várias pessoas p
 
 ## Histórico de Versões e Lixeira
 
-- **Histórico de Versões:** *Arquivo ➔ Informações ➔ **Histórico de Versões*** (ou, em onedrive.com, botão direito no arquivo ➔ *Histórico de versões*). Aparece a lista das versões salvas com data e autor. Abra uma para ver como estava e, se quiser, **Restaurar**.
+- **Histórico de Versões:** *Arquivo ➔ Informações* ➔ **Histórico de Versões** (ou, em onedrive.com, botão direito no arquivo ➔ *Histórico de versões*). Aparece a lista das versões salvas com data e autor. Abra uma para ver como estava e, se quiser, **Restaurar**.
 - **Lixeira:** apagou um arquivo do OneDrive? Em onedrive.com, **Lixeira** ➔ selecione ➔ **Restaurar**. Os arquivos ficam lá por um tempo limitado (geralmente de 30 a 93 dias, conforme o tipo de conta) e depois somem de vez.
 
 !!! warning "Nuvem não é cópia de segurança de tudo"
@@ -162,7 +162,7 @@ Em dupla:
 
 <!-- gabarito -->
 ??? success "Gabarito — Avançado"
-    1. *Arquivo ➔ Informações ➔ **Histórico de Versões*** ➔ abra a versão de **antes** da exclusão (veja a data e o autor). Duas saídas: **Restaurar** essa versão inteira — mas perde o que foi feito depois — ou **copiar só o parágrafo** da versão antiga e colar no documento atual. A segunda costuma ser a melhor em trabalho de grupo.
+    1. *Arquivo ➔ Informações* ➔ **Histórico de Versões** ➔ abra a versão de **antes** da exclusão (veja a data e o autor). Duas saídas: **Restaurar** essa versão inteira — mas perde o que foi feito depois — ou **copiar só o parágrafo** da versão antiga e colar no documento atual. A segunda costuma ser a melhor em trabalho de grupo.
     2. Em onedrive.com: botão direito no arquivo ➔ *Excluir*. Menu lateral ➔ **Lixeira** ➔ marque o arquivo ➔ **Restaurar**. Ele volta para a pasta de origem, com o compartilhamento.
     3. No Explorador de Arquivos, pasta *OneDrive* ➔ botão direito em `Pacote Office` ➔ **Sempre manter neste dispositivo**. O ícone vira o **círculo verde cheio**.
 

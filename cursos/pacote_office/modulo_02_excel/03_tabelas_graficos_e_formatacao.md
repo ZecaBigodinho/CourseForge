@@ -48,7 +48,7 @@ Copie e cole na célula **A1** de uma planilha nova. São os gastos de um estuda
 
 ## Tabela do Excel
 
-Clique em qualquer célula dos dados e use *Inserir ➔ **Tabela*** (ou `Ctrl + Alt + T`). Confirme que **Minha tabela tem cabeçalhos** está marcado.
+Clique em qualquer célula dos dados e use *Inserir* ➔ **Tabela** (ou `Ctrl + Alt + T`). Confirme que **Minha tabela tem cabeçalhos** está marcado.
 
 O que você ganha:
 
@@ -56,7 +56,7 @@ O que você ganha:
 - A tabela **cresce sozinha**: digite na primeira linha abaixo dela e a linha nova já entra na tabela — com a formatação e as fórmulas.
 - **Colunas calculadas:** escreva uma fórmula na primeira célula de uma coluna nova e ela é copiada para a coluna inteira.
 - **Nome da tabela:** na guia *Design da Tabela*, troque `Tabela1` por um nome claro, como `Gastos`. As fórmulas passam a usar **referências estruturadas**: `=SOMA(Gastos[Valor])` em vez de `=SOMA(D2:D13)` — e continuam certas quando a tabela cresce.
-- **Linha de Totais:** *Design da Tabela ➔ **Linha de Totais***. Na última linha, cada célula tem uma setinha para escolher *Soma*, *Média*, *Contagem*...
+- **Linha de Totais:** *Design da Tabela* ➔ **Linha de Totais**. Na última linha, cada célula tem uma setinha para escolher *Soma*, *Média*, *Contagem*...
 
 !!! info "Dentro da tabela, `[@Valor]` quer dizer “o valor desta linha”"
     Ao clicar em células da mesma linha enquanto escreve uma fórmula na tabela, o Excel escreve `[@Valor]` em vez de `D2`. É o mesmo que a referência relativa da aula 01, só que com nome.
@@ -79,7 +79,7 @@ O que você ganha:
 
 ## Formatação condicional
 
-*Página Inicial ➔ **Formatação Condicional***: a cor da célula muda conforme o valor — e se atualiza sozinha.
+*Página Inicial* ➔ **Formatação Condicional**: a cor da célula muda conforme o valor — e se atualiza sozinha.
 
 | Opção | Para quê | Exemplo |
 |---|---|---|
@@ -89,7 +89,7 @@ O que você ganha:
 | **Escalas de Cor** | do menor ao maior em degradê | notas do vermelho ao verde |
 | **Nova Regra ➔ Usar uma fórmula...** | regras que dependem de outra célula | destacar a linha inteira |
 
-Para ver, editar ou apagar regras: *Formatação Condicional ➔ **Gerenciar Regras***.
+Para ver, editar ou apagar regras: *Formatação Condicional* ➔ **Gerenciar Regras**.
 
 !!! tip "Regra por fórmula"
     Selecione o intervalo **a partir da primeira linha** e escreva a fórmula pensando nessa linha, com `$` na coluna: `=$D2>50` aplicada em `A2:D13` pinta a **linha inteira** de cada gasto acima de 50. Fórmula verdadeira = célula formatada.
@@ -101,7 +101,7 @@ Para ver, editar ou apagar regras: *Formatação Condicional ➔ **Gerenciar Reg
 Para ninguém digitar “Alimentaçao” ou “alimentação” e bagunçar as somas:
 
 1. Selecione as células da coluna *Categoria*.
-2. *Dados ➔ **Validação de Dados*** ➔ *Permitir:* **Lista**.
+2. *Dados* ➔ **Validação de Dados** ➔ *Permitir:* **Lista**.
 3. Em *Fonte*, escreva as opções separadas por ponto e vírgula: `Alimentação;Transporte;Lazer;Material escolar` — ou aponte para um intervalo que tenha a lista.
 4. Na guia *Alerta de Erro*, escreva uma mensagem clara (“Escolha uma categoria da lista”).
 
@@ -111,7 +111,7 @@ Agora a célula mostra uma setinha com as opções, e o Excel recusa o que não 
 
 ## Gráficos
 
-Selecione os dados (com os cabeçalhos) e use *Inserir ➔ **Gráficos Recomendados***. Antes de escolher, pergunte: **o que o gráfico precisa responder?**
+Selecione os dados (com os cabeçalhos) e use *Inserir* ➔ **Gráficos Recomendados**. Antes de escolher, pergunte: **o que o gráfico precisa responder?**
 
 | Pergunta | Gráfico |
 |---|---|

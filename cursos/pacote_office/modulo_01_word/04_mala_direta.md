@@ -66,14 +66,14 @@ Exemplo (salve como `participantes.xlsx`):
 ## 2) Montar o modelo e conectar
 
 1. No Word, crie o modelo do certificado: *Layout ➔ Orientação ➔ Paisagem*, título “CERTIFICADO” e o texto com espaços para os dados.
-2. *Correspondências ➔ Iniciar Mala Direta ➔ **Cartas***.
+2. *Correspondências ➔ Iniciar Mala Direta* ➔ **Cartas**.
 
 <figure markdown="span">
   ![Guia Correspondências com o botão Iniciar Mala Direta aberto e a opção Cartas em destaque no topo do menu](assets/04_iniciar_mala_direta.webp){ loading=lazy }
   <figcaption>(1) <em>Iniciar Mala Direta</em> · (2) <strong>Cartas</strong>: serve para certificados, declarações e qualquer documento de uma página por pessoa.</figcaption>
 </figure>
 
-3. *Selecionar Destinatários ➔ **Usar uma Lista Existente*** ➔ escolha `participantes.xlsx` ➔ a aba (ex.: *Planilha1$*) ➔ deixe marcada a caixa **Primeira linha de dados contém cabeçalhos de coluna** ➔ *OK*.
+3. *Selecionar Destinatários* ➔ **Usar uma Lista Existente** ➔ escolha `participantes.xlsx` ➔ a aba (ex.: *Planilha1$*) ➔ deixe marcada a caixa **Primeira linha de dados contém cabeçalhos de coluna** ➔ *OK*.
 
 <figure markdown="span">
   ![Janela Selecionar tabela com a aba Planilha1$ selecionada e a caixa Primeira linha de dados contém cabeçalhos de coluna marcada](assets/04_selecionar_tabela.webp){ loading=lazy }

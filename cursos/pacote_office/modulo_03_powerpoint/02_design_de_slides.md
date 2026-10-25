@@ -39,7 +39,7 @@ Ao final desta aula, você será capaz de:
 
 - **Hierarquia:** o mais importante é o **maior** (ou o de cor mais forte). O olho vai primeiro para ele.
 - **Contraste:** texto **escuro em fundo claro** ou **claro em fundo escuro**. Evite texto sobre foto “movimentada”; se precisar, coloque uma faixa de cor atrás do texto.
-- **Alinhamento:** ao arrastar um objeto, aparecem **guias inteligentes** (linhas vermelhas tracejadas) mostrando quando ele está alinhado com outro. Para alinhar vários de uma vez: selecione-os ➔ *Forma ➔ Organizar ➔ **Alinhar*** (*Alinhar à Esquerda*, *Distribuir Horizontalmente*...).
+- **Alinhamento:** ao arrastar um objeto, aparecem **guias inteligentes** (linhas vermelhas tracejadas) mostrando quando ele está alinhado com outro. Para alinhar vários de uma vez: selecione-os ➔ *Forma ➔ Organizar* ➔ **Alinhar** (*Alinhar à Esquerda*, *Distribuir Horizontalmente*...).
 - **Espaço vazio:** margem livre em volta do texto e entre os blocos deixa o slide “respirar”. Não é desperdício.
 - **Cores e fontes:** use as do **tema** (*Design ➔ Temas* e *Variantes*) — duas ou três cores e, no máximo, duas fontes. Assim a apresentação inteira combina.
 
@@ -50,9 +50,9 @@ Ao final desta aula, você será capaz de:
 
 ## Imagens e ícones
 
-- **Inserir:** *Inserir ➔ **Imagens*** ➔ *Este Dispositivo* (do seu computador), *Imagens de Banco de Imagens* (fotos e ícones liberados para quem tem Microsoft 365) ou *Imagens Online* (pesquisa na web).
-- **Ícones:** *Inserir ➔ **Ícones*** — desenhos simples que você pode recolorir para combinar com o tema.
-- **Cortar:** selecione a imagem ➔ *Formato da Imagem ➔ **Cortar***. A setinha do botão tem *Cortar para Forma* (círculo, por exemplo) e *Taxa de Proporção*.
+- **Inserir:** *Inserir* ➔ **Imagens** ➔ *Este Dispositivo* (do seu computador), *Imagens de Banco de Imagens* (fotos e ícones liberados para quem tem Microsoft 365) ou *Imagens Online* (pesquisa na web).
+- **Ícones:** *Inserir* ➔ **Ícones** — desenhos simples que você pode recolorir para combinar com o tema.
+- **Cortar:** selecione a imagem ➔ *Formato da Imagem* ➔ **Cortar**. A setinha do botão tem *Cortar para Forma* (círculo, por exemplo) e *Taxa de Proporção*.
 - **Remover Plano de Fundo:** *Formato da Imagem ➔ Remover Plano de Fundo* — funciona bem em fotos com fundo liso.
 - **Não distorça:** redimensione pelos **cantos**, não pelas laterais, para a imagem não ficar esticada.
 
@@ -63,7 +63,7 @@ Ao final desta aula, você será capaz de:
 
 ## Designer
 
-No Microsoft 365, o **Designer** sugere layouts prontos para o conteúdo do slide: *Design ➔ **Designer***. Insira o título, os tópicos ou uma foto e escolha uma das ideias no painel.
+No Microsoft 365, o **Designer** sugere layouts prontos para o conteúdo do slide: *Design* ➔ **Designer**. Insira o título, os tópicos ou uma foto e escolha uma das ideias no painel.
 
 - É ótimo para começar, mas **confira**: o Designer não sabe qual é a sua mensagem e às vezes destaca a coisa errada.
 - Só aparece com o PowerPoint do Microsoft 365 e conectado à internet.
@@ -76,7 +76,7 @@ Uma apresentação acessível é melhor para **todos** — inclusive para quem l
 
 - **Texto alternativo:** botão direito na imagem ➔ *Exibir Texto Alt* ➔ descreva o que a imagem **mostra e por que importa** (“Gráfico: o consumo de água caiu de 500 para 400 litros”). Imagem só decorativa? Marque *Marcar como decorativa*.
 - **Títulos em todos os slides**, e diferentes entre si: os leitores de tela navegam por eles.
-- **Verificador:** *Revisão ➔ **Verificar Acessibilidade***. O painel lista erros (como imagem sem texto alt e contraste baixo) e mostra como corrigir cada um.
+- **Verificador:** *Revisão* ➔ **Verificar Acessibilidade**. O painel lista erros (como imagem sem texto alt e contraste baixo) e mostra como corrigir cada um.
 - **Ordem de leitura:** no mesmo painel, *Ordem de Leitura* mostra em que ordem um leitor de tela vai ler os objetos do slide. Arraste para corrigir.
 
 ---
@@ -139,7 +139,7 @@ No slide 2 do exercício básico:
 
 <!-- gabarito -->
 ??? success "Gabarito — Intermediário"
-    1. *Inserir ➔ Ícones* ➔ pesquise “torneira”, “chuveiro” e “ferramenta” ➔ marque os três ➔ *Inserir*. Selecione os três (clique em um, `Shift` + clique nos outros) ➔ *Formato de Gráficos ➔ Preenchimento de Gráfico* ➔ uma cor do tema. Com os três selecionados: *Organizar ➔ Alinhar ➔ **Alinhar Meio*** e depois ***Distribuir Horizontalmente***.
+    1. *Inserir ➔ Ícones* ➔ pesquise “torneira”, “chuveiro” e “ferramenta” ➔ marque os três ➔ *Inserir*. Selecione os três (clique em um, `Shift` + clique nos outros) ➔ *Formato de Gráficos ➔ Preenchimento de Gráfico* ➔ uma cor do tema. Com os três selecionados: *Organizar ➔ Alinhar* ➔ **Alinhar Meio** e depois ***Distribuir Horizontalmente***.
     2. *Inserir ➔ Imagens ➔ Imagens de Banco de Imagens* (ou *Imagens Online* com o filtro **Somente Creative Commons**) ➔ escolha a foto ➔ *Formato da Imagem ➔ Cortar ➔ Taxa de Proporção* ou arraste as alças pretas até ocupar metade do slide. Redimensione pelos **cantos**.
         - Crédito: caixa de texto pequena (12 a 14 pt) no canto da foto: “Foto: autor / site”. (As imagens do banco do Office dispensam crédito, mas citar não faz mal.)
         - Texto alt: botão direito ➔ *Exibir Texto Alt* ➔ “Torneira aberta pingando água na pia”.

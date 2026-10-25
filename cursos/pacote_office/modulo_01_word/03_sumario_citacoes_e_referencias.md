@@ -27,7 +27,7 @@ Ao final desta aula, você será capaz de:
 Com os títulos em *Título 1* e *Título 2*, o Word monta o sumário — com números de página — sozinho:
 
 1. Na página do sumário, escreva **SUMÁRIO** (centralizado, negrito) e dê `Enter`.
-2. *Referências ➔ Sumário ➔ **Personalizar Sumário...*** (o último bloco do menu). Em algumas versões do Word, o nome é *Sumário Personalizado*.
+2. *Referências ➔ Sumário* ➔ **Personalizar Sumário...** (o último bloco do menu). Em algumas versões do Word, o nome é *Sumário Personalizado*.
 3. Na janela **Sumário**, deixe *Mostrar níveis*: **2** e clique em *OK*.
 
 <figure markdown="span">
@@ -40,7 +40,7 @@ Com os títulos em *Título 1* e *Título 2*, o Word monta o sumário — com n�
   <figcaption>Na janela <strong>Sumário</strong>, <em>Mostrar níveis</em>: <strong>2</strong> — a prévia passa a mostrar só Título 1 e Título 2.</figcaption>
 </figure>
 
-O sumário **não se atualiza sozinho**. Sempre que mudar o texto: *Referências ➔ **Atualizar Sumário*** (ou botão direito no sumário ➔ *Atualizar Campo*) ➔ **Atualizar o índice inteiro**. Faça isso por último, antes de exportar o PDF.
+O sumário **não se atualiza sozinho**. Sempre que mudar o texto: *Referências* ➔ **Atualizar Sumário** (ou botão direito no sumário ➔ *Atualizar Campo*) ➔ **Atualizar o índice inteiro**. Faça isso por último, antes de exportar o PDF.
 
 <figure markdown="span">
   ![Sumário pronto com os títulos numerados, pontilhado e número de página alinhado à direita, e o botão Atualizar Sumário em destaque na guia Referências](assets/03_sumario_atualizar.webp){ loading=lazy }
@@ -69,7 +69,7 @@ Na ABNT, a **identificação** vem **acima** da ilustração e a **fonte**, **ab
 
 No Word:
 
-1. Clique na imagem (ou na tabela) ➔ *Referências ➔ **Inserir Legenda***.
+1. Clique na imagem (ou na tabela) ➔ *Referências* ➔ **Inserir Legenda**.
 2. *Rótulo*: **Figura** ou **Tabela** (para “Quadro”, clique em **Novo Rótulo** e crie). *Posição*: **Acima do item selecionado**.
 3. Depois do número, digite “ — ” e o título.
 4. Abaixo da ilustração, escreva a linha **Fonte:** (fonte menor, ex.: 10).
@@ -84,13 +84,13 @@ No Word:
   <figcaption>O resultado no padrão ABNT: identificação <strong>acima</strong>, fonte <strong>abaixo</strong> (os dados do gráfico são inventados).</figcaption>
 </figure>
 
-Com as legendas inseridas assim, *Referências ➔ **Inserir Índice de Ilustrações*** gera a lista de figuras automaticamente — igual ao sumário.
+Com as legendas inseridas assim, *Referências* ➔ **Inserir Índice de Ilustrações** gera a lista de figuras automaticamente — igual ao sumário.
 
 ---
 
 ## Notas de rodapé
 
-Clique onde a nota deve ser chamada ➔ *Referências ➔ **Inserir Nota de Rodapé*** (`Alt + Ctrl + F`). O Word numera e posiciona sozinho; se você apagar uma, as outras se renumeram. Use para explicações curtas que atrapalhariam o texto.
+Clique onde a nota deve ser chamada ➔ *Referências* ➔ **Inserir Nota de Rodapé** (`Alt + Ctrl + F`). O Word numera e posiciona sozinho; se você apagar uma, as outras se renumeram. Use para explicações curtas que atrapalhariam o texto.
 
 <figure markdown="span">
   ![Fim de uma página do trabalho com um traço curto e, abaixo dele, a nota de rodapé número 1 em letra menor](assets/03_nota_de_rodape.webp){ loading=lazy }

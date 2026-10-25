@@ -174,7 +174,7 @@ Monte a planilha **Consulta** — lista suspensa com os nomes em **B1** e a turm
 ??? success "Gabarito — Avançado"
     1. Clique na Tabela `Notas` ➔ *Inserir ➔ Tabela Dinâmica* ➔ **Planilha Existente** ➔ uma célula do Painel. **Turma** em *Linhas*, **Situação** em *Colunas*, **Aluno** em *Valores* (vira *Contagem de Aluno*). Resultado: turma **A** = 3 aprovados, 1 recuperação, 1 reprovado; turma **B** = o mesmo (3, 1, 1). Gráfico: *Análise da Tabela Dinâmica ➔ Gráfico Dinâmico ➔ Colunas*. Título, por exemplo: “As duas turmas tiveram 3 aprovados em 5”.
     2. Em **Certificados**, A1 `Nome` e em **A2**: `=FILTRO(Notas[Aluno];Notas[Situação]="Aprovado";"Nenhum aprovado")` ➔ Ana Souza, Carla Mendes, Diego Rocha, Felipe Costa, Isabela Torres e João Pereira.
-        - Selecione os nomes ➔ `Ctrl + C` ➔ em um arquivo novo, A2 ➔ *Colar ➔ **Colar Valores*** (a mala direta precisa dos nomes, não da fórmula).
+        - Selecione os nomes ➔ `Ctrl + C` ➔ em um arquivo novo, A2 ➔ *Colar* ➔ **Colar Valores** (a mala direta precisa dos nomes, não da fórmula).
         - Cabeçalhos em A1:D1: `Nome`, `Curso`, `Carga`, `Data`; preencha *Pacote Office*, a carga horária e a data em todas as linhas. Salve como `participantes.xlsx` e **feche**.
         - No Word, siga o exercício básico da [aula de mala direta](../modulo_01_word/04_mala_direta.md) ➔ **6 certificados**.
     3. Com B4 = 9, a média do Bruno vai de 5,25 para **6,1** ➔ ele passa a *Aprovado* na Tabela e na Consulta; o Painel mostra **7** aprovados e **1** em recuperação; a lista do `FILTRO` ganha o Bruno. A **tabela dinâmica só muda depois de *Atualizar*** (botão direito ➔ *Atualizar*). E `participantes.xlsx` **não muda**, porque recebeu valores colados — para incluir o Bruno, copie a lista de novo.

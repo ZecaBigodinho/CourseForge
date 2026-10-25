@@ -78,8 +78,8 @@ Em [drive.google.com](https://drive.google.com), *Novo* ➔ **Documentos**, **Pl
 ### Arquivos do Office no Google
 
 - **Editar direto:** abra um `.docx`, `.xlsx` ou `.pptx` pelo Drive — ele é editado **no formato do Office** (aparece uma etiqueta `.DOCX` ao lado do nome).
-- **Converter:** *Arquivo ➔ **Salvar como Documentos Google*** (ou Planilhas/Apresentações) para usar todos os recursos do Google.
-- **Devolver no formato do Office:** *Arquivo ➔ **Fazer download*** ➔ *Microsoft Word (.docx)*, *Microsoft Excel (.xlsx)*, *Microsoft PowerPoint (.pptx)* ou **PDF**.
+- **Converter:** *Arquivo* ➔ **Salvar como Documentos Google** (ou Planilhas/Apresentações) para usar todos os recursos do Google.
+- **Devolver no formato do Office:** *Arquivo* ➔ **Fazer download** ➔ *Microsoft Word (.docx)*, *Microsoft Excel (.xlsx)*, *Microsoft PowerPoint (.pptx)* ou **PDF**.
 
 ---
 

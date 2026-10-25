@@ -67,7 +67,7 @@ Cada canal tem uma aba **Arquivos** (ou **Compartilhado**): uma pasta na nuvem q
 
 ### Agendar e entrar
 
-- **Agendar:** *Calendário ➔ **Nova reunião*** (ou um evento do Outlook com **Reunião do Teams** ligada). Para uma reunião do canal, escolha o canal no campo *Adicionar canal*: todos os membros veem.
+- **Agendar:** *Calendário* ➔ **Nova reunião** (ou um evento do Outlook com **Reunião do Teams** ligada). Para uma reunião do canal, escolha o canal no campo *Adicionar canal*: todos os membros veem.
 - **Reunir agora:** inicia uma reunião instantânea; depois, convide as pessoas.
 - **Entrar:** no evento do calendário ou no link do convite ➔ **Ingressar**. Antes de entrar, escolha a **câmera**, o **microfone** e o **fundo** (desfocado ou uma imagem).
 

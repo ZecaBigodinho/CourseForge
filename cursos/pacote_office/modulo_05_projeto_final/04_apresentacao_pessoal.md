@@ -36,7 +36,7 @@ Ao final desta aula, você terá:
 Total: **3 minutos**. A **mensagem principal** — o que a plateia (ou o entrevistador) deve lembrar — aparece no slide 1 e volta no slide 6.
 
 !!! tip "Prints dos seus projetos"
-    Abra o trabalho ABNT, a planilha de notas e a apresentação dos módulos anteriores e capture a tela com `Windows + Shift + S` (Ferramenta de Captura) — ou, no PowerPoint, *Inserir ➔ **Instantâneo***. Recorte só a parte que mostra o resultado (o sumário automático, o painel com gráfico, um slide bonito) e escreva o **texto alternativo**.
+    Abra o trabalho ABNT, a planilha de notas e a apresentação dos módulos anteriores e capture a tela com `Windows + Shift + S` (Ferramenta de Captura) — ou, no PowerPoint, *Inserir* ➔ **Instantâneo**. Recorte só a parte que mostra o resultado (o sumário automático, o painel com gráfico, um slide bonito) e escreva o **texto alternativo**.
 
 ---
 
@@ -120,8 +120,8 @@ Monte os **6 slides** do roteiro com **títulos que afirmam**, um tema, o **núm
 <!-- gabarito -->
 ??? success "Gabarito — Intermediário"
     1. Abra cada projeto ➔ `Windows + Shift + S` ➔ recorte a área ➔ `Ctrl + V` no slide (ou *Inserir ➔ Instantâneo ➔ Recorte de Tela*). *Formato da Imagem ➔ Cortar* para tirar sobras; redimensione pelos **cantos**; selecione as imagens ➔ *Organizar ➔ Alinhar ➔ Alinhar Parte Superior* e *Distribuir Horizontalmente*. Botão direito ➔ *Exibir Texto Alt* ➔ “Painel da planilha de controle de notas, com gráfico por situação”.
-    2. No Excel, clique no gráfico do Painel ➔ `Ctrl + C` ➔ no slide 5: *Colar ➔ **Usar Tema de Destino e Inserir Pasta de Trabalho*** (para levar a apresentação para qualquer computador). Título do slide: “Organizei minha busca como um projeto: metade das empresas já respondeu”. Letras do gráfico com 18 pt ou mais.
-    3. *Transições ➔ Esmaecer ➔ Aplicar a Todos*. No slide 3, selecione o SmartArt ➔ *Animações ➔ Esmaecer* ➔ *Opções de Efeito ➔ **Um por Um***.
+    2. No Excel, clique no gráfico do Painel ➔ `Ctrl + C` ➔ no slide 5: *Colar* ➔ **Usar Tema de Destino e Inserir Pasta de Trabalho** (para levar a apresentação para qualquer computador). Título do slide: “Organizei minha busca como um projeto: metade das empresas já respondeu”. Letras do gráfico com 18 pt ou mais.
+    3. *Transições ➔ Esmaecer ➔ Aplicar a Todos*. No slide 3, selecione o SmartArt ➔ *Animações ➔ Esmaecer* ➔ *Opções de Efeito* ➔ **Um por Um**.
 
 ### Avançado (desafio)
 

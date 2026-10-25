@@ -48,11 +48,11 @@ Na aba *Exibir* (ou nos botões da barra de status):
 
 ## Slides e layouts
 
-- **Novo slide:** *Página Inicial ➔ **Novo Slide*** — clique na setinha do botão para escolher o layout.
+- **Novo slide:** *Página Inicial* ➔ **Novo Slide** — clique na setinha do botão para escolher o layout.
 - **Duplicar:** botão direito na miniatura ➔ *Duplicar Slide*. Ótimo para manter o mesmo formato.
 - **Mover:** arraste a miniatura no painel (ou use a *Classificação de Slides*).
 - **Excluir:** selecione a miniatura e aperte `Delete`.
-- **Trocar o layout de um slide pronto:** *Página Inicial ➔ **Layout***.
+- **Trocar o layout de um slide pronto:** *Página Inicial* ➔ **Layout**.
 
 | Layout | Quando usar |
 |---|---|
@@ -76,7 +76,7 @@ Na aba *Exibir* (ou nos botões da barra de status):
 
 ### Comece pelo roteiro: Estrutura de Tópicos
 
-*Exibir ➔ **Modo de Exibição de Estrutura de Tópicos***: o painel da esquerda vira uma lista com o texto de todos os slides.
+*Exibir* ➔ **Modo de Exibição de Estrutura de Tópicos**: o painel da esquerda vira uma lista com o texto de todos os slides.
 
 - Digite o título do slide e `Enter` ➔ cria o **próximo slide**.
 - `Tab` transforma a linha em **tópico** do slide de cima; `Shift + Tab` a promove de volta a título de slide.

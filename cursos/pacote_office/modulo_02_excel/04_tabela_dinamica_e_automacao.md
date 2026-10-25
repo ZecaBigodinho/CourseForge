@@ -58,7 +58,7 @@ São só 20 linhas para você conferir as contas — mas tudo o que você vai fa
 
 A tabela dinâmica responde perguntas como “quanto vendeu cada categoria em cada mês?” **arrastando campos**.
 
-1. Clique em qualquer célula dos dados ➔ *Inserir ➔ **Tabela Dinâmica*** ➔ *Da Tabela/Intervalo* ➔ **Nova Planilha** ➔ *OK*.
+1. Clique em qualquer célula dos dados ➔ *Inserir* ➔ **Tabela Dinâmica** ➔ *Da Tabela/Intervalo* ➔ **Nova Planilha** ➔ *OK*.
 2. À direita abre o painel **Campos da Tabela Dinâmica**: em cima, as colunas dos seus dados; embaixo, quatro áreas.
 
 | Área | O que faz | Exemplo |
@@ -75,7 +75,7 @@ Arraste os campos entre as áreas e o relatório se remonta na hora. Errou? Arra
 - **Soma, Contagem ou Média:** clique no campo em *Valores* ➔ *Configurações do Campo de Valor*. Texto em *Valores* vira **Contagem** automaticamente.
 - **Formato de número:** na mesma janela, botão **Formato do Número** ➔ *Moeda*. (Formatar as células direto se perde quando a tabela é remontada.)
 - **Porcentagem:** clique com o botão direito em um valor ➔ *Mostrar Valores Como* ➔ **% do Total Geral**.
-- **Segmentação de Dados:** com a tabela dinâmica selecionada, *Análise da Tabela Dinâmica ➔ **Inserir Segmentação de Dados*** ➔ marque *Turno*. Aparecem botões que filtram o relatório com um clique.
+- **Segmentação de Dados:** com a tabela dinâmica selecionada, *Análise da Tabela Dinâmica* ➔ **Inserir Segmentação de Dados** ➔ marque *Turno*. Aparecem botões que filtram o relatório com um clique.
 - **Gráfico Dinâmico:** *Análise da Tabela Dinâmica ➔ Gráfico Dinâmico*. O gráfico acompanha os filtros da tabela.
 
 !!! warning "A tabela dinâmica não se atualiza sozinha"
@@ -107,11 +107,11 @@ No Microsoft 365, uma fórmula pode devolver **vários resultados**, que **se es
 
 Uma **macro** grava o que você faz — cliques, formatações, digitação — e repete tudo com um comando. É ótima para tarefas que você faz toda semana do mesmo jeito.
 
-1. *Exibir ➔ Macros ➔ **Gravar Macro***.
+1. *Exibir ➔ Macros* ➔ **Gravar Macro**.
 2. Dê um nome **sem espaços** (`FormatarRelatorio`), escolha *Armazenar macro em:* **Esta pasta de trabalho** ➔ *OK*. A partir daqui, tudo é gravado.
 3. Faça a tarefa com calma (os erros também são gravados).
-4. *Exibir ➔ Macros ➔ **Parar Gravação***.
-5. Para executar: *Exibir ➔ Macros ➔ **Exibir Macros*** (`Alt + F8`) ➔ escolha a macro ➔ **Executar**.
+4. *Exibir ➔ Macros* ➔ **Parar Gravação**.
+5. Para executar: *Exibir ➔ Macros* ➔ **Exibir Macros** (`Alt + F8`) ➔ escolha a macro ➔ **Executar**.
 
 !!! warning "Salve como `.xlsm`"
     Um arquivo `.xlsx` **não guarda macros**. Use *Arquivo ➔ Salvar como* ➔ **Pasta de Trabalho Habilitada para Macro do Excel (`.xlsm`)**. Se você salvar como `.xlsx`, o Excel avisa que a macro será perdida.

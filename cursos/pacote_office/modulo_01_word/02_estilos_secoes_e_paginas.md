@@ -101,7 +101,7 @@ Agora, se você inserir uma seção nova no meio, toda a numeração se ajusta.
 
 ## Seções: partes do documento com configurações próprias
 
-Uma **seção** é um trecho do documento que pode ter cabeçalho, rodapé, numeração e até orientação de página próprios. Crie com *Layout ➔ Quebras ➔ **Próxima Página*** (em *Quebras de Seção*).
+Uma **seção** é um trecho do documento que pode ter cabeçalho, rodapé, numeração e até orientação de página próprios. Crie com *Layout ➔ Quebras* ➔ **Próxima Página** (em *Quebras de Seção*).
 
 <figure markdown="span">
   ![Menu Quebras da guia Layout com as Quebras de Página no alto e, em Quebras de Seção, a opção Próxima Página em destaque](assets/02_quebra_proxima_pagina.webp){ loading=lazy }
@@ -128,10 +128,10 @@ Exemplo de trabalho com capa, folha de rosto, sumário e introdução:
 
 Passo a passo no Word:
 
-1. No fim do sumário (antes da Introdução), insira *Layout ➔ Quebras ➔ **Próxima Página***. Agora o documento tem a **Seção 1** (capa, folha de rosto, sumário) e a **Seção 2** (do texto em diante).
+1. No fim do sumário (antes da Introdução), insira *Layout ➔ Quebras* ➔ **Próxima Página**. Agora o documento tem a **Seção 1** (capa, folha de rosto, sumário) e a **Seção 2** (do texto em diante).
 2. Dê dois cliques no topo da página da Introdução para abrir o **cabeçalho**. Na aba *Cabeçalho e Rodapé*, **desligue *Vincular ao Anterior*** — assim o cabeçalho da Seção 2 deixa de copiar o da Seção 1.
-3. *Número de Página ➔ Início da Página ➔ **Número Simples 3*** (alinhado à direita).
-4. *Número de Página ➔ **Formatar Números de Página*** ➔ *Iniciar em*: **3** (folha de rosto = 1, sumário = 2, introdução = 3).
+3. *Número de Página ➔ Início da Página* ➔ **Número Simples 3** (alinhado à direita).
+4. *Número de Página* ➔ **Formatar Números de Página** ➔ *Iniciar em*: **3** (folha de rosto = 1, sumário = 2, introdução = 3).
 5. Vá ao cabeçalho da Seção 1 e confira que ele está **vazio**.
 
 <figure markdown="span">
@@ -210,7 +210,7 @@ Monte a numeração ABNT completa num documento de 5 páginas: **capa**, **folha
 <!-- gabarito -->
 ??? success "Gabarito — Avançado"
     1. Separe capa, folha de rosto e sumário com `Ctrl + Enter` (quebra de página).
-    2. No fim do sumário, *Layout ➔ Quebras ➔ **Próxima Página*** (quebra de **seção**). Separe introdução e desenvolvimento com `Ctrl + Enter`.
+    2. No fim do sumário, *Layout ➔ Quebras* ➔ **Próxima Página** (quebra de **seção**). Separe introdução e desenvolvimento com `Ctrl + Enter`.
     3. Dois cliques no cabeçalho da introdução ➔ desligue **Vincular ao Anterior**.
     4. *Número de Página ➔ Início da Página ➔ Número Simples 3*.
     5. *Número de Página ➔ Formatar Números de Página* ➔ **Iniciar em: 3**.
