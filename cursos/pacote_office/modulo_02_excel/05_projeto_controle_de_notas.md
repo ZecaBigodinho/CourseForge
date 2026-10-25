@@ -76,7 +76,7 @@ Copie e cole na célula **A1** da planilha **Notas** (ou use os dados da sua tur
 
 ### 2. Destaques (aula 03)
 
-- **Situação:** *Realçar Regras das Células ➔ Texto que Contém* — *Aprovado* em verde, *Recuperação* em amarelo, *Reprovado* em vermelho.
+- **Situação:** *Regras de Realce das Células ➔ Texto que Contém* — *Aprovado* em verde, *Recuperação* em amarelo, *Reprovado* em vermelho.
 - **Frequência abaixo de 75%** em vermelho.
 - **Notas dos bimestres:** uma **escala de cores** ajuda a ver quem caiu ao longo do ano.
 
