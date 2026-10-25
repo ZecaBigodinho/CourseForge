@@ -72,6 +72,11 @@ A tela de cadastro continua igual, com uma faixa nova embaixo da busca:
 └──────────────────────────────────────────────────────┘
 ```
 
+<figure markdown="span">
+  ![Tela Cadastro de Alunos do Sistema Escolar com a faixa Neon Online em verde, o botão Recarregar e a lista com os cinco alunos migrados do SQLite](assets/09_app_online.webp){ loading=lazy }
+  <figcaption>O Sistema Escolar de verdade, conectado ao Neon: (1) o indicador <strong>Online</strong> · (2) o botão <strong>Recarregar</strong> · (3) os alunos vêm da nuvem.</figcaption>
+</figure>
+
 - Tudo o que você cadastrar vai direto para o Neon. Abra o sistema em **outro computador** com o mesmo `.env` e os alunos estão lá.
 - Sem internet: o sistema avisa com uma mensagem amigável em vez de travar ou mostrar um traceback.
 
@@ -121,12 +126,28 @@ Escolha o seu caminho:
     O Neon (hoje parte da empresa Databricks) **não é direcionado a menores de 18 anos**. Se você tem 18 ou mais, crie a sua conta gratuita — o plano gratuito **não pede cartão de crédito**.
 
     1. Acesse **neon.com** e clique em **Sign up**. Dá para entrar com a conta do GitHub ou do Google, ou com e-mail.
-    2. Crie um projeto:
+    2. Clique em **New project** e preencha:
         - **Project name:** `sistema-escolar`
-        - **Postgres version:** a que vier sugerida
-        - **Region:** **AWS South America (São Paulo)** — a mais perto do Brasil, então as respostas chegam mais rápido
-    3. Na tela do projeto, clique em **Connect**. Abre a janela **Connect to your branch**.
-    4. Deixe o banco `neondb` e o usuário que vierem marcados e **copie a connection string**. Ela tem este formato:
+        - **Region:** **AWS South America East 1 (São Paulo)** — a mais perto do Brasil, então as respostas chegam mais rápido
+        - Deixe **Postgres database** ligado e clique em **Create project**.
+
+        ![Janela Create project do Neon com o nome sistema-escolar, a região AWS South America East 1 (São Paulo) e o quadro do plano gratuito com 1 GB storage](assets/09_neon_criar_projeto.webp){ loading=lazy }
+
+        *(1) Nome do projeto · (2) região São Paulo · (3) o que o plano gratuito inclui: 1 GB de armazenamento e o banco que “dorme” quando ninguém usa · (4) Create project.*
+
+    3. O projeto abre no painel. À esquerda ficam o botão **Connect** e, mais abaixo, **Tables**, **SQL Editor** e **Roles**, que você vai usar neste capítulo.
+
+        ![Painel do projeto sistema-escolar no Neon, com o botão Connect e os itens Tables, SQL Editor e Roles do menu em destaque](assets/09_neon_painel.webp){ loading=lazy }
+
+        *(1) Connect · (2) Tables: ver os dados · (3) SQL Editor: rodar comandos SQL · (4) Roles: usuários e senhas do banco.*
+
+    4. Clique em **Connect**. Na janela **Connect to your branch**, deixe o banco `neondb` e o usuário (*Role*) que vierem marcados e clique em **Copy snippet**: ele copia a connection string **com a senha**. Na tela, a senha aparece escondida (`****`); **Show password** mostra a senha — evite clicar nele com alguém olhando a sua tela.
+
+        ![Janela Connect to your branch com a connection string, a senha escondida por asteriscos e o endereço do servidor coberto, e os botões Copy snippet, Show password, Reset password e a chave Connection pooling](assets/09_neon_connect.webp){ loading=lazy }
+
+        *(1) A connection string (o endereço do servidor foi coberto nesta imagem) · (2) Copy snippet: copia tudo, com a senha · (3) Show password · (4) Reset password: troca a senha · (5) Connection pooling: deixe ligado.*
+
+    A connection string tem este formato:
 
     ```text
     postgresql://usuario:SENHA@ep-nome-123456.sa-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require
@@ -145,7 +166,7 @@ Escolha o seu caminho:
     Quando fizer 18 anos, você pode criar a sua conta e trocar só a connection string no `.env` — o código não muda.
 
 !!! important "Nota para o Professor"
-    Para o Caminho B, crie a conta com o **seu** e-mail. O plano gratuito permite **até 100 projetos** (cada um com 1 GB e 100 horas de computação por mês): um projeto por equipe deixa os dados de cada equipe separados e o limite de um não atrapalha o outro. Entregue a connection string a cada equipe em particular. No fim do semestre, troque a senha do usuário de cada projeto (no console do Neon, em **Roles**) ou apague os projetos.
+    Para o Caminho B, crie a conta com o **seu** e-mail. O plano gratuito permite **até 100 projetos** (cada um com 1 GB e 100 horas de computação por mês): um projeto por equipe deixa os dados de cada equipe separados e o limite de um não atrapalha o outro. Entregue a connection string a cada equipe em particular. No fim do semestre, troque a senha de cada projeto (**Connect ➔ Reset password**, ou em **Roles**) ou apague os projetos.
 
 Entenda as partes da connection string:
 
@@ -212,7 +233,7 @@ flowchart LR
 ```
 
 !!! danger "Erro crítico: senha no código ou no GitHub"
-    **Nunca** cole a connection string dentro de um arquivo `.py` e **nunca** faça commit do `.env`. Robôs varrem o GitHub o tempo todo atrás de senhas de banco. Se a sua vazar, troque a senha **na hora** no console do Neon (em **Roles**) e atualize o `.env`.
+    **Nunca** cole a connection string dentro de um arquivo `.py` e **nunca** faça commit do `.env`. Robôs varrem o GitHub o tempo todo atrás de senhas de banco. Se a sua vazar, troque a senha **na hora** no console do Neon (**Connect ➔ Reset password**) e atualize o `.env` com a connection string nova.
 
 ### Passo 4 — Reescrevendo `database/conexao.py`
 
@@ -497,7 +518,11 @@ Pronto: 5 aluno(s) copiados para o Neon.
 Rodou de novo sem querer? Ele responde `O Neon já tem 5 aluno(s). Migração cancelada.` e não duplica nada.
 
 !!! note "E os ids?"
-    No Neon, os alunos ganham ids novos (1, 2, 3...), na ordem em que foram enviados. O sistema não depende do número em si — ele só usa o id para saber qual linha editar ou excluir.
+    No Neon, os alunos ganham ids novos (1, 2, 3...), na ordem em que foram enviados. O sistema não depende do número em si — ele só usa o id para saber qual linha editar ou excluir. E o banco **não reaproveita** números: se o aluno 6 for excluído, o próximo cadastrado recebe o 7, e o 6 fica vago para sempre.
+
+    ![Página Tables do Neon com a tabela alunos selecionada e os ids 1, 2, 3, 4, 5, 7 e 8, sem o 6](assets/09_neon_tables.webp){ loading=lazy }
+
+    *(1) Em **Tables**, a tabela `alunos` aparece com os dados · (2) do 5 o id pula para o 7: o 6 foi de um aluno excluído.*
 
 ### Passo 7 — Avisando no `main.py` quando não há conexão
 
@@ -513,15 +538,25 @@ from database.conexao import inicializar_banco
 try:
     inicializar_banco()
 except Exception as erro:
+    # O detalhe técnico vai para o terminal, para quem programa.
+    print(f"Erro ao conectar ao banco: {erro}")
+    # A janela mostra só o que o usuário precisa saber.
     messagebox.showerror(
         "❌ Sem conexão com o banco",
         "Não consegui conectar ao banco na nuvem (Neon).\n\n"
-        "Confira a internet e o arquivo .env e abra o sistema de novo.\n\n"
-        f"Detalhe: {erro}"
+        "Confira a internet e o arquivo .env e abra o sistema de novo."
     )
     janela.destroy()
     raise SystemExit(1)
 ```
+
+<figure markdown="span">
+  ![Mensagem Sem conexão com o banco: Não consegui conectar ao banco na nuvem (Neon). Confira a internet e o arquivo .env e abra o sistema de novo.](assets/09_app_abertura_sem_conexao.webp){ loading=lazy }
+  <figcaption>O que aparece ao abrir o sistema sem conexão: uma frase clara, sem detalhes técnicos.</figcaption>
+</figure>
+
+!!! tip "Mensagem para o usuário, detalhe para o programador"
+    A mensagem de erro do psycopg pode ter **várias linhas** técnicas (endereços, portas, tentativas). Na tela, isso só assusta quem usa o sistema. Por isso ela vai para o **terminal** com `print`, e a janela mostra uma frase que o usuário entende e sabe o que fazer.
 
 !!! note "Por que `except Exception` aqui"
     Na abertura podem acontecer erros diferentes: sem internet (`psycopg.OperationalError`), senha errada (também `OperationalError`) ou `.env` faltando (`RuntimeError`, que nós mesmos criamos no `conexao.py`). Todos levam à mesma resposta — avisar e fechar —, então um `except Exception` é suficiente neste ponto.
@@ -652,15 +687,30 @@ Por fim, no **carregamento inicial** (o final de `abrir_janela_cadastro`), troqu
 
     O aluno que você acabou de cadastrar está lá — gravado na nuvem.
 
+    ![SQL Editor do Neon com a consulta SELECT * FROM alunos ORDER BY id, o botão Run e o resultado com seis alunos, o último sendo Fábio Nunes, cadastrado pelo app](assets/09_neon_sql_select.webp){ loading=lazy }
+
+    *(1) A consulta · (2) Run · (3) o aluno cadastrado pelo app minutos antes.*
+
 5. Ainda no SQL Editor, cadastre um aluno “por fora”:
 
     ```sql
     INSERT INTO alunos (nome, idade, turma) VALUES ('Bruna Teixeira', 15, '1A');
     ```
 
+    ![SQL Editor com o comando INSERT da aluna Bruna Teixeira e a mensagem Statement executed successfully](assets/09_neon_sql_insert.webp){ loading=lazy }
+
     Volte ao sistema e clique em **🔄 Recarregar**: a Bruna aparece. Foi isso que um segundo computador faria.
 
+    ![Tela Cadastro de Alunos depois do Recarregar, com Bruna Teixeira na lista e o total de 7 alunos](assets/09_app_recarregar.webp){ loading=lazy }
+
+    *(1) Recarregar · (2) a Bruna, inserida pelo SQL Editor, já aparece no sistema.*
+
 6. **Teste sem internet:** desligue o Wi-Fi (ou tire o cabo) e clique em **Salvar** com um aluno preenchido. Deve aparecer a mensagem **Sem conexão** — e os campos continuam preenchidos. Ligue a internet, clique em **Recarregar** e salve de novo.
+
+    ![À esquerda, a tela de cadastro com o indicador Neon Offline em vermelho e o formulário ainda preenchido com Gabriela Alves; à direita, a mensagem Sem conexão: Não consegui falar com o banco na nuvem. Confira a internet e tente de novo.](assets/09_app_sem_conexao.webp){ loading=lazy }
+
+    *(1) A mensagem amigável · (2) o indicador fica vermelho · (3) os dados digitados continuam lá para tentar de novo.*
+
 7. Feche o sistema, desligue a internet e abra de novo: deve aparecer a mensagem do `main.py` e o sistema fecha sem traceback.
 
 ## 📝 Exercício
