@@ -10,7 +10,7 @@
 
 **Curso completo de Python aplicado ao desenvolvimento Desktop — da lógica de programação até a criação de aplicações com interface gráfica, banco de dados, integração com serviços em nuvem, programação orientada a objetos (POO), central de revisão visual e versionamento profissional com Git & GitHub.**
 
-[Acessar o Curso](https://zecabigodinho.github.io/curso-python/) · [Reportar Problema](https://github.com/ZecaBigodinho/curso-python/issues) · [Plano de Estudos](https://zecabigodinho.github.io/curso-python/plano_de_estudos/)
+[Acessar o Curso](https://zecabigodinho.github.io/CourseForge/) · [Reportar Problema](https://github.com/ZecaBigodinho/curso-python/issues) · [Plano de Estudos](https://zecabigodinho.github.io/curso-python/plano_de_estudos/)
 
 </div>
 
