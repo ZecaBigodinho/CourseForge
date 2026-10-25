@@ -10,7 +10,7 @@
 
 **Curso completo de Python aplicado ao desenvolvimento Desktop — da lógica de programação até a criação de aplicações com interface gráfica, banco de dados, integração com serviços em nuvem, programação orientada a objetos (POO), central de revisão visual e versionamento profissional com Git & GitHub.**
 
-[Acessar o Curso](https://zecabigodinho.github.io/CourseForge/) · [Reportar Problema](https://github.com/ZecaBigodinho/curso-python/issues) · [Plano de Estudos](https://zecabigodinho.github.io/curso-python/plano_de_estudos/)
+[Acessar o Curso](https://zecabigodinho.github.io/CourseForge/) · [Reportar Problema](https://github.com/ZecaBigodinho/CourseForge/issues) · [Catálogo](https://zecabigodinho.github.io/CourseForge/catalogo/)
 
 </div>
 
@@ -38,7 +38,7 @@ O repositório também inclui a plataforma **CourseForge** (organizada no diret�
 
 ## 🌐 Acesse o Curso
 
-### 👉 [**zecabigodinho.github.io/curso-python**](https://zecabigodinho.github.io/curso-python/)
+### 👉 [**zecabigodinho.github.io/CourseForge**](https://zecabigodinho.github.io/CourseForge/)
 
 O material está hospedado no **GitHub Pages** e pode ser acessado de qualquer computador, tablet ou celular.
 
@@ -48,9 +48,9 @@ O material está hospedado no **GitHub Pages** e pode ser acessado de qualquer c
 
 | Curso | Situação |
 |-------|----------|
-| [Python para Desktop](https://zecabigodinho.github.io/curso-python/python_para_desktop/docs/) | ✅ Disponível |
-| [Pacote Office](https://zecabigodinho.github.io/curso-python/pacote_office/docs/) | 🕒 Em breve (ementa publicada) |
-| [Introdução à IA](https://zecabigodinho.github.io/curso-python/introducao_a_ia/docs/) | 🕒 Em breve (ementa publicada) |
+| [Python para Desktop](https://zecabigodinho.github.io/CourseForge/python_para_desktop/docs/) | ✅ Disponível |
+| [Pacote Office](https://zecabigodinho.github.io/CourseForge/pacote_office/docs/) | ✅ Disponível |
+| [Introdução à IA](https://zecabigodinho.github.io/CourseForge/introducao_a_ia/docs/) | ✅ Disponível |
 
 Cada curso tem uma **ficha** em `cursos/<curso>/.courseforge.yaml` (ordem, situação, nível, público, pré-requisitos, objetivos e certificado). O **Catálogo de cursos** (`cursos/catalogo.md`) é gerado a partir dessas fichas por `python main.py publicar` — não edite a página à mão.
 
