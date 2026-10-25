@@ -67,14 +67,36 @@ Exemplo (salve como `participantes.xlsx`):
 
 1. No Word, crie o modelo do certificado: *Layout ➔ Orientação ➔ Paisagem*, título “CERTIFICADO” e o texto com espaços para os dados.
 2. *Correspondências ➔ Iniciar Mala Direta ➔ **Cartas***.
-3. *Selecionar Destinatários ➔ **Usar uma Lista Existente*** ➔ escolha `participantes.xlsx` ➔ a aba (ex.: *Planilha1$*) ➔ marque **A primeira linha de dados contém cabeçalhos de coluna**.
+
+<figure markdown="span">
+  ![Guia Correspondências com o botão Iniciar Mala Direta aberto e a opção Cartas em destaque no topo do menu](assets/04_iniciar_mala_direta.webp){ loading=lazy }
+  <figcaption>(1) <em>Iniciar Mala Direta</em> · (2) <strong>Cartas</strong>: serve para certificados, declarações e qualquer documento de uma página por pessoa.</figcaption>
+</figure>
+
+3. *Selecionar Destinatários ➔ **Usar uma Lista Existente*** ➔ escolha `participantes.xlsx` ➔ a aba (ex.: *Planilha1$*) ➔ deixe marcada a caixa **Primeira linha de dados contém cabeçalhos de coluna** ➔ *OK*.
+
+<figure markdown="span">
+  ![Janela Selecionar tabela com a aba Planilha1$ selecionada e a caixa Primeira linha de dados contém cabeçalhos de coluna marcada](assets/04_selecionar_tabela.webp){ loading=lazy }
+  <figcaption>A aba da planilha aparece com um <strong>$</strong> no fim (<em>Planilha1$</em>). A caixa dos cabeçalhos faz o Word usar <em>Nome</em>, <em>Curso</em>... como nomes dos campos.</figcaption>
+</figure>
+
 4. Clique onde vai o nome ➔ *Inserir Campo de Mesclagem* ➔ **Nome**. Repita com **Curso**, **Carga** e **Data**.
 
 O texto fica assim:
 
 > Certificamos que **«Nome»** concluiu o curso **«Curso»**, com carga horária de «Carga» horas, em «Data».
 
+<figure markdown="span">
+  ![Menu Inserir Campo de Mesclagem aberto com os campos Nome, Curso, Carga e Data, e o texto do certificado com os quatro campos entre os sinais « e »](assets/04_inserir_campos.webp){ loading=lazy }
+  <figcaption>(1) O menu lista as colunas da planilha · (2) cada campo aparece entre « » no modelo.</figcaption>
+</figure>
+
 5. *Visualizar Resultados*: as setas mostram cada certificado com os dados reais.
+
+<figure markdown="span">
+  ![Certificado de Ana Souza com os dados da planilha, o botão Visualizar Resultados e as setas de navegação em destaque, e a data aparecendo como 10/24/2026](assets/04_visualizar_resultados.webp){ loading=lazy }
+  <figcaption>(1) <em>Visualizar Resultados</em> · (2) as setas passam de uma pessoa para outra · (3) repare na data: saiu <strong>10/24/2026</strong> (mês primeiro). A correção está em <a href="#filtros-regras-e-formatos">Filtros, regras e formatos</a>.</figcaption>
+</figure>
 
 ---
 
@@ -85,18 +107,42 @@ O texto fica assim:
 - **Editar Documentos Individuais** ➔ *Todos*: cria um documento novo com **todos** os certificados, um por página. Revise, salve e exporte em PDF.
 - **Imprimir Documentos**: manda direto para a impressora.
 
+<figure markdown="span">
+  ![Menu Concluir e Mesclar com Editar Documentos Individuais em destaque e, ao lado, a janela Mesclagem para novo documento com a opção Todos marcada](assets/04_concluir_mesclar.webp){ loading=lazy }
+  <figcaption>(1) <em>Editar Documentos Individuais...</em> · (2) na janela <strong>Mesclagem para novo documento</strong>, <strong>Todos</strong> ➔ <em>OK</em>.</figcaption>
+</figure>
+
+<figure markdown="span">
+  ![Documento novo com três páginas lado a lado, cada uma com um certificado: Ana Souza, Bruno Lima e Carla Dias](assets/04_resultado_paginas.webp){ loading=lazy }
+  <figcaption>O resultado: uma página por linha da planilha (aqui, três pessoas).</figcaption>
+</figure>
+
 ---
 
 ## Etiquetas
 
-Mesmo processo, outro tipo: *Iniciar Mala Direta ➔ **Etiquetas*** ➔ escolha o fabricante e o modelo da folha de etiquetas (ex.: *Pimaco*, código impresso na caixa). Insira os campos na primeira etiqueta e clique em **Atualizar Etiquetas** para repetir nas demais.
+Mesmo processo, outro tipo: *Iniciar Mala Direta* ➔ **Etiquetas...** ➔ na janela **Opções de etiqueta**, escolha a marca em *Fornecedores de etiquetas* e o modelo em *Número do produto* (o código impresso na caixa da folha). Insira os campos na primeira etiqueta e clique em **Atualizar Etiquetas** para repetir nas demais.
+
+<figure markdown="span">
+  ![Janela Opções de etiqueta com a lista Fornecedores de etiquetas em destaque e o botão Nova Etiqueta em destaque](assets/04_opcoes_etiqueta.webp){ loading=lazy }
+  <figcaption>(1) <em>Fornecedores de etiquetas</em> · (2) <strong>Nova Etiqueta...</strong>, para quando a sua marca não está na lista.</figcaption>
+</figure>
+
+!!! tip "A marca da sua folha não está na lista?"
+    Marcas comuns no Brasil, como a **Pimaco**, não aparecem na lista do Word (conferido no Microsoft 365 em outubro de 2026). Clique em **Nova Etiqueta...** e digite as medidas impressas na caixa (margens, altura, largura, etiquetas por linha e linhas por página), com *Tamanho da página* **A4**. Muitos fabricantes também oferecem modelos prontos para Word no site deles.
 
 ---
 
 ## Filtros, regras e formatos
 
 - **Filtrar**: *Editar Lista de Destinatários* ➔ clique na seta de uma coluna (ex.: *Curso*) ➔ escolha um valor. Só esses entram na mesclagem.
-- **Regras**: *Regras ➔ **Se...Então...Senão***. Ex.: se *Carga* for maior ou igual a 40, escreva “com carga horária ampliada”; senão, nada.
+
+    ![Janela Destinatários da mala direta com a seta da coluna Curso aberta e a opção Pacote Office em destaque](assets/04_filtro_curso.webp){ loading=lazy }
+
+- **Regras**: *Regras* ➔ **Se...Então...Senão...**. Ex.: se *Carga* for **Maior ou igual a** 40, escreva “com aproveitamento integral do curso”; senão, nada.
+
+    ![Janela Inserir campo SE com Nome do campo Carga, Comparação Maior ou igual a, Comparar com 40 e o texto com aproveitamento integral do curso](assets/04_regra_se_entao.webp){ loading=lazy }
+
 - **Datas e números com formato errado** (ex.: a data aparece como `10/24/2026`): pressione `Alt + F9` para ver os códigos dos campos e acrescente o formato dentro das chaves:
 
     ```text
@@ -104,6 +150,8 @@ Mesmo processo, outro tipo: *Iniciar Mala Direta ➔ **Etiquetas*** ➔ escolha 
     ```
 
     Depois `Alt + F9` de novo. Outra saída é deixar a coluna como **Texto** no Excel antes de conectar.
+
+    ![Em cima, os códigos dos campos com MERGEFIELD Data seguido do formato dd/MM/yyyy em destaque; embaixo, o certificado com a data 24/10/2026](assets/04_formato_data.webp){ loading=lazy }
 
 ---
 
@@ -121,6 +169,7 @@ Mesmo processo, outro tipo: *Iniciar Mala Direta ➔ **Etiquetas*** ➔ escolha 
 - **Cabeçalho com espaços ou acentos estranhos** (`Nome do Aluno `): o campo fica difícil de achar. Prefira `Nome`.
 - **Esquecer de visualizar** antes de concluir e imprimir 40 certificados com erro.
 - **Editar o documento final em vez do modelo**: correções no modelo e mescle de novo.
+- **Texto da regra com letra menor que o resto**: o texto do *Se...Então...Senão* pode entrar com a fonte padrão. Selecione o parágrafo inteiro no modelo e ajuste o tamanho da fonte.
 
 ---
 
@@ -134,7 +183,7 @@ Crie a planilha `participantes.xlsx` da aula (com seus colegas no lugar dos nome
 ??? success "Gabarito — Básico"
     1. No Excel: cabeçalhos em A1:D1 (`Nome`, `Curso`, `Carga`, `Data`), um participante por linha, sem linhas vazias. Salve e **feche**.
     2. No Word: *Layout ➔ Orientação ➔ Paisagem*. Escreva “CERTIFICADO” (centralizado, grande) e o texto da aula.
-    3. *Correspondências ➔ Iniciar Mala Direta ➔ Cartas* ➔ *Selecionar Destinatários ➔ Usar uma Lista Existente* ➔ `participantes.xlsx` ➔ *Planilha1$* ➔ cabeçalhos marcados.
+    3. *Correspondências ➔ Iniciar Mala Direta ➔ Cartas* ➔ *Selecionar Destinatários ➔ Usar uma Lista Existente* ➔ `participantes.xlsx` ➔ *Planilha1$* ➔ caixa dos cabeçalhos marcada.
     4. Insira os quatro campos com *Inserir Campo de Mesclagem*.
     5. *Visualizar Resultados* e passe pelas setas.
     6. *Concluir e Mesclar ➔ Editar Documentos Individuais ➔ Todos* ➔ no documento novo, *Arquivo ➔ Exportar ➔ Criar PDF*.
@@ -150,7 +199,7 @@ Com a mesma planilha:
 
 <!-- gabarito -->
 ??? success "Gabarito — Intermediário"
-    1. Documento novo ➔ *Iniciar Mala Direta ➔ Etiquetas* ➔ escolha o modelo da folha (ex.: Pimaco, código da caixa) ➔ *Selecionar Destinatários ➔ Usar uma Lista Existente*. Na primeira etiqueta: **«Nome»** `Enter` «Curso». Clique em **Atualizar Etiquetas** ➔ *Visualizar* ➔ *Concluir e Mesclar*.
+    1. Documento novo ➔ *Iniciar Mala Direta ➔ Etiquetas...* ➔ escolha o fornecedor e o número do produto da sua folha (se a marca não estiver na lista, use **Nova Etiqueta...** com as medidas da caixa) ➔ *Selecionar Destinatários ➔ Usar uma Lista Existente*. Na primeira etiqueta: **«Nome»** `Enter` «Curso». Clique em **Atualizar Etiquetas** ➔ *Visualizar* ➔ *Concluir e Mesclar*.
     2. No documento dos certificados: *Editar Lista de Destinatários* ➔ seta da coluna **Curso** ➔ **Pacote Office**. Visualize: os outros cursos sumiram. *Concluir e Mesclar*.
 
     **Para voltar a todos:** seta da coluna ➔ **(Todos)**.
@@ -169,7 +218,7 @@ Com a mesma planilha:
         ```
 
         `Alt + F9` de novo ➔ *Visualizar Resultados*: aparece `24/10/2026`. (`MM` maiúsculo é mês; `mm` minúsculo seria minuto.)
-    2. Posicione o cursor depois de «Carga» horas ➔ *Regras ➔ Se...Então...Senão* ➔ *Nome do campo*: **Carga**, *Comparação*: **Maior que ou igual a**, *Comparar com*: **40**, *Inserir este texto*: “ com aproveitamento integral do curso”, *Caso contrário*: (vazio) ➔ *OK*.
+    2. Posicione o cursor depois de «Carga» horas ➔ *Regras ➔ Se...Então...Senão* ➔ *Nome do campo*: **Carga**, *Comparação*: **Maior ou igual a**, *Comparar com*: **40**, *Inserir este texto*: “ com aproveitamento integral do curso”, *Caso contrário*: (vazio) ➔ *OK*.
 
     **Confira:** visualize uma pessoa com carga 40 (frase aparece) e uma com 20 (não aparece).
 
