@@ -5628,7 +5628,7 @@
 <ul>
 <li>Um projeto no Neon Database com banco PostgreSQL funcionando na nuvem</li>
 <li>Tabelas <code>usuarios</code> e <code>tarefas</code> criadas com SQL real (PostgreSQL)</li>
-<li>Um sistema de <strong>cadastro e login</strong> de usuários com hash de senha</li>
+<li>Um sistema de <strong>cadastro e login</strong> de usuários com senha protegida por hash e sal</li>
 <li>Um <strong>CRUD completo de tarefas</strong> com status (Em Aberto, Realizando, Em Atraso)</li>
 <li>Controle de <strong>datas</strong> (criação e prazo limite) com detecção automática de atraso</li>
 <li>O arquivo <code>.env</code> protegendo as credenciais do banco</li>
@@ -5808,30 +5808,32 @@
 <a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>
 <a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 <a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
-<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">date</span><span class="p">,</span> <span class="n">datetime</span>
-<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="kn">from</span><span class="w"> </span><span class="nn">dotenv</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_dotenv</span>
-<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="kn">import</span><span class="w"> </span><span class="nn">psycopg</span>
-<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="kn">from</span><span class="w"> </span><span class="nn">psycopg.rows</span><span class="w"> </span><span class="kn">import</span> <span class="n">dict_row</span>
-<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>
-<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="c1"># Eu carrego as variáveis de ambiente do arquivo .env.</span>
-<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="n">load_dotenv</span><span class="p">()</span>
-<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>
-<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>
-<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="k">def</span><span class="w"> </span><span class="nf">conectar</span><span class="p">():</span>
-<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="w">    </span><span class="sd">"""</span>
-<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="sd">    Eu abro uma conexão com o banco Neon Database.</span>
-<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="sd">    Retorno a conexão pronta para uso.</span>
-<a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="sd">    """</span>
-<a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a>    <span class="n">database_url</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">"DATABASE_URL"</span><span class="p">)</span>
-<a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a>    <span class="k">if</span> <span class="ow">not</span> <span class="n">database_url</span><span class="p">:</span>
-<a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a>        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-<a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a>            <span class="s2">"DATABASE_URL não encontrada. "</span>
-<a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a>            <span class="s2">"Verifique o arquivo .env"</span>
-<a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a>        <span class="p">)</span>
-<a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a>    <span class="c1"># Eu conecto usando a URL completa do Neon.</span>
-<a id="__codelineno-10-31" name="__codelineno-10-31" href="#__codelineno-10-31"></a>    <span class="c1"># row_factory=dict_row faz cada linha vir como dicionário.</span>
-<a id="__codelineno-10-32" name="__codelineno-10-32" href="#__codelineno-10-32"></a>    <span class="n">conn</span> <span class="o">=</span> <span class="n">psycopg</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">database_url</span><span class="p">,</span> <span class="n">row_factory</span><span class="o">=</span><span class="n">dict_row</span><span class="p">)</span>
-<a id="__codelineno-10-33" name="__codelineno-10-33" href="#__codelineno-10-33"></a>    <span class="k">return</span> <span class="n">conn</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="kn">import</span><span class="w"> </span><span class="nn">hmac</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="kn">import</span><span class="w"> </span><span class="nn">secrets</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">date</span><span class="p">,</span> <span class="n">datetime</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="kn">from</span><span class="w"> </span><span class="nn">dotenv</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_dotenv</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="kn">import</span><span class="w"> </span><span class="nn">psycopg</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="kn">from</span><span class="w"> </span><span class="nn">psycopg.rows</span><span class="w"> </span><span class="kn">import</span> <span class="n">dict_row</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="c1"># Eu carrego as variáveis de ambiente do arquivo .env.</span>
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="n">load_dotenv</span><span class="p">()</span>
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>
+<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a>
+<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="k">def</span><span class="w"> </span><span class="nf">conectar</span><span class="p">():</span>
+<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="w">    </span><span class="sd">"""</span>
+<a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="sd">    Eu abro uma conexão com o banco Neon Database.</span>
+<a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a><span class="sd">    Retorno a conexão pronta para uso.</span>
+<a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a><span class="sd">    """</span>
+<a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a>    <span class="n">database_url</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">"DATABASE_URL"</span><span class="p">)</span>
+<a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a>    <span class="k">if</span> <span class="ow">not</span> <span class="n">database_url</span><span class="p">:</span>
+<a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a>        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a>            <span class="s2">"DATABASE_URL não encontrada. "</span>
+<a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a>            <span class="s2">"Verifique o arquivo .env"</span>
+<a id="__codelineno-10-31" name="__codelineno-10-31" href="#__codelineno-10-31"></a>        <span class="p">)</span>
+<a id="__codelineno-10-32" name="__codelineno-10-32" href="#__codelineno-10-32"></a>    <span class="c1"># Eu conecto usando a URL completa do Neon.</span>
+<a id="__codelineno-10-33" name="__codelineno-10-33" href="#__codelineno-10-33"></a>    <span class="c1"># row_factory=dict_row faz cada linha vir como dicionário.</span>
+<a id="__codelineno-10-34" name="__codelineno-10-34" href="#__codelineno-10-34"></a>    <span class="n">conn</span> <span class="o">=</span> <span class="n">psycopg</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">database_url</span><span class="p">,</span> <span class="n">row_factory</span><span class="o">=</span><span class="n">dict_row</span><span class="p">)</span>
+<a id="__codelineno-10-35" name="__codelineno-10-35" href="#__codelineno-10-35"></a>    <span class="k">return</span> <span class="n">conn</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Conceito Importante</p>
@@ -5852,28 +5854,29 @@
 <a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="s2">            id SERIAL PRIMARY KEY,</span>
 <a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="s2">            nome VARCHAR(100) NOT NULL,</span>
 <a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="s2">            email VARCHAR(150) UNIQUE NOT NULL,</span>
-<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="s2">            senha VARCHAR(255) NOT NULL,</span>
-<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="s2">            data_cadastro TIMESTAMP DEFAULT NOW()</span>
-<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="s2">        )</span>
-<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="s2">    """</span><span class="p">)</span>
-<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>
-<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>    <span class="c1"># Eu crio a tabela de tarefas.</span>
-<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a>    <span class="c1"># Cada tarefa pertence a um usuário (usuario_id).</span>
-<a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a>    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"""</span>
-<a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a><span class="s2">        CREATE TABLE IF NOT EXISTS tarefas (</span>
-<a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a><span class="s2">            id SERIAL PRIMARY KEY,</span>
-<a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a><span class="s2">            titulo VARCHAR(200) NOT NULL,</span>
-<a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a><span class="s2">            descricao TEXT,</span>
-<a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a><span class="s2">            status VARCHAR(20) DEFAULT 'Em Aberto',</span>
-<a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a><span class="s2">            data_criacao TIMESTAMP DEFAULT NOW(),</span>
-<a id="__codelineno-11-29" name="__codelineno-11-29" href="#__codelineno-11-29"></a><span class="s2">            data_limite DATE,</span>
-<a id="__codelineno-11-30" name="__codelineno-11-30" href="#__codelineno-11-30"></a><span class="s2">            usuario_id INTEGER REFERENCES usuarios(id)</span>
-<a id="__codelineno-11-31" name="__codelineno-11-31" href="#__codelineno-11-31"></a><span class="s2">        )</span>
-<a id="__codelineno-11-32" name="__codelineno-11-32" href="#__codelineno-11-32"></a><span class="s2">    """</span><span class="p">)</span>
-<a id="__codelineno-11-33" name="__codelineno-11-33" href="#__codelineno-11-33"></a>
-<a id="__codelineno-11-34" name="__codelineno-11-34" href="#__codelineno-11-34"></a>    <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
-<a id="__codelineno-11-35" name="__codelineno-11-35" href="#__codelineno-11-35"></a>    <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-<a id="__codelineno-11-36" name="__codelineno-11-36" href="#__codelineno-11-36"></a>    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="s2">            senha_hash VARCHAR(128) NOT NULL,</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="s2">            sal VARCHAR(32) NOT NULL,</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="s2">            data_cadastro TIMESTAMP DEFAULT NOW()</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="s2">        )</span>
+<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a><span class="s2">    """</span><span class="p">)</span>
+<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>
+<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a>    <span class="c1"># Eu crio a tabela de tarefas.</span>
+<a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a>    <span class="c1"># Cada tarefa pertence a um usuário (usuario_id).</span>
+<a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a>    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"""</span>
+<a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a><span class="s2">        CREATE TABLE IF NOT EXISTS tarefas (</span>
+<a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a><span class="s2">            id SERIAL PRIMARY KEY,</span>
+<a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a><span class="s2">            titulo VARCHAR(200) NOT NULL,</span>
+<a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a><span class="s2">            descricao TEXT,</span>
+<a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a><span class="s2">            status VARCHAR(20) DEFAULT 'Em Aberto',</span>
+<a id="__codelineno-11-29" name="__codelineno-11-29" href="#__codelineno-11-29"></a><span class="s2">            data_criacao TIMESTAMP DEFAULT NOW(),</span>
+<a id="__codelineno-11-30" name="__codelineno-11-30" href="#__codelineno-11-30"></a><span class="s2">            data_limite DATE,</span>
+<a id="__codelineno-11-31" name="__codelineno-11-31" href="#__codelineno-11-31"></a><span class="s2">            usuario_id INTEGER REFERENCES usuarios(id)</span>
+<a id="__codelineno-11-32" name="__codelineno-11-32" href="#__codelineno-11-32"></a><span class="s2">        )</span>
+<a id="__codelineno-11-33" name="__codelineno-11-33" href="#__codelineno-11-33"></a><span class="s2">    """</span><span class="p">)</span>
+<a id="__codelineno-11-34" name="__codelineno-11-34" href="#__codelineno-11-34"></a>
+<a id="__codelineno-11-35" name="__codelineno-11-35" href="#__codelineno-11-35"></a>    <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+<a id="__codelineno-11-36" name="__codelineno-11-36" href="#__codelineno-11-36"></a>    <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<a id="__codelineno-11-37" name="__codelineno-11-37" href="#__codelineno-11-37"></a>    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Dica Profissional</p>
@@ -5881,41 +5884,53 @@
 </div>
 <h3 id="passo-4-funcoes-de-usuario-cadastro-e-login">Passo 4 — Funções de usuário (cadastro e login)<a class="headerlink" href="#passo-4-funcoes-de-usuario-cadastro-e-login" title="Permanent link">¶</a></h3>
 <p>Continue no <code>database.py</code>. Adicione as funções de cadastro e autenticação:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">hash_senha</span><span class="p">(</span><span class="n">senha</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">gerar_hash</span><span class="p">(</span><span class="n">senha</span><span class="p">,</span> <span class="n">sal</span><span class="p">):</span>
 <a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">    </span><span class="sd">"""</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="sd">    Eu transformo a senha em um hash SHA-256.</span>
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="sd">    Assim, a senha real nunca é armazenada no banco.</span>
-<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="sd">    """</span>
-<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>    <span class="k">return</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="n">senha</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
-<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>
-<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>
-<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="k">def</span><span class="w"> </span><span class="nf">cadastrar_usuario</span><span class="p">(</span><span class="n">nome</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">senha</span><span class="p">):</span>
-<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="w">    </span><span class="sd">"""</span>
-<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="sd">    Eu cadastro um novo usuário no banco.</span>
-<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="sd">    A senha é armazenada como hash, nunca em texto puro.</span>
-<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="sd">    Retorno True se sucesso, False se o email já existe.</span>
-<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="sd">    """</span>
-<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>    <span class="n">conn</span> <span class="o">=</span> <span class="n">conectar</span><span class="p">()</span>
-<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>    <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>    <span class="k">try</span><span class="p">:</span>
-<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>        <span class="n">senha_hash</span> <span class="o">=</span> <span class="n">hash_senha</span><span class="p">(</span><span class="n">senha</span><span class="p">)</span>
-<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"""</span>
-<a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a><span class="s2">            INSERT INTO usuarios (nome, email, senha)</span>
-<a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a><span class="s2">            VALUES (</span><span class="si">%s</span><span class="s2">, </span><span class="si">%s</span><span class="s2">, </span><span class="si">%s</span><span class="s2">)</span>
-<a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a><span class="s2">        """</span><span class="p">,</span> <span class="p">(</span><span class="n">nome</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">senha_hash</span><span class="p">))</span>
-<a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a>        <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
-<a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a>        <span class="k">return</span> <span class="kc">True</span>
-<a id="__codelineno-12-25" name="__codelineno-12-25" href="#__codelineno-12-25"></a>    <span class="k">except</span> <span class="n">psycopg</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">UniqueViolation</span><span class="p">:</span>
-<a id="__codelineno-12-26" name="__codelineno-12-26" href="#__codelineno-12-26"></a>        <span class="c1"># O email já está cadastrado no banco.</span>
-<a id="__codelineno-12-27" name="__codelineno-12-27" href="#__codelineno-12-27"></a>        <span class="n">conn</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>
-<a id="__codelineno-12-28" name="__codelineno-12-28" href="#__codelineno-12-28"></a>        <span class="k">return</span> <span class="kc">False</span>
-<a id="__codelineno-12-29" name="__codelineno-12-29" href="#__codelineno-12-29"></a>    <span class="k">finally</span><span class="p">:</span>
-<a id="__codelineno-12-30" name="__codelineno-12-30" href="#__codelineno-12-30"></a>        <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-<a id="__codelineno-12-31" name="__codelineno-12-31" href="#__codelineno-12-31"></a>        <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="sd">    Eu transformo a senha em um hash com o scrypt, misturando o sal.</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="sd">    O scrypt é lento de propósito: atrapalha quem tenta adivinhar</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="sd">    milhões de senhas por segundo.</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="sd">    """</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>    <span class="n">hash_bytes</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">scrypt</span><span class="p">(</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>        <span class="n">senha</span><span class="o">.</span><span class="n">encode</span><span class="p">(),</span> <span class="n">salt</span><span class="o">=</span><span class="n">sal</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">2</span><span class="o">**</span><span class="mi">14</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">dklen</span><span class="o">=</span><span class="mi">64</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>    <span class="p">)</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>    <span class="k">return</span> <span class="n">hash_bytes</span><span class="o">.</span><span class="n">hex</span><span class="p">()</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="k">def</span><span class="w"> </span><span class="nf">cadastrar_usuario</span><span class="p">(</span><span class="n">nome</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">senha</span><span class="p">):</span>
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="w">    </span><span class="sd">"""</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="sd">    Eu cadastro um novo usuário no banco.</span>
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="sd">    Guardo o hash da senha e o sal, nunca a senha em texto puro.</span>
+<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="sd">    Retorno True se sucesso, False se o email já existe.</span>
+<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="sd">    """</span>
+<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>    <span class="n">conn</span> <span class="o">=</span> <span class="n">conectar</span><span class="p">()</span>
+<a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a>    <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a>    <span class="k">try</span><span class="p">:</span>
+<a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a>        <span class="c1"># Eu sorteio um sal novo (16 bytes aleatórios) para cada usuário.</span>
+<a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a>        <span class="n">sal</span> <span class="o">=</span> <span class="n">secrets</span><span class="o">.</span><span class="n">token_bytes</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>
+<a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a>        <span class="n">senha_hash</span> <span class="o">=</span> <span class="n">gerar_hash</span><span class="p">(</span><span class="n">senha</span><span class="p">,</span> <span class="n">sal</span><span class="p">)</span>
+<a id="__codelineno-12-25" name="__codelineno-12-25" href="#__codelineno-12-25"></a>        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"""</span>
+<a id="__codelineno-12-26" name="__codelineno-12-26" href="#__codelineno-12-26"></a><span class="s2">            INSERT INTO usuarios (nome, email, senha_hash, sal)</span>
+<a id="__codelineno-12-27" name="__codelineno-12-27" href="#__codelineno-12-27"></a><span class="s2">            VALUES (</span><span class="si">%s</span><span class="s2">, </span><span class="si">%s</span><span class="s2">, </span><span class="si">%s</span><span class="s2">, </span><span class="si">%s</span><span class="s2">)</span>
+<a id="__codelineno-12-28" name="__codelineno-12-28" href="#__codelineno-12-28"></a><span class="s2">        """</span><span class="p">,</span> <span class="p">(</span><span class="n">nome</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">senha_hash</span><span class="p">,</span> <span class="n">sal</span><span class="o">.</span><span class="n">hex</span><span class="p">()))</span>
+<a id="__codelineno-12-29" name="__codelineno-12-29" href="#__codelineno-12-29"></a>        <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+<a id="__codelineno-12-30" name="__codelineno-12-30" href="#__codelineno-12-30"></a>        <span class="k">return</span> <span class="kc">True</span>
+<a id="__codelineno-12-31" name="__codelineno-12-31" href="#__codelineno-12-31"></a>    <span class="k">except</span> <span class="n">psycopg</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">UniqueViolation</span><span class="p">:</span>
+<a id="__codelineno-12-32" name="__codelineno-12-32" href="#__codelineno-12-32"></a>        <span class="c1"># O email já está cadastrado no banco.</span>
+<a id="__codelineno-12-33" name="__codelineno-12-33" href="#__codelineno-12-33"></a>        <span class="n">conn</span><span class="o">.</span><span class="n">rollback</span><span class="p">()</span>
+<a id="__codelineno-12-34" name="__codelineno-12-34" href="#__codelineno-12-34"></a>        <span class="k">return</span> <span class="kc">False</span>
+<a id="__codelineno-12-35" name="__codelineno-12-35" href="#__codelineno-12-35"></a>    <span class="k">finally</span><span class="p">:</span>
+<a id="__codelineno-12-36" name="__codelineno-12-36" href="#__codelineno-12-36"></a>        <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<a id="__codelineno-12-37" name="__codelineno-12-37" href="#__codelineno-12-37"></a>        <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Conceito Importante</p>
-<p>O <code>hash_senha</code> transforma "minha_senha_123" em algo como "a1b2c3d4e5f6...". Mesmo que alguém acesse o banco, não conseguirá descobrir a senha original. O hash é uma via de mão única — não é possível reverter.</p>
+<p>O hash é uma via de mão única: não existe uma conta que transforme "a1b2c3d4e5f6..." de volta em "minha_senha_123". Mas quem rouba o banco pode <strong>adivinhar</strong>: calcula o hash de "123456", "senha123" e de milhões de senhas comuns e compara com o que está na tabela. Com um hash rápido e sem sal (como o SHA-256 puro), isso leva segundos — e duas pessoas com a mesma senha teriam o mesmo hash.</p>
+<p>Por isso usamos duas defesas, ambas da biblioteca padrão do Python (não precisa instalar nada):</p>
+<ul>
+<li><strong>Sal</strong>: 16 bytes sorteados com <code>secrets</code> para cada usuário e misturados à senha antes do hash. A mesma senha vira hashes diferentes, e listas prontas de hashes não servem mais. O sal não é segredo: fica guardado na coluna <code>sal</code>, ao lado do hash.</li>
+<li><strong>scrypt</strong>: um hash feito para ser lento e gastar memória. Para você, que faz login uma vez, a diferença é imperceptível; para quem testa milhões de palpites, cada um fica caro.</li>
+</ul>
+<p>Nenhuma das duas salva uma senha fraca como "123456" — ela continua entre os primeiros palpites. Por isso o app exige um tamanho mínimo de senha.</p>
 </div>
 <p>Agora, a função de login:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">autenticar_usuario</span><span class="p">(</span><span class="n">email</span><span class="p">,</span> <span class="n">senha</span><span class="p">):</span>
@@ -5926,19 +5941,41 @@
 <a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="sd">    """</span>
 <a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>    <span class="n">conn</span> <span class="o">=</span> <span class="n">conectar</span><span class="p">()</span>
 <a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>    <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>    <span class="n">senha_hash</span> <span class="o">=</span> <span class="n">hash_senha</span><span class="p">(</span><span class="n">senha</span><span class="p">)</span>
-<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>
-<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"""</span>
-<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="s2">        SELECT id, nome, email FROM usuarios</span>
-<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="s2">        WHERE email = </span><span class="si">%s</span><span class="s2"> AND senha = </span><span class="si">%s</span>
-<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="s2">    """</span><span class="p">,</span> <span class="p">(</span><span class="n">email</span><span class="p">,</span> <span class="n">senha_hash</span><span class="p">))</span>
-<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>
-<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>    <span class="n">usuario</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
-<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a>    <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a>    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-<a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a>    <span class="k">return</span> <span class="n">usuario</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>    <span class="c1"># Eu busco o usuário só pelo e-mail: preciso do sal dele</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>    <span class="c1"># para refazer a conta com a senha digitada.</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"""</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="s2">        SELECT id, nome, email, senha_hash, sal FROM usuarios</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="s2">        WHERE email = </span><span class="si">%s</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="s2">    """</span><span class="p">,</span> <span class="p">(</span><span class="n">email</span><span class="p">,))</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a>    <span class="n">usuario</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a>    <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a>    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a>
+<a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a>    <span class="k">if</span> <span class="n">usuario</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a>        <span class="k">return</span> <span class="kc">None</span>
+<a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a>
+<a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a>    <span class="c1"># Eu calculo o hash da senha digitada com o MESMO sal do cadastro.</span>
+<a id="__codelineno-13-25" name="__codelineno-13-25" href="#__codelineno-13-25"></a>    <span class="n">tentativa</span> <span class="o">=</span> <span class="n">gerar_hash</span><span class="p">(</span><span class="n">senha</span><span class="p">,</span> <span class="nb">bytes</span><span class="o">.</span><span class="n">fromhex</span><span class="p">(</span><span class="n">usuario</span><span class="p">[</span><span class="s2">"sal"</span><span class="p">]))</span>
+<a id="__codelineno-13-26" name="__codelineno-13-26" href="#__codelineno-13-26"></a>
+<a id="__codelineno-13-27" name="__codelineno-13-27" href="#__codelineno-13-27"></a>    <span class="c1"># Eu comparo com hmac.compare_digest, que leva o mesmo tempo</span>
+<a id="__codelineno-13-28" name="__codelineno-13-28" href="#__codelineno-13-28"></a>    <span class="c1"># acertando ou errando: não dá pistas a quem mede o tempo da resposta.</span>
+<a id="__codelineno-13-29" name="__codelineno-13-29" href="#__codelineno-13-29"></a>    <span class="k">if</span> <span class="ow">not</span> <span class="n">hmac</span><span class="o">.</span><span class="n">compare_digest</span><span class="p">(</span><span class="n">tentativa</span><span class="p">,</span> <span class="n">usuario</span><span class="p">[</span><span class="s2">"senha_hash"</span><span class="p">]):</span>
+<a id="__codelineno-13-30" name="__codelineno-13-30" href="#__codelineno-13-30"></a>        <span class="k">return</span> <span class="kc">None</span>
+<a id="__codelineno-13-31" name="__codelineno-13-31" href="#__codelineno-13-31"></a>
+<a id="__codelineno-13-32" name="__codelineno-13-32" href="#__codelineno-13-32"></a>    <span class="c1"># Eu devolvo só o que o app precisa: nunca o hash nem o sal.</span>
+<a id="__codelineno-13-33" name="__codelineno-13-33" href="#__codelineno-13-33"></a>    <span class="k">return</span> <span class="p">{</span>
+<a id="__codelineno-13-34" name="__codelineno-13-34" href="#__codelineno-13-34"></a>        <span class="s2">"id"</span><span class="p">:</span> <span class="n">usuario</span><span class="p">[</span><span class="s2">"id"</span><span class="p">],</span>
+<a id="__codelineno-13-35" name="__codelineno-13-35" href="#__codelineno-13-35"></a>        <span class="s2">"nome"</span><span class="p">:</span> <span class="n">usuario</span><span class="p">[</span><span class="s2">"nome"</span><span class="p">],</span>
+<a id="__codelineno-13-36" name="__codelineno-13-36" href="#__codelineno-13-36"></a>        <span class="s2">"email"</span><span class="p">:</span> <span class="n">usuario</span><span class="p">[</span><span class="s2">"email"</span><span class="p">],</span>
+<a id="__codelineno-13-37" name="__codelineno-13-37" href="#__codelineno-13-37"></a>    <span class="p">}</span>
 </code></pre></div>
 <p>Perceba que no PostgreSQL usamos <code>%s</code> como placeholder (no SQLite, usamos <code>?</code>). O funcionamento é o mesmo: protege contra SQL Injection.</p>
+<div class="admonition tip">
+<p class="admonition-title">Dica Profissional</p>
+<p>Repare que o login não procura “e-mail <strong>e</strong> senha” no <code>WHERE</code>, como faria com uma senha guardada em texto puro. Como cada usuário tem o seu sal, o banco não consegue comparar sozinho: primeiro buscamos o usuário pelo e-mail e depois o Python refaz o hash e compara. Note também que e-mail inexistente e senha errada devolvem o mesmo <code>None</code> — o app mostra a mesma mensagem nos dois casos e não revela quais e-mails estão cadastrados.</p>
+</div>
 <h3 id="passo-5-funcoes-de-tarefas-crud">Passo 5 — Funções de tarefas (CRUD)<a class="headerlink" href="#passo-5-funcoes-de-tarefas-crud" title="Permanent link">¶</a></h3>
 <p>Continue no <code>database.py</code>. Adicione as operações CRUD para tarefas:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">criar_tarefa</span><span class="p">(</span><span class="n">titulo</span><span class="p">,</span> <span class="n">descricao</span><span class="p">,</span> <span class="n">data_limite</span><span class="p">,</span> <span class="n">usuario_id</span><span class="p">):</span>
@@ -6439,6 +6476,18 @@
 <p><strong>Causa:</strong> Tentou cadastrar com um e-mail que já existe. Nossa função já trata isso, mas se você não usou o <code>try/except</code>, o erro aparece.</p>
 <p><strong>Solução:</strong> Verifique se a função <code>cadastrar_usuario</code> tem o bloco <code>except psycopg.errors.UniqueViolation</code> que retorna <code>False</code>. No app, exiba uma mensagem amigável ao usuário.</p>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">Coluna <code>senha_hash</code> ou <code>sal</code> não existe</p>
+<p><strong>Sintoma:</strong> <code>psycopg.errors.UndefinedColumn: column "senha_hash" of relation "usuarios" does not exist</code> ao cadastrar.</p>
+<p><strong>Causa:</strong> A tabela <code>usuarios</code> foi criada antes, com outras colunas (por exemplo, numa versão antiga deste exercício com a coluna <code>senha</code>). O <code>CREATE TABLE IF NOT EXISTS</code> não mexe em tabela que já existe.</p>
+<p><strong>Solução:</strong> Se os dados forem só de teste, apague as tabelas no <strong>SQL Editor</strong> do Neon — primeiro <code>DROP TABLE tarefas;</code>, depois <code>DROP TABLE usuarios;</code> (nessa ordem, por causa da chave estrangeira) — e rode o app de novo para recriá-las. Os usuários antigos precisam se cadastrar outra vez: não há como converter um hash antigo, porque a senha original não está guardada em lugar nenhum.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Cadastro funciona, mas o login sempre falha</p>
+<p><strong>Sintoma:</strong> O usuário acabou de se cadastrar e, no login, sempre aparece "E-mail ou senha incorretos!".</p>
+<p><strong>Causa:</strong> O <code>autenticar_usuario</code> sorteou um sal <strong>novo</strong> em vez de usar o sal guardado no cadastro (com outro sal, o hash sai diferente), ou os parâmetros do <code>scrypt</code> mudaram entre o cadastro e o login.</p>
+<p><strong>Solução:</strong> No login, use <code>bytes.fromhex(usuario["sal"])</code> — o sal que veio do banco. O sal sorteado com <code>secrets.token_bytes(16)</code> só aparece no <code>cadastrar_usuario</code>. Mantenha os mesmos <code>n</code>, <code>r</code>, <code>p</code> e <code>dklen</code> nos dois lugares (por isso os dois chamam a mesma função <code>gerar_hash</code>).</p>
+</div>
 <div class="admonition danger">
 <p class="admonition-title">Session state perdido ao atualizar a página</p>
 <p><strong>Sintoma:</strong> O usuário faz login, mas ao pressionar F5 (atualizar a página) é deslogado.</p>
@@ -6457,7 +6506,7 @@
 <p><strong>2. Credenciais protegidas com .env</strong></p>
 <p>A <code>DATABASE_URL</code> contém sua senha. Se alguém acessar essa string, terá controle total sobre seu banco. Usar <code>.env</code> e <code>.gitignore</code> é o padrão da indústria. Serviços como Heroku, Vercel e o próprio Streamlit Cloud usam variáveis de ambiente para configuração — você já está aprendendo o jeito profissional.</p>
 <p><strong>3. Hash de senhas obrigatório</strong></p>
-<p>Nunca armazene senhas em texto puro. Mesmo em exercícios didáticos, usar hash ensina o hábito certo. No mercado, frameworks como Django e FastAPI fazem hash automaticamente. Neste exercício, usamos SHA-256 — em produção real, o ideal é usar <code>bcrypt</code> ou <code>argon2</code>, que são mais resistentes a ataques.</p>
+<p>Nunca armazene senhas em texto puro — nem com um hash rápido e sem sal, como o SHA-256 puro, que se adivinha em segundos para senhas comuns. Use um hash <strong>lento</strong> com <strong>sal aleatório por usuário</strong>, como o <code>scrypt</code> deste exercício (já vem no Python). No mercado, o Django já faz isso por você; em outros projetos, bibliotecas como <code>argon2-cffi</code> e <code>bcrypt</code> são as escolhas mais comuns. E nunca invente o seu próprio esquema de criptografia: use os que já foram testados.</p>
 <p><strong>4. SQL parametrizado contra SQL Injection</strong></p>
 <p>Usamos <code>%s</code> como placeholder em vez de concatenar strings no SQL. Isso protege contra SQL Injection — um ataque onde o usuário digita código SQL malicioso no campo de entrada. Se alguém digitar <code>'; DROP TABLE tarefas; --</code> no campo de título, o <code>%s</code> trata como texto puro, não como comando SQL.</p>
 <p><strong>5. Banco em nuvem vs banco local</strong></p>
@@ -6471,7 +6520,7 @@
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> <code>.gitignore</code> inclui <code>.env</code> e <code>__pycache__/</code></li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> <code>requirements.txt</code> com as 3 dependências listadas</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Tabelas <code>usuarios</code> e <code>tarefas</code> criadas no Neon</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Cadastro de usuário funcionando (com hash de senha)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Cadastro de usuário funcionando (senha guardada como hash <code>scrypt</code> com sal)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Login validando e-mail e senha corretamente</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Criação de tarefas com título, descrição e prazo</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Listagem de tarefas separada por status</li>
