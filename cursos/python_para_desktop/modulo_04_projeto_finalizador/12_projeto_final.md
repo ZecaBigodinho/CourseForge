@@ -257,7 +257,7 @@ Nenhum software está verdadeiramente "pronto". Se você tivesse mais tempo, o q
 
 Anote ideias para o futuro — elas podem se tornar projetos pessoais:
 
-- [ ] Criptografia de senhas — usar bcrypt em vez de texto puro
+- [ ] Login com senhas protegidas — hash com sal (`scrypt`, como no Cap. 13, ou bibliotecas como `bcrypt` e `argon2`), nunca texto puro
 - [ ] Múltiplos níveis de acesso — admin, professor, secretário
 - [ ] Relatórios — exportar lista de alunos para PDF ou Excel
 - [ ] Dashboard — gráficos de alunos por turma, idade, etc.
