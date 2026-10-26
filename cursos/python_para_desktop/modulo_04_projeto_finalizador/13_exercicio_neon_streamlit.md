@@ -8,7 +8,7 @@ Ao final, você terá:
 
 - Um projeto no Neon Database com banco PostgreSQL funcionando na nuvem
 - Tabelas `usuarios` e `tarefas` criadas com SQL real (PostgreSQL)
-- Um sistema de **cadastro e login** de usuários com hash de senha
+- Um sistema de **cadastro e login** de usuários com senha protegida por hash e sal
 - Um **CRUD completo de tarefas** com status (Em Aberto, Realizando, Em Atraso)
 - Controle de **datas** (criação e prazo limite) com detecção automática de atraso
 - O arquivo `.env` protegendo as credenciais do banco
@@ -200,6 +200,8 @@ Comece com a conexão e a criação das tabelas:
 
 import os
 import hashlib
+import hmac
+import secrets
 from datetime import date, datetime
 from dotenv import load_dotenv
 import psycopg
@@ -246,7 +248,8 @@ def criar_tabelas():
             id SERIAL PRIMARY KEY,
             nome VARCHAR(100) NOT NULL,
             email VARCHAR(150) UNIQUE NOT NULL,
-            senha VARCHAR(255) NOT NULL,
+            senha_hash VARCHAR(128) NOT NULL,
+            sal VARCHAR(32) NOT NULL,
             data_cadastro TIMESTAMP DEFAULT NOW()
         )
     """)
@@ -278,28 +281,34 @@ def criar_tabelas():
 Continue no `database.py`. Adicione as funções de cadastro e autenticação:
 
 ```python
-def hash_senha(senha):
+def gerar_hash(senha, sal):
     """
-    Eu transformo a senha em um hash SHA-256.
-    Assim, a senha real nunca é armazenada no banco.
+    Eu transformo a senha em um hash com o scrypt, misturando o sal.
+    O scrypt é lento de propósito: atrapalha quem tenta adivinhar
+    milhões de senhas por segundo.
     """
-    return hashlib.sha256(senha.encode()).hexdigest()
+    hash_bytes = hashlib.scrypt(
+        senha.encode(), salt=sal, n=2**14, r=8, p=1, dklen=64
+    )
+    return hash_bytes.hex()
 
 
 def cadastrar_usuario(nome, email, senha):
     """
     Eu cadastro um novo usuário no banco.
-    A senha é armazenada como hash, nunca em texto puro.
+    Guardo o hash da senha e o sal, nunca a senha em texto puro.
     Retorno True se sucesso, False se o email já existe.
     """
     conn = conectar()
     cursor = conn.cursor()
     try:
-        senha_hash = hash_senha(senha)
+        # Eu sorteio um sal novo (16 bytes aleatórios) para cada usuário.
+        sal = secrets.token_bytes(16)
+        senha_hash = gerar_hash(senha, sal)
         cursor.execute("""
-            INSERT INTO usuarios (nome, email, senha)
-            VALUES (%s, %s, %s)
-        """, (nome, email, senha_hash))
+            INSERT INTO usuarios (nome, email, senha_hash, sal)
+            VALUES (%s, %s, %s, %s)
+        """, (nome, email, senha_hash, sal.hex()))
         conn.commit()
         return True
     except psycopg.errors.UniqueViolation:
@@ -312,7 +321,14 @@ def cadastrar_usuario(nome, email, senha):
 ```
 
 !!! note "Conceito Importante"
-    O `hash_senha` transforma "minha_senha_123" em algo como "a1b2c3d4e5f6...". Mesmo que alguém acesse o banco, não conseguirá descobrir a senha original. O hash é uma via de mão única — não é possível reverter.
+    O hash é uma via de mão única: não existe uma conta que transforme "a1b2c3d4e5f6..." de volta em "minha_senha_123". Mas quem rouba o banco pode **adivinhar**: calcula o hash de "123456", "senha123" e de milhões de senhas comuns e compara com o que está na tabela. Com um hash rápido e sem sal (como o SHA-256 puro), isso leva segundos — e duas pessoas com a mesma senha teriam o mesmo hash.
+
+    Por isso usamos duas defesas, ambas da biblioteca padrão do Python (não precisa instalar nada):
+
+    - **Sal**: 16 bytes sorteados com `secrets` para cada usuário e misturados à senha antes do hash. A mesma senha vira hashes diferentes, e listas prontas de hashes não servem mais. O sal não é segredo: fica guardado na coluna `sal`, ao lado do hash.
+    - **scrypt**: um hash feito para ser lento e gastar memória. Para você, que faz login uma vez, a diferença é imperceptível; para quem testa milhões de palpites, cada um fica caro.
+
+    Nenhuma das duas salva uma senha fraca como "123456" — ela continua entre os primeiros palpites. Por isso o app exige um tamanho mínimo de senha.
 
 Agora, a função de login:
 
@@ -325,20 +341,41 @@ def autenticar_usuario(email, senha):
     """
     conn = conectar()
     cursor = conn.cursor()
-    senha_hash = hash_senha(senha)
 
+    # Eu busco o usuário só pelo e-mail: preciso do sal dele
+    # para refazer a conta com a senha digitada.
     cursor.execute("""
-        SELECT id, nome, email FROM usuarios
-        WHERE email = %s AND senha = %s
-    """, (email, senha_hash))
+        SELECT id, nome, email, senha_hash, sal FROM usuarios
+        WHERE email = %s
+    """, (email,))
 
     usuario = cursor.fetchone()
     cursor.close()
     conn.close()
-    return usuario
+
+    if usuario is None:
+        return None
+
+    # Eu calculo o hash da senha digitada com o MESMO sal do cadastro.
+    tentativa = gerar_hash(senha, bytes.fromhex(usuario["sal"]))
+
+    # Eu comparo com hmac.compare_digest, que leva o mesmo tempo
+    # acertando ou errando: não dá pistas a quem mede o tempo da resposta.
+    if not hmac.compare_digest(tentativa, usuario["senha_hash"]):
+        return None
+
+    # Eu devolvo só o que o app precisa: nunca o hash nem o sal.
+    return {
+        "id": usuario["id"],
+        "nome": usuario["nome"],
+        "email": usuario["email"],
+    }
 ```
 
 Perceba que no PostgreSQL usamos `%s` como placeholder (no SQLite, usamos `?`). O funcionamento é o mesmo: protege contra SQL Injection.
+
+!!! tip "Dica Profissional"
+    Repare que o login não procura “e-mail **e** senha” no `WHERE`, como faria com uma senha guardada em texto puro. Como cada usuário tem o seu sal, o banco não consegue comparar sozinho: primeiro buscamos o usuário pelo e-mail e depois o Python refaz o hash e compara. Note também que e-mail inexistente e senha errada devolvem o mesmo `None` — o app mostra a mesma mensagem nos dois casos e não revela quais e-mails estão cadastrados.
 
 ### Passo 5 — Funções de tarefas (CRUD)
 
@@ -901,6 +938,20 @@ if total > 0:
     
     **Solução:** Verifique se a função `cadastrar_usuario` tem o bloco `except psycopg.errors.UniqueViolation` que retorna `False`. No app, exiba uma mensagem amigável ao usuário.
 
+!!! warning "Coluna `senha_hash` ou `sal` não existe"
+    **Sintoma:** `psycopg.errors.UndefinedColumn: column "senha_hash" of relation "usuarios" does not exist` ao cadastrar.
+    
+    **Causa:** A tabela `usuarios` foi criada antes, com outras colunas (por exemplo, numa versão antiga deste exercício com a coluna `senha`). O `CREATE TABLE IF NOT EXISTS` não mexe em tabela que já existe.
+    
+    **Solução:** Se os dados forem só de teste, apague as tabelas no **SQL Editor** do Neon — primeiro `DROP TABLE tarefas;`, depois `DROP TABLE usuarios;` (nessa ordem, por causa da chave estrangeira) — e rode o app de novo para recriá-las. Os usuários antigos precisam se cadastrar outra vez: não há como converter um hash antigo, porque a senha original não está guardada em lugar nenhum.
+
+!!! danger "Cadastro funciona, mas o login sempre falha"
+    **Sintoma:** O usuário acabou de se cadastrar e, no login, sempre aparece "E-mail ou senha incorretos!".
+    
+    **Causa:** O `autenticar_usuario` sorteou um sal **novo** em vez de usar o sal guardado no cadastro (com outro sal, o hash sai diferente), ou os parâmetros do `scrypt` mudaram entre o cadastro e o login.
+    
+    **Solução:** No login, use `bytes.fromhex(usuario["sal"])` — o sal que veio do banco. O sal sorteado com `secrets.token_bytes(16)` só aparece no `cadastrar_usuario`. Mantenha os mesmos `n`, `r`, `p` e `dklen` nos dois lugares (por isso os dois chamam a mesma função `gerar_hash`).
+
 !!! danger "Session state perdido ao atualizar a página"
     **Sintoma:** O usuário faz login, mas ao pressionar F5 (atualizar a página) é deslogado.
     
@@ -927,7 +978,7 @@ A `DATABASE_URL` contém sua senha. Se alguém acessar essa string, terá contro
 
 **3. Hash de senhas obrigatório**
 
-Nunca armazene senhas em texto puro. Mesmo em exercícios didáticos, usar hash ensina o hábito certo. No mercado, frameworks como Django e FastAPI fazem hash automaticamente. Neste exercício, usamos SHA-256 — em produção real, o ideal é usar `bcrypt` ou `argon2`, que são mais resistentes a ataques.
+Nunca armazene senhas em texto puro — nem com um hash rápido e sem sal, como o SHA-256 puro, que se adivinha em segundos para senhas comuns. Use um hash **lento** com **sal aleatório por usuário**, como o `scrypt` deste exercício (já vem no Python). No mercado, o Django já faz isso por você; em outros projetos, bibliotecas como `argon2-cffi` e `bcrypt` são as escolhas mais comuns. E nunca invente o seu próprio esquema de criptografia: use os que já foram testados.
 
 **4. SQL parametrizado contra SQL Injection**
 
@@ -947,7 +998,7 @@ Antes de considerar o exercício concluído, confirme:
 - [ ] `.gitignore` inclui `.env` e `__pycache__/`
 - [ ] `requirements.txt` com as 3 dependências listadas
 - [ ] Tabelas `usuarios` e `tarefas` criadas no Neon
-- [ ] Cadastro de usuário funcionando (com hash de senha)
+- [ ] Cadastro de usuário funcionando (senha guardada como hash `scrypt` com sal)
 - [ ] Login validando e-mail e senha corretamente
 - [ ] Criação de tarefas com título, descrição e prazo
 - [ ] Listagem de tarefas separada por status
