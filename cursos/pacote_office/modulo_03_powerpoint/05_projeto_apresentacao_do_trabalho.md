@@ -35,11 +35,21 @@ Ao final deste projeto, você terá:
 | **9. Referências** | As obras citadas, no padrão ABNT | Letra menor é aceitável aqui (mínimo 16 pt) |
 | **10. Perguntas** | “Obrigado! Perguntas?” e seu contato da escola | Opcional |
 
+<figure markdown="span">
+  ![Os 10 slides de uma apresentação de exemplo sobre o consumo de água: capa, roteiro com Zoom de Resumo, dois slides de introdução com títulos que afirmam, um gráfico do consumo da escola, um SmartArt com três atitudes, uma tabela da campanha, a conclusão, as referências e o slide de perguntas](assets/05_projeto_completo.webp){ loading=lazy }
+  <figcaption>Um exemplo montado com dados inventados. Repare nos títulos: lidos em sequência, contam a história do trabalho.</figcaption>
+</figure>
+
 !!! info "Citação no slide"
     Dado ou frase de um autor no slide leva a fonte curta: (Sobrenome, ano). A referência completa vai no slide de **Referências**, como no trabalho escrito (aula 03 do Módulo 01).
 
 !!! tip "Zoom de Resumo"
-    *Inserir ➔ Zoom* ➔ **Zoom de Resumo** cria um slide com miniaturas das seções. Na apresentação, clicar em uma miniatura leva até a seção e volta ao resumo no final — ótimo para o slide de roteiro.
+    *Inserir ➔ Zoom* ➔ **Zoom de Resumo** cria um slide com miniaturas das seções. Na apresentação, clicar em uma miniatura leva até a seção e volta ao resumo no final — ótimo para o slide de roteiro. Antes, divida a apresentação em **seções** (aula 01). O slide novo vem numa seção própria (*Seção do Resumo*) e **sem título**: escreva “Roteiro” e dê um **texto alternativo** ao zoom.
+
+<figure markdown="span">
+  ![Em cima, o menu Inserir, Zoom com Zoom de Resumo em destaque e a janela Inserir Zoom de Resumo com o primeiro slide de cada seção marcado; embaixo, o slide Roteiro com as miniaturas clicáveis das três seções e, no painel da esquerda, a Seção do Resumo criada](assets/05_zoom_de_resumo.webp){ loading=lazy }
+  <figcaption>(1) <em>Inserir ➔ Zoom ➔ Zoom de Resumo</em> · (2) o PowerPoint já marca o primeiro slide de cada seção (desmarque a capa, se quiser) · (3) o slide de roteiro, com uma miniatura clicável por seção · (4) a seção nova criada para ele.</figcaption>
+</figure>
 
 ---
 
@@ -82,7 +92,7 @@ Ao final deste projeto, você terá:
 - [ ] Nenhum slide com parágrafo inteiro; letra de pelo menos 24 pt (16 pt nas referências).
 - [ ] Padrão pelo **Slide Mestre**: número e rodapé em todos, menos na capa.
 - [ ] Pelo menos **um gráfico ou tabela** e **um SmartArt**.
-- [ ] Imagens com crédito e texto alternativo; *Verificar Acessibilidade* **sem erros**.
+- [ ] Imagens com crédito e texto alternativo; *Verificar Acessibilidade* com **todos os problemas resolvidos** (✔).
 - [ ] Uma transição só, discreta; animações apenas para revelar.
 - [ ] **Anotações** em todos os slides de conteúdo.
 - [ ] Ensaiada entre **5 e 7 minutos**, **sem** intervalos salvos.
@@ -123,7 +133,9 @@ Monte o **esqueleto**: mensagem principal escrita nas anotações da capa, todos
     4. *Exibir ➔ Slide Mestre*: fonte do título e faixa/logotipo no **slide grande do topo**. *Inserir ➔ Cabeçalho e Rodapé*: número ✓, rodapé ✓, *Não mostrar no slide de título* ✓, *Aplicar a todas*.
     5. Anotações em todos os slides de conteúdo — frases completas, como você vai falar.
 
-    **Teste rápido:** recolha a Estrutura de Tópicos (*Recolher Tudo*) e leia só os títulos em voz alta. Deve soar como um resumo do trabalho.
+    **Teste rápido:** na Estrutura de Tópicos, botão direito na lista ➔ setinha de *Recolher* ➔ **Recolher Tudo** (clicar no próprio *Recolher* recolhe só o slide atual). Leia só os títulos em voz alta: deve soar como um resumo do trabalho. Slides com gráfico, SmartArt ou tabela aparecem ali só com o título — mais um motivo para o título dizer a conclusão.
+
+    ![Menu do botão direito na Estrutura de Tópicos com Recolher aberto e Recolher Tudo em destaque; embaixo, a lista com só os 10 títulos da apresentação de exemplo](assets/05_so_os_titulos.webp){ loading=lazy }
 
 ### Intermediário (aplicação)
 
@@ -135,7 +147,11 @@ Complete o **conteúdo visual**: o gráfico ou a tabela do Excel, o SmartArt, as
     2. **SmartArt:** nos tópicos de um slide de processo ou comparação ➔ *Página Inicial ➔ Converter em SmartArt*.
     3. **Imagens:** *Imagens de Banco de Imagens* ou *Imagens Online* com **Somente Creative Commons**; crédito no canto; *Exibir Texto Alt* em cada uma.
     4. **Movimento:** *Transições ➔ Esmaecer ➔ Aplicar a Todos*; nos slides de tópicos, *Animações ➔ Surgir ➔ Por Parágrafo*.
-    5. *Revisão ➔ Verificar Acessibilidade* ➔ corrija até a seção **Erros** ficar vazia. (Avisos e dicas também valem a pena olhar.)
+    5. *Revisão ➔ Verificar Acessibilidade* ➔ no *Assistente de acessibilidade*, corrija até todos os tipos de problema ficarem com ✔. Atenção: o **Zoom de Resumo** e o **SmartArt** também pedem texto alternativo. O item **Verificar sentido de leitura** não é um erro: é um pedido para você conferir, em cada slide, a ordem em que o leitor de tela lê os objetos (botão *Verificar a Ordem de Objetos*).
+
+    ![O Assistente de acessibilidade apontando Texto Alt ausente no Zoom de Resumo do slide Roteiro, com a caixa para escrever a descrição; no canto, o item Verificar sentido de leitura com o botão Verificar a Ordem de Objetos](assets/05_acessibilidade_do_projeto.webp){ loading=lazy }
+
+    (1) O Zoom de Resumo sem texto alternativo · (2) escreva a descrição ali mesmo e clique em *Salvar* · (3) a conferência da ordem de leitura.
 
     **Se o slide de referências não passar no verificador** por causa do contraste ou da letra: aumente para 16 pt e use a cor de texto do tema.
 
