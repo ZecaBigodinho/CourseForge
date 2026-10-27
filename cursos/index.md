@@ -184,4 +184,4 @@ Apresente o sistema em equipe no Módulo 05 e receba o certificado.
     Na [Central de Revisão Visual](python_para_desktop/modulo_00_revisao_e_fixacao/index.md): cada tema tem analogias, diagramas e os erros mais comuns.
 
 ??? question "Encontrei um erro no material. Como aviso?"
-    Abra uma [issue no GitHub](https://github.com/ZecaBigodinho/curso-python/issues) ou envie um e-mail para [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com).
+    Abra uma [issue no GitHub](https://github.com/ZecaBigodinho/CourseForge/issues) ou envie um e-mail para [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com).

@@ -20,6 +20,8 @@ mkdocs:
   site_name: "CourseForge · IF"
   site_description: "Cursos gratuitos para a sala de aula: Python para Desktop do zero ao sistema completo, com aulas práticas, revisão visual e projeto final."
   site_author: "Pedro Paulo IF"
+  # Endereço do site publicado: sem ele, a página 404 busca CSS e logo na raiz do domínio
+  site_url: https://zecabigodinho.github.io/CourseForge/
   # Rodapé de todas as páginas (aceita HTML)
   copyright: 'Material gratuito para uso educacional · Prof. Pedro Paulo IF · <a href="mailto:pedropaulo4hire@gmail.com">pedropaulo4hire@gmail.com</a>'
   theme:
@@ -62,7 +64,7 @@ mkdocs:
     generator: false
     social:
       - icon: fontawesome/brands/github
-        link: https://github.com/ZecaBigodinho/curso-python
+        link: https://github.com/ZecaBigodinho/CourseForge
         name: Repositório no GitHub
       - icon: fontawesome/solid/envelope
         link: mailto:pedropaulo4hire@gmail.com

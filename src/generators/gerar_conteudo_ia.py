@@ -54,7 +54,7 @@ OPENCODE_TIMEOUT = int(os.environ.get("OPENCODE_TIMEOUT", "600"))
 
 # URL base do site publicado (para montar links)
 SITE_BASE_URL = os.environ.get(
-    "SITE_BASE_URL", "https://zecabigodinho.github.io/curso-python/"
+    "SITE_BASE_URL", "https://zecabigodinho.github.io/CourseForge/"
 )
 
 
