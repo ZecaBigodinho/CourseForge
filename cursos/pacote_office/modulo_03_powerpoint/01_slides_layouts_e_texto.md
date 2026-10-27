@@ -35,6 +35,11 @@ Ao abrir uma **Apresentação em Branco**, você vê:
 | **Faixa de opções** | As abas *Página Inicial*, *Inserir*, *Design*, *Transições*, *Animações*, *Apresentação de Slides*, *Revisão* e *Exibir*. |
 | **Barra de status** | Embaixo: número do slide, botões dos modos de exibição e zoom. |
 
+<figure markdown="span">
+  ![Janela do PowerPoint no modo Normal com uma apresentação de exemplo sobre fotossíntese: a Faixa de opções no alto, as miniaturas dos 7 slides à esquerda, o slide O que é no centro, as anotações embaixo dele e, na barra de status, os botões dos modos de exibição](assets/01_tela_do_powerpoint.webp){ loading=lazy }
+  <figcaption>(1) Faixa de opções · (2) painel de miniaturas · (3) área do slide · (4) anotações — só você vê · (5) botões dos modos de exibição: Normal, Classificação de Slides, Modo de Exibição de Leitura e Apresentação de Slides.</figcaption>
+</figure>
+
 ### Modos de exibição
 
 Na aba *Exibir* (ou nos botões da barra de status):
@@ -54,6 +59,11 @@ Na aba *Exibir* (ou nos botões da barra de status):
 - **Excluir:** selecione a miniatura e aperte `Delete`.
 - **Trocar o layout de um slide pronto:** *Página Inicial* ➔ **Layout**.
 
+<figure markdown="span">
+  ![Menu do botão direito sobre a miniatura do slide 3, com Duplicar Slide e Excluir Slide, Adicionar Seção e Layout em destaque](assets/01_menu_da_miniatura.webp){ loading=lazy }
+  <figcaption>Botão direito na miniatura: (1) <em>Duplicar Slide</em> e <em>Excluir Slide</em> · (2) <em>Adicionar Seção</em> (exercício avançado) · (3) <em>Layout</em>, para trocar o layout de um slide pronto.</figcaption>
+</figure>
+
 | Layout | Quando usar |
 |---|---|
 | **Slide de Título** | A capa: título da apresentação, seu nome, turma e data |
@@ -61,6 +71,11 @@ Na aba *Exibir* (ou nos botões da barra de status):
 | **Cabeçalho da Seção** | Separar as partes da apresentação (“Parte 2 — Resultados”) |
 | **Duas Partes de Conteúdo** / **Comparação** | Comparar duas coisas lado a lado |
 | **Somente Título** / **Em Branco** | Slides com uma imagem grande ou um gráfico |
+
+<figure markdown="span">
+  ![A setinha do botão Novo Slide aberta, com os layouts do Tema do Office: Slide de Título, Título e Conteúdo, Cabeçalho da Seção, Duas Partes de Conteúdo, Comparação, Somente Título, Em Branco, Conteúdo com Legenda e Imagem com Legenda](assets/01_novo_slide_layouts.webp){ loading=lazy }
+  <figcaption>(1) A setinha embaixo de <em>Novo Slide</em> · (2) os layouts.</figcaption>
+</figure>
 
 !!! tip "Escreva dentro dos espaços reservados"
     As caixas pontilhadas (“Clique para adicionar um título”) são os **espaços reservados**. Escreva **neles**, em vez de criar caixas de texto soltas: assim o texto segue o tema, aparece no modo **Estrutura de Tópicos** e é lido pelos leitores de tela.
@@ -80,6 +95,11 @@ Na aba *Exibir* (ou nos botões da barra de status):
 
 - Digite o título do slide e `Enter` ➔ cria o **próximo slide**.
 - `Tab` transforma a linha em **tópico** do slide de cima; `Shift + Tab` a promove de volta a título de slide.
+
+<figure markdown="span">
+  ![Modo de Exibição de Estrutura de Tópicos: à esquerda, o texto dos 7 slides da apresentação sobre fotossíntese, com os títulos em negrito e os tópicos embaixo; o slide 4 tem dois subtópicos com recuo maior; à direita, o slide 4 aberto](assets/01_estrutura_de_topicos.webp){ loading=lazy }
+  <figcaption>(1) <em>Exibir</em> ➔ <em>Modo de Exibição de Estrutura de Tópicos</em> · (2) a apresentação inteira como uma lista: cada título em negrito é um slide · (3) com <code>Tab</code>, a linha desce um nível e vira subtópico.</figcaption>
+</figure>
 
 Assim você escreve a **história** da apresentação inteira em minutos, sem se distrair com o visual.
 
@@ -166,6 +186,10 @@ Usando **só** o *Modo de Exibição de Estrutura de Tópicos*, escreva o roteir
     1. Em cada slide, clique em *Anotações* (barra de status) e escreva as frases completas. No slide, transforme cada frase em **palavras-chave**: “A fotossíntese transforma luz em energia química” ➔ “Luz ➔ energia química”.
     2. Botão direito na miniatura do primeiro slide de cada parte ➔ **Adicionar Seção** ➔ dê o nome. As seções aparecem no painel de miniaturas e podem ser recolhidas ou arrastadas inteiras.
     3. `F5` e um cronômetro (o do celular serve). Passou de 6 minutos? Corte slides, não aumente a velocidade da fala.
+
+    ![Classificação de Slides com a apresentação dividida em três seções: Introdução com os slides 1 e 2, Desenvolvimento com os slides 3 a 6 e Conclusão com o slide 7](assets/01_secoes.webp){ loading=lazy }
+
+    As três seções em *Exibir ➔ Classificação de Slides*. A setinha ao lado do nome recolhe a seção.
 
     **Por que funciona:** o slide é para a **plateia** (poucas palavras, fáceis de ler de longe); as anotações são para **você** (o texto completo). Na aula 04, você vai ver as anotações na tela do computador enquanto a plateia vê só o slide.
 
