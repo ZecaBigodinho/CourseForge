@@ -159,7 +159,7 @@ O curso está dividido em **6 módulos na trilha principal (00 a 05)**, **1 mód
 | 01 | Conceitos, conta e instalação | Git × GitHub, conta com 2FA, instalação no Windows e `git config` |
 | 02 | Primeiro repositório | `status`, `add`, `commit`, `diff`, `log`, `.gitignore` e desfazer com segurança |
 | 03 | Do VS Code para o GitHub | Publicar um projeto que já existe: Controle do Código-Fonte e GitHub Desktop |
-| 04 | Repositório remoto e equipe | Site do GitHub, `remote`, `push`, `clone`, autenticação e colaboradores *(em atualização)* |
+| 04 | Repositório remoto e equipe | Site do GitHub, `remote`, `push`, push recusado, `clone`, `pull`, autenticação e colaboradores |
 | 05 | Branches e Pull Requests | Trabalho em equipe, conflitos e Issues *(em preparação)* |
 | 06 | Publicando o Projeto Final | README profissional, releases e portfólio |
 

@@ -228,4 +228,4 @@ Com um projeto seu que ainda não usa Git (pode ser um exercício de qualquer m�
 
 ## ➡️ Próximo passo
 
-**[04 — Criando um Projeto Profissional](04_criando_projeto_profissional.md)** *(em atualização)*: o repositório no site do GitHub, o terminal (`remote`, `push`, `clone`) e a equipe.
+**[04 — Repositório remoto e equipe](04_repositorio_remoto_e_equipe.md)**: o repositório no site do GitHub, o terminal (`remote`, `push`, `pull`, `clone`) e os colaboradores.
