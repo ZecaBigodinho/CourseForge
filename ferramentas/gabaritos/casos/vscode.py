@@ -41,7 +41,9 @@ print("mesma saída antes e depois da formatação")
     ("02_ambiente_virtual_e_terminal.md", "Intermediário",
      G("02_ambiente_virtual_e_terminal.md", "Intermediário"), "", _gabarito_em("estou_no_venv.py", '''\
 import pathlib, subprocess, sys, venv
-fora = subprocess.run([sys.executable, "-X", "utf8", "estou_no_venv.py"],
+# Python base: mesmo que os testes rodem dentro de um venv, "fora" tem de ser fora
+base = getattr(sys, "_base_executable", sys.executable)
+fora = subprocess.run([base, "-X", "utf8", "estou_no_venv.py"],
                       capture_output=True, text=True, encoding="utf-8").stdout
 assert "Fora de um ambiente virtual" in fora, fora
 venv.create("venv_teste", with_pip=False)  # sem pip: só para o teste ser rápido
