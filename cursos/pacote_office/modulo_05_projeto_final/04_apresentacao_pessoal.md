@@ -107,7 +107,7 @@ Monte os **6 slides** do roteiro com **títulos que afirmam**, um tema, o **núm
 
     1. **Estrutura de Tópicos** (*Exibir*) com os 6 títulos — lidos em sequência, contam quem você é e o que procura.
     2. *Design ➔ Temas* e *Variantes*; mudanças comuns a todos os slides no **Slide Mestre**.
-    3. *Inserir ➔ Cabeçalho e Rodapé* ➔ **Número do slide** ✓ ➔ **Não mostrar no slide de título** ✓ ➔ *Aplicar a Todos*.
+    3. *Inserir ➔ Cabeçalho e Rodapé* ➔ **Número do slide** ✓ ➔ **Não mostrar no slide de título** ✓ ➔ *Aplicar a todas*.
     4. Slide 3 com **SmartArt** (*Converter em SmartArt ➔ Lista*): cada habilidade com a prova em uma linha curta.
     5. **Anotações** em todos os slides, com o texto completo da fala; no slide, só palavras-chave, letra de 24 pt ou mais.
 

@@ -120,7 +120,7 @@ Monte o **esqueleto**: mensagem principal escrita nas anotações da capa, todos
     1. **Estrutura de Tópicos** (*Exibir*) com 8 a 10 linhas sem recuo — uma por slide — na ordem da tabela da aula.
     2. Títulos que **afirmam**: “Banhos longos são o maior desperdício em casa” em vez de “Desperdício”.
     3. *Exibir ➔ Normal*: layouts certos (capa com *Slide de Título*; divisões com *Cabeçalho da Seção*).
-    4. *Exibir ➔ Slide Mestre*: fonte do título e faixa/logotipo no **slide grande do topo**. *Inserir ➔ Cabeçalho e Rodapé*: número ✓, rodapé ✓, *Não mostrar no slide de título* ✓, *Aplicar a Todos*.
+    4. *Exibir ➔ Slide Mestre*: fonte do título e faixa/logotipo no **slide grande do topo**. *Inserir ➔ Cabeçalho e Rodapé*: número ✓, rodapé ✓, *Não mostrar no slide de título* ✓, *Aplicar a todas*.
     5. Anotações em todos os slides de conteúdo — frases completas, como você vai falar.
 
     **Teste rápido:** recolha a Estrutura de Tópicos (*Recolher Tudo*) e leia só os títulos em voz alta. Deve soar como um resumo do trabalho.
