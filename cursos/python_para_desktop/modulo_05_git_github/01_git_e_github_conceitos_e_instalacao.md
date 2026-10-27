@@ -109,7 +109,10 @@ O GitHub exige a **verificação em duas etapas** de quem contribui com código.
 Cada commit grava o e-mail do autor, e em repositórios públicos qualquer pessoa pode vê-lo. Para não expor o seu e-mail:
 
 1. *Settings ➔ Emails* ➔ marque **Keep my email addresses private**.
-2. Logo abaixo, o GitHub mostra um e-mail no formato `12345678+seu-usuario@users.noreply.github.com`. **Copie**: é ele que você vai usar no Passo 4.
+2. Logo abaixo, o GitHub mostra o **seu** e-mail privado, no formato `número+seu-usuario@users.noreply.github.com`. **Copie exatamente como aparece**: é ele que você vai usar no Passo 4.
+
+!!! danger "Nunca invente o número do e-mail noreply"
+    O número antes do `+` é o **ID da sua conta**. Se você inventar um número (`12345678+...`), ele pode ser o ID de **outra pessoa** — e os seus commits aparecem no GitHub com o nome e a foto dela. Copie o e-mail da página *Settings ➔ Emails*.
 
 ---
 
@@ -169,7 +172,7 @@ No terminal, um comando por vez (troque pelos seus dados):
 
 ```powershell
 git config --global user.name "Ana Souza"
-git config --global user.email "12345678+ana-souza@users.noreply.github.com"
+git config --global user.email "o-email-que-voce-copiou@users.noreply.github.com"
 git config --global init.defaultBranch main
 git config --global core.editor "code --wait"
 ```
@@ -188,8 +191,8 @@ git config --global --list
 ```
 
 <figure markdown="span">
-  ![Terminal do PowerShell com git --version mostrando a versão instalada, os quatro comandos git config --global e o resultado de git config --global --list com user.name, user.email, init.defaultbranch e core.editor](assets/01_git_config.webp){ loading=lazy }
-  <figcaption>(1) A versão do Git · (2) a configuração inicial, um comando por linha · (3) a conferência com <code>--list</code>. Se um valor saiu errado, é só rodar o comando de novo com o valor certo.</figcaption>
+  ![Terminal do PowerShell com git --version mostrando a versão instalada, os quatro comandos git config --global (com um e-mail fictício de exemplo) e o resultado de git config --global --list com user.name, user.email, init.defaultbranch e core.editor](assets/01_git_config.webp){ loading=lazy }
+  <figcaption>(1) A versão do Git · (2) a configuração inicial, um comando por linha · (3) a conferência com <code>--list</code>. Se um valor saiu errado, é só rodar o comando de novo com o valor certo. (No exemplo, um e-mail fictício: <code>example.com</code> é reservado para exemplos. Use o seu.)</figcaption>
 </figure>
 
 !!! tip "Computador da escola ou compartilhado"
@@ -278,4 +281,4 @@ Responda com as suas palavras:
 
 ## ➡️ Próximo passo
 
-**02 — Primeiro repositório: status, add, commit e histórico** (próxima aula, em preparação): criar um repositório, fazer os primeiros commits e voltar no tempo.
+**[02 — Primeiro repositório: status, add, commit e histórico](02_primeiro_repositorio.md)**: criar um repositório, fazer os primeiros commits e voltar no tempo.

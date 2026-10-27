@@ -18,8 +18,8 @@ Este módulo bônus ensina as ferramentas que todo desenvolvedor profissional us
 ## 📚 Capítulos
 
 - [01. Git e GitHub: conceitos, conta e instalação](01_git_e_github_conceitos_e_instalacao.md)
-- 02. Primeiro repositório: status, add, commit e histórico *(em preparação)*
-- 03. Git no VS Code e no GitHub Desktop *(em preparação)*
+- [02. Primeiro repositório: status, add, commit e histórico](02_primeiro_repositorio.md)
+- [03. Do VS Code para o GitHub: publicando um projeto que já existe](03_vscode_e_github_desktop.md)
 - [04. Criando um Projeto Profissional](04_criando_projeto_profissional.md) *(será reescrita: GitHub, push, clone e autenticação)*
 - 05. Branches, Pull Requests e trabalho em equipe *(em preparação)*
 - [06. Publicando o Projeto Final](06_publicando_projeto_final.md)
