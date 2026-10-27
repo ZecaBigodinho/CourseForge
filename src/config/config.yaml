@@ -69,6 +69,9 @@ mkdocs:
         name: Falar com o professor
   extra_css:
     - stylesheets/custom.css
+  # Acrescenta ?v=<versão> à URL do CSS a cada mudança no arquivo (o Pages guarda o CSS por 10 min)
+  hooks:
+    - ../src/mkdocs_hooks/versao_css.py
   # Plugins do site. search é o padrão do MkDocs (precisa ser listado quando há outros);
   # glightbox amplia as imagens das aulas com um clique (padrão de imagens: ferramentas/midia/README.md)
   plugins:

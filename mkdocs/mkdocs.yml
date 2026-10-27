@@ -49,6 +49,8 @@ extra:
     name: Falar com o professor
 extra_css:
 - stylesheets/custom.css
+hooks:
+- ../src/mkdocs_hooks/versao_css.py
 plugins:
 - search
 - glightbox:
