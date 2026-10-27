@@ -145,6 +145,10 @@ Monte a planilha **Notas**: a Tabela `Notas` com as colunas **Média**, **Frequ�
 
     As médias aparecem arredondadas pelo formato (Ana tem 8,25 de verdade). A frequência com casas decimais mostra Bruno com 87,5%, Diego com 92,5%...
 
+    ![Tabela Notas com as colunas Média, Frequência e Situação calculadas, as situações coloridas em verde, amarelo e vermelho, a frequência de 73% da Elisa em vermelho e a escala de cores nas notas B1 a B4; a Barra de Fórmulas mostra a fórmula SES da Situação](assets/05_planilha_notas.webp){ loading=lazy }
+
+    (1) A fórmula da **Situação** na Barra de Fórmulas — escrita uma vez, vale para a coluna toda · (2) as colunas calculadas, com os destaques · (3) a escala de cores nas notas: vermelho para as mais baixas, verde para as mais altas. A linha mais grossa abaixo do cabeçalho é o painel congelado.
+
 ### Intermediário (aplicação)
 
 Monte a planilha **Consulta** — lista suspensa com os nomes em **B1** e a turma, a média, a frequência e a situação do aluno escolhido em **B2:B5** — e a parte de **fórmulas do Painel**: quantos alunos em cada situação e a média de cada turma.
@@ -159,6 +163,10 @@ Monte a planilha **Consulta** — lista suspensa com os nomes em **B1** e a turm
 
     **Teste:** escolha *Elisa Prado* ➔ A · 6,0 · 73% · Reprovado.
 
+    ![À esquerda, a célula B1 da planilha Consulta com a lista suspensa aberta e os dez nomes dos alunos; à direita, Elisa Prado escolhida, com Turma A, Média 6,0, Frequência 73% e Situação Reprovado, e a Barra de Fórmulas com o PROCX da célula B2](assets/05_consulta.webp){ loading=lazy }
+
+    (1) A lista suspensa em B1 · (2) o `PROCX` da turma · (3) a ficha da aluna escolhida.
+
     **Painel:**
 
     - `=CONT.SE(Notas[Situação];"Aprovado")` ➔ **6** · *Recuperação* ➔ **2** · *Reprovado* ➔ **2**
@@ -172,12 +180,23 @@ Monte a planilha **Consulta** — lista suspensa com os nomes em **B1** e a turm
 
 <!-- gabarito -->
 ??? success "Gabarito — Avançado"
-    1. Clique na Tabela `Notas` ➔ *Inserir ➔ Tabela Dinâmica* ➔ **Planilha Existente** ➔ uma célula do Painel. **Turma** em *Linhas*, **Situação** em *Colunas*, **Aluno** em *Valores* (vira *Contagem de Aluno*). Resultado: turma **A** = 3 aprovados, 1 recuperação, 1 reprovado; turma **B** = o mesmo (3, 1, 1). Gráfico: *Análise de Tabela Dinâmica ➔ Gráfico Dinâmico ➔ Colunas*. Título, por exemplo: “As duas turmas tiveram 3 aprovados em 5”.
+    1. Clique na Tabela `Notas` ➔ *Inserir ➔ Tabela Dinâmica* ➔ **Planilha Existente** ➔ uma célula do Painel. **Turma** em *Linhas*, **Situação** em *Colunas*, **Aluno** em *Valores* (vira *Contagem de Aluno*). Resultado: turma **A** = 3 aprovados, 1 recuperação, 1 reprovado; turma **B** = o mesmo (3, 1, 1). Gráfico: *Análise de Tabela Dinâmica ➔ Gráfico Dinâmico ➔ Colunas*. Título, por exemplo: “As duas turmas tiveram 3 aprovados em 5”. Deixe a **legenda** à vista — sem ela, não dá para saber qual barra é qual situação — e, se quiser, pinte as barras com as mesmas cores da Situação.
+
+        ![Planilha Painel com a contagem de alunos por situação (6, 2 e 2) e as médias das turmas (6,9, 6,1 e 6,5 no geral); ao lado, a tabela dinâmica com as turmas A e B nas linhas e as situações nas colunas, 3, 1 e 1 em cada turma; embaixo, o gráfico dinâmico de colunas com o título As duas turmas tiveram 3 aprovados em 5 e a legenda Aprovado, Recuperação e Reprovado](assets/05_painel.webp){ loading=lazy }
+
+        (1) As fórmulas do exercício intermediário · (2) a tabela dinâmica · (3) o gráfico dinâmico, com título e legenda.
     2. Em **Certificados**, A1 `Nome` e em **A2**: `=FILTRO(Notas[Aluno];Notas[Situação]="Aprovado";"Nenhum aprovado")` ➔ Ana Souza, Carla Mendes, Diego Rocha, Felipe Costa, Isabela Torres e João Pereira.
+
+        ![Planilha Certificados com o título Nome em A1 e os seis aprovados de A2 a A7, contornados pela borda azul do despejo; a Barra de Fórmulas mostra a fórmula FILTRO](assets/05_certificados_filtro.webp){ loading=lazy }
+
         - Selecione os nomes ➔ `Ctrl + C` ➔ em um arquivo novo, A2 ➔ *Colar* ➔ **Colar Valores** (a mala direta precisa dos nomes, não da fórmula).
         - Cabeçalhos em A1:D1: `Nome`, `Curso`, `Carga`, `Data`; preencha *Pacote Office*, a carga horária e a data em todas as linhas. Salve como `participantes.xlsx` e **feche**.
         - No Word, siga o exercício básico da [aula de mala direta](../modulo_01_word/04_mala_direta.md) ➔ **6 certificados**.
-    3. Com B4 = 9, a média do Bruno vai de 5,25 para **6,1** ➔ ele passa a *Aprovado* na Tabela e na Consulta; o Painel mostra **7** aprovados e **1** em recuperação; a lista do `FILTRO` ganha o Bruno. A **tabela dinâmica só muda depois de *Atualizar*** (botão direito ➔ *Atualizar*). E `participantes.xlsx` **não muda**, porque recebeu valores colados — para incluir o Bruno, copie a lista de novo.
+    3. Com B4 = 9, a média do Bruno vai de 5,25 para **6,1** ➔ ele passa a *Aprovado* na Tabela e na Consulta; o Painel mostra **7** aprovados e **1** em recuperação, e a média da turma B sobe para **6,3** (a geral, para **6,6**); a lista do `FILTRO` ganha o Bruno. A **tabela dinâmica só muda depois de *Atualizar*** (botão direito ➔ *Atualizar*): aí a turma B fica com **4** aprovados, nenhum em recuperação e 1 reprovado. O **título do gráfico não muda** — é texto digitado, e agora diz uma coisa que não é mais verdade; reescreva. E `participantes.xlsx` **não muda**, porque recebeu valores colados — para incluir o Bruno, copie a lista de novo.
+
+        ![Três momentos do Painel: em cima, as fórmulas já mostram 7 aprovados e 1 em recuperação, mas o Total Geral da tabela dinâmica ainda diz 6, 2 e 2; no meio, o menu do botão direito sobre a tabela dinâmica com Atualizar em destaque; embaixo, a tabela dinâmica atualizada, com a turma B em 4 aprovados e 1 reprovado e o total 7, 1 e 2, e o gráfico redesenhado, ainda com o título antigo](assets/05_atualizar_tabela_dinamica.webp){ loading=lazy }
+
+        (1) As fórmulas mudam na hora · (2) a tabela dinâmica, não · (3) botão direito ➔ *Atualizar* · (4) a tabela dinâmica com os dados novos · (5) o gráfico acompanha a tabela dinâmica, mas o título continua o antigo.
 
     **Critérios que o professor costuma olhar:** nenhuma conta digitada à mão; regras certas nos casos de limite; planilhas com nomes claros; painel legível; lista de certificados batendo com as situações.
 

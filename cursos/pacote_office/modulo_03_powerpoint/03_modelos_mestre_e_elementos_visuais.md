@@ -41,9 +41,19 @@ O **Slide Mestre** é o “molde” de todos os slides. Mudou ali, mudou na apre
 3. Na guia *Slide Mestre*: **Fontes** e **Cores** do tema, **Estilos de Plano de Fundo**, e você pode inserir um logotipo ou uma faixa de cor no mestre.
 4. *Fechar Modo de Exibição Mestre* para voltar aos slides.
 
+<figure markdown="span">
+  ![Modo Slide Mestre: no painel da esquerda, o slide mestre no topo, maior, e os layouts menores embaixo, todos com a mesma faixa azul no alto e o título na fonte Georgia; na faixa de opções, a guia Slide Mestre com Cores, Fontes, Efeitos, Estilos de Plano de Fundo e Fechar modo de exibição mestre](assets/03_slide_mestre.webp){ loading=lazy }
+  <figcaption>Uma faixa de cor e uma fonte novas no mestre: (1) o slide grande do topo · (2) os layouts recebem as duas mudanças · (3) <em>Cores</em>, <em>Fontes</em> e <em>Estilos de Plano de Fundo</em> · (4) <em>Fechar modo de exibição mestre</em>.</figcaption>
+</figure>
+
 ### Rodapé e número do slide
 
-*Inserir* ➔ **Cabeçalho e Rodapé** ➔ marque **Número do slide** e **Rodapé** (escreva, por exemplo, “Escola · Turma 2B · 2026”) ➔ marque **Não mostrar no slide de título** ➔ *Aplicar a Todos*. A posição e a fonte desses itens são definidas no Slide Mestre.
+*Inserir* ➔ **Cabeçalho e Rodapé** ➔ marque **Número do slide** e **Rodapé** (escreva, por exemplo, “Escola · Turma 2B · 2026”) ➔ marque **Não mostrar no slide de título** ➔ **Aplicar a todas**. A posição e a fonte desses itens são definidas no Slide Mestre.
+
+<figure markdown="span">
+  ![Janela Cabeçalho e Rodapé com Número do slide e Rodapé marcados, o rodapé Escola Exemplo · Turma 1º A · 2026 e Não mostrar no slide de título marcado; ao lado, um slide com o rodapé e o número 3 embaixo e a miniatura da capa sem rodapé](assets/03_cabecalho_e_rodape.webp){ loading=lazy }
+  <figcaption>(1) <em>Número do slide</em> e <em>Rodapé</em> · (2) <em>Não mostrar no slide de título</em> · (3) <strong>Aplicar a todas</strong> · (4) o rodapé e o número em todos os slides · (5) menos na capa.</figcaption>
+</figure>
 
 !!! warning "Formatou slide por slide? Use o mestre"
     Se você precisa repetir a mesma mudança em todos os slides (trocar a fonte do título, mover o logotipo), ela pertence ao **Slide Mestre**. Fazer à mão em cada slide dá trabalho e sempre sobra um diferente.
@@ -59,7 +69,12 @@ O **SmartArt** transforma uma lista em diagrama: processo, ciclo, hierarquia, co
 
 - **De um texto pronto:** clique no espaço com os tópicos ➔ *Página Inicial* ➔ **Converter em SmartArt** ➔ escolha o tipo.
 - **Do zero:** *Inserir* ➔ **SmartArt**. O painel de texto ao lado funciona como a lista de tópicos: `Enter` cria um item, `Tab` cria um subitem.
-- Na guia *Design do SmartArt*: **Alterar Cores** e **Estilos**; *Converter* volta para texto ou forma.
+- Na guia *SmartArt Design*: **Alterar Cores** e **Estilos**; *Converter* volta para texto ou forma.
+
+<figure markdown="span">
+  ![Slide com cinco tópicos selecionado e o botão Converter em SmartArt aberto, mostrando uma galeria de diagramas e, embaixo, Mais Elementos Gráficos SmartArt](assets/03_converter_em_smartart.webp){ loading=lazy }
+  <figcaption>Com o cursor no texto: (1) <em>Converter em SmartArt</em>, no grupo <em>Parágrafo</em> da <em>Página Inicial</em> · (2) <em>Mais Elementos Gráficos SmartArt...</em> abre a lista completa, por categoria.</figcaption>
+</figure>
 
 | Tipo | Quando usar | Exemplo |
 |---|---|---|
@@ -97,6 +112,11 @@ Duas formas:
 | **Usar Tema de Destino e Inserir Pasta de Trabalho** | Copia o gráfico **e os dados** para dentro do PowerPoint, com as cores da apresentação. Não depende mais da planilha. |
 | **Usar Tema de Destino e Vincular Dados** | O gráfico fica **ligado** à planilha: se os números mudarem no Excel, basta *Design do Gráfico* ➔ **Atualizar Dados**. |
 | **Imagem** | Vira uma figura: não dá mais para editar os dados. |
+
+<figure markdown="span">
+  ![Opções de Colagem do PowerPoint com cinco ícones; o terceiro está em destaque e a dica diz Usar Tema de Destino e Vincular Dados](assets/03_colar_vincular.webp){ loading=lazy .sem-zoom }
+  <figcaption>As opções aparecem como ícones; o nome surge ao parar o mouse em cima. Há também as versões <em>Manter Formatação Original</em> (com as cores do Excel), de inserir e de vincular.</figcaption>
+</figure>
 
 !!! warning "Vínculo depende do arquivo"
     Gráfico vinculado precisa encontrar a planilha **no mesmo lugar**. Se você mover ou renomear o arquivo do Excel, ou mandar só o `.pptx` para outra pessoa, o vínculo se perde (o gráfico continua aparecendo, mas não atualiza). Para entregar, prefira **Inserir Pasta de Trabalho**.
@@ -148,10 +168,14 @@ Na sua apresentação do exercício intermediário da aula 01:
 
 <!-- gabarito -->
 ??? success "Gabarito — Intermediário"
-    1. *Novo Slide* (Título e Conteúdo) ➔ título “Como fizemos o trabalho” ➔ os 5 tópicos ➔ clique no texto ➔ *Página Inicial ➔ Converter em SmartArt ➔ Mais Elementos Gráficos SmartArt ➔ Processo* ➔ por exemplo, **Processo Básico** ou **Processo Contínuo em Seta**. *Design do SmartArt ➔ Alterar Cores* ➔ uma opção do tema.
+    1. *Novo Slide* (Título e Conteúdo) ➔ título “Como fizemos o trabalho” ➔ os 5 tópicos ➔ clique no texto ➔ *Página Inicial ➔ Converter em SmartArt ➔ Mais Elementos Gráficos SmartArt ➔ Processo* ➔ por exemplo, **Processo Básico** ou **Processo Contínuo em Seta**. *SmartArt Design ➔ Alterar Cores* ➔ uma opção do tema.
     2. *Novo Slide* ➔ ícone de tabela no espaço reservado (ou *Inserir ➔ Tabela*) ➔ **3 colunas × 4 linhas**: cabeçalho e três opções. Em *Design da Tabela*, deixe **Linha de Cabeçalho** marcada. Selecione a linha da opção escolhida ➔ **negrito** e um *Sombreamento* de destaque.
 
     **Confira:** fonte de pelo menos 18 pt na tabela e no SmartArt; se não couber, corte texto.
+
+    ![Em cima, a janela Escolher Elemento Gráfico SmartArt com a categoria Processo e o Processo Básico selecionados; embaixo, o slide Como fizemos o trabalho com as cinco etapas em caixas ligadas por setas, a guia SmartArt Design e o painel Digite o texto aqui](assets/03_smartart_processo.webp){ loading=lazy }
+
+    (1) Categoria *Processo* · (2) *Processo Básico* · (3) a guia *SmartArt Design* · (4) o painel de texto: cada tópico é uma caixa.
 
 ### Avançado (desafio)
 
@@ -168,8 +192,14 @@ Na sua apresentação do exercício intermediário da aula 01:
 
 <!-- gabarito -->
 ??? success "Gabarito — Avançado"
-    1. No Excel: cole a tabela em A1, selecione **A1:C4** ➔ *Inserir ➔ Gráfico de Colunas ➔ Colunas Agrupadas*. **Salve** a planilha (`vendas_cantina.xlsx`). Clique na borda do gráfico ➔ `Ctrl + C` ➔ no PowerPoint, slide *Somente Título* ➔ *Colar* ➔ **Usar Tema de Destino e Vincular Dados**. Título do slide, por exemplo: “Salgados vendem mais que bebidas e doces juntos” (R$ 1.172,50 contra R$ 1.041,00). Aumente as letras do gráfico para 18 pt ou mais.
-    2. No Excel, **C3** = `300` ➔ salve. No PowerPoint, clique no gráfico ➔ *Design do Gráfico* ➔ **Atualizar Dados** ➔ a coluna de Doce em março sobe. Repare: o título continua verdadeiro? (Salgado R$ 1.172,50 contra R$ 1.189,00 de bebidas e doces — **não** é mais verdade.) Gráfico vinculado atualiza os números, mas **o título é você que revisa**.
+    1. No Excel: cole a tabela em A1, selecione **A1:C4** ➔ *Inserir* ➔ botão de colunas do grupo *Gráficos* ➔ *Coluna 2D* ➔ **Coluna Agrupada** (o nome aparece ao parar o mouse no primeiro ícone). **Salve** a planilha (`vendas_cantina.xlsx`). Clique na borda do gráfico ➔ `Ctrl + C` ➔ no PowerPoint, slide *Somente Título* ➔ *Colar* ➔ **Usar Tema de Destino e Vincular Dados**. Título do slide, por exemplo: “Salgados vendem mais que bebidas e doces juntos” (R$ 1.172,50 contra R$ 1.041,00). Aumente as letras do gráfico para 18 pt ou mais.
+
+        ![No Excel, o menu do botão de colunas com o primeiro ícone de Coluna 2D em destaque e a dica Coluna Agrupada](assets/03_coluna_agrupada.webp){ loading=lazy }
+    2. No Excel, **C3** = `300` ➔ salve. No PowerPoint, clique no gráfico ➔ *Design do Gráfico* ➔ **Atualizar Dados** ➔ a coluna de Doce em março sobe. Repare: o título continua verdadeiro? (Salgado R$ 1.172,50 contra R$ 1.189,00 de bebidas e doces — **não** é mais verdade.) Gráfico vinculado atualiza os números, mas **o título é você que revisa**. Com a planilha **aberta**, o gráfico pode mudar sozinho logo depois de salvar; o *Atualizar Dados* garante a atualização.
+
+        ![Em cima, o slide Salgados vendem mais que bebidas e doces juntos com o gráfico vinculado e Doce em março em 152; embaixo, a guia Design do Gráfico com Atualizar Dados em destaque e o mesmo gráfico com Doce em março em 300, enquanto o título continua o mesmo](assets/03_atualizar_dados.webp){ loading=lazy }
+
+        (1) Doce em março: 152 · (2) *Design do Gráfico ➔ Atualizar Dados* · (3) depois de mudar para 300 no Excel · (4) o título não mudou — e não é mais verdade.
     3. Faça uma cópia da apresentação, apague os slides de conteúdo (deixe capa e um slide de exemplo) ➔ *Arquivo ➔ Salvar como* ➔ tipo **Modelo do PowerPoint (`.potx`)**. Para testar: abra o `.potx` — o PowerPoint cria uma apresentação nova “Apresentação1” a partir dele.
 
 ---

@@ -39,9 +39,14 @@ Ao final desta aula, você será capaz de:
 
 - **Hierarquia:** o mais importante é o **maior** (ou o de cor mais forte). O olho vai primeiro para ele.
 - **Contraste:** texto **escuro em fundo claro** ou **claro em fundo escuro**. Evite texto sobre foto “movimentada”; se precisar, coloque uma faixa de cor atrás do texto.
-- **Alinhamento:** ao arrastar um objeto, aparecem **guias inteligentes** (linhas vermelhas tracejadas) mostrando quando ele está alinhado com outro. Para alinhar vários de uma vez: selecione-os ➔ *Forma ➔ Organizar* ➔ **Alinhar** (*Alinhar à Esquerda*, *Distribuir Horizontalmente*...).
+- **Alinhamento:** ao arrastar um objeto, aparecem **guias inteligentes** (linhas vermelhas tracejadas) mostrando quando ele está alinhado com outro. Para alinhar vários de uma vez: selecione-os ➔ guia *Forma de Formato* ➔ grupo *Organizar* ➔ **Alinhar** (*Alinhar ao Meio*, *Distribuir Horizontalmente*...).
 - **Espaço vazio:** margem livre em volta do texto e entre os blocos deixa o slide “respirar”. Não é desperdício.
 - **Cores e fontes:** use as do **tema** (*Design ➔ Temas* e *Variantes*) — duas ou três cores e, no máximo, duas fontes. Assim a apresentação inteira combina.
+
+<figure markdown="span">
+  ![Em cima, três blocos desalinhados selecionados e o menu Alinhar aberto na guia Forma de Formato, com Alinhar ao Meio e Distribuir Horizontalmente em destaque; embaixo, os mesmos três blocos na mesma altura e com a mesma distância entre si](assets/02_alinhar.webp){ loading=lazy }
+  <figcaption>(1) Com os objetos selecionados, aparece a guia <em>Forma de Formato</em> · (2) <strong>Alinhar</strong>, no grupo <em>Organizar</em> · (3) <em>Alinhar ao Meio</em> e depois <em>Distribuir Horizontalmente</em> · (4) o resultado: mesma altura e mesma distância.</figcaption>
+</figure>
 
 !!! warning "Não use só a cor para dar a informação"
     “Os itens em vermelho estão atrasados” não funciona para quem tem daltonismo nem em projetor desbotado. Junte a cor com um texto ou símbolo: “⚠ atrasado”.
@@ -52,9 +57,14 @@ Ao final desta aula, você será capaz de:
 
 - **Inserir:** *Inserir* ➔ **Imagens** ➔ *Este Dispositivo* (do seu computador), *Imagens de Banco de Imagens* (fotos e ícones liberados para quem tem Microsoft 365) ou *Imagens Online* (pesquisa na web).
 - **Ícones:** *Inserir* ➔ **Ícones** — desenhos simples que você pode recolorir para combinar com o tema.
-- **Cortar:** selecione a imagem ➔ *Formato da Imagem* ➔ **Cortar**. A setinha do botão tem *Cortar para Forma* (círculo, por exemplo) e *Taxa de Proporção*.
-- **Remover Plano de Fundo:** *Formato da Imagem ➔ Remover Plano de Fundo* — funciona bem em fotos com fundo liso.
+- **Cortar:** selecione a imagem ➔ *Formato de Imagem* ➔ **Cortar**. A setinha do botão tem *Cortar para Demarcar Forma* (círculo, por exemplo) e *Taxa de Proporção*.
+- **Remover Plano de Fundo:** *Formato de Imagem ➔ Remover Plano de Fundo* — funciona bem em fotos com fundo liso.
 - **Não distorça:** redimensione pelos **cantos**, não pelas laterais, para a imagem não ficar esticada.
+
+<figure markdown="span">
+  ![Guia Formato de Imagem com a setinha do botão Cortar aberta: Cortar, Cortar para Demarcar Forma, Taxa de Proporção, Preencher e Ajustar](assets/02_cortar.webp){ loading=lazy }
+  <figcaption>(1) A setinha embaixo de <strong>Cortar</strong>, no fim da guia <em>Formato de Imagem</em> · (2) <em>Cortar para Demarcar Forma</em> e <em>Taxa de Proporção</em> abrem, cada um, uma lista de opções.</figcaption>
+</figure>
 
 !!! danger "Imagem da internet tem dono"
     Encontrar uma imagem no buscador não quer dizer que você pode usar. Prefira as **Imagens de Banco de Imagens** do Office, bancos gratuitos com licença livre ou, em *Imagens Online*, o filtro **Somente Creative Commons** — e coloque o **crédito** (“Foto: Nome do autor / site”) no slide ou no slide final de referências.
@@ -76,8 +86,26 @@ Uma apresentação acessível é melhor para **todos** — inclusive para quem l
 
 - **Texto alternativo:** botão direito na imagem ➔ *Exibir Texto Alt* ➔ descreva o que a imagem **mostra e por que importa** (“Gráfico: o consumo de água caiu de 500 para 400 litros”). Imagem só decorativa? Marque *Marcar como decorativa*.
 - **Títulos em todos os slides**, e diferentes entre si: os leitores de tela navegam por eles.
-- **Verificador:** *Revisão* ➔ **Verificar Acessibilidade**. O painel lista erros (como imagem sem texto alt e contraste baixo) e mostra como corrigir cada um.
-- **Ordem de leitura:** no mesmo painel, *Ordem de Leitura* mostra em que ordem um leitor de tela vai ler os objetos do slide. Arraste para corrigir.
+- **Verificador:** *Revisão* ➔ **Verificar Acessibilidade**. Abre o painel **Assistente de acessibilidade**, com os problemas agrupados por tipo (*Texto Alt ausente*, *Título do slide ausente*, *Contraste de texto difícil de ler*...) e quantos há de cada. Clique em um tipo: o PowerPoint vai até o objeto com problema e mostra a correção ali mesmo.
+- **Ordem de leitura:** ao verificar, aparece a guia *Acessibilidade*; nela, **Painel Sentido de Leitura** mostra em que ordem um leitor de tela vai ler os objetos do slide. Arraste para corrigir.
+
+<figure markdown="span">
+  ![À esquerda, o menu do botão direito sobre um gráfico com Exibir Texto Alt em destaque; à direita, o painel Texto Alt com a descrição Gráfico: o consumo de água caiu de 500 para 400 litros por dia depois da campanha, e a caixa Marcar como decorativa](assets/02_texto_alt.webp){ loading=lazy }
+  <figcaption>(1) Botão direito na imagem ➔ <em>Exibir Texto Alt...</em> · (2) a descrição: o que a imagem mostra e por que importa · (3) <em>Marcar como decorativa</em>, para imagens só de enfeite.</figcaption>
+</figure>
+
+<figure markdown="span">
+  ![Guia Revisão com o botão Verificar Acessibilidade e, à direita, o painel Assistente de acessibilidade com Texto Alt ausente: 1 e Título do slide ausente: 1](assets/02_verificar_acessibilidade.webp){ loading=lazy }
+  <figcaption>(1) Guia <em>Revisão</em> · (2) <strong>Verificar Acessibilidade</strong> · (3) e (4) os problemas encontrados: uma imagem sem texto alternativo e um slide sem título. Os itens com ✔ estão certos.</figcaption>
+</figure>
+
+<figure markdown="span">
+  ![O Assistente de acessibilidade aberto no problema Texto Alt ausente: o slide 5, que tem só o gráfico e nenhum título, está selecionado, e o painel mostra a caixa Inserir descrição da imagem e o botão Marcar como decorativo](assets/02_corrigir_texto_alt.webp){ loading=lazy }
+  <figcaption>Ao clicar em <em>Texto Alt ausente</em>: (1) o PowerPoint abre o slide do problema · (2) você escreve a descrição ali mesmo · (3) ou marca como decorativa.</figcaption>
+</figure>
+
+!!! warning "Descrição automática: confira antes de aceitar"
+    Os botões *Gerar texto Alt para mim* e *Gerar Descrição* pedem a um serviço on-line que descreva a imagem. A descrição costuma dizer **o que aparece** (“gráfico de barras cinza e verde”), mas não **por que a imagem está ali** (“o consumo caiu 20%”). Use como rascunho e reescreva.
 
 ---
 
@@ -130,6 +158,8 @@ Faça a **“dieta”** deste slide. Crie-o como está e depois reescreva em **d
     - Frases viraram **palavras-chave**; a explicação completa vai para as **anotações**.
     - Fonte de pelo menos **24 pt** nos tópicos — agora cabe sem o PowerPoint diminuir a letra.
 
+    ![Em cima, o slide A importância da água com um parágrafo inteiro; embaixo, os dois slides da dieta: Muita água vai embora sem uso, com três tópicos curtos, e Três atitudes reduzem o desperdício em casa, com três blocos alinhados](assets/02_dieta_do_slide.webp){ loading=lazy }
+
 ### Intermediário (aplicação)
 
 No slide 2 do exercício básico:
@@ -139,8 +169,8 @@ No slide 2 do exercício básico:
 
 <!-- gabarito -->
 ??? success "Gabarito — Intermediário"
-    1. *Inserir ➔ Ícones* ➔ pesquise “torneira”, “chuveiro” e “ferramenta” ➔ marque os três ➔ *Inserir*. Selecione os três (clique em um, `Shift` + clique nos outros) ➔ *Formato de Gráficos ➔ Preenchimento de Gráfico* ➔ uma cor do tema. Com os três selecionados: *Organizar ➔ Alinhar* ➔ **Alinhar Meio** e depois ***Distribuir Horizontalmente***.
-    2. *Inserir ➔ Imagens ➔ Imagens de Banco de Imagens* (ou *Imagens Online* com o filtro **Somente Creative Commons**) ➔ escolha a foto ➔ *Formato da Imagem ➔ Cortar ➔ Taxa de Proporção* ou arraste as alças pretas até ocupar metade do slide. Redimensione pelos **cantos**.
+    1. *Inserir ➔ Ícones* ➔ pesquise “torneira”, “chuveiro” e “ferramenta” ➔ marque os três ➔ *Inserir*. Selecione os três (clique em um, `Shift` + clique nos outros) ➔ *Formato de Gráficos ➔ Preenchimento de Gráfico* ➔ uma cor do tema. Com os três selecionados: *Organizar ➔ Alinhar* ➔ **Alinhar ao Meio** e depois ***Distribuir Horizontalmente***.
+    2. *Inserir ➔ Imagens ➔ Imagens de Banco de Imagens* (ou *Imagens Online* com o filtro **Somente Creative Commons**) ➔ escolha a foto ➔ *Formato de Imagem ➔ Cortar ➔ Taxa de Proporção* ou arraste as alças pretas até ocupar metade do slide. Redimensione pelos **cantos**.
         - Crédito: caixa de texto pequena (12 a 14 pt) no canto da foto: “Foto: autor / site”. (As imagens do banco do Office dispensam crédito, mas citar não faz mal.)
         - Texto alt: botão direito ➔ *Exibir Texto Alt* ➔ “Torneira aberta pingando água na pia”.
 
@@ -157,11 +187,11 @@ Pegue a apresentação do exercício intermediário da aula 01 e:
 ??? success "Gabarito — Avançado"
     1. *Design ➔ Temas* ➔ escolha um ➔ *Variantes* ➔ escolha a cor. Se algum texto ficou com cor “manual”, selecione e use as cores da primeira linha da paleta (as do tema).
     2. Teste: *Exibir ➔ Modo de Exibição de Estrutura de Tópicos* ➔ botão direito ➔ *Recolher ➔ Recolher Tudo*. Só os títulos aparecem — eles devem contar a história sozinhos.
-    3. *Revisão ➔ Verificar Acessibilidade*. Os erros mais comuns e a correção:
-        - **Texto alternativo ausente** ➔ descreva a imagem ou marque como decorativa.
-        - **Título de slide ausente** ➔ use um layout com título (mesmo que você o esconda atrás da imagem, ele continua lá para o leitor de tela).
+    3. *Revisão ➔ Verificar Acessibilidade*. Os problemas mais comuns no *Assistente de acessibilidade* e a correção:
+        - **Texto Alt ausente** ➔ descreva a imagem ou marque como decorativa.
+        - **Título do slide ausente** ➔ use um layout com título (mesmo que você o esconda atrás da imagem, ele continua lá para o leitor de tela).
         - **Títulos duplicados** ➔ diferencie (“Resultados — parte 1”, “Resultados — parte 2”).
-        - **Contraste baixo** ➔ troque a cor do texto ou do fundo.
+        - **Contraste de texto difícil de ler** ➔ troque a cor do texto ou do fundo.
     4. *Design ➔ Designer* com o slide aberto. Critério para decidir: depois da mudança, a **mensagem principal** ficou mais fácil ou mais difícil de ver em 5 segundos?
 
 ---
