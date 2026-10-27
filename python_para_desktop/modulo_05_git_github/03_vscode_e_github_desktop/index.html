@@ -9,13 +9,13 @@
         <meta name="author" content="Pedro Paulo IF">
       
       
-        <link rel="canonical" href="https://zecabigodinho.github.io/CourseForge/python_para_desktop/modulo_05_git_github/02_publicando_projeto_final/">
+        <link rel="canonical" href="https://zecabigodinho.github.io/CourseForge/python_para_desktop/modulo_05_git_github/03_vscode_e_github_desktop/">
       
       
-        <link rel="prev" href="../01_criando_projeto_profissional/">
+        <link rel="prev" href="../02_primeiro_repositorio/">
       
       
-        <link rel="next" href="../../modulo_00_revisao_e_fixacao/">
+        <link rel="next" href="../04_repositorio_remoto_e_equipe/">
       
       
         
@@ -26,7 +26,7 @@
     
     
       
-        <title>Publicando o Projeto Final - CourseForge · IF</title>
+        <title>Do VS Code para o GitHub: publicando um projeto que já existe - CourseForge · IF</title>
       
     
     
@@ -89,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#02-publicando-o-projeto-final" class="md-skip">
+        <a href="#03-do-vs-code-para-o-github-publicando-um-projeto-que-ja-existe" class="md-skip">
           Ir para o conteúdo
         </a>
       
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Publicando o Projeto Final
+              Do VS Code para o GitHub: publicando um projeto que já existe
             
           </span>
         </div>
@@ -2223,6 +2223,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -2287,14 +2293,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../01_criando_projeto_profissional/" class="md-nav__link">
+      <a href="../01_git_e_github_conceitos_e_instalacao/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Criando um Projeto Profissional
+    Git e GitHub: conceitos, conta e instalação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_primeiro_repositorio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Primeiro repositório: status, add, commit e histórico
   
 
     
@@ -2331,7 +2365,7 @@
   <span class="md-ellipsis">
     
   
-    Publicando o Projeto Final
+    Do VS Code para o GitHub: publicando um projeto que já existe
   
 
     
@@ -2349,7 +2383,7 @@
   <span class="md-ellipsis">
     
   
-    Publicando o Projeto Final
+    Do VS Code para o GitHub: publicando um projeto que já existe
   
 
     
@@ -2375,10 +2409,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#objetivo" class="md-nav__link">
+  <a href="#objetivos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🎯 Objetivo
+        🎯 Objetivos
       
     </span>
   </a>
@@ -2386,10 +2420,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#contextualizacao" class="md-nav__link">
+  <a href="#pre-requisitos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📍 Contextualização
+        Pré-requisitos
       
     </span>
   </a>
@@ -2397,10 +2431,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#resultado-esperado" class="md-nav__link">
+  <a href="#o-cenario" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ✅ Resultado Esperado
+        O cenário
       
     </span>
   </a>
@@ -2408,44 +2442,33 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementacao-guiada" class="md-nav__link">
+  <a href="#passo-1-antes-de-tudo-o-gitignore" class="md-nav__link">
     <span class="md-ellipsis">
       
-        💻 Implementação Guiada
+        Passo 1 — Antes de tudo: o .gitignore
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="💻 Implementação Guiada">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passo-2-inicializar-preparar-e-fazer-o-primeiro-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Passo 2 — Inicializar, preparar e fazer o primeiro commit
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Passo 2 — Inicializar, preparar e fazer o primeiro commit">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#passo-1-commits-profissionais" class="md-nav__link">
+  <a href="#comparar-antes-de-confirmar" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Passo 1 — Commits profissionais
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#passo-2-organizando-o-repositorio" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Passo 2 — Organizando o repositório
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#passo-3-readme-profissional-template-completo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Passo 3 — README profissional (template completo)
+        Comparar antes de confirmar
       
     </span>
   </a>
@@ -2458,10 +2481,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#autores" class="md-nav__link">
+  <a href="#passo-3-publicar-no-github" class="md-nav__link">
     <span class="md-ellipsis">
       
-        👥 Autores
+        Passo 3 — Publicar no GitHub
       
     </span>
   </a>
@@ -2469,82 +2492,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#licenca" class="md-nav__link">
+  <a href="#passo-4-o-dia-a-dia-commit-e-sincronizar" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📝 Licença
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📝 Licença">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#passo-5-screenshots-e-imagens" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Passo 5 — Screenshots e imagens
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#passo-6-criando-uma-release-v100" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Passo 6 — Criando uma Release (v1.0.0)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#passo-7-usando-ia-para-gerar-documentacao" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Passo 7 — Usando IA para gerar documentação
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#passo-8-criando-seu-readme-pessoal-de-perfil" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Passo 8 — Criando seu README Pessoal de Perfil
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#passo-9-checklist-final-de-entrega-do-projeto" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Passo 9 — Checklist final de entrega do projeto
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exercicio" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📝 Exercício
+        Passo 4 — O dia a dia: commit e sincronizar
       
     </span>
   </a>
@@ -2552,21 +2503,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#missao-da-equipe" class="md-nav__link">
+  <a href="#e-pelo-github-desktop" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🏆 Missão da Equipe
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#desafio" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ⚡ Desafio
+        E pelo GitHub Desktop?
       
     </span>
   </a>
@@ -2577,7 +2517,7 @@
   <a href="#erros-comuns" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ⚠️ Erros Comuns
+        ⚠️ Erros comuns
       
     </span>
   </a>
@@ -2585,10 +2525,60 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#boas-praticas" class="md-nav__link">
+  <a href="#exercicios" class="md-nav__link">
     <span class="md-ellipsis">
       
-        💡 Boas Práticas
+        Exercícios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercícios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basico-fixacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Básico (fixação)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intermediario-aplicacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intermediário (aplicação)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avancado-desafio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Avançado (desafio)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 Resumo
       
     </span>
   </a>
@@ -2596,21 +2586,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#checklist" class="md-nav__link">
+  <a href="#proximo-passo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ☑️ Checklist
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusao" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ➡️ Conclusão
+        ➡️ Próximo passo
       
     </span>
   </a>
@@ -2621,6 +2600,62 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_repositorio_remoto_e_equipe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Repositório remoto e equipe: push, pull, clone e colaboradores
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06_publicando_projeto_final/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Publicando o Projeto Final
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -5640,791 +5675,262 @@
 
 
 
-<h1 id="02-publicando-o-projeto-final">02 — Publicando o Projeto Final<a class="headerlink" href="#02-publicando-o-projeto-final" title="Permanent link">¶</a></h1>
-<h2 id="objetivo">🎯 Objetivo<a class="headerlink" href="#objetivo" title="Permanent link">¶</a></h2>
-<p>Neste capítulo você vai transformar o repositório do seu Projeto Final em algo <strong>profissional e digno de portfólio</strong> — com README completo, badges, screenshots, release versionada e documentação gerada com ajuda de IA.</p>
-<p>Ao final, você terá:</p>
+<h1 id="03-do-vs-code-para-o-github-publicando-um-projeto-que-ja-existe">03 — Do VS Code para o GitHub: publicando um projeto que já existe<a class="headerlink" href="#03-do-vs-code-para-o-github-publicando-um-projeto-que-ja-existe" title="Permanent link">¶</a></h1>
+<blockquote>
+<p><strong>Curso:</strong> Python para Desktop<br>
+<strong>Módulo:</strong> 06 — Git &amp; GitHub (bônus)<br>
+<strong>Tempo estimado:</strong> 2 h  </p>
+</blockquote>
+<hr>
+<h2 id="objetivos">🎯 Objetivos<a class="headerlink" href="#objetivos" title="Permanent link">¶</a></h2>
+<p>Ao final desta aula, você será capaz de:</p>
 <ul>
-<li>Commits organizados com mensagens profissionais padronizadas</li>
-<li>Um README.md completo com badges, screenshots, tabela de tecnologias e instruções</li>
-<li>Uma release v1.0.0 publicada no GitHub</li>
-<li>Documentação de qualidade gerada com auxílio de Inteligência Artificial</li>
-<li>O perfil do GitHub configurado como portfólio profissional</li>
-<li>O repositório 100% pronto para ser apresentado a um recrutador</li>
+<li>Colocar no GitHub um projeto que <strong>já existe</strong> no seu computador (o Sistema Escolar, por exemplo), sem levar senhas nem o <code>venv</code>.</li>
+<li>Usar o painel <strong>Controle do Código-Fonte</strong> do VS Code: inicializar, preparar, fazer commit e comparar versões.</li>
+<li><strong>Publicar</strong> o projeto no GitHub direto pelo VS Code e manter tudo sincronizado.</li>
+<li>Fazer o mesmo pelo <strong>GitHub Desktop</strong>, para quem prefere um programa visual.</li>
 </ul>
-<h2 id="contextualizacao">📍 Contextualização<a class="headerlink" href="#contextualizacao" title="Permanent link">¶</a></h2>
-<p>No capítulo anterior, você criou o repositório, aprendeu Git e toda a equipe está fazendo commits. O fluxo técnico funciona. Mas se um recrutador acessar seu GitHub agora, o que ele vai ver?</p>
-<p>Provavelmente: um README com uma linha, commits com mensagens como "update" e "fix", e nenhuma organização visual. Isso é como entregar um currículo escrito à mão em papel amassado — o conteúdo pode ser bom, mas a apresentação mata.</p>
-<p>Neste capítulo, vamos polir tudo. No mercado de trabalho, o GitHub é o seu <strong>portfólio vivo</strong>. Recrutadores técnicos olham seus repositórios antes mesmo de ligar para uma entrevista. Um projeto bem documentado comunica: "essa pessoa é organizada, profissional e se importa com qualidade".</p>
-<h2 id="resultado-esperado">✅ Resultado Esperado<a class="headerlink" href="#resultado-esperado" title="Permanent link">¶</a></h2>
-<p>Ao final deste capítulo, seu README.md será assim:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>┌──────────────────────────────────────────────────────────┐
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>│                                                          │
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>│  # 🎓 Sistema Escolar                                    │
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>│                                                          │
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│  [badge: Python 3.11+] [badge: Status: Concluído]       │
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>│  [badge: License: MIT] [badge: Version: v1.0.0]         │
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>│                                                          │
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>│  &gt; Sistema desktop para gerenciamento de alunos com      │
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>│  &gt; interface gráfica e banco de dados PostgreSQL         │
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>│  &gt; em nuvem (Neon).                                      │
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>│                                                          │
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>│  [📸 Screenshot do sistema]                              │
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>│                                                          │
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>│  ## ✨ Funcionalidades                                    │
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>│  - ✅ Login com autenticação                              │
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>│  - ✅ CRUD completo de alunos                            │
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>│  - ✅ Banco PostgreSQL em nuvem (Neon)                   │
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>│  ...                                                     │
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>│                                                          │
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>│  ## 🚀 Como executar                                     │
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>│  1. Clone o repositório                                  │
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>│  2. Instale as dependências                              │
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>│  3. Configure o .env                                     │
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>│  4. Execute: python main.py                              │
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>│                                                          │
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>│  ## 🛠️ Tecnologias                                      │
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>│  Python | Tkinter | PostgreSQL (Neon)                    │
-<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>│                                                          │
-<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>│  ## 👥 Autores                                           │
-<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>│  João Silva — Maria Santos — Pedro Oliveira              │
-<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>│                                                          │
-<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>└──────────────────────────────────────────────────────────┘
-</code></pre></div>
-<p>E a aba <strong>Releases</strong> mostrará:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>v1.0.0 — Sistema Escolar (Versão Final)
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Publicada em: Agosto 2026
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>📋 O que está incluído:
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>- Tela de login com validação
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>- CRUD completo de alunos
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>- Banco de dados PostgreSQL em nuvem (Neon)
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>- Interface CustomTkinter
-</code></pre></div>
-<h2 id="implementacao-guiada">💻 Implementação Guiada<a class="headerlink" href="#implementacao-guiada" title="Permanent link">¶</a></h2>
-<h3 id="passo-1-commits-profissionais">Passo 1 — Commits profissionais<a class="headerlink" href="#passo-1-commits-profissionais" title="Permanent link">¶</a></h3>
-<p>Até agora, você fez commits com mensagens simples. No mercado, existe um padrão chamado <strong>Conventional Commits</strong> que organiza as mensagens por tipo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>tipo: descrição curta do que foi feito
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Tipos mais comuns:
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  feat:   → Nova funcionalidade
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>  fix:    → Correção de bug
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>  docs:   → Documentação
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>  style:  → Formatação (sem mudar lógica)
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>  refactor: → Refatoração de código
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>  test:   → Adição de testes
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>  chore:  → Tarefas de manutenção
-</code></pre></div>
-<p>Exemplos reais para o Projeto Final:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"feat: adiciona tela de cadastro de alunos"</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"fix: corrige validação de idade negativa"</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"docs: atualiza README com instruções de uso"</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"style: organiza imports do módulo views"</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"refactor: separa lógica de CRUD em módulo próprio"</span>
-</code></pre></div>
-<div class="admonition tip">
-<p class="admonition-title">Dica Profissional</p>
-<p>Se você olhar os repositórios de grandes projetos open-source (React, Django, Linux), todos seguem esse padrão. Adotá-lo agora cria um hábito que vai te acompanhar por toda a carreira.</p>
+<h2 id="pre-requisitos">Pré-requisitos<a class="headerlink" href="#pre-requisitos" title="Permanent link">¶</a></h2>
+<ul>
+<li><a href="../02_primeiro_repositorio/">Aula 02</a>: as três áreas, <code>status</code>, <code>add</code>, <code>commit</code> e o <code>.gitignore</code>.</li>
+<li>Conta no GitHub com verificação em duas etapas (<a href="../01_git_e_github_conceitos_e_instalacao/">aula 01</a>).</li>
+<li>Um projeto Python aberto no VS Code (<em>Arquivo ➔ Abrir Pasta</em>).</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Os botões fazem o que você já sabe</p>
+<p>Cada botão desta aula roda um comando da aula 02: <strong>Inicializar Repositório</strong> = <code>git init</code>; o <strong>+</strong> = <code>git add</code>; <strong>Confirmação</strong> = <code>git commit</code>; <strong>Sincronizar Alterações</strong> = <code>git pull</code> + <code>git push</code>. Se algo der estranho, o <code>git status</code> no terminal continua sendo a sua lanterna.</p>
 </div>
-<p><strong>Revisando o histórico:</strong></p>
-<p>Para ver todos os commits do projeto:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># No terminal:</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>git<span class="w"> </span>log<span class="w"> </span>--oneline
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># Resultado:</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="c1"># a1b2c3d feat: leva os dados para o banco em nuvem (Neon)</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="c1"># e4f5g6h feat: implementa CRUD completo</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1"># i7j8k9l feat: conecta SQLite ao cadastro</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="c1"># m0n1o2p feat: cria tela de cadastro de alunos</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="c1"># q3r4s5t feat: adiciona código inicial do projeto</span>
-</code></pre></div>
-<p>No GitHub, vá na aba <strong>Commits</strong> para ver o histórico visual com autor, data e mensagem de cada commit.</p>
-<h3 id="passo-2-organizando-o-repositorio">Passo 2 — Organizando o repositório<a class="headerlink" href="#passo-2-organizando-o-repositorio" title="Permanent link">¶</a></h3>
-<p>Antes de montar o README, garanta que o repositório está organizado:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sistema-escolar/
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>├── .env.example          # ← Template do .env (sem senhas)
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>├── .gitignore            # ← Arquivos ignorados
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>├── LICENSE               # ← Licença MIT
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>├── README.md             # ← Documentação principal
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>├── requirements.txt      # ← Dependências do projeto
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>├── main.py               # ← Ponto de entrada
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>├── controllers/          # ← Lógica de negócio
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>│   ├── __init__.py
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>│   ├── auth.py
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>│   └── aluno.py
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>├── database/             # ← Persistência de dados
-<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>│   ├── __init__.py
-<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>│   ├── conexao.py
-<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>│   └── operacoes.py
-<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>├── views/                # ← Interface gráfica
-<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>│   ├── __init__.py
-<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>│   ├── login.py
-<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>│   ├── menu.py
-<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>│   └── cadastro.py
-<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>└── utils/                # ← Funções auxiliares
-<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>    ├── __init__.py
-<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>    └── helpers.py
-</code></pre></div>
-<p>Verifique que o <code>requirements.txt</code> lista todas as dependências:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>customtkinter==5.2.2
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>python-dotenv&gt;=1.0.0
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>psycopg[binary]&gt;=3.2
-</code></pre></div>
-<p>E que o <code>.env.example</code> existe como template:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a># Copie este arquivo para .env e cole a connection string do Neon
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>DATABASE_URL=
-</code></pre></div>
-<h3 id="passo-3-readme-profissional-template-completo">Passo 3 — README profissional (template completo)<a class="headerlink" href="#passo-3-readme-profissional-template-completo" title="Permanent link">¶</a></h3>
-<p>Substitua o conteúdo do <code>README.md</code> pelo template abaixo, adaptando para o projeto da sua equipe:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="gh"># 🎓 Sistema Escolar</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>![<span class="nt">Python</span>](<span class="na">https://img.shields.io/badge/Python-3.11+-3776AB?style=flat-square&amp;logo=python&amp;logoColor=white</span>)
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>![<span class="nt">Status</span>](<span class="na">https://img.shields.io/badge/Status-Concluído-00bfa5?style=flat-square</span>)
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>![<span class="nt">License</span>](<span class="na">https://img.shields.io/badge/License-MIT-blue?style=flat-square</span>)
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="k">&gt; </span><span class="ge">Sistema desktop para gerenciamento de alunos</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="k">&gt; </span><span class="ge">com interface gráfica moderna e banco de dados</span>
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="k">&gt; </span><span class="ge">PostgreSQL em nuvem (Neon).</span>
-<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>
-<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="gu">## 📸 Screenshots</span>
-<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>
-<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>&lt;!-- Insira imagens aqui --&gt;
-<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>&lt;!-- ![<span class="nt">Tela de Login</span>](<span class="na">screenshots/login.png</span>) --&gt;
-<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>&lt;!-- ![<span class="nt">Cadastro</span>](<span class="na">screenshots/cadastro.png</span>) --&gt;
-<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>
-<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="gu">## ✨ Funcionalidades</span>
-<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>
-<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="k">-</span><span class="w"> </span>🔐 Login com autenticação de usuário
-<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="k">-</span><span class="w"> </span>📋 Menu principal com navegação
-<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="k">-</span><span class="w"> </span>📝 Cadastro completo de alunos (CRUD)
-<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="k">-</span><span class="w"> </span>🔍 Busca com filtro por nome
-<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a><span class="k">-</span><span class="w"> </span>☁️ Dados num banco PostgreSQL em nuvem (Neon)
-<a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a><span class="k">-</span><span class="w"> </span>🎨 Interface moderna com CustomTkinter
-<a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a>
-<a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a><span class="gu">## 🚀 Como executar</span>
-<a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a>
-<a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a><span class="gu">### Pré-requisitos</span>
-<a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a><span class="k">-</span><span class="w"> </span>Python 3.11 ou superior (recomendado: 3.14)
-<a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a><span class="k">-</span><span class="w"> </span>pip atualizado
-<a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a>
-<a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a><span class="gu">### Instalação</span>
-<a id="__codelineno-8-33" name="__codelineno-8-33" href="#__codelineno-8-33"></a>
-<a id="__codelineno-8-34" name="__codelineno-8-34" href="#__codelineno-8-34"></a><span class="k">1.</span> Clone o repositório:
-<a id="__codelineno-8-35" name="__codelineno-8-35" href="#__codelineno-8-35"></a><span class="sb">   ```bash</span>
-<a id="__codelineno-8-36" name="__codelineno-8-36" href="#__codelineno-8-36"></a><span class="w">   </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/seu-usuario/sistema-escolar.git
-<a id="__codelineno-8-37" name="__codelineno-8-37" href="#__codelineno-8-37"></a><span class="w">   </span><span class="nb">cd</span><span class="w"> </span>sistema-escolar
-<a id="__codelineno-8-38" name="__codelineno-8-38" href="#__codelineno-8-38"></a><span class="sb">   ```</span>
-<a id="__codelineno-8-39" name="__codelineno-8-39" href="#__codelineno-8-39"></a>
-<a id="__codelineno-8-40" name="__codelineno-8-40" href="#__codelineno-8-40"></a><span class="k">2.</span> Instale as dependências:
-<a id="__codelineno-8-41" name="__codelineno-8-41" href="#__codelineno-8-41"></a><span class="sb">   ```bash</span>
-<a id="__codelineno-8-42" name="__codelineno-8-42" href="#__codelineno-8-42"></a><span class="w">   </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
-<a id="__codelineno-8-43" name="__codelineno-8-43" href="#__codelineno-8-43"></a><span class="sb">   ```</span>
-<a id="__codelineno-8-44" name="__codelineno-8-44" href="#__codelineno-8-44"></a>
-<a id="__codelineno-8-45" name="__codelineno-8-45" href="#__codelineno-8-45"></a><span class="k">3.</span> Configure as variáveis de ambiente:
-<a id="__codelineno-8-46" name="__codelineno-8-46" href="#__codelineno-8-46"></a><span class="sb">   ```bash</span>
-<a id="__codelineno-8-47" name="__codelineno-8-47" href="#__codelineno-8-47"></a><span class="w">   </span>cp<span class="w"> </span>.env.example<span class="w"> </span>.env
-<a id="__codelineno-8-48" name="__codelineno-8-48" href="#__codelineno-8-48"></a><span class="w">   </span><span class="c1"># Edite o .env com suas credenciais</span>
-<a id="__codelineno-8-49" name="__codelineno-8-49" href="#__codelineno-8-49"></a><span class="sb">   ```</span>
-<a id="__codelineno-8-50" name="__codelineno-8-50" href="#__codelineno-8-50"></a>
-<a id="__codelineno-8-51" name="__codelineno-8-51" href="#__codelineno-8-51"></a><span class="k">4.</span> Execute o sistema:
-<a id="__codelineno-8-52" name="__codelineno-8-52" href="#__codelineno-8-52"></a><span class="sb">   ```bash</span>
-<a id="__codelineno-8-53" name="__codelineno-8-53" href="#__codelineno-8-53"></a><span class="w">   </span>python<span class="w"> </span>main.py
-<a id="__codelineno-8-54" name="__codelineno-8-54" href="#__codelineno-8-54"></a><span class="sb">   ```</span>
-<a id="__codelineno-8-55" name="__codelineno-8-55" href="#__codelineno-8-55"></a>
-<a id="__codelineno-8-56" name="__codelineno-8-56" href="#__codelineno-8-56"></a><span class="gu">## 🛠️ Tecnologias</span>
-<a id="__codelineno-8-57" name="__codelineno-8-57" href="#__codelineno-8-57"></a>
-<a id="__codelineno-8-58" name="__codelineno-8-58" href="#__codelineno-8-58"></a>| Tecnologia | Uso |
-<a id="__codelineno-8-59" name="__codelineno-8-59" href="#__codelineno-8-59"></a>|------------|-----|
-<a id="__codelineno-8-60" name="__codelineno-8-60" href="#__codelineno-8-60"></a>| Python 3.11+ | Linguagem principal |
-<a id="__codelineno-8-61" name="__codelineno-8-61" href="#__codelineno-8-61"></a>| CustomTkinter | Interface gráfica |
-<a id="__codelineno-8-62" name="__codelineno-8-62" href="#__codelineno-8-62"></a>| PostgreSQL (Neon) | Banco de dados em nuvem |
-<a id="__codelineno-8-63" name="__codelineno-8-63" href="#__codelineno-8-63"></a>| psycopg | Conexão com o PostgreSQL |
-<a id="__codelineno-8-64" name="__codelineno-8-64" href="#__codelineno-8-64"></a>| python-dotenv | Variáveis de ambiente |
-<a id="__codelineno-8-65" name="__codelineno-8-65" href="#__codelineno-8-65"></a>
-<a id="__codelineno-8-66" name="__codelineno-8-66" href="#__codelineno-8-66"></a><span class="gu">## 📂 Estrutura do Projeto</span>
-<a id="__codelineno-8-67" name="__codelineno-8-67" href="#__codelineno-8-67"></a>
-<a id="__codelineno-8-68" name="__codelineno-8-68" href="#__codelineno-8-68"></a>```text
-<a id="__codelineno-8-69" name="__codelineno-8-69" href="#__codelineno-8-69"></a>sistema-escolar/
-<a id="__codelineno-8-70" name="__codelineno-8-70" href="#__codelineno-8-70"></a>├── main.py
-<a id="__codelineno-8-71" name="__codelineno-8-71" href="#__codelineno-8-71"></a>├── controllers/
-<a id="__codelineno-8-72" name="__codelineno-8-72" href="#__codelineno-8-72"></a>├── database/
-<a id="__codelineno-8-73" name="__codelineno-8-73" href="#__codelineno-8-73"></a>├── views/
-<a id="__codelineno-8-74" name="__codelineno-8-74" href="#__codelineno-8-74"></a>└── utils/
-</code></pre></div>
-<h2 id="autores">👥 Autores<a class="headerlink" href="#autores" title="Permanent link">¶</a></h2>
+<hr>
+<h2 id="o-cenario">O cenário<a class="headerlink" href="#o-cenario" title="Permanent link">¶</a></h2>
+<p>Você tem a pasta do Sistema Escolar no computador, com o código, o <code>requirements.txt</code>, um <code>.env</code> com a <code>DATABASE_URL</code> do Neon, a pasta <code>venv</code> e algumas pastas <code>__pycache__</code>. Nunca usou Git nela. Quer o projeto no <strong>seu</strong> GitHub, para guardar uma cópia, mostrar ao professor e colocar no portfólio.</p>
+<p>O caminho tem quatro etapas:</p>
+<pre class="mermaid"><code>flowchart LR
+    A["1. .gitignore&lt;br/&gt;(antes de tudo)"] --&gt; B["2. Inicializar&lt;br/&gt;repositório"]
+    B --&gt; C["3. Primeiro&lt;br/&gt;commit"]
+    C --&gt; D["4. Publicar&lt;br/&gt;no GitHub"]</code></pre>
+<hr>
+<h2 id="passo-1-antes-de-tudo-o-gitignore">Passo 1 — Antes de tudo: o <code>.gitignore</code><a class="headerlink" href="#passo-1-antes-de-tudo-o-gitignore" title="Permanent link">¶</a></h2>
+<p>Abra o painel <strong>Controle do Código-Fonte</strong> (o terceiro ícone da barra da esquerda, ou <code>Ctrl + Shift + G</code>). Numa pasta sem Git, ele mostra dois botões: <strong>Inicializar Repositório</strong> e <strong>Publicar no GitHub</strong>.</p>
+<figure>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/03_inicializar_ou_publicar.webp" data-desc-position="bottom"><img alt="Painel Controle do Código-Fonte do VS Code numa pasta sem Git, com o texto explicando que a pasta não tem um repositório e os botões Inicializar Repositório e Publicar no GitHub" loading="lazy" src="../assets/03_inicializar_ou_publicar.webp"></a>
+<br>
+<figcaption>(1) <strong>Inicializar Repositório</strong>: só cria o Git na pasta · (2) <strong>Publicar no GitHub</strong>: cria o Git, o repositório no GitHub e envia tudo de uma vez. Nesta aula vamos pelo caminho (1), passo a passo.</figcaption>
+</figure>
+<p><strong>Não clique ainda.</strong> Veja o que acontece se você inicializar sem <code>.gitignore</code>:</p>
+<figure>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/03_sem_e_com_gitignore.webp" data-desc-position="bottom"><img alt="Lado a lado: à esquerda, a lista de Alterações com 12 arquivos, incluindo .env, pyvenv.cfg da pasta venv e arquivos .pyc da __pycache__; à direita, depois de criar o .gitignore, a lista com 8 arquivos, sem o .env, o venv e o __pycache__" loading="lazy" src="../assets/03_sem_e_com_gitignore.webp"></a>
+<br>
+<figcaption>(1) Sem <code>.gitignore</code>, o VS Code oferece o <code>.env</code> (com a senha do banco), o <code>venv</code> e o <code>__pycache__</code> · (2) com o <code>.gitignore</code> da aula 02, ficam só os arquivos do projeto. A letra <strong>U</strong> quer dizer <em>untracked</em>: o Git ainda não acompanha o arquivo.</figcaption>
+</figure>
+<p>Crie o <code>.gitignore</code> na raiz do projeto (<em>Explorador ➔ Novo Arquivo</em> ➔ <code>.gitignore</code>) com o conteúdo da <a href="../02_primeiro_repositorio/#passo-5-gitignore-o-que-nao-vai-para-o-repositorio">aula 02</a> e <strong>confira a lista</strong> antes de seguir. Se o <code>.env</code> ou o <code>venv</code> ainda aparecem, o <code>.gitignore</code> está com nome ou conteúdo errado.</p>
+<div class="admonition tip">
+<p class="admonition-title">E quem for baixar o projeto, como sabe o que vai no <code>.env</code>?</p>
+<p>Deixe no projeto um <strong><code>.env.example</code></strong> com os nomes das variáveis e valores de mentira (<code>DATABASE_URL=cole-aqui-a-connection-string-do-neon</code>). Ele <strong>entra</strong> no repositório; o <code>.env</code> de verdade, não.</p>
+</div>
+<h2 id="passo-2-inicializar-preparar-e-fazer-o-primeiro-commit">Passo 2 — Inicializar, preparar e fazer o primeiro commit<a class="headerlink" href="#passo-2-inicializar-preparar-e-fazer-o-primeiro-commit" title="Permanent link">¶</a></h2>
+<ol>
+<li><strong>Inicializar Repositório</strong>. A lista de <em>Alterações</em> aparece com os arquivos marcados com <strong>U</strong>.</li>
+<li>Passe o mouse sobre <strong>Alterações</strong>: aparece um <strong>+</strong> (<em>Preparar Todas as Alterações</em>). Clique. Os arquivos vão para <strong>Alterações Preparadas</strong>, com a letra <strong>A</strong> (<em>added</em>).</li>
+<li>Escreva a mensagem na caixa de cima (“Primeira versão do Sistema Escolar”).</li>
+<li>Clique em <strong>Confirmação</strong> (ou <code>Ctrl + Enter</code>).</li>
+</ol>
+<figure>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/03_preparar_e_confirmar.webp" data-desc-position="bottom"><img alt="Painel Controle do Código-Fonte com a mensagem Primeira versão do Sistema Escolar escrita, o botão Confirmação e os 8 arquivos em Alterações Preparadas com a letra A" loading="lazy" src="../assets/03_preparar_e_confirmar.webp"></a>
+<br>
+<figcaption>(1) O <strong>+</strong> ao lado de <em>Alterações</em> prepara tudo (é o <code>git add .</code>) · (2) a mensagem do commit · (3) <strong>Confirmação</strong> grava o commit · (4) os arquivos preparados, com a letra <strong>A</strong>.</figcaption>
+</figure>
+<div class="admonition warning">
+<p class="admonition-title">“Não há nenhuma alteração preparada a ser confirmada”</p>
+<p>Se você clicar em <strong>Confirmação</strong> sem preparar nada, o VS Code pergunta se pode <strong>preparar automaticamente todas as alterações</strong>. Responda <strong>Sim</strong> — vale só para esta vez. Evite <strong>Sempre</strong>: com ele, todo arquivo modificado entra nos commits sem você olhar a lista, e um <code>.env</code> mal ignorado escapa sem você perceber.</p>
+<p><img alt="Janela do Visual Studio Code dizendo que não há nenhuma alteração preparada a ser confirmada e perguntando se deseja preparar automaticamente todas as alterações, com os botões Sim, Sempre, Nunca e Cancelar" class="sem-zoom" loading="lazy" src="../assets/03_preparar_tudo.webp"></p>
+</div>
+<h3 id="comparar-antes-de-confirmar">Comparar antes de confirmar<a class="headerlink" href="#comparar-antes-de-confirmar" title="Permanent link">¶</a></h3>
+<p>Mudou um arquivo? Ele aparece em <em>Alterações</em> com a letra <strong>M</strong> (<em>modified</em>). <strong>Clique no nome do arquivo</strong>: o VS Code abre a comparação lado a lado — à esquerda, como estava no último commit; à direita, como está agora.</p>
+<figure>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/03_comparar_versoes.webp" data-desc-position="bottom"><img alt="Comparação lado a lado no VS Code do arquivo main_view.py: à esquerda, as linhas antigas em vermelho com o título Sistema Escolar e o tamanho 900x600; à direita, as linhas novas em verde com o título Sistema Escolar — Turma 2º B, o tamanho 1000x650 e uma linha nova com minsize" loading="lazy" src="../assets/03_comparar_versoes.webp"></a>
+<br>
+<figcaption>(1) O arquivo modificado (<strong>M</strong>) · (2) a versão do último commit, com o que saiu em vermelho · (3) a versão atual, com o que entrou em verde. É o <code>git diff</code> da aula 02, em forma visual.</figcaption>
+</figure>
+<h2 id="passo-3-publicar-no-github">Passo 3 — Publicar no GitHub<a class="headerlink" href="#passo-3-publicar-no-github" title="Permanent link">¶</a></h2>
+<p>Depois do primeiro commit, o botão azul vira <strong>Publicar Branch</strong>. Clique nele.</p>
+<ol>
+<li>Na primeira vez, o VS Code pede para entrar: <em>“A extensão 'GitHub' quer entrar usando GitHub”</em> ➔ <strong>Permitir</strong>.</li>
+<li>O navegador abre a página do GitHub. Entre na sua conta (com a verificação em duas etapas) e <strong>autorize o Visual Studio Code</strong>. Se o navegador perguntar se pode abrir o VS Code, confirme.</li>
+<li>De volta ao VS Code, escolha o nome do repositório (pode trocar o que vem preenchido) e o tipo: <strong>privado</strong> ou <strong>público</strong>.</li>
+</ol>
+<figure>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/03_publicar_branch.webp" data-desc-position="bottom"><img alt="Em cima, o botão Publicar Branch no painel e a janela pedindo permissão para a extensão GitHub entrar usando GitHub, com os botões Permitir e Cancelar; embaixo, a caixa do VS Code com o nome sistema-escolar-exemplo e as opções Publish to GitHub private repository e Publish to GitHub public repository" loading="lazy" src="../assets/03_publicar_branch.webp"></a>
+<br>
+<figcaption>(1) <strong>Publicar Branch</strong> · (2) a permissão para entrar no GitHub (só na primeira vez) · (3) o nome do repositório · (4) privado ou público. Essas duas opções aparecem em inglês mesmo com o VS Code em português.</figcaption>
+</figure>
 <table>
 <thead>
 <tr>
-<th>Nome</th>
-<th>GitHub</th>
+<th>Privado ou público?</th>
+<th>Quando</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>João Silva</td>
-<td><a href="https://github.com/joaosilva">@joaosilva</a></td>
+<td><strong>Privado</strong> (<em>private</em>)</td>
+<td>Durante o desenvolvimento, ou quando o professor pedir. Só você e quem você convidar veem.</td>
 </tr>
 <tr>
-<td>Maria Santos</td>
-<td><a href="https://github.com/mariasantos">@mariasantos</a></td>
+<td><strong>Público</strong> (<em>public</em>)</td>
+<td>Para o portfólio. Qualquer pessoa vê o código — confira antes que não há senhas, dados de alunos ou dados pessoais. Dá para trocar depois em <em>Settings</em> do repositório.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="licenca">📝 Licença<a class="headerlink" href="#licenca" title="Permanent link">¶</a></h2>
-<p>Este projeto está sob a licença MIT.
-Veja <a href="LICENSE">LICENSE</a> para mais detalhes.
-</p><div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>!!! note "Conceito Importante"
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    O README é renderizado automaticamente pelo GitHub na página principal do repositório. Ele aceita Markdown — a mesma formatação que você usou durante todo o curso para ler o material. Tudo que aparece no site do curso (títulos, tabelas, blocos de código, emojis) funciona no README.
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>### Passo 4 — Badges (selos visuais)
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>Badges são aqueles selos coloridos no topo do README. Eles comunicam informações rapidamente:
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>
-<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>```text
-<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat-square&amp;logo=python&amp;logoColor=white)
-</code></pre></div><p></p>
-<p>O site <strong>shields.io</strong> gera badges personalizados. A estrutura da URL é:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>https://img.shields.io/badge/TEXTO-VALOR-COR?style=ESTILO&amp;logo=LOGO
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>Exemplos prontos para copiar:
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a># Linguagem
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat-square&amp;logo=python&amp;logoColor=white)
-<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>
-<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a># Status do projeto
-<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>![Status](https://img.shields.io/badge/Status-Concluído-00bfa5?style=flat-square)
-<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>![Status](https://img.shields.io/badge/Status-Em_Desenvolvimento-yellow?style=flat-square)
-<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>
-<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a># Licença
-<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)
-<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>
-<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a># Versão
-<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>![Version](https://img.shields.io/badge/Version-1.0.0-orange?style=flat-square)
-</code></pre></div>
+<p>Em alguns segundos, o VS Code avisa: <em>“O repositório ... foi publicado com êxito no GitHub”</em>, com o botão <strong>Abrir no GitHub</strong>.</p>
+<figure>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/03_repositorio_no_github.webp" data-desc-position="bottom"><img alt="Página do repositório sistema-escolar-exemplo no GitHub, público, com a branch main, 3 commits, as pastas controllers, database e views, os arquivos .env.example, .gitignore, README.md, main.py e requirements.txt, sem .env, venv ou __pycache__, e o README mostrado embaixo" loading="lazy" src="../assets/03_repositorio_no_github.webp"></a>
+<br>
+<figcaption>O projeto no GitHub: (1) o histórico de commits · (2) os arquivos — repare que <strong>não</strong> estão lá o <code>.env</code>, o <code>venv</code> nem o <code>__pycache__</code> · (3) o <code>README.md</code> aparece como a página de apresentação do projeto.</figcaption>
+</figure>
+<div class="admonition danger">
+<p class="admonition-title">Publicou o <code>.env</code> sem querer?</p>
+<p>Se a senha do banco foi para o GitHub, <strong>troque a senha agora</strong> (no Neon: <em>Reset password</em>) — apagar o arquivo depois não basta, porque ele continua no histórico. Depois: acrescente <code>.env</code> ao <code>.gitignore</code>, rode <code>git rm --cached .env</code>, faça um commit e sincronize.</p>
+</div>
+<h2 id="passo-4-o-dia-a-dia-commit-e-sincronizar">Passo 4 — O dia a dia: commit e sincronizar<a class="headerlink" href="#passo-4-o-dia-a-dia-commit-e-sincronizar" title="Permanent link">¶</a></h2>
+<p>Agora o ciclo é sempre o mesmo:</p>
+<ol>
+<li>Trabalhe no código.</li>
+<li>No painel, confira a lista e as diferenças, prepare e faça o <strong>commit</strong>.</li>
+<li>Clique em <strong>Sincronizar Alterações</strong> — o número com a seta mostra quantos commits vão subir (↑) ou descer (↓).</li>
+</ol>
+<figure>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/03_sincronizar.webp" data-desc-position="bottom"><img alt="Painel com o botão Sincronizar Alterações 1 com seta para cima, o grafo mostrando o commit novo na main à frente de origin/main, e a janela de confirmação dizendo que a ação efetuará pull e push das confirmações de e para origin/main" loading="lazy" src="../assets/03_sincronizar.webp"></a>
+<br>
+<figcaption>(1) <strong>Sincronizar Alterações 1↑</strong>: um commit para enviar · (2) no <em>Grafo</em>, a sua <em>main</em> está um commit à frente da <em>origin/main</em> (a cópia do GitHub) · (3) na primeira vez, o VS Code avisa que vai fazer <code>pull</code> e <code>push</code>.</figcaption>
+</figure>
 <div class="admonition tip">
-<p class="admonition-title">Dica Profissional</p>
-<p>Não exagere nos badges — 3 a 5 é o ideal. Os mais importantes são: linguagem, status e licença. Badges demais poluem o README e perdem o efeito visual.</p>
+<p class="admonition-title">Sincronize no começo e no fim</p>
+<p>Comece o dia sincronizando (para receber o que os colegas enviaram) e termine sincronizando (para enviar o seu trabalho). Em equipe, isso evita a maioria dos conflitos — o assunto da aula 05.</p>
 </div>
-<h3 id="passo-5-screenshots-e-imagens">Passo 5 — Screenshots e imagens<a class="headerlink" href="#passo-5-screenshots-e-imagens" title="Permanent link">¶</a></h3>
-<p>Um README com imagens é muito mais atrativo. Para adicionar screenshots:</p>
+<hr>
+<h2 id="e-pelo-github-desktop">E pelo GitHub Desktop?<a class="headerlink" href="#e-pelo-github-desktop" title="Permanent link">¶</a></h2>
+<p>O <a href="https://desktop.github.com">GitHub Desktop</a> faz o mesmo, com uma janela própria. Ele só existe em inglês.</p>
 <ol>
-<li>Crie uma pasta <code>screenshots/</code> no repositório</li>
-<li>Tire prints do sistema funcionando (login, cadastro, listagem)</li>
-<li>Salve como <code>.png</code> na pasta <code>screenshots/</code></li>
-<li>No README, use:</li>
+<li><em>File ➔ Add local repository</em> ➔ escolha a pasta do projeto ➔ <strong>Add repository</strong>. (Se a pasta ainda não tem Git, o Desktop oferece <em>create a repository</em> — e cria um <code>.gitignore</code> se você escolher o modelo <strong>Python</strong>.)</li>
+<li>Na aba <strong>Changes</strong>, confira a lista, escreva o resumo (<em>Summary</em>) e clique em <strong>Commit to main</strong>.</li>
+<li>Clique em <strong>Publish repository</strong>: dê o nome, uma descrição e decida a caixa <strong>Keep this code private</strong> (marcada = privado).</li>
+<li>No dia a dia: <strong>Commit to main</strong> e depois <strong>Push origin</strong>; para receber, <strong>Fetch origin</strong> e <strong>Pull origin</strong>.</li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="gu">## 📸 Screenshots</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="gu">### Tela de Login</span>
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>![<span class="nt">Tela de Login</span>](<span class="na">screenshots/login.png</span>)
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>
-<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="gu">### Cadastro de Alunos</span>
-<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>![<span class="nt">Cadastro</span>](<span class="na">screenshots/cadastro.png</span>)
-</code></pre></div>
-<p><strong>Como tirar screenshots no Windows:</strong></p>
-<ul>
-<li><code>Win + Shift + S</code> → selecione a área → cole no Paint → salve como PNG</li>
-<li>Ou use a Ferramenta de Captura (Snipping Tool)</li>
-</ul>
-<h3 id="passo-6-criando-uma-release-v100">Passo 6 — Criando uma Release (v1.0.0)<a class="headerlink" href="#passo-6-criando-uma-release-v100" title="Permanent link">¶</a></h3>
-<p>Uma <strong>Release</strong> é uma versão oficial do projeto, empacotada e marcada. No mercado, é assim que softwares são distribuídos.</p>
-<p>No GitHub:</p>
-<ol>
-<li>Vá na aba <strong>Releases</strong> (lado direito da página do repositório)</li>
-<li>Clique em <strong>Create a new release</strong></li>
-<li>Em <strong>Tag version</strong>, digite: <code>v1.0.0</code></li>
-<li>Em <strong>Release title</strong>, digite: <code>v1.0.0 — Sistema Escolar</code></li>
-<li>Na descrição, liste as funcionalidades:</li>
-</ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="gu">## 🎉 Primeira versão do Sistema Escolar</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="gu">### ✨ Funcionalidades</span>
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="k">-</span><span class="w"> </span>🔐 Tela de login com autenticação
-<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="k">-</span><span class="w"> </span>📋 Menu principal com navegação entre telas
-<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="k">-</span><span class="w"> </span>📝 Cadastro completo de alunos (CRUD)
-<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="k">-</span><span class="w"> </span>🔍 Busca com filtro por nome
-<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="k">-</span><span class="w"> </span>☁️ Dados num banco PostgreSQL em nuvem (Neon)
-<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>
-<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="gu">### 🛠️ Tecnologias</span>
-<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="k">-</span><span class="w"> </span>Python 3.11+
-<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="k">-</span><span class="w"> </span>CustomTkinter
-<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="k">-</span><span class="w"> </span>PostgreSQL (Neon)
-<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>
-<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="gu">### 👥 Equipe</span>
-<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="k">-</span><span class="w"> </span>João Silva
-<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="k">-</span><span class="w"> </span>Maria Santos
-<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="k">-</span><span class="w"> </span>Pedro Oliveira
-<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>
-<a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a><span class="gu">### 📦 Como usar</span>
-<a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a><span class="k">1.</span> Baixe o código-fonte (Source code .zip)
-<a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a><span class="k">2.</span> Extraia e execute: <span class="sb">`python main.py`</span>
-</code></pre></div>
-<ol>
-<li>Clique em <strong>Publish release</strong></li>
-</ol>
-<div class="admonition note">
-<p class="admonition-title">Conceito Importante</p>
-<p><strong>Versionamento semântico</strong> (SemVer) usa o formato <code>vMAJOR.MINOR.PATCH</code>:</p>
-<ul>
-<li><code>v1.0.0</code> → Primeira versão estável</li>
-<li><code>v1.1.0</code> → Nova funcionalidade adicionada</li>
-<li><code>v1.0.1</code> → Correção de bug na versão 1.0.0</li>
-<li><code>v2.0.0</code> → Mudanças grandes e incompatíveis</li>
-</ul>
-<p>Para o Projeto Final, <code>v1.0.0</code> é perfeito.</p>
-</div>
-<h3 id="passo-7-usando-ia-para-gerar-documentacao">Passo 7 — Usando IA para gerar documentação<a class="headerlink" href="#passo-7-usando-ia-para-gerar-documentacao" title="Permanent link">¶</a></h3>
-<p>Uma das habilidades mais valiosas de um desenvolvedor moderno é saber <strong>usar IA como ferramenta de produtividade</strong>. Gerar documentação é um dos melhores casos de uso.</p>
-<p><strong>Prompt para gerar README:</strong></p>
-<p>Copie e cole o template abaixo em qualquer IA (ChatGPT, Gemini, Claude, DeepSeek):</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>Eu criei um projeto em Python chamado [NOME DO PROJETO].
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>Aqui está a estrutura de arquivos:
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>[COLE A SAÍDA DE: tree /f OU liste os arquivos]
-<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>
-<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>Aqui está o main.py:
-<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>[COLE O CÓDIGO DO MAIN.PY]
-<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>
-<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>Gere um README.md profissional em português com:
-<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>- Título com emoji
-<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>- Badges (Python, Status, License)
-<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>- Descrição do projeto (2-3 linhas)
-<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>- Lista de funcionalidades com emojis
-<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>- Instruções de instalação e execução
-<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>- Tabela de tecnologias utilizadas
-<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>- Estrutura do projeto
-<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a>- Seção de autores
-<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a>- Licença MIT
-<a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a>
-<a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a>Use Markdown formatado para GitHub.
-</code></pre></div>
-<div class="admonition tip">
-<p class="admonition-title">Dica Profissional</p>
-<p>A IA gera um <strong>rascunho excelente</strong> em segundos. Mas sempre revise: corrija nomes, verifique se as instruções realmente funcionam, e personalize o texto. A IA é sua assistente, não sua substituta.</p>
-</div>
-<p><strong>Prompt para gerar docstrings:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>Adicione docstrings profissionais em português para
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>todas as funções do seguinte código Python.
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>Use o formato Google Style.
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>Explique o que cada função faz, seus parâmetros e
-<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>o que retorna.
-<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>
-<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>[COLE O CÓDIGO]
-</code></pre></div>
-<p><strong>Prompt para gerar comentários:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Adicione comentários explicativos em português para
-<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>o seguinte código Python.
-<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>Os comentários devem explicar a INTENÇÃO do código
-<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>(por que ele faz isso), não a sintaxe.
-<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>Use o estilo de primeira pessoa: "Eu faço X porque Y".
-<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>
-<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>[COLE O CÓDIGO]
-</code></pre></div>
-<p><strong>Prompt para gerar .env.example:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Analise o seguinte código Python e identifique todas
-<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>as variáveis de ambiente usadas (os.getenv ou
-<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>os.environ). Gere um arquivo .env.example com todas
-<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>as variáveis listadas, valores de placeholder e
-<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>comentários explicando cada uma.
-<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>
-<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>[COLE O CÓDIGO]
-</code></pre></div>
-<h3 id="passo-8-criando-seu-readme-pessoal-de-perfil">Passo 8 — Criando seu README Pessoal de Perfil<a class="headerlink" href="#passo-8-criando-seu-readme-pessoal-de-perfil" title="Permanent link">¶</a></h3>
-<p>Seu perfil do GitHub é seu <strong>cartão de visita profissional</strong>. Recrutadores olham seu perfil antes de ligar para uma entrevista. Vamos configurá-lo:</p>
-<p><strong>Configuração básica do perfil:</strong></p>
-<ol>
-<li><strong>Foto de perfil</strong> — use uma foto profissional ou um avatar decente</li>
-<li><strong>Bio</strong> — escreva uma frase sobre você: "Estudante de Desenvolvimento de Sistemas | Python | Desktop &amp; Web"</li>
-<li><strong>Repositórios fixados (Pinned)</strong> — no seu perfil, clique em "Customize your pins" e selecione os melhores projetos (máximo 6). Coloque o Projeto Final em primeiro!</li>
-</ol>
-<p><strong>Criando o README especial de perfil:</strong></p>
-<p>O GitHub permite criar um README que aparece na página principal do seu perfil. Para isso:</p>
-<ol>
-<li>Crie um repositório com o <strong>mesmo nome do seu usuário</strong> (ex: se seu usuário é <code>joaosilva</code>, crie o repositório <code>joaosilva</code>)</li>
-<li>O GitHub mostrará: <em>"joaosilva/joaosilva is a ✨ special ✨ repository"</em></li>
-<li>Marque <strong>Add a README file</strong> e clique em <strong>Create repository</strong></li>
-<li>Edite o <code>README.md</code> com o template abaixo</li>
-</ol>
-<p><strong>Template completo com gráficos e stats:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>&lt;div align="center"&gt;
-<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>
-<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="gh"># Olá! 👋 Eu sou [Seu Nome]</span>
-<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>
-<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>🎓 Estudante de Desenvolvimento de Sistemas
-<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>🐍 Apaixonado por Python | 💻 Desktop &amp; Web
-<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>
-<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>&lt;/div&gt;
-<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>
-<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>---
-<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>
-<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a><span class="gu">## 🚀 Sobre mim</span>
-<a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a>
-<a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a><span class="k">-</span><span class="w"> </span>🔭 Estou trabalhando no <span class="gs">**Sistema Escolar**</span> (Python + Tkinter + SQLite)
-<a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a><span class="k">-</span><span class="w"> </span>🌱 Estou aprendendo <span class="gs">**Python, Git, Banco de Dados e Interfaces Gráficas**</span>
-<a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a><span class="k">-</span><span class="w"> </span>💬 Pergunte-me sobre <span class="gs">**Python, Tkinter e CustomTkinter**</span>
-<a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a><span class="k">-</span><span class="w"> </span>📫 Como me encontrar: <span class="gs">**seu@email.com**</span>
-<a id="__codelineno-17-18" name="__codelineno-17-18" href="#__codelineno-17-18"></a>
-<a id="__codelineno-17-19" name="__codelineno-17-19" href="#__codelineno-17-19"></a>---
-<a id="__codelineno-17-20" name="__codelineno-17-20" href="#__codelineno-17-20"></a>
-<a id="__codelineno-17-21" name="__codelineno-17-21" href="#__codelineno-17-21"></a><span class="gu">## 🔧 Tecnologias e Ferramentas</span>
-<a id="__codelineno-17-22" name="__codelineno-17-22" href="#__codelineno-17-22"></a>
-<a id="__codelineno-17-23" name="__codelineno-17-23" href="#__codelineno-17-23"></a>![<span class="nt">Python</span>](<span class="na">https://img.shields.io/badge/-Python-3776AB?style=for-the-badge&amp;logo=python&amp;logoColor=white</span>)
-<a id="__codelineno-17-24" name="__codelineno-17-24" href="#__codelineno-17-24"></a>![<span class="nt">SQLite</span>](<span class="na">https://img.shields.io/badge/-SQLite-003B57?style=for-the-badge&amp;logo=sqlite&amp;logoColor=white</span>)
-<a id="__codelineno-17-25" name="__codelineno-17-25" href="#__codelineno-17-25"></a>![<span class="nt">Git</span>](<span class="na">https://img.shields.io/badge/-Git-F05032?style=for-the-badge&amp;logo=git&amp;logoColor=white</span>)
-<a id="__codelineno-17-26" name="__codelineno-17-26" href="#__codelineno-17-26"></a>![<span class="nt">GitHub</span>](<span class="na">https://img.shields.io/badge/-GitHub-181717?style=for-the-badge&amp;logo=github&amp;logoColor=white</span>)
-<a id="__codelineno-17-27" name="__codelineno-17-27" href="#__codelineno-17-27"></a>![<span class="nt">VS Code</span>](<span class="na">https://img.shields.io/badge/-VS_Code-007ACC?style=for-the-badge&amp;logo=visual-studio-code&amp;logoColor=white</span>)
-<a id="__codelineno-17-28" name="__codelineno-17-28" href="#__codelineno-17-28"></a>
-<a id="__codelineno-17-29" name="__codelineno-17-29" href="#__codelineno-17-29"></a>---
-<a id="__codelineno-17-30" name="__codelineno-17-30" href="#__codelineno-17-30"></a>
-<a id="__codelineno-17-31" name="__codelineno-17-31" href="#__codelineno-17-31"></a><span class="gu">## 📊 GitHub Stats</span>
-<a id="__codelineno-17-32" name="__codelineno-17-32" href="#__codelineno-17-32"></a>
-<a id="__codelineno-17-33" name="__codelineno-17-33" href="#__codelineno-17-33"></a>&lt;div align="center"&gt;
-<a id="__codelineno-17-34" name="__codelineno-17-34" href="#__codelineno-17-34"></a>
-<a id="__codelineno-17-35" name="__codelineno-17-35" href="#__codelineno-17-35"></a>![<span class="nt">GitHub Stats</span>](<span class="na">https://github-readme-stats.vercel.app/api?username=SEU_USUARIO&amp;show_icons=true&amp;theme=tokyonight&amp;hide_border=true&amp;count_private=true</span>)
-<a id="__codelineno-17-36" name="__codelineno-17-36" href="#__codelineno-17-36"></a>
-<a id="__codelineno-17-37" name="__codelineno-17-37" href="#__codelineno-17-37"></a>![<span class="nt">Top Languages</span>](<span class="na">https://github-readme-stats.vercel.app/api/top-langs/?username=SEU_USUARIO&amp;layout=compact&amp;theme=tokyonight&amp;hide_border=true</span>)
-<a id="__codelineno-17-38" name="__codelineno-17-38" href="#__codelineno-17-38"></a>
-<a id="__codelineno-17-39" name="__codelineno-17-39" href="#__codelineno-17-39"></a>&lt;/div&gt;
-<a id="__codelineno-17-40" name="__codelineno-17-40" href="#__codelineno-17-40"></a>
-<a id="__codelineno-17-41" name="__codelineno-17-41" href="#__codelineno-17-41"></a>---
-<a id="__codelineno-17-42" name="__codelineno-17-42" href="#__codelineno-17-42"></a>
-<a id="__codelineno-17-43" name="__codelineno-17-43" href="#__codelineno-17-43"></a><span class="gu">## 🔥 Streak de Commits</span>
-<a id="__codelineno-17-44" name="__codelineno-17-44" href="#__codelineno-17-44"></a>
-<a id="__codelineno-17-45" name="__codelineno-17-45" href="#__codelineno-17-45"></a>&lt;div align="center"&gt;
-<a id="__codelineno-17-46" name="__codelineno-17-46" href="#__codelineno-17-46"></a>
-<a id="__codelineno-17-47" name="__codelineno-17-47" href="#__codelineno-17-47"></a>![<span class="nt">GitHub Streak</span>](<span class="na">https://streak-stats.demolab.com/?user=SEU_USUARIO&amp;theme=tokyonight&amp;hide_border=true</span>)
-<a id="__codelineno-17-48" name="__codelineno-17-48" href="#__codelineno-17-48"></a>
-<a id="__codelineno-17-49" name="__codelineno-17-49" href="#__codelineno-17-49"></a>&lt;/div&gt;
-<a id="__codelineno-17-50" name="__codelineno-17-50" href="#__codelineno-17-50"></a>
-<a id="__codelineno-17-51" name="__codelineno-17-51" href="#__codelineno-17-51"></a>---
-<a id="__codelineno-17-52" name="__codelineno-17-52" href="#__codelineno-17-52"></a>
-<a id="__codelineno-17-53" name="__codelineno-17-53" href="#__codelineno-17-53"></a><span class="gu">## 📌 Projetos em Destaque</span>
-<a id="__codelineno-17-54" name="__codelineno-17-54" href="#__codelineno-17-54"></a>
-<a id="__codelineno-17-55" name="__codelineno-17-55" href="#__codelineno-17-55"></a>&lt;div align="center"&gt;
-<a id="__codelineno-17-56" name="__codelineno-17-56" href="#__codelineno-17-56"></a>
-<a id="__codelineno-17-57" name="__codelineno-17-57" href="#__codelineno-17-57"></a>[<span class="nt">![Sistema Escolar</span>](<span class="na">https://github-readme-stats.vercel.app/api/pin/?username=SEU_USUARIO&amp;repo=sistema-escolar&amp;theme=tokyonight&amp;hide_border=true</span>)](https://github.com/SEU_USUARIO/sistema-escolar)
-<a id="__codelineno-17-58" name="__codelineno-17-58" href="#__codelineno-17-58"></a>
-<a id="__codelineno-17-59" name="__codelineno-17-59" href="#__codelineno-17-59"></a>[<span class="nt">![Gerenciador de Tarefas</span>](<span class="na">https://github-readme-stats.vercel.app/api/pin/?username=SEU_USUARIO&amp;repo=gerenciador-tarefas&amp;theme=tokyonight&amp;hide_border=true</span>)](https://github.com/SEU_USUARIO/gerenciador-tarefas)
-<a id="__codelineno-17-60" name="__codelineno-17-60" href="#__codelineno-17-60"></a>
-<a id="__codelineno-17-61" name="__codelineno-17-61" href="#__codelineno-17-61"></a>&lt;/div&gt;
-<a id="__codelineno-17-62" name="__codelineno-17-62" href="#__codelineno-17-62"></a>
-<a id="__codelineno-17-63" name="__codelineno-17-63" href="#__codelineno-17-63"></a>---
-<a id="__codelineno-17-64" name="__codelineno-17-64" href="#__codelineno-17-64"></a>
-<a id="__codelineno-17-65" name="__codelineno-17-65" href="#__codelineno-17-65"></a><span class="gu">## 📈 Gráfico de Atividade</span>
-<a id="__codelineno-17-66" name="__codelineno-17-66" href="#__codelineno-17-66"></a>
-<a id="__codelineno-17-67" name="__codelineno-17-67" href="#__codelineno-17-67"></a>![<span class="nt">Activity Graph</span>](<span class="na">https://github-readme-activity-graph.vercel.app/graph?username=SEU_USUARIO&amp;theme=tokyo-night&amp;hide_border=true</span>)
-<a id="__codelineno-17-68" name="__codelineno-17-68" href="#__codelineno-17-68"></a>
-<a id="__codelineno-17-69" name="__codelineno-17-69" href="#__codelineno-17-69"></a>---
-<a id="__codelineno-17-70" name="__codelineno-17-70" href="#__codelineno-17-70"></a>
-<a id="__codelineno-17-71" name="__codelineno-17-71" href="#__codelineno-17-71"></a><span class="gu">## 📫 Contato</span>
-<a id="__codelineno-17-72" name="__codelineno-17-72" href="#__codelineno-17-72"></a>
-<a id="__codelineno-17-73" name="__codelineno-17-73" href="#__codelineno-17-73"></a>[<span class="nt">![Email</span>](<span class="na">https://img.shields.io/badge/-Email-D14836?style=for-the-badge&amp;logo=gmail&amp;logoColor=white</span>)](mailto:seu@email.com)
-<a id="__codelineno-17-74" name="__codelineno-17-74" href="#__codelineno-17-74"></a>[<span class="nt">![LinkedIn</span>](<span class="na">https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&amp;logo=linkedin&amp;logoColor=white</span>)](https://linkedin.com/in/seu-perfil)
-<a id="__codelineno-17-75" name="__codelineno-17-75" href="#__codelineno-17-75"></a>
-<a id="__codelineno-17-76" name="__codelineno-17-76" href="#__codelineno-17-76"></a>---
-<a id="__codelineno-17-77" name="__codelineno-17-77" href="#__codelineno-17-77"></a>
-<a id="__codelineno-17-78" name="__codelineno-17-78" href="#__codelineno-17-78"></a>&lt;div align="center"&gt;
-<a id="__codelineno-17-79" name="__codelineno-17-79" href="#__codelineno-17-79"></a>
-<a id="__codelineno-17-80" name="__codelineno-17-80" href="#__codelineno-17-80"></a>![<span class="nt">Visitors</span>](<span class="na">https://komarev.com/ghpvc/?username=SEU_USUARIO&amp;color=blueviolet&amp;style=flat-square</span>)
-<a id="__codelineno-17-81" name="__codelineno-17-81" href="#__codelineno-17-81"></a>
-<a id="__codelineno-17-82" name="__codelineno-17-82" href="#__codelineno-17-82"></a>&lt;/div&gt;
-</code></pre></div>
-<div class="admonition warning">
-<p class="admonition-title">Importante</p>
-<p>Substitua <strong><code>SEU_USUARIO</code></strong> pelo seu nome de usuário do GitHub em <strong>todos</strong> os lugares do template. Se seu usuário é <code>joaosilva</code>, troque <code>SEU_USUARIO</code> por <code>joaosilva</code>.</p>
-</div>
-<p><strong>O que cada card faz:</strong></p>
+<figure>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/03_github_desktop.webp" data-desc-position="bottom"><img alt="Três telas do GitHub Desktop: a janela Add local repository com o caminho C:\Projetos\meu-primeiro-repo; o repositório aberto com o botão Publish repository na barra e no centro; e a janela Publish repository com o nome, a descrição e a caixa Keep this code private marcada" loading="lazy" src="../assets/03_github_desktop.webp"></a>
+<br>
+<figcaption>(1) <em>Add local repository</em> · (2) <strong>Publish repository</strong>, na barra de cima e no centro · (3) nome, descrição e <strong>Keep this code private</strong>: desmarque para o repositório ser público.</figcaption>
+</figure>
 <table>
 <thead>
 <tr>
-<th>Card</th>
-<th>O que mostra</th>
-<th>Serviço</th>
+<th>No VS Code</th>
+<th>No GitHub Desktop</th>
+<th>Comando</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>GitHub Stats</strong></td>
-<td>Total de commits, PRs, issues, stars e contribuições</td>
-<td><code>github-readme-stats</code></td>
+<td>Inicializar Repositório</td>
+<td><em>create a repository</em></td>
+<td><code>git init</code></td>
 </tr>
 <tr>
-<td><strong>Top Languages</strong></td>
-<td>Linguagens mais usadas nos seus repositórios</td>
-<td><code>github-readme-stats</code></td>
+<td><strong>+</strong> (Preparar)</td>
+<td>caixas de seleção dos arquivos</td>
+<td><code>git add</code></td>
 </tr>
 <tr>
-<td><strong>Streak</strong></td>
-<td>Dias consecutivos com commits (sequência atual e recorde)</td>
-<td><code>streak-stats.demolab.com</code></td>
+<td>Confirmação</td>
+<td><em>Commit to main</em></td>
+<td><code>git commit</code></td>
 </tr>
 <tr>
-<td><strong>Pin Cards</strong></td>
-<td>Cartões clicáveis dos seus repositórios (como botões)</td>
-<td><code>github-readme-stats</code></td>
+<td>Publicar Branch</td>
+<td><em>Publish repository</em></td>
+<td><code>git remote add</code> + <code>git push -u</code></td>
 </tr>
 <tr>
-<td><strong>Activity Graph</strong></td>
-<td>Gráfico de ondas com sua atividade dos últimos 30 dias</td>
-<td><code>github-readme-activity-graph</code></td>
-</tr>
-<tr>
-<td><strong>Visitors</strong></td>
-<td>Contador de visitas ao seu perfil</td>
-<td><code>komarev.com</code></td>
+<td>Sincronizar Alterações</td>
+<td><em>Push origin</em> / <em>Pull origin</em></td>
+<td><code>git push</code> / <code>git pull</code></td>
 </tr>
 </tbody>
 </table>
-<div class="admonition tip">
-<p class="admonition-title">Dica Profissional</p>
-<p>Os temas disponíveis para os cards incluem: <code>tokyonight</code>, <code>dracula</code>, <code>radical</code>, <code>merko</code>, <code>gruvbox</code>, <code>onedark</code>, <code>dark</code>. Experimente trocar <code>theme=tokyonight</code> por outro tema para personalizar o visual. A lista completa está em <a href="https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md">github-readme-stats themes</a>.</p>
-</div>
-<p><strong>Prompt para a IA gerar seu README de perfil:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>Crie um README.md para meu perfil pessoal do GitHub.
-<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>
-<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>Meu nome: [SEU NOME]
-<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>Meu usuário GitHub: [SEU_USUARIO]
-<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>Meu curso: Desenvolvimento de Sistemas
-<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>Tecnologias que sei: Python, Tkinter, CustomTkinter, SQLite, Git
-<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>Meus projetos:
-<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>- Sistema Escolar (repo: sistema-escolar) — App desktop com CRUD e banco
-<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>- Gerenciador de Tarefas (repo: gerenciador-tarefas) — App web com Streamlit
-<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>
-<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a>Inclua:
-<a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a>- Saudação com emoji
-<a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a>- Seção "Sobre mim" com bullets
-<a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a>- Badges de tecnologias (style=for-the-badge)
-<a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a>- GitHub Stats card (github-readme-stats, theme tokyonight)
-<a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a>- Top Languages card (layout compact)
-<a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a>- GitHub Streak (streak-stats.demolab.com)
-<a id="__codelineno-18-18" name="__codelineno-18-18" href="#__codelineno-18-18"></a>- Pin cards clicáveis para cada projeto
-<a id="__codelineno-18-19" name="__codelineno-18-19" href="#__codelineno-18-19"></a>- Activity Graph (github-readme-activity-graph)
-<a id="__codelineno-18-20" name="__codelineno-18-20" href="#__codelineno-18-20"></a>- Seção de contato com badges de email e LinkedIn
-<a id="__codelineno-18-21" name="__codelineno-18-21" href="#__codelineno-18-21"></a>- Contador de visitas (komarev.com)
-<a id="__codelineno-18-22" name="__codelineno-18-22" href="#__codelineno-18-22"></a>- Tudo centralizado com &lt;div align="center"&gt;
-<a id="__codelineno-18-23" name="__codelineno-18-23" href="#__codelineno-18-23"></a>- Use Markdown formatado para GitHub
-<a id="__codelineno-18-24" name="__codelineno-18-24" href="#__codelineno-18-24"></a>
-<a id="__codelineno-18-25" name="__codelineno-18-25" href="#__codelineno-18-25"></a>Escreva em português do Brasil.
-</code></pre></div>
-<h3 id="passo-9-checklist-final-de-entrega-do-projeto">Passo 9 — Checklist final de entrega do projeto<a class="headerlink" href="#passo-9-checklist-final-de-entrega-do-projeto" title="Permanent link">¶</a></h3>
-<p>Antes de considerar o projeto "entregue", passe por este checklist completo:</p>
-<p><strong>Código:</strong></p>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> O sistema executa sem erros (<code>python main.py</code>)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Todas as funcionalidades estão implementadas</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> O login funciona com credenciais válidas</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> O CRUD completo funciona (criar, ler, editar, excluir)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> O <code>.env</code> está configurado corretamente</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Não há senhas ou credenciais no código-fonte</li>
+<hr>
+<h2 id="erros-comuns">⚠️ Erros comuns<a class="headerlink" href="#erros-comuns" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>O <code>.env</code> aparece na lista de alterações</strong> — o <code>.gitignore</code> não existe, está fora da raiz do projeto ou foi salvo como <code>.gitignore.txt</code>. Corrija <strong>antes</strong> de fazer o commit.</li>
+<li><strong>Fiz o commit com o <code>venv</code> dentro</strong> — rode no terminal <code>git rm -r --cached venv</code>, confira que <code>venv/</code> está no <code>.gitignore</code>, faça um commit e sincronize.</li>
+<li><strong>O botão Publicar Branch não aparece</strong> — falta o primeiro commit, ou o repositório já tem um remoto (aí o botão é <em>Sincronizar Alterações</em>).</li>
+<li><strong>O navegador não volta para o VS Code depois de autorizar</strong> — confirme a pergunta do navegador para abrir o VS Code; se não aparecer, clique em <em>Publicar Branch</em> de novo.</li>
+<li><strong>“repository already exists”</strong> — já existe um repositório com esse nome na sua conta. Escolha outro nome na caixa do VS Code.</li>
+<li><strong>Commits aparecem no GitHub com o nome ou a foto de outra pessoa</strong> — o <code>user.email</code> do Git é um e-mail de outra conta (por exemplo, um <code>noreply</code> com número inventado). Veja a <a href="../01_git_e_github_conceitos_e_instalacao/#e-mail-privado-nos-commits">aula 01</a>.</li>
 </ul>
-<p><strong>Repositório:</strong></p>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> README.md completo com badges, descrição e instruções</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> .gitignore configurado (<code>.env</code>, <code>__pycache__/</code>, <code>*.db</code>)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> .env.example presente como template</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> LICENSE MIT presente</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> requirements.txt com todas as dependências</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Screenshots na pasta <code>screenshots/</code></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Release v1.0.0 publicada</li>
-</ul>
-<p><strong>Histórico:</strong></p>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Commits com mensagens descritivas (não "update" ou "fix")</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Todos os membros da equipe têm commits no histórico</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Nenhum arquivo sensível no histórico (<code>.env</code>, credenciais)</li>
-</ul>
-<p><strong>Apresentação:</strong></p>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Cada membro sabe explicar sua parte do código</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> O sistema pode ser demonstrado ao vivo</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> O repositório está público (ou pronto para ser tornado público)</li>
-</ul>
-<div class="admonition warning">
-<p class="admonition-title">Atenção</p>
-<p>O professor vai verificar o repositório no GitHub. Além do código funcionando, a qualidade do repositório (README, organização, commits) faz parte da avaliação. Capriche!</p>
-</div>
-<h2 id="exercicio">📝 Exercício<a class="headerlink" href="#exercicio" title="Permanent link">¶</a></h2>
-<p><strong>Tempo estimado:</strong> 15-20 minutos</p>
-<p><strong>Tarefa:</strong> Use uma IA (ChatGPT, Gemini, Claude ou DeepSeek) para gerar o README do seu Projeto Final. Siga estas etapas:</p>
+<hr>
+<h2 id="exercicios">Exercícios<a class="headerlink" href="#exercicios" title="Permanent link">¶</a></h2>
+<h3 id="basico-fixacao">Básico (fixação)<a class="headerlink" href="#basico-fixacao" title="Permanent link">¶</a></h3>
+<p>Com um projeto seu que ainda não usa Git (pode ser um exercício de qualquer módulo do curso):</p>
 <ol>
-<li>Copie a estrutura de arquivos do seu projeto (<code>tree /f</code> no terminal)</li>
-<li>Copie o código do <code>main.py</code></li>
-<li>Use o prompt do Passo 7 para pedir o README à IA</li>
-<li>Revise o resultado: corrija nomes, verifique instruções, personalize</li>
-<li>Substitua o README.md do repositório</li>
-<li>Faça commit: <code>docs: adiciona README profissional gerado com IA</code></li>
-<li>Faça push e verifique no GitHub</li>
+<li>Crie o <code>.gitignore</code> e confira, no painel, que nada de <code>venv</code>, <code>.env</code> ou <code>__pycache__</code> aparece.</li>
+<li>Inicialize o repositório e faça o primeiro commit pelo VS Code.</li>
 </ol>
-<details class="hint">
-<summary>Dica</summary>
-<p>Se a IA gerar um README em inglês, adicione ao prompt: "Escreva 100% em português do Brasil." Se o resultado for muito genérico, cole mais código (não apenas o main.py) para dar mais contexto. Quanto mais informação a IA receber, melhor será o resultado.</p>
-</details>
+<!-- gabarito -->
 <details class="success">
-<summary>Solução resumida</summary>
-<p>O README gerado pela IA será um bom ponto de partida. Ajustes comuns que você precisará fazer:</p>
-<ul>
-<li>Corrigir o nome do projeto e dos autores</li>
-<li>Ajustar as instruções de instalação para seu caso específico</li>
-<li>Adicionar ou remover funcionalidades da lista</li>
-<li>Substituir placeholders de screenshots por imagens reais</li>
-<li>Verificar se os badges estão com as informações corretas</li>
-</ul>
-<p>Após revisar, faça o commit e push normalmente.</p>
-</details>
-<h2 id="missao-da-equipe">🏆 Missão da Equipe<a class="headerlink" href="#missao-da-equipe" title="Permanent link">¶</a></h2>
-<p><strong>Tempo estimado:</strong> 30-45 minutos</p>
-<p><strong>Tarefa:</strong> Finalizem o repositório do Projeto Final com qualidade profissional.</p>
-<p><strong>Entregável:</strong> Repositório no GitHub com:</p>
-<ul>
-<li>README.md completo (badges, screenshots, instruções, autores)</li>
-<li>Release v1.0.0 publicada</li>
-<li>Todos os membros com commits significativos</li>
-<li>Código organizado e funcional</li>
-</ul>
-<p><strong>Checklist da Missão:</strong></p>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> README.md reescrito com template profissional</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Pelo menos 3 badges no README (Python, Status, License)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Pelo menos 1 screenshot do sistema no README</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Instruções de instalação testadas (outro membro seguiu e funcionou)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> requirements.txt atualizado</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> .env.example presente</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Release v1.0.0 criada com descrição das funcionalidades</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Todos os commits seguem o padrão <code>tipo: descrição</code></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Repositório organizado (sem arquivos soltos na raiz)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> O professor verificou o repositório e aprovou</li>
-</ul>
-<div class="admonition important">
-<p class="admonition-title">Nota para o Professor</p>
-<p>Verifique: Acesse o repositório de cada equipe no GitHub. O README deve renderizar corretamente com badges visíveis, instruções claras e screenshots. Na aba Releases, deve haver pelo menos a v1.0.0. No histórico de commits, todos os membros devem ter contribuições. Peça que um membro clone o repositório "do zero" em outra pasta e siga as instruções do README — se funcionar, a documentação está boa.</p>
-</div>
-<h2 id="desafio">⚡ Desafio<a class="headerlink" href="#desafio" title="Permanent link">¶</a></h2>
-<p><strong>Vá além:</strong> Crie o README especial do seu perfil no GitHub.</p>
+<summary>Gabarito — Básico</summary>
 <ol>
-<li>Crie um repositório com o <strong>mesmo nome do seu usuário</strong> no GitHub</li>
-<li>Adicione um <code>README.md</code> com sua apresentação pessoal</li>
-<li>Inclua badges das tecnologias que você sabe</li>
-<li>Liste seus projetos em destaque (com links)</li>
-<li>Adicione formas de contato (e-mail, LinkedIn)</li>
+<li><em>Explorador ➔ Novo Arquivo</em> ➔ <code>.gitignore</code> com <code>venv/</code>, <code>.venv/</code>, <code>.env</code>, <code>__pycache__/</code> e <code>*.pyc</code> ➔ salvar.</li>
+<li><code>Ctrl + Shift + G</code> ➔ <strong>Inicializar Repositório</strong> ➔ confira a lista (só arquivos do projeto, com <strong>U</strong>) ➔ <strong>+</strong> em <em>Alterações</em> ➔ mensagem “Primeira versão do projeto” ➔ <strong>Confirmação</strong>.</li>
 </ol>
-<p>Quando alguém acessar <code>github.com/seu-usuario</code>, verá essa apresentação. É o seu cartão de visita para o mundo tech.</p>
-<p><strong>Desafio extra:</strong> Use a IA para gerar também:</p>
+<p><strong>Confira:</strong> o botão azul virou <strong>Publicar Branch</strong> e, no terminal, <code>git log --oneline</code> mostra o commit.</p>
+</details>
+<h3 id="intermediario-aplicacao">Intermediário (aplicação)<a class="headerlink" href="#intermediario-aplicacao" title="Permanent link">¶</a></h3>
+<ol>
+<li>Publique o projeto do exercício básico no seu GitHub como repositório <strong>privado</strong>.</li>
+<li>Mude um arquivo, compare as versões no VS Code, faça o commit e sincronize.</li>
+<li>Abra o repositório no GitHub e encontre o seu commit no histórico (<em>Commits</em>).</li>
+</ol>
+<!-- gabarito -->
+<details class="success">
+<summary>Gabarito — Intermediário</summary>
+<ol>
+<li><strong>Publicar Branch</strong> ➔ <strong>Permitir</strong> ➔ entrar e autorizar o VS Code no navegador ➔ nome do repositório ➔ <strong>Publish to GitHub private repository</strong>.</li>
+<li>Edite e salve ➔ no painel, clique no arquivo (letra <strong>M</strong>) para ver a comparação ➔ <strong>+</strong> ➔ mensagem ➔ <strong>Confirmação</strong> ➔ <strong>Sincronizar Alterações 1↑</strong> ➔ <strong>OK</strong>.</li>
+<li>Notificação <strong>Abrir no GitHub</strong> (ou <code>github.com/seu-usuario/nome-do-repositorio</code>) ➔ clique em <strong>Commits</strong> (o relógio com o número, acima da lista de arquivos).</li>
+</ol>
+</details>
+<h3 id="avancado-desafio">Avançado (desafio)<a class="headerlink" href="#avancado-desafio" title="Permanent link">¶</a></h3>
+<ol>
+<li>Faça o mesmo caminho com o <strong>GitHub Desktop</strong> num segundo projeto, até ver o botão <strong>Publish repository</strong> (publique, se quiser).</li>
+<li>Simule o acidente: num projeto de teste <strong>sem senha real</strong>, faça um commit com um arquivo <code>.env</code> e depois tire-o do repositório <strong>sem apagar o arquivo do seu computador</strong>.</li>
+<li>Explique por que, num caso real, tirar o <code>.env</code> do repositório <strong>não</strong> é suficiente.</li>
+</ol>
+<!-- gabarito -->
+<details class="success">
+<summary>Gabarito — Avançado</summary>
+<ol>
+<li>GitHub Desktop ➔ <em>File ➔ Add local repository</em> ➔ pasta ➔ <strong>Add repository</strong> (ou <em>create a repository</em> se ainda não tem Git) ➔ <strong>Commit to main</strong> ➔ <strong>Publish repository</strong>.</li>
+<li>No terminal da pasta:
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">git</span> <span class="nb">rm </span><span class="p">-</span><span class="n">-cached</span> <span class="p">.</span><span class="n">env</span>              <span class="c"># tira do Git, mantém o arquivo</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c"># acrescente .env ao .gitignore</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">git</span> <span class="n">add</span> <span class="p">.</span><span class="n">gitignore</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">git</span> <span class="n">commit</span> <span class="n">-m</span> <span class="s2">"Para de versionar o .env"</span>
+</code></pre></div>
+    O <code>.env</code> continua na pasta, mas some do painel e do próximo envio.</li>
+<li>O commit antigo com o <code>.env</code> <strong>continua no histórico</strong> — qualquer pessoa que olhe os commits anteriores vê a senha. Por isso, num vazamento real, a primeira providência é <strong>trocar a senha</strong> (no Neon, <em>Reset password</em>); só depois limpar o repositório.</li>
+</ol>
+</details>
+<hr>
+<h2 id="resumo">💡 Resumo<a class="headerlink" href="#resumo" title="Permanent link">¶</a></h2>
 <ul>
-<li>Docstrings para todas as funções do seu projeto</li>
-<li>Um arquivo <code>CONTRIBUTING.md</code> explicando como contribuir</li>
-<li>Um <code>CHANGELOG.md</code> listando todas as versões e mudanças</li>
+<li>Projeto que já existe ➔ <strong><code>.gitignore</code> primeiro</strong> ➔ Inicializar ➔ primeiro commit ➔ <strong>Publicar Branch</strong>.</li>
+<li>No painel: <strong>U</strong> = novo, <strong>M</strong> = modificado, <strong>A</strong> = preparado. O <strong>+</strong> prepara; <strong>Confirmação</strong> grava; clicar no arquivo mostra a comparação.</li>
+<li>A primeira publicação pede para <strong>autorizar o VS Code</strong> na sua conta; depois, é só <strong>Sincronizar Alterações</strong>.</li>
+<li>Privado durante o desenvolvimento; público para o portfólio, <strong>conferindo antes</strong> que não há senhas nem dados pessoais.</li>
+<li>O GitHub Desktop faz o mesmo: <em>Add local repository</em> ➔ <em>Commit to main</em> ➔ <em>Publish repository</em>.</li>
 </ul>
-<h2 id="erros-comuns">⚠️ Erros Comuns<a class="headerlink" href="#erros-comuns" title="Permanent link">¶</a></h2>
-<div class="admonition danger">
-<p class="admonition-title">README não renderiza corretamente</p>
-<p><strong>Sintoma:</strong> Badges aparecem como texto, tabelas desformatadas, imagens quebradas.</p>
-<p><strong>Causa:</strong> Erro de sintaxe Markdown — falta de linha em branco entre seções, URL incorreta nos badges, ou caminho errado para imagens.</p>
-<p><strong>Solução:</strong> Verifique a prévia no GitHub (aba "Preview" ao editar o README). Cada seção precisa de uma linha em branco antes e depois. URLs de badges devem começar com <code>https://img.shields.io/badge/</code>. Caminhos de imagens devem ser relativos à raiz do repositório (ex: <code>screenshots/login.png</code>).</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Screenshots muito grandes ou pesadas</p>
-<p><strong>Sintoma:</strong> As imagens demoram para carregar ou aparecem gigantes no README.</p>
-<p><strong>Causa:</strong> Screenshots em resolução muito alta (4K) ou formato BMP/TIFF.</p>
-<p><strong>Solução:</strong> Use PNG para screenshots e redimensione para no máximo 800px de largura. Ferramentas online como tinypng.com comprimem imagens sem perder qualidade.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Release sem tag ou com tag errada</p>
-<p><strong>Sintoma:</strong> A release não aparece na aba Releases ou mostra a tag errada.</p>
-<p><strong>Causa:</strong> A tag não foi criada corretamente. O formato deve ser <code>v1.0.0</code> (com o "v" minúsculo).</p>
-<p><strong>Solução:</strong> Ao criar a release no GitHub, o campo "Tag version" cria a tag automaticamente. Digite exatamente <code>v1.0.0</code>. Se errou, pode deletar a release e criar novamente.</p>
-</div>
-<div class="admonition danger">
-<p class="admonition-title">IA gerou informações incorretas no README</p>
-<p><strong>Sintoma:</strong> O README menciona funcionalidades que não existem, bibliotecas que não são usadas, ou instruções que não funcionam.</p>
-<p><strong>Causa:</strong> A IA gera texto plausível, não necessariamente correto. Ela "inventa" detalhes quando não tem contexto suficiente.</p>
-<p><strong>Solução:</strong> SEMPRE revise o que a IA gerar. Teste as instruções de instalação. Verifique se as funcionalidades listadas realmente existem. A IA é uma ferramenta, não uma autoridade — a responsabilidade final é sua.</p>
-</div>
-<h2 id="boas-praticas">💡 Boas Práticas<a class="headerlink" href="#boas-praticas" title="Permanent link">¶</a></h2>
-<p><strong>1. O README é a porta de entrada</strong></p>
-<p>Um recrutador gasta em média 30 segundos olhando um repositório. Se o README estiver vazio ou confuso, ele fecha a aba. Se estiver bonito, organizado e com screenshots — ele continua lendo. Invista tempo no README.</p>
-<p><strong>2. Commits contam uma história</strong></p>
-<p>O histórico de commits de um projeto mostra como ele evoluiu. Commits claros e bem escritos demonstram maturidade profissional. Um recrutador que olha o histórico e vê <code>feat: adiciona validação de e-mail</code> pensa diferente de quem vê <code>asdfgh</code>.</p>
-<p><strong>3. IA como aceleradora, não substituta</strong></p>
-<p>Use IA para gerar rascunhos de documentação, sugerir melhorias e automatizar tarefas repetitivas. Mas nunca publique algo gerado por IA sem revisar. A IA erra, inventa e alucina — e a responsabilidade pelo código publicado é sempre sua.</p>
-<p><strong>4. Portfólio é construção contínua</strong></p>
-<p>Não espere ter 10 projetos para começar a montar seu portfólio. Um único projeto bem documentado vale mais que 20 repositórios vazios. Comece com o Projeto Final e vá adicionando projetos ao longo da sua carreira.</p>
-<p><strong>5. Torne público quando estiver pronto</strong></p>
-<p>Mantenha o repositório privado durante o desenvolvimento. Quando estiver com README completo, código organizado e release publicada — torne público. Primeira impressão importa, e não dá para "des-publicar" um repositório bagunçado.</p>
-<h2 id="checklist">☑️ Checklist<a class="headerlink" href="#checklist" title="Permanent link">¶</a></h2>
-<p>Antes de considerar este módulo concluído, confirme:</p>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Todos os commits seguem o padrão <code>tipo: descrição</code></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> README.md completo com badges, descrição e instruções</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Pelo menos 1 screenshot do sistema no README</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Tabela de tecnologias presente no README</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Seção de autores com links do GitHub de cada membro</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> .env.example presente como template</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> requirements.txt atualizado com todas as dependências</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Release v1.0.0 publicada com descrição das funcionalidades</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Repositório organizado (pastas controllers/, database/, views/, utils/)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Nenhum arquivo sensível exposto (<code>.env</code>, credenciais, <code>.db</code>)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Perfil do GitHub com foto, bio e repositório fixado</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Minha equipe concluiu a Missão da Equipe</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> O repositório está pronto para ser mostrado a um recrutador 🎯</li>
-</ul>
-<h2 id="conclusao">➡️ Conclusão<a class="headerlink" href="#conclusao" title="Permanent link">¶</a></h2>
-<p>Parabéns! 🎉 Você concluiu o Módulo Bônus de Git &amp; GitHub.</p>
-<p>Vamos recapitular o que você conquistou ao longo de todo o curso:</p>
-<table>
-<thead>
-<tr>
-<th>Módulo</th>
-<th>O que você aprendeu</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>00 — VS Code &amp; Ambiente</td>
-<td>Preparar o ambiente de desenvolvimento profissional</td>
-</tr>
-<tr>
-<td>01 — Fundamentos</td>
-<td>Programar em Python com confiança</td>
-</tr>
-<tr>
-<td>02 — POO</td>
-<td>Organizar programas com classes e objetos</td>
-</tr>
-<tr>
-<td>03 — Interfaces</td>
-<td>Criar aplicações desktop com Tkinter</td>
-</tr>
-<tr>
-<td>04 — Banco de Dados</td>
-<td>Persistir dados com SQLite e .env</td>
-</tr>
-<tr>
-<td>05 — Projeto Finalizador</td>
-<td>Construir um sistema completo do zero (Projeto Final do Curso)</td>
-</tr>
-<tr>
-<td>06 — Git &amp; GitHub</td>
-<td>Versionar, colaborar e apresentar seu trabalho</td>
-</tr>
-</tbody>
-</table>
-<p>Você entrou no curso sem saber o que era uma variável. Agora tem um <strong>sistema desktop funcional</strong>, hospedado num <strong>repositório profissional</strong>, com <strong>release publicada</strong> e pronto para o seu <strong>portfólio</strong>.</p>
-<p>O mercado de trabalho está esperando por você. O primeiro passo já foi dado — agora é continuar construindo. 🚀</p>
-<div class="admonition tip">
-<p class="admonition-title">Próximos passos</p>
-<ul>
-<li>Mantenha o GitHub ativo — contribua para projetos, mesmo que pequenos</li>
-<li>Aprenda <strong>GitHub Actions</strong> para automatizar testes e deploys</li>
-<li>Explore <strong>branches</strong> e <strong>Pull Requests</strong> para fluxos de trabalho avançados</li>
-<li>Considere aprender <strong>Docker</strong> para empacotar suas aplicações</li>
-<li>Construa mais projetos e adicione ao seu portfólio</li>
-</ul>
-</div>
-<!-- revisao-visual -->
-<div class="admonition tip">
-<p class="admonition-title">Revisão visual: Git &amp; GitHub</p>
-<p>Ficou alguma dúvida? A <a href="../../modulo_00_revisao_e_fixacao/10_git_github_revisao/">Central de Revisão</a> explica <strong>git &amp; github</strong> com analogias do dia a dia, diagramas e os erros mais comuns — use antes dos exercícios ou para estudar para a prova.</p>
-</div>
+<h2 id="proximo-passo">➡️ Próximo passo<a class="headerlink" href="#proximo-passo" title="Permanent link">¶</a></h2>
+<p><strong><a href="../04_repositorio_remoto_e_equipe/">04 — Repositório remoto e equipe</a></strong>: o repositório no site do GitHub, o terminal (<code>remote</code>, <code>push</code>, <code>pull</code>, <code>clone</code>) e os colaboradores.</p>
 
 
 
@@ -6462,7 +5968,7 @@ Veja <a href="LICENSE">LICENSE</a> para mais detalhes.
       <nav class="md-footer__inner md-grid" aria-label="Rodapé">
         
           
-          <a href="../01_criando_projeto_profissional/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Criando um Projeto Profissional">
+          <a href="../02_primeiro_repositorio/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Primeiro repositório: status, add, commit e histórico">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
@@ -6472,20 +5978,20 @@ Veja <a href="LICENSE">LICENSE</a> para mais detalhes.
                 Anterior
               </span>
               <div class="md-ellipsis">
-                Criando um Projeto Profissional
+                Primeiro repositório: status, add, commit e histórico
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../modulo_00_revisao_e_fixacao/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Visão Geral">
+          <a href="../04_repositorio_remoto_e_equipe/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Repositório remoto e equipe: push, pull, clone e colaboradores">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Próximo
               </span>
               <div class="md-ellipsis">
-                Visão Geral
+                Repositório remoto e equipe: push, pull, clone e colaboradores
               </div>
             </div>
             <div class="md-footer__button md-icon">
