@@ -1,4 +1,4 @@
-# 01 — Criando um Projeto Profissional
+# 04 — Criando um Projeto Profissional
 
 ## 🎯 Objetivo
 
@@ -507,7 +507,7 @@ Antes de prosseguir para o próximo capítulo, confirme:
 
 ## ➡️ Próximo Capítulo
 
-No **Capítulo 02 — Publicando o Projeto Final**, você vai transformar seu repositório em algo digno de portfólio profissional:
+No **Capítulo 06 — Publicando o Projeto Final**, você vai transformar seu repositório em algo digno de portfólio profissional:
 
 - Commits com mensagens padronizadas
 - README completo com badges, screenshots e instruções

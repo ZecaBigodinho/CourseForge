@@ -1,4 +1,4 @@
-# 02 — Publicando o Projeto Final
+# 06 — Publicando o Projeto Final
 
 ## 🎯 Objetivo
 

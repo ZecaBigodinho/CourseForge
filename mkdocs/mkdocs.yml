@@ -141,8 +141,9 @@ nav:
     - 'Exercício Prático: Banco em Nuvem com Neon + Streamlit': python_para_desktop/modulo_04_projeto_finalizador/13_exercicio_neon_streamlit.md
   - Git & GitHub para Projetos Reais (Bônus):
     - Visão Geral: python_para_desktop/modulo_05_git_github/index.md
-    - Criando um Projeto Profissional: python_para_desktop/modulo_05_git_github/01_criando_projeto_profissional.md
-    - Publicando o Projeto Final: python_para_desktop/modulo_05_git_github/02_publicando_projeto_final.md
+    - 'Git e GitHub: conceitos, conta e instalação': python_para_desktop/modulo_05_git_github/01_git_e_github_conceitos_e_instalacao.md
+    - Criando um Projeto Profissional: python_para_desktop/modulo_05_git_github/04_criando_projeto_profissional.md
+    - Publicando o Projeto Final: python_para_desktop/modulo_05_git_github/06_publicando_projeto_final.md
   - Central de Revisão Visual & Fixação Didática:
     - Visão Geral: python_para_desktop/modulo_00_revisao_e_fixacao/index.md
     - Tomada de Decisão com if, elif e else: python_para_desktop/modulo_00_revisao_e_fixacao/01_if_else_revisao.md
