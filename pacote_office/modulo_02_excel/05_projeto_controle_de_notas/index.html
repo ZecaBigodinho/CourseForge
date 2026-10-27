@@ -5907,6 +5907,8 @@
 </table>
 <p>Total: <strong>6 aprovados, 2 em recuperação, 2 reprovados</strong>. Se a Isabela aparecer em <em>Recuperação</em>, o teste está com <code>&gt;</code> no lugar de <code>&gt;=</code>.</p>
 <p>As médias aparecem arredondadas pelo formato (Ana tem 8,25 de verdade). A frequência com casas decimais mostra Bruno com 87,5%, Diego com 92,5%...</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/05_planilha_notas.webp" data-desc-position="bottom"><img alt="Tabela Notas com as colunas Média, Frequência e Situação calculadas, as situações coloridas em verde, amarelo e vermelho, a frequência de 73% da Elisa em vermelho e a escala de cores nas notas B1 a B4; a Barra de Fórmulas mostra a fórmula SES da Situação" loading="lazy" src="../assets/05_planilha_notas.webp"></a></p>
+<p>(1) A fórmula da <strong>Situação</strong> na Barra de Fórmulas — escrita uma vez, vale para a coluna toda · (2) as colunas calculadas, com os destaques · (3) a escala de cores nas notas: vermelho para as mais baixas, verde para as mais altas. A linha mais grossa abaixo do cabeçalho é o painel congelado.</p>
 </details>
 <h3 id="intermediario-aplicacao">Intermediário (aplicação)<a class="headerlink" href="#intermediario-aplicacao" title="Permanent link">¶</a></h3>
 <p>Monte a planilha <strong>Consulta</strong> — lista suspensa com os nomes em <strong>B1</strong> e a turma, a média, a frequência e a situação do aluno escolhido em <strong>B2:B5</strong> — e a parte de <strong>fórmulas do Painel</strong>: quantos alunos em cada situação e a média de cada turma.</p>
@@ -5920,6 +5922,8 @@
 <li><strong>B2:</strong> <code>=PROCX($B$1;Notas[Aluno];Notas[Turma];"Escolha um aluno")</code>. Para B3, B4 e B5, troque <code>Notas[Turma]</code> por <code>Notas[Média]</code>, <code>Notas[Frequência]</code> e <code>Notas[Situação]</code>, e aplique os formatos de número.</li>
 </ol>
 <p><strong>Teste:</strong> escolha <em>Elisa Prado</em> ➔ A · 6,0 · 73% · Reprovado.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/05_consulta.webp" data-desc-position="bottom"><img alt="À esquerda, a célula B1 da planilha Consulta com a lista suspensa aberta e os dez nomes dos alunos; à direita, Elisa Prado escolhida, com Turma A, Média 6,0, Frequência 73% e Situação Reprovado, e a Barra de Fórmulas com o PROCX da célula B2" loading="lazy" src="../assets/05_consulta.webp"></a></p>
+<p>(1) A lista suspensa em B1 · (2) o <code>PROCX</code> da turma · (3) a ficha da aluna escolhida.</p>
 <p><strong>Painel:</strong></p>
 <ul>
 <li><code>=CONT.SE(Notas[Situação];"Aprovado")</code> ➔ <strong>6</strong> · <em>Recuperação</em> ➔ <strong>2</strong> · <em>Reprovado</em> ➔ <strong>2</strong></li>
@@ -5936,14 +5940,25 @@
 <details class="success">
 <summary>Gabarito — Avançado</summary>
 <ol>
-<li>Clique na Tabela <code>Notas</code> ➔ <em>Inserir ➔ Tabela Dinâmica</em> ➔ <strong>Planilha Existente</strong> ➔ uma célula do Painel. <strong>Turma</strong> em <em>Linhas</em>, <strong>Situação</strong> em <em>Colunas</em>, <strong>Aluno</strong> em <em>Valores</em> (vira <em>Contagem de Aluno</em>). Resultado: turma <strong>A</strong> = 3 aprovados, 1 recuperação, 1 reprovado; turma <strong>B</strong> = o mesmo (3, 1, 1). Gráfico: <em>Análise de Tabela Dinâmica ➔ Gráfico Dinâmico ➔ Colunas</em>. Título, por exemplo: “As duas turmas tiveram 3 aprovados em 5”.</li>
-<li>Em <strong>Certificados</strong>, A1 <code>Nome</code> e em <strong>A2</strong>: <code>=FILTRO(Notas[Aluno];Notas[Situação]="Aprovado";"Nenhum aprovado")</code> ➔ Ana Souza, Carla Mendes, Diego Rocha, Felipe Costa, Isabela Torres e João Pereira.<ul>
+<li>
+<p>Clique na Tabela <code>Notas</code> ➔ <em>Inserir ➔ Tabela Dinâmica</em> ➔ <strong>Planilha Existente</strong> ➔ uma célula do Painel. <strong>Turma</strong> em <em>Linhas</em>, <strong>Situação</strong> em <em>Colunas</em>, <strong>Aluno</strong> em <em>Valores</em> (vira <em>Contagem de Aluno</em>). Resultado: turma <strong>A</strong> = 3 aprovados, 1 recuperação, 1 reprovado; turma <strong>B</strong> = o mesmo (3, 1, 1). Gráfico: <em>Análise de Tabela Dinâmica ➔ Gráfico Dinâmico ➔ Colunas</em>. Título, por exemplo: “As duas turmas tiveram 3 aprovados em 5”. Deixe a <strong>legenda</strong> à vista — sem ela, não dá para saber qual barra é qual situação — e, se quiser, pinte as barras com as mesmas cores da Situação.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/05_painel.webp" data-desc-position="bottom"><img alt="Planilha Painel com a contagem de alunos por situação (6, 2 e 2) e as médias das turmas (6,9, 6,1 e 6,5 no geral); ao lado, a tabela dinâmica com as turmas A e B nas linhas e as situações nas colunas, 3, 1 e 1 em cada turma; embaixo, o gráfico dinâmico de colunas com o título As duas turmas tiveram 3 aprovados em 5 e a legenda Aprovado, Recuperação e Reprovado" loading="lazy" src="../assets/05_painel.webp"></a></p>
+<p>(1) As fórmulas do exercício intermediário · (2) a tabela dinâmica · (3) o gráfico dinâmico, com título e legenda.</p>
+</li>
+<li>
+<p>Em <strong>Certificados</strong>, A1 <code>Nome</code> e em <strong>A2</strong>: <code>=FILTRO(Notas[Aluno];Notas[Situação]="Aprovado";"Nenhum aprovado")</code> ➔ Ana Souza, Carla Mendes, Diego Rocha, Felipe Costa, Isabela Torres e João Pereira.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/05_certificados_filtro.webp" data-desc-position="bottom"><img alt="Planilha Certificados com o título Nome em A1 e os seis aprovados de A2 a A7, contornados pela borda azul do despejo; a Barra de Fórmulas mostra a fórmula FILTRO" loading="lazy" src="../assets/05_certificados_filtro.webp"></a></p>
+<ul>
 <li>Selecione os nomes ➔ <code>Ctrl + C</code> ➔ em um arquivo novo, A2 ➔ <em>Colar</em> ➔ <strong>Colar Valores</strong> (a mala direta precisa dos nomes, não da fórmula).</li>
 <li>Cabeçalhos em A1:D1: <code>Nome</code>, <code>Curso</code>, <code>Carga</code>, <code>Data</code>; preencha <em>Pacote Office</em>, a carga horária e a data em todas as linhas. Salve como <code>participantes.xlsx</code> e <strong>feche</strong>.</li>
 <li>No Word, siga o exercício básico da <a href="../../modulo_01_word/04_mala_direta/">aula de mala direta</a> ➔ <strong>6 certificados</strong>.</li>
 </ul>
 </li>
-<li>Com B4 = 9, a média do Bruno vai de 5,25 para <strong>6,1</strong> ➔ ele passa a <em>Aprovado</em> na Tabela e na Consulta; o Painel mostra <strong>7</strong> aprovados e <strong>1</strong> em recuperação; a lista do <code>FILTRO</code> ganha o Bruno. A <strong>tabela dinâmica só muda depois de <em>Atualizar</em></strong> (botão direito ➔ <em>Atualizar</em>). E <code>participantes.xlsx</code> <strong>não muda</strong>, porque recebeu valores colados — para incluir o Bruno, copie a lista de novo.</li>
+<li>
+<p>Com B4 = 9, a média do Bruno vai de 5,25 para <strong>6,1</strong> ➔ ele passa a <em>Aprovado</em> na Tabela e na Consulta; o Painel mostra <strong>7</strong> aprovados e <strong>1</strong> em recuperação, e a média da turma B sobe para <strong>6,3</strong> (a geral, para <strong>6,6</strong>); a lista do <code>FILTRO</code> ganha o Bruno. A <strong>tabela dinâmica só muda depois de <em>Atualizar</em></strong> (botão direito ➔ <em>Atualizar</em>): aí a turma B fica com <strong>4</strong> aprovados, nenhum em recuperação e 1 reprovado. O <strong>título do gráfico não muda</strong> — é texto digitado, e agora diz uma coisa que não é mais verdade; reescreva. E <code>participantes.xlsx</code> <strong>não muda</strong>, porque recebeu valores colados — para incluir o Bruno, copie a lista de novo.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/05_atualizar_tabela_dinamica.webp" data-desc-position="bottom"><img alt="Três momentos do Painel: em cima, as fórmulas já mostram 7 aprovados e 1 em recuperação, mas o Total Geral da tabela dinâmica ainda diz 6, 2 e 2; no meio, o menu do botão direito sobre a tabela dinâmica com Atualizar em destaque; embaixo, a tabela dinâmica atualizada, com a turma B em 4 aprovados e 1 reprovado e o total 7, 1 e 2, e o gráfico redesenhado, ainda com o título antigo" loading="lazy" src="../assets/05_atualizar_tabela_dinamica.webp"></a></p>
+<p>(1) As fórmulas mudam na hora · (2) a tabela dinâmica, não · (3) botão direito ➔ <em>Atualizar</em> · (4) a tabela dinâmica com os dados novos · (5) o gráfico acompanha a tabela dinâmica, mas o título continua o antigo.</p>
+</li>
 </ol>
 <p><strong>Critérios que o professor costuma olhar:</strong> nenhuma conta digitada à mão; regras certas nos casos de limite; planilhas com nomes claros; painel legível; lista de certificados batendo com as situações.</p>
 </details>
