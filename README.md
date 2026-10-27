@@ -2,7 +2,7 @@
 
 # 🎓 CourseForge — Python para Desktop
 
-[![Acessar Curso](https://img.shields.io/badge/📖_Acessar_Curso-GitHub_Pages-7c4dff?style=for-the-badge)](https://zecabigodinho.github.io/curso-python/)
+[![Acessar Curso](https://img.shields.io/badge/📖_Acessar_Curso-GitHub_Pages-7c4dff?style=for-the-badge)](https://zecabigodinho.github.io/CourseForge/)
 [![Status](https://img.shields.io/badge/Status-Atualizado-00bfa5?style=for-the-badge)]()
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)]()
 [![MkDocs](https://img.shields.io/badge/MkDocs-Material-526CFE?style=for-the-badge&logo=materialformkdocs&logoColor=white)]()
@@ -187,7 +187,7 @@ O certificado é liberado por **um único requisito**: entregar e apresentar o *
 ## 🏗️ Estrutura do Repositório
 
 ```text
-curso-python/
+CourseForge/
 ├── cursos/              # Conteúdo dos cursos e módulos em Markdown
 ├── mkdocs/              # Configuração e estilo customizado do MkDocs
 ├── src/                 # Plataforma CourseForge (Engine CLI, utilitários, templates)
@@ -213,8 +213,8 @@ Para testar ou desenvolver o material no seu computador:
 
 ```bash
 # 1. Clonar o repositório
-git clone https://github.com/ZecaBigodinho/curso-python.git
-cd curso-python
+git clone https://github.com/ZecaBigodinho/CourseForge.git
+cd CourseForge
 
 # 2. Instalar dependências Python
 pip install -r requirements.txt
@@ -247,7 +247,7 @@ python -m mkdocs gh-deploy -f mkdocs/mkdocs.yml
 
 **Prof. Pedro Paulo IF** · [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com)
 
-Dúvidas sobre o conteúdo ou erros encontrados: abra uma [issue](https://github.com/ZecaBigodinho/curso-python/issues) ou envie um e-mail.
+Dúvidas sobre o conteúdo ou erros encontrados: abra uma [issue](https://github.com/ZecaBigodinho/CourseForge/issues) ou envie um e-mail.
 
 ---
 

@@ -37,12 +37,13 @@ theme:
   - search.highlight
   - content.tabs.link
   - content.code.copy
+site_url: https://zecabigodinho.github.io/CourseForge/
 copyright: Material gratuito para uso educacional · Prof. Pedro Paulo IF · <a href="mailto:pedropaulo4hire@gmail.com">pedropaulo4hire@gmail.com</a>
 extra:
   generator: false
   social:
   - icon: fontawesome/brands/github
-    link: https://github.com/ZecaBigodinho/curso-python
+    link: https://github.com/ZecaBigodinho/CourseForge
     name: Repositório no GitHub
   - icon: fontawesome/solid/envelope
     link: mailto:pedropaulo4hire@gmail.com
