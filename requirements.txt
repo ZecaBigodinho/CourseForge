@@ -24,6 +24,8 @@ pytest>=7.4.0
 pytest-cov>=4.1.0
 
 # Site (MkDocs Material) e ampliação das imagens das aulas
+# O MkDocs 2 remove os plugins e o sistema de temas: o site só funciona no 1.x.
+mkdocs>=1.6,<2
 mkdocs-material>=9.7,<10
 mkdocs-glightbox>=0.5,<1
 
