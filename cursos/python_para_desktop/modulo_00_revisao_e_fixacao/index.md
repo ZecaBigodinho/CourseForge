@@ -114,4 +114,4 @@ A Central **não substitui** as aulas: ela revisa o mesmo assunto por outro âng
 | [POO](14_poo_revisao.md) | [Módulo 02 (POO)](../modulo_07_poo/03_desenvolvimento_pratico_poo.md) |
 | [Interfaces gráficas](08_tkinter_ui_revisao.md) | [Módulo 03 (Interfaces)](../modulo_02_interfaces_graficas/04_customtkinter.md) |
 | [Banco de dados](09_sqlite_db_revisao.md) | [Módulo 04 (Banco de Dados)](../modulo_03_banco_de_dados/02_integracao_interface.md) |
-| [Git & GitHub](10_git_github_revisao.md) | [Módulo 06 (Git & GitHub)](../modulo_05_git_github/02_publicando_projeto_final.md) |
+| [Git & GitHub](10_git_github_revisao.md) | [Módulo 06 (Git & GitHub)](../modulo_05_git_github/06_publicando_projeto_final.md) |

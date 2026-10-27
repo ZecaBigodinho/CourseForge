@@ -1,14 +1,17 @@
 <div align="center">
 
-# 🎓 CourseForge — Python para Desktop
+# 🎓 CourseForge · IF
 
 [![Acessar Curso](https://img.shields.io/badge/📖_Acessar_Curso-GitHub_Pages-7c4dff?style=for-the-badge)](https://zecabigodinho.github.io/CourseForge/)
+[![Testes](https://github.com/ZecaBigodinho/CourseForge/actions/workflows/testes.yml/badge.svg)](https://github.com/ZecaBigodinho/CourseForge/actions/workflows/testes.yml)
 [![Status](https://img.shields.io/badge/Status-Atualizado-00bfa5?style=for-the-badge)]()
-[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)]()
+[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)]()
 [![MkDocs](https://img.shields.io/badge/MkDocs-Material-526CFE?style=for-the-badge&logo=materialformkdocs&logoColor=white)]()
 [![License](https://img.shields.io/badge/Licença-Educacional-E91E63?style=for-the-badge)]()
 
-**Curso completo de Python aplicado ao desenvolvimento Desktop — da lógica de programação até a criação de aplicações com interface gráfica, banco de dados, integração com serviços em nuvem, programação orientada a objetos (POO), central de revisão visual e versionamento profissional com Git & GitHub.**
+**Cursos gratuitos para a sala de aula: Python para Desktop, Pacote Office e Introdução à IA.**
+
+**O carro-chefe é o curso completo de Python aplicado ao desenvolvimento Desktop — da lógica de programação até a criação de aplicações com interface gráfica, banco de dados, integração com serviços em nuvem, programação orientada a objetos (POO), central de revisão visual e versionamento profissional com Git & GitHub.**
 
 [Acessar o Curso](https://zecabigodinho.github.io/CourseForge/) · [Reportar Problema](https://github.com/ZecaBigodinho/CourseForge/issues) · [Catálogo](https://zecabigodinho.github.io/CourseForge/catalogo/)
 
@@ -18,7 +21,7 @@
 
 ## 📋 Sobre o Projeto
 
-Este repositório contém o material completo do curso **Python para Desktop**, hospedado via GitHub Pages e construído com [MkDocs Material](https://squidfunk.github.io/mkdocs-material/). O conteúdo é utilizado em aulas presenciais e online seguindo a metodologia **Project Based Learning (PBL)** — os alunos aprendem construindo um sistema real do início ao fim.
+Este repositório contém o material dos cursos **Python para Desktop**, **Pacote Office** (Word, Excel e PowerPoint) e **Introdução à IA**, hospedado via GitHub Pages e construído com [MkDocs Material](https://squidfunk.github.io/mkdocs-material/). O conteúdo é utilizado em aulas presenciais e online seguindo a metodologia **Project Based Learning (PBL)** — os alunos aprendem construindo um sistema real do início ao fim.
 
 O repositório também inclui a plataforma **CourseForge** (organizada no diretório `src/`) + o motor de automação **CourseForge Hermes & Watcher**, permitindo gerar, publicar e revisar conteúdos didáticos altamente didáticos e visuais com IA.
 
@@ -30,6 +33,8 @@ O repositório também inclui a plataforma **CourseForge** (organizada no diret�
 - 🎓 **Certificado com regra única** — entrega e apresentação do Projeto Final do Curso
 - 🧠 **Central de Revisão Visual & Fixação** — 14 aulas didáticas com metáforas do mundo real, diagramas `Mermaid.js` e solução de erros comuns
 - 🏗️ **Project Based Learning** — construção incremental de um sistema desktop profissional (MVC + SQLite + Nuvem)
+- 📸 **Capturas reais** — Word, Excel e PowerPoint em português, o painel do Neon e o fluxo de Git no VS Code, com destaques numerados
+- ✅ **Gabaritos testados** — os 76 gabaritos de código são executados automaticamente, junto com os testes e o build do site, a cada PR (GitHub Actions)
 - 🌐 **Site responsivo** acessível de qualquer dispositivo via GitHub Pages
 - 🌙 **Modo escuro/claro** com tema Material Design
 - 🤖 **CourseForge CLI & Hermes Automation** — pipeline de geração com IA e atualizações em segundo plano
@@ -138,21 +143,25 @@ O curso está dividido em **6 módulos na trilha principal (00 a 05)**, **1 mód
 | 06 | Cadastro de Alunos | Formulário com validação de campos |
 | 07 | SQLite Local | Conexão, criação de tabelas e persistência |
 | 08 | CRUD Completo | Inserir, listar, atualizar e deletar dados |
-| 09 | Banco em Nuvem | Conexão com banco relacional na nuvem |
+| 09 | Banco em Nuvem com Neon | O Sistema Escolar no PostgreSQL do Neon (psycopg 3, `.env`) |
 | 10 | Integração e Testes | Conectando UI + Banco + Validações |
 | 11 | Refatoração e Entrega | Limpeza de código e tratamento de erros |
 | 12 | Projeto Final do Curso | Entrega e apresentação do sistema — **libera o certificado** |
-| 13 | Exercício Bônus | Aplicação web com Streamlit + Neon Database |
+| 13 | Exercício Bônus | Aplicação web com Streamlit + Neon, com login e senha protegida (scrypt e sal) |
 
 ---
 
 ### 🔀 Módulo 06 — Git & GitHub (Bônus)
-> Versionamento, colaboração e portfólio · 2 capítulos
+> Versionamento, colaboração e portfólio · 6 capítulos (reescrita em andamento, com prints reais)
 
 | # | Capítulo | Descrição |
 |---|----------|-----------|
-| 01 | Criando Projeto Profissional | Git init, commits, .gitignore e repositório no GitHub |
-| 02 | Publicando o Projeto Final | README profissional, releases e portfólio |
+| 01 | Conceitos, conta e instalação | Git × GitHub, conta com 2FA, instalação no Windows e `git config` |
+| 02 | Primeiro repositório | `status`, `add`, `commit`, `diff`, `log`, `.gitignore` e desfazer com segurança |
+| 03 | Do VS Code para o GitHub | Publicar um projeto que já existe: Controle do Código-Fonte e GitHub Desktop |
+| 04 | Repositório remoto e equipe | Site do GitHub, `remote`, `push`, push recusado, `clone`, `pull`, autenticação e colaboradores |
+| 05 | Branches e Pull Requests | Trabalho em equipe, conflitos e Issues *(em preparação)* |
+| 06 | Publicando o Projeto Final | README profissional, releases e portfólio |
 
 ---
 
@@ -180,7 +189,35 @@ O curso está dividido em **6 módulos na trilha principal (00 a 05)**, **1 mód
 
 ## 🎓 Certificado
 
-O certificado é liberado por **um único requisito**: entregar e apresentar o **Projeto Final do Curso** (capítulo 12 do Módulo 05 — Projeto Finalizador). O Mini-projeto (Módulo 01) e o Projeto de Dados (Módulo 04) são etapas de prática; o Módulo 06 é bônus.
+O certificado do curso de Python é liberado por **um único requisito**: entregar e apresentar o **Projeto Final do Curso** (capítulo 12 do Módulo 05 — Projeto Finalizador). O Mini-projeto (Módulo 01) e o Projeto de Dados (Módulo 04) são etapas de prática; o Módulo 06 é bônus.
+
+---
+
+## 📊 Conteúdo do Pacote Office
+
+> 5 módulos · 25 capítulos · capturas reais do Office em português · cada módulo termina com um projeto
+
+| # | Módulo | Descrição |
+|---|--------|-----------|
+| 01 | Word | Formatação, estilos, seções, sumário automático, referências ABNT e mala direta — projeto: trabalho escolar no padrão ABNT |
+| 02 | Excel | Fórmulas e referências, funções essenciais, tabelas, gráficos e tabela dinâmica — projeto: controle de notas |
+| 03 | PowerPoint | Roteiro, design de slides, Slide Mestre, gráficos do Excel, transições e Modo do Apresentador — projeto: apresentação do trabalho |
+| 04 | Trabalho em equipe e alternativas gratuitas | OneDrive, Outlook e Teams, coautoria, e o mesmo fluxo no LibreOffice e no Google Workspace |
+| 05 | Projeto final integrado | O kit da primeira candidatura: planilha de controle, currículo e cartas por mala direta, apresentação pessoal, entregue pela nuvem |
+
+---
+
+## 🤖 Conteúdo de Introdução à IA
+
+> 5 módulos · 25 capítulos · sem pré-requisito de programação até o projeto final
+
+| # | Módulo | Descrição |
+|---|--------|-----------|
+| 01 | O que é IA (sem mistério) | IA, aprendizado de máquina, redes neurais e IA generativa com atividades feitas à mão |
+| 02 | Usando assistentes de IA bem | Assistentes gratuitos, prompts claros, técnicas que fazem diferença e conferência das respostas |
+| 03 | IA no estudo e no trabalho | Estudar, escrever, planilhas, código e imagens — e quando **não** vale a pena usar IA |
+| 04 | Ética, privacidade e direitos autorais | LGPD, autoria e plágio, direitos autorais e de imagem, vieses e impactos — carta de uso responsável |
+| 05 | Projeto: seu mini-assistente | Tutor de estudos em Python com motor simulado (para todos) e API com plano gratuito (18+), filtro de dados pessoais e testes |
 
 ---
 
@@ -189,9 +226,10 @@ O certificado é liberado por **um único requisito**: entregar e apresentar o *
 ```text
 CourseForge/
 ├── cursos/              # Conteúdo dos cursos e módulos em Markdown
-├── mkdocs/              # Configuração e estilo customizado do MkDocs
+├── mkdocs/              # mkdocs.yml gerado (não edite à mão)
 ├── src/                 # Plataforma CourseForge (Engine CLI, utilitários, templates)
-│   ├── config/          # Arquivos de configuração global
+│   ├── config/          # Configuração global (inclui a configuração do site)
+│   ├── mkdocs_hooks/    # Hook que versiona o custom.css na URL a cada build
 │   ├── converter/       # Conversores de formato
 │   ├── generators/      # Geradores de módulos, capítulos e prompts
 │   ├── models/          # Modelos e enums do domínio
@@ -199,7 +237,11 @@ CourseForge/
 │   ├── templates/       # Templates Jinja2 para arquivos Markdown
 │   └── utils/           # Utilitários de logging, UI e gerenciamento de arquivos
 ├── hermes/              # API de background e fila de automação
-├── tests/               # Suíte de testes unitários
+├── tests/               # Testes (pytest)
+├── ferramentas/
+│   ├── gabaritos/       # Executa e confere os gabaritos das aulas
+│   └── midia/           # Padrão de imagens e scripts de captura (Office, Neon, Git)
+├── .github/workflows/   # CI: pytest + gabaritos + build --strict a cada PR
 ├── main.py              # Ponto de entrada da plataforma CourseForge
 ├── courseforge_watcher.py # Serviço watcher de automação no PC
 └── README.md            # Documentação principal
@@ -223,7 +265,16 @@ pip install -r requirements.txt
 python -m mkdocs serve -f mkdocs/mkdocs.yml
 ```
 
-O site estará disponível localmente em **`http://localhost:8000`**.
+O site estará disponível localmente em **`http://localhost:8000/CourseForge/`** (o endereço inclui `/CourseForge/` porque o `site_url` do site publicado é usado também no servidor local).
+
+### Testes
+
+```bash
+python -m pytest                          # testes da plataforma e do conteúdo (imagens, ênfases...)
+python ferramentas/gabaritos/testar.py    # executa os gabaritos de código das aulas
+```
+
+Os dois rodam também no **GitHub Actions** a cada Pull Request e push na `main`, junto com o build `--strict` do site.
 
 ---
 
@@ -240,6 +291,8 @@ python -m mkdocs gh-deploy -f mkdocs/mkdocs.yml
 ```
 
 > A ordem dos módulos no menu vem de `ordem_modulos` em `cursos/<curso>/.courseforge.yaml`; os títulos vêm do `# H1` de cada aula.
+>
+> O MkDocs fica abaixo da versão 2 (`requirements.txt`): o MkDocs 2 remove os plugins e o sistema de temas usados pelo site. O `custom.css` recebe automaticamente uma versão na URL (`?v=...`), para o navegador dos alunos pegar o estilo novo logo depois do deploy.
 
 ---
 
