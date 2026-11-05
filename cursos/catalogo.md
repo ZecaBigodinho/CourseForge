@@ -55,6 +55,20 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 
     [:octicons-arrow-right-24: Acessar o curso](introducao_a_ia/docs/index.md)
 
+-   :material-palette-outline:{ .lg .middle } __Canva__
+
+    <span class="cf-tag cf-tag--ok">Em andamento</span>
+
+    ---
+
+    Design gráfico do zero no Canva gratuito — cartazes, apresentações, vídeos e posts.
+
+    **Nível:** Iniciante  
+    **Carga horária:** a definir  
+    **Certificado:** Entrega e apresentação do Projeto Final integrado (Módulo 05).  
+
+    [:octicons-arrow-right-24: Acessar o curso](canva/docs/index.md)
+
 </div>
 
 ## Fichas dos cursos
@@ -128,3 +142,26 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 - Construir um mini-assistente ou automação simples com Python.
 
 [Ir para o curso](introducao_a_ia/docs/index.md)
+
+### Canva <span class="cf-tag cf-tag--ok">Em andamento</span>
+
+- **Nível:** Iniciante
+- **Carga horária:** a definir
+- **Para quem é:** Alunos que querem criar cartazes, apresentações, vídeos e posts com aparência profissional, sem saber design.
+- **Certificado:** Entrega e apresentação do Projeto Final integrado (Módulo 05).
+- **Autor:** Pedro Paulo IF
+
+**Pré-requisitos:**
+
+- Usar mouse, teclado e navegador.
+- Ter um e-mail para criar a conta (pessoal ou da escola).
+
+**Você vai aprender a:**
+
+- Navegar no Canva e encontrar modelos, elementos e designs salvos.
+- Criar designs claros com texto, imagens, cores e alinhamento.
+- Montar apresentações e vídeos curtos com animações na medida certa.
+- Produzir posts, currículos e materiais impressos e baixá-los no formato certo.
+- Trabalhar em equipe no Canva respeitando direitos autorais e acessibilidade.
+
+[Ir para o curso](canva/docs/index.md)

@@ -1,0 +1,30 @@
+nome: Canva
+descricao: Design gráfico do zero no Canva gratuito — cartazes, apresentações, vídeos e posts.
+autor: Pedro Paulo IF
+num_modulos: 5
+data_criacao: '2026-11-05'
+versao: 0.1.0
+tags: []
+slug: canva
+# Ordem dos módulos no menu (nomes das pastas); os próximos entram aqui conforme forem publicados
+ordem_modulos:
+  - modulo_01_primeiros_passos
+
+# Ficha do curso — alimenta o Catálogo de cursos (gerado por src/generators/gerar_catalogo.py)
+ordem: 4
+status: em_andamento               # disponivel | em_andamento | em_breve
+ficha:
+  icone: material-palette-outline
+  nivel: Iniciante
+  carga_horaria: a definir
+  publico: Alunos que querem criar cartazes, apresentações, vídeos e posts com aparência profissional, sem saber design.
+  certificado: Entrega e apresentação do Projeto Final integrado (Módulo 05).
+  pre_requisitos:
+    - Usar mouse, teclado e navegador.
+    - Ter um e-mail para criar a conta (pessoal ou da escola).
+  objetivos:
+    - Navegar no Canva e encontrar modelos, elementos e designs salvos.
+    - Criar designs claros com texto, imagens, cores e alinhamento.
+    - Montar apresentações e vídeos curtos com animações na medida certa.
+    - Produzir posts, currículos e materiais impressos e baixá-los no formato certo.
+    - Trabalhar em equipe no Canva respeitando direitos autorais e acessibilidade.

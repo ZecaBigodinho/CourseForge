@@ -236,4 +236,13 @@ nav:
     - Conectando a uma API de IA: introducao_a_ia/modulo_05_projeto_mini_assistente/03_conectando_a_uma_api.md
     - Segurança e testes: introducao_a_ia/modulo_05_projeto_mini_assistente/04_seguranca_e_testes.md
     - 'Projeto final: entregando o seu mini-assistente': introducao_a_ia/modulo_05_projeto_mini_assistente/05_projeto_final_entrega.md
+- Canva:
+  - Apresentação do curso: canva/docs/index.md
+  - Primeiros passos:
+    - Visão Geral: canva/modulo_01_primeiros_passos/index.md
+    - 'Conhecendo o Canva: conta e tela inicial': canva/modulo_01_primeiros_passos/01_conhecendo_o_canva.md
+    - 'Criar um design: tamanhos e modelos': canva/modulo_01_primeiros_passos/02_criar_um_design.md
+    - Conhecendo o editor: canva/modulo_01_primeiros_passos/03_conhecendo_o_editor.md
+    - Projetos, pastas e salvamento: canva/modulo_01_primeiros_passos/04_projetos_e_pastas.md
+    - 'Projeto do módulo: cartão de visita': canva/modulo_01_primeiros_passos/05_projeto_cartao_de_visita.md
 docs_dir: ../cursos
