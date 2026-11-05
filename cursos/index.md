@@ -72,7 +72,7 @@ hide:
 
     Canva gratuito com projetos reais: catálogo para clientes, cardápio, panfleto, convite, posts e vídeos — com capturas reais da plataforma.
 
-    Módulo 01 (base) disponível · projetos de negócio em produção
+    Módulos 01 (base) e 02 (projetos de negócio) disponíveis
 
     [:octicons-arrow-right-24: Começar pelo Módulo 01](canva/modulo_01_primeiros_passos/index.md)
 

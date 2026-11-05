@@ -284,4 +284,4 @@ Faça uma **versão story** do mesmo cardápio para o status do WhatsApp (1080 �
 
 ## ➡️ Próximo passo
 
-Volte ao [índice do módulo](index.md). Os próximos projetos (panfleto de promoção e post e story de oferta) estão em produção.
+**[03 — Panfleto de promoção que se lê de longe](03_panfleto_promocao.md)**: hierarquia, um selo gratuito e o teste da distância.
