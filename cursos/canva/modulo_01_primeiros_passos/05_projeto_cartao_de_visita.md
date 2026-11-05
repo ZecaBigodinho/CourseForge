@@ -186,4 +186,4 @@ Uma gráfica pediu o cartão em **9 × 5 cm**, PDF com **marcas de corte e sangr
 
 ## ➡️ Próximo passo
 
-Você terminou o **Módulo 01**. Volte ao [índice do módulo](index.md) e confira o checklist. O **Módulo 02 — Design na prática** *(em breve)* aprofunda texto, cores, imagens e alinhamento.
+Você terminou o **Módulo 01**. Volte ao [índice do módulo](index.md) e confira o checklist. Depois, siga para o **[Módulo 02 — Projetos para o seu negócio](../modulo_02_projetos_negocio/index.md)**, começando pelo catálogo de produtos.

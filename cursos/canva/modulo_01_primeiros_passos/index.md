@@ -55,4 +55,4 @@ Antes de seguir, confira se você consegue:
 
 ## ➡️ Próximo passo
 
-Comece pela **[aula 01 — Conhecendo o Canva](01_conhecendo_o_canva.md)**. O **Módulo 02 — Design na prática** está em produção.
+Comece pela **[aula 01 — Conhecendo o Canva](01_conhecendo_o_canva.md)**. Depois, siga para o **[Módulo 02 — Projetos para o seu negócio](../modulo_02_projetos_negocio/index.md)**.

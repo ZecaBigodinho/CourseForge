@@ -61,11 +61,11 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 
     ---
 
-    Design gráfico do zero no Canva gratuito — cartazes, apresentações, vídeos e posts.
+    Canva gratuito do zero, com projetos reais — catálogo, cardápio, panfleto, convite, posts e vídeos.
 
     **Nível:** Iniciante  
     **Carga horária:** a definir  
-    **Certificado:** Entrega e apresentação do Projeto Final integrado (Módulo 05).  
+    **Certificado:** Entrega do portfólio com os projetos dos Módulos 02 e 03.  
 
     [:octicons-arrow-right-24: Acessar o curso](canva/docs/index.md)
 
@@ -147,8 +147,8 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 
 - **Nível:** Iniciante
 - **Carga horária:** a definir
-- **Para quem é:** Alunos que querem criar cartazes, apresentações, vídeos e posts com aparência profissional, sem saber design.
-- **Certificado:** Entrega e apresentação do Projeto Final integrado (Módulo 05).
+- **Para quem é:** Alunos e pequenos empreendedores que querem criar catálogos, cardápios, posts e convites com aparência profissional, sem saber design.
+- **Certificado:** Entrega do portfólio com os projetos dos Módulos 02 e 03.
 - **Autor:** Pedro Paulo IF
 
 **Pré-requisitos:**
@@ -159,9 +159,9 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 **Você vai aprender a:**
 
 - Navegar no Canva e encontrar modelos, elementos e designs salvos.
-- Criar designs claros com texto, imagens, cores e alinhamento.
-- Montar apresentações e vídeos curtos com animações na medida certa.
-- Produzir posts, currículos e materiais impressos e baixá-los no formato certo.
-- Trabalhar em equipe no Canva respeitando direitos autorais e acessibilidade.
+- Resolver pedidos reais de negócio — catálogo, cardápio, panfleto e posts de oferta.
+- Criar convites, carrosséis, capas e vídeos curtos para eventos e redes sociais.
+- Pôr links clicáveis e escolher o formato certo para enviar ou imprimir.
+- Usar só recursos gratuitos, respeitando direitos autorais e dados pessoais.
 
 [Ir para o curso](canva/docs/index.md)

@@ -70,9 +70,9 @@ hide:
 
     ---
 
-    Design gráfico do zero no Canva gratuito: cartazes, apresentações, vídeos curtos e posts, com capturas reais da plataforma.
+    Canva gratuito com projetos reais: catálogo para clientes, cardápio, panfleto, convite, posts e vídeos — com capturas reais da plataforma.
 
-    5 módulos · Módulo 01 disponível: do primeiro acesso ao cartão de visita
+    Módulo 01 (base) disponível · projetos de negócio em produção
 
     [:octicons-arrow-right-24: Começar pelo Módulo 01](canva/modulo_01_primeiros_passos/index.md)
 

@@ -2,7 +2,7 @@
 
 > **Autor:** Prof. Pedro Paulo IF · [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com)  
 > **Versão:** 0.1.0  
-> **Situação:** em andamento — Módulo 01 disponível  
+> **Situação:** em andamento — Módulo 01 disponível; Módulo 02 em produção  
 > **Plano nas aulas:** Canva **gratuito**, no navegador, em português
 
 !!! info "Curso em construção"
@@ -12,7 +12,7 @@
 
 ## Sobre este curso
 
-**Design gráfico para quem não é designer.** O Canva junta modelos prontos, fotos, ícones e fontes num editor que funciona no navegador. Neste curso você aprende a usá-lo com critério: escolher um bom modelo, adaptar ao seu conteúdo, deixar tudo legível e entregar no formato certo, seja cartaz, apresentação, vídeo curto ou post.
+**Design gráfico para quem não é designer, aprendido em projetos.** O Canva junta modelos prontos, fotos, ícones e fontes num editor que funciona no navegador. O Módulo 01 ensina o básico. Depois, cada aula é um **pedido real**, como *“quero um catálogo para mandar aos meus clientes”*, resolvido do começo ao fim: escolher o modelo, adaptar ao seu conteúdo e entregar no formato certo.
 
 Todas as aulas usam só o **plano gratuito**. Quando um recurso só existe no Canva Pro (ele aparece com uma **coroa** 👑), a aula avisa e mostra um caminho gratuito.
 
@@ -22,26 +22,18 @@ Todas as aulas usam só o **plano gratuito**. Quando um recurso só existe no Ca
 
 Conta e tela inicial, criar um design (tamanhos e modelos), o editor, projetos e pastas — com um cartão de visita como projeto. [Acessar o módulo](../modulo_01_primeiros_passos/index.md)
 
-### Módulo 02 — Design na prática
+### Módulo 02 — Projetos para o seu negócio 🚧 em produção
 
-Texto e fontes, elementos, fotos e ícones, cores e fundos, alinhamento, camadas e grupos — com um cartaz de evento escolar como projeto.
+Um pedido real por aula, do começo ao fim: **catálogo de produtos** para mandar aos clientes, **cardápio**, **panfleto de promoção** e **post e story de oferta**. [Acessar o módulo](../modulo_02_projetos_negocio/index.md)
 
-### Módulo 03 — Apresentações e vídeo
+### Módulo 03 — Eventos e redes sociais
 
-Apresentações do Canva, animações e transições, editor de vídeo básico, apresentar e gravar — com a apresentação de um trabalho como projeto.
-
-### Módulo 04 — Redes sociais e impressos
-
-Posts e stories, currículo e convite, baixar em PNG, JPG, PDF e MP4, e cuidados para imprimir — com um kit de divulgação como projeto.
-
-### Módulo 05 — Colaboração e projeto final
-
-Compartilhar e comentar, Canva Docs e Quadro branco, ferramentas de IA gratuitas, direitos autorais e acessibilidade — e o projeto final integrado.
+**Convite**, **carrossel** para o Instagram, **capa de vídeo** e **vídeo curto**.
 
 ## Certificado
 
 !!! warning "Um único requisito"
-    O certificado é liberado ao **entregar e apresentar o Projeto Final integrado** (Módulo 05). Os projetos dos Módulos 01 a 04 são etapas de prática.
+    O certificado é liberado ao **entregar o portfólio** com os projetos dos Módulos 02 e 03, feitos para um negócio ou evento (real ou inventado). O cartão de visita do Módulo 01 é prática.
 
 ## O que você vai precisar
 

@@ -245,4 +245,8 @@ nav:
     - Conhecendo o editor: canva/modulo_01_primeiros_passos/03_conhecendo_o_editor.md
     - Projetos, pastas e salvamento: canva/modulo_01_primeiros_passos/04_projetos_e_pastas.md
     - 'Projeto do módulo: cartão de visita': canva/modulo_01_primeiros_passos/05_projeto_cartao_de_visita.md
+  - Projetos para o seu negócio:
+    - Visão Geral: canva/modulo_02_projetos_negocio/index.md
+    - catálogo de produtos para enviar aos clientes: canva/modulo_02_projetos_negocio/01_catalogo_de_produtos.md
+    - cardápio com QR code para pedidos: canva/modulo_02_projetos_negocio/02_cardapio.md
 docs_dir: ../cursos
