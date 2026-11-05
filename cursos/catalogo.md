@@ -55,6 +55,20 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 
     [:octicons-arrow-right-24: Acessar o curso](introducao_a_ia/docs/index.md)
 
+-   :material-palette-outline:{ .lg .middle } __Canva__
+
+    <span class="cf-tag cf-tag--ok">Em andamento</span>
+
+    ---
+
+    Canva gratuito do zero, com projetos reais — catálogo, cardápio, panfleto, convite, posts e vídeos.
+
+    **Nível:** Iniciante  
+    **Carga horária:** a definir  
+    **Certificado:** Entrega do portfólio com os projetos dos Módulos 02 e 03.  
+
+    [:octicons-arrow-right-24: Acessar o curso](canva/docs/index.md)
+
 </div>
 
 ## Fichas dos cursos
@@ -128,3 +142,26 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 - Construir um mini-assistente ou automação simples com Python.
 
 [Ir para o curso](introducao_a_ia/docs/index.md)
+
+### Canva <span class="cf-tag cf-tag--ok">Em andamento</span>
+
+- **Nível:** Iniciante
+- **Carga horária:** a definir
+- **Para quem é:** Alunos e pequenos empreendedores que querem criar catálogos, cardápios, posts e convites com aparência profissional, sem saber design.
+- **Certificado:** Entrega do portfólio com os projetos dos Módulos 02 e 03.
+- **Autor:** Pedro Paulo IF
+
+**Pré-requisitos:**
+
+- Usar mouse, teclado e navegador.
+- Ter um e-mail para criar a conta (pessoal ou da escola).
+
+**Você vai aprender a:**
+
+- Navegar no Canva e encontrar modelos, elementos e designs salvos.
+- Resolver pedidos reais de negócio — catálogo, cardápio, panfleto e posts de oferta.
+- Criar convites, carrosséis, capas e vídeos curtos para eventos e redes sociais.
+- Pôr links clicáveis e escolher o formato certo para enviar ou imprimir.
+- Usar só recursos gratuitos, respeitando direitos autorais e dados pessoais.
+
+[Ir para o curso](canva/docs/index.md)

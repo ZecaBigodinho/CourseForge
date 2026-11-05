@@ -64,6 +64,18 @@ hide:
 
     [:octicons-arrow-right-24: Começar pelo Módulo 01](introducao_a_ia/modulo_01_o_que_e_ia/index.md)
 
+-   :material-palette-outline:{ .lg .middle } __Canva__
+
+    <span class="cf-tag cf-tag--ok">Em andamento</span>
+
+    ---
+
+    Canva gratuito com projetos reais: catálogo para clientes, cardápio, panfleto, convite, posts e vídeos — com capturas reais da plataforma.
+
+    Módulo 01 (base) disponível · projetos de negócio em produção
+
+    [:octicons-arrow-right-24: Começar pelo Módulo 01](canva/modulo_01_primeiros_passos/index.md)
+
 </div>
 
 [Ver o catálogo completo, com as fichas dos cursos](catalogo.md){ .md-button }

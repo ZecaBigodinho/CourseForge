@@ -1,0 +1,31 @@
+nome: Canva
+descricao: Canva gratuito do zero, com projetos reais — catálogo, cardápio, panfleto, convite, posts e vídeos.
+autor: Pedro Paulo IF
+num_modulos: 3
+data_criacao: '2026-11-05'
+versao: 0.1.0
+tags: []
+slug: canva
+# Ordem dos módulos no menu (nomes das pastas); os próximos entram aqui conforme forem publicados
+ordem_modulos:
+  - modulo_01_primeiros_passos
+  - modulo_02_projetos_negocio
+
+# Ficha do curso — alimenta o Catálogo de cursos (gerado por src/generators/gerar_catalogo.py)
+ordem: 4
+status: em_andamento               # disponivel | em_andamento | em_breve
+ficha:
+  icone: material-palette-outline
+  nivel: Iniciante
+  carga_horaria: a definir
+  publico: Alunos e pequenos empreendedores que querem criar catálogos, cardápios, posts e convites com aparência profissional, sem saber design.
+  certificado: Entrega do portfólio com os projetos dos Módulos 02 e 03.
+  pre_requisitos:
+    - Usar mouse, teclado e navegador.
+    - Ter um e-mail para criar a conta (pessoal ou da escola).
+  objetivos:
+    - Navegar no Canva e encontrar modelos, elementos e designs salvos.
+    - Resolver pedidos reais de negócio — catálogo, cardápio, panfleto e posts de oferta.
+    - Criar convites, carrosséis, capas e vídeos curtos para eventos e redes sociais.
+    - Pôr links clicáveis e escolher o formato certo para enviar ou imprimir.
+    - Usar só recursos gratuitos, respeitando direitos autorais e dados pessoais.

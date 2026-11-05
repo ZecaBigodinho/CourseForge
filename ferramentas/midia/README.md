@@ -69,6 +69,14 @@ Ainda no Excel: grave fórmulas com `Formula2Local` (com `FormulaLocal`, o Excel
 
 Dicas aprendidas: diálogos abertos bloqueiam a automação (feche com Esc no próprio diálogo ou clique em Cancelar); depois de instalar um plugin, reinicie o `mkdocs serve`; no painel escondido do navegador, as imagens `loading=lazy` só carregam quando aparecem na tela.
 
+## Capturas do Canva (só com autorização do professor)
+
+- O **professor** entra na conta do Canva no navegador do app; a IA nunca digita a senha.
+- O painel entrega capturas reduzidas a 800 px: capture a área da página com `CopyFromScreen` na região do painel, com o zoom em 100% (`devicePixelRatio = 1`). Confira a região com `innerWidth`/`innerHeight` antes de capturar.
+- Menus e janelas do Canva fecham quando a página perde o foco: abra o menu e capture logo em seguida, sem clicar em outro lugar.
+- **Dados pessoais:** cubra a foto de perfil e embace os designs do professor (seção *Continue criando*, *Projetos*). Modelo do tratamento: `ferramentas/midia/canva/tratar_aula01.py`.
+- Só recursos **gratuitos**: não clique em itens com coroa 👑 nem no teste do Pro.
+
 ## Capturas do módulo de Git (só com autorização do professor)
 
 - **Terminal:** `ferramentas/midia/git/terminal_git.ps1` abre uma janela do PowerShell com `GIT_CONFIG_GLOBAL` apontando para um arquivo de teste (autor “Ana Souza”, `ana.souza@example.com`), prompt só com a pasta (`C:\Projetos\...`, para o caminho não mostrar o usuário do Windows) e digita os comandos tecla por tecla (`Digitar`). A configuração real do Git **não** muda.
