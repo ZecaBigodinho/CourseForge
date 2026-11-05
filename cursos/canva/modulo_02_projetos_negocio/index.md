@@ -18,8 +18,8 @@ Os exemplos usam negócios **inventados**. Troque pelos dados do seu negócio, o
 
 - [01. Catálogo de produtos para enviar aos clientes](01_catalogo_de_produtos.md)
 - [02. Cardápio com QR code para pedidos](02_cardapio.md)
-- 03. Panfleto de promoção *(em breve)*
-- 04. Post e story de oferta *(em breve)*
+- [03. Panfleto de promoção que se lê de longe](03_panfleto_promocao.md)
+- [04. Post e story da mesma oferta](04_post_e_story.md)
 
 ---
 
@@ -51,6 +51,8 @@ Antes de seguir, confira se você consegue:
 - [ ] Pôr um link de WhatsApp clicável num texto.
 - [ ] Baixar um PDF digital com todas as páginas.
 - [ ] Criar um QR code estático com legenda e testar com o celular.
+- [ ] Agrupar elementos e fazer o teste da distância com o zoom.
+- [ ] Pôr post e story no mesmo design e baixar só as páginas escolhidas.
 
 ## ➡️ Próximo passo
 
