@@ -69,6 +69,20 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 
     [:octicons-arrow-right-24: Acessar o curso](canva/docs/index.md)
 
+-   :material-vector-bezier:{ .lg .middle } __CorelDRAW__
+
+    <span class="cf-tag cf-tag--ok">Em andamento</span>
+
+    ---
+
+    CorelDRAW do zero, em projetos — cartão de visita, logotipo e arquivos prontos para a gráfica, com equivalentes no Inkscape gratuito.
+
+    **Nível:** Iniciante  
+    **Carga horária:** 18 h  
+    **Certificado:** Entrega do logotipo do Módulo 02 e do kit para a gráfica do Módulo 03.  
+
+    [:octicons-arrow-right-24: Acessar o curso](coreldraw/docs/index.md)
+
 </div>
 
 ## Fichas dos cursos
@@ -165,3 +179,26 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 - Usar só recursos gratuitos, respeitando direitos autorais e dados pessoais.
 
 [Ir para o curso](canva/docs/index.md)
+
+### CorelDRAW <span class="cf-tag cf-tag--ok">Em andamento</span>
+
+- **Nível:** Iniciante
+- **Carga horária:** 18 h
+- **Para quem é:** Alunos e pequenos empreendedores que querem criar peças vetoriais — cartões, logotipos, adesivos e panfletos — e mandar o arquivo certo para a gráfica.
+- **Certificado:** Entrega do logotipo do Módulo 02 e do kit para a gráfica do Módulo 03.
+- **Autor:** Pedro Paulo IF
+
+**Pré-requisitos:**
+
+- Usar mouse, teclado e pastas do Windows.
+- CorelDRAW instalado (versão de avaliação serve) ou o Inkscape gratuito.
+
+**Você vai aprender a:**
+
+- Reconhecer a interface do CorelDRAW e criar documentos no tamanho e na unidade certos.
+- Desenhar, selecionar e formatar formas e textos, com preenchimento e contorno.
+- Montar um cartão de visita e salvá-lo em .cdr, PDF e PNG.
+- Trabalhar com curvas, combinações de formas e vetorização de imagens.
+- Preparar arquivos para a gráfica com CMYK, sangria e marcas de corte.
+
+[Ir para o curso](coreldraw/docs/index.md)
