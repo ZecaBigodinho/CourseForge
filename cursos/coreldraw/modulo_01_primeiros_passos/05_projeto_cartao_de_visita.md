@@ -135,7 +135,10 @@ Clique em **Salvar** (`Ctrl + S`):
 </figure>
 
 1. Em **Tipo** (2), escolha **PNG - Portable Network Graphics**.
-2. **Exportar** (3). Abre uma janela de opções: confira a **resolução** (300 dpi para imprimir em casa, 150 dpi basta para mandar pelo celular) e clique em **OK**.
+2. **Exportar** (3). Abre a janela **Exportar para PNG**: confira a **Resolução** (300 dpi para imprimir em casa, 150 dpi basta para mandar pelo celular) e clique em **OK**.
+
+!!! info "O PNG sai do tamanho dos objetos"
+    Por padrão, o PNG tem o tamanho do **conjunto de objetos**, não da página. No cartão não faz diferença, porque o fundo cobre a página inteira. Se o desenho não cobrir a página e você quiser a página toda, marque **Cortar para a página de exportação** na janela *Exportar*.
 
 | Para... | Formato |
 |---|---|
@@ -215,4 +218,4 @@ Um colega só tem o CorelDRAW **2020**. Entregue a ele um `.cdr` que abra no pro
 
 ## ➡️ Próximo passo
 
-Você terminou o **Módulo 01**. Volte ao [índice do módulo](index.md) e confira o checklist. O **Módulo 02 — Vetor na prática**, com o projeto de logotipo, está em produção.
+Você terminou o **Módulo 01**. Volte ao [índice do módulo](index.md) e confira o checklist. Depois, siga para o **[Módulo 02 — Vetor na prática](../modulo_02_vetor_na_pratica/index.md)**, com o projeto de logotipo.

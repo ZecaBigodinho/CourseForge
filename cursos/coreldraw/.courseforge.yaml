@@ -9,6 +9,7 @@ slug: coreldraw
 # Ordem dos módulos no menu (nomes das pastas); os próximos entram aqui conforme forem publicados
 ordem_modulos:
   - modulo_01_primeiros_passos
+  - modulo_02_vetor_na_pratica
 
 # Ficha do curso — alimenta o Catálogo de cursos (gerado por src/generators/gerar_catalogo.py)
 ordem: 5
@@ -16,7 +17,7 @@ status: em_andamento             # disponivel | em_andamento | em_breve
 ficha:
   icone: material-vector-bezier
   nivel: Iniciante
-  carga_horaria: 18 h               # M01 ~6 h publicado; M02 e M03 ~6 h cada, estimativa de 06/11/2026
+  carga_horaria: 18 h               # M01 e M02 ~6 h cada, publicados; M03 ~6 h, estimativa de 06/11/2026
   publico: Alunos e pequenos empreendedores que querem criar peças vetoriais — cartões, logotipos, adesivos e panfletos — e mandar o arquivo certo para a gráfica.
   certificado: Entrega do logotipo do Módulo 02 e do kit para a gráfica do Módulo 03.
   pre_requisitos:

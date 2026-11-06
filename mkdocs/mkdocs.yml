@@ -266,4 +266,11 @@ nav:
     - Formas, seleção e texto: coreldraw/modulo_01_primeiros_passos/03_formas_selecao_e_texto.md
     - 'Cor: preenchimento, contorno e paleta': coreldraw/modulo_01_primeiros_passos/04_cor_preenchimento_e_contorno.md
     - 'Projeto do módulo: cartão de visita': coreldraw/modulo_01_primeiros_passos/05_projeto_cartao_de_visita.md
+  - Vetor na prática:
+    - Visão Geral: coreldraw/modulo_02_vetor_na_pratica/index.md
+    - Curvas e Bézier: coreldraw/modulo_02_vetor_na_pratica/01_curvas_e_bezier.md
+    - Soldar, aparar e interseção: coreldraw/modulo_02_vetor_na_pratica/02_soldar_aparar_intersecao.md
+    - 'PowerTRACE: de imagem para vetor': coreldraw/modulo_02_vetor_na_pratica/03_powertrace.md
+    - Texto artístico × texto de parágrafo: coreldraw/modulo_02_vetor_na_pratica/04_texto_artistico_e_paragrafo.md
+    - 'Projeto do módulo: logotipo': coreldraw/modulo_02_vetor_na_pratica/05_projeto_logotipo.md
 docs_dir: ../cursos

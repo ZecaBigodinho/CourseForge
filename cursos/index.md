@@ -84,7 +84,7 @@ hide:
 
     CorelDRAW do zero, em projetos: cartão de visita, logotipo e arquivos prontos para a gráfica — com o Inkscape gratuito em cada aula.
 
-    Módulo 01 disponível · 5 aulas · do programa aberto ao cartão em PDF e PNG
+    Módulos 01 e 02 disponíveis · 10 aulas · do cartão de visita ao logotipo
 
     [:octicons-arrow-right-24: Começar pelo Módulo 01](coreldraw/modulo_01_primeiros_passos/index.md)
 

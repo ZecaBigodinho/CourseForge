@@ -2,7 +2,7 @@
 
 > **Autor:** Prof. Pedro Paulo IF · [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com)  
 > **Versão:** 0.1.0  
-> **Situação:** em andamento. Módulo 01 disponível; Módulos 02 e 03 em produção  
+> **Situação:** em andamento. Módulos 01 e 02 disponíveis; Módulo 03 em produção  
 > **Programa nas aulas:** CorelDRAW Graphics Suite 2026, em português, no Windows
 
 ---
@@ -22,9 +22,9 @@ Desenho **vetorial** é feito de formas descritas por matemática, e não de pon
 
 A tela de boas-vindas e a interface, documentos (tamanho, unidades e páginas), formas, seleção e texto, cor de preenchimento e de contorno, com um **cartão de visita** como projeto, salvo em `.cdr` e exportado em PDF e PNG. [Acessar o módulo](../modulo_01_primeiros_passos/index.md)
 
-### Módulo 02 — Vetor na prática 🛠️ em produção
+### Módulo 02 — Vetor na prática ✅ disponível
 
-Curvas e Bézier; soldar, aparar e interseção; PowerTRACE (transformar uma imagem em vetor); texto artístico × texto de parágrafo. Projeto: um **logotipo**.
+Curvas e Bézier; soldar, aparar e interseção; PowerTRACE (transformar uma imagem em vetor); texto artístico × texto de parágrafo. Projeto: um **logotipo** em vetor e em PNG transparente. [Acessar o módulo](../modulo_02_vetor_na_pratica/index.md)
 
 ### Módulo 03 — Arquivos para gráfica 🛠️ em produção
 
