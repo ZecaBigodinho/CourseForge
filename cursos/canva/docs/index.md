@@ -2,11 +2,8 @@
 
 > **Autor:** Prof. Pedro Paulo IF · [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com)  
 > **Versão:** 0.1.0  
-> **Situação:** em andamento — Módulos 01 e 02 disponíveis; Módulo 03 em produção  
+> **Situação:** disponível — 3 módulos, 13 aulas  
 > **Plano nas aulas:** Canva **gratuito**, no navegador, em português
-
-!!! info "Curso em construção"
-    As aulas são publicadas conforme ficam prontas. Comece pelo **[Módulo 01 — Primeiros passos](../modulo_01_primeiros_passos/index.md)**.
 
 ---
 
@@ -26,9 +23,9 @@ Conta e tela inicial, criar um design (tamanhos e modelos), o editor, projetos e
 
 Um pedido real por aula, do começo ao fim: **catálogo de produtos** para mandar aos clientes, **cardápio**, **panfleto de promoção** e **post e story de oferta**. [Acessar o módulo](../modulo_02_projetos_negocio/index.md)
 
-### Módulo 03 — Eventos e redes sociais
+### Módulo 03 — Eventos e redes sociais ✅ disponível
 
-**Convite**, **carrossel** para o Instagram, **capa de vídeo** e **vídeo curto**.
+**Convite virtual**, **carrossel** para o Instagram, **capa de vídeo** e **vídeo curto**. [Acessar o módulo](../modulo_03_eventos_e_redes/index.md)
 
 ## Certificado
 

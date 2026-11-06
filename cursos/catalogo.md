@@ -57,14 +57,14 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 
 -   :material-palette-outline:{ .lg .middle } __Canva__
 
-    <span class="cf-tag cf-tag--ok">Em andamento</span>
+    <span class="cf-tag cf-tag--ok">Disponível</span>
 
     ---
 
     Canva gratuito do zero, com projetos reais — catálogo, cardápio, panfleto, convite, posts e vídeos.
 
     **Nível:** Iniciante  
-    **Carga horária:** a definir  
+    **Carga horária:** 20 h  
     **Certificado:** Entrega do portfólio com os projetos dos Módulos 02 e 03.  
 
     [:octicons-arrow-right-24: Acessar o curso](canva/docs/index.md)
@@ -143,10 +143,10 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 
 [Ir para o curso](introducao_a_ia/docs/index.md)
 
-### Canva <span class="cf-tag cf-tag--ok">Em andamento</span>
+### Canva <span class="cf-tag cf-tag--ok">Disponível</span>
 
 - **Nível:** Iniciante
-- **Carga horária:** a definir
+- **Carga horária:** 20 h
 - **Para quem é:** Alunos e pequenos empreendedores que querem criar catálogos, cardápios, posts e convites com aparência profissional, sem saber design.
 - **Certificado:** Entrega do portfólio com os projetos dos Módulos 02 e 03.
 - **Autor:** Pedro Paulo IF

@@ -66,13 +66,13 @@ hide:
 
 -   :material-palette-outline:{ .lg .middle } __Canva__
 
-    <span class="cf-tag cf-tag--ok">Em andamento</span>
+    <span class="cf-tag cf-tag--ok">Disponível</span>
 
     ---
 
     Canva gratuito com projetos reais: catálogo para clientes, cardápio, panfleto, convite, posts e vídeos — com capturas reais da plataforma.
 
-    Módulos 01 (base) e 02 (projetos de negócio) disponíveis
+    3 módulos · 13 aulas · do primeiro acesso ao vídeo curto
 
     [:octicons-arrow-right-24: Começar pelo Módulo 01](canva/modulo_01_primeiros_passos/index.md)
 

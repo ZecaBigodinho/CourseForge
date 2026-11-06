@@ -10,14 +10,15 @@ slug: canva
 ordem_modulos:
   - modulo_01_primeiros_passos
   - modulo_02_projetos_negocio
+  - modulo_03_eventos_e_redes
 
 # Ficha do curso — alimenta o Catálogo de cursos (gerado por src/generators/gerar_catalogo.py)
 ordem: 4
-status: em_andamento               # disponivel | em_andamento | em_breve
+status: disponivel               # disponivel | em_andamento | em_breve
 ficha:
   icone: material-palette-outline
   nivel: Iniciante
-  carga_horaria: a definir
+  carga_horaria: 20 h               # M01 ~6 h + M02 ~7 h + M03 ~5,5 h, estimativa de 06/11/2026
   publico: Alunos e pequenos empreendedores que querem criar catálogos, cardápios, posts e convites com aparência profissional, sem saber design.
   certificado: Entrega do portfólio com os projetos dos Módulos 02 e 03.
   pre_requisitos:
