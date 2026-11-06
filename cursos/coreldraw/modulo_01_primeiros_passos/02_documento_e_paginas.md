@@ -70,10 +70,12 @@ No **navegador de páginas** (5):
 | Para... | Faça |
 |---|---|
 | Acrescentar uma página no fim | Clique no **+** à direita das abas |
-| Acrescentar antes ou depois de uma página | Botão direito na aba ➔ opção de **inserir página** antes ou depois |
+| Acrescentar antes ou depois de uma página | Botão direito na aba ➔ **Inserir página antes** / **Inserir página após** |
+| Copiar uma página com tudo o que tem nela | Botão direito na aba ➔ **Duplicar página…** |
 | Ir para outra página | Clique na aba, ou use as setas e o “1 de 2” |
-| Renomear (ex.: *Frente*, *Verso*) | Botão direito na aba ➔ **renomear página** |
-| Apagar | Botão direito na aba ➔ **excluir página** |
+| Renomear (ex.: *Frente*, *Verso*) | Botão direito na aba ➔ **Renomear página…** |
+| Virar só esta página (retrato ↔ paisagem) | Botão direito na aba ➔ **Alternar orientação de página** |
+| Apagar | Botão direito na aba ➔ **Excluir página** (fica cinza quando o documento tem uma página só) |
 
 Os mesmos comandos ficam no menu **Layout**.
 
@@ -105,7 +107,7 @@ Num documento aberto, mude a página para **9 × 5 cm** em milímetros e acresce
 ??? success "Gabarito — Intermediário"
     1. Clique numa área vazia (nada selecionado).
     2. Na barra de propriedades, **Unidades** ➔ *milímetros*; largura **90**, altura **50**, `Enter`. A predefinição vira *Personalizado*.
-    3. No navegador de páginas, clique no **+**; botão direito na aba nova ➔ renomear página ➔ `Verso`.
+    3. No navegador de páginas, clique no **+**; botão direito na aba nova ➔ **Renomear página…** ➔ `Verso`.
 
 ### Avançado (desafio)
 

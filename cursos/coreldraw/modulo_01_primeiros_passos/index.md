@@ -56,4 +56,4 @@ Antes de seguir, confira se você consegue:
 
 ## ➡️ Próximo passo
 
-Comece pela **[aula 01 — Conhecendo o CorelDRAW](01_conhecendo_o_coreldraw.md)**.
+Comece pela **[aula 01 — Conhecendo o CorelDRAW](01_conhecendo_o_coreldraw.md)**. Depois, siga para o **[Módulo 02 — Vetor na prática](../modulo_02_vetor_na_pratica/index.md)**.
