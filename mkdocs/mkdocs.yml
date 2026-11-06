@@ -257,4 +257,13 @@ nav:
     - carrossel de dicas para o Instagram: canva/modulo_03_eventos_e_redes/02_carrossel.md
     - capa de vídeo para o YouTube: canva/modulo_03_eventos_e_redes/03_capa_de_video.md
     - vídeo curto para Reels e status: canva/modulo_03_eventos_e_redes/04_video_curto.md
+- CorelDRAW:
+  - Apresentação do curso: coreldraw/docs/index.md
+  - Primeiros passos:
+    - Visão Geral: coreldraw/modulo_01_primeiros_passos/index.md
+    - 'Conhecendo o CorelDRAW: boas-vindas e interface': coreldraw/modulo_01_primeiros_passos/01_conhecendo_o_coreldraw.md
+    - 'Documento: tamanho, unidades e páginas': coreldraw/modulo_01_primeiros_passos/02_documento_e_paginas.md
+    - Formas, seleção e texto: coreldraw/modulo_01_primeiros_passos/03_formas_selecao_e_texto.md
+    - 'Cor: preenchimento, contorno e paleta': coreldraw/modulo_01_primeiros_passos/04_cor_preenchimento_e_contorno.md
+    - 'Projeto do módulo: cartão de visita': coreldraw/modulo_01_primeiros_passos/05_projeto_cartao_de_visita.md
 docs_dir: ../cursos
