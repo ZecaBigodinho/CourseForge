@@ -251,4 +251,10 @@ nav:
     - cardápio com QR code para pedidos: canva/modulo_02_projetos_negocio/02_cardapio.md
     - panfleto de promoção que se lê de longe: canva/modulo_02_projetos_negocio/03_panfleto_promocao.md
     - post e story da mesma oferta: canva/modulo_02_projetos_negocio/04_post_e_story.md
+  - Eventos e redes sociais:
+    - Visão Geral: canva/modulo_03_eventos_e_redes/index.md
+    - convite virtual com confirmação pelo WhatsApp: canva/modulo_03_eventos_e_redes/01_convite_virtual.md
+    - carrossel de dicas para o Instagram: canva/modulo_03_eventos_e_redes/02_carrossel.md
+    - capa de vídeo para o YouTube: canva/modulo_03_eventos_e_redes/03_capa_de_video.md
+    - vídeo curto para Reels e status: canva/modulo_03_eventos_e_redes/04_video_curto.md
 docs_dir: ../cursos

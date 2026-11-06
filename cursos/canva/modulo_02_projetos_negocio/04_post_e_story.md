@@ -268,4 +268,4 @@ Acrescente um **story** no mesmo design, respeitando a **zona segura**, e baixe 
 
 ## ➡️ Próximo passo
 
-Você terminou o **Módulo 02**: catálogo, cardápio, panfleto e posts, tudo para um negócio. Volte ao [índice do módulo](index.md) e confira o checklist. O **Módulo 03 — Eventos e redes sociais** está em produção.
+Você terminou o **Módulo 02**: catálogo, cardápio, panfleto e posts, tudo para um negócio. Volte ao [índice do módulo](index.md) e confira o checklist. Depois, siga para o **[Módulo 03 — Eventos e redes sociais](../modulo_03_eventos_e_redes/index.md)**.
