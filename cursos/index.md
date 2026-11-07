@@ -126,13 +126,13 @@ hide:
 
 -   :material-language-java:{ .lg .middle } __Java__
 
-    <span class="cf-tag cf-tag--ok">Em andamento</span>
+    <span class="cf-tag cf-tag--ok">Disponível</span>
 
     ---
 
     Programação em Java do zero: lógica, orientação a objetos, coleções e arquivos, até um sistema de cadastro.
 
-    Módulos 01 e 02 disponíveis · 10 aulas · do primeiro programa ao cadastro orientado a objetos
+    3 módulos · 15 aulas · do primeiro programa ao cadastro que salva em arquivo
 
     [:octicons-arrow-right-24: Começar pelo Módulo 01](java/modulo_01_fundamentos/index.md)
 

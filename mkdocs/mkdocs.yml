@@ -362,4 +362,11 @@ nav:
     - Herança e polimorfismo: java/modulo_02_poo/03_heranca_e_polimorfismo.md
     - Interfaces, enum e record: java/modulo_02_poo/04_interfaces_enum_record.md
     - 'Projeto do módulo: cadastro de alunos': java/modulo_02_poo/05_projeto_cadastro.md
+  - Coleções, exceções e arquivos:
+    - Visão Geral: java/modulo_03_colecoes_e_arquivos/index.md
+    - ArrayList e HashMap: java/modulo_03_colecoes_e_arquivos/01_colecoes.md
+    - Streams: java/modulo_03_colecoes_e_arquivos/02_streams.md
+    - Exceções: java/modulo_03_colecoes_e_arquivos/03_excecoes.md
+    - Arquivos: java/modulo_03_colecoes_e_arquivos/04_arquivos.md
+    - 'Projeto final: cadastro com arquivo CSV': java/modulo_03_colecoes_e_arquivos/05_projeto_cadastro_csv.md
 docs_dir: ../cursos

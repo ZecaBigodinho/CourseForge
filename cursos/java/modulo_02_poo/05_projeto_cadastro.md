@@ -377,4 +377,4 @@ Crie a interface `Avaliavel` com `double getMedia()` e `Situacao getSituacao()`,
 
 ## ➡️ Próximo passo
 
-Você terminou o **Módulo 02**. Volte ao [índice do módulo](index.md) e confira o checklist. O **Módulo 03 — Coleções, exceções e arquivos** está em produção.
+Você terminou o **Módulo 02**. Volte ao [índice do módulo](index.md) e confira o checklist. Depois, siga para o **[Módulo 03 — Coleções, exceções e arquivos](../modulo_03_colecoes_e_arquivos/index.md)**.

@@ -127,7 +127,7 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 
 -   :material-language-java:{ .lg .middle } __Java__
 
-    <span class="cf-tag cf-tag--ok">Em andamento</span>
+    <span class="cf-tag cf-tag--ok">Disponível</span>
 
     ---
 
@@ -326,7 +326,7 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 
 [Ir para o curso](react/docs/index.md)
 
-### Java <span class="cf-tag cf-tag--ok">Em andamento</span>
+### Java <span class="cf-tag cf-tag--ok">Disponível</span>
 
 - **Nível:** Iniciante
 - **Carga horária:** 20 h

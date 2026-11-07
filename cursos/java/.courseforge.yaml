@@ -10,10 +10,11 @@ slug: java
 ordem_modulos:
   - modulo_01_fundamentos
   - modulo_02_poo
+  - modulo_03_colecoes_e_arquivos
 
 # Ficha do curso — alimenta o Catálogo de cursos (gerado por src/generators/gerar_catalogo.py)
 ordem: 9
-status: em_andamento             # disponivel | em_andamento | em_breve
+status: disponivel               # disponivel | em_andamento | em_breve
 ficha:
   icone: material-language-java
   nivel: Iniciante

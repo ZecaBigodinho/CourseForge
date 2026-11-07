@@ -2,7 +2,7 @@
 
 > **Autor:** Prof. Pedro Paulo IF · [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com)  
 > **Versão:** 0.1.0  
-> **Situação:** em andamento. Módulos 01 e 02 disponíveis; Módulo 03 em produção  
+> **Situação:** disponível — 3 módulos, 15 aulas  
 > **Ferramentas:** JDK 21 (LTS) e VS Code, tudo gratuito
 
 ---
@@ -23,9 +23,9 @@ Instalar o JDK e rodar o primeiro programa, variáveis e tipos, condições e la
 
 Classes e objetos, encapsulamento e construtores, herança e polimorfismo, interfaces, `enum` e `record`. Projeto: um **cadastro de alunos** em memória. [Acessar o módulo](../modulo_02_poo/index.md)
 
-### Módulo 03 — Coleções, exceções e arquivos 🛠️ em produção
+### Módulo 03 — Coleções, exceções e arquivos ✅ disponível
 
-`ArrayList` e `HashMap`, streams, exceções e arquivos com `java.nio`. Projeto: o **cadastro de alunos** salvando e carregando de um arquivo CSV.
+`ArrayList` e `HashMap`, streams, exceções e arquivos com `java.nio`. Projeto: o **cadastro de alunos** salvando e carregando de um arquivo CSV. [Acessar o módulo](../modulo_03_colecoes_e_arquivos/index.md)
 
 ## Certificado
 
