@@ -83,6 +83,20 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 
     [:octicons-arrow-right-24: Acessar o curso](coreldraw/docs/index.md)
 
+-   :material-language-html5:{ .lg .middle } __Desenvolvimento Web__
+
+    <span class="cf-tag cf-tag--ok">Em andamento</span>
+
+    ---
+
+    HTML, CSS e JavaScript do zero, em projetos — da primeira página ao portfólio publicado na internet.
+
+    **Nível:** Iniciante  
+    **Carga horária:** 32 h  
+    **Certificado:** Entrega do portfólio publicado no Módulo 04.  
+
+    [:octicons-arrow-right-24: Acessar o curso](desenvolvimento_web/docs/index.md)
+
 </div>
 
 ## Fichas dos cursos
@@ -202,3 +216,25 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 - Preparar arquivos para a gráfica com CMYK, sangria e marcas de corte.
 
 [Ir para o curso](coreldraw/docs/index.md)
+
+### Desenvolvimento Web <span class="cf-tag cf-tag--ok">Em andamento</span>
+
+- **Nível:** Iniciante
+- **Carga horária:** 32 h
+- **Para quem é:** Alunos que querem criar sites e entender como a web funciona, como primeiro passo para TypeScript, React e o mercado de desenvolvimento.
+- **Certificado:** Entrega do portfólio publicado no Módulo 04.
+- **Autor:** Pedro Paulo IF
+
+**Pré-requisitos:**
+
+- Usar o computador, pastas e um navegador.
+- Nenhuma experiência com programação.
+
+**Você vai aprender a:**
+
+- Estruturar páginas com HTML semântico e acessível.
+- Estilizar e organizar o layout com CSS, Flexbox e Grid, inclusive no celular.
+- Dar interatividade às páginas com JavaScript.
+- Publicar um portfólio na internet com o GitHub Pages.
+
+[Ir para o curso](desenvolvimento_web/docs/index.md)

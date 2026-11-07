@@ -273,4 +273,13 @@ nav:
     - 'PowerTRACE: de imagem para vetor': coreldraw/modulo_02_vetor_na_pratica/03_powertrace.md
     - Texto artístico × texto de parágrafo: coreldraw/modulo_02_vetor_na_pratica/04_texto_artistico_e_paragrafo.md
     - 'Projeto do módulo: logotipo': coreldraw/modulo_02_vetor_na_pratica/05_projeto_logotipo.md
+- Desenvolvimento Web:
+  - Apresentação do curso: desenvolvimento_web/docs/index.md
+  - HTML:
+    - Visão Geral: desenvolvimento_web/modulo_01_html/index.md
+    - Estrutura e primeira página: desenvolvimento_web/modulo_01_html/01_estrutura_e_primeira_pagina.md
+    - Textos, links e imagens: desenvolvimento_web/modulo_01_html/02_textos_links_e_imagens.md
+    - Listas e tabelas: desenvolvimento_web/modulo_01_html/03_listas_e_tabelas.md
+    - Formulários: desenvolvimento_web/modulo_01_html/04_formularios.md
+    - 'Projeto do módulo: página de apresentação': desenvolvimento_web/modulo_01_html/05_projeto_pagina_de_apresentacao.md
 docs_dir: ../cursos
