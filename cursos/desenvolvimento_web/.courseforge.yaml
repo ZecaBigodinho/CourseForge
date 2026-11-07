@@ -1,0 +1,32 @@
+nome: Desenvolvimento Web
+descricao: HTML, CSS e JavaScript do zero, em projetos — da primeira página ao portfólio publicado na internet.
+autor: Pedro Paulo IF
+num_modulos: 4
+data_criacao: '2026-11-07'
+versao: 0.1.0
+tags: []
+slug: desenvolvimento_web
+# Ordem dos módulos no menu (nomes das pastas); os próximos entram aqui conforme forem publicados
+ordem_modulos:
+  - modulo_01_html
+  - modulo_02_css
+  - modulo_03_javascript
+  - modulo_04_publicar
+
+# Ficha do curso — alimenta o Catálogo de cursos (gerado por src/generators/gerar_catalogo.py)
+ordem: 6
+status: disponivel               # disponivel | em_andamento | em_breve
+ficha:
+  icone: material-language-html5
+  nivel: Iniciante
+  carga_horaria: 32 h               # ~8 h por módulo, estimativa de 07/11/2026
+  publico: Alunos que querem criar sites e entender como a web funciona, como primeiro passo para TypeScript, React e o mercado de desenvolvimento.
+  certificado: Entrega do portfólio publicado no Módulo 04.
+  pre_requisitos:
+    - Usar o computador, pastas e um navegador.
+    - Nenhuma experiência com programação.
+  objetivos:
+    - Estruturar páginas com HTML semântico e acessível.
+    - Estilizar e organizar o layout com CSS, Flexbox e Grid, inclusive no celular.
+    - Dar interatividade às páginas com JavaScript.
+    - Publicar um portfólio na internet com o GitHub Pages.

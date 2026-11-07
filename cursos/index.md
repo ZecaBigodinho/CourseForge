@@ -88,6 +88,18 @@ hide:
 
     [:octicons-arrow-right-24: Começar pelo Módulo 01](coreldraw/modulo_01_primeiros_passos/index.md)
 
+-   :material-language-html5:{ .lg .middle } __Desenvolvimento Web__
+
+    <span class="cf-tag cf-tag--ok">Disponível</span>
+
+    ---
+
+    HTML, CSS e JavaScript do zero, em projetos — da primeira página ao portfólio publicado na internet.
+
+    4 módulos · 19 aulas · da primeira tag ao portfólio publicado
+
+    [:octicons-arrow-right-24: Começar pelo Módulo 01](desenvolvimento_web/modulo_01_html/index.md)
+
 </div>
 
 [Ver o catálogo completo, com as fichas dos cursos](catalogo.md){ .md-button }

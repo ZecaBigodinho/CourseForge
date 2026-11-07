@@ -273,4 +273,33 @@ nav:
     - 'PowerTRACE: de imagem para vetor': coreldraw/modulo_02_vetor_na_pratica/03_powertrace.md
     - Texto artístico × texto de parágrafo: coreldraw/modulo_02_vetor_na_pratica/04_texto_artistico_e_paragrafo.md
     - 'Projeto do módulo: logotipo': coreldraw/modulo_02_vetor_na_pratica/05_projeto_logotipo.md
+- Desenvolvimento Web:
+  - Apresentação do curso: desenvolvimento_web/docs/index.md
+  - HTML:
+    - Visão Geral: desenvolvimento_web/modulo_01_html/index.md
+    - Estrutura e primeira página: desenvolvimento_web/modulo_01_html/01_estrutura_e_primeira_pagina.md
+    - Textos, links e imagens: desenvolvimento_web/modulo_01_html/02_textos_links_e_imagens.md
+    - Listas e tabelas: desenvolvimento_web/modulo_01_html/03_listas_e_tabelas.md
+    - Formulários: desenvolvimento_web/modulo_01_html/04_formularios.md
+    - 'Projeto do módulo: página de apresentação': desenvolvimento_web/modulo_01_html/05_projeto_pagina_de_apresentacao.md
+  - CSS:
+    - Visão Geral: desenvolvimento_web/modulo_02_css/index.md
+    - Seletores, cores e fontes: desenvolvimento_web/modulo_02_css/01_seletores_cores_e_fontes.md
+    - Modelo de caixa: desenvolvimento_web/modulo_02_css/02_modelo_de_caixa.md
+    - Flexbox: desenvolvimento_web/modulo_02_css/03_flexbox.md
+    - Grid e layout responsivo: desenvolvimento_web/modulo_02_css/04_grid_e_responsivo.md
+    - 'Projeto do módulo: cardápio': desenvolvimento_web/modulo_02_css/05_projeto_cardapio.md
+  - JavaScript:
+    - Visão Geral: desenvolvimento_web/modulo_03_javascript/index.md
+    - Variáveis, condições e laços: desenvolvimento_web/modulo_03_javascript/01_variaveis_condicoes_e_lacos.md
+    - Funções e arrays: desenvolvimento_web/modulo_03_javascript/02_funcoes_e_arrays.md
+    - 'DOM: mexer na página pelo código': desenvolvimento_web/modulo_03_javascript/03_dom.md
+    - Eventos e formulários: desenvolvimento_web/modulo_03_javascript/04_eventos_e_formularios.md
+    - 'Projeto do módulo: lista de tarefas': desenvolvimento_web/modulo_03_javascript/05_projeto_lista_de_tarefas.md
+  - Publicar:
+    - Visão Geral: desenvolvimento_web/modulo_04_publicar/index.md
+    - Buscar dados com fetch: desenvolvimento_web/modulo_04_publicar/01_fetch_e_apis.md
+    - Organizar o projeto: desenvolvimento_web/modulo_04_publicar/02_organizar_o_projeto.md
+    - Publicar no GitHub Pages: desenvolvimento_web/modulo_04_publicar/03_github_pages.md
+    - 'Projeto final: portfólio no ar': desenvolvimento_web/modulo_04_publicar/04_projeto_portfolio.md
 docs_dir: ../cursos
