@@ -2,7 +2,7 @@
 
 > **Autor:** Prof. Pedro Paulo IF · [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com)  
 > **Versão:** 0.1.0  
-> **Situação:** em andamento. Módulo 01 disponível; Módulos 02 e 03 em produção  
+> **Situação:** em andamento. Módulos 01 e 02 disponíveis; Módulo 03 em produção  
 > **Ferramentas:** VS Code, Node.js, Vite, React e TypeScript (tudo gratuito)
 
 ---
@@ -22,9 +22,9 @@ O curso usa React com **TypeScript**, como na maioria das empresas, e o **Vite**
 
 O primeiro projeto com Vite, JSX e componentes, props tipadas, estado com `useState` e eventos. Projeto: um **cardápio com pedido**. [Acessar o módulo](../modulo_01_fundamentos/index.md)
 
-### Módulo 02 — Listas, formulários e efeitos 🛠️ em produção
+### Módulo 02 — Listas, formulários e efeitos ✅ disponível
 
-Listas e `key`, formulários controlados, `useEffect` com `localStorage` e dados de APIs. Projeto: a **lista de tarefas** em React.
+Listas e `key`, formulários controlados, `useEffect` com `localStorage` e dados de APIs. Projeto: a **lista de tarefas** em React. [Acessar o módulo](../modulo_02_formularios_e_efeitos/index.md)
 
 ### Módulo 03 — Aplicação completa 🛠️ em produção
 

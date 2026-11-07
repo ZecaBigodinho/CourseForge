@@ -333,4 +333,11 @@ nav:
     - Props: react/modulo_01_fundamentos/03_props.md
     - Estado e eventos: react/modulo_01_fundamentos/04_estado_e_eventos.md
     - 'Projeto do módulo: cardápio com pedido': react/modulo_01_fundamentos/05_projeto_cardapio.md
+  - Listas, formulários e efeitos:
+    - Visão Geral: react/modulo_02_formularios_e_efeitos/index.md
+    - Formulários controlados: react/modulo_02_formularios_e_efeitos/01_formularios_controlados.md
+    - 'Listas: filtrar, editar e remover': react/modulo_02_formularios_e_efeitos/02_listas.md
+    - useEffect e localStorage: react/modulo_02_formularios_e_efeitos/03_useeffect_e_localstorage.md
+    - Buscar dados de uma API: react/modulo_02_formularios_e_efeitos/04_buscar_dados.md
+    - 'Projeto do módulo: lista de tarefas': react/modulo_02_formularios_e_efeitos/05_projeto_lista_de_tarefas.md
 docs_dir: ../cursos

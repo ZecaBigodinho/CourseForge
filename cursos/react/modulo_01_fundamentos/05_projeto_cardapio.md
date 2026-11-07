@@ -236,4 +236,4 @@ Dê **10% de desconto** quando o pedido tiver 5 itens ou mais e mostre o descont
 
 ## ➡️ Próximo passo
 
-Você terminou o **Módulo 01**. Volte ao [índice do módulo](index.md) e confira o checklist. O **Módulo 02 — Listas, formulários e efeitos** está em produção.
+Você terminou o **Módulo 01**. Volte ao [índice do módulo](index.md) e confira o checklist. Depois, siga para o **[Módulo 02 — Listas, formulários e efeitos](../modulo_02_formularios_e_efeitos/index.md)**.
