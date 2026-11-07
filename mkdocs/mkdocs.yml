@@ -289,4 +289,11 @@ nav:
     - Flexbox: desenvolvimento_web/modulo_02_css/03_flexbox.md
     - Grid e layout responsivo: desenvolvimento_web/modulo_02_css/04_grid_e_responsivo.md
     - 'Projeto do módulo: cardápio': desenvolvimento_web/modulo_02_css/05_projeto_cardapio.md
+  - JavaScript:
+    - Visão Geral: desenvolvimento_web/modulo_03_javascript/index.md
+    - Variáveis, condições e laços: desenvolvimento_web/modulo_03_javascript/01_variaveis_condicoes_e_lacos.md
+    - Funções e arrays: desenvolvimento_web/modulo_03_javascript/02_funcoes_e_arrays.md
+    - 'DOM: mexer na página pelo código': desenvolvimento_web/modulo_03_javascript/03_dom.md
+    - Eventos e formulários: desenvolvimento_web/modulo_03_javascript/04_eventos_e_formularios.md
+    - 'Projeto do módulo: lista de tarefas': desenvolvimento_web/modulo_03_javascript/05_projeto_lista_de_tarefas.md
 docs_dir: ../cursos

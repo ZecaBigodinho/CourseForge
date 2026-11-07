@@ -243,4 +243,4 @@ Faça os cartões “subirem” um pouco quando o mouse passa por cima, com uma 
 
 ## ➡️ Próximo passo
 
-Você terminou o **Módulo 02**. Volte ao [índice do módulo](index.md) e confira o checklist. O **Módulo 03 — JavaScript**, que vai dar vida às páginas, está em produção.
+Você terminou o **Módulo 02**. Volte ao [índice do módulo](index.md) e confira o checklist. Depois, siga para o **[Módulo 03 — JavaScript](../modulo_03_javascript/index.md)**, que vai dar vida às páginas.

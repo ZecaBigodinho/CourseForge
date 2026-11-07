@@ -96,7 +96,7 @@ hide:
 
     HTML, CSS e JavaScript do zero, em projetos — da primeira página ao portfólio publicado na internet.
 
-    Módulos 01 e 02 disponíveis · 10 aulas · do HTML ao cardápio responsivo
+    Módulos 01 a 03 disponíveis · 15 aulas · do HTML à lista de tarefas em JavaScript
 
     [:octicons-arrow-right-24: Começar pelo Módulo 01](desenvolvimento_web/modulo_01_html/index.md)
 
