@@ -200,4 +200,4 @@ Acrescente o pagamento `{ forma: "boleto"; vencimento: string }`, com 2% de desc
 
 ## ➡️ Próximo passo
 
-Você terminou o **Módulo 02**. Volte ao [índice do módulo](index.md) e confira o checklist. O **Módulo 03 — TypeScript no navegador** está em produção.
+Você terminou o **Módulo 02**. Volte ao [índice do módulo](index.md) e confira o checklist. Depois, siga para o **[Módulo 03 — TypeScript no navegador](../modulo_03_navegador/index.md)**.

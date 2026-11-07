@@ -2,7 +2,7 @@
 
 > **Autor:** Prof. Pedro Paulo IF · [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com)  
 > **Versão:** 0.1.0  
-> **Situação:** em andamento. Módulos 01 e 02 disponíveis; Módulo 03 em produção  
+> **Situação:** disponível — 3 módulos, 14 aulas  
 > **Ferramentas:** VS Code, Node.js e o compilador do TypeScript (tudo gratuito)
 
 ---
@@ -26,9 +26,9 @@ Por que TypeScript, o primeiro programa com `npm` e `tsc`, tipos básicos e infe
 
 `type` × `interface`, uniões e tipos literais, *narrowing*, valores opcionais e `null`, *generics*. Projeto: um **carrinho de compras** tipado. [Acessar o módulo](../modulo_02_modelando_dados/index.md)
 
-### Módulo 03 — TypeScript no navegador 🛠️ em produção
+### Módulo 03 — TypeScript no navegador ✅ disponível
 
-Módulos (`import`/`export`) e `tsconfig`, DOM tipado e `fetch` tipado. Projeto: a **lista de tarefas** do curso de Web reescrita em TypeScript.
+Módulos (`import`/`export`) e `tsconfig`, DOM tipado e `fetch` tipado. Projeto: a **lista de tarefas** do curso de Web reescrita em TypeScript. [Acessar o módulo](../modulo_03_navegador/index.md)
 
 ## Certificado
 

@@ -102,13 +102,13 @@ hide:
 
 -   :material-language-typescript:{ .lg .middle } __TypeScript__
 
-    <span class="cf-tag cf-tag--ok">Em andamento</span>
+    <span class="cf-tag cf-tag--ok">Disponível</span>
 
     ---
 
     JavaScript com tipos: o editor avisa os erros antes de rodar. A base para React e projetos profissionais.
 
-    Módulos 01 e 02 disponíveis · 10 aulas · do primeiro tsc ao carrinho de compras tipado
+    3 módulos · 14 aulas · do primeiro tsc à lista de tarefas tipada no navegador
 
     [:octicons-arrow-right-24: Começar pelo Módulo 01](typescript/modulo_01_fundamentos/index.md)
 

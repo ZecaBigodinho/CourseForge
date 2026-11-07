@@ -99,7 +99,7 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 
 -   :material-language-typescript:{ .lg .middle } __TypeScript__
 
-    <span class="cf-tag cf-tag--ok">Em andamento</span>
+    <span class="cf-tag cf-tag--ok">Disponível</span>
 
     ---
 
@@ -253,7 +253,7 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 
 [Ir para o curso](desenvolvimento_web/docs/index.md)
 
-### TypeScript <span class="cf-tag cf-tag--ok">Em andamento</span>
+### TypeScript <span class="cf-tag cf-tag--ok">Disponível</span>
 
 - **Nível:** Intermediário
 - **Carga horária:** 18 h

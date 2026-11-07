@@ -10,10 +10,11 @@ slug: typescript
 ordem_modulos:
   - modulo_01_fundamentos
   - modulo_02_modelando_dados
+  - modulo_03_navegador
 
 # Ficha do curso — alimenta o Catálogo de cursos (gerado por src/generators/gerar_catalogo.py)
 ordem: 7
-status: em_andamento             # disponivel | em_andamento | em_breve
+status: disponivel               # disponivel | em_andamento | em_breve
 ficha:
   icone: material-language-typescript
   nivel: Intermediário
