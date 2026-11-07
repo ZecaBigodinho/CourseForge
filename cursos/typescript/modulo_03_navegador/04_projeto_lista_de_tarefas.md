@@ -283,4 +283,4 @@ Implemente os filtros **Todas / A fazer / Feitas** com um tipo literal para o fi
 
 ## ➡️ Próximo passo
 
-Parabéns, você terminou o curso de **TypeScript**! Volte ao [índice do módulo](index.md) e confira o checklist. O próximo passo da trilha é o curso de **React**, em produção.
+Parabéns, você terminou o curso de **TypeScript**! Volte ao [índice do módulo](index.md) e confira o checklist. O próximo passo da trilha é o curso de **[React](../../react/docs/index.md)**.

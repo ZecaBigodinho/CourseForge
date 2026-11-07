@@ -111,6 +111,20 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 
     [:octicons-arrow-right-24: Acessar o curso](typescript/docs/index.md)
 
+-   :material-react:{ .lg .middle } __React__
+
+    <span class="cf-tag cf-tag--ok">Em andamento</span>
+
+    ---
+
+    Interfaces modernas com componentes — do primeiro projeto com Vite a um catálogo com carrinho publicado na internet.
+
+    **Nível:** Intermediário  
+    **Carga horária:** 20 h  
+    **Certificado:** Entrega do catálogo com busca e carrinho, publicado, do Módulo 03.  
+
+    [:octicons-arrow-right-24: Acessar o curso](react/docs/index.md)
+
 </div>
 
 ## Fichas dos cursos
@@ -274,3 +288,26 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 - Usar TypeScript no navegador com módulos, DOM e fetch tipados.
 
 [Ir para o curso](typescript/docs/index.md)
+
+### React <span class="cf-tag cf-tag--ok">Em andamento</span>
+
+- **Nível:** Intermediário
+- **Carga horária:** 20 h
+- **Para quem é:** Quem já fez os cursos de Desenvolvimento Web e TypeScript e quer construir aplicações web como as empresas fazem.
+- **Certificado:** Entrega do catálogo com busca e carrinho, publicado, do Módulo 03.
+- **Autor:** Pedro Paulo IF
+
+**Pré-requisitos:**
+
+- JavaScript e DOM (curso de Desenvolvimento Web).
+- TypeScript básico (curso de TypeScript, Módulos 01 e 02).
+- Node.js instalado.
+
+**Você vai aprender a:**
+
+- Criar projetos React com Vite e TypeScript.
+- Construir interfaces com componentes, props e estado.
+- Trabalhar com listas, formulários, efeitos e dados de APIs.
+- Organizar uma aplicação completa e publicá-la na internet.
+
+[Ir para o curso](react/docs/index.md)

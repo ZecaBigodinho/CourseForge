@@ -324,4 +324,13 @@ nav:
     - DOM com tipos: typescript/modulo_03_navegador/02_dom_tipado.md
     - fetch com tipos: typescript/modulo_03_navegador/03_fetch_tipado.md
     - 'Projeto final: lista de tarefas em TypeScript': typescript/modulo_03_navegador/04_projeto_lista_de_tarefas.md
+- React:
+  - Apresentação do curso: react/docs/index.md
+  - Fundamentos:
+    - Visão Geral: react/modulo_01_fundamentos/index.md
+    - Por que React e o primeiro projeto: react/modulo_01_fundamentos/01_primeiro_projeto.md
+    - JSX e componentes: react/modulo_01_fundamentos/02_jsx_e_componentes.md
+    - Props: react/modulo_01_fundamentos/03_props.md
+    - Estado e eventos: react/modulo_01_fundamentos/04_estado_e_eventos.md
+    - 'Projeto do módulo: cardápio com pedido': react/modulo_01_fundamentos/05_projeto_cardapio.md
 docs_dir: ../cursos
