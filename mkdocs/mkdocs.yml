@@ -302,4 +302,71 @@ nav:
     - Organizar o projeto: desenvolvimento_web/modulo_04_publicar/02_organizar_o_projeto.md
     - Publicar no GitHub Pages: desenvolvimento_web/modulo_04_publicar/03_github_pages.md
     - 'Projeto final: portfólio no ar': desenvolvimento_web/modulo_04_publicar/04_projeto_portfolio.md
+- TypeScript:
+  - Apresentação do curso: typescript/docs/index.md
+  - Fundamentos:
+    - Visão Geral: typescript/modulo_01_fundamentos/index.md
+    - Por que TypeScript e o primeiro programa: typescript/modulo_01_fundamentos/01_primeiro_programa.md
+    - Tipos básicos e inferência: typescript/modulo_01_fundamentos/02_tipos_basicos.md
+    - Arrays, tuplas e objetos: typescript/modulo_01_fundamentos/03_arrays_tuplas_e_objetos.md
+    - Funções tipadas: typescript/modulo_01_fundamentos/04_funcoes_tipadas.md
+    - 'Projeto do módulo: boletim de notas': typescript/modulo_01_fundamentos/05_projeto_boletim.md
+  - Modelando dados:
+    - Visão Geral: typescript/modulo_02_modelando_dados/index.md
+    - type × interface: typescript/modulo_02_modelando_dados/01_type_e_interface.md
+    - Uniões, literais e narrowing: typescript/modulo_02_modelando_dados/02_unioes_e_narrowing.md
+    - Valores opcionais e null: typescript/modulo_02_modelando_dados/03_opcionais_e_null.md
+    - Generics: typescript/modulo_02_modelando_dados/04_generics.md
+    - 'Projeto do módulo: carrinho de compras': typescript/modulo_02_modelando_dados/05_projeto_carrinho.md
+  - TypeScript no navegador:
+    - Visão Geral: typescript/modulo_03_navegador/index.md
+    - Módulos e tsconfig para o navegador: typescript/modulo_03_navegador/01_modulos_e_tsconfig.md
+    - DOM com tipos: typescript/modulo_03_navegador/02_dom_tipado.md
+    - fetch com tipos: typescript/modulo_03_navegador/03_fetch_tipado.md
+    - 'Projeto final: lista de tarefas em TypeScript': typescript/modulo_03_navegador/04_projeto_lista_de_tarefas.md
+- React:
+  - Apresentação do curso: react/docs/index.md
+  - Fundamentos:
+    - Visão Geral: react/modulo_01_fundamentos/index.md
+    - Por que React e o primeiro projeto: react/modulo_01_fundamentos/01_primeiro_projeto.md
+    - JSX e componentes: react/modulo_01_fundamentos/02_jsx_e_componentes.md
+    - Props: react/modulo_01_fundamentos/03_props.md
+    - Estado e eventos: react/modulo_01_fundamentos/04_estado_e_eventos.md
+    - 'Projeto do módulo: cardápio com pedido': react/modulo_01_fundamentos/05_projeto_cardapio.md
+  - Listas, formulários e efeitos:
+    - Visão Geral: react/modulo_02_formularios_e_efeitos/index.md
+    - Formulários controlados: react/modulo_02_formularios_e_efeitos/01_formularios_controlados.md
+    - 'Listas: filtrar, editar e remover': react/modulo_02_formularios_e_efeitos/02_listas.md
+    - useEffect e localStorage: react/modulo_02_formularios_e_efeitos/03_useeffect_e_localstorage.md
+    - Buscar dados de uma API: react/modulo_02_formularios_e_efeitos/04_buscar_dados.md
+    - 'Projeto do módulo: lista de tarefas': react/modulo_02_formularios_e_efeitos/05_projeto_lista_de_tarefas.md
+  - Aplicação completa:
+    - Visão Geral: react/modulo_03_aplicacao/index.md
+    - Componentizar e elevar o estado: react/modulo_03_aplicacao/01_elevar_o_estado.md
+    - 'Context: dados para o app inteiro': react/modulo_03_aplicacao/02_context.md
+    - Build e publicação: react/modulo_03_aplicacao/03_build_e_publicacao.md
+    - 'Projeto final: catálogo com busca e carrinho': react/modulo_03_aplicacao/04_projeto_catalogo.md
+- Java:
+  - Apresentação do curso: java/docs/index.md
+  - Fundamentos:
+    - Visão Geral: java/modulo_01_fundamentos/index.md
+    - JDK e o primeiro programa: java/modulo_01_fundamentos/01_primeiro_programa.md
+    - Variáveis, tipos e operadores: java/modulo_01_fundamentos/02_variaveis_e_tipos.md
+    - Condições e laços: java/modulo_01_fundamentos/03_condicoes_e_lacos.md
+    - Métodos e entrada com Scanner: java/modulo_01_fundamentos/04_metodos_e_scanner.md
+    - 'Projeto do módulo: calculadora de médias': java/modulo_01_fundamentos/05_projeto_calculadora.md
+  - Orientação a objetos:
+    - Visão Geral: java/modulo_02_poo/index.md
+    - Classes e objetos: java/modulo_02_poo/01_classes_e_objetos.md
+    - Encapsulamento e construtores: java/modulo_02_poo/02_encapsulamento.md
+    - Herança e polimorfismo: java/modulo_02_poo/03_heranca_e_polimorfismo.md
+    - Interfaces, enum e record: java/modulo_02_poo/04_interfaces_enum_record.md
+    - 'Projeto do módulo: cadastro de alunos': java/modulo_02_poo/05_projeto_cadastro.md
+  - Coleções, exceções e arquivos:
+    - Visão Geral: java/modulo_03_colecoes_e_arquivos/index.md
+    - ArrayList e HashMap: java/modulo_03_colecoes_e_arquivos/01_colecoes.md
+    - Streams: java/modulo_03_colecoes_e_arquivos/02_streams.md
+    - Exceções: java/modulo_03_colecoes_e_arquivos/03_excecoes.md
+    - Arquivos: java/modulo_03_colecoes_e_arquivos/04_arquivos.md
+    - 'Projeto final: cadastro com arquivo CSV': java/modulo_03_colecoes_e_arquivos/05_projeto_cadastro_csv.md
 docs_dir: ../cursos

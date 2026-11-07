@@ -1,0 +1,32 @@
+nome: React
+descricao: Interfaces modernas com componentes — do primeiro projeto com Vite a um catálogo com carrinho publicado na internet.
+autor: Pedro Paulo IF
+num_modulos: 3
+data_criacao: '2026-11-07'
+versao: 0.1.0
+tags: []
+slug: react
+# Ordem dos módulos no menu (nomes das pastas); os próximos entram aqui conforme forem publicados
+ordem_modulos:
+  - modulo_01_fundamentos
+  - modulo_02_formularios_e_efeitos
+  - modulo_03_aplicacao
+
+# Ficha do curso — alimenta o Catálogo de cursos (gerado por src/generators/gerar_catalogo.py)
+ordem: 8
+status: disponivel               # disponivel | em_andamento | em_breve
+ficha:
+  icone: material-react
+  nivel: Intermediário
+  carga_horaria: 20 h               # ~6–7 h por módulo, estimativa de 07/11/2026
+  publico: Quem já fez os cursos de Desenvolvimento Web e TypeScript e quer construir aplicações web como as empresas fazem.
+  certificado: Entrega do catálogo com busca e carrinho, publicado, do Módulo 03.
+  pre_requisitos:
+    - JavaScript e DOM (curso de Desenvolvimento Web).
+    - TypeScript básico (curso de TypeScript, Módulos 01 e 02).
+    - Node.js instalado.
+  objetivos:
+    - Criar projetos React com Vite e TypeScript.
+    - Construir interfaces com componentes, props e estado.
+    - Trabalhar com listas, formulários, efeitos e dados de APIs.
+    - Organizar uma aplicação completa e publicá-la na internet.

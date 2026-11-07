@@ -100,6 +100,42 @@ hide:
 
     [:octicons-arrow-right-24: Começar pelo Módulo 01](desenvolvimento_web/modulo_01_html/index.md)
 
+-   :material-language-typescript:{ .lg .middle } __TypeScript__
+
+    <span class="cf-tag cf-tag--ok">Disponível</span>
+
+    ---
+
+    JavaScript com tipos: o editor avisa os erros antes de rodar. A base para React e projetos profissionais.
+
+    3 módulos · 14 aulas · do primeiro tsc à lista de tarefas tipada no navegador
+
+    [:octicons-arrow-right-24: Começar pelo Módulo 01](typescript/modulo_01_fundamentos/index.md)
+
+-   :material-react:{ .lg .middle } __React__
+
+    <span class="cf-tag cf-tag--ok">Disponível</span>
+
+    ---
+
+    Interfaces modernas com componentes, props e estado, em React com TypeScript e Vite.
+
+    3 módulos · 14 aulas · do primeiro componente ao catálogo publicado
+
+    [:octicons-arrow-right-24: Começar pelo Módulo 01](react/modulo_01_fundamentos/index.md)
+
+-   :material-language-java:{ .lg .middle } __Java__
+
+    <span class="cf-tag cf-tag--ok">Disponível</span>
+
+    ---
+
+    Programação em Java do zero: lógica, orientação a objetos, coleções e arquivos, até um sistema de cadastro.
+
+    3 módulos · 15 aulas · do primeiro programa ao cadastro que salva em arquivo
+
+    [:octicons-arrow-right-24: Começar pelo Módulo 01](java/modulo_01_fundamentos/index.md)
+
 </div>
 
 [Ver o catálogo completo, com as fichas dos cursos](catalogo.md){ .md-button }

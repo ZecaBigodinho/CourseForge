@@ -97,6 +97,48 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 
     [:octicons-arrow-right-24: Acessar o curso](desenvolvimento_web/docs/index.md)
 
+-   :material-language-typescript:{ .lg .middle } __TypeScript__
+
+    <span class="cf-tag cf-tag--ok">Disponível</span>
+
+    ---
+
+    JavaScript com tipos — menos erros, mais ajuda do editor e a base para React e projetos profissionais.
+
+    **Nível:** Intermediário  
+    **Carga horária:** 18 h  
+    **Certificado:** Entrega da lista de tarefas em TypeScript do Módulo 03.  
+
+    [:octicons-arrow-right-24: Acessar o curso](typescript/docs/index.md)
+
+-   :material-react:{ .lg .middle } __React__
+
+    <span class="cf-tag cf-tag--ok">Disponível</span>
+
+    ---
+
+    Interfaces modernas com componentes — do primeiro projeto com Vite a um catálogo com carrinho publicado na internet.
+
+    **Nível:** Intermediário  
+    **Carga horária:** 20 h  
+    **Certificado:** Entrega do catálogo com busca e carrinho, publicado, do Módulo 03.  
+
+    [:octicons-arrow-right-24: Acessar o curso](react/docs/index.md)
+
+-   :material-language-java:{ .lg .middle } __Java__
+
+    <span class="cf-tag cf-tag--ok">Disponível</span>
+
+    ---
+
+    Programação em Java do zero, em projetos — lógica, orientação a objetos, coleções e arquivos, até um sistema de cadastro completo.
+
+    **Nível:** Iniciante  
+    **Carga horária:** 20 h  
+    **Certificado:** Entrega do cadastro de alunos com arquivo CSV do Módulo 03.  
+
+    [:octicons-arrow-right-24: Acessar o curso](java/docs/index.md)
+
 </div>
 
 ## Fichas dos cursos
@@ -238,3 +280,70 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 - Publicar um portfólio na internet com o GitHub Pages.
 
 [Ir para o curso](desenvolvimento_web/docs/index.md)
+
+### TypeScript <span class="cf-tag cf-tag--ok">Disponível</span>
+
+- **Nível:** Intermediário
+- **Carga horária:** 18 h
+- **Para quem é:** Quem já fez o curso de Desenvolvimento Web (ou sabe o básico de JavaScript) e quer escrever código mais seguro, como nas empresas.
+- **Certificado:** Entrega da lista de tarefas em TypeScript do Módulo 03.
+- **Autor:** Pedro Paulo IF
+
+**Pré-requisitos:**
+
+- JavaScript básico (variáveis, funções, arrays, objetos e DOM) — curso de Desenvolvimento Web.
+- Node.js instalado (gratuito).
+
+**Você vai aprender a:**
+
+- Configurar um projeto TypeScript com npm e tsconfig.
+- Tipar variáveis, arrays, objetos e funções e entender as mensagens de erro.
+- Modelar dados com type, interface, uniões e generics.
+- Usar TypeScript no navegador com módulos, DOM e fetch tipados.
+
+[Ir para o curso](typescript/docs/index.md)
+
+### React <span class="cf-tag cf-tag--ok">Disponível</span>
+
+- **Nível:** Intermediário
+- **Carga horária:** 20 h
+- **Para quem é:** Quem já fez os cursos de Desenvolvimento Web e TypeScript e quer construir aplicações web como as empresas fazem.
+- **Certificado:** Entrega do catálogo com busca e carrinho, publicado, do Módulo 03.
+- **Autor:** Pedro Paulo IF
+
+**Pré-requisitos:**
+
+- JavaScript e DOM (curso de Desenvolvimento Web).
+- TypeScript básico (curso de TypeScript, Módulos 01 e 02).
+- Node.js instalado.
+
+**Você vai aprender a:**
+
+- Criar projetos React com Vite e TypeScript.
+- Construir interfaces com componentes, props e estado.
+- Trabalhar com listas, formulários, efeitos e dados de APIs.
+- Organizar uma aplicação completa e publicá-la na internet.
+
+[Ir para o curso](react/docs/index.md)
+
+### Java <span class="cf-tag cf-tag--ok">Disponível</span>
+
+- **Nível:** Iniciante
+- **Carga horária:** 20 h
+- **Para quem é:** Alunos de cursos técnicos e quem se prepara para vagas de desenvolvimento, concursos e faculdade, onde o Java é cobrado.
+- **Certificado:** Entrega do cadastro de alunos com arquivo CSV do Módulo 03.
+- **Autor:** Pedro Paulo IF
+
+**Pré-requisitos:**
+
+- Usar o computador, pastas e o terminal.
+- Nenhuma experiência com programação (quem já fez Python ou JavaScript vai mais rápido).
+
+**Você vai aprender a:**
+
+- Instalar o JDK, compilar e rodar programas Java.
+- Usar variáveis, tipos, condições, laços e métodos.
+- Modelar sistemas com classes, encapsulamento, herança e interfaces.
+- Trabalhar com coleções, exceções e arquivos.
+
+[Ir para o curso](java/docs/index.md)
