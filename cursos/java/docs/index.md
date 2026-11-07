@@ -2,7 +2,7 @@
 
 > **Autor:** Prof. Pedro Paulo IF · [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com)  
 > **Versão:** 0.1.0  
-> **Situação:** em andamento. Módulo 01 disponível; Módulos 02 e 03 em produção  
+> **Situação:** em andamento. Módulos 01 e 02 disponíveis; Módulo 03 em produção  
 > **Ferramentas:** JDK 21 (LTS) e VS Code, tudo gratuito
 
 ---
@@ -19,9 +19,9 @@ O curso começa pela lógica (variáveis, condições, laços), passa pela **ori
 
 Instalar o JDK e rodar o primeiro programa, variáveis e tipos, condições e laços, métodos e leitura do teclado com `Scanner`. Projeto: uma **calculadora de médias** no terminal. [Acessar o módulo](../modulo_01_fundamentos/index.md)
 
-### Módulo 02 — Orientação a objetos 🛠️ em produção
+### Módulo 02 — Orientação a objetos ✅ disponível
 
-Classes e objetos, encapsulamento e construtores, herança e polimorfismo, interfaces, `enum` e `record`. Projeto: um **cadastro de alunos** em memória.
+Classes e objetos, encapsulamento e construtores, herança e polimorfismo, interfaces, `enum` e `record`. Projeto: um **cadastro de alunos** em memória. [Acessar o módulo](../modulo_02_poo/index.md)
 
 ### Módulo 03 — Coleções, exceções e arquivos 🛠️ em produção
 

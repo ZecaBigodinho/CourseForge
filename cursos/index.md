@@ -132,7 +132,7 @@ hide:
 
     Programação em Java do zero: lógica, orientação a objetos, coleções e arquivos, até um sistema de cadastro.
 
-    Módulo 01 disponível · 5 aulas · do primeiro programa à calculadora de médias
+    Módulos 01 e 02 disponíveis · 10 aulas · do primeiro programa ao cadastro orientado a objetos
 
     [:octicons-arrow-right-24: Começar pelo Módulo 01](java/modulo_01_fundamentos/index.md)
 

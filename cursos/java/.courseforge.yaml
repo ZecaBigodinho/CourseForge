@@ -9,6 +9,7 @@ slug: java
 # Ordem dos módulos no menu (nomes das pastas); os próximos entram aqui conforme forem publicados
 ordem_modulos:
   - modulo_01_fundamentos
+  - modulo_02_poo
 
 # Ficha do curso — alimenta o Catálogo de cursos (gerado por src/generators/gerar_catalogo.py)
 ordem: 9

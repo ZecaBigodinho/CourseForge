@@ -211,4 +211,4 @@ Leia também a **frequência** (em %) de cada aluno e reprove quem tiver menos d
 
 ## ➡️ Próximo passo
 
-Você terminou o **Módulo 01**. Volte ao [índice do módulo](index.md) e confira o checklist. O **Módulo 02 — Orientação a objetos** está em produção.
+Você terminou o **Módulo 01**. Volte ao [índice do módulo](index.md) e confira o checklist. Depois, siga para o **[Módulo 02 — Orientação a objetos](../modulo_02_poo/index.md)**.

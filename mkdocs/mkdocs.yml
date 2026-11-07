@@ -355,4 +355,11 @@ nav:
     - Condições e laços: java/modulo_01_fundamentos/03_condicoes_e_lacos.md
     - Métodos e entrada com Scanner: java/modulo_01_fundamentos/04_metodos_e_scanner.md
     - 'Projeto do módulo: calculadora de médias': java/modulo_01_fundamentos/05_projeto_calculadora.md
+  - Orientação a objetos:
+    - Visão Geral: java/modulo_02_poo/index.md
+    - Classes e objetos: java/modulo_02_poo/01_classes_e_objetos.md
+    - Encapsulamento e construtores: java/modulo_02_poo/02_encapsulamento.md
+    - Herança e polimorfismo: java/modulo_02_poo/03_heranca_e_polimorfismo.md
+    - Interfaces, enum e record: java/modulo_02_poo/04_interfaces_enum_record.md
+    - 'Projeto do módulo: cadastro de alunos': java/modulo_02_poo/05_projeto_cadastro.md
 docs_dir: ../cursos
