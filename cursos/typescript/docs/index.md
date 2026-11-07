@@ -2,7 +2,7 @@
 
 > **Autor:** Prof. Pedro Paulo IF · [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com)  
 > **Versão:** 0.1.0  
-> **Situação:** em andamento. Módulo 01 disponível; Módulos 02 e 03 em produção  
+> **Situação:** em andamento. Módulos 01 e 02 disponíveis; Módulo 03 em produção  
 > **Ferramentas:** VS Code, Node.js e o compilador do TypeScript (tudo gratuito)
 
 ---
@@ -22,9 +22,9 @@ Por isso ele é usado na maioria dos projetos profissionais de front-end e é a 
 
 Por que TypeScript, o primeiro programa com `npm` e `tsc`, tipos básicos e inferência, arrays, tuplas e objetos, funções tipadas. Projeto: um **boletim de notas** no terminal. [Acessar o módulo](../modulo_01_fundamentos/index.md)
 
-### Módulo 02 — Modelando dados 🛠️ em produção
+### Módulo 02 — Modelando dados ✅ disponível
 
-`type` × `interface`, uniões e tipos literais, *narrowing*, valores opcionais e `null`, *generics*. Projeto: um **carrinho de compras** tipado.
+`type` × `interface`, uniões e tipos literais, *narrowing*, valores opcionais e `null`, *generics*. Projeto: um **carrinho de compras** tipado. [Acessar o módulo](../modulo_02_modelando_dados/index.md)
 
 ### Módulo 03 — TypeScript no navegador 🛠️ em produção
 

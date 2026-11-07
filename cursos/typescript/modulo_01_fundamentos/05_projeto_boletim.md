@@ -166,4 +166,4 @@ Escreva por engano `return "Aprovada";` dentro de `situacao`. O que o compilador
 
 ## ➡️ Próximo passo
 
-Você terminou o **Módulo 01**. Volte ao [índice do módulo](index.md) e confira o checklist. O **Módulo 02 — Modelando dados** está em produção.
+Você terminou o **Módulo 01**. Volte ao [índice do módulo](index.md) e confira o checklist. Depois, siga para o **[Módulo 02 — Modelando dados](../modulo_02_modelando_dados/index.md)**.

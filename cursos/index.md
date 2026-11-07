@@ -108,7 +108,7 @@ hide:
 
     JavaScript com tipos: o editor avisa os erros antes de rodar. A base para React e projetos profissionais.
 
-    Módulo 01 disponível · 5 aulas · do primeiro tsc ao boletim de notas
+    Módulos 01 e 02 disponíveis · 10 aulas · do primeiro tsc ao carrinho de compras tipado
 
     [:octicons-arrow-right-24: Começar pelo Módulo 01](typescript/modulo_01_fundamentos/index.md)
 

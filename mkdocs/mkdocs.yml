@@ -311,4 +311,11 @@ nav:
     - Arrays, tuplas e objetos: typescript/modulo_01_fundamentos/03_arrays_tuplas_e_objetos.md
     - Funções tipadas: typescript/modulo_01_fundamentos/04_funcoes_tipadas.md
     - 'Projeto do módulo: boletim de notas': typescript/modulo_01_fundamentos/05_projeto_boletim.md
+  - Modelando dados:
+    - Visão Geral: typescript/modulo_02_modelando_dados/index.md
+    - type × interface: typescript/modulo_02_modelando_dados/01_type_e_interface.md
+    - Uniões, literais e narrowing: typescript/modulo_02_modelando_dados/02_unioes_e_narrowing.md
+    - Valores opcionais e null: typescript/modulo_02_modelando_dados/03_opcionais_e_null.md
+    - Generics: typescript/modulo_02_modelando_dados/04_generics.md
+    - 'Projeto do módulo: carrinho de compras': typescript/modulo_02_modelando_dados/05_projeto_carrinho.md
 docs_dir: ../cursos
