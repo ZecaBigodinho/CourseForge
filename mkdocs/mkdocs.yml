@@ -302,4 +302,13 @@ nav:
     - Organizar o projeto: desenvolvimento_web/modulo_04_publicar/02_organizar_o_projeto.md
     - Publicar no GitHub Pages: desenvolvimento_web/modulo_04_publicar/03_github_pages.md
     - 'Projeto final: portfólio no ar': desenvolvimento_web/modulo_04_publicar/04_projeto_portfolio.md
+- TypeScript:
+  - Apresentação do curso: typescript/docs/index.md
+  - Fundamentos:
+    - Visão Geral: typescript/modulo_01_fundamentos/index.md
+    - Por que TypeScript e o primeiro programa: typescript/modulo_01_fundamentos/01_primeiro_programa.md
+    - Tipos básicos e inferência: typescript/modulo_01_fundamentos/02_tipos_basicos.md
+    - Arrays, tuplas e objetos: typescript/modulo_01_fundamentos/03_arrays_tuplas_e_objetos.md
+    - Funções tipadas: typescript/modulo_01_fundamentos/04_funcoes_tipadas.md
+    - 'Projeto do módulo: boletim de notas': typescript/modulo_01_fundamentos/05_projeto_boletim.md
 docs_dir: ../cursos

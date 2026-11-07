@@ -148,4 +148,4 @@ Peça a dois colegas para abrirem o seu portfólio no celular e anotarem três c
 
 ## ➡️ Próximo passo
 
-Parabéns, você terminou o curso de **Desenvolvimento Web**! Volte ao [índice do módulo](index.md) para conferir o checklist. O próximo passo da trilha é o curso de **TypeScript**, em produção.
+Parabéns, você terminou o curso de **Desenvolvimento Web**! Volte ao [índice do módulo](index.md) para conferir o checklist. O próximo passo da trilha é o curso de **[TypeScript](../../typescript/docs/index.md)**.

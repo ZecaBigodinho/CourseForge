@@ -97,6 +97,20 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 
     [:octicons-arrow-right-24: Acessar o curso](desenvolvimento_web/docs/index.md)
 
+-   :material-language-typescript:{ .lg .middle } __TypeScript__
+
+    <span class="cf-tag cf-tag--ok">Em andamento</span>
+
+    ---
+
+    JavaScript com tipos — menos erros, mais ajuda do editor e a base para React e projetos profissionais.
+
+    **Nível:** Intermediário  
+    **Carga horária:** 18 h  
+    **Certificado:** Entrega da lista de tarefas em TypeScript do Módulo 03.  
+
+    [:octicons-arrow-right-24: Acessar o curso](typescript/docs/index.md)
+
 </div>
 
 ## Fichas dos cursos
@@ -238,3 +252,25 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 - Publicar um portfólio na internet com o GitHub Pages.
 
 [Ir para o curso](desenvolvimento_web/docs/index.md)
+
+### TypeScript <span class="cf-tag cf-tag--ok">Em andamento</span>
+
+- **Nível:** Intermediário
+- **Carga horária:** 18 h
+- **Para quem é:** Quem já fez o curso de Desenvolvimento Web (ou sabe o básico de JavaScript) e quer escrever código mais seguro, como nas empresas.
+- **Certificado:** Entrega da lista de tarefas em TypeScript do Módulo 03.
+- **Autor:** Pedro Paulo IF
+
+**Pré-requisitos:**
+
+- JavaScript básico (variáveis, funções, arrays, objetos e DOM) — curso de Desenvolvimento Web.
+- Node.js instalado (gratuito).
+
+**Você vai aprender a:**
+
+- Configurar um projeto TypeScript com npm e tsconfig.
+- Tipar variáveis, arrays, objetos e funções e entender as mensagens de erro.
+- Modelar dados com type, interface, uniões e generics.
+- Usar TypeScript no navegador com módulos, DOM e fetch tipados.
+
+[Ir para o curso](typescript/docs/index.md)
