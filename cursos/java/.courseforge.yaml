@@ -1,0 +1,29 @@
+nome: Java
+descricao: Programação em Java do zero, em projetos — lógica, orientação a objetos, coleções e arquivos, até um sistema de cadastro completo.
+autor: Pedro Paulo IF
+num_modulos: 3
+data_criacao: '2026-11-07'
+versao: 0.1.0
+tags: []
+slug: java
+# Ordem dos módulos no menu (nomes das pastas); os próximos entram aqui conforme forem publicados
+ordem_modulos:
+  - modulo_01_fundamentos
+
+# Ficha do curso — alimenta o Catálogo de cursos (gerado por src/generators/gerar_catalogo.py)
+ordem: 9
+status: em_andamento             # disponivel | em_andamento | em_breve
+ficha:
+  icone: material-language-java
+  nivel: Iniciante
+  carga_horaria: 20 h               # ~6–7 h por módulo, estimativa de 07/11/2026
+  publico: Alunos de cursos técnicos e quem se prepara para vagas de desenvolvimento, concursos e faculdade, onde o Java é cobrado.
+  certificado: Entrega do cadastro de alunos com arquivo CSV do Módulo 03.
+  pre_requisitos:
+    - Usar o computador, pastas e o terminal.
+    - Nenhuma experiência com programação (quem já fez Python ou JavaScript vai mais rápido).
+  objetivos:
+    - Instalar o JDK, compilar e rodar programas Java.
+    - Usar variáveis, tipos, condições, laços e métodos.
+    - Modelar sistemas com classes, encapsulamento, herança e interfaces.
+    - Trabalhar com coleções, exceções e arquivos.

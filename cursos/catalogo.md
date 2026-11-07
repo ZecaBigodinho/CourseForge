@@ -125,6 +125,20 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 
     [:octicons-arrow-right-24: Acessar o curso](react/docs/index.md)
 
+-   :material-language-java:{ .lg .middle } __Java__
+
+    <span class="cf-tag cf-tag--ok">Em andamento</span>
+
+    ---
+
+    Programação em Java do zero, em projetos — lógica, orientação a objetos, coleções e arquivos, até um sistema de cadastro completo.
+
+    **Nível:** Iniciante  
+    **Carga horária:** 20 h  
+    **Certificado:** Entrega do cadastro de alunos com arquivo CSV do Módulo 03.  
+
+    [:octicons-arrow-right-24: Acessar o curso](java/docs/index.md)
+
 </div>
 
 ## Fichas dos cursos
@@ -311,3 +325,25 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 - Organizar uma aplicação completa e publicá-la na internet.
 
 [Ir para o curso](react/docs/index.md)
+
+### Java <span class="cf-tag cf-tag--ok">Em andamento</span>
+
+- **Nível:** Iniciante
+- **Carga horária:** 20 h
+- **Para quem é:** Alunos de cursos técnicos e quem se prepara para vagas de desenvolvimento, concursos e faculdade, onde o Java é cobrado.
+- **Certificado:** Entrega do cadastro de alunos com arquivo CSV do Módulo 03.
+- **Autor:** Pedro Paulo IF
+
+**Pré-requisitos:**
+
+- Usar o computador, pastas e o terminal.
+- Nenhuma experiência com programação (quem já fez Python ou JavaScript vai mais rápido).
+
+**Você vai aprender a:**
+
+- Instalar o JDK, compilar e rodar programas Java.
+- Usar variáveis, tipos, condições, laços e métodos.
+- Modelar sistemas com classes, encapsulamento, herança e interfaces.
+- Trabalhar com coleções, exceções e arquivos.
+
+[Ir para o curso](java/docs/index.md)

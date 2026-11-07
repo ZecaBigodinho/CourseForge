@@ -346,4 +346,13 @@ nav:
     - 'Context: dados para o app inteiro': react/modulo_03_aplicacao/02_context.md
     - Build e publicação: react/modulo_03_aplicacao/03_build_e_publicacao.md
     - 'Projeto final: catálogo com busca e carrinho': react/modulo_03_aplicacao/04_projeto_catalogo.md
+- Java:
+  - Apresentação do curso: java/docs/index.md
+  - Fundamentos:
+    - Visão Geral: java/modulo_01_fundamentos/index.md
+    - JDK e o primeiro programa: java/modulo_01_fundamentos/01_primeiro_programa.md
+    - Variáveis, tipos e operadores: java/modulo_01_fundamentos/02_variaveis_e_tipos.md
+    - Condições e laços: java/modulo_01_fundamentos/03_condicoes_e_lacos.md
+    - Métodos e entrada com Scanner: java/modulo_01_fundamentos/04_metodos_e_scanner.md
+    - 'Projeto do módulo: calculadora de médias': java/modulo_01_fundamentos/05_projeto_calculadora.md
 docs_dir: ../cursos

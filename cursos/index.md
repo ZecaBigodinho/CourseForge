@@ -124,6 +124,18 @@ hide:
 
     [:octicons-arrow-right-24: Começar pelo Módulo 01](react/modulo_01_fundamentos/index.md)
 
+-   :material-language-java:{ .lg .middle } __Java__
+
+    <span class="cf-tag cf-tag--ok">Em andamento</span>
+
+    ---
+
+    Programação em Java do zero: lógica, orientação a objetos, coleções e arquivos, até um sistema de cadastro.
+
+    Módulo 01 disponível · 5 aulas · do primeiro programa à calculadora de médias
+
+    [:octicons-arrow-right-24: Começar pelo Módulo 01](java/modulo_01_fundamentos/index.md)
+
 </div>
 
 [Ver o catálogo completo, com as fichas dos cursos](catalogo.md){ .md-button }
