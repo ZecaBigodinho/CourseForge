@@ -113,7 +113,7 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 
 -   :material-react:{ .lg .middle } __React__
 
-    <span class="cf-tag cf-tag--ok">Em andamento</span>
+    <span class="cf-tag cf-tag--ok">Disponível</span>
 
     ---
 
@@ -289,7 +289,7 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 
 [Ir para o curso](typescript/docs/index.md)
 
-### React <span class="cf-tag cf-tag--ok">Em andamento</span>
+### React <span class="cf-tag cf-tag--ok">Disponível</span>
 
 - **Nível:** Intermediário
 - **Carga horária:** 20 h

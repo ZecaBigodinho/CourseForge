@@ -10,10 +10,11 @@ slug: react
 ordem_modulos:
   - modulo_01_fundamentos
   - modulo_02_formularios_e_efeitos
+  - modulo_03_aplicacao
 
 # Ficha do curso — alimenta o Catálogo de cursos (gerado por src/generators/gerar_catalogo.py)
 ordem: 8
-status: em_andamento             # disponivel | em_andamento | em_breve
+status: disponivel               # disponivel | em_andamento | em_breve
 ficha:
   icone: material-react
   nivel: Intermediário

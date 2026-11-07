@@ -347,4 +347,4 @@ Permita **editar** o texto de uma tarefa com dois cliques no texto, salvando com
 
 ## ➡️ Próximo passo
 
-Você terminou o **Módulo 02**. Volte ao [índice do módulo](index.md) e confira o checklist. O **Módulo 03 — Aplicação completa** está em produção.
+Você terminou o **Módulo 02**. Volte ao [índice do módulo](index.md) e confira o checklist. Depois, siga para o **[Módulo 03 — Aplicação completa](../modulo_03_aplicacao/index.md)**.

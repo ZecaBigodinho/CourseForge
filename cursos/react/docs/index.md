@@ -2,7 +2,7 @@
 
 > **Autor:** Prof. Pedro Paulo IF · [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com)  
 > **Versão:** 0.1.0  
-> **Situação:** em andamento. Módulos 01 e 02 disponíveis; Módulo 03 em produção  
+> **Situação:** disponível — 3 módulos, 14 aulas  
 > **Ferramentas:** VS Code, Node.js, Vite, React e TypeScript (tudo gratuito)
 
 ---
@@ -26,9 +26,9 @@ O primeiro projeto com Vite, JSX e componentes, props tipadas, estado com `useSt
 
 Listas e `key`, formulários controlados, `useEffect` com `localStorage` e dados de APIs. Projeto: a **lista de tarefas** em React. [Acessar o módulo](../modulo_02_formularios_e_efeitos/index.md)
 
-### Módulo 03 — Aplicação completa 🛠️ em produção
+### Módulo 03 — Aplicação completa ✅ disponível
 
-Componentizar e elevar o estado, Context, build e publicação. Projeto: um **catálogo com busca e carrinho**, publicado na internet.
+Componentizar e elevar o estado, Context, build e publicação. Projeto: um **catálogo com busca e carrinho**, publicado na internet. [Acessar o módulo](../modulo_03_aplicacao/index.md)
 
 ## Certificado
 

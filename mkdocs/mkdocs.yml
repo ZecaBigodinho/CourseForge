@@ -340,4 +340,10 @@ nav:
     - useEffect e localStorage: react/modulo_02_formularios_e_efeitos/03_useeffect_e_localstorage.md
     - Buscar dados de uma API: react/modulo_02_formularios_e_efeitos/04_buscar_dados.md
     - 'Projeto do módulo: lista de tarefas': react/modulo_02_formularios_e_efeitos/05_projeto_lista_de_tarefas.md
+  - Aplicação completa:
+    - Visão Geral: react/modulo_03_aplicacao/index.md
+    - Componentizar e elevar o estado: react/modulo_03_aplicacao/01_elevar_o_estado.md
+    - 'Context: dados para o app inteiro': react/modulo_03_aplicacao/02_context.md
+    - Build e publicação: react/modulo_03_aplicacao/03_build_e_publicacao.md
+    - 'Projeto final: catálogo com busca e carrinho': react/modulo_03_aplicacao/04_projeto_catalogo.md
 docs_dir: ../cursos

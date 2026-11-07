@@ -114,13 +114,13 @@ hide:
 
 -   :material-react:{ .lg .middle } __React__
 
-    <span class="cf-tag cf-tag--ok">Em andamento</span>
+    <span class="cf-tag cf-tag--ok">Disponível</span>
 
     ---
 
     Interfaces modernas com componentes, props e estado, em React com TypeScript e Vite.
 
-    Módulos 01 e 02 disponíveis · 10 aulas · do primeiro projeto à lista de tarefas com efeitos
+    3 módulos · 14 aulas · do primeiro componente ao catálogo publicado
 
     [:octicons-arrow-right-24: Começar pelo Módulo 01](react/modulo_01_fundamentos/index.md)
 
