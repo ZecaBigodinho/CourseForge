@@ -112,6 +112,18 @@ hide:
 
     [:octicons-arrow-right-24: Começar pelo Módulo 01](typescript/modulo_01_fundamentos/index.md)
 
+-   :material-react:{ .lg .middle } __React__
+
+    <span class="cf-tag cf-tag--ok">Disponível</span>
+
+    ---
+
+    Interfaces modernas com componentes, props e estado, em React com TypeScript e Vite.
+
+    3 módulos · 14 aulas · do primeiro componente ao catálogo publicado
+
+    [:octicons-arrow-right-24: Começar pelo Módulo 01](react/modulo_01_fundamentos/index.md)
+
 </div>
 
 [Ver o catálogo completo, com as fichas dos cursos](catalogo.md){ .md-button }

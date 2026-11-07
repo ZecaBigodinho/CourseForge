@@ -324,4 +324,26 @@ nav:
     - DOM com tipos: typescript/modulo_03_navegador/02_dom_tipado.md
     - fetch com tipos: typescript/modulo_03_navegador/03_fetch_tipado.md
     - 'Projeto final: lista de tarefas em TypeScript': typescript/modulo_03_navegador/04_projeto_lista_de_tarefas.md
+- React:
+  - Apresentação do curso: react/docs/index.md
+  - Fundamentos:
+    - Visão Geral: react/modulo_01_fundamentos/index.md
+    - Por que React e o primeiro projeto: react/modulo_01_fundamentos/01_primeiro_projeto.md
+    - JSX e componentes: react/modulo_01_fundamentos/02_jsx_e_componentes.md
+    - Props: react/modulo_01_fundamentos/03_props.md
+    - Estado e eventos: react/modulo_01_fundamentos/04_estado_e_eventos.md
+    - 'Projeto do módulo: cardápio com pedido': react/modulo_01_fundamentos/05_projeto_cardapio.md
+  - Listas, formulários e efeitos:
+    - Visão Geral: react/modulo_02_formularios_e_efeitos/index.md
+    - Formulários controlados: react/modulo_02_formularios_e_efeitos/01_formularios_controlados.md
+    - 'Listas: filtrar, editar e remover': react/modulo_02_formularios_e_efeitos/02_listas.md
+    - useEffect e localStorage: react/modulo_02_formularios_e_efeitos/03_useeffect_e_localstorage.md
+    - Buscar dados de uma API: react/modulo_02_formularios_e_efeitos/04_buscar_dados.md
+    - 'Projeto do módulo: lista de tarefas': react/modulo_02_formularios_e_efeitos/05_projeto_lista_de_tarefas.md
+  - Aplicação completa:
+    - Visão Geral: react/modulo_03_aplicacao/index.md
+    - Componentizar e elevar o estado: react/modulo_03_aplicacao/01_elevar_o_estado.md
+    - 'Context: dados para o app inteiro': react/modulo_03_aplicacao/02_context.md
+    - Build e publicação: react/modulo_03_aplicacao/03_build_e_publicacao.md
+    - 'Projeto final: catálogo com busca e carrinho': react/modulo_03_aplicacao/04_projeto_catalogo.md
 docs_dir: ../cursos
