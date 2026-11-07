@@ -282,4 +282,11 @@ nav:
     - Listas e tabelas: desenvolvimento_web/modulo_01_html/03_listas_e_tabelas.md
     - Formulários: desenvolvimento_web/modulo_01_html/04_formularios.md
     - 'Projeto do módulo: página de apresentação': desenvolvimento_web/modulo_01_html/05_projeto_pagina_de_apresentacao.md
+  - CSS:
+    - Visão Geral: desenvolvimento_web/modulo_02_css/index.md
+    - Seletores, cores e fontes: desenvolvimento_web/modulo_02_css/01_seletores_cores_e_fontes.md
+    - Modelo de caixa: desenvolvimento_web/modulo_02_css/02_modelo_de_caixa.md
+    - Flexbox: desenvolvimento_web/modulo_02_css/03_flexbox.md
+    - Grid e layout responsivo: desenvolvimento_web/modulo_02_css/04_grid_e_responsivo.md
+    - 'Projeto do módulo: cardápio': desenvolvimento_web/modulo_02_css/05_projeto_cardapio.md
 docs_dir: ../cursos

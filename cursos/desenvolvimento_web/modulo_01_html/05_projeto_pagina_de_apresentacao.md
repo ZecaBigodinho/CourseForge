@@ -176,4 +176,4 @@ Navegue pela sua página **só com o teclado** (`Tab`, `Shift + Tab`, `Enter`, b
 
 ## ➡️ Próximo passo
 
-Você terminou o **Módulo 01**. Volte ao [índice do módulo](index.md) e confira o checklist. O **Módulo 02 — CSS**, que vai deixar esta página bonita, está em produção.
+Você terminou o **Módulo 01**. Volte ao [índice do módulo](index.md) e confira o checklist. Depois, siga para o **[Módulo 02 — CSS](../modulo_02_css/index.md)**, que vai deixar esta página bonita.

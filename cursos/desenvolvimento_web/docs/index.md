@@ -2,7 +2,7 @@
 
 > **Autor:** Prof. Pedro Paulo IF · [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com)  
 > **Versão:** 0.1.0  
-> **Situação:** em andamento. Módulo 01 disponível; Módulos 02 a 04 em produção  
+> **Situação:** em andamento. Módulos 01 e 02 disponíveis; Módulos 03 e 04 em produção  
 > **Ferramentas:** VS Code e um navegador (Chrome, Edge ou Firefox), tudo gratuito
 
 ---
@@ -19,9 +19,9 @@ Este curso é a base para os próximos da trilha: **TypeScript** e **React**.
 
 Estrutura de uma página, textos, links, imagens, listas, tabelas e formulários, com acessibilidade desde o começo. Projeto: sua **página de apresentação**. [Acessar o módulo](../modulo_01_html/index.md)
 
-### Módulo 02 — CSS 🛠️ em produção
+### Módulo 02 — CSS ✅ disponível
 
-Seletores, cores e fontes, modelo de caixa, Flexbox, Grid e layout responsivo. Projeto: o **cardápio** de uma lanchonete.
+Seletores, cores e fontes, modelo de caixa, Flexbox, Grid e layout responsivo. Projeto: o **cardápio** de uma lanchonete. [Acessar o módulo](../modulo_02_css/index.md)
 
 ### Módulo 03 — JavaScript 🛠️ em produção
 
