@@ -2,7 +2,7 @@
 
 > **Autor:** Prof. Pedro Paulo IF · [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com)  
 > **Versão:** 0.1.0  
-> **Situação:** em andamento. Módulos 01 a 03 disponíveis; Módulo 04 em produção  
+> **Situação:** disponível — 4 módulos, 19 aulas  
 > **Ferramentas:** VS Code e um navegador (Chrome, Edge ou Firefox), tudo gratuito
 
 ---
@@ -27,9 +27,9 @@ Seletores, cores e fontes, modelo de caixa, Flexbox, Grid e layout responsivo. P
 
 Variáveis, condições, laços, funções, DOM, eventos e `localStorage`. Projeto: uma **lista de tarefas** que lembra o que você digitou. [Acessar o módulo](../modulo_03_javascript/index.md)
 
-### Módulo 04 — Publicar 🛠️ em produção
+### Módulo 04 — Publicar ✅ disponível
 
-Buscar dados de APIs com `fetch`, organizar o projeto e publicar no **GitHub Pages**. Projeto: o seu **portfólio no ar**.
+Buscar dados de APIs com `fetch`, organizar o projeto e publicar no **GitHub Pages**. Projeto: o seu **portfólio no ar**. [Acessar o módulo](../modulo_04_publicar/index.md)
 
 ## Certificado
 

@@ -231,4 +231,4 @@ Crie três botões de filtro, **Todas**, **A fazer** e **Feitas**, que mudam o q
 
 ## ➡️ Próximo passo
 
-Você terminou o **Módulo 03**. Volte ao [índice do módulo](index.md) e confira o checklist. O **Módulo 04 — Publicar**, que vai pôr seus projetos na internet, está em produção.
+Você terminou o **Módulo 03**. Volte ao [índice do módulo](index.md) e confira o checklist. Depois, siga para o **[Módulo 04 — Publicar](../modulo_04_publicar/index.md)**, que vai pôr seus projetos na internet.

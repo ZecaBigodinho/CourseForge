@@ -11,10 +11,11 @@ ordem_modulos:
   - modulo_01_html
   - modulo_02_css
   - modulo_03_javascript
+  - modulo_04_publicar
 
 # Ficha do curso — alimenta o Catálogo de cursos (gerado por src/generators/gerar_catalogo.py)
 ordem: 6
-status: em_andamento             # disponivel | em_andamento | em_breve
+status: disponivel               # disponivel | em_andamento | em_breve
 ficha:
   icone: material-language-html5
   nivel: Iniciante

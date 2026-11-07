@@ -85,7 +85,7 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 
 -   :material-language-html5:{ .lg .middle } __Desenvolvimento Web__
 
-    <span class="cf-tag cf-tag--ok">Em andamento</span>
+    <span class="cf-tag cf-tag--ok">Disponível</span>
 
     ---
 
@@ -217,7 +217,7 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 
 [Ir para o curso](coreldraw/docs/index.md)
 
-### Desenvolvimento Web <span class="cf-tag cf-tag--ok">Em andamento</span>
+### Desenvolvimento Web <span class="cf-tag cf-tag--ok">Disponível</span>
 
 - **Nível:** Iniciante
 - **Carga horária:** 32 h
