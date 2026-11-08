@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="350" viewBox="0 0 480 350" role="img" aria-hidden="true">
+  <defs>
+    <filter id="sombra" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#000" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <g filter="url(#sombra)">
+    <rect x="10" y="6" width="460" height="330" rx="14" fill="#FFFFFF"/>
+    <path d="M10 20 a14 14 0 0 1 14 -14 h432 a14 14 0 0 1 14 14 v18 h-460 z" fill="#EEEAFB"/>
+  </g>
+  <circle cx="30" cy="25" r="5" fill="#FF6B6B"/><circle cx="46" cy="25" r="5" fill="#FFC83D"/><circle cx="62" cy="25" r="5" fill="#4ADE80"/>
+  <text x="240.0" y="29" text-anchor="middle" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600" fill="#4A3E86">CourseForge · IF</text>
+  <g transform="translate(10 44)">
+
+    <text x="22" y="34" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="15" font-weight="700" fill="#10202A">Meus cursos</text>
+    <g transform="translate(22 50)"><rect width="130" height="104" rx="12" fill="#4F35B5"/><text x="14" y="34" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="22">🐍</text><text x="14" y="64" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="700" fill="#fff">Python</text><rect x="14" y="78" width="102" height="7" rx="3.5" fill="rgba(255,255,255,0.35)"/><rect x="14" y="78" width="80" height="7" rx="3.5" fill="#64DFD3"/></g><g transform="translate(164 50)"><rect width="130" height="104" rx="12" fill="#5B3FC4"/><text x="14" y="34" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="22">🌐</text><text x="14" y="64" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="700" fill="#fff">Web</text><rect x="14" y="78" width="102" height="7" rx="3.5" fill="rgba(255,255,255,0.35)"/><rect x="14" y="78" width="64" height="7" rx="3.5" fill="#64DFD3"/></g><g transform="translate(306 50)"><rect width="130" height="104" rx="12" fill="#6A35B8"/><text x="14" y="34" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="22">☕</text><text x="14" y="64" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="700" fill="#fff">Java</text><rect x="14" y="78" width="102" height="7" rx="3.5" fill="rgba(255,255,255,0.35)"/><rect x="14" y="78" width="48" height="7" rx="3.5" fill="#64DFD3"/></g><g transform="translate(22 168)"><rect width="130" height="104" rx="12" fill="#3A3FB0"/><text x="14" y="34" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="22">🤖</text><text x="14" y="64" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="700" fill="#fff">IA</text><rect x="14" y="78" width="102" height="7" rx="3.5" fill="rgba(255,255,255,0.35)"/><rect x="14" y="78" width="90" height="7" rx="3.5" fill="#64DFD3"/></g><g transform="translate(164 168)"><rect width="130" height="104" rx="12" fill="#3D46B8"/><text x="14" y="34" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="22">📊</text><text x="14" y="64" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="700" fill="#fff">Office</text><rect x="14" y="78" width="102" height="7" rx="3.5" fill="rgba(255,255,255,0.35)"/><rect x="14" y="78" width="70" height="7" rx="3.5" fill="#64DFD3"/></g><g transform="translate(306 168)"><rect width="130" height="104" rx="12" fill="#7B3FB8"/><text x="14" y="34" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="22">🎨</text><text x="14" y="64" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="700" fill="#fff">Design</text><rect x="14" y="78" width="102" height="7" rx="3.5" fill="rgba(255,255,255,0.35)"/><rect x="14" y="78" width="56" height="7" rx="3.5" fill="#64DFD3"/></g>
+
+  </g>
+</svg>
