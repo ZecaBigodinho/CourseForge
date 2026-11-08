@@ -333,6 +333,18 @@ hide:
 
     [:octicons-arrow-right-24: Começar pelo Módulo 01](java/modulo_01_fundamentos/index.md)
 
+-   :material-shield-lock-outline:{ .lg .middle } __Segurança digital__
+
+    <span class="cf-tag cf-tag--ok">Em andamento</span>
+
+    ---
+
+    Proteja as suas contas, reconheça golpes de WhatsApp e Pix e conheça os seus direitos na internet. Para qualquer pessoa, sem programar.
+
+    Módulo 01 disponível · 5 aulas · senhas, gerenciador e verificação em duas etapas
+
+    [:octicons-arrow-right-24: Começar pelo Módulo 01](seguranca_digital/modulo_01_senhas_e_contas/index.md)
+
 </div>
 
 <div class="cf-botoes" markdown>
@@ -658,6 +670,34 @@ Cada curso termina num projeto para o seu portfólio, que libera o certificado.
 
     </div>
 
+=== "Segurança"
+
+    <div class="grid cards cf-trilha" markdown>
+
+    -   :material-form-textbox-password:{ .middle } __01 · Senhas e contas__
+
+        Frase-senha, gerenciador de senhas, verificação em duas etapas e o plano de proteção das suas contas.
+
+        [:octicons-arrow-right-24: 5 aulas](seguranca_digital/modulo_01_senhas_e_contas/index.md)
+
+    -   :material-alert-octagon-outline:{ .middle } __02 · Golpes mais comuns__ <span class="cf-tag">Em breve</span>
+
+        Falso parente, golpe do código, Pix e o MED, links, lojas e boletos falsos.
+
+    -   :material-cellphone-lock:{ .middle } __03 · Celular e computador seguros__ <span class="cf-tag">Em breve</span>
+
+        Atualizações, apps oficiais, permissões, Wi-Fi público, backup e o computador da escola.
+
+    -   :material-scale-balance:{ .middle } __04 · Cidadania e direitos__ <span class="cf-tag">Em breve</span>
+
+        gov.br, Registrato, LGPD no dia a dia, cyberbullying e onde denunciar.
+
+    -   :material-account-group-outline:{ .middle } __05 · Projeto final__ <span class="cf-tag">Em breve</span>
+
+        O Guia de segurança da minha família, apresentado para a turma.
+
+    </div>
+
 
 ## Certificado
 
@@ -675,14 +715,15 @@ Cada curso termina num projeto para o seu portfólio, que libera o certificado.
     | **TypeScript** | A [lista de tarefas em TypeScript](typescript/modulo_03_navegador/04_projeto_lista_de_tarefas.md) (Módulo 03), compilando sem erros no modo `strict`. |
     | **React** | O [catálogo com busca e carrinho](react/modulo_03_aplicacao/04_projeto_catalogo.md) (Módulo 03), publicado na internet. |
     | **Java** | O [cadastro de alunos com arquivo CSV](java/modulo_03_colecoes_e_arquivos/05_projeto_cadastro_csv.md) (Módulo 03). |
+    | **Segurança digital** | O Guia de segurança da minha família (Módulo 05, em produção). |
 
 ## Perguntas frequentes
 
 ??? question "Preciso saber programar para começar?"
-    Não. Os cursos de programação começam do zero: o primeiro módulo ensina a instalar tudo e parte da primeira linha de código. Os cursos de design, escritório e IA não pedem programação (só o projeto final de IA usa um pouco de Python).
+    Não. Os cursos de programação começam do zero: o primeiro módulo ensina a instalar tudo e parte da primeira linha de código. Os cursos de design, escritório, IA e segurança digital não pedem programação (só o projeto final de IA usa um pouco de Python).
 
 ??? question "Por qual curso eu começo?"
-    Depende do seu objetivo: **programação** ➔ Python para Desktop ou a trilha Web (HTML, depois TypeScript e React); **concursos e cursos técnicos** ➔ Java; **escritório** ➔ Pacote Office; **design e redes sociais** ➔ Canva e CorelDRAW; **usar IA no dia a dia** ➔ Introdução à IA. O [catálogo](catalogo.md) mostra o nível e os pré-requisitos de cada um.
+    Depende do seu objetivo: **programação** ➔ Python para Desktop ou a trilha Web (HTML, depois TypeScript e React); **concursos e cursos técnicos** ➔ Java; **escritório** ➔ Pacote Office; **design e redes sociais** ➔ Canva e CorelDRAW; **usar IA no dia a dia** ➔ Introdução à IA. **Proteger as contas e fugir de golpes** ➔ Segurança digital, que serve para qualquer pessoa. O [catálogo](catalogo.md) mostra o nível e os pré-requisitos de cada um.
 
 ??? question "Posso estudar em casa?"
     Sim. O site funciona no computador, no tablet e no celular. Para praticar, siga a primeira aula de cada curso no seu computador pessoal: tudo tem opção gratuita.
