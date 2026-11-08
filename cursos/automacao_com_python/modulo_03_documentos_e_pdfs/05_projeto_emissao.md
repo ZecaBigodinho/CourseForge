@@ -272,4 +272,4 @@ Escreva um teste que confira duas garantias do código de validação: (1) **nã
 
 ## ➡️ Próximo passo
 
-**Módulo 04 — E-mail, agendamento e boas práticas** *(em produção)*: preparar e-mails com segurança, guardar senhas no `.env`, agendar scripts e registrar o que aconteceu em logs.
+**[Módulo 04 — E-mail, agendamento e boas práticas](../modulo_04_email_e_agendamento/index.md)**: preparar e-mails com segurança, guardar senhas no `.env`, agendar scripts e registrar o que aconteceu em logs.

@@ -379,7 +379,7 @@ hide:
 
     Faça o computador trabalhar por você: organizar pastas, planilhas, certificados, PDFs e e-mails com scripts seguros e testados.
 
-    Módulos 01 a 03 disponíveis · 15 aulas · organizador de pastas, boletim em Excel e certificados em PDF
+    Módulos 01 a 04 disponíveis · 20 aulas · pastas, boletim em Excel, certificados em PDF e lembretes por e-mail
 
     [:octicons-arrow-right-24: Começar pelo Módulo 01](automacao_com_python/modulo_01_arquivos_e_pastas/index.md)
 
@@ -766,9 +766,11 @@ Cada curso termina num projeto para o seu portfólio, que libera o certificado.
 
         [:octicons-arrow-right-24: 5 aulas](automacao_com_python/modulo_03_documentos_e_pdfs/index.md)
 
-    -   :material-email-fast-outline:{ .middle } __04 · E-mail e agendamento__ <span class="cf-tag">Em breve</span>
+    -   :material-email-fast-outline:{ .middle } __04 · E-mail e agendamento__
 
-        E-mails com segurança, `.env`, Agendador de Tarefas e logs.
+        E-mails com segurança (servidor de teste), `.env`, logs e Agendador de Tarefas.
+
+        [:octicons-arrow-right-24: 5 aulas](automacao_com_python/modulo_04_email_e_agendamento/index.md)
 
     -   :material-robot-outline:{ .middle } __05 · Projeto final__ <span class="cf-tag">Em breve</span>
 

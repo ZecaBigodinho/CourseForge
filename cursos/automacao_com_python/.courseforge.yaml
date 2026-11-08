@@ -11,6 +11,7 @@ ordem_modulos:
   - modulo_01_arquivos_e_pastas
   - modulo_02_planilhas
   - modulo_03_documentos_e_pdfs
+  - modulo_04_email_e_agendamento
 
 # Ficha do curso — alimenta o Catálogo de cursos (gerado por src/generators/gerar_catalogo.py)
 ordem: 11

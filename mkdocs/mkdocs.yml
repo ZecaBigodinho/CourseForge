@@ -432,4 +432,11 @@ nav:
     - Imagens em lote com Pillow: automacao_com_python/modulo_03_documentos_e_pdfs/03_imagens_em_lote.md
     - Certificados e crachás em lote: automacao_com_python/modulo_03_documentos_e_pdfs/04_certificados_e_crachas.md
     - 'Projeto do módulo: emissão de certificados e declarações': automacao_com_python/modulo_03_documentos_e_pdfs/05_projeto_emissao.md
+  - E-mail, agendamento e boas práticas:
+    - Visão Geral: automacao_com_python/modulo_04_email_e_agendamento/index.md
+    - Montando e-mails com o Python: automacao_com_python/modulo_04_email_e_agendamento/01_montar_emails.md
+    - Enviando para um servidor de teste: automacao_com_python/modulo_04_email_e_agendamento/02_servidor_de_teste.md
+    - Senhas no .env e configuração: automacao_com_python/modulo_04_email_e_agendamento/03_env_e_configuracao.md
+    - Logs, erros e agendamento: automacao_com_python/modulo_04_email_e_agendamento/04_logs_e_agendamento.md
+    - 'Projeto do módulo: lembrete semanal': automacao_com_python/modulo_04_email_e_agendamento/05_projeto_lembrete.md
 docs_dir: ../cursos

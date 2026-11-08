@@ -2,7 +2,7 @@
 
 > **Autor:** Prof. Pedro Paulo IF · [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com)  
 > **Versão:** 0.1.0  
-> **Situação:** em andamento. Módulos 01 a 03 disponíveis; Módulos 04 e 05 em produção  
+> **Situação:** em andamento. Módulos 01 a 04 disponíveis; Módulo 05 em produção  
 > **Ferramentas:** Python 3.11 ou mais novo e VS Code, tudo gratuito
 
 ---
@@ -27,9 +27,9 @@ Ler Excel e CSV, escrever e formatar com `openpyxl`, fórmulas e formatação co
 
 Preencher modelos do Word, gerar PDFs, tratar imagens em lote (com a data EXIF) e montar certificados e crachás. Projeto: **emissão de certificados** com código de validação e **declarações** a partir da planilha. [Acessar o módulo](../modulo_03_documentos_e_pdfs/index.md)
 
-### Módulo 04 — E-mail, agendamento e boas práticas 🛠️ em produção
+### Módulo 04 — E-mail, agendamento e boas práticas ✅ disponível
 
-Montar e-mails com segurança (servidor de teste, sem envio em massa), senhas no `.env`, agendar scripts no Windows, logs e tratamento de erros. Projeto: o **lembrete semanal** de entrega de trabalhos.
+Montar e-mails com segurança (rascunho `.eml`, servidor de teste, um por pessoa), senhas no `.env`, logs, código de saída e agendamento no Windows. Projeto: o **lembrete semanal** de trabalhos pendentes. [Acessar o módulo](../modulo_04_email_e_agendamento/index.md)
 
 ### Módulo 05 — Projeto final 🛠️ em produção
 
