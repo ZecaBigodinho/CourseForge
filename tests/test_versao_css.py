@@ -55,3 +55,22 @@ def test_hook_ligado_no_config_com_caminho_valido():
     # O caminho é relativo à pasta do mkdocs.yml gerado (mkdocs/).
     assert all((RAIZ / "mkdocs" / h).resolve().is_file() for h in hooks)
     assert any(h.endswith("versao_css.py") for h in hooks)
+
+
+def test_javascript_local_tambem_ganha_versao(tmp_path):
+    js = tmp_path / "javascripts" / "home.js"
+    js.parent.mkdir()
+    js.write_text("console.log('oi');", encoding="utf-8")
+
+    class Script:  # imita o ExtraScriptValue do MkDocs 1.6
+        def __init__(self, path):
+            self.path = path
+
+    cfg = _config(tmp_path, [])
+    cfg["extra_javascript"] = ["javascripts/home.js", Script("javascripts/home.js"), "https://cdn.exemplo.com/x.js"]
+    cfg = on_config(cfg)
+
+    esperado = f"javascripts/home.js?v={versao_do_arquivo(js)}"
+    assert cfg["extra_javascript"][0] == esperado
+    assert cfg["extra_javascript"][1].path == esperado
+    assert cfg["extra_javascript"][2] == "https://cdn.exemplo.com/x.js"

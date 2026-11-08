@@ -1,7 +1,7 @@
 """
 CourseForge — mkdocs_hooks/versao_css.py
 
-Hook do MkDocs (ligado em src/config/config.yaml → mkdocs.hooks).
+Hook do MkDocs (ligado em src/config/config.yaml → mkdocs.hooks). Versiona o CSS e o JavaScript locais.
 
 O GitHub Pages manda o navegador guardar o CSS por 10 minutos. Sem mudar
 a URL, quem abre o site logo depois de um deploy continua vendo o estilo
@@ -24,16 +24,21 @@ def versao_do_arquivo(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()[:8]
 
 
+def _versionar(caminho: str, docs_dir: Path) -> str:
+    """Acrescenta ?v=<hash> a um arquivo local; externos, já versionados ou inexistentes ficam iguais."""
+    local = docs_dir / caminho
+    if "://" in caminho or "?" in caminho or not local.is_file():
+        return caminho
+    return f"{caminho}?v={versao_do_arquivo(local)}"
+
+
 def on_config(config, **kwargs):
     docs_dir = Path(config["docs_dir"])
-    versionados = []
-    for css in config["extra_css"]:
-        caminho = str(css)
-        local = docs_dir / caminho
-        # CSS externo (https://...), já versionado (?v=) ou inexistente fica como está.
-        if "://" in caminho or "?" in caminho or not local.is_file():
-            versionados.append(css)
-            continue
-        versionados.append(f"{caminho}?v={versao_do_arquivo(local)}")
-    config["extra_css"] = versionados
+    config["extra_css"] = [_versionar(str(css), docs_dir) for css in config["extra_css"]]
+    # O mesmo vale para os scripts (no MkDocs 1.6 cada item é um ExtraScriptValue com .path)
+    for i, script in enumerate(config.get("extra_javascript", [])):
+        if isinstance(script, str):
+            config["extra_javascript"][i] = _versionar(script, docs_dir)
+        elif hasattr(script, "path"):
+            script.path = _versionar(str(script.path), docs_dir)
     return config
