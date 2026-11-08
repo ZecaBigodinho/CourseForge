@@ -158,6 +158,4 @@ Escolha o golpe que **mais preocupa você** em relação à sua família (falso 
 
 ## ➡️ Próximo passo
 
-**Módulo 03 — Celular e computador seguros** *(em produção)*: atualizações, apps oficiais, permissões, Wi-Fi público, backup e o computador da escola.
-
-Enquanto isso, revise o [índice do curso](../docs/index.md).
+**[Módulo 03 — Celular e computador seguros](../modulo_03_aparelhos_seguros/index.md)**: atualizações, apps oficiais, permissões, Wi-Fi público, backup e o computador da escola.

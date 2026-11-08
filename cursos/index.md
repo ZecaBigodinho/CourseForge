@@ -341,7 +341,7 @@ hide:
 
     Proteja as suas contas, reconheça golpes de WhatsApp e Pix e conheça os seus direitos na internet. Para qualquer pessoa, sem programar.
 
-    Módulos 01 e 02 disponíveis · 10 aulas · senhas, duas etapas, golpes de WhatsApp e Pix
+    Módulos 01 a 03 disponíveis · 15 aulas · senhas, golpes de WhatsApp e Pix, celular protegido contra roubo
 
     [:octicons-arrow-right-24: Começar pelo Módulo 01](seguranca_digital/modulo_01_senhas_e_contas/index.md)
 
@@ -686,9 +686,11 @@ Cada curso termina num projeto para o seu portfólio, que libera o certificado.
 
         [:octicons-arrow-right-24: 5 aulas](seguranca_digital/modulo_02_golpes/index.md)
 
-    -   :material-cellphone-lock:{ .middle } __03 · Celular e computador seguros__ <span class="cf-tag">Em breve</span>
+    -   :material-cellphone-lock:{ .middle } __03 · Celular e computador seguros__
 
-        Atualizações, apps oficiais, permissões, Wi-Fi público, backup e o computador da escola.
+        Atualizações, apps oficiais, permissões, proteção contra roubo, Wi-Fi público, backup e o computador da escola.
+
+        [:octicons-arrow-right-24: 5 aulas](seguranca_digital/modulo_03_aparelhos_seguros/index.md)
 
     -   :material-scale-balance:{ .middle } __04 · Cidadania e direitos__ <span class="cf-tag">Em breve</span>
 

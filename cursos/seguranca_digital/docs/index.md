@@ -2,7 +2,7 @@
 
 > **Autor:** Prof. Pedro Paulo IF · [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com)  
 > **Versão:** 0.1.0  
-> **Situação:** em andamento. Módulos 01 e 02 disponíveis; Módulos 03 a 05 em produção  
+> **Situação:** em andamento. Módulos 01 a 03 disponíveis; Módulos 04 e 05 em produção  
 > **Ferramentas:** o seu celular, o seu computador e um navegador, nada pago
 
 ---
@@ -23,9 +23,9 @@ Por que o e-mail é a chave de todas as contas, senha forte e frase-senha, geren
 
 Engenharia social (urgência, medo e prêmio), golpes de WhatsApp (falso parente, código de verificação, conta clonada), golpes com Pix e o **MED** (Mecanismo Especial de Devolução), links falsos por SMS e e-mail, lojas e boletos falsos. Projeto: **golpe ou não?**, com 8 casos simulados e um alerta para a família. [Acessar o módulo](../modulo_02_golpes/index.md)
 
-### Módulo 03 — Celular e computador seguros 🛠️ em produção
+### Módulo 03 — Celular e computador seguros ✅ disponível
 
-Atualizações, apps só da loja oficial, permissões, bloqueio de tela, Wi-Fi público, backup e o computador da escola.
+Atualizações, apps só da loja oficial, permissões (e o perigo da Acessibilidade), bloqueio de tela, proteção contra roubo, **Celular Seguro**, backup, Wi-Fi público e o computador da escola. Projeto: o **checkup de segurança** do seu celular e de alguém da família. [Acessar o módulo](../modulo_03_aparelhos_seguros/index.md)
 
 ### Módulo 04 — Cidadania e direitos 🛠️ em produção
 

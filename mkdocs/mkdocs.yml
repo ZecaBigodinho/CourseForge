@@ -387,4 +387,11 @@ nav:
     - Golpes com Pix e o MED: seguranca_digital/modulo_02_golpes/03_golpes_com_pix.md
     - Links falsos, lojas e boletos falsos: seguranca_digital/modulo_02_golpes/04_links_lojas_e_boletos_falsos.md
     - 'Projeto do módulo: golpe ou não?': seguranca_digital/modulo_02_golpes/05_projeto_golpe_ou_nao.md
+  - Celular e computador seguros:
+    - Visão Geral: seguranca_digital/modulo_03_aparelhos_seguros/index.md
+    - Atualizações e apps oficiais: seguranca_digital/modulo_03_aparelhos_seguros/01_atualizacoes_e_apps_oficiais.md
+    - Permissões e privacidade no celular: seguranca_digital/modulo_03_aparelhos_seguros/02_permissoes_e_privacidade.md
+    - Bloqueio de tela, roubo e backup: seguranca_digital/modulo_03_aparelhos_seguros/03_bloqueio_roubo_e_backup.md
+    - Computador, Wi-Fi e o computador da escola: seguranca_digital/modulo_03_aparelhos_seguros/04_computador_e_wifi.md
+    - 'Projeto do módulo: checkup de segurança': seguranca_digital/modulo_03_aparelhos_seguros/05_projeto_checkup.md
 docs_dir: ../cursos
