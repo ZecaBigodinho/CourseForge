@@ -447,4 +447,13 @@ nav:
     - Documentos e e-mails: automacao_com_python/modulo_05_projeto_final/03_documentos_e_emails.md
     - Linha de comando e testes: automacao_com_python/modulo_05_projeto_final/04_linha_de_comando_e_testes.md
     - Demonstração, entrega e certificado: automacao_com_python/modulo_05_projeto_final/05_entrega_e_certificado.md
+- IA na prática com Python:
+  - Apresentação do curso: ia_na_pratica_com_python/docs/index.md
+  - Conversando com um modelo por API:
+    - Visão Geral: ia_na_pratica_com_python/modulo_01_api_de_ia/index.md
+    - O que é uma API de IA: ia_na_pratica_com_python/modulo_01_api_de_ia/01_o_que_e_uma_api_de_ia.md
+    - A primeira chamada: ia_na_pratica_com_python/modulo_01_api_de_ia/02_primeira_chamada.md
+    - Instruções de sistema e ajustes: ia_na_pratica_com_python/modulo_01_api_de_ia/03_instrucoes_e_ajustes.md
+    - Conversa com memória e motores: ia_na_pratica_com_python/modulo_01_api_de_ia/04_conversa_e_motores.md
+    - 'Projeto do módulo: resumidor de textos': ia_na_pratica_com_python/modulo_01_api_de_ia/05_projeto_resumidor.md
 docs_dir: ../cursos

@@ -167,6 +167,20 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 
     [:octicons-arrow-right-24: Acessar o curso](automacao_com_python/docs/index.md)
 
+-   :material-robot-love-outline:{ .lg .middle } __IA na prática com Python__
+
+    <span class="cf-tag cf-tag--ok">Em andamento</span>
+
+    ---
+
+    Use modelos de IA dentro dos seus programas — resumir, classificar, extrair dados e criar um atendente — com a API do Gemini, de forma segura e testada.
+
+    **Nível:** Intermediário  
+    **Carga horária:** 40 h  
+    **Certificado:** Entrega e demonstração do Atendente da Padaria Pão Quente, do Módulo 05.  
+
+    [:octicons-arrow-right-24: Acessar o curso](ia_na_pratica_com_python/docs/index.md)
+
 </div>
 
 ## Fichas dos cursos
@@ -421,3 +435,27 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 - Juntar tudo numa ferramenta completa, a Secretaria automática.
 
 [Ir para o curso](automacao_com_python/docs/index.md)
+
+### IA na prática com Python <span class="cf-tag cf-tag--ok">Em andamento</span>
+
+- **Nível:** Intermediário
+- **Carga horária:** 40 h
+- **Para quem é:** Quem já sabe o básico de Python e quer usar IA dentro dos próprios programas, na escola, no trabalho ou no pequeno negócio.
+- **Certificado:** Entrega e demonstração do Atendente da Padaria Pão Quente, do Módulo 05.
+- **Autor:** Pedro Paulo IF
+
+**Pré-requisitos:**
+
+- Python básico e ambiente virtual (Python para Desktop, Módulo 01; Automação com Python, Módulo 02).
+- Recomendado — o curso Introdução à IA.
+- Para usar a API de verdade, 18 anos ou mais (termos do Google); quem tem menos faz o curso com o motor simulado.
+
+**Você vai aprender a:**
+
+- Chamar um modelo de IA por API, com chave no .env e tratamento de erros.
+- Controlar as respostas com instruções de sistema e conferir o resultado com código.
+- Resumir, classificar e extrair dados de textos e documentos.
+- Proteger dados pessoais, controlar custos e testar sem gastar a cota.
+- Construir um atendente com regras e limites.
+
+[Ir para o curso](ia_na_pratica_com_python/docs/index.md)

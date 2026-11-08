@@ -409,6 +409,18 @@ hide:
 
     [:octicons-arrow-right-24: Começar pelo Módulo 01](automacao_com_python/modulo_01_arquivos_e_pastas/index.md)
 
+-   :material-robot-love-outline:{ .lg .middle } __IA na prática com Python__
+
+    <span class="cf-tag cf-tag--ok">Em andamento</span>
+
+    ---
+
+    Use modelos de IA dentro dos seus programas: resumir, classificar, extrair dados e criar um atendente, com a API do Gemini ou o motor simulado, sem chave.
+
+    Módulo 01 disponível · 5 aulas · primeira chamada, conversa com memória e resumidor de textos
+
+    [:octicons-arrow-right-24: Começar pelo Módulo 01](ia_na_pratica_com_python/modulo_01_api_de_ia/index.md)
+
 </div>
 
 <div class="cf-botoes" markdown>
@@ -806,6 +818,34 @@ Cada curso termina num projeto para o seu portfólio, que libera o certificado.
 
     </div>
 
+=== "IA na prática"
+
+    <div class="grid cards cf-trilha" markdown>
+
+    -   :material-api:{ .middle } __01 · API de IA__
+
+        Chave, tokens, primeira chamada, instruções, conversa com memória e o resumidor de textos.
+
+        [:octicons-arrow-right-24: 5 aulas](ia_na_pratica_com_python/modulo_01_api_de_ia/index.md)
+
+    -   :material-tag-multiple-outline:{ .middle } __02 · Tarefas úteis__ <span class="cf-tag">Em breve</span>
+
+        Classificar mensagens, extrair dados em JSON e reescrever com tom definido.
+
+    -   :material-file-search-outline:{ .middle } __03 · IA com os seus documentos__ <span class="cf-tag">Em breve</span>
+
+        Responder só com base no documento, citando a fonte.
+
+    -   :material-shield-check-outline:{ .middle } __04 · Segurança, custos e testes__ <span class="cf-tag">Em breve</span>
+
+        Dados pessoais, prompt injection, limites e testes automáticos.
+
+    -   :material-face-agent:{ .middle } __05 · Projeto final__ <span class="cf-tag">Em breve</span>
+
+        O Atendente da Padaria Pão Quente.
+
+    </div>
+
 
 ## Certificado
 
@@ -825,6 +865,7 @@ Cada curso termina num projeto para o seu portfólio, que libera o certificado.
     | **Java** | O [cadastro de alunos com arquivo CSV](java/modulo_03_colecoes_e_arquivos/05_projeto_cadastro_csv.md) (Módulo 03). |
     | **Segurança digital** | O [Guia de segurança da minha família](seguranca_digital/modulo_05_projeto_final/05_entrega_e_certificado.md) (Módulo 05), conversado com a família e apresentado para a turma. |
     | **Automação com Python** | A [Secretaria automática](automacao_com_python/modulo_05_projeto_final/05_entrega_e_certificado.md) (Módulo 05), demonstrada, com testes e README. |
+    | **IA na prática com Python** | O Atendente da Padaria Pão Quente (Módulo 05, em produção). |
 
 ## Perguntas frequentes
 
@@ -832,7 +873,7 @@ Cada curso termina num projeto para o seu portfólio, que libera o certificado.
     Não. Os cursos de programação começam do zero: o primeiro módulo ensina a instalar tudo e parte da primeira linha de código. Os cursos de design, escritório, IA e segurança digital não pedem programação (só o projeto final de IA usa um pouco de Python).
 
 ??? question "Por qual curso eu começo?"
-    Depende do seu objetivo: **programação** ➔ Python para Desktop ou a trilha Web (HTML, depois TypeScript e React); **concursos e cursos técnicos** ➔ Java; **escritório** ➔ Pacote Office; **design e redes sociais** ➔ Canva e CorelDRAW; **usar IA no dia a dia** ➔ Introdução à IA. **Proteger as contas e fugir de golpes** ➔ Segurança digital, que serve para qualquer pessoa. **Ganhar tempo com tarefas repetitivas** ➔ Automação com Python, depois do básico de Python. O [catálogo](catalogo.md) mostra o nível e os pré-requisitos de cada um.
+    Depende do seu objetivo: **programação** ➔ Python para Desktop ou a trilha Web (HTML, depois TypeScript e React); **concursos e cursos técnicos** ➔ Java; **escritório** ➔ Pacote Office; **design e redes sociais** ➔ Canva e CorelDRAW; **usar IA no dia a dia** ➔ Introdução à IA. **Proteger as contas e fugir de golpes** ➔ Segurança digital, que serve para qualquer pessoa. **Ganhar tempo com tarefas repetitivas** ➔ Automação com Python, depois do básico de Python. **Colocar IA nos seus programas** ➔ IA na prática com Python, depois da Introdução à IA. O [catálogo](catalogo.md) mostra o nível e os pré-requisitos de cada um.
 
 ??? question "Posso estudar em casa?"
     Sim. O site funciona no computador, no tablet e no celular. Para praticar, siga a primeira aula de cada curso no seu computador pessoal: tudo tem opção gratuita.
