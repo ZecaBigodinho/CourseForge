@@ -447,4 +447,27 @@ nav:
     - Documentos e e-mails: automacao_com_python/modulo_05_projeto_final/03_documentos_e_emails.md
     - Linha de comando e testes: automacao_com_python/modulo_05_projeto_final/04_linha_de_comando_e_testes.md
     - Demonstração, entrega e certificado: automacao_com_python/modulo_05_projeto_final/05_entrega_e_certificado.md
+- IA na prática com Python:
+  - Apresentação do curso: ia_na_pratica_com_python/docs/index.md
+  - Conversando com um modelo por API:
+    - Visão Geral: ia_na_pratica_com_python/modulo_01_api_de_ia/index.md
+    - O que é uma API de IA: ia_na_pratica_com_python/modulo_01_api_de_ia/01_o_que_e_uma_api_de_ia.md
+    - A primeira chamada: ia_na_pratica_com_python/modulo_01_api_de_ia/02_primeira_chamada.md
+    - Instruções de sistema e ajustes: ia_na_pratica_com_python/modulo_01_api_de_ia/03_instrucoes_e_ajustes.md
+    - Conversa com memória e motores: ia_na_pratica_com_python/modulo_01_api_de_ia/04_conversa_e_motores.md
+    - 'Projeto do módulo: resumidor de textos': ia_na_pratica_com_python/modulo_01_api_de_ia/05_projeto_resumidor.md
+  - Tarefas úteis:
+    - Visão Geral: ia_na_pratica_com_python/modulo_02_tarefas_uteis/index.md
+    - Classificar mensagens: ia_na_pratica_com_python/modulo_02_tarefas_uteis/01_classificar_mensagens.md
+    - Extrair dados em JSON: ia_na_pratica_com_python/modulo_02_tarefas_uteis/02_extrair_json.md
+    - Reescrever com tom definido: ia_na_pratica_com_python/modulo_02_tarefas_uteis/03_reescrever_com_tom.md
+    - Regras ou IA?: ia_na_pratica_com_python/modulo_02_tarefas_uteis/04_regras_ou_ia.md
+    - 'Projeto do módulo: triagem de mensagens': ia_na_pratica_com_python/modulo_02_tarefas_uteis/05_projeto_triagem.md
+  - IA com os seus documentos:
+    - Visão Geral: ia_na_pratica_com_python/modulo_03_documentos/index.md
+    - Lendo PDF e TXT: ia_na_pratica_com_python/modulo_03_documentos/01_ler_documentos.md
+    - Dividir em trechos: ia_na_pratica_com_python/modulo_03_documentos/02_dividir_em_trechos.md
+    - Buscar os trechos certos: ia_na_pratica_com_python/modulo_03_documentos/03_buscar_trechos.md
+    - Responder só com base no documento: ia_na_pratica_com_python/modulo_03_documentos/04_responder_com_fonte.md
+    - 'Projeto do módulo: tira-dúvidas do regulamento': ia_na_pratica_com_python/modulo_03_documentos/05_projeto_tira_duvidas.md
 docs_dir: ../cursos

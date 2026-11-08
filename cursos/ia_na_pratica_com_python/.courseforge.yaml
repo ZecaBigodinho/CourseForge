@@ -1,0 +1,33 @@
+nome: IA na prática com Python
+descricao: Use modelos de IA dentro dos seus programas — resumir, classificar, extrair dados e criar um atendente — com a API do Gemini, de forma segura e testada.
+autor: Pedro Paulo IF
+num_modulos: 5
+data_criacao: '2026-11-08'
+versao: 0.1.0
+tags: []
+slug: ia_na_pratica_com_python
+# Ordem dos módulos no menu (nomes das pastas); os próximos entram aqui conforme forem publicados
+ordem_modulos:
+  - modulo_01_api_de_ia
+  - modulo_02_tarefas_uteis
+  - modulo_03_documentos
+
+# Ficha do curso — alimenta o Catálogo de cursos (gerado por src/generators/gerar_catalogo.py)
+ordem: 12
+status: em_andamento             # disponivel | em_andamento | em_breve
+ficha:
+  icone: material-robot-love-outline
+  nivel: Intermediário
+  carga_horaria: 40 h               # ~8 h por módulo, estimativa de 08/11/2026
+  publico: Quem já sabe o básico de Python e quer usar IA dentro dos próprios programas, na escola, no trabalho ou no pequeno negócio.
+  certificado: Entrega e demonstração do Atendente da Padaria Pão Quente, do Módulo 05.
+  pre_requisitos:
+    - Python básico e ambiente virtual (Python para Desktop, Módulo 01; Automação com Python, Módulo 02).
+    - Recomendado — o curso Introdução à IA.
+    - Para usar a API de verdade, 18 anos ou mais (termos do Google); quem tem menos faz o curso com o motor simulado.
+  objetivos:
+    - Chamar um modelo de IA por API, com chave no .env e tratamento de erros.
+    - Controlar as respostas com instruções de sistema e conferir o resultado com código.
+    - Resumir, classificar e extrair dados de textos e documentos.
+    - Proteger dados pessoais, controlar custos e testar sem gastar a cota.
+    - Construir um atendente com regras e limites.
