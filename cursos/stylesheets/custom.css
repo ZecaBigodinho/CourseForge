@@ -787,3 +787,122 @@
 
 /* Slide do curso Automação com Python */
 .md-typeset .cf-slide--automacao { background: radial-gradient(circle at 85% 15%, rgba(195, 232, 141, 0.28), transparent 45%), linear-gradient(135deg, #2F3A8F 0%, var(--cf-roxo-escuro) 100%); }
+
+/* ------------------------------------------------------------ */
+/* Banner com JavaScript (home.js põe .cf-slider--js):           */
+/* em vez de rolar, os slides andam com transform (--cf-pos).    */
+/* ------------------------------------------------------------ */
+.md-typeset .cf-slider--js .cf-slider__trilho {
+  overflow: hidden;
+  scroll-snap-type: none;
+  touch-action: pan-y;          /* o rolar vertical continua com o navegador; o lateral é nosso */
+  user-select: none;
+  cursor: grab;
+}
+
+.md-typeset .cf-slider--js .cf-slide {
+  transform: translateX(calc(var(--cf-pos, 0) * -100% + var(--cf-arrasto, 0px)));
+  transition: transform 0.6s ease;
+}
+
+.md-typeset .cf-slider--arrastando .cf-slider__trilho { cursor: grabbing; }
+.md-typeset .cf-slider--arrastando .cf-slide { transition: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .md-typeset .cf-slider--js .cf-slide { transition: none; }
+}
+
+/* Celular e tablet: a imagem do curso aparece em cima do texto, menor */
+@media screen and (max-width: 59.9375em) {
+  .md-typeset .cf-slide__arte {
+    display: flex;
+    justify-content: center;
+    order: -1;
+  }
+
+  .md-typeset .cf-slide__arte img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    max-height: 6.5rem;
+    border-radius: 0;
+  }
+
+  .md-typeset .cf-arte--papel img { border-radius: 8px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); }
+  .md-typeset .cf-arte--logo img {
+    padding: 0.8rem;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.92);
+  }
+
+  .md-typeset .cf-slide { gap: 0.8rem; }
+}
+
+/* Celular: sem os selinhos de resumo, para o banner caber na tela com as setas */
+@media screen and (max-width: 44.9375em) {
+  .md-typeset .cf-slide .cf-hero__badges { display: none; }
+  .md-typeset .cf-slide .cf-hero__lead { font-size: 0.85rem; }
+  .md-typeset .cf-slide p.cf-hero__title { font-size: 1.45rem; }
+}
+
+/* ------------------------------------------------------------ */
+/* Barra de abas do topo arrastável (javascripts/abas.js)        */
+/* ------------------------------------------------------------ */
+.md-tabs .cf-abas { position: relative; }
+
+.md-tabs .md-tabs__list {
+  overflow-x: auto;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  overscroll-behavior-x: contain;
+}
+
+.md-tabs .md-tabs__list::-webkit-scrollbar { display: none; }
+
+.md-tabs .cf-abas--arrastando .md-tabs__list {
+  scroll-behavior: auto;   /* acompanha o mouse sem atraso */
+  cursor: grabbing;
+}
+
+/* Esmaecido nas pontas quando há abas escondidas daquele lado */
+.md-tabs .cf-abas--inicio .md-tabs__list {
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 3rem);
+  mask-image: linear-gradient(to right, transparent 0, #000 3rem);
+}
+
+.md-tabs .cf-abas--fim .md-tabs__list {
+  -webkit-mask-image: linear-gradient(to left, transparent 0, #000 3rem);
+  mask-image: linear-gradient(to left, transparent 0, #000 3rem);
+}
+
+.md-tabs .cf-abas--inicio.cf-abas--fim .md-tabs__list {
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 3rem, #000 calc(100% - 3rem), transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, #000 3rem, #000 calc(100% - 3rem), transparent 100%);
+}
+
+.md-tabs .cf-abas__seta {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  width: 1.7rem;
+  height: 1.7rem;
+  margin-top: -0.85rem;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.md-tabs .cf-abas__seta:hover,
+.md-tabs .cf-abas__seta:focus-visible {
+  background: rgba(255, 255, 255, 0.32);
+  outline: 2px solid var(--cf-teal-vivo);
+  outline-offset: 1px;
+}
+
+.md-tabs .cf-abas__seta[hidden] { display: none; }
+.md-tabs .cf-abas__seta--esquerda { left: 0.2rem; }
+.md-tabs .cf-abas__seta--direita { right: 0.2rem; }

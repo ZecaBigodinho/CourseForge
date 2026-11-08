@@ -110,28 +110,30 @@ class TestNavegacaoMultiCurso:
         return yaml.safe_load(saida.read_text(encoding="utf-8"))["nav"]
 
     def test_estrutura_do_topo(self, nav):
-        assert nav[0] == {"Início": "index.md"}
-        assert nav[1] == {"Comece aqui": [
+        # Sem aba "Comece aqui": as páginas gerais ficam dentro de "Início"
+        assert nav[0] == {"Início": [
+            "index.md",
             {"Catálogo de cursos": "catalogo.md"},
             {"Como estudar": "como_estudar.md"},
         ]}
+        assert all("Comece aqui" not in item for item in nav)
 
     def test_uma_aba_por_curso_na_ordem_da_ficha(self, nav):
-        assert [list(item)[0] for item in nav[2:]] == ["Python", "Pacote Office", "IA"]
+        assert [list(item)[0] for item in nav[1:]] == ["Python", "Pacote Office", "IA"]
 
     def test_curso_em_breve_tem_so_a_apresentacao(self, nav):
-        office = nav[3]["Pacote Office"]
+        office = nav[2]["Pacote Office"]
         assert office == [{"Apresentação do curso": "office/docs/index.md"}]
 
     def test_curso_disponivel_tem_modulos(self, nav):
-        python = nav[2]["Python"]
+        python = nav[1]["Python"]
         assert python[0] == {"Apresentação do curso": "python/docs/index.md"}
         assert python[1] == {"Início do curso": [
             {"Visão Geral": "python/modulo_01_inicio/index.md"},
             {"Primeira aula": "python/modulo_01_inicio/01_aula.md"},
         ]}
 
-    def test_sem_paginas_gerais_nao_cria_comece_aqui(self, fm_temp, config_padrao):
+    def test_sem_paginas_gerais_inicio_e_so_a_home(self, fm_temp, config_padrao):
         (fm_temp.root / "cursos").mkdir()
         nav = MkDocsUpdater(fm_temp, config_padrao)._construir_nav()
         assert nav == [{"Início": "index.md"}]

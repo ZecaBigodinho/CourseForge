@@ -52,6 +52,7 @@ extra_css:
 - stylesheets/custom.css
 extra_javascript:
 - javascripts/home.js
+- javascripts/abas.js
 hooks:
 - ../src/mkdocs_hooks/versao_css.py
 plugins:
@@ -85,8 +86,8 @@ markdown_extensions:
 - toc:
     permalink: true
 nav:
-- Início: index.md
-- Comece aqui:
+- Início:
+  - index.md
   - Catálogo de cursos: catalogo.md
   - Como estudar: como_estudar.md
 - Python para Desktop:
