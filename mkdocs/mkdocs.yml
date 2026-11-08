@@ -409,4 +409,13 @@ nav:
     - Montando o guia: seguranca_digital/modulo_05_projeto_final/03_montando_o_guia.md
     - Apresentação para a turma e conversa com a família: seguranca_digital/modulo_05_projeto_final/04_apresentacao.md
     - Entrega e certificado: seguranca_digital/modulo_05_projeto_final/05_entrega_e_certificado.md
+- Automação com Python:
+  - Apresentação do curso: automacao_com_python/docs/index.md
+  - Arquivos e pastas:
+    - Visão Geral: automacao_com_python/modulo_01_arquivos_e_pastas/index.md
+    - O que vale automatizar e a pasta de treino: automacao_com_python/modulo_01_arquivos_e_pastas/01_o_que_vale_automatizar.md
+    - Caminhos e listas de arquivos com pathlib: automacao_com_python/modulo_01_arquivos_e_pastas/02_pathlib.md
+    - Criar, copiar, mover e renomear com segurança: automacao_com_python/modulo_01_arquivos_e_pastas/03_mover_copiar_com_seguranca.md
+    - Renomear fotos em lote pela data: automacao_com_python/modulo_01_arquivos_e_pastas/04_renomear_fotos_pela_data.md
+    - 'Projeto do módulo: organizador de pastas com relatório': automacao_com_python/modulo_01_arquivos_e_pastas/05_projeto_organizador.md
 docs_dir: ../cursos

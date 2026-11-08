@@ -153,6 +153,20 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 
     [:octicons-arrow-right-24: Acessar o curso](seguranca_digital/docs/index.md)
 
+-   :material-robot-industrial-outline:{ .lg .middle } __Automação com Python__
+
+    <span class="cf-tag cf-tag--ok">Em andamento</span>
+
+    ---
+
+    Faça o computador trabalhar por você — organizar pastas, gerar planilhas, certificados e PDFs e preparar e-mails, com scripts Python seguros e testados.
+
+    **Nível:** Intermediário  
+    **Carga horária:** 40 h  
+    **Certificado:** Entrega e demonstração da Secretaria automática, do Módulo 05.  
+
+    [:octicons-arrow-right-24: Acessar o curso](automacao_com_python/docs/index.md)
+
 </div>
 
 ## Fichas dos cursos
@@ -384,3 +398,26 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 - Saber o que fazer e onde denunciar quando algo dá errado.
 
 [Ir para o curso](seguranca_digital/docs/index.md)
+
+### Automação com Python <span class="cf-tag cf-tag--ok">Em andamento</span>
+
+- **Nível:** Intermediário
+- **Carga horária:** 40 h
+- **Para quem é:** Quem já sabe o básico de Python e quer usar a programação no dia a dia da escola, do escritório e do pequeno negócio.
+- **Certificado:** Entrega e demonstração da Secretaria automática, do Módulo 05.
+- **Autor:** Pedro Paulo IF
+
+**Pré-requisitos:**
+
+- Python básico — variáveis, condições, laços, listas, dicionários e funções (Módulo 01 do curso Python para Desktop).
+- VS Code instalado e saber rodar um script pelo terminal.
+
+**Você vai aprender a:**
+
+- Organizar, renomear e copiar arquivos em lote com segurança, simulação e relatório.
+- Ler, escrever e formatar planilhas do Excel.
+- Gerar documentos Word, PDFs, certificados e crachás a partir de uma planilha.
+- Preparar e-mails e agendar scripts para rodar sozinhos.
+- Juntar tudo numa ferramenta completa, a Secretaria automática.
+
+[Ir para o curso](automacao_com_python/docs/index.md)

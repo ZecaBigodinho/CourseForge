@@ -371,6 +371,18 @@ hide:
 
     [:octicons-arrow-right-24: Começar pelo Módulo 01](seguranca_digital/modulo_01_senhas_e_contas/index.md)
 
+-   :material-robot-industrial-outline:{ .lg .middle } __Automação com Python__
+
+    <span class="cf-tag cf-tag--ok">Em andamento</span>
+
+    ---
+
+    Faça o computador trabalhar por você: organizar pastas, planilhas, certificados, PDFs e e-mails com scripts seguros e testados.
+
+    Módulo 01 disponível · 5 aulas · organizador de pastas e renomeador de fotos
+
+    [:octicons-arrow-right-24: Começar pelo Módulo 01](automacao_com_python/modulo_01_arquivos_e_pastas/index.md)
+
 </div>
 
 <div class="cf-botoes" markdown>
@@ -732,6 +744,34 @@ Cada curso termina num projeto para o seu portfólio, que libera o certificado.
 
     </div>
 
+=== "Automação"
+
+    <div class="grid cards cf-trilha" markdown>
+
+    -   :material-folder-cog-outline:{ .middle } __01 · Arquivos e pastas__
+
+        Pasta de treino, `pathlib`, mover sem sobrescrever, renomear fotos e um organizador com relatório.
+
+        [:octicons-arrow-right-24: 5 aulas](automacao_com_python/modulo_01_arquivos_e_pastas/index.md)
+
+    -   :material-table-large:{ .middle } __02 · Planilhas__ <span class="cf-tag">Em breve</span>
+
+        Excel com `openpyxl`: ler, escrever, formatar e o boletim da turma.
+
+    -   :material-file-document-multiple-outline:{ .middle } __03 · Documentos e PDFs__ <span class="cf-tag">Em breve</span>
+
+        Word, PDF e imagens em lote: certificados e crachás da turma.
+
+    -   :material-email-fast-outline:{ .middle } __04 · E-mail e agendamento__ <span class="cf-tag">Em breve</span>
+
+        E-mails com segurança, `.env`, Agendador de Tarefas e logs.
+
+    -   :material-robot-outline:{ .middle } __05 · Projeto final__ <span class="cf-tag">Em breve</span>
+
+        A Secretaria automática, com um comando só.
+
+    </div>
+
 
 ## Certificado
 
@@ -750,6 +790,7 @@ Cada curso termina num projeto para o seu portfólio, que libera o certificado.
     | **React** | O [catálogo com busca e carrinho](react/modulo_03_aplicacao/04_projeto_catalogo.md) (Módulo 03), publicado na internet. |
     | **Java** | O [cadastro de alunos com arquivo CSV](java/modulo_03_colecoes_e_arquivos/05_projeto_cadastro_csv.md) (Módulo 03). |
     | **Segurança digital** | O [Guia de segurança da minha família](seguranca_digital/modulo_05_projeto_final/05_entrega_e_certificado.md) (Módulo 05), conversado com a família e apresentado para a turma. |
+    | **Automação com Python** | A Secretaria automática (Módulo 05, em produção). |
 
 ## Perguntas frequentes
 
@@ -757,7 +798,7 @@ Cada curso termina num projeto para o seu portfólio, que libera o certificado.
     Não. Os cursos de programação começam do zero: o primeiro módulo ensina a instalar tudo e parte da primeira linha de código. Os cursos de design, escritório, IA e segurança digital não pedem programação (só o projeto final de IA usa um pouco de Python).
 
 ??? question "Por qual curso eu começo?"
-    Depende do seu objetivo: **programação** ➔ Python para Desktop ou a trilha Web (HTML, depois TypeScript e React); **concursos e cursos técnicos** ➔ Java; **escritório** ➔ Pacote Office; **design e redes sociais** ➔ Canva e CorelDRAW; **usar IA no dia a dia** ➔ Introdução à IA. **Proteger as contas e fugir de golpes** ➔ Segurança digital, que serve para qualquer pessoa. O [catálogo](catalogo.md) mostra o nível e os pré-requisitos de cada um.
+    Depende do seu objetivo: **programação** ➔ Python para Desktop ou a trilha Web (HTML, depois TypeScript e React); **concursos e cursos técnicos** ➔ Java; **escritório** ➔ Pacote Office; **design e redes sociais** ➔ Canva e CorelDRAW; **usar IA no dia a dia** ➔ Introdução à IA. **Proteger as contas e fugir de golpes** ➔ Segurança digital, que serve para qualquer pessoa. **Ganhar tempo com tarefas repetitivas** ➔ Automação com Python, depois do básico de Python. O [catálogo](catalogo.md) mostra o nível e os pré-requisitos de cada um.
 
 ??? question "Posso estudar em casa?"
     Sim. O site funciona no computador, no tablet e no celular. Para praticar, siga a primeira aula de cada curso no seu computador pessoal: tudo tem opção gratuita.

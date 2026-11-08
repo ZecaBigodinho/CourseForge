@@ -1,0 +1,30 @@
+nome: Automação com Python
+descricao: Faça o computador trabalhar por você — organizar pastas, gerar planilhas, certificados e PDFs e preparar e-mails, com scripts Python seguros e testados.
+autor: Pedro Paulo IF
+num_modulos: 5
+data_criacao: '2026-11-08'
+versao: 0.1.0
+tags: []
+slug: automacao_com_python
+# Ordem dos módulos no menu (nomes das pastas); os próximos entram aqui conforme forem publicados
+ordem_modulos:
+  - modulo_01_arquivos_e_pastas
+
+# Ficha do curso — alimenta o Catálogo de cursos (gerado por src/generators/gerar_catalogo.py)
+ordem: 11
+status: em_andamento             # disponivel | em_andamento | em_breve
+ficha:
+  icone: material-robot-industrial-outline
+  nivel: Intermediário
+  carga_horaria: 40 h               # ~7–8 h por módulo, estimativa de 08/11/2026
+  publico: Quem já sabe o básico de Python e quer usar a programação no dia a dia da escola, do escritório e do pequeno negócio.
+  certificado: Entrega e demonstração da Secretaria automática, do Módulo 05.
+  pre_requisitos:
+    - Python básico — variáveis, condições, laços, listas, dicionários e funções (Módulo 01 do curso Python para Desktop).
+    - VS Code instalado e saber rodar um script pelo terminal.
+  objetivos:
+    - Organizar, renomear e copiar arquivos em lote com segurança, simulação e relatório.
+    - Ler, escrever e formatar planilhas do Excel.
+    - Gerar documentos Word, PDFs, certificados e crachás a partir de uma planilha.
+    - Preparar e-mails e agendar scripts para rodar sozinhos.
+    - Juntar tudo numa ferramenta completa, a Secretaria automática.
