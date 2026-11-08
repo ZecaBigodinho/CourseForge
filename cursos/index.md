@@ -11,6 +11,9 @@ hide:
 
 <section class="cf-slide" aria-roledescription="slide" aria-label="1 de 8" markdown>
 
+<div class="cf-slide__texto" markdown>
+
+
 <p class="cf-hero__eyebrow">Plataforma de cursos gratuita · Prof. Pedro Paulo IF</p>
 
 # Aprenda fazendo, do primeiro código ao projeto final { .cf-hero__title }
@@ -26,9 +29,16 @@ hide:
   <li>Feito para a sala de aula</li>
 </ul>
 
+</div>
+
+<div class="cf-slide__arte cf-arte--janela" aria-hidden="true"><img class="sem-zoom" src="assets/home/plataforma.svg" alt="" decoding="async"></div>
+
 </section>
 
 <section class="cf-slide cf-slide--python" aria-roledescription="slide" aria-label="2 de 8" markdown>
+
+<div class="cf-slide__texto" markdown>
+
 
 <p class="cf-hero__eyebrow">Programação · Python para Desktop</p>
 
@@ -45,9 +55,16 @@ hide:
   <li>Projeto em equipe</li>
 </ul>
 
+</div>
+
+<div class="cf-slide__arte cf-arte--janela" aria-hidden="true"><img class="sem-zoom" src="assets/home/python.svg" alt="" decoding="async"></div>
+
 </section>
 
 <section class="cf-slide cf-slide--web" aria-roledescription="slide" aria-label="3 de 8" markdown>
+
+<div class="cf-slide__texto" markdown>
+
 
 <p class="cf-hero__eyebrow">Programação · Web, TypeScript e React</p>
 
@@ -64,9 +81,16 @@ hide:
   <li>Projetos publicados</li>
 </ul>
 
+</div>
+
+<div class="cf-slide__arte cf-arte--janela" aria-hidden="true"><img class="sem-zoom" src="assets/home/web.svg" alt="" decoding="async"></div>
+
 </section>
 
 <section class="cf-slide cf-slide--java" aria-roledescription="slide" aria-label="4 de 8" markdown>
+
+<div class="cf-slide__texto" markdown>
+
 
 <p class="cf-hero__eyebrow">Programação · Java</p>
 
@@ -83,9 +107,16 @@ hide:
   <li>Java 21</li>
 </ul>
 
+</div>
+
+<div class="cf-slide__arte cf-arte--janela" aria-hidden="true"><img class="sem-zoom" src="assets/home/java.svg" alt="" decoding="async"></div>
+
 </section>
 
 <section class="cf-slide cf-slide--ia" aria-roledescription="slide" aria-label="5 de 8" markdown>
+
+<div class="cf-slide__texto" markdown>
+
 
 <p class="cf-hero__eyebrow">Tecnologia · Introdução à IA</p>
 
@@ -102,9 +133,16 @@ hide:
   <li>LGPD e ética</li>
 </ul>
 
+</div>
+
+<div class="cf-slide__arte cf-arte--janela" aria-hidden="true"><img class="sem-zoom" src="assets/home/ia.svg" alt="" decoding="async"></div>
+
 </section>
 
 <section class="cf-slide cf-slide--office" aria-roledescription="slide" aria-label="6 de 8" markdown>
+
+<div class="cf-slide__texto" markdown>
+
 
 <p class="cf-hero__eyebrow">Escritório · Pacote Office</p>
 
@@ -121,9 +159,16 @@ hide:
   <li>LibreOffice e Google</li>
 </ul>
 
+</div>
+
+<div class="cf-slide__arte cf-arte--janela" aria-hidden="true"><img class="sem-zoom" src="assets/home/office.svg" alt="" decoding="async"></div>
+
 </section>
 
 <section class="cf-slide cf-slide--canva" aria-roledescription="slide" aria-label="7 de 8" markdown>
+
+<div class="cf-slide__texto" markdown>
+
 
 <p class="cf-hero__eyebrow">Design · Canva</p>
 
@@ -140,9 +185,16 @@ hide:
   <li>Plano gratuito</li>
 </ul>
 
+</div>
+
+<div class="cf-slide__arte cf-arte--papel" aria-hidden="true"><img class="sem-zoom" src="canva/modulo_02_projetos_negocio/assets/02_cardapio_pronto.webp" alt="" decoding="async"></div>
+
 </section>
 
 <section class="cf-slide cf-slide--corel" aria-roledescription="slide" aria-label="8 de 8" markdown>
+
+<div class="cf-slide__texto" markdown>
+
 
 <p class="cf-hero__eyebrow">Design · CorelDRAW <span class="cf-hero__selo">Em andamento</span></p>
 
@@ -158,6 +210,10 @@ hide:
   <li>10 aulas</li>
   <li>Inkscape gratuito</li>
 </ul>
+
+</div>
+
+<div class="cf-slide__arte cf-arte--logo" aria-hidden="true"><img class="sem-zoom" src="coreldraw/modulo_02_vetor_na_pratica/assets/05_logotipo_png_transparente.webp" alt="" decoding="async"></div>
 
 </section>
 
