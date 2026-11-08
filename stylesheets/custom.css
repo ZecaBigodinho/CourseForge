@@ -739,3 +739,48 @@
 [data-md-color-scheme="default"] .md-typeset .grid.cards > ul > li:focus-within {
   background: #FFFFFF;
 }
+
+/* Conversa simulada (curso de Segurança digital): <div class="cf-chat" markdown>
+   com <p class="cf-msg">…</p> (recebida) e <p class="cf-msg cf-msg--eu">…</p> (enviada).
+   Contraste: #10202A sobre #EEF0F3 15.2 · sobre #DCF5D6 14.6 · #E9EDEF sobre #26323A 11.4 · sobre #0F5A4C 7.6 */
+.md-typeset .cf-chat {
+  max-width: 30rem;
+  margin: 1em 0;
+  padding: 0.8rem;
+  border: 1px solid var(--cf-borda);
+  border-radius: var(--cf-raio);
+  background: var(--cf-fundo-suave);
+}
+
+.md-typeset .cf-chat__topo {
+  margin: 0 0 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--md-default-fg-color--light);
+}
+
+.md-typeset .cf-chat .cf-msg {
+  width: fit-content;
+  max-width: 85%;
+  margin: 0 auto 0.45rem 0;
+  padding: 0.45rem 0.7rem;
+  border-radius: 4px 12px 12px 12px;
+  background: #EEF0F3;
+  color: #10202A;
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.md-typeset .cf-chat .cf-msg--eu {
+  margin: 0 0 0.45rem auto;
+  border-radius: 12px 4px 12px 12px;
+  background: #DCF5D6;
+}
+
+.md-typeset .cf-chat .cf-msg:last-child { margin-bottom: 0; }
+
+[data-md-color-scheme="slate"] .md-typeset .cf-chat .cf-msg { background: #26323A; color: #E9EDEF; }
+[data-md-color-scheme="slate"] .md-typeset .cf-chat .cf-msg--eu { background: #0F5A4C; color: #E9EDEF; }
+
+/* Slide do curso de Segurança digital (mesmo padrão dos outros slides do banner) */
+.md-typeset .cf-slide--seguranca { background: radial-gradient(circle at 85% 15%, rgba(100, 223, 211, 0.30), transparent 45%), linear-gradient(135deg, #36309A 0%, var(--cf-roxo-escuro) 100%); }

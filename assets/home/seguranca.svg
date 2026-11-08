@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="350" viewBox="0 0 480 350" role="img" aria-hidden="true">
+  <defs>
+    <filter id="sombra" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#000" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <g filter="url(#sombra)">
+    <rect x="10" y="6" width="460" height="330" rx="14" fill="#FFFFFF"/>
+    <path d="M10 20 a14 14 0 0 1 14 -14 h432 a14 14 0 0 1 14 14 v18 h-460 z" fill="#EEEAFB"/>
+  </g>
+  <circle cx="30" cy="25" r="5" fill="#FF6B6B"/><circle cx="46" cy="25" r="5" fill="#FFC83D"/><circle cx="62" cy="25" r="5" fill="#4ADE80"/>
+  <text x="240.0" y="29" text-anchor="middle" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" font-weight="600" fill="#4A3E86">Checkup de segurança</text>
+  <g transform="translate(10 44)">
+
+    <rect x="22" y="16" width="292" height="34" rx="10" fill="#F7F5FF" stroke="#E4DEFA"/><circle cx="42" cy="33" r="10" fill="#00796B"/><path d="M37 33 l4 4 l7 -8" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><text x="62" y="37" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12.5" fill="#10202A">Verificação em duas etapas ligada</text><rect x="22" y="60" width="292" height="34" rx="10" fill="#F7F5FF" stroke="#E4DEFA"/><circle cx="42" cy="77" r="10" fill="#00796B"/><path d="M37 77 l4 4 l7 -8" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><text x="62" y="81" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12.5" fill="#10202A">Código do SMS: não se passa</text><rect x="22" y="104" width="292" height="34" rx="10" fill="#F7F5FF" stroke="#E4DEFA"/><circle cx="42" cy="121" r="10" fill="#00796B"/><path d="M37 121 l4 4 l7 -8" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><text x="62" y="125" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12.5" fill="#10202A">Pix: conferir quem recebe</text><rect x="22" y="148" width="292" height="34" rx="10" fill="#F7F5FF" stroke="#E4DEFA"/><circle cx="42" cy="165" r="10" fill="#00796B"/><path d="M37 165 l4 4 l7 -8" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><text x="62" y="169" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12.5" fill="#10202A">Localizador e backup ligados</text><rect x="22" y="192" width="292" height="34" rx="10" fill="#F7F5FF" stroke="#E4DEFA"/><circle cx="42" cy="209" r="10" fill="#00796B"/><path d="M37 209 l4 4 l7 -8" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><text x="62" y="213" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12.5" fill="#10202A">Palavra-código da família</text>
+    <path d="M386 26 l50 18 v46 c0 40 -26 66 -50 80 c-24 -14 -50 -40 -50 -80 v-46 z" fill="#4F35B5"/>
+    <path d="M386 42 l36 13 v35 c0 30 -18 50 -36 61 c-18 -11 -36 -31 -36 -61 v-35 z" fill="#6A50D4"/>
+    <path d="M368 98 l13 13 l25 -28" fill="none" stroke="#64DFD3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="336" y="196" width="100" height="26" rx="13" fill="#E6FAF7"/>
+    <text x="386" y="213" text-anchor="middle" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="11.5" font-weight="700" fill="#00796B">5 de 5 ✓</text>
+    <rect x="22" y="246" width="416" height="30" rx="15" fill="#fff" stroke="#DDD6FB"/>
+    <text x="40" y="266" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12" fill="#4A3E86">Pedido de dinheiro por mensagem? Ligue antes para a pessoa.</text>
+
+  </g>
+</svg>
