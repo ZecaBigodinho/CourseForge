@@ -147,6 +147,7 @@ nav:
     - 'Primeiro repositório: status, add, commit e histórico': python_para_desktop/modulo_05_git_github/02_primeiro_repositorio.md
     - 'Do VS Code para o GitHub: publicando um projeto que já existe': python_para_desktop/modulo_05_git_github/03_vscode_e_github_desktop.md
     - 'Repositório remoto e equipe: push, pull, clone e colaboradores': python_para_desktop/modulo_05_git_github/04_repositorio_remoto_e_equipe.md
+    - Branches, Pull Requests, conflitos e Issues: python_para_desktop/modulo_05_git_github/05_branches_pull_requests_e_conflitos.md
     - Publicando o Projeto Final: python_para_desktop/modulo_05_git_github/06_publicando_projeto_final.md
   - Central de Revisão Visual & Fixação Didática:
     - Visão Geral: python_para_desktop/modulo_00_revisao_e_fixacao/index.md
