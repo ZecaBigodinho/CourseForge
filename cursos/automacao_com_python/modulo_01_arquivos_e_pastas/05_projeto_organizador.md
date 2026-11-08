@@ -318,4 +318,4 @@ Acrescente ao organizador a opção de **ignorar arquivos modificados nos últim
 
 ## ➡️ Próximo passo
 
-**Módulo 02 — Planilhas** *(em produção)*: ler e escrever Excel com `openpyxl` e transformar a planilha de notas da turma em boletim.
+**[Módulo 02 — Planilhas](../modulo_02_planilhas/index.md)**: ler e escrever Excel com `openpyxl` e transformar a planilha de notas da turma em boletim.

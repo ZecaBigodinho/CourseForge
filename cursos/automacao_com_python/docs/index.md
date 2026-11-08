@@ -2,7 +2,7 @@
 
 > **Autor:** Prof. Pedro Paulo IF · [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com)  
 > **Versão:** 0.1.0  
-> **Situação:** em andamento. Módulo 01 disponível; Módulos 02 a 05 em produção  
+> **Situação:** em andamento. Módulos 01 e 02 disponíveis; Módulos 03 a 05 em produção  
 > **Ferramentas:** Python 3.11 ou mais novo e VS Code, tudo gratuito
 
 ---
@@ -19,9 +19,9 @@ Este curso ensina a automatizar tarefas reais da **escola**, do **escritório** 
 
 O que vale automatizar e a pasta de treino, caminhos com `pathlib`, copiar e mover sem sobrescrever, renomear fotos pela data. Projeto: um **organizador de pastas** com relatório e opção de desfazer. [Acessar o módulo](../modulo_01_arquivos_e_pastas/index.md)
 
-### Módulo 02 — Planilhas 🛠️ em produção
+### Módulo 02 — Planilhas ✅ disponível
 
-Ler Excel e CSV, escrever e formatar com `openpyxl`, fórmulas e totais, juntar planilhas. Projeto: o **boletim da turma** com médias, situação e cores.
+Ler Excel e CSV, escrever e formatar com `openpyxl`, fórmulas e formatação condicional, juntar planilhas e limpar dados digitados errado. Projeto: o **boletim da turma** com médias arredondadas do jeito da escola, situação e cores. [Acessar o módulo](../modulo_02_planilhas/index.md)
 
 ### Módulo 03 — Documentos e PDFs 🛠️ em produção
 

@@ -35,6 +35,8 @@ jobs:
           pip install -r requirements.txt
           # Bibliotecas usadas pelos gabaritos do curso de Python
           pip install customtkinter==5.2.2 matplotlib
+          # Biblioteca usada pelos gabaritos do curso de Automação com Python
+          pip install openpyxl==3.1.5
 
       - name: Testes da plataforma (pytest)
         run: python -m pytest -q

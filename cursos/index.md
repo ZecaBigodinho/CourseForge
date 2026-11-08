@@ -379,7 +379,7 @@ hide:
 
     Faça o computador trabalhar por você: organizar pastas, planilhas, certificados, PDFs e e-mails com scripts seguros e testados.
 
-    Módulo 01 disponível · 5 aulas · organizador de pastas e renomeador de fotos
+    Módulos 01 e 02 disponíveis · 10 aulas · organizador de pastas e boletim da turma em Excel
 
     [:octicons-arrow-right-24: Começar pelo Módulo 01](automacao_com_python/modulo_01_arquivos_e_pastas/index.md)
 
@@ -754,9 +754,11 @@ Cada curso termina num projeto para o seu portfólio, que libera o certificado.
 
         [:octicons-arrow-right-24: 5 aulas](automacao_com_python/modulo_01_arquivos_e_pastas/index.md)
 
-    -   :material-table-large:{ .middle } __02 · Planilhas__ <span class="cf-tag">Em breve</span>
+    -   :material-table-large:{ .middle } __02 · Planilhas__
 
-        Excel com `openpyxl`: ler, escrever, formatar e o boletim da turma.
+        Excel com `openpyxl`: ler, escrever, formatar, limpar dados e o boletim da turma.
+
+        [:octicons-arrow-right-24: 5 aulas](automacao_com_python/modulo_02_planilhas/index.md)
 
     -   :material-file-document-multiple-outline:{ .middle } __03 · Documentos e PDFs__ <span class="cf-tag">Em breve</span>
 

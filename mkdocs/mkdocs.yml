@@ -418,4 +418,11 @@ nav:
     - Criar, copiar, mover e renomear com segurança: automacao_com_python/modulo_01_arquivos_e_pastas/03_mover_copiar_com_seguranca.md
     - Renomear fotos em lote pela data: automacao_com_python/modulo_01_arquivos_e_pastas/04_renomear_fotos_pela_data.md
     - 'Projeto do módulo: organizador de pastas com relatório': automacao_com_python/modulo_01_arquivos_e_pastas/05_projeto_organizador.md
+  - Planilhas:
+    - Visão Geral: automacao_com_python/modulo_02_planilhas/index.md
+    - Instalando o openpyxl e lendo planilhas: automacao_com_python/modulo_02_planilhas/01_ler_planilhas.md
+    - Criando e formatando planilhas: automacao_com_python/modulo_02_planilhas/02_escrever_e_formatar.md
+    - Fórmulas, totais e formatação condicional: automacao_com_python/modulo_02_planilhas/03_formulas_e_condicional.md
+    - Juntar planilhas e limpar dados: automacao_com_python/modulo_02_planilhas/04_juntar_e_limpar.md
+    - 'Projeto do módulo: boletim da turma': automacao_com_python/modulo_02_planilhas/05_projeto_boletim.md
 docs_dir: ../cursos
