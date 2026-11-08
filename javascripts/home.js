@@ -2,8 +2,11 @@
  * CourseForge — slider do banner da página inicial.
  *
  * O HTML (cursos/index.md) já funciona sem este arquivo: os slides ficam numa
- * faixa que rola para o lado. Este script acrescenta setas, bolinhas, a troca
- * automática e um botão de pausa. A troca automática para só quando a pessoa
+ * faixa que rola para o lado. Este script troca a rolagem por um deslocamento
+ * com CSS (classe cf-slider--js e a variável --cf-pos), que não depende da
+ * rolagem suave do navegador (ela às vezes não anda sozinha), e acrescenta
+ * setas, bolinhas, arrastar com o dedo ou o mouse, a troca automática e um
+ * botão de pausa. A troca automática para só quando a pessoa
  * aperta a pausa ou navega com o teclado dentro do banner (o mouse em cima não
  * pausa: era justamente quando a pessoa estava olhando). Quem prefere menos
  * movimento no sistema continua vendo a troca, mas sem a animação de deslizar.
@@ -18,8 +21,8 @@
     var slides = trilho ? Array.prototype.slice.call(trilho.querySelectorAll(".cf-slide")) : [];
     if (slides.length < 2 || slider.dataset.cfIniciado) return;
     slider.dataset.cfIniciado = "sim";
+    slider.classList.add("cf-slider--js");
 
-    var reduzirMovimento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     var atual = 0;
     var timer = null;
     var pausadoPeloUsuario = false;
@@ -77,7 +80,7 @@
     function irPara(i) {
       var total = slides.length;
       i = ((i % total) + total) % total;
-      trilho.scrollTo({ left: slides[i].offsetLeft - trilho.offsetLeft, behavior: reduzirMovimento ? "auto" : "smooth" });
+      slider.style.setProperty("--cf-pos", i);
       marcar(i);
     }
 
@@ -119,15 +122,44 @@
       if (e.key === "ArrowLeft") { e.preventDefault(); irPara(atual - 1); }
     });
 
-    // Se a pessoa arrastar a faixa (toque no celular), acompanha o slide visível
-    var espera = null;
-    trilho.addEventListener("scroll", function () {
-      clearTimeout(espera);
-      espera = setTimeout(function () {
-        var i = Math.round(trilho.scrollLeft / trilho.clientWidth);
-        if (i !== atual && i >= 0 && i < slides.length) marcar(i);
-      }, 120);
-    }, { passive: true });
+    // Arrastar para o lado (dedo no celular ou mouse no computador) troca o slide
+    var inicioX = null, inicioY = 0, arrastou = false;
+    var LIMIAR = 50; // pixels
+    trilho.addEventListener("pointerdown", function (e) {
+      if (e.button !== 0) return;
+      inicioX = e.clientX;
+      inicioY = e.clientY;
+      arrastou = false;
+    });
+    trilho.addEventListener("pointermove", function (e) {
+      if (inicioX === null) return;
+      var dx = e.clientX - inicioX;
+      if (Math.abs(dx) > 8 && Math.abs(dx) > Math.abs(e.clientY - inicioY)) {
+        arrastou = true;
+        slider.style.setProperty("--cf-arrasto", dx + "px");
+        slider.classList.add("cf-slider--arrastando");
+      }
+    });
+    function soltar(e) {
+      if (inicioX === null) return;
+      var dx = e.clientX - inicioX;
+      inicioX = null;
+      slider.classList.remove("cf-slider--arrastando");
+      slider.style.setProperty("--cf-arrasto", "0px");
+      if (arrastou && Math.abs(dx) >= LIMIAR) {
+        irPara(dx < 0 ? atual + 1 : atual - 1);
+        agendar();
+      }
+    }
+    trilho.addEventListener("pointerup", soltar);
+    trilho.addEventListener("pointercancel", soltar);
+    trilho.addEventListener("pointerleave", soltar);
+    // Depois de arrastar, o clique que vem junto não abre o link do botão
+    trilho.addEventListener("click", function (e) {
+      if (arrastou) { e.preventDefault(); e.stopPropagation(); arrastou = false; }
+    }, true);
+    // Imagens e links não devem ser "arrastados" para fora da página
+    trilho.addEventListener("dragstart", function (e) { e.preventDefault(); });
 
     marcar(0);
     atualizarPausa();
