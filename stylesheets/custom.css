@@ -784,3 +784,6 @@
 
 /* Slide do curso de Segurança digital (mesmo padrão dos outros slides do banner) */
 .md-typeset .cf-slide--seguranca { background: radial-gradient(circle at 85% 15%, rgba(100, 223, 211, 0.30), transparent 45%), linear-gradient(135deg, #36309A 0%, var(--cf-roxo-escuro) 100%); }
+
+/* Slide do curso Automação com Python */
+.md-typeset .cf-slide--automacao { background: radial-gradient(circle at 85% 15%, rgba(195, 232, 141, 0.28), transparent 45%), linear-gradient(135deg, #2F3A8F 0%, var(--cf-roxo-escuro) 100%); }
