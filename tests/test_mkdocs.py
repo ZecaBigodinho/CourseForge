@@ -79,8 +79,10 @@ class TestMkDocsUpdater:
         output = updater.atualizar(silencioso=True)
         parsed = yaml.safe_load(output.read_text(encoding="utf-8"))
         nav = parsed["nav"]
-        # Primeiro item deve ser Início
-        assert nav[0] == {"Início": "index.md"}
+        # Primeiro item deve ser Início, com a página inicial como índice da seção
+        # (o catálogo e o "Como estudar" ficam dentro dela, sem aba própria)
+        inicio = nav[0]["Início"]
+        assert inicio == "index.md" or inicio[0] == "index.md"
 
     def test_nav_contem_curso(self, updater, estrutura_completa):
         output = updater.atualizar(silencioso=True)

@@ -43,8 +43,9 @@ class MkDocsUpdater:
 
     # O menu lateral é só texto: emojis ficam nos títulos das páginas e nos cards da home.
 
-    # Páginas gerais da plataforma (em cursos/), agrupadas na aba "Comece aqui"
-    # quando existem. O catálogo é gerado; as demais são escritas à mão.
+    # Páginas gerais da plataforma (em cursos/), dentro da aba "Início" (a página
+    # inicial já apresenta tudo; não há aba separada). O catálogo é gerado; as
+    # demais são escritas à mão.
     PAGINAS_GERAIS: tuple[tuple[str, str], ...] = (
         ("Catálogo de cursos", ARQUIVO_CATALOGO),
         ("Como estudar", "como_estudar.md"),
@@ -113,7 +114,7 @@ class MkDocsUpdater:
 
         cursos_count = sum(
             1 for item in nav
-            if not ({"Início", "Comece aqui"} & item.keys())
+            if "Início" not in item
         )
         if not silencioso:
             UI.sucesso(f"mkdocs.yml atualizado: {output_path.relative_to(self.fm.root)}")
@@ -137,8 +138,8 @@ class MkDocsUpdater:
 
         Usa metadados .courseforge.yaml para nomes legíveis.
         Formato resultante:
-          - Início: index.md
-          - Comece aqui:
+          - Início:                          ← a página inicial é o índice da seção
+            - index.md
             - Catálogo de cursos: catalogo.md
             - Como estudar: como_estudar.md
           - Python para Iniciantes:          ← cursos na ordem de `ordem` da ficha
@@ -147,12 +148,11 @@ class MkDocsUpdater:
               - Visão Geral: .../index.md
               - Variáveis e Tipos: .../01_variaveis.md
         """
-        nav: list = [{"Início": "index.md"}]
         cursos_dir = self.fm.path(DIR_CURSOS)
-
         gerais = [{titulo: arq} for titulo, arq in self.PAGINAS_GERAIS if (cursos_dir / arq).exists()]
-        if gerais:
-            nav.append({"Comece aqui": gerais})
+        # Com páginas gerais, "Início" vira uma seção cujo índice é a página inicial
+        # (navigation.indexes): a aba continua uma só e abre a home.
+        nav: list = [{"Início": ["index.md", *gerais] if gerais else "index.md"}]
 
         for curso_dir, _meta in CatalogGenerator(self.fm).listar_cursos():
             entrada_curso = self._construir_entrada_curso(curso_dir, cursos_dir)
