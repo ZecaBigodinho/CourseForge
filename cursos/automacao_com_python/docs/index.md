@@ -2,7 +2,7 @@
 
 > **Autor:** Prof. Pedro Paulo IF · [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com)  
 > **Versão:** 0.1.0  
-> **Situação:** em andamento. Módulos 01 e 02 disponíveis; Módulos 03 a 05 em produção  
+> **Situação:** em andamento. Módulos 01 a 03 disponíveis; Módulos 04 e 05 em produção  
 > **Ferramentas:** Python 3.11 ou mais novo e VS Code, tudo gratuito
 
 ---
@@ -23,9 +23,9 @@ O que vale automatizar e a pasta de treino, caminhos com `pathlib`, copiar e mov
 
 Ler Excel e CSV, escrever e formatar com `openpyxl`, fórmulas e formatação condicional, juntar planilhas e limpar dados digitados errado. Projeto: o **boletim da turma** com médias arredondadas do jeito da escola, situação e cores. [Acessar o módulo](../modulo_02_planilhas/index.md)
 
-### Módulo 03 — Documentos e PDFs 🛠️ em produção
+### Módulo 03 — Documentos e PDFs ✅ disponível
 
-Preencher modelos do Word, gerar PDFs e tratar imagens em lote. Projeto: **certificados e crachás** da turma a partir da planilha.
+Preencher modelos do Word, gerar PDFs, tratar imagens em lote (com a data EXIF) e montar certificados e crachás. Projeto: **emissão de certificados** com código de validação e **declarações** a partir da planilha. [Acessar o módulo](../modulo_03_documentos_e_pdfs/index.md)
 
 ### Módulo 04 — E-mail, agendamento e boas práticas 🛠️ em produção
 

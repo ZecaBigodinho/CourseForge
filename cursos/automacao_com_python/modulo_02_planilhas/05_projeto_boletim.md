@@ -349,4 +349,4 @@ Gere um boletim para **cada** planilha da pasta `treino_planilhas/turmas`, **rea
 
 ## ➡️ Próximo passo
 
-**Módulo 03 — Documentos e PDFs** *(em produção)*: preencher modelos do Word, gerar PDFs e fazer os certificados da turma a partir da planilha.
+**[Módulo 03 — Documentos e PDFs](../modulo_03_documentos_e_pdfs/index.md)**: preencher modelos do Word, gerar PDFs e fazer os certificados da turma a partir da planilha.
