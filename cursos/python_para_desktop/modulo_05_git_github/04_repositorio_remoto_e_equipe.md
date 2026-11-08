@@ -220,7 +220,7 @@ Para outras pessoas poderem fazer `push` no seu repositório, convide-as: no rep
 | Combinado | Por quê |
 |---|---|
 | **`pull` antes de começar e antes de cada `push`** | Você trabalha sempre em cima da versão mais nova. |
-| **Cada pessoa cuida de arquivos diferentes** (por exemplo: `views/`, `database/`, `controllers/`) | Duas pessoas mudando a mesma linha geram **conflito** — o assunto da aula 05. |
+| **Cada pessoa cuida de arquivos diferentes** (por exemplo: `views/`, `database/`, `controllers/`) | Duas pessoas mudando a mesma linha geram **conflito** — o assunto da [aula 05](05_branches_pull_requests_e_conflitos.md). |
 | **Commits pequenos, com mensagem clara** | Fica fácil entender e desfazer ([aula 02](02_primeiro_repositorio.md)). |
 | **`.env` nunca no repositório** | Cada um tem o seu `.env`; no repositório vai só o `.env.example`. |
 
@@ -319,4 +319,4 @@ Para outras pessoas poderem fazer `push` no seu repositório, convide-as: no rep
 
 ## ➡️ Próximo passo
 
-**05 — Branches e Pull Requests** *(em preparação)*: cada integrante trabalha numa branch, abre um Pull Request para revisão e aprende a resolver **conflitos**.
+**[05 — Branches, Pull Requests, conflitos e Issues](05_branches_pull_requests_e_conflitos.md)**: cada integrante trabalha numa branch, abre um Pull Request para revisão e aprende a resolver **conflitos**.
