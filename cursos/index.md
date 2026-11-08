@@ -9,7 +9,7 @@ hide:
 
 <div class="cf-slider__trilho" tabindex="0" role="region" aria-roledescription="carrossel" aria-label="Cursos em destaque" markdown>
 
-<section class="cf-slide" aria-roledescription="slide" aria-label="1 de 9" markdown>
+<section class="cf-slide" aria-roledescription="slide" aria-label="1 de 10" markdown>
 
 <div class="cf-slide__texto" markdown>
 
@@ -35,7 +35,7 @@ hide:
 
 </section>
 
-<section class="cf-slide cf-slide--python" aria-roledescription="slide" aria-label="2 de 9" markdown>
+<section class="cf-slide cf-slide--python" aria-roledescription="slide" aria-label="2 de 10" markdown>
 
 <div class="cf-slide__texto" markdown>
 
@@ -61,7 +61,7 @@ hide:
 
 </section>
 
-<section class="cf-slide cf-slide--web" aria-roledescription="slide" aria-label="3 de 9" markdown>
+<section class="cf-slide cf-slide--web" aria-roledescription="slide" aria-label="3 de 10" markdown>
 
 <div class="cf-slide__texto" markdown>
 
@@ -87,7 +87,7 @@ hide:
 
 </section>
 
-<section class="cf-slide cf-slide--java" aria-roledescription="slide" aria-label="4 de 9" markdown>
+<section class="cf-slide cf-slide--java" aria-roledescription="slide" aria-label="4 de 10" markdown>
 
 <div class="cf-slide__texto" markdown>
 
@@ -113,7 +113,7 @@ hide:
 
 </section>
 
-<section class="cf-slide cf-slide--ia" aria-roledescription="slide" aria-label="5 de 9" markdown>
+<section class="cf-slide cf-slide--ia" aria-roledescription="slide" aria-label="5 de 10" markdown>
 
 <div class="cf-slide__texto" markdown>
 
@@ -139,7 +139,7 @@ hide:
 
 </section>
 
-<section class="cf-slide cf-slide--office" aria-roledescription="slide" aria-label="6 de 9" markdown>
+<section class="cf-slide cf-slide--office" aria-roledescription="slide" aria-label="6 de 10" markdown>
 
 <div class="cf-slide__texto" markdown>
 
@@ -165,7 +165,7 @@ hide:
 
 </section>
 
-<section class="cf-slide cf-slide--canva" aria-roledescription="slide" aria-label="7 de 9" markdown>
+<section class="cf-slide cf-slide--canva" aria-roledescription="slide" aria-label="7 de 10" markdown>
 
 <div class="cf-slide__texto" markdown>
 
@@ -191,7 +191,7 @@ hide:
 
 </section>
 
-<section class="cf-slide cf-slide--corel" aria-roledescription="slide" aria-label="8 de 9" markdown>
+<section class="cf-slide cf-slide--corel" aria-roledescription="slide" aria-label="8 de 10" markdown>
 
 <div class="cf-slide__texto" markdown>
 
@@ -217,7 +217,7 @@ hide:
 
 </section>
 
-<section class="cf-slide cf-slide--seguranca" aria-roledescription="slide" aria-label="9 de 9" markdown>
+<section class="cf-slide cf-slide--seguranca" aria-roledescription="slide" aria-label="9 de 10" markdown>
 
 <div class="cf-slide__texto" markdown>
 
@@ -240,6 +240,32 @@ hide:
 </div>
 
 <div class="cf-slide__arte cf-arte--janela" aria-hidden="true"><img class="sem-zoom" src="assets/home/seguranca.svg" alt="" decoding="async"></div>
+
+</section>
+
+<section class="cf-slide cf-slide--automacao" aria-roledescription="slide" aria-label="10 de 10" markdown>
+
+<div class="cf-slide__texto" markdown>
+
+
+<p class="cf-hero__eyebrow">Programação · Automação com Python</p>
+
+<p class="cf-hero__title">Faça o computador trabalhar por você</p>
+
+<p class="cf-hero__lead">Organize pastas, gere boletins, certificados e e-mails com scripts seguros: simular antes, nunca apagar e testar tudo.</p>
+
+[Começar pelo Módulo 01](automacao_com_python/modulo_01_arquivos_e_pastas/index.md){ .md-button .md-button--primary }
+[Conhecer o curso](automacao_com_python/docs/index.md){ .md-button }
+
+<ul class="cf-hero__badges" aria-label="Resumo do curso">
+  <li>5 módulos</li>
+  <li>25 aulas</li>
+  <li>Exemplos testados</li>
+</ul>
+
+</div>
+
+<div class="cf-slide__arte cf-arte--janela" aria-hidden="true"><img class="sem-zoom" src="assets/home/automacao.svg" alt="" decoding="async"></div>
 
 </section>
 
@@ -373,13 +399,13 @@ hide:
 
 -   :material-robot-industrial-outline:{ .lg .middle } __Automação com Python__
 
-    <span class="cf-tag cf-tag--ok">Em andamento</span>
+    <span class="cf-tag cf-tag--ok">Disponível</span>
 
     ---
 
     Faça o computador trabalhar por você: organizar pastas, planilhas, certificados, PDFs e e-mails com scripts seguros e testados.
 
-    Módulos 01 a 04 disponíveis · 20 aulas · pastas, boletim em Excel, certificados em PDF e lembretes por e-mail
+    5 módulos · 25 aulas · da pasta organizada à Secretaria automática, com testes
 
     [:octicons-arrow-right-24: Começar pelo Módulo 01](automacao_com_python/modulo_01_arquivos_e_pastas/index.md)
 
@@ -772,9 +798,11 @@ Cada curso termina num projeto para o seu portfólio, que libera o certificado.
 
         [:octicons-arrow-right-24: 5 aulas](automacao_com_python/modulo_04_email_e_agendamento/index.md)
 
-    -   :material-robot-outline:{ .middle } __05 · Projeto final__ <span class="cf-tag">Em breve</span>
+    -   :material-robot-outline:{ .middle } __05 · Projeto final__
 
-        A Secretaria automática, com um comando só.
+        A Secretaria automática: pacote, linha de comando e testes com pytest.
+
+        [:octicons-arrow-right-24: 5 aulas](automacao_com_python/modulo_05_projeto_final/index.md)
 
     </div>
 
@@ -796,7 +824,7 @@ Cada curso termina num projeto para o seu portfólio, que libera o certificado.
     | **React** | O [catálogo com busca e carrinho](react/modulo_03_aplicacao/04_projeto_catalogo.md) (Módulo 03), publicado na internet. |
     | **Java** | O [cadastro de alunos com arquivo CSV](java/modulo_03_colecoes_e_arquivos/05_projeto_cadastro_csv.md) (Módulo 03). |
     | **Segurança digital** | O [Guia de segurança da minha família](seguranca_digital/modulo_05_projeto_final/05_entrega_e_certificado.md) (Módulo 05), conversado com a família e apresentado para a turma. |
-    | **Automação com Python** | A Secretaria automática (Módulo 05, em produção). |
+    | **Automação com Python** | A [Secretaria automática](automacao_com_python/modulo_05_projeto_final/05_entrega_e_certificado.md) (Módulo 05), demonstrada, com testes e README. |
 
 ## Perguntas frequentes
 

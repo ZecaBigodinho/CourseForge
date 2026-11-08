@@ -339,4 +339,4 @@ Além dos lembretes aos alunos, o professor quer receber **um resumo**: um e-mai
 
 ## ➡️ Próximo passo
 
-**Módulo 05 — Projeto final** *(em produção)*: a **Secretaria automática**, juntando arquivos, planilhas, documentos e e-mails numa ferramenta só.
+**[Módulo 05 — Projeto final](../modulo_05_projeto_final/index.md)**: a **Secretaria automática**, juntando arquivos, planilhas, documentos e e-mails numa ferramenta só.

@@ -1,8 +1,8 @@
 # Automação com Python
 
 > **Autor:** Prof. Pedro Paulo IF · [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com)  
-> **Versão:** 0.1.0  
-> **Situação:** em andamento. Módulos 01 a 04 disponíveis; Módulo 05 em produção  
+> **Versão:** 1.0.0  
+> **Situação:** completo. 5 módulos, 25 aulas, todos os exemplos testados automaticamente  
 > **Ferramentas:** Python 3.11 ou mais novo e VS Code, tudo gratuito
 
 ---
@@ -31,14 +31,14 @@ Preencher modelos do Word, gerar PDFs, tratar imagens em lote (com a data EXIF) 
 
 Montar e-mails com segurança (rascunho `.eml`, servidor de teste, um por pessoa), senhas no `.env`, logs, código de saída e agendamento no Windows. Projeto: o **lembrete semanal** de trabalhos pendentes. [Acessar o módulo](../modulo_04_email_e_agendamento/index.md)
 
-### Módulo 05 — Projeto final 🛠️ em produção
+### Módulo 05 — Projeto final ✅ disponível
 
-A **Secretaria automática**: a partir da planilha da turma, gerar certificados, relatório em Excel e e-mails prontos, com um comando só.
+A **Secretaria automática**: um pacote Python com linha de comando (`argparse`) e testes (`pytest`) que, a partir da planilha da turma, gera o boletim, os certificados e os e-mails, com um comando só. [Acessar o módulo](../modulo_05_projeto_final/index.md)
 
 ## Certificado
 
 !!! warning "Um único requisito"
-    O certificado é liberado com a entrega e a demonstração da **Secretaria automática**, do Módulo 05.
+    O certificado é liberado com a entrega e a demonstração da **[Secretaria automática](../modulo_05_projeto_final/05_entrega_e_certificado.md)**, do Módulo 05: funcionando com a planilha de treino, com os testes passando, o README e pelo menos uma melhoria própria.
 
 ## O que você vai precisar
 

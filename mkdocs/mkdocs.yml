@@ -439,4 +439,11 @@ nav:
     - Senhas no .env e configuração: automacao_com_python/modulo_04_email_e_agendamento/03_env_e_configuracao.md
     - Logs, erros e agendamento: automacao_com_python/modulo_04_email_e_agendamento/04_logs_e_agendamento.md
     - 'Projeto do módulo: lembrete semanal': automacao_com_python/modulo_04_email_e_agendamento/05_projeto_lembrete.md
+  - 'Projeto final: Secretaria automática':
+    - Visão Geral: automacao_com_python/modulo_05_projeto_final/index.md
+    - Planejando a Secretaria automática: automacao_com_python/modulo_05_projeto_final/01_planejando_a_secretaria.md
+    - O pacote e as regras da escola: automacao_com_python/modulo_05_projeto_final/02_pacote_e_dados.md
+    - Documentos e e-mails: automacao_com_python/modulo_05_projeto_final/03_documentos_e_emails.md
+    - Linha de comando e testes: automacao_com_python/modulo_05_projeto_final/04_linha_de_comando_e_testes.md
+    - Demonstração, entrega e certificado: automacao_com_python/modulo_05_projeto_final/05_entrega_e_certificado.md
 docs_dir: ../cursos

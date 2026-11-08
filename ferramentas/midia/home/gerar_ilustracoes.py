@@ -199,6 +199,25 @@ ILUSTRACOES = {
     <rect x="22" y="246" width="416" height="30" rx="15" fill="#fff" stroke="#DDD6FB"/>
     <text x="40" y="266" font-family="{FONTE}" font-size="12" fill="#4A3E86">Pedido de dinheiro por mensagem? Ligue antes para a pessoa.</text>
 """),
+"automacao": janela("Terminal — C:\\Automacao", f"""
+    <text x="22" y="30" font-family="{MONO}" font-size="12.5" fill="#E6E1FF">&gt; python -m secretaria tudo turma_1A.xlsx</text>
+    {"".join(
+        f'<text x="22" y="{58 + i * 21}" font-family="{MONO}" font-size="11.5" fill="{cor}">{linha}</text>'
+        for i, (cor, linha) in enumerate([
+            ("#82AAFF", "INFO    Início: tudo turma_1A.xlsx"),
+            ("#FFCB6B", "WARNING Felipe Torres: nota não lançada"),
+            ("#82AAFF", "INFO    Boletim: boletim_1A.xlsx"),
+            ("#82AAFF", "INFO    Certificados: 4 emitidos"),
+            ("#82AAFF", "INFO    E-mails: 6 em rascunho"),
+            ("#C3E88D", "INFO    Fim. Arquivos em: saida\\2026-11-08"),
+        ]))}
+    {"".join(
+        f'<g transform="translate({22 + i * 140} 196)"><rect width="128" height="70" rx="10" fill="{c}"/>'
+        f'<text x="64" y="32" text-anchor="middle" font-family="{FONTE}" font-size="20">{e}</text>'
+        f'<text x="64" y="56" text-anchor="middle" font-family="{FONTE}" font-size="11.5" font-weight="700" fill="#fff">{n}</text></g>'
+        for i, (n, e, c) in enumerate([("Boletim .xlsx", "📊", "#2E7D32"), ("Certificados", "📄", "#4F35B5"),
+                                        ("E-mails .eml", "✉️", "#00796B")]))}
+""", escura=True),
 }
 
 

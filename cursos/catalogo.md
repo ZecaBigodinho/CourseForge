@@ -155,7 +155,7 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 
 -   :material-robot-industrial-outline:{ .lg .middle } __Automação com Python__
 
-    <span class="cf-tag cf-tag--ok">Em andamento</span>
+    <span class="cf-tag cf-tag--ok">Disponível</span>
 
     ---
 
@@ -399,7 +399,7 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 
 [Ir para o curso](seguranca_digital/docs/index.md)
 
-### Automação com Python <span class="cf-tag cf-tag--ok">Em andamento</span>
+### Automação com Python <span class="cf-tag cf-tag--ok">Disponível</span>
 
 - **Nível:** Intermediário
 - **Carga horária:** 40 h
