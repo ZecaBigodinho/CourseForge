@@ -50,6 +50,8 @@ extra:
     name: Falar com o professor
 extra_css:
 - stylesheets/custom.css
+extra_javascript:
+- javascripts/home.js
 hooks:
 - ../src/mkdocs_hooks/versao_css.py
 plugins:
