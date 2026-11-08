@@ -2,7 +2,7 @@
 
 > **Autor:** Prof. Pedro Paulo IF · [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com)  
 > **Versão:** 0.1.0  
-> **Situação:** em andamento. Módulos 01 a 03 disponíveis; Módulos 04 e 05 em produção  
+> **Situação:** em andamento. Módulos 01 a 04 disponíveis; Módulo 05 em produção  
 > **Ferramentas:** o seu celular, o seu computador e um navegador, nada pago
 
 ---
@@ -27,9 +27,9 @@ Engenharia social (urgência, medo e prêmio), golpes de WhatsApp (falso parente
 
 Atualizações, apps só da loja oficial, permissões (e o perigo da Acessibilidade), bloqueio de tela, proteção contra roubo, **Celular Seguro**, backup, Wi-Fi público e o computador da escola. Projeto: o **checkup de segurança** do seu celular e de alguém da família. [Acessar o módulo](../modulo_03_aparelhos_seguros/index.md)
 
-### Módulo 04 — Cidadania e direitos 🛠️ em produção
+### Módulo 04 — Cidadania e direitos ✅ disponível
 
-Conta gov.br (níveis bronze, prata e ouro), **Registrato** do Banco Central, LGPD no dia a dia, cyberbullying e exposição, onde denunciar e como checar notícias.
+Conta gov.br (níveis bronze, prata e ouro), **Registrato** do Banco Central, LGPD no dia a dia, cyberbullying e exposição, onde denunciar e como checar notícias. Projeto: **checagem de notícias** e o **mapa de ajuda** da sua cidade. [Acessar o módulo](../modulo_04_cidadania_e_direitos/index.md)
 
 ### Módulo 05 — Projeto final 🛠️ em produção
 

@@ -394,4 +394,11 @@ nav:
     - Bloqueio de tela, roubo e backup: seguranca_digital/modulo_03_aparelhos_seguros/03_bloqueio_roubo_e_backup.md
     - Computador, Wi-Fi e o computador da escola: seguranca_digital/modulo_03_aparelhos_seguros/04_computador_e_wifi.md
     - 'Projeto do módulo: checkup de segurança': seguranca_digital/modulo_03_aparelhos_seguros/05_projeto_checkup.md
+  - Cidadania e direitos:
+    - Visão Geral: seguranca_digital/modulo_04_cidadania_e_direitos/index.md
+    - A conta gov.br: seguranca_digital/modulo_04_cidadania_e_direitos/01_conta_gov_br.md
+    - 'Registrato: o que existe no seu CPF': seguranca_digital/modulo_04_cidadania_e_direitos/02_registrato.md
+    - LGPD no dia a dia: seguranca_digital/modulo_04_cidadania_e_direitos/03_lgpd_no_dia_a_dia.md
+    - Cyberbullying, exposição e onde denunciar: seguranca_digital/modulo_04_cidadania_e_direitos/04_cyberbullying_e_denuncia.md
+    - 'Projeto do módulo: notícias falsas e o mapa de ajuda': seguranca_digital/modulo_04_cidadania_e_direitos/05_projeto_noticias_e_mapa_de_ajuda.md
 docs_dir: ../cursos

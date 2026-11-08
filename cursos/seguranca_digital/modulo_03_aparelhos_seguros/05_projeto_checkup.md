@@ -109,4 +109,4 @@ Escreva um relatório curto (meia página ou um áudio de até 2 minutos para o 
 
 ## ➡️ Próximo passo
 
-**Módulo 04 — Cidadania e direitos** *(em produção)*: conta gov.br, Registrato, LGPD no dia a dia, cyberbullying e onde denunciar.
+**[Módulo 04 — Cidadania e direitos](../modulo_04_cidadania_e_direitos/index.md)**: conta gov.br, Registrato, LGPD no dia a dia, cyberbullying e onde denunciar.

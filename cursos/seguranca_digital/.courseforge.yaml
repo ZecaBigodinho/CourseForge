@@ -11,6 +11,7 @@ ordem_modulos:
   - modulo_01_senhas_e_contas
   - modulo_02_golpes
   - modulo_03_aparelhos_seguros
+  - modulo_04_cidadania_e_direitos
 
 # Ficha do curso — alimenta o Catálogo de cursos (gerado por src/generators/gerar_catalogo.py)
 ordem: 10
