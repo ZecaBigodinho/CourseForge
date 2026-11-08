@@ -409,4 +409,41 @@ nav:
     - Montando o guia: seguranca_digital/modulo_05_projeto_final/03_montando_o_guia.md
     - Apresentação para a turma e conversa com a família: seguranca_digital/modulo_05_projeto_final/04_apresentacao.md
     - Entrega e certificado: seguranca_digital/modulo_05_projeto_final/05_entrega_e_certificado.md
+- Automação com Python:
+  - Apresentação do curso: automacao_com_python/docs/index.md
+  - Arquivos e pastas:
+    - Visão Geral: automacao_com_python/modulo_01_arquivos_e_pastas/index.md
+    - O que vale automatizar e a pasta de treino: automacao_com_python/modulo_01_arquivos_e_pastas/01_o_que_vale_automatizar.md
+    - Caminhos e listas de arquivos com pathlib: automacao_com_python/modulo_01_arquivos_e_pastas/02_pathlib.md
+    - Criar, copiar, mover e renomear com segurança: automacao_com_python/modulo_01_arquivos_e_pastas/03_mover_copiar_com_seguranca.md
+    - Renomear fotos em lote pela data: automacao_com_python/modulo_01_arquivos_e_pastas/04_renomear_fotos_pela_data.md
+    - 'Projeto do módulo: organizador de pastas com relatório': automacao_com_python/modulo_01_arquivos_e_pastas/05_projeto_organizador.md
+  - Planilhas:
+    - Visão Geral: automacao_com_python/modulo_02_planilhas/index.md
+    - Instalando o openpyxl e lendo planilhas: automacao_com_python/modulo_02_planilhas/01_ler_planilhas.md
+    - Criando e formatando planilhas: automacao_com_python/modulo_02_planilhas/02_escrever_e_formatar.md
+    - Fórmulas, totais e formatação condicional: automacao_com_python/modulo_02_planilhas/03_formulas_e_condicional.md
+    - Juntar planilhas e limpar dados: automacao_com_python/modulo_02_planilhas/04_juntar_e_limpar.md
+    - 'Projeto do módulo: boletim da turma': automacao_com_python/modulo_02_planilhas/05_projeto_boletim.md
+  - Documentos e PDFs:
+    - Visão Geral: automacao_com_python/modulo_03_documentos_e_pdfs/index.md
+    - Documentos do Word com python-docx: automacao_com_python/modulo_03_documentos_e_pdfs/01_documentos_word.md
+    - Gerando PDFs com fpdf2: automacao_com_python/modulo_03_documentos_e_pdfs/02_pdf_com_fpdf2.md
+    - Imagens em lote com Pillow: automacao_com_python/modulo_03_documentos_e_pdfs/03_imagens_em_lote.md
+    - Certificados e crachás em lote: automacao_com_python/modulo_03_documentos_e_pdfs/04_certificados_e_crachas.md
+    - 'Projeto do módulo: emissão de certificados e declarações': automacao_com_python/modulo_03_documentos_e_pdfs/05_projeto_emissao.md
+  - E-mail, agendamento e boas práticas:
+    - Visão Geral: automacao_com_python/modulo_04_email_e_agendamento/index.md
+    - Montando e-mails com o Python: automacao_com_python/modulo_04_email_e_agendamento/01_montar_emails.md
+    - Enviando para um servidor de teste: automacao_com_python/modulo_04_email_e_agendamento/02_servidor_de_teste.md
+    - Senhas no .env e configuração: automacao_com_python/modulo_04_email_e_agendamento/03_env_e_configuracao.md
+    - Logs, erros e agendamento: automacao_com_python/modulo_04_email_e_agendamento/04_logs_e_agendamento.md
+    - 'Projeto do módulo: lembrete semanal': automacao_com_python/modulo_04_email_e_agendamento/05_projeto_lembrete.md
+  - 'Projeto final: Secretaria automática':
+    - Visão Geral: automacao_com_python/modulo_05_projeto_final/index.md
+    - Planejando a Secretaria automática: automacao_com_python/modulo_05_projeto_final/01_planejando_a_secretaria.md
+    - O pacote e as regras da escola: automacao_com_python/modulo_05_projeto_final/02_pacote_e_dados.md
+    - Documentos e e-mails: automacao_com_python/modulo_05_projeto_final/03_documentos_e_emails.md
+    - Linha de comando e testes: automacao_com_python/modulo_05_projeto_final/04_linha_de_comando_e_testes.md
+    - Demonstração, entrega e certificado: automacao_com_python/modulo_05_projeto_final/05_entrega_e_certificado.md
 docs_dir: ../cursos
