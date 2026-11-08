@@ -38,7 +38,7 @@ jobs:
           # Bibliotecas usadas pelos gabaritos do curso de Automação com Python
           pip install openpyxl==3.1.5 python-docx==1.2.0 fpdf2==2.8.9 pillow==12.3.0 aiosmtpd==1.4.6 python-dotenv==1.2.1
           # Biblioteca usada pelos gabaritos do curso IA na prática com Python (os testes não chamam a API)
-          pip install google-genai==2.34.0
+          pip install google-genai==2.34.0 pypdf==6.21.4
 
       - name: Testes da plataforma (pytest)
         run: python -m pytest -q

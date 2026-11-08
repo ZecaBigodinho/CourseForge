@@ -300,4 +300,4 @@ Acrescente à `mascarar()` (numa cópia) a troca de **placas de carro** no padr�
 
 ## ➡️ Próximo passo
 
-**Módulo 03 — IA com os seus documentos** *(em produção)*: ler PDF e TXT, responder só com base no documento e citar a fonte.
+**[Módulo 03 — IA com os seus documentos](../modulo_03_documentos/index.md)**: ler PDF e TXT, responder só com base no documento e citar a fonte.

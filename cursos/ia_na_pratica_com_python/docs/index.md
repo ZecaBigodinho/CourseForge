@@ -2,7 +2,7 @@
 
 > **Autor:** Prof. Pedro Paulo IF · [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com)  
 > **Versão:** 0.1.0  
-> **Situação:** em andamento. Módulos 01 e 02 disponíveis; Módulos 03 a 05 em produção  
+> **Situação:** em andamento. Módulos 01 a 03 disponíveis; Módulos 04 e 05 em produção  
 > **Ferramentas:** Python 3.11 ou mais novo, VS Code e a API do Gemini (plano gratuito), ou o motor simulado, sem chave
 
 ---
@@ -23,9 +23,9 @@ O que é uma API de IA, tokens, limites e privacidade; a primeira chamada e os e
 
 Classificar mensagens, extrair dados em JSON com esquema e validação, reescrever com tom definido e quando **não** usar IA (regras + IA). Projeto: **triagem de mensagens de clientes** numa planilha. [Acessar o módulo](../modulo_02_tarefas_uteis/index.md)
 
-### Módulo 03 — IA com os seus documentos 🛠️ em produção
+### Módulo 03 — IA com os seus documentos ✅ disponível
 
-Ler PDF e TXT, dividir em trechos, responder só com base no documento (e dizer "não sei"), citar a fonte. Projeto: **tira-dúvidas do regulamento** da escola.
+Ler PDF e TXT, dividir em trechos, buscar os trechos certos, responder só com base no documento (e dizer "não encontrei"), citar a fonte e avaliar a busca. Projeto: **tira-dúvidas do regulamento** da escola. [Acessar o módulo](../modulo_03_documentos/index.md)
 
 ### Módulo 04 — Segurança, custos e testes 🛠️ em produção
 
