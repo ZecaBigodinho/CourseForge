@@ -3,8 +3,10 @@
  *
  * O HTML (cursos/index.md) já funciona sem este arquivo: os slides ficam numa
  * faixa que rola para o lado. Este script acrescenta setas, bolinhas, a troca
- * automática (que pausa com o mouse em cima, com o foco dentro do banner e
- * quando a pessoa prefere menos movimento no sistema) e um botão de pausa.
+ * automática e um botão de pausa. A troca automática para só quando a pessoa
+ * aperta a pausa ou navega com o teclado dentro do banner (o mouse em cima não
+ * pausa: era justamente quando a pessoa estava olhando). Quem prefere menos
+ * movimento no sistema continua vendo a troca, mas sem a animação de deslizar.
  */
 (function () {
   "use strict";
@@ -20,9 +22,8 @@
     var reduzirMovimento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     var atual = 0;
     var timer = null;
-    var pausadoPeloUsuario = reduzirMovimento;
-    var mouseDentro = false;
-    var focoDentro = false;
+    var pausadoPeloUsuario = false;
+    var focoTeclado = false;
 
     function criarBotao(classe, rotulo, texto) {
       var b = document.createElement("button");
@@ -90,7 +91,7 @@
     function agendar() {
       clearInterval(timer);
       timer = null;
-      if (pausadoPeloUsuario || mouseDentro || focoDentro || document.hidden) return;
+      if (pausadoPeloUsuario || focoTeclado || document.hidden) return;
       timer = setInterval(function () { irPara(atual + 1); }, INTERVALO_MS);
     }
 
@@ -102,11 +103,14 @@
       agendar();
     });
 
-    slider.addEventListener("mouseenter", function () { mouseDentro = true; agendar(); });
-    slider.addEventListener("mouseleave", function () { mouseDentro = false; agendar(); });
-    slider.addEventListener("focusin", function () { focoDentro = true; agendar(); });
+    // Pausa enquanto o foco do TECLADO estiver no banner (clique de mouse não conta)
+    slider.addEventListener("focusin", function (e) {
+      var alvo = e.target;
+      focoTeclado = alvo && alvo.matches && alvo.matches(":focus-visible");
+      agendar();
+    });
     slider.addEventListener("focusout", function (e) {
-      if (!slider.contains(e.relatedTarget)) { focoDentro = false; agendar(); }
+      if (!slider.contains(e.relatedTarget)) { focoTeclado = false; agendar(); }
     });
     document.addEventListener("visibilitychange", agendar);
 

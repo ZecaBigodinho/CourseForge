@@ -171,10 +171,23 @@
   background: var(--md-typeset-a-color);
 }
 
-.md-nav__item--nested .md-nav__toggle:checked ~ .md-nav {
-  background: var(--cf-fundo-suave);
-  border-radius: 0 0 8px 8px;
-  padding-bottom: 0.3rem;
+/* Menu do celular: o item da seção atual é um link + a setinha (dois .md-nav__link
+   dentro de .md-nav__container). Sem isto, cada um ganhava fundo e barrinha roxa,
+   que apareciam por cima do texto. Fica só a barra verde da seção. */
+@media screen and (max-width: 76.1875em) {
+  .md-nav__container > .md-nav__link--active::after { display: none; }
+  .md-nav__container > label.md-nav__link--active { background: none !important; }
+}
+
+/* Só na barra lateral do computador: no menu do celular, cada seção é um painel
+   empilhado por cima do anterior e precisa do fundo opaco padrão do tema
+   (com fundo transparente, os títulos apareciam um por cima do outro). */
+@media screen and (min-width: 76.25em) {
+  .md-nav__item--nested .md-nav__toggle:checked ~ .md-nav {
+    background: var(--cf-fundo-suave);
+    border-radius: 0 0 8px 8px;
+    padding-bottom: 0.3rem;
+  }
 }
 
 /* ------------------------------------------------------------ */
@@ -654,4 +667,75 @@
 .md-typeset .cf-trilhas__dica {
   margin-top: -0.4rem;
   color: var(--md-default-fg-color--light);
+}
+
+/* Slider: texto à esquerda, imagem do curso à direita (só em telas largas) */
+.md-typeset .cf-slide {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+.md-typeset .cf-slide__texto > :last-child { margin-bottom: 0; }
+
+.md-typeset .cf-slide__arte { display: none; }
+
+@media screen and (min-width: 60em) {
+  .md-typeset .cf-slide {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  }
+
+  .md-typeset .cf-slide__arte {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 18rem;
+  }
+
+  .md-typeset .cf-slide__arte img {
+    display: block;
+    max-width: 100%;
+    max-height: 19rem;
+    border-radius: 0;
+    transition: transform 0.4s ease;
+  }
+
+  .md-typeset .cf-arte--janela img { width: 100%; height: auto; transform: rotate(-2deg); }
+  .md-typeset .cf-arte--papel img {
+    max-height: 18rem;
+    border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    transform: rotate(3deg);
+  }
+  .md-typeset .cf-arte--logo {
+    align-self: center;
+  }
+  .md-typeset .cf-arte--logo img {
+    max-height: 15rem;
+    padding: 1.4rem;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    transform: rotate(-3deg);
+  }
+
+  .md-typeset .cf-slide:hover .cf-slide__arte img { transform: rotate(0deg) scale(1.02); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .md-typeset .cf-slide__arte img { transition: none; }
+}
+
+/* Modo claro: cards com fundo, para não "flutuarem" no branco */
+[data-md-color-scheme="default"] .md-typeset .grid.cards > ul > li,
+[data-md-color-scheme="default"] .md-typeset .cf-passo {
+  background: #F7F5FF;
+  border-color: #E4DEFA;
+  box-shadow: 0 1px 2px rgba(79, 53, 181, 0.06), 0 4px 14px rgba(79, 53, 181, 0.06);
+}
+
+[data-md-color-scheme="default"] .md-typeset .grid.cards > ul > li:hover,
+[data-md-color-scheme="default"] .md-typeset .grid.cards > ul > li:focus-within {
+  background: #FFFFFF;
 }
