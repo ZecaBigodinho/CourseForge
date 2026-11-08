@@ -341,7 +341,7 @@ hide:
 
     Proteja as suas contas, reconheça golpes de WhatsApp e Pix e conheça os seus direitos na internet. Para qualquer pessoa, sem programar.
 
-    Módulo 01 disponível · 5 aulas · senhas, gerenciador e verificação em duas etapas
+    Módulos 01 e 02 disponíveis · 10 aulas · senhas, duas etapas, golpes de WhatsApp e Pix
 
     [:octicons-arrow-right-24: Começar pelo Módulo 01](seguranca_digital/modulo_01_senhas_e_contas/index.md)
 
@@ -680,9 +680,11 @@ Cada curso termina num projeto para o seu portfólio, que libera o certificado.
 
         [:octicons-arrow-right-24: 5 aulas](seguranca_digital/modulo_01_senhas_e_contas/index.md)
 
-    -   :material-alert-octagon-outline:{ .middle } __02 · Golpes mais comuns__ <span class="cf-tag">Em breve</span>
+    -   :material-alert-octagon-outline:{ .middle } __02 · Golpes mais comuns__
 
         Falso parente, golpe do código, Pix e o MED, links, lojas e boletos falsos.
+
+        [:octicons-arrow-right-24: 5 aulas](seguranca_digital/modulo_02_golpes/index.md)
 
     -   :material-cellphone-lock:{ .middle } __03 · Celular e computador seguros__ <span class="cf-tag">Em breve</span>
 

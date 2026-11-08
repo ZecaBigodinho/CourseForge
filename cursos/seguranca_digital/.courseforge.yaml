@@ -9,6 +9,7 @@ slug: seguranca_digital
 # Ordem dos módulos no menu (nomes das pastas); os próximos entram aqui conforme forem publicados
 ordem_modulos:
   - modulo_01_senhas_e_contas
+  - modulo_02_golpes
 
 # Ficha do curso — alimenta o Catálogo de cursos (gerado por src/generators/gerar_catalogo.py)
 ordem: 10

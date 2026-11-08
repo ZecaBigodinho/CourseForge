@@ -380,4 +380,11 @@ nav:
     - Gerenciador de senhas: seguranca_digital/modulo_01_senhas_e_contas/03_gerenciador_de_senhas.md
     - Verificação em duas etapas e chaves de acesso: seguranca_digital/modulo_01_senhas_e_contas/04_verificacao_em_duas_etapas.md
     - 'Projeto do módulo: plano de proteção das minhas contas': seguranca_digital/modulo_01_senhas_e_contas/05_projeto_plano_de_protecao.md
+  - Golpes mais comuns:
+    - Visão Geral: seguranca_digital/modulo_02_golpes/index.md
+    - 'Engenharia social: como o golpe engana': seguranca_digital/modulo_02_golpes/01_engenharia_social.md
+    - Golpes no WhatsApp: seguranca_digital/modulo_02_golpes/02_golpes_no_whatsapp.md
+    - Golpes com Pix e o MED: seguranca_digital/modulo_02_golpes/03_golpes_com_pix.md
+    - Links falsos, lojas e boletos falsos: seguranca_digital/modulo_02_golpes/04_links_lojas_e_boletos_falsos.md
+    - 'Projeto do módulo: golpe ou não?': seguranca_digital/modulo_02_golpes/05_projeto_golpe_ou_nao.md
 docs_dir: ../cursos

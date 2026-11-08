@@ -2,7 +2,7 @@
 
 > **Autor:** Prof. Pedro Paulo IF · [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com)  
 > **Versão:** 0.1.0  
-> **Situação:** em andamento. Módulo 01 disponível; Módulos 02 a 05 em produção  
+> **Situação:** em andamento. Módulos 01 e 02 disponíveis; Módulos 03 a 05 em produção  
 > **Ferramentas:** o seu celular, o seu computador e um navegador, nada pago
 
 ---
@@ -19,9 +19,9 @@ O curso é para **qualquer pessoa**: não precisa saber programar. As aulas são
 
 Por que o e-mail é a chave de todas as contas, senha forte e frase-senha, gerenciador de senhas, verificação em duas etapas e chaves de acesso. Projeto: o **plano de proteção das minhas contas**. [Acessar o módulo](../modulo_01_senhas_e_contas/index.md)
 
-### Módulo 02 — Golpes mais comuns 🛠️ em produção
+### Módulo 02 — Golpes mais comuns ✅ disponível
 
-Engenharia social (urgência, medo e prêmio), golpes de WhatsApp (falso parente, código de verificação, conta clonada), golpes com Pix e o **MED** (Mecanismo Especial de Devolução), links falsos por SMS e e-mail, lojas e boletos falsos.
+Engenharia social (urgência, medo e prêmio), golpes de WhatsApp (falso parente, código de verificação, conta clonada), golpes com Pix e o **MED** (Mecanismo Especial de Devolução), links falsos por SMS e e-mail, lojas e boletos falsos. Projeto: **golpe ou não?**, com 8 casos simulados e um alerta para a família. [Acessar o módulo](../modulo_02_golpes/index.md)
 
 ### Módulo 03 — Celular e computador seguros 🛠️ em produção
 

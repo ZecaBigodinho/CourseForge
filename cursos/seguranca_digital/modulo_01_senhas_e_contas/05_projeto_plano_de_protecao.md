@@ -154,6 +154,4 @@ Entregue ao professor **só o checklist abaixo** (marcado), sem nomes de conta, 
 
 ## ➡️ Próximo passo
 
-**Módulo 02 — Golpes mais comuns** *(em produção)*: falso parente no WhatsApp, golpe do código, Pix e o MED, links falsos, lojas e boletos falsos.
-
-Enquanto isso, revise o [índice do curso](../docs/index.md).
+**[Módulo 02 — Golpes mais comuns](../modulo_02_golpes/index.md)**: falso parente no WhatsApp, golpe do código, Pix e o MED, links falsos, lojas e boletos falsos.
