@@ -139,6 +139,20 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 
     [:octicons-arrow-right-24: Acessar o curso](java/docs/index.md)
 
+-   :material-shield-lock-outline:{ .lg .middle } __Segurança digital__
+
+    <span class="cf-tag cf-tag--ok">Disponível</span>
+
+    ---
+
+    Proteja as suas contas, reconheça golpes de WhatsApp e Pix e conheça os seus direitos na internet — para qualquer pessoa, sem precisar saber programar.
+
+    **Nível:** Iniciante  
+    **Carga horária:** 20 h  
+    **Certificado:** Entrega do Guia de segurança da minha família, do Módulo 05.  
+
+    [:octicons-arrow-right-24: Acessar o curso](seguranca_digital/docs/index.md)
+
 </div>
 
 ## Fichas dos cursos
@@ -347,3 +361,26 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 - Trabalhar com coleções, exceções e arquivos.
 
 [Ir para o curso](java/docs/index.md)
+
+### Segurança digital <span class="cf-tag cf-tag--ok">Disponível</span>
+
+- **Nível:** Iniciante
+- **Carga horária:** 20 h
+- **Para quem é:** Qualquer pessoa que usa celular e internet — alunos de todas as turmas, famílias e pequenos empreendedores.
+- **Certificado:** Entrega do Guia de segurança da minha família, do Módulo 05.
+- **Autor:** Pedro Paulo IF
+
+**Pré-requisitos:**
+
+- Usar celular ou computador e a internet no dia a dia.
+- Ter um e-mail e um celular para pôr em prática (os exercícios funcionam com as suas próprias contas, sem expor nenhum dado).
+
+**Você vai aprender a:**
+
+- Criar senhas fortes, usar um gerenciador de senhas e ligar a verificação em duas etapas.
+- Reconhecer os golpes mais comuns de WhatsApp, Pix, SMS, e-mail e lojas falsas.
+- Deixar celular e computador mais seguros, em casa e na escola.
+- Proteger a conta gov.br, conferir o Registrato e exercer os direitos da LGPD.
+- Saber o que fazer e onde denunciar quando algo dá errado.
+
+[Ir para o curso](seguranca_digital/docs/index.md)

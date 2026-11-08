@@ -9,7 +9,7 @@ hide:
 
 <div class="cf-slider__trilho" tabindex="0" role="region" aria-roledescription="carrossel" aria-label="Cursos em destaque" markdown>
 
-<section class="cf-slide" aria-roledescription="slide" aria-label="1 de 8" markdown>
+<section class="cf-slide" aria-roledescription="slide" aria-label="1 de 9" markdown>
 
 <div class="cf-slide__texto" markdown>
 
@@ -35,7 +35,7 @@ hide:
 
 </section>
 
-<section class="cf-slide cf-slide--python" aria-roledescription="slide" aria-label="2 de 8" markdown>
+<section class="cf-slide cf-slide--python" aria-roledescription="slide" aria-label="2 de 9" markdown>
 
 <div class="cf-slide__texto" markdown>
 
@@ -61,7 +61,7 @@ hide:
 
 </section>
 
-<section class="cf-slide cf-slide--web" aria-roledescription="slide" aria-label="3 de 8" markdown>
+<section class="cf-slide cf-slide--web" aria-roledescription="slide" aria-label="3 de 9" markdown>
 
 <div class="cf-slide__texto" markdown>
 
@@ -87,7 +87,7 @@ hide:
 
 </section>
 
-<section class="cf-slide cf-slide--java" aria-roledescription="slide" aria-label="4 de 8" markdown>
+<section class="cf-slide cf-slide--java" aria-roledescription="slide" aria-label="4 de 9" markdown>
 
 <div class="cf-slide__texto" markdown>
 
@@ -113,7 +113,7 @@ hide:
 
 </section>
 
-<section class="cf-slide cf-slide--ia" aria-roledescription="slide" aria-label="5 de 8" markdown>
+<section class="cf-slide cf-slide--ia" aria-roledescription="slide" aria-label="5 de 9" markdown>
 
 <div class="cf-slide__texto" markdown>
 
@@ -139,7 +139,7 @@ hide:
 
 </section>
 
-<section class="cf-slide cf-slide--office" aria-roledescription="slide" aria-label="6 de 8" markdown>
+<section class="cf-slide cf-slide--office" aria-roledescription="slide" aria-label="6 de 9" markdown>
 
 <div class="cf-slide__texto" markdown>
 
@@ -165,7 +165,7 @@ hide:
 
 </section>
 
-<section class="cf-slide cf-slide--canva" aria-roledescription="slide" aria-label="7 de 8" markdown>
+<section class="cf-slide cf-slide--canva" aria-roledescription="slide" aria-label="7 de 9" markdown>
 
 <div class="cf-slide__texto" markdown>
 
@@ -191,7 +191,7 @@ hide:
 
 </section>
 
-<section class="cf-slide cf-slide--corel" aria-roledescription="slide" aria-label="8 de 8" markdown>
+<section class="cf-slide cf-slide--corel" aria-roledescription="slide" aria-label="8 de 9" markdown>
 
 <div class="cf-slide__texto" markdown>
 
@@ -214,6 +214,32 @@ hide:
 </div>
 
 <div class="cf-slide__arte cf-arte--logo" aria-hidden="true"><img class="sem-zoom" src="coreldraw/modulo_02_vetor_na_pratica/assets/05_logotipo_png_transparente.webp" alt="" decoding="async"></div>
+
+</section>
+
+<section class="cf-slide cf-slide--seguranca" aria-roledescription="slide" aria-label="9 de 9" markdown>
+
+<div class="cf-slide__texto" markdown>
+
+
+<p class="cf-hero__eyebrow">Cidadania · Segurança digital</p>
+
+<p class="cf-hero__title">Proteja suas contas e não caia em golpes</p>
+
+<p class="cf-hero__lead">Senhas, verificação em duas etapas, golpes de WhatsApp e Pix, celular protegido contra roubo, gov.br e seus direitos. Para qualquer pessoa, sem programar.</p>
+
+[Começar pelo Módulo 01](seguranca_digital/modulo_01_senhas_e_contas/index.md){ .md-button .md-button--primary }
+[Conhecer o curso](seguranca_digital/docs/index.md){ .md-button }
+
+<ul class="cf-hero__badges" aria-label="Resumo do curso">
+  <li>5 módulos</li>
+  <li>25 aulas</li>
+  <li>Guia para a família</li>
+</ul>
+
+</div>
+
+<div class="cf-slide__arte cf-arte--janela" aria-hidden="true"><img class="sem-zoom" src="assets/home/seguranca.svg" alt="" decoding="async"></div>
 
 </section>
 
@@ -332,6 +358,18 @@ hide:
     3 módulos · 15 aulas · do primeiro programa ao cadastro que salva em arquivo
 
     [:octicons-arrow-right-24: Começar pelo Módulo 01](java/modulo_01_fundamentos/index.md)
+
+-   :material-shield-lock-outline:{ .lg .middle } __Segurança digital__
+
+    <span class="cf-tag cf-tag--ok">Disponível</span>
+
+    ---
+
+    Proteja as suas contas, reconheça golpes de WhatsApp e Pix e conheça os seus direitos na internet. Para qualquer pessoa, sem programar.
+
+    5 módulos · 25 aulas · do celular protegido ao guia de segurança da família
+
+    [:octicons-arrow-right-24: Começar pelo Módulo 01](seguranca_digital/modulo_01_senhas_e_contas/index.md)
 
 </div>
 
@@ -658,6 +696,42 @@ Cada curso termina num projeto para o seu portfólio, que libera o certificado.
 
     </div>
 
+=== "Segurança"
+
+    <div class="grid cards cf-trilha" markdown>
+
+    -   :material-form-textbox-password:{ .middle } __01 · Senhas e contas__
+
+        Frase-senha, gerenciador de senhas, verificação em duas etapas e o plano de proteção das suas contas.
+
+        [:octicons-arrow-right-24: 5 aulas](seguranca_digital/modulo_01_senhas_e_contas/index.md)
+
+    -   :material-alert-octagon-outline:{ .middle } __02 · Golpes mais comuns__
+
+        Falso parente, golpe do código, Pix e o MED, links, lojas e boletos falsos.
+
+        [:octicons-arrow-right-24: 5 aulas](seguranca_digital/modulo_02_golpes/index.md)
+
+    -   :material-cellphone-lock:{ .middle } __03 · Celular e computador seguros__
+
+        Atualizações, apps oficiais, permissões, proteção contra roubo, Wi-Fi público, backup e o computador da escola.
+
+        [:octicons-arrow-right-24: 5 aulas](seguranca_digital/modulo_03_aparelhos_seguros/index.md)
+
+    -   :material-scale-balance:{ .middle } __04 · Cidadania e direitos__
+
+        gov.br, Registrato, LGPD no dia a dia, cyberbullying, onde denunciar e checagem de notícias.
+
+        [:octicons-arrow-right-24: 5 aulas](seguranca_digital/modulo_04_cidadania_e_direitos/index.md)
+
+    -   :material-account-group-outline:{ .middle } __05 · Projeto final__
+
+        O Guia de segurança da minha família, apresentado para a turma.
+
+        [:octicons-arrow-right-24: 5 aulas](seguranca_digital/modulo_05_projeto_final/index.md)
+
+    </div>
+
 
 ## Certificado
 
@@ -675,14 +749,15 @@ Cada curso termina num projeto para o seu portfólio, que libera o certificado.
     | **TypeScript** | A [lista de tarefas em TypeScript](typescript/modulo_03_navegador/04_projeto_lista_de_tarefas.md) (Módulo 03), compilando sem erros no modo `strict`. |
     | **React** | O [catálogo com busca e carrinho](react/modulo_03_aplicacao/04_projeto_catalogo.md) (Módulo 03), publicado na internet. |
     | **Java** | O [cadastro de alunos com arquivo CSV](java/modulo_03_colecoes_e_arquivos/05_projeto_cadastro_csv.md) (Módulo 03). |
+    | **Segurança digital** | O [Guia de segurança da minha família](seguranca_digital/modulo_05_projeto_final/05_entrega_e_certificado.md) (Módulo 05), conversado com a família e apresentado para a turma. |
 
 ## Perguntas frequentes
 
 ??? question "Preciso saber programar para começar?"
-    Não. Os cursos de programação começam do zero: o primeiro módulo ensina a instalar tudo e parte da primeira linha de código. Os cursos de design, escritório e IA não pedem programação (só o projeto final de IA usa um pouco de Python).
+    Não. Os cursos de programação começam do zero: o primeiro módulo ensina a instalar tudo e parte da primeira linha de código. Os cursos de design, escritório, IA e segurança digital não pedem programação (só o projeto final de IA usa um pouco de Python).
 
 ??? question "Por qual curso eu começo?"
-    Depende do seu objetivo: **programação** ➔ Python para Desktop ou a trilha Web (HTML, depois TypeScript e React); **concursos e cursos técnicos** ➔ Java; **escritório** ➔ Pacote Office; **design e redes sociais** ➔ Canva e CorelDRAW; **usar IA no dia a dia** ➔ Introdução à IA. O [catálogo](catalogo.md) mostra o nível e os pré-requisitos de cada um.
+    Depende do seu objetivo: **programação** ➔ Python para Desktop ou a trilha Web (HTML, depois TypeScript e React); **concursos e cursos técnicos** ➔ Java; **escritório** ➔ Pacote Office; **design e redes sociais** ➔ Canva e CorelDRAW; **usar IA no dia a dia** ➔ Introdução à IA. **Proteger as contas e fugir de golpes** ➔ Segurança digital, que serve para qualquer pessoa. O [catálogo](catalogo.md) mostra o nível e os pré-requisitos de cada um.
 
 ??? question "Posso estudar em casa?"
     Sim. O site funciona no computador, no tablet e no celular. Para praticar, siga a primeira aula de cada curso no seu computador pessoal: tudo tem opção gratuita.
