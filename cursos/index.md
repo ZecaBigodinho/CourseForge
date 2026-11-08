@@ -9,7 +9,7 @@ hide:
 
 <div class="cf-slider__trilho" tabindex="0" role="region" aria-roledescription="carrossel" aria-label="Cursos em destaque" markdown>
 
-<section class="cf-slide" aria-roledescription="slide" aria-label="1 de 8" markdown>
+<section class="cf-slide" aria-roledescription="slide" aria-label="1 de 9" markdown>
 
 <div class="cf-slide__texto" markdown>
 
@@ -35,7 +35,7 @@ hide:
 
 </section>
 
-<section class="cf-slide cf-slide--python" aria-roledescription="slide" aria-label="2 de 8" markdown>
+<section class="cf-slide cf-slide--python" aria-roledescription="slide" aria-label="2 de 9" markdown>
 
 <div class="cf-slide__texto" markdown>
 
@@ -61,7 +61,7 @@ hide:
 
 </section>
 
-<section class="cf-slide cf-slide--web" aria-roledescription="slide" aria-label="3 de 8" markdown>
+<section class="cf-slide cf-slide--web" aria-roledescription="slide" aria-label="3 de 9" markdown>
 
 <div class="cf-slide__texto" markdown>
 
@@ -87,7 +87,7 @@ hide:
 
 </section>
 
-<section class="cf-slide cf-slide--java" aria-roledescription="slide" aria-label="4 de 8" markdown>
+<section class="cf-slide cf-slide--java" aria-roledescription="slide" aria-label="4 de 9" markdown>
 
 <div class="cf-slide__texto" markdown>
 
@@ -113,7 +113,7 @@ hide:
 
 </section>
 
-<section class="cf-slide cf-slide--ia" aria-roledescription="slide" aria-label="5 de 8" markdown>
+<section class="cf-slide cf-slide--ia" aria-roledescription="slide" aria-label="5 de 9" markdown>
 
 <div class="cf-slide__texto" markdown>
 
@@ -139,7 +139,7 @@ hide:
 
 </section>
 
-<section class="cf-slide cf-slide--office" aria-roledescription="slide" aria-label="6 de 8" markdown>
+<section class="cf-slide cf-slide--office" aria-roledescription="slide" aria-label="6 de 9" markdown>
 
 <div class="cf-slide__texto" markdown>
 
@@ -165,7 +165,7 @@ hide:
 
 </section>
 
-<section class="cf-slide cf-slide--canva" aria-roledescription="slide" aria-label="7 de 8" markdown>
+<section class="cf-slide cf-slide--canva" aria-roledescription="slide" aria-label="7 de 9" markdown>
 
 <div class="cf-slide__texto" markdown>
 
@@ -191,7 +191,7 @@ hide:
 
 </section>
 
-<section class="cf-slide cf-slide--corel" aria-roledescription="slide" aria-label="8 de 8" markdown>
+<section class="cf-slide cf-slide--corel" aria-roledescription="slide" aria-label="8 de 9" markdown>
 
 <div class="cf-slide__texto" markdown>
 
@@ -214,6 +214,32 @@ hide:
 </div>
 
 <div class="cf-slide__arte cf-arte--logo" aria-hidden="true"><img class="sem-zoom" src="coreldraw/modulo_02_vetor_na_pratica/assets/05_logotipo_png_transparente.webp" alt="" decoding="async"></div>
+
+</section>
+
+<section class="cf-slide cf-slide--seguranca" aria-roledescription="slide" aria-label="9 de 9" markdown>
+
+<div class="cf-slide__texto" markdown>
+
+
+<p class="cf-hero__eyebrow">Cidadania · Segurança digital</p>
+
+<p class="cf-hero__title">Proteja suas contas e não caia em golpes</p>
+
+<p class="cf-hero__lead">Senhas, verificação em duas etapas, golpes de WhatsApp e Pix, celular protegido contra roubo, gov.br e seus direitos. Para qualquer pessoa, sem programar.</p>
+
+[Começar pelo Módulo 01](seguranca_digital/modulo_01_senhas_e_contas/index.md){ .md-button .md-button--primary }
+[Conhecer o curso](seguranca_digital/docs/index.md){ .md-button }
+
+<ul class="cf-hero__badges" aria-label="Resumo do curso">
+  <li>5 módulos</li>
+  <li>25 aulas</li>
+  <li>Guia para a família</li>
+</ul>
+
+</div>
+
+<div class="cf-slide__arte cf-arte--janela" aria-hidden="true"><img class="sem-zoom" src="assets/home/seguranca.svg" alt="" decoding="async"></div>
 
 </section>
 
@@ -335,13 +361,13 @@ hide:
 
 -   :material-shield-lock-outline:{ .lg .middle } __Segurança digital__
 
-    <span class="cf-tag cf-tag--ok">Em andamento</span>
+    <span class="cf-tag cf-tag--ok">Disponível</span>
 
     ---
 
     Proteja as suas contas, reconheça golpes de WhatsApp e Pix e conheça os seus direitos na internet. Para qualquer pessoa, sem programar.
 
-    Módulos 01 a 04 disponíveis · 20 aulas · senhas, golpes de WhatsApp e Pix, celular protegido, gov.br e direitos
+    5 módulos · 25 aulas · do celular protegido ao guia de segurança da família
 
     [:octicons-arrow-right-24: Começar pelo Módulo 01](seguranca_digital/modulo_01_senhas_e_contas/index.md)
 
@@ -698,9 +724,11 @@ Cada curso termina num projeto para o seu portfólio, que libera o certificado.
 
         [:octicons-arrow-right-24: 5 aulas](seguranca_digital/modulo_04_cidadania_e_direitos/index.md)
 
-    -   :material-account-group-outline:{ .middle } __05 · Projeto final__ <span class="cf-tag">Em breve</span>
+    -   :material-account-group-outline:{ .middle } __05 · Projeto final__
 
         O Guia de segurança da minha família, apresentado para a turma.
+
+        [:octicons-arrow-right-24: 5 aulas](seguranca_digital/modulo_05_projeto_final/index.md)
 
     </div>
 
@@ -721,7 +749,7 @@ Cada curso termina num projeto para o seu portfólio, que libera o certificado.
     | **TypeScript** | A [lista de tarefas em TypeScript](typescript/modulo_03_navegador/04_projeto_lista_de_tarefas.md) (Módulo 03), compilando sem erros no modo `strict`. |
     | **React** | O [catálogo com busca e carrinho](react/modulo_03_aplicacao/04_projeto_catalogo.md) (Módulo 03), publicado na internet. |
     | **Java** | O [cadastro de alunos com arquivo CSV](java/modulo_03_colecoes_e_arquivos/05_projeto_cadastro_csv.md) (Módulo 03). |
-    | **Segurança digital** | O Guia de segurança da minha família (Módulo 05, em produção). |
+    | **Segurança digital** | O [Guia de segurança da minha família](seguranca_digital/modulo_05_projeto_final/05_entrega_e_certificado.md) (Módulo 05), conversado com a família e apresentado para a turma. |
 
 ## Perguntas frequentes
 

@@ -129,4 +129,4 @@ Em cada módulo, você viu **quem procurar** quando algo dá errado. Agora monte
 
 ## ➡️ Próximo passo
 
-**Módulo 05 — Projeto final** *(em produção)*: o plano "e se eu cair num golpe?" e o **Guia de segurança da minha família**.
+**[Módulo 05 — Projeto final](../modulo_05_projeto_final/index.md)**: o plano "e se eu cair num golpe?" e o **Guia de segurança da minha família**.

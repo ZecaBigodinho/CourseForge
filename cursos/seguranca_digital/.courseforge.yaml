@@ -3,7 +3,7 @@ descricao: Proteja as suas contas, reconheça golpes de WhatsApp e Pix e conheç
 autor: Pedro Paulo IF
 num_modulos: 5
 data_criacao: '2026-11-08'
-versao: 0.1.0
+versao: 1.0.0
 tags: []
 slug: seguranca_digital
 # Ordem dos módulos no menu (nomes das pastas); os próximos entram aqui conforme forem publicados
@@ -12,14 +12,15 @@ ordem_modulos:
   - modulo_02_golpes
   - modulo_03_aparelhos_seguros
   - modulo_04_cidadania_e_direitos
+  - modulo_05_projeto_final
 
 # Ficha do curso — alimenta o Catálogo de cursos (gerado por src/generators/gerar_catalogo.py)
 ordem: 10
-status: em_andamento             # disponivel | em_andamento | em_breve
+status: disponivel               # disponivel | em_andamento | em_breve
 ficha:
   icone: material-shield-lock-outline
   nivel: Iniciante
-  carga_horaria: 20 h               # ~4 h por módulo, estimativa de 08/11/2026
+  carga_horaria: 20 h               # 5 módulos de ~4–5 h, estimativa de 08/11/2026
   publico: Qualquer pessoa que usa celular e internet — alunos de todas as turmas, famílias e pequenos empreendedores.
   certificado: Entrega do Guia de segurança da minha família, do Módulo 05.
   pre_requisitos:

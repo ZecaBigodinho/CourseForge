@@ -1,8 +1,8 @@
 # Segurança digital e cidadania online
 
 > **Autor:** Prof. Pedro Paulo IF · [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com)  
-> **Versão:** 0.1.0  
-> **Situação:** em andamento. Módulos 01 a 04 disponíveis; Módulo 05 em produção  
+> **Versão:** 1.0.0  
+> **Situação:** completo. 5 módulos, 25 aulas  
 > **Ferramentas:** o seu celular, o seu computador e um navegador, nada pago
 
 ---
@@ -31,14 +31,14 @@ Atualizações, apps só da loja oficial, permissões (e o perigo da Acessibilid
 
 Conta gov.br (níveis bronze, prata e ouro), **Registrato** do Banco Central, LGPD no dia a dia, cyberbullying e exposição, onde denunciar e como checar notícias. Projeto: **checagem de notícias** e o **mapa de ajuda** da sua cidade. [Acessar o módulo](../modulo_04_cidadania_e_direitos/index.md)
 
-### Módulo 05 — Projeto final 🛠️ em produção
+### Módulo 05 — Projeto final ✅ disponível
 
-Plano "e se eu cair num golpe?" e o **Guia de segurança da minha família**, um cartaz ou folheto (pode ser feito no [Canva](../../canva/docs/index.md)) apresentado para a turma.
+Plano "e se eu cair num golpe?" e o **Guia de segurança da minha família**, um cartaz, folheto ou carrossel (pode ser feito no [Canva](../../canva/docs/index.md)), conversado com a família e apresentado para a turma. [Acessar o módulo](../modulo_05_projeto_final/index.md)
 
 ## Certificado
 
 !!! warning "Um único requisito"
-    O certificado é liberado ao entregar o **Guia de segurança da minha família**, do Módulo 05.
+    O certificado é liberado ao entregar o **[Guia de segurança da minha família](../modulo_05_projeto_final/05_entrega_e_certificado.md)**, do Módulo 05, com as três partes, sem dados pessoais e com o relato da conversa com a família.
 
 ## O que você vai precisar
 

@@ -141,7 +141,7 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 
 -   :material-shield-lock-outline:{ .lg .middle } __Segurança digital__
 
-    <span class="cf-tag cf-tag--ok">Em andamento</span>
+    <span class="cf-tag cf-tag--ok">Disponível</span>
 
     ---
 
@@ -362,7 +362,7 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 
 [Ir para o curso](java/docs/index.md)
 
-### Segurança digital <span class="cf-tag cf-tag--ok">Em andamento</span>
+### Segurança digital <span class="cf-tag cf-tag--ok">Disponível</span>
 
 - **Nível:** Iniciante
 - **Carga horária:** 20 h

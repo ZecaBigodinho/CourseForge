@@ -177,6 +177,28 @@ ILUSTRACOES = {
     <rect x="410" y="30" width="36" height="236" rx="6" fill="#F7F5FF"/>
     {"".join(f'<rect x="418" y="{40 + i * 28}" width="20" height="20" rx="4" fill="{c}"/>' for i, c in enumerate(["#4F35B5", "#E8781E", "#FFE6B4", "#64DFD3", "#10202A", "#FFFFFF", "#C62828", "#2E7D32"]))}
 """),
+"seguranca": janela("Checkup de segurança", f"""
+    {"".join(
+        f'<rect x="22" y="{16 + i * 44}" width="292" height="34" rx="10" fill="#F7F5FF" stroke="#E4DEFA"/>'
+        f'<circle cx="42" cy="{33 + i * 44}" r="10" fill="#00796B"/>'
+        f'<path d="M37 {33 + i * 44} l4 4 l7 -8" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>'
+        f'<text x="62" y="{37 + i * 44}" font-family="{FONTE}" font-size="12.5" fill="{TINTA}">{item}</text>'
+        for i, item in enumerate([
+            "Verificação em duas etapas ligada",
+            "Código do SMS: não se passa",
+            "Pix: conferir quem recebe",
+            "Localizador e backup ligados",
+            "Palavra-código da família",
+        ])
+    )}
+    <path d="M386 26 l50 18 v46 c0 40 -26 66 -50 80 c-24 -14 -50 -40 -50 -80 v-46 z" fill="{ROXO}"/>
+    <path d="M386 42 l36 13 v35 c0 30 -18 50 -36 61 c-18 -11 -36 -31 -36 -61 v-35 z" fill="#6A50D4"/>
+    <path d="M368 98 l13 13 l25 -28" fill="none" stroke="{TEAL}" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="336" y="196" width="100" height="26" rx="13" fill="#E6FAF7"/>
+    <text x="386" y="213" text-anchor="middle" font-family="{FONTE}" font-size="11.5" font-weight="700" fill="#00796B">5 de 5 ✓</text>
+    <rect x="22" y="246" width="416" height="30" rx="15" fill="#fff" stroke="#DDD6FB"/>
+    <text x="40" y="266" font-family="{FONTE}" font-size="12" fill="#4A3E86">Pedido de dinheiro por mensagem? Ligue antes para a pessoa.</text>
+"""),
 }
 
 
