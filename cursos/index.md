@@ -417,7 +417,7 @@ hide:
 
     Use modelos de IA dentro dos seus programas: resumir, classificar, extrair dados e criar um atendente, com a API do Gemini ou o motor simulado, sem chave.
 
-    Módulo 01 disponível · 5 aulas · primeira chamada, conversa com memória e resumidor de textos
+    Módulos 01 e 02 disponíveis · 10 aulas · primeira chamada, resumidor e triagem de mensagens de clientes
 
     [:octicons-arrow-right-24: Começar pelo Módulo 01](ia_na_pratica_com_python/modulo_01_api_de_ia/index.md)
 
@@ -828,9 +828,11 @@ Cada curso termina num projeto para o seu portfólio, que libera o certificado.
 
         [:octicons-arrow-right-24: 5 aulas](ia_na_pratica_com_python/modulo_01_api_de_ia/index.md)
 
-    -   :material-tag-multiple-outline:{ .middle } __02 · Tarefas úteis__ <span class="cf-tag">Em breve</span>
+    -   :material-tag-multiple-outline:{ .middle } __02 · Tarefas úteis__
 
-        Classificar mensagens, extrair dados em JSON e reescrever com tom definido.
+        Classificar mensagens, extrair dados em JSON, reescrever com tom definido e regras + IA.
+
+        [:octicons-arrow-right-24: 5 aulas](ia_na_pratica_com_python/modulo_02_tarefas_uteis/index.md)
 
     -   :material-file-search-outline:{ .middle } __03 · IA com os seus documentos__ <span class="cf-tag">Em breve</span>
 

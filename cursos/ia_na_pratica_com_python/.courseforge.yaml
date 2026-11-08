@@ -9,6 +9,7 @@ slug: ia_na_pratica_com_python
 # Ordem dos módulos no menu (nomes das pastas); os próximos entram aqui conforme forem publicados
 ordem_modulos:
   - modulo_01_api_de_ia
+  - modulo_02_tarefas_uteis
 
 # Ficha do curso — alimenta o Catálogo de cursos (gerado por src/generators/gerar_catalogo.py)
 ordem: 12

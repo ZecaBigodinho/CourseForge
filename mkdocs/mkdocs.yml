@@ -456,4 +456,11 @@ nav:
     - Instruções de sistema e ajustes: ia_na_pratica_com_python/modulo_01_api_de_ia/03_instrucoes_e_ajustes.md
     - Conversa com memória e motores: ia_na_pratica_com_python/modulo_01_api_de_ia/04_conversa_e_motores.md
     - 'Projeto do módulo: resumidor de textos': ia_na_pratica_com_python/modulo_01_api_de_ia/05_projeto_resumidor.md
+  - Tarefas úteis:
+    - Visão Geral: ia_na_pratica_com_python/modulo_02_tarefas_uteis/index.md
+    - Classificar mensagens: ia_na_pratica_com_python/modulo_02_tarefas_uteis/01_classificar_mensagens.md
+    - Extrair dados em JSON: ia_na_pratica_com_python/modulo_02_tarefas_uteis/02_extrair_json.md
+    - Reescrever com tom definido: ia_na_pratica_com_python/modulo_02_tarefas_uteis/03_reescrever_com_tom.md
+    - Regras ou IA?: ia_na_pratica_com_python/modulo_02_tarefas_uteis/04_regras_ou_ia.md
+    - 'Projeto do módulo: triagem de mensagens': ia_na_pratica_com_python/modulo_02_tarefas_uteis/05_projeto_triagem.md
 docs_dir: ../cursos

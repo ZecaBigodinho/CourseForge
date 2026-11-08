@@ -226,4 +226,4 @@ Faça o resumidor aceitar **uma pasta**: resumir todos os `.txt` dela (menos os 
 
 ## ➡️ Próximo passo
 
-**Módulo 02 — Tarefas úteis** *(em produção)*: classificar mensagens, extrair dados em JSON e reescrever textos com tom definido.
+**[Módulo 02 — Tarefas úteis](../modulo_02_tarefas_uteis/index.md)**: classificar mensagens, extrair dados em JSON e reescrever textos com tom definido.
