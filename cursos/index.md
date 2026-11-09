@@ -417,7 +417,7 @@ hide:
 
     Use modelos de IA dentro dos seus programas: resumir, classificar, extrair dados e criar um atendente, com a API do Gemini ou o motor simulado, sem chave.
 
-    Módulos 01 a 03 disponíveis · 15 aulas · resumidor, triagem de mensagens e tira-dúvidas de documentos
+    Módulos 01 a 04 disponíveis · 20 aulas · resumidor, triagem de mensagens, tira-dúvidas de documentos e bateria de testes
 
     [:octicons-arrow-right-24: Começar pelo Módulo 01](ia_na_pratica_com_python/modulo_01_api_de_ia/index.md)
 
@@ -840,9 +840,11 @@ Cada curso termina num projeto para o seu portfólio, que libera o certificado.
 
         [:octicons-arrow-right-24: 5 aulas](ia_na_pratica_com_python/modulo_03_documentos/index.md)
 
-    -   :material-shield-check-outline:{ .middle } __04 · Segurança, custos e testes__ <span class="cf-tag">Em breve</span>
+    -   :material-shield-check-outline:{ .middle } __04 · Segurança, custos e testes__
 
-        Dados pessoais, prompt injection, limites e testes automáticos.
+        Dados pessoais e LGPD, prompt injection, limites e custos, e testes sem gastar a cota.
+
+        [:octicons-arrow-right-24: 5 aulas](ia_na_pratica_com_python/modulo_04_seguranca_custos_testes/index.md)
 
     -   :material-face-agent:{ .middle } __05 · Projeto final__ <span class="cf-tag">Em breve</span>
 

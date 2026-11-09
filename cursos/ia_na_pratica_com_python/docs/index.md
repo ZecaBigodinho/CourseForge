@@ -2,7 +2,7 @@
 
 > **Autor:** Prof. Pedro Paulo IF · [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com)  
 > **Versão:** 0.1.0  
-> **Situação:** em andamento. Módulos 01 a 03 disponíveis; Módulos 04 e 05 em produção  
+> **Situação:** em andamento. Módulos 01 a 04 disponíveis; Módulo 05 em produção  
 > **Ferramentas:** Python 3.11 ou mais novo, VS Code e a API do Gemini (plano gratuito), ou o motor simulado, sem chave
 
 ---
@@ -27,9 +27,9 @@ Classificar mensagens, extrair dados em JSON com esquema e validação, reescrev
 
 Ler PDF e TXT, dividir em trechos, buscar os trechos certos, responder só com base no documento (e dizer "não encontrei"), citar a fonte e avaliar a busca. Projeto: **tira-dúvidas do regulamento** da escola. [Acessar o módulo](../modulo_03_documentos/index.md)
 
-### Módulo 04 — Segurança, custos e testes 🛠️ em produção
+### Módulo 04 — Segurança, custos e testes ✅ disponível
 
-Dados pessoais e LGPD, *prompt injection* com exemplos inofensivos, limites e erros da API, testes automáticos. Projeto: a **bateria de testes** do atendente.
+Dados pessoais e LGPD (o que nunca enviar, máscaras e apelidos), *prompt injection* com exemplos inofensivos e defesas em camadas, erros, limites e custos da API, testes automáticos com o pytest e IAs falsas. Projeto: a **bateria de testes** do atendente, com um rascunho seguro dele. [Acessar o módulo](../modulo_04_seguranca_custos_testes/index.md)
 
 ### Módulo 05 — Projeto final 🛠️ em produção
 

@@ -11,6 +11,7 @@ ordem_modulos:
   - modulo_01_api_de_ia
   - modulo_02_tarefas_uteis
   - modulo_03_documentos
+  - modulo_04_seguranca_custos_testes
 
 # Ficha do curso — alimenta o Catálogo de cursos (gerado por src/generators/gerar_catalogo.py)
 ordem: 12

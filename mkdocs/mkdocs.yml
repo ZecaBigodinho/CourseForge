@@ -470,4 +470,11 @@ nav:
     - Buscar os trechos certos: ia_na_pratica_com_python/modulo_03_documentos/03_buscar_trechos.md
     - Responder só com base no documento: ia_na_pratica_com_python/modulo_03_documentos/04_responder_com_fonte.md
     - 'Projeto do módulo: tira-dúvidas do regulamento': ia_na_pratica_com_python/modulo_03_documentos/05_projeto_tira_duvidas.md
+  - Segurança, custos e testes:
+    - Visão Geral: ia_na_pratica_com_python/modulo_04_seguranca_custos_testes/index.md
+    - 'Dados pessoais: o que nunca enviar': ia_na_pratica_com_python/modulo_04_seguranca_custos_testes/01_dados_pessoais.md
+    - 'Prompt injection: quando a mensagem tenta dar ordens': ia_na_pratica_com_python/modulo_04_seguranca_custos_testes/02_prompt_injection.md
+    - Limites, erros e custos: ia_na_pratica_com_python/modulo_04_seguranca_custos_testes/03_limites_erros_custos.md
+    - Testes automáticos com o pytest: ia_na_pratica_com_python/modulo_04_seguranca_custos_testes/04_testes_automaticos.md
+    - 'Projeto do módulo: bateria de testes do atendente': ia_na_pratica_com_python/modulo_04_seguranca_custos_testes/05_projeto_bateria_de_testes.md
 docs_dir: ../cursos
