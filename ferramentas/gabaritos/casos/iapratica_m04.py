@@ -56,7 +56,7 @@ PYTEST = """
 import subprocess, sys
 def pytest(*alvos):
     r = subprocess.run([sys.executable, '-m', 'pytest', '-q', '-p', 'no:cacheprovider', *alvos],
-                       capture_output=True, text=True, encoding='utf-8')
+                       capture_output=True, text=True, encoding='utf-8', errors='replace')
     print(r.stdout[-3000:], r.stderr[-2000:])
     return r.stdout.strip().splitlines()[-1]
 """

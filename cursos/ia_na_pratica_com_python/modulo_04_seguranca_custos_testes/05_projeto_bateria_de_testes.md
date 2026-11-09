@@ -14,7 +14,7 @@ Ao final desta aula, você terá:
 - Uma **bateria de testes** em CSV, que roda com ou sem IA e grava um **relatório**.
 - **Testes automáticos** do caminho com IA, sem chamar a API.
 
-O Módulo 05 ([ementa](../docs/index.md#ementa)) completa o atendente (planilha, interface e entrega) e usa esta bateria para provar que ele funciona.
+O [Módulo 05](../modulo_05_projeto_final/index.md) completa o atendente (planilha, interface e entrega) e usa esta bateria para provar que ele funciona.
 
 ## Pré-requisitos
 
@@ -506,4 +506,4 @@ Escreva um teste que garante que `main(["casos_atendente.csv", "--com-ia"])` **s
 
 ## ➡️ Próximo passo
 
-**Módulo 05 — Projeto final** *(em produção)*: o Atendente da Padaria Pão Quente completo, com planilha, interface e a entrega com o relatório desta bateria.
+**[Módulo 05 — Projeto final](../modulo_05_projeto_final/index.md)**: o Atendente da Padaria Pão Quente completo, com planilha, interface e a entrega com o relatório desta bateria.

@@ -9,7 +9,7 @@ hide:
 
 <div class="cf-slider__trilho" tabindex="0" role="region" aria-roledescription="carrossel" aria-label="Cursos em destaque" markdown>
 
-<section class="cf-slide" aria-roledescription="slide" aria-label="1 de 10" markdown>
+<section class="cf-slide" aria-roledescription="slide" aria-label="1 de 11" markdown>
 
 <div class="cf-slide__texto" markdown>
 
@@ -35,7 +35,7 @@ hide:
 
 </section>
 
-<section class="cf-slide cf-slide--python" aria-roledescription="slide" aria-label="2 de 10" markdown>
+<section class="cf-slide cf-slide--python" aria-roledescription="slide" aria-label="2 de 11" markdown>
 
 <div class="cf-slide__texto" markdown>
 
@@ -61,7 +61,7 @@ hide:
 
 </section>
 
-<section class="cf-slide cf-slide--web" aria-roledescription="slide" aria-label="3 de 10" markdown>
+<section class="cf-slide cf-slide--web" aria-roledescription="slide" aria-label="3 de 11" markdown>
 
 <div class="cf-slide__texto" markdown>
 
@@ -87,7 +87,7 @@ hide:
 
 </section>
 
-<section class="cf-slide cf-slide--java" aria-roledescription="slide" aria-label="4 de 10" markdown>
+<section class="cf-slide cf-slide--java" aria-roledescription="slide" aria-label="4 de 11" markdown>
 
 <div class="cf-slide__texto" markdown>
 
@@ -113,7 +113,7 @@ hide:
 
 </section>
 
-<section class="cf-slide cf-slide--ia" aria-roledescription="slide" aria-label="5 de 10" markdown>
+<section class="cf-slide cf-slide--ia" aria-roledescription="slide" aria-label="5 de 11" markdown>
 
 <div class="cf-slide__texto" markdown>
 
@@ -139,7 +139,7 @@ hide:
 
 </section>
 
-<section class="cf-slide cf-slide--office" aria-roledescription="slide" aria-label="6 de 10" markdown>
+<section class="cf-slide cf-slide--office" aria-roledescription="slide" aria-label="6 de 11" markdown>
 
 <div class="cf-slide__texto" markdown>
 
@@ -165,7 +165,7 @@ hide:
 
 </section>
 
-<section class="cf-slide cf-slide--canva" aria-roledescription="slide" aria-label="7 de 10" markdown>
+<section class="cf-slide cf-slide--canva" aria-roledescription="slide" aria-label="7 de 11" markdown>
 
 <div class="cf-slide__texto" markdown>
 
@@ -191,7 +191,7 @@ hide:
 
 </section>
 
-<section class="cf-slide cf-slide--corel" aria-roledescription="slide" aria-label="8 de 10" markdown>
+<section class="cf-slide cf-slide--corel" aria-roledescription="slide" aria-label="8 de 11" markdown>
 
 <div class="cf-slide__texto" markdown>
 
@@ -217,7 +217,7 @@ hide:
 
 </section>
 
-<section class="cf-slide cf-slide--seguranca" aria-roledescription="slide" aria-label="9 de 10" markdown>
+<section class="cf-slide cf-slide--seguranca" aria-roledescription="slide" aria-label="9 de 11" markdown>
 
 <div class="cf-slide__texto" markdown>
 
@@ -243,7 +243,7 @@ hide:
 
 </section>
 
-<section class="cf-slide cf-slide--automacao" aria-roledescription="slide" aria-label="10 de 10" markdown>
+<section class="cf-slide cf-slide--automacao" aria-roledescription="slide" aria-label="10 de 11" markdown>
 
 <div class="cf-slide__texto" markdown>
 
@@ -266,6 +266,32 @@ hide:
 </div>
 
 <div class="cf-slide__arte cf-arte--janela" aria-hidden="true"><img class="sem-zoom" src="assets/home/automacao.svg" alt="" decoding="async"></div>
+
+</section>
+
+<section class="cf-slide cf-slide--iapratica" aria-roledescription="slide" aria-label="11 de 11" markdown>
+
+<div class="cf-slide__texto" markdown>
+
+
+<p class="cf-hero__eyebrow">Programação · IA na prática com Python</p>
+
+<p class="cf-hero__title">Coloque a IA dentro dos seus programas</p>
+
+<p class="cf-hero__lead">Resumir, classificar, responder com base em documentos e criar um atendente seguro, com a API do Gemini ou sem chave, tudo testado.</p>
+
+[Começar pelo Módulo 01](ia_na_pratica_com_python/modulo_01_api_de_ia/index.md){ .md-button .md-button--primary }
+[Conhecer o curso](ia_na_pratica_com_python/docs/index.md){ .md-button }
+
+<ul class="cf-hero__badges" aria-label="Resumo do curso">
+  <li>5 módulos</li>
+  <li>25 aulas</li>
+  <li>Sem gastar a cota</li>
+</ul>
+
+</div>
+
+<div class="cf-slide__arte cf-arte--janela" aria-hidden="true"><img class="sem-zoom" src="assets/home/iapratica.svg" alt="" decoding="async"></div>
 
 </section>
 
@@ -411,13 +437,13 @@ hide:
 
 -   :material-robot-love-outline:{ .lg .middle } __IA na prática com Python__
 
-    <span class="cf-tag cf-tag--ok">Em andamento</span>
+    <span class="cf-tag cf-tag--ok">Disponível</span>
 
     ---
 
     Use modelos de IA dentro dos seus programas: resumir, classificar, extrair dados e criar um atendente, com a API do Gemini ou o motor simulado, sem chave.
 
-    Módulos 01 a 04 disponíveis · 20 aulas · resumidor, triagem de mensagens, tira-dúvidas de documentos e bateria de testes
+    5 módulos · 25 aulas · do resumidor ao Atendente da Padaria, com segurança e testes
 
     [:octicons-arrow-right-24: Começar pelo Módulo 01](ia_na_pratica_com_python/modulo_01_api_de_ia/index.md)
 
@@ -846,9 +872,11 @@ Cada curso termina num projeto para o seu portfólio, que libera o certificado.
 
         [:octicons-arrow-right-24: 5 aulas](ia_na_pratica_com_python/modulo_04_seguranca_custos_testes/index.md)
 
-    -   :material-face-agent:{ .middle } __05 · Projeto final__ <span class="cf-tag">Em breve</span>
+    -   :material-face-agent:{ .middle } __05 · Projeto final__
 
-        O Atendente da Padaria Pão Quente.
+        O Atendente da Padaria Pão Quente: encomendas com regras, planilha, terminal e janela.
+
+        [:octicons-arrow-right-24: 5 aulas](ia_na_pratica_com_python/modulo_05_projeto_final/index.md)
 
     </div>
 
@@ -871,7 +899,7 @@ Cada curso termina num projeto para o seu portfólio, que libera o certificado.
     | **Java** | O [cadastro de alunos com arquivo CSV](java/modulo_03_colecoes_e_arquivos/05_projeto_cadastro_csv.md) (Módulo 03). |
     | **Segurança digital** | O [Guia de segurança da minha família](seguranca_digital/modulo_05_projeto_final/05_entrega_e_certificado.md) (Módulo 05), conversado com a família e apresentado para a turma. |
     | **Automação com Python** | A [Secretaria automática](automacao_com_python/modulo_05_projeto_final/05_entrega_e_certificado.md) (Módulo 05), demonstrada, com testes e README. |
-    | **IA na prática com Python** | O Atendente da Padaria Pão Quente (Módulo 05, em produção). |
+    | **IA na prática com Python** | O [Atendente da Padaria Pão Quente](ia_na_pratica_com_python/modulo_05_projeto_final/05_entrega_e_certificado.md) (Módulo 05), demonstrado, com os testes, a bateria e o README. |
 
 ## Perguntas frequentes
 

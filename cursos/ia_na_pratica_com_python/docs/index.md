@@ -1,8 +1,8 @@
 # IA na prática com Python
 
 > **Autor:** Prof. Pedro Paulo IF · [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com)  
-> **Versão:** 0.1.0  
-> **Situação:** em andamento. Módulos 01 a 04 disponíveis; Módulo 05 em produção  
+> **Versão:** 1.0.0  
+> **Situação:** completo. 5 módulos, 25 aulas, todos os exemplos testados automaticamente, sem chamar a API  
 > **Ferramentas:** Python 3.11 ou mais novo, VS Code e a API do Gemini (plano gratuito), ou o motor simulado, sem chave
 
 ---
@@ -31,14 +31,14 @@ Ler PDF e TXT, dividir em trechos, buscar os trechos certos, responder só com b
 
 Dados pessoais e LGPD (o que nunca enviar, máscaras e apelidos), *prompt injection* com exemplos inofensivos e defesas em camadas, erros, limites e custos da API, testes automáticos com o pytest e IAs falsas. Projeto: a **bateria de testes** do atendente, com um rascunho seguro dele. [Acessar o módulo](../modulo_04_seguranca_custos_testes/index.md)
 
-### Módulo 05 — Projeto final 🛠️ em produção
+### Módulo 05 — Projeto final ✅ disponível
 
-O **Atendente da Padaria Pão Quente**: lê as mensagens dos clientes, classifica, responde só com base no cardápio e no horário e registra tudo numa planilha.
+O **Atendente da Padaria Pão Quente**: responde só com base no cardápio e no horário, anota encomendas com regras (o total é calculado pelo programa), passa para a equipe o que precisa de uma pessoa e registra tudo numa planilha, em lote, no terminal ou numa janela. [Acessar o módulo](../modulo_05_projeto_final/index.md)
 
 ## Certificado
 
 !!! warning "Um único requisito"
-    O certificado é liberado com a entrega e a demonstração do **Atendente da Padaria Pão Quente**, do Módulo 05.
+    O certificado é liberado com a entrega e a demonstração do **[Atendente da Padaria Pão Quente](../modulo_05_projeto_final/05_entrega_e_certificado.md)**, do Módulo 05: funcionando com as mensagens de treino, com os testes e a bateria (com o relatório), o README e pelo menos uma melhoria própria.
 
 ## O que você vai precisar
 

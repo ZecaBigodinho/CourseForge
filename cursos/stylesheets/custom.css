@@ -906,3 +906,6 @@
 .md-tabs .cf-abas__seta[hidden] { display: none; }
 .md-tabs .cf-abas__seta--esquerda { left: 0.2rem; }
 .md-tabs .cf-abas__seta--direita { right: 0.2rem; }
+
+/* Slide do curso IA na prática com Python */
+.md-typeset .cf-slide--iapratica { background: radial-gradient(circle at 85% 15%, rgba(255, 203, 107, 0.28), transparent 45%), linear-gradient(135deg, #3B3496 0%, var(--cf-roxo-escuro) 100%); }
