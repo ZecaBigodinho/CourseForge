@@ -470,4 +470,18 @@ nav:
     - Buscar os trechos certos: ia_na_pratica_com_python/modulo_03_documentos/03_buscar_trechos.md
     - Responder só com base no documento: ia_na_pratica_com_python/modulo_03_documentos/04_responder_com_fonte.md
     - 'Projeto do módulo: tira-dúvidas do regulamento': ia_na_pratica_com_python/modulo_03_documentos/05_projeto_tira_duvidas.md
+  - Segurança, custos e testes:
+    - Visão Geral: ia_na_pratica_com_python/modulo_04_seguranca_custos_testes/index.md
+    - 'Dados pessoais: o que nunca enviar': ia_na_pratica_com_python/modulo_04_seguranca_custos_testes/01_dados_pessoais.md
+    - 'Prompt injection: quando a mensagem tenta dar ordens': ia_na_pratica_com_python/modulo_04_seguranca_custos_testes/02_prompt_injection.md
+    - Limites, erros e custos: ia_na_pratica_com_python/modulo_04_seguranca_custos_testes/03_limites_erros_custos.md
+    - Testes automáticos com o pytest: ia_na_pratica_com_python/modulo_04_seguranca_custos_testes/04_testes_automaticos.md
+    - 'Projeto do módulo: bateria de testes do atendente': ia_na_pratica_com_python/modulo_04_seguranca_custos_testes/05_projeto_bateria_de_testes.md
+  - Projeto final:
+    - Visão Geral: ia_na_pratica_com_python/modulo_05_projeto_final/index.md
+    - Planejando o atendente: ia_na_pratica_com_python/modulo_05_projeto_final/01_planejando_o_atendente.md
+    - Encomendas com regras: ia_na_pratica_com_python/modulo_05_projeto_final/02_encomendas_com_regras.md
+    - Registro e linha de comando: ia_na_pratica_com_python/modulo_05_projeto_final/03_registro_e_linha_de_comando.md
+    - A janela do atendente: ia_na_pratica_com_python/modulo_05_projeto_final/04_a_janela.md
+    - Entrega e certificado: ia_na_pratica_com_python/modulo_05_projeto_final/05_entrega_e_certificado.md
 docs_dir: ../cursos

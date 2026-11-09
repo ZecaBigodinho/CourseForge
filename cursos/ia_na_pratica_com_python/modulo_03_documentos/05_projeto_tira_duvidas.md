@@ -284,4 +284,4 @@ Acrescente à busca um dicionário de **sinônimos** do assunto escolar (`atrasa
 
 ## ➡️ Próximo passo
 
-**Módulo 04 — Segurança, custos e testes** *(em produção)*: dados pessoais e LGPD, *prompt injection*, limites e erros da API e a bateria de testes do atendente.
+**[Módulo 04 — Segurança, custos e testes](../modulo_04_seguranca_custos_testes/index.md)**: dados pessoais e LGPD, *prompt injection*, limites e erros da API e a bateria de testes do atendente.

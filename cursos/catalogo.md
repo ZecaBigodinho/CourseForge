@@ -169,7 +169,7 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 
 -   :material-robot-love-outline:{ .lg .middle } __IA na prática com Python__
 
-    <span class="cf-tag cf-tag--ok">Em andamento</span>
+    <span class="cf-tag cf-tag--ok">Disponível</span>
 
     ---
 
@@ -436,7 +436,7 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 
 [Ir para o curso](automacao_com_python/docs/index.md)
 
-### IA na prática com Python <span class="cf-tag cf-tag--ok">Em andamento</span>
+### IA na prática com Python <span class="cf-tag cf-tag--ok">Disponível</span>
 
 - **Nível:** Intermediário
 - **Carga horária:** 40 h

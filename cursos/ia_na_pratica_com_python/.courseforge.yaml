@@ -3,7 +3,7 @@ descricao: Use modelos de IA dentro dos seus programas — resumir, classificar,
 autor: Pedro Paulo IF
 num_modulos: 5
 data_criacao: '2026-11-08'
-versao: 0.1.0
+versao: 1.0.0
 tags: []
 slug: ia_na_pratica_com_python
 # Ordem dos módulos no menu (nomes das pastas); os próximos entram aqui conforme forem publicados
@@ -11,10 +11,12 @@ ordem_modulos:
   - modulo_01_api_de_ia
   - modulo_02_tarefas_uteis
   - modulo_03_documentos
+  - modulo_04_seguranca_custos_testes
+  - modulo_05_projeto_final
 
 # Ficha do curso — alimenta o Catálogo de cursos (gerado por src/generators/gerar_catalogo.py)
 ordem: 12
-status: em_andamento             # disponivel | em_andamento | em_breve
+status: disponivel               # disponivel | em_andamento | em_breve
 ficha:
   icone: material-robot-love-outline
   nivel: Intermediário
