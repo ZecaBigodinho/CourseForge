@@ -42,7 +42,12 @@ Com a ferramenta **Texto** (`F8`):
 | Efeitos (ajustar ao caminho, envelope, converter em curvas) | Sim | Limitados |
 
 !!! warning "Texto que não cabe na moldura"
-    Se o parágrafo for maior que a moldura, o final **some** da página, e a moldura avisa mudando de cor. Aumente a moldura (arraste a alça do meio de baixo) ou diminua a letra. Antes de mandar para a gráfica, confira sempre se o texto está **inteiro**.
+    Se o parágrafo for maior que a moldura, o final **some** da página, e a moldura fica **vermelha e tracejada**. Aumente a moldura (arraste a alça do meio de baixo) ou diminua a letra. Antes de mandar para a gráfica, confira sempre se o texto está **inteiro**.
+
+    <figure markdown="span">
+      ![Texto de parágrafo selecionado cuja moldura está vermelha e tracejada: o texto termina em salgados com 1 dia de, e o resto da frase não aparece](assets/04_paragrafo_nao_cabe.webp){ loading=lazy }
+      <figcaption>(1) Moldura <strong>vermelha</strong>: o resto do texto está escondido.</figcaption>
+    </figure>
 
 ---
 

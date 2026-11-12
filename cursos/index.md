@@ -196,18 +196,18 @@ hide:
 <div class="cf-slide__texto" markdown>
 
 
-<p class="cf-hero__eyebrow">Design · CorelDRAW <span class="cf-hero__selo">Em andamento</span></p>
+<p class="cf-hero__eyebrow">Design · CorelDRAW</p>
 
 <p class="cf-hero__title">Do cartão de visita ao arquivo pronto para a gráfica</p>
 
-<p class="cf-hero__lead">Formas, cores, curvas, PowerTRACE e um logotipo vetorial, com o Inkscape gratuito indicado em cada aula.</p>
+<p class="cf-hero__lead">Formas, curvas, PowerTRACE, um logotipo vetorial e o PDF que a gráfica não devolve, com o Inkscape gratuito indicado em cada aula.</p>
 
 [Começar pelo Módulo 01](coreldraw/modulo_01_primeiros_passos/index.md){ .md-button .md-button--primary }
 [Conhecer o curso](coreldraw/docs/index.md){ .md-button }
 
 <ul class="cf-hero__badges" aria-label="Resumo do curso">
-  <li>2 módulos no ar</li>
-  <li>10 aulas</li>
+  <li>3 módulos</li>
+  <li>15 aulas</li>
   <li>Inkscape gratuito</li>
 </ul>
 
@@ -353,13 +353,13 @@ hide:
 
 -   :material-vector-bezier:{ .lg .middle } __CorelDRAW__
 
-    <span class="cf-tag cf-tag--ok">Em andamento</span>
+    <span class="cf-tag cf-tag--ok">Disponível</span>
 
     ---
 
     CorelDRAW do zero, em projetos: cartão de visita, logotipo e arquivos prontos para a gráfica — com o Inkscape gratuito em cada aula.
 
-    Módulos 01 e 02 disponíveis · 10 aulas · do cartão de visita ao logotipo
+    3 módulos · 15 aulas · do cartão de visita ao kit para a gráfica
 
     [:octicons-arrow-right-24: Começar pelo Módulo 01](coreldraw/modulo_01_primeiros_passos/index.md)
 
@@ -766,9 +766,11 @@ Cada curso termina num projeto para o seu portfólio, que libera o certificado.
 
         [:octicons-arrow-right-24: 5 aulas](coreldraw/modulo_02_vetor_na_pratica/index.md)
 
-    -   :material-printer-outline:{ .middle } __03 · Arquivos para gráfica__ <span class="cf-tag">Em breve</span>
+    -   :material-printer-outline:{ .middle } __03 · Arquivos para gráfica__
 
-        CMYK, sangria, marcas de corte, adesivo e o kit para a gráfica.
+        CMYK, sangria, marcas de corte, PowerClip, adesivo e o kit para a gráfica em PDF/X.
+
+        [:octicons-arrow-right-24: 5 aulas](coreldraw/modulo_03_arquivos_para_grafica/index.md)
 
     </div>
 
@@ -892,7 +894,7 @@ Cada curso termina num projeto para o seu portfólio, que libera o certificado.
     | **Pacote Office** | O [Projeto Final integrado](pacote_office/modulo_05_projeto_final/index.md) (Módulo 05): planilha, currículo, cartas e apresentação pessoal. |
     | **Introdução à IA** | O [mini-assistente](introducao_a_ia/modulo_05_projeto_mini_assistente/index.md) (Módulo 05), demonstrado, com o README e o relatório de responsabilidade. |
     | **Canva** | O portfólio com os projetos dos [Módulos 02](canva/modulo_02_projetos_negocio/index.md) e [03](canva/modulo_03_eventos_e_redes/index.md). |
-    | **CorelDRAW** | O [logotipo](coreldraw/modulo_02_vetor_na_pratica/05_projeto_logotipo.md) do Módulo 02 e o kit para a gráfica do Módulo 03 (em produção). |
+    | **CorelDRAW** | O [logotipo](coreldraw/modulo_02_vetor_na_pratica/05_projeto_logotipo.md) do Módulo 02 e o [kit para a gráfica](coreldraw/modulo_03_arquivos_para_grafica/05_projeto_kit_grafica.md) do Módulo 03. |
     | **Desenvolvimento Web** | O [portfólio publicado](desenvolvimento_web/modulo_04_publicar/04_projeto_portfolio.md) no GitHub Pages (Módulo 04). |
     | **TypeScript** | A [lista de tarefas em TypeScript](typescript/modulo_03_navegador/04_projeto_lista_de_tarefas.md) (Módulo 03), compilando sem erros no modo `strict`. |
     | **React** | O [catálogo com busca e carrinho](react/modulo_03_aplicacao/04_projeto_catalogo.md) (Módulo 03), publicado na internet. |

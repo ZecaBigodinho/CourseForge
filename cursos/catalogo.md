@@ -71,14 +71,14 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 
 -   :material-vector-bezier:{ .lg .middle } __CorelDRAW__
 
-    <span class="cf-tag cf-tag--ok">Em andamento</span>
+    <span class="cf-tag cf-tag--ok">Disponível</span>
 
     ---
 
     CorelDRAW do zero, em projetos — cartão de visita, logotipo e arquivos prontos para a gráfica, com equivalentes no Inkscape gratuito.
 
     **Nível:** Iniciante  
-    **Carga horária:** 18 h  
+    **Carga horária:** 19 h  
     **Certificado:** Entrega do logotipo do Módulo 02 e do kit para a gráfica do Módulo 03.  
 
     [:octicons-arrow-right-24: Acessar o curso](coreldraw/docs/index.md)
@@ -278,10 +278,10 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 
 [Ir para o curso](canva/docs/index.md)
 
-### CorelDRAW <span class="cf-tag cf-tag--ok">Em andamento</span>
+### CorelDRAW <span class="cf-tag cf-tag--ok">Disponível</span>
 
 - **Nível:** Iniciante
-- **Carga horária:** 18 h
+- **Carga horária:** 19 h
 - **Para quem é:** Alunos e pequenos empreendedores que querem criar peças vetoriais — cartões, logotipos, adesivos e panfletos — e mandar o arquivo certo para a gráfica.
 - **Certificado:** Entrega do logotipo do Módulo 02 e do kit para a gráfica do Módulo 03.
 - **Autor:** Pedro Paulo IF

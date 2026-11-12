@@ -1,7 +1,7 @@
 # Canva
 
 > **Autor:** Prof. Pedro Paulo IF · [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com)  
-> **Versão:** 0.1.0  
+> **Versão:** 1.0.0  
 > **Situação:** disponível — 3 módulos, 13 aulas  
 > **Plano nas aulas:** Canva **gratuito**, no navegador, em português
 

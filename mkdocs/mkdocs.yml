@@ -277,6 +277,13 @@ nav:
     - 'PowerTRACE: de imagem para vetor': coreldraw/modulo_02_vetor_na_pratica/03_powertrace.md
     - Texto artístico × texto de parágrafo: coreldraw/modulo_02_vetor_na_pratica/04_texto_artistico_e_paragrafo.md
     - 'Projeto do módulo: logotipo': coreldraw/modulo_02_vetor_na_pratica/05_projeto_logotipo.md
+  - Arquivos para gráfica:
+    - Visão Geral: coreldraw/modulo_03_arquivos_para_grafica/index.md
+    - 'Cores para impressão: CMYK × RGB': coreldraw/modulo_03_arquivos_para_grafica/01_cores_para_impressao.md
+    - Sangria e marcas de corte: coreldraw/modulo_03_arquivos_para_grafica/02_sangria_e_marcas_de_corte.md
+    - 'PowerClip: foto dentro de forma': coreldraw/modulo_03_arquivos_para_grafica/03_powerclip.md
+    - Adesivo com linha de corte: coreldraw/modulo_03_arquivos_para_grafica/04_adesivo_com_linha_de_corte.md
+    - 'Projeto do módulo: kit para a gráfica': coreldraw/modulo_03_arquivos_para_grafica/05_projeto_kit_grafica.md
 - Desenvolvimento Web:
   - Apresentação do curso: desenvolvimento_web/docs/index.md
   - HTML:
