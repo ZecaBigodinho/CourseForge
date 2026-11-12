@@ -78,7 +78,7 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
     CorelDRAW do zero, em projetos — cartão de visita, logotipo e arquivos prontos para a gráfica, com equivalentes no Inkscape gratuito.
 
     **Nível:** Iniciante  
-    **Carga horária:** 19 h  
+    **Carga horária:** 27 h  
     **Certificado:** Entrega do logotipo do Módulo 02 e do kit para a gráfica do Módulo 03.  
 
     [:octicons-arrow-right-24: Acessar o curso](coreldraw/docs/index.md)
@@ -281,7 +281,7 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 ### CorelDRAW <span class="cf-tag cf-tag--ok">Disponível</span>
 
 - **Nível:** Iniciante
-- **Carga horária:** 19 h
+- **Carga horária:** 27 h
 - **Para quem é:** Alunos e pequenos empreendedores que querem criar peças vetoriais — cartões, logotipos, adesivos e panfletos — e mandar o arquivo certo para a gráfica.
 - **Certificado:** Entrega do logotipo do Módulo 02 e do kit para a gráfica do Módulo 03.
 - **Autor:** Pedro Paulo IF
@@ -298,6 +298,7 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 - Montar um cartão de visita e salvá-lo em .cdr, PDF e PNG.
 - Trabalhar com curvas, combinações de formas e vetorização de imagens.
 - Preparar arquivos para a gráfica com CMYK, sangria e marcas de corte.
+- Produzir peças comerciais, como catálogo com página principal, crachás por impressão mesclada, posts, QR code e faixa.
 
 [Ir para o curso](coreldraw/docs/index.md)
 

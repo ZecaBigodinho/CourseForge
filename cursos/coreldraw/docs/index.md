@@ -1,8 +1,8 @@
 # CorelDRAW
 
 > **Autor:** Prof. Pedro Paulo IF · [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com)  
-> **Versão:** 1.0.0  
-> **Situação:** completo. 3 módulos, 15 aulas, conferidas no CorelDRAW 2026  
+> **Versão:** 1.1.0  
+> **Situação:** completo. 4 módulos, 20 aulas, conferidas no CorelDRAW 2026  
 > **Programa nas aulas:** CorelDRAW Graphics Suite 2026, em português, no Windows
 
 ---
@@ -29,6 +29,10 @@ Curvas e Bézier; soldar, aparar e interseção; PowerTRACE (transformar uma ima
 ### Módulo 03 — Arquivos para gráfica ✅ disponível
 
 CMYK × RGB, sangria e marcas de corte, PowerClip (foto dentro de forma) e adesivo com linha de corte. Projeto: o **kit para a gráfica**, com um panfleto frente e verso em PDF/X-4. [Acessar o módulo](../modulo_03_arquivos_para_grafica/index.md)
+
+### Módulo 04 — Peças comerciais ✅ disponível
+
+Catálogo de várias páginas com página principal e numeração, crachás com impressão mesclada a partir de uma planilha, post e story em RGB e pixels, faixa em lona com ilhós e QR code. Projeto: o **kit de lançamento** de um negócio. [Acessar o módulo](../modulo_04_pecas_comerciais/index.md)
 
 ## Certificado
 

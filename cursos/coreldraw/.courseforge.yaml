@@ -1,9 +1,9 @@
 nome: CorelDRAW
 descricao: CorelDRAW do zero, em projetos — cartão de visita, logotipo e arquivos prontos para a gráfica, com equivalentes no Inkscape gratuito.
 autor: Pedro Paulo IF
-num_modulos: 3
+num_modulos: 4
 data_criacao: '2026-11-06'
-versao: 1.0.0
+versao: 1.1.0
 tags: []
 slug: coreldraw
 # Ordem dos módulos no menu (nomes das pastas); os próximos entram aqui conforme forem publicados
@@ -11,6 +11,7 @@ ordem_modulos:
   - modulo_01_primeiros_passos
   - modulo_02_vetor_na_pratica
   - modulo_03_arquivos_para_grafica
+  - modulo_04_pecas_comerciais
 
 # Ficha do curso — alimenta o Catálogo de cursos (gerado por src/generators/gerar_catalogo.py)
 ordem: 5
@@ -18,7 +19,7 @@ status: disponivel               # disponivel | em_andamento | em_breve
 ficha:
   icone: material-vector-bezier
   nivel: Iniciante
-  carga_horaria: 19 h               # M01 e M02 ~6 h cada; M03 ~7 h (estimativa de 12/11/2026)
+  carga_horaria: 27 h               # M01 e M02 ~6 h cada; M03 ~7 h; M04 ~8 h (estimativa de 12/11/2026)
   publico: Alunos e pequenos empreendedores que querem criar peças vetoriais — cartões, logotipos, adesivos e panfletos — e mandar o arquivo certo para a gráfica.
   certificado: Entrega do logotipo do Módulo 02 e do kit para a gráfica do Módulo 03.
   pre_requisitos:
@@ -30,3 +31,4 @@ ficha:
     - Montar um cartão de visita e salvá-lo em .cdr, PDF e PNG.
     - Trabalhar com curvas, combinações de formas e vetorização de imagens.
     - Preparar arquivos para a gráfica com CMYK, sangria e marcas de corte.
+    - Produzir peças comerciais, como catálogo com página principal, crachás por impressão mesclada, posts, QR code e faixa.

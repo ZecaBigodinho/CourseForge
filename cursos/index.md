@@ -206,8 +206,8 @@ hide:
 [Conhecer o curso](coreldraw/docs/index.md){ .md-button }
 
 <ul class="cf-hero__badges" aria-label="Resumo do curso">
-  <li>3 módulos</li>
-  <li>15 aulas</li>
+  <li>4 módulos</li>
+  <li>20 aulas</li>
   <li>Inkscape gratuito</li>
 </ul>
 
@@ -359,7 +359,7 @@ hide:
 
     CorelDRAW do zero, em projetos: cartão de visita, logotipo e arquivos prontos para a gráfica — com o Inkscape gratuito em cada aula.
 
-    3 módulos · 15 aulas · do cartão de visita ao kit para a gráfica
+    4 módulos · 20 aulas · do cartão de visita às peças comerciais, prontas para a gráfica
 
     [:octicons-arrow-right-24: Começar pelo Módulo 01](coreldraw/modulo_01_primeiros_passos/index.md)
 
@@ -771,6 +771,12 @@ Cada curso termina num projeto para o seu portfólio, que libera o certificado.
         CMYK, sangria, marcas de corte, PowerClip, adesivo e o kit para a gráfica em PDF/X.
 
         [:octicons-arrow-right-24: 5 aulas](coreldraw/modulo_03_arquivos_para_grafica/index.md)
+
+    -   :material-storefront-outline:{ .middle } __04 · Peças comerciais__
+
+        Catálogo com página principal, crachás por impressão mesclada, posts, QR code e faixa.
+
+        [:octicons-arrow-right-24: 5 aulas](coreldraw/modulo_04_pecas_comerciais/index.md)
 
     </div>
 

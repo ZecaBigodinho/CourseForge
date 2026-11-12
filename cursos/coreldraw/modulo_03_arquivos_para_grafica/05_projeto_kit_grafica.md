@@ -214,4 +214,4 @@ Faça o **cartão de visita** do Módulo 01 virar um arquivo para gráfica: 90 �
 
 ## ➡️ Próximo passo
 
-Você terminou o **Módulo 03** e o curso de **CorelDRAW**! Volte ao [índice do módulo](index.md), confira o checklist e entregue o logotipo e o kit para receber o certificado.
+Você terminou o **Módulo 03**! Volte ao [índice do módulo](index.md), confira o checklist e entregue o logotipo e o kit para receber o certificado. Depois, siga para o **[Módulo 04 — Peças comerciais](../modulo_04_pecas_comerciais/index.md)**: catálogo, crachás, posts, QR code e faixa.
