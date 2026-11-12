@@ -383,6 +383,13 @@ button { padding: 8px 12px; border: 0; border-radius: 8px; background: #4f35b5; 
 
 ---
 
+## O resultado
+
+<figure markdown="span">
+  ![Catálogo da Papelaria Ponto Final com a busca, o filtro de categoria, seis produtos com o botão Adicionar ao carrinho e, à direita, o Carrinho (3) com 2 cadernos universitários, 1 kit de lápis grafite, o Total R$ 57,30 e o botão Esvaziar carrinho](assets/04_resultado.webp){ loading=lazy }
+  <figcaption>O caderno foi adicionado duas vezes e o lápis, uma: o carrinho (no <strong>contexto</strong>) junta as quantidades e calcula o total, R$ 57,30.</figcaption>
+</figure>
+
 ## Entrega (requisito do certificado)
 
 1. O **link** do catálogo publicado (`https://seu-usuario.github.io/catalogo/`).

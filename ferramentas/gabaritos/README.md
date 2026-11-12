@@ -30,11 +30,22 @@ Não testado:
 - a formatação exata do Black (VS Code 01, Intermediário), que não está instalado aqui. O teste só confere que o código formatado tem a mesma saída que o original;
 - o Projeto Finalizador e o Git, que têm formato próprio (Exercício com "Solução", Missão da Equipe e Desafio). As soluções foram conferidas só quanto à sintaxe.
 
+## Cursos de Web, TypeScript, React e Java
+
+```bash
+npm install --prefix C:\temp\ts typescript@5.6.3
+set TYPESCRIPT_DIR=C:\temp\ts\node_modules
+python ferramentas/gabaritos/testar_codigo.py
+```
+
+Confere **todos** os blocos de código dessas aulas (os da explicação e os dos gabaritos): **JS** pela sintaxe (`node --check`), **TS/TSX** pela sintaxe (compilador do TypeScript, sem checar tipos) e **Java** compilando com `javac`, junto com as outras classes da mesma aula. Blocos completos (com título de arquivo, `import`/`export` ou classes Java) que falham são **erro**; trechos soltos (um pedaço de JSX, uma linha de exemplo, um exercício "encontre os erros") que não passam nem dentro de uma função viram **aviso**, para conferir à mão. Precisa de `node` e de um JDK 21 no PATH.
+
 ## Arquivos
 
 | Arquivo | Para quê |
 |---|---|
 | `testar.py` | Roda os casos. |
+| `testar_codigo.py` | Confere o código dos cursos de Web, TypeScript, React e Java. |
 | `extrair.py` | Lê gabaritos e blocos de código das aulas. |
 | `casos/*.py` | Um arquivo por grupo de aulas: entrada de teste e verificações de cada gabarito. |
 | `_gui.py` | Camada para testar janelas: o `mainloop()` volta na hora, as caixas de diálogo respondem sozinhas e há helpers como `clicar("Salvar")`. |

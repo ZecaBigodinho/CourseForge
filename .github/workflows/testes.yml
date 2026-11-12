@@ -1,6 +1,7 @@
 # Confere o site e os gabaritos a cada mudança na main e em cada PR.
 # - pytest: testes da plataforma (gerador do site, imagens, ênfase no Markdown...)
 # - gabaritos: roda o código de cada gabarito das aulas (ferramentas/gabaritos/README.md)
+# - código de Web, TypeScript, React e Java: sintaxe de JS/TS/TSX e compilação Java (testar_codigo.py)
 # - build --strict: o site compila sem link quebrado
 # Roda no Windows, o mesmo sistema do professor e dos alunos; os testes de
 # Interfaces e Banco abrem janelas Tkinter por um instante.
@@ -45,6 +46,22 @@ jobs:
 
       - name: Gabaritos das aulas
         run: python ferramentas/gabaritos/testar.py
+
+      # Código dos cursos de Web, TypeScript, React e Java (ferramentas/gabaritos/testar_codigo.py)
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Código de Web, TypeScript, React e Java
+        run: |
+          npm install --prefix "$env:RUNNER_TEMP\ts" typescript@5.6.3 --no-audit --no-fund
+          $env:TYPESCRIPT_DIR = "$env:RUNNER_TEMP\ts\node_modules"
+          python ferramentas/gabaritos/testar_codigo.py
 
       - name: Build do site (--strict)
         run: python -m mkdocs build --strict -f mkdocs/mkdocs.yml

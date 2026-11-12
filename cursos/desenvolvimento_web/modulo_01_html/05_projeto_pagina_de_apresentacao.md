@@ -114,6 +114,13 @@ Crie a pasta `apresentacao/` com `index.html` e uma subpasta `imagens/`. Use est
 
 ---
 
+## O resultado
+
+<figure markdown="span">
+  ![A página de apresentação aberta no navegador, sem nenhum estilo: o nome Ana Souza como título, a navegação Sobre, Habilidades e Contato em lista, a foto, os textos, a lista do que está aprendendo, a tabela do plano de estudos e o formulário de contato](assets/05_resultado.webp){ loading=lazy }
+  <figcaption>A página no navegador, só com HTML: o visual é o padrão do navegador (letra com serifa, lista com marcadores). Tudo está no lugar e na ordem certa; a aparência vem no Módulo 02, com CSS. A foto do exemplo é uma ilustração.</figcaption>
+</figure>
+
 ## Validar
 
 1. Abra o **[Validador do W3C](https://validator.w3.org/#validate_by_input)** ➔ guia **Validate by Direct Input**.

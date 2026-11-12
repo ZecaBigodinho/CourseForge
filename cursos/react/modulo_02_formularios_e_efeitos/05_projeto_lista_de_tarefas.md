@@ -274,6 +274,13 @@ button:disabled { background: #bbb; cursor: default; }
 
 ---
 
+## O resultado
+
+<figure markdown="span">
+  ![A lista de tarefas em React com os filtros Todas, A fazer e Feitas, três tarefas com caixa de marcar e botão Apagar, a primeira riscada, e o resumo 1 de 3 tarefas feitas](assets/05_resultado.webp){ loading=lazy }
+  <figcaption>Três tarefas adicionadas pelo formulário e uma marcada como feita. Com o <code>useEffect</code> salvando no <code>localStorage</code>, elas continuam lá ao recarregar a página.</figcaption>
+</figure>
+
 ## Entrega
 
 1. A pasta `src/` compactada (sem `node_modules/`).

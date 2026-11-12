@@ -1,7 +1,7 @@
 # TypeScript
 
 > **Autor:** Prof. Pedro Paulo IF · [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com)  
-> **Versão:** 0.1.0  
+> **Versão:** 1.0.0  
 > **Situação:** disponível — 3 módulos, 14 aulas  
 > **Ferramentas:** VS Code, Node.js e o compilador do TypeScript (tudo gratuito)
 
