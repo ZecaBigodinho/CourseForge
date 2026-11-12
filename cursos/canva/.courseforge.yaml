@@ -3,7 +3,7 @@ descricao: Canva gratuito do zero, com projetos reais — catálogo, cardápio, 
 autor: Pedro Paulo IF
 num_modulos: 3
 data_criacao: '2026-11-05'
-versao: 0.1.0
+versao: 1.0.0
 tags: []
 slug: canva
 # Ordem dos módulos no menu (nomes das pastas); os próximos entram aqui conforme forem publicados

@@ -1,8 +1,8 @@
 # CorelDRAW
 
 > **Autor:** Prof. Pedro Paulo IF · [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com)  
-> **Versão:** 0.1.0  
-> **Situação:** em andamento. Módulos 01 e 02 disponíveis; Módulo 03 em produção  
+> **Versão:** 1.0.0  
+> **Situação:** completo. 3 módulos, 15 aulas, conferidas no CorelDRAW 2026  
 > **Programa nas aulas:** CorelDRAW Graphics Suite 2026, em português, no Windows
 
 ---
@@ -26,14 +26,14 @@ A tela de boas-vindas e a interface, documentos (tamanho, unidades e páginas), 
 
 Curvas e Bézier; soldar, aparar e interseção; PowerTRACE (transformar uma imagem em vetor); texto artístico × texto de parágrafo. Projeto: um **logotipo** em vetor e em PNG transparente. [Acessar o módulo](../modulo_02_vetor_na_pratica/index.md)
 
-### Módulo 03 — Arquivos para gráfica 🛠️ em produção
+### Módulo 03 — Arquivos para gráfica ✅ disponível
 
-CMYK × RGB, sangria e marcas de corte, adesivo com linha de corte e panfleto frente e verso. Projeto: o **kit para a gráfica**, com o PDF de impressão.
+CMYK × RGB, sangria e marcas de corte, PowerClip (foto dentro de forma) e adesivo com linha de corte. Projeto: o **kit para a gráfica**, com um panfleto frente e verso em PDF/X-4. [Acessar o módulo](../modulo_03_arquivos_para_grafica/index.md)
 
 ## Certificado
 
 !!! warning "Um único requisito"
-    O certificado é liberado ao entregar o **logotipo** do Módulo 02 e o **kit para a gráfica** do Módulo 03. O cartão de visita do Módulo 01 é prática.
+    O certificado é liberado ao entregar o **[logotipo](../modulo_02_vetor_na_pratica/05_projeto_logotipo.md)** do Módulo 02 e o **[kit para a gráfica](../modulo_03_arquivos_para_grafica/05_projeto_kit_grafica.md)** do Módulo 03. O cartão de visita do Módulo 01 é prática.
 
 ## O que você vai precisar
 

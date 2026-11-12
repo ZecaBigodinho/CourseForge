@@ -164,4 +164,4 @@ Escreva o nome da padaria **em arco**, acompanhando o círculo, como num selo.
 
 ## ➡️ Próximo passo
 
-Você terminou o **Módulo 02**. Volte ao [índice do módulo](index.md) e confira o checklist. O **Módulo 03 — Arquivos para gráfica** está em produção.
+Você terminou o **Módulo 02**. Volte ao [índice do módulo](index.md) e confira o checklist. Depois, siga para o **[Módulo 03 — Arquivos para gráfica](../modulo_03_arquivos_para_grafica/index.md)**, em que o logotipo entra num panfleto de verdade.
