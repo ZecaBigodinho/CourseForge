@@ -1,7 +1,7 @@
 # Java
 
 > **Autor:** Prof. Pedro Paulo IF · [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com)  
-> **Versão:** 0.1.0  
+> **Versão:** 1.0.0  
 > **Situação:** disponível — 3 módulos, 15 aulas  
 > **Ferramentas:** JDK 21 (LTS) e VS Code, tudo gratuito
 

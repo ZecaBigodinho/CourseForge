@@ -158,6 +158,34 @@ def eh_tipo_completo(codigo: str) -> bool:
     return all(l.startswith(("import ", "package ", "//", "/*", "*", "@")) for l in antes)
 
 
+def separar(codigo: str) -> tuple[str, str]:
+    """Bloco "misto" (uma classe e, depois dela, código solto, como '// no main: ...'):
+    devolve (a classe, o resto). Conta as chaves a partir da primeira classe; ignora as de strings."""
+    m = RE_TIPO.search(codigo)
+    nivel, i, dentro_string = 0, codigo.index("{", m.end()), None
+    while i < len(codigo):
+        c = codigo[i]
+        if dentro_string:
+            if c == "\\":
+                i += 1
+            elif c == dentro_string:
+                dentro_string = None
+        elif c in "\"'":
+            dentro_string = c
+        elif c == "{":
+            nivel += 1
+        elif c == "}":
+            nivel -= 1
+            if nivel == 0:
+                return codigo[:i + 1] + NL, codigo[i + 1:]
+        i += 1
+    return codigo, ""
+
+
+def so_comentario(texto: str) -> bool:
+    return all(not l.strip() or l.strip().startswith("//") for l in texto.splitlines())
+
+
 def primeira_linha_de_erro(saida: str) -> str:
     for linha in saida.splitlines():
         if "error:" in linha or "erro:" in linha:
@@ -171,11 +199,19 @@ def testar_java(por_aula, pasta: Path):
     falhas = []
     trabalho = pasta / "java"
     apoio: dict = {}
-    pendentes = []
+    pendentes, pendentes_resto = [], []
+    da_aula: dict = {}     # todas as classes completas de cada aula (a última versão de cada nome)
     for aula, itens in por_aula.items():
         for onde, codigo in itens:
             nome = nome_do_tipo(codigo)
             if nome and eh_tipo_completo(codigo):
+                codigo, resto = separar(codigo)
+                if not so_comentario(resto):
+                    if RE_TIPO.search(resto):          # outra classe depois: mais um bloco completo
+                        itens.append((onde + " (2ª classe)", resto))
+                    else:                              # código solto depois da classe: vira trecho
+                        pendentes_resto.append((aula, onde + " (depois da classe)", None, resto, None))
+                da_aula.setdefault(str(aula), {})[nome] = codigo
                 erro = compilar({nome: codigo}, trabalho)
                 if erro:
                     pendentes.append((aula, onde, nome, codigo, erro))
@@ -184,8 +220,8 @@ def testar_java(por_aula, pasta: Path):
                     apoio.setdefault(str(aula), {})[nome] = codigo
             else:
                 pendentes.append((aula, onde, None, codigo, None))
-    for aula, onde, nome, codigo, erro in pendentes:
-        contexto = {**apoio.get(aula.parent.name, {}), **apoio.get(str(aula), {})}
+    for aula, onde, nome, codigo, erro in pendentes + pendentes_resto:
+        contexto = {**apoio.get(aula.parent.name, {}), **da_aula.get(str(aula), {})}
         if nome:
             if "cannot find symbol" in erro or "não pode encontrar" in erro:
                 erro = compilar({**{k: v for k, v in contexto.items() if k != nome}, nome: codigo}, trabalho)

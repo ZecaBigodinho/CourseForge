@@ -3,7 +3,7 @@ descricao: JavaScript com tipos — menos erros, mais ajuda do editor e a base p
 autor: Pedro Paulo IF
 num_modulos: 3
 data_criacao: '2026-11-07'
-versao: 0.1.0
+versao: 1.0.0
 tags: []
 slug: typescript
 # Ordem dos módulos no menu (nomes das pastas); os próximos entram aqui conforme forem publicados

@@ -1,7 +1,7 @@
 # Desenvolvimento Web
 
 > **Autor:** Prof. Pedro Paulo IF · [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com)  
-> **Versão:** 0.1.0  
+> **Versão:** 1.0.0  
 > **Situação:** disponível — 4 módulos, 19 aulas  
 > **Ferramentas:** VS Code e um navegador (Chrome, Edge ou Firefox), tudo gratuito
 
