@@ -284,6 +284,13 @@ nav:
     - 'PowerClip: foto dentro de forma': coreldraw/modulo_03_arquivos_para_grafica/03_powerclip.md
     - Adesivo com linha de corte: coreldraw/modulo_03_arquivos_para_grafica/04_adesivo_com_linha_de_corte.md
     - 'Projeto do módulo: kit para a gráfica': coreldraw/modulo_03_arquivos_para_grafica/05_projeto_kit_grafica.md
+  - Peças comerciais:
+    - Visão Geral: coreldraw/modulo_04_pecas_comerciais/index.md
+    - Catálogo de várias páginas: coreldraw/modulo_04_pecas_comerciais/01_catalogo_varias_paginas.md
+    - 'Impressão mesclada: crachás a partir de uma planilha': coreldraw/modulo_04_pecas_comerciais/02_impressao_mesclada.md
+    - Post e story para as redes sociais: coreldraw/modulo_04_pecas_comerciais/03_post_para_redes.md
+    - Faixa em lona e QR code: coreldraw/modulo_04_pecas_comerciais/04_faixa_e_qr_code.md
+    - 'Projeto do módulo: kit de lançamento': coreldraw/modulo_04_pecas_comerciais/05_projeto_kit_lancamento.md
 - Desenvolvimento Web:
   - Apresentação do curso: desenvolvimento_web/docs/index.md
   - HTML:
