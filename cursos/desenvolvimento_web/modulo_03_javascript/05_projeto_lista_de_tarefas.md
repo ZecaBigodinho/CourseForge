@@ -156,6 +156,13 @@ desenhar();
 
 ---
 
+## O resultado
+
+<figure markdown="span">
+  ![A lista de tarefas no navegador: o título Minhas tarefas, o campo Nova tarefa com o botão Adicionar, três tarefas com caixa de marcar e botão Apagar, a primeira riscada por estar feita, e o resumo 1 de 3 tarefas feitas](assets/05_resultado.webp){ loading=lazy }
+  <figcaption>Três tarefas adicionadas pelo formulário e uma marcada como feita: o JavaScript risca a tarefa e atualiza o resumo (<em>1 de 3 tarefas feitas</em>). Recarregue a página: as tarefas continuam lá, graças ao <code>localStorage</code>.</figcaption>
+</figure>
+
 ## Entrega
 
 1. A pasta do projeto compactada (`index.html`, `style.css`, `script.js`).

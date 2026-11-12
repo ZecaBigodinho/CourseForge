@@ -174,6 +174,13 @@ h2 { color: var(--cor-principal); }
 
 ---
 
+## O resultado
+
+<figure markdown="span">
+  ![O cardápio da Lanchonete do Bairro no navegador: faixa laranja no topo com o nome e os links Lanches e Bebidas; os cartões X-Salada, X-Bacon e Misto quente com descrição e preço em laranja; os cartões das bebidas; e o rodapé com o telefone de pedidos](assets/05_resultado.webp){ loading=lazy }
+  <figcaption>O mesmo tipo de HTML do Módulo 01, agora com o <code>style.css</code>: cores das variáveis, cartões em grade e o rodapé centralizado.</figcaption>
+</figure>
+
 ## Entrega
 
 1. A pasta do projeto compactada (`index.html` + `style.css`).

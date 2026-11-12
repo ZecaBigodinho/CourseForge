@@ -173,6 +173,13 @@ Rode `npm run dev` e monte um pedido.
 
 ---
 
+## O resultado
+
+<figure markdown="span">
+  ![O cardápio da Lanchonete do Bairro em React: X-Salada com 2 unidades, X-Bacon com 0 e Suco de laranja com 1, cada um com os botões menos e mais, e o resumo 3 itens, Total R$ 45,00](assets/05_resultado.webp){ loading=lazy }
+  <figcaption>Depois de dois cliques no <strong>+</strong> do X-Salada e um no do suco: o total (R$ 45,00) é <strong>calculado</strong> a partir do estado, e o <strong>−</strong> do X-Bacon fica desativado, porque a quantidade é 0.</figcaption>
+</figure>
+
 ## Entrega
 
 1. A pasta `src/` do projeto compactada (sem `node_modules/`).
