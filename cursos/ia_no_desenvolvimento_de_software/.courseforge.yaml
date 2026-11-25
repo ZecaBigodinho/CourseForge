@@ -1,0 +1,31 @@
+nome: IA no desenvolvimento de software
+descricao: Use assistentes de IA gratuitos para entender código, gerar testes e corrigir defeitos, conferindo tudo com testes automáticos e sem expor dados sigilosos.
+autor: Pedro Paulo IF
+num_modulos: 1
+data_criacao: '2026-11-25'
+versao: 1.0.0
+tags: []
+slug: ia_no_desenvolvimento_de_software
+# Ordem dos módulos no menu (nomes das pastas)
+ordem_modulos:
+  - modulo_01_ia_parceira_de_programacao
+
+# Ficha do curso — alimenta o Catálogo de cursos (gerado por src/generators/gerar_catalogo.py)
+ordem: 13
+status: disponivel               # disponivel | em_andamento | em_breve
+ficha:
+  icone: material-robot-outline
+  nivel: Intermediário
+  carga_horaria: 20 min (aula) + 2 h 30 min (exercícios e aula complementar)
+  publico: Alunos de programação (como o Programador de Sistemas) que querem usar IA no dia a dia do código sem abrir mão da qualidade.
+  certificado: Sem certificado próprio; a atividade conta como prática de testes e manutenção de sistemas.
+  pre_requisitos:
+    - Python básico (Python para Desktop, Módulo 01) e o pytest instalado.
+    - Uma conta num assistente de IA gratuito (ChatGPT, Gemini, Copilot ou Claude), ou as respostas de exemplo da aula.
+  objetivos:
+    - Identificar em que etapas do desenvolvimento a IA ajuda e onde ela erra.
+    - Escrever pedidos (prompts) com contexto, requisito e formato de resposta.
+    - Gerar testes a partir do requisito, rodar com o pytest e corrigir o defeito encontrado.
+    - Revisar código gerado por IA com um checklist e registrar o resultado dos testes.
+    - Proteger dados sigilosos ao usar IA no trabalho.
+    - Usar agentes de IA no terminal (OpenCode e Hermes) com chaves gratuitas do OpenRouter ou da NVIDIA.

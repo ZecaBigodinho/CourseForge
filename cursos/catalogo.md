@@ -181,6 +181,20 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 
     [:octicons-arrow-right-24: Acessar o curso](ia_na_pratica_com_python/docs/index.md)
 
+-   :material-robot-outline:{ .lg .middle } __IA no desenvolvimento de software__
+
+    <span class="cf-tag cf-tag--ok">Disponível</span>
+
+    ---
+
+    Use assistentes de IA gratuitos para entender código, gerar testes e corrigir defeitos, conferindo tudo com testes automáticos e sem expor dados sigilosos.
+
+    **Nível:** Intermediário  
+    **Carga horária:** 20 min (aula) + 2 h 30 min (exercícios e aula complementar)  
+    **Certificado:** Sem certificado próprio; a atividade conta como prática de testes e manutenção de sistemas.  
+
+    [:octicons-arrow-right-24: Acessar o curso](ia_no_desenvolvimento_de_software/docs/index.md)
+
 </div>
 
 ## Fichas dos cursos
@@ -460,3 +474,27 @@ Escolha um curso, leia a ficha e comece pela primeira aula.
 - Construir um atendente com regras e limites.
 
 [Ir para o curso](ia_na_pratica_com_python/docs/index.md)
+
+### IA no desenvolvimento de software <span class="cf-tag cf-tag--ok">Disponível</span>
+
+- **Nível:** Intermediário
+- **Carga horária:** 20 min (aula) + 2 h 30 min (exercícios e aula complementar)
+- **Para quem é:** Alunos de programação (como o Programador de Sistemas) que querem usar IA no dia a dia do código sem abrir mão da qualidade.
+- **Certificado:** Sem certificado próprio; a atividade conta como prática de testes e manutenção de sistemas.
+- **Autor:** Pedro Paulo IF
+
+**Pré-requisitos:**
+
+- Python básico (Python para Desktop, Módulo 01) e o pytest instalado.
+- Uma conta num assistente de IA gratuito (ChatGPT, Gemini, Copilot ou Claude), ou as respostas de exemplo da aula.
+
+**Você vai aprender a:**
+
+- Identificar em que etapas do desenvolvimento a IA ajuda e onde ela erra.
+- Escrever pedidos (prompts) com contexto, requisito e formato de resposta.
+- Gerar testes a partir do requisito, rodar com o pytest e corrigir o defeito encontrado.
+- Revisar código gerado por IA com um checklist e registrar o resultado dos testes.
+- Proteger dados sigilosos ao usar IA no trabalho.
+- Usar agentes de IA no terminal (OpenCode e Hermes) com chaves gratuitas do OpenRouter ou da NVIDIA.
+
+[Ir para o curso](ia_no_desenvolvimento_de_software/docs/index.md)
