@@ -2,7 +2,7 @@
 
 > **Autor:** Prof. Pedro Paulo IF · [pedropaulo4hire@gmail.com](mailto:pedropaulo4hire@gmail.com)  
 > **Versão:** 1.0.0  
-> **Situação:** completo. 1 módulo, 3 aulas, para uma aula de 20 minutos com prática. O código da prática é testado automaticamente.  
+> **Situação:** completo. 1 módulo, 4 aulas: uma aula de 20 minutos com prática e uma aula complementar sobre agentes de IA no terminal. O código da prática é testado automaticamente.  
 > **Ferramentas:** Python 3.11 ou mais novo, VS Code, pytest e um assistente de IA **gratuito** (ChatGPT, Gemini, Copilot ou Claude), ou as respostas de exemplo, sem internet
 
 ---
@@ -17,7 +17,7 @@ Tudo funciona com planos **gratuitos**. Se a internet ou a IA estiverem fora do 
 
 ### Módulo 01 — IA como parceira de programação ✅ disponível
 
-Onde a IA entra no ciclo de desenvolvimento, as ferramentas gratuitas, os riscos (respostas inventadas, falhas de segurança, dados sigilosos) e como escrever um bom pedido. Prática: com ajuda da IA, **gerar testes a partir do requisito**, encontrar o defeito de uma função de situação final do aluno, corrigir e revisar. [Acessar o módulo](../modulo_01_ia_parceira_de_programacao/index.md)
+Onde a IA entra no ciclo de desenvolvimento, as ferramentas gratuitas, os riscos (respostas inventadas, falhas de segurança, dados sigilosos) e como escrever um bom pedido. Prática: com ajuda da IA, **gerar testes a partir do requisito**, encontrar o defeito de uma função de situação final do aluno, corrigir e revisar. Complemento: **agentes no terminal** (OpenCode e Hermes) com chaves gratuitas do OpenRouter ou da NVIDIA. [Acessar o módulo](../modulo_01_ia_parceira_de_programacao/index.md)
 
 ## Ligação com o plano de curso
 

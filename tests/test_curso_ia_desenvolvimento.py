@@ -8,6 +8,7 @@ mostra) e PASSAM na versão corrigida, e que os gabaritos dos exercícios funcio
 """
 from __future__ import annotations
 
+import json
 import re
 import subprocess
 import sys
@@ -85,3 +86,26 @@ def test_gabarito_avancado(tmp_path, versao, esperado):
     resultado = rodar_pytest(tmp_path, {"busca.py": blocos("busca.py")[versao],
                                         "test_busca.py": um_bloco("test_busca.py")})
     assert resultado.startswith(esperado), resultado
+
+
+AULA_04 = MODULO / "04_agentes_no_terminal.md"
+
+
+def blocos_json_aula_04() -> list[tuple[str, dict]]:
+    """Todos os blocos ```json da aula 04 (título, conteúdo já lido como JSON), sem o recuo."""
+    texto = AULA_04.read_text(encoding="utf-8").replace("\r\n", "\n")
+    achados = re.finditer(r'^( *)```json title="([^"]*)"\n(.*?)^\1```', texto, re.M | re.S)
+    return [(m.group(2), json.loads(textwrap.dedent(m.group(3)))) for m in achados]
+
+
+def test_aula_04_json_valido_e_sem_chave():
+    blocos_json = blocos_json_aula_04()
+    assert len(blocos_json) == 3
+    for titulo, config in blocos_json:
+        nvidia = config["providers"]["nvidia"]
+        if titulo == "opencode.json do colega":  # o exercício: chave colada e endereço errado
+            assert "apiKey" in nvidia and nvidia["settings"]["baseURL"] == "https://build.nvidia.com"
+            continue
+        assert "apiKey" not in nvidia
+        assert nvidia["env"] == ["NVIDIA_API_KEY"]
+        assert nvidia["settings"]["baseURL"] == "https://integrate.api.nvidia.com/v1"

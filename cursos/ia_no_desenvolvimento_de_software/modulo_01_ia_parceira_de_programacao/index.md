@@ -17,6 +17,7 @@ A IA escreve código em segundos, mas não sabe qual é a **regra do seu sistema
 - [01. Onde a IA entra no desenvolvimento](01_onde_a_ia_entra.md)
 - [02. Prática: testes e correção com IA](02_pratica_testes_com_ia.md)
 - [03. Revisão, registro e autoavaliação](03_revisao_e_autoavaliacao.md)
+- [04. Agentes de IA no seu computador: Hermes e OpenCode](04_agentes_no_terminal.md) (complementar, fora dos 20 minutos)
 
 ---
 
@@ -29,6 +30,7 @@ Ao final deste módulo, você será capaz de:
 - Gerar testes **a partir do requisito**, rodar com o pytest e interpretar as falhas.
 - Corrigir o defeito com ajuda da IA e revisar a correção com um checklist.
 - Registrar o resultado dos testes numa tabela.
+- Usar agentes de IA no terminal (OpenCode e Hermes) com chaves gratuitas do OpenRouter ou da NVIDIA.
 
 ---
 

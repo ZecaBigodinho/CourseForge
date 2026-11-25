@@ -455,7 +455,7 @@ hide:
 
     Use assistentes de IA gratuitos para entender código, gerar testes a partir do requisito e corrigir defeitos, conferindo tudo com o pytest.
 
-    1 módulo · 3 aulas · uma aula de 20 minutos com prática guiada
+    1 módulo · 4 aulas · aula de 20 minutos com prática guiada + agentes no terminal
 
     [:octicons-arrow-right-24: Começar pelo Módulo 01](ia_no_desenvolvimento_de_software/modulo_01_ia_parceira_de_programacao/index.md)
 

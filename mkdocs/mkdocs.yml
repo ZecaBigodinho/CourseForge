@@ -505,4 +505,5 @@ nav:
     - Onde a IA entra no desenvolvimento: ia_no_desenvolvimento_de_software/modulo_01_ia_parceira_de_programacao/01_onde_a_ia_entra.md
     - 'Prática: testes e correção com IA': ia_no_desenvolvimento_de_software/modulo_01_ia_parceira_de_programacao/02_pratica_testes_com_ia.md
     - Revisão, registro e autoavaliação: ia_no_desenvolvimento_de_software/modulo_01_ia_parceira_de_programacao/03_revisao_e_autoavaliacao.md
+    - 'Agentes de IA no seu computador: Hermes e OpenCode': ia_no_desenvolvimento_de_software/modulo_01_ia_parceira_de_programacao/04_agentes_no_terminal.md
 docs_dir: ../cursos

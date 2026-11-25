@@ -108,4 +108,4 @@ Marque **D** (desenvolvido) ou **ND** (não desenvolvido) em cada indicador. Um 
 
 ## ➡️ Próximo passo
 
-Continue praticando no curso **[IA na prática com Python](../../ia_na_pratica_com_python/docs/index.md)**, que usa a IA **dentro** dos programas, com testes automáticos, ou volte ao **[Catálogo de cursos](../../catalogo.md)**.
+**[04 — Agentes de IA no seu computador: Hermes e OpenCode](04_agentes_no_terminal.md)** (aula complementar).
