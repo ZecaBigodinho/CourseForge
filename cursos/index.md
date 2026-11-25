@@ -447,6 +447,18 @@ hide:
 
     [:octicons-arrow-right-24: Começar pelo Módulo 01](ia_na_pratica_com_python/modulo_01_api_de_ia/index.md)
 
+-   :material-robot-outline:{ .lg .middle } __IA no desenvolvimento de software__
+
+    <span class="cf-tag cf-tag--ok">Disponível</span>
+
+    ---
+
+    Use assistentes de IA gratuitos para entender código, gerar testes a partir do requisito e corrigir defeitos, conferindo tudo com o pytest.
+
+    1 módulo · 3 aulas · uma aula de 20 minutos com prática guiada
+
+    [:octicons-arrow-right-24: Começar pelo Módulo 01](ia_no_desenvolvimento_de_software/modulo_01_ia_parceira_de_programacao/index.md)
+
 </div>
 
 <div class="cf-botoes" markdown>
@@ -915,7 +927,7 @@ Cada curso termina num projeto para o seu portfólio, que libera o certificado.
     Não. Os cursos de programação começam do zero: o primeiro módulo ensina a instalar tudo e parte da primeira linha de código. Os cursos de design, escritório, IA e segurança digital não pedem programação (só o projeto final de IA usa um pouco de Python).
 
 ??? question "Por qual curso eu começo?"
-    Depende do seu objetivo: **programação** ➔ Python para Desktop ou a trilha Web (HTML, depois TypeScript e React); **concursos e cursos técnicos** ➔ Java; **escritório** ➔ Pacote Office; **design e redes sociais** ➔ Canva e CorelDRAW; **usar IA no dia a dia** ➔ Introdução à IA. **Proteger as contas e fugir de golpes** ➔ Segurança digital, que serve para qualquer pessoa. **Ganhar tempo com tarefas repetitivas** ➔ Automação com Python, depois do básico de Python. **Colocar IA nos seus programas** ➔ IA na prática com Python, depois da Introdução à IA. O [catálogo](catalogo.md) mostra o nível e os pré-requisitos de cada um.
+    Depende do seu objetivo: **programação** ➔ Python para Desktop ou a trilha Web (HTML, depois TypeScript e React); **concursos e cursos técnicos** ➔ Java; **escritório** ➔ Pacote Office; **design e redes sociais** ➔ Canva e CorelDRAW; **usar IA no dia a dia** ➔ Introdução à IA. **Proteger as contas e fugir de golpes** ➔ Segurança digital, que serve para qualquer pessoa. **Ganhar tempo com tarefas repetitivas** ➔ Automação com Python, depois do básico de Python. **Colocar IA nos seus programas** ➔ IA na prática com Python, depois da Introdução à IA. **Programar com ajuda da IA, sem perder a qualidade** ➔ IA no desenvolvimento de software, depois do básico de Python. O [catálogo](catalogo.md) mostra o nível e os pré-requisitos de cada um.
 
 ??? question "Posso estudar em casa?"
     Sim. O site funciona no computador, no tablet e no celular. Para praticar, siga a primeira aula de cada curso no seu computador pessoal: tudo tem opção gratuita.
